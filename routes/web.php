@@ -12,9 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('register'));
 });
 
-Auth::routes();
+
+
+Route::group(['middleware' => 'locale'], function() {
+	Auth::routes();
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/locale', 'LocaleController@switch')->name('locale');

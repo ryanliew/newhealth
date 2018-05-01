@@ -18,5 +18,12 @@
         "laravel-mix": "^2.0",
         "lodash": "^4.17.4",
         "vue": "^2.5.7"
+    },
+    "dependencies": {
+        "ajv": "^6.4.0",
+        "lang-js": "^2.2.1",
+        "lang.js": "^1.1.12",
+        "moment": "^2.22.1",
+        "vue-router": "^3.0.1"
     }
 }
