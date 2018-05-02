@@ -23,3 +23,4 @@ Route::group(['middleware' => 'locale'], function() {
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/locale', 'LocaleController@switch')->name('locale');
+Route::get('/social/{service}/login', 'Auth\SocialAuthController@login');

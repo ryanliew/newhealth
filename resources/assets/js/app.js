@@ -46,7 +46,7 @@ router.beforeEach((to, from, next) => {
 		
 		axios.get('/api/profile')
 			.then(response => { user = response.data; next(); })
-			.catch(error => { intended = to.fullPath; router.push('/login'); });
+			.catch(error => { intended = to.fullPath; window.location.href="/register"; });
 					
 	} else {
 		next();

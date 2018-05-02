@@ -152,6 +152,7 @@ return [
          */
         Mariuzzo\LaravelJsLocalization\LaravelJsLocalizationServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
+        \SocialiteProviders\Manager\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
