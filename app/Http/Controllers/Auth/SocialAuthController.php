@@ -16,6 +16,6 @@ class SocialAuthController extends Controller
 
     public function userHasLoggedIn($user)
     {
-    	return redirect('/');
+    	return redirect('/register/success');
     }
 }

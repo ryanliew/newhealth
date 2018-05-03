@@ -4304,6 +4304,16 @@ video {
   font-style: italic;
   font-weight: 300;
 }
+@font-face {
+  font-family: 'NotoSans';
+  src: url('../fonts/Noto/NotoSansCJKtc-Regular.otf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'NotoSans';
+  src: url('../fonts/Noto/NotoSansCJKtc-Bold.otf');
+  font-weight: 600;
+}
 /* ==========================================================================
    Typography
    ========================================================================== */
@@ -4314,7 +4324,7 @@ input,
 select,
 textarea {
   color: #343434;
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: 'Proxima Nova', 'NotoSans', sans-serif;
   line-height: 1.4;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;

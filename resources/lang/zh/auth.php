@@ -27,5 +27,12 @@ return [
     'name' => '名字',
     'wechat-signup' => '使用微信注册',
     'facebook-signup' => '使用脸书注册',
-    'google-signup' => '使用谷歌注册'
+    'google-signup' => '使用谷歌注册',
+    'referrer' => '介绍人ID',
+    'submit' => '提交',
+    'country' => '国家',
+    'thank-you' => '谢谢',
+    'success' => '注册成功，若您有介绍人，请告诉我们他的ID',
+    'success-email' => '我们也需要您的电邮以作为日后的通讯管道',
+    'success-country' => '我们也需要您的所在国家，这将帮助我们制定您的ID' 
 ];

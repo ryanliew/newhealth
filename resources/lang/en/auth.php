@@ -27,6 +27,12 @@ return [
     'name' => 'Name',
     'wechat-signup' => 'Register with WeChat',
     'facebook-signup' => 'Register with Facebook',
-    'google-signup' => 'Register with Google'
-
+    'google-signup' => 'Register with Google',
+    'referrer' => 'Referrer ID',
+    'submit' => 'Submit',
+    'country' => 'Country',
+    'thank-you' => 'Thank you',
+    'success' => 'Your registration is successful. If you have a referrer, please let us know by filling in his/her ID in the form below',
+    'success-email' => 'We will also need your email address so that we can send you important notifications in the future',
+    'success-country' => 'Please also let us know your country as that is required for us to generate your referral code' 
 ];

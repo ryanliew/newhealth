@@ -76,7 +76,7 @@
                         <input type="password" class="form-control" placeholder="{{ __('auth.repeat') }}{{ __('auth.password') }}"/>
                     </div>
                     <button type="submit" class="btn btn-rounded btn-success sign-up">{{ __('auth.register') }}</button>
-                    <p class="sign-note">{{ __('auth.already-have-account') }} <a href="{{ route('login') }}">{{ __('auth.login') }}</a></p>
+                    {{-- <p class="sign-note">{{ __('auth.already-have-account') }} <a href="{{ route('login') }}">{{ __('auth.login') }}</a></p> --}}
                     <!--<button type="button" class="close">
                         <span aria-hidden="true">&times;</span>
                     </button>-->
@@ -95,7 +95,7 @@
 <script src="/js/lib/tether/tether.min.js"></script>
 <script src="/js/lib/bootstrap/bootstrap.min.js"></script>
 <script src="/js/plugins.js"></script>
-    <script type="text/javascript" src="js/lib/match-height/jquery.matchHeight.min.js"></script>
+    <script type="text/javascript" src="/js/lib/match-height/jquery.matchHeight.min.js"></script>
     <script>
         $(function() {
             $('.page-center').matchHeight({

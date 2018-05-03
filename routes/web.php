@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'locale'], function() {
 	Auth::routes();
+	Route::get('/register/success', 'HomeController@thankyou');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

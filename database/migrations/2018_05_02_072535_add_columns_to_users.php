@@ -17,6 +17,8 @@ class AddColumnsToUsers extends Migration
             $table->string('avatar_path')->nullable();
             $table->string('social_service')->nullable();
             $table->string('social_id')->nullable();
+            $table->string('referral_code')->nullable();
+            $table->unsignedInteger('country_id')->nullable();
         });
     }
 
@@ -28,7 +30,7 @@ class AddColumnsToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['avatar_path', 'social_service', 'social_id']);
+            $table->dropColumn(['avatar_path', 'social_service', 'social_id', 'referral_code', 'country_id']);
         });
     }
 }
