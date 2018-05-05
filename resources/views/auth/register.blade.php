@@ -89,7 +89,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>-->
                     
-                    <a href="{{ url('/social/wechat/login') }}" class="btn btn-wechat btn-block"><i class="fa fa-wechat"></i> {{ __('auth.wechat-signup') }}</a>
+                    {{-- <a href="{{ url('/social/wechat/login') }}" class="btn btn-wechat btn-block"><i class="fa fa-wechat"></i> {{ __('auth.wechat-signup') }}</a> --}}
                     <a href="{{ url('/social/facebook/login') }}" class="btn btn-facebook btn-block"><i class="fa fa-facebook-square"></i> {{ __('auth.facebook-signup') }}</a>
                     <a href="{{ url('/social/google/login') }}" class="btn btn-google btn-block"><i class="fa fa-google"></i> {{ __('auth.google-signup') }}</a>
                 </form>
