@@ -19,7 +19,8 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'locale'], function() {
 	Auth::routes();
-	Route::get('/register/success', 'HomeController@thankyou');
+	Route::get('/register/success', 'HomeController@thankyou')->name('register.success');
+	Route::post('/register/success', 'ProfileController@update')->name('register.success');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -6,12 +6,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Newleaf - {{ __('auth.register') }}</title>
 
-    <link href="img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
-    <link href="img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
-    <link href="img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
-    <link href="img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
-    <link href="img/favicon.png" rel="icon" type="image/png">
-    <link href="img/favicon.ico" rel="shortcut icon">
+    <link href="/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
+    <link href="/img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
+    <link href="/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
+    <link href="/img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
+    <link href="/img/favicon.png" rel="icon" type="image/png">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -20,6 +19,7 @@
     <![endif]-->
     <link rel="stylesheet" href="/css/separate/pages/login.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/separate/vendor/select2.min.css"> 
     <link rel="stylesheet" href="/css/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/css/start-ui.css">
     <link rel="stylesheet" href="/css/separate/buttons.css">
@@ -46,10 +46,10 @@
             <div class="container-fluid">
                 <form class="sign-box" action="{{ route('register') }}" method="POST">
                     @csrf
-                    <div class="sign-avatar no-photo">&plus;</div>
+                    <div><img class="img-fluid" src="/img/logo.png"></div>
                     <header class="sign-title">{{ __('auth.register') }}</header>
                     <div class="form-group">
-                        <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.name') }}" value="{{ old('name') }}" required autofocus/>
+                        <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.name') }}" value="{{ old('name') }}" required autofocus/>
                         @if ($errors->has('name'))
                             <span class="invalid-feedback">
                                 <strong>{{ $errors->first('name') }}</strong>
@@ -73,7 +73,15 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control" placeholder="{{ __('auth.repeat') }}{{ __('auth.password') }}"/>
+                        <input name="password_confirmation" type="password" class="form-control" placeholder="{{ __('auth.repeat') }}{{ __('auth.password') }}"/>
+                    </div>
+                    <div class="form-group">
+                        <label>{{ __('auth.country') }} <span class="text-danger">*</span></label>
+                        <select class="select2" name="country">
+                           @foreach($countries as $country)
+                                <option value="{{ $country->id }}">{{ $country->name }}</option>
+                           @endforeach
+                        </select>
                     </div>
                     <button type="submit" class="btn btn-rounded btn-success sign-up">{{ __('auth.register') }}</button>
                     {{-- <p class="sign-note">{{ __('auth.already-have-account') }} <a href="{{ route('login') }}">{{ __('auth.login') }}</a></p> --}}
@@ -95,6 +103,8 @@
 <script src="/js/lib/tether/tether.min.js"></script>
 <script src="/js/lib/bootstrap/bootstrap.min.js"></script>
 <script src="/js/plugins.js"></script>
+<script src="/js/lib/select2/select2.full.min.js"></script>
+
     <script type="text/javascript" src="/js/lib/match-height/jquery.matchHeight.min.js"></script>
     <script>
         $(function() {

@@ -31,8 +31,11 @@ return [
     'referrer' => 'Referrer ID',
     'submit' => 'Submit',
     'country' => 'Country',
-    'thank-you' => 'Thank you',
-    'success' => 'Your registration is successful. If you have a referrer, please let us know by filling in his/her ID in the form below',
+    'thank-you' => 'Thank you.',
+    'success' => 'Your registration is successful.',
+    'success-referral' => 'If you have a referrer, please let us know by filling in his/her ID in the form below',
     'success-email' => 'We will also need your email address so that we can send you important notifications in the future',
-    'success-country' => 'Please also let us know your country as that is required for us to generate your referral code' 
+    'success-country' => 'Please also let us know your country as that is required for us to generate your referral code',
+    'referral-id' => 'Your referral ID is :code',
+    'registration-complete' => 'Registration complete, you may now close this window'  
 ];

@@ -280,7 +280,6 @@ class AddCountriesTable extends Migration
             ['code_fips' => 'WI', 'code_iso' => 'EH', 'name'=>'Western Sahara'],
             ['code_fips' => 'WS', 'code_iso' => 'WS', 'name'=>'Samoa'],
             ['code_fips' => 'WZ', 'code_iso' => 'SZ', 'name'=>'Swaziland'],
-            ['code_fips' => 'YI', 'code_iso' => 'CS', 'name'=>'Serbia and Montenegro'],
             ['code_fips' => 'YM', 'code_iso' => 'YE', 'name'=>'Yemen'],
             ['code_fips' => 'ZA', 'code_iso' => 'ZM', 'name'=>'Zambia'],
             ['code_fips' => 'ZI', 'code_iso' => 'ZW', 'name'=>'Zimbabwe']

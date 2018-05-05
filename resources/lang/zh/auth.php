@@ -32,7 +32,10 @@ return [
     'submit' => '提交',
     'country' => '国家',
     'thank-you' => '谢谢',
-    'success' => '注册成功，若您有介绍人，请告诉我们他的ID',
+    'success' => '注册成功',
     'success-email' => '我们也需要您的电邮以作为日后的通讯管道',
-    'success-country' => '我们也需要您的所在国家，这将帮助我们制定您的ID' 
+    'success-country' => '我们也需要您的所在国家，这将帮助我们制定您的ID',
+    'success-referral' => '若您有介绍人，请告诉我们他的ID',
+    'referral-id' => '您的ID是 :code',
+    'registration-complete' => '完成，您已可以关闭此页面' 
 ];

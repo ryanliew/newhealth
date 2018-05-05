@@ -6,13 +6,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Newleaf - {{ __('auth.register') }}</title>
 
-    <link href="img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
-    <link href="img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
-    <link href="img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
-    <link href="img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
-    <link href="img/favicon.png" rel="icon" type="image/png">
-    <link href="img/favicon.ico" rel="shortcut icon">
-
+    <link href="/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
+    <link href="/img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
+    <link href="/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
+    <link href="/img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
+    <link href="/img/favicon.png" rel="icon" type="image/png">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -47,9 +45,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm bg-white p-4">
-                        <form action="{{ route('register') }}" method="POST">
+
+                        <div class="d-flex justify-content-center mb-3">
+                            <img class="img-fluid" src="/img/logo.png">
+                        </div>
+                        <form action="{{ route('register.success') }}" method="POST">
                         <div class="alert alert-success" role="alert">
-                            <h2 class="alert-heading">{{ __('auth.thank-you') }}</h2>
+                            <h2 class="alert-heading">{{ __('auth.thank-you') }} @if(auth()->user()->country_id) {{ __('auth.referral-id', ['code' => auth()->user()->referral_code]) }} @endif</h2>
                             <p>{{ __('auth.success') }}</p>
                             @if(auth()->user()->email == auth()->user()->social_id . "@email.com")
                                 <hr>
@@ -60,6 +62,11 @@
                                 <hr>
                                 <p>{{ __('auth.success-country') }}</p>
                             @endif
+
+                            @if(!auth()->user()->parent_id)
+                                <hr>
+                                <p>{{ __('auth.success-referral') }}</p>
+                            @endif
                         </div>
                         
 
@@ -67,7 +74,7 @@
 
                         @if(auth()->user()->email == auth()->user()->social_id . "@email.com")
                             <div class="form-group">
-                                <input type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.email') }}" value="{{ old('email') }}" required autofocus/>
+                                <input name='email' type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.email') }}" value="{{ old('email') }}" required autofocus/>
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -78,23 +85,33 @@
 
                         @if(!auth()->user()->country_id)
                             <label>{{ __('auth.country') }} <span class="text-danger">*</span></label>
-                            <select class="select2" name="country">
+                            <select class="select2" name="country_id">
                                @foreach($countries as $country)
                                     <option value="{{ $country->id }}">{{ $country->name }}</option>
                                @endforeach
                             </select>
                         @endif
-
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control{{ $errors->has('referrer') ? ' is-invalid' : '' }}" name="referrer" value="{{ old('referrer') }}"  autofocus placeholder="{{ __('auth.referrer') }}"/>
-                            @if ($errors->has('referrer'))
-                                <span class="invalid-feedback">
-                                    <strong>{{ $errors->first('referrer') }}</strong>
-                                </span>
-                            @endif
-                        </div>
                         
-                        <button type="submit" class="btn btn-rounded btn-success sign-up">{{ __('auth.submit') }}</button>
+                        @if(!auth()->user()->parent_id)
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control{{ $errors->has('referrer') ? ' is-invalid' : '' }}" name="referrer_code" value="{{ old('referrer') }}"  autofocus placeholder="{{ __('auth.referrer') }}"/>
+                                @if ($errors->has('referrer'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('referrer') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        @endif
+
+                        @if(auth()->user()->email !== auth()->user()->social_id . "@email.com"
+                            && auth()->user()->country_id
+                            && auth()->user()->parent_id)
+                            {{ __('auth.registration-complete') }}
+                        @else
+                            <button type="submit" class="btn btn-rounded btn-success sign-up">{{ __('auth.submit') }}</button>
+                        @endif
+                        
+                       
                         
                     </div>
                 </div>
