@@ -12,9 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect(route('register'));
 });
 
-Auth::routes();
+
+
+Route::group(['middleware' => 'locale'], function() {
+	Auth::routes();
+	Route::get('/register/success', 'HomeController@thankyou')->name('register.success');
+	Route::post('/register/success', 'ProfileController@update')->name('register.success');
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/locale', 'LocaleController@switch')->name('locale');
+Route::get('/social/{service}/login', 'Auth\SocialAuthController@login');
