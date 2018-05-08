@@ -33,8 +33,8 @@
             </button>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="dropdown-menu-col">
-                    <a class="dropdown-item @if(App::isLocale('en')) current @endif" href="/register/success?lang=en"><span class="flag-icon flag-icon-us"></span> English</a>
-                    <a class="dropdown-item @if(App::isLocale('zh')) current @endif" href="/register/success?lang=zh"><span class="flag-icon flag-icon-cn"></span> 中文</a>
+                    <a class="dropdown-item @if(App::isLocale('en')) current @endif" href="/register/complete?lang=en"><span class="flag-icon flag-icon-us"></span> English</a>
+                    <a class="dropdown-item @if(App::isLocale('zh')) current @endif" href="/register/complete?lang=zh"><span class="flag-icon flag-icon-cn"></span> 中文</a>
                 </div>
             </div>
         </div>

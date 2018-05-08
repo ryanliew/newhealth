@@ -135,7 +135,13 @@
 				return obj;
 			});
 
-			this.company_country = this.user_country;
+			this.companyTypes = [
+					{label: this.$options.filters.trans("company.company"), value: 'company'},
+					{label: this.$options.filters.trans("company.sole"), value: 'sole'},
+					{label: this.$options.filters.trans("company.partnership"), value: 'partnership'},
+					{label: this.$options.filters.trans("company.trust"), value: 'trust'},
+				];
+			this.company_business_entity =  {label: this.$options.filters.trans("company.company"), value: 'company'};
 		},
 
 		data() {
@@ -150,13 +156,8 @@
 				company_address_line_2: '',
 				company_country: '',
 				company_email: '',
-				companyTypes: [
-					{label: this.$options.filters.trans("company.company"), value: 'company'},
-					{label: this.$options.filters.trans("company.sole"), value: 'sole'},
-					{label: this.$options.filters.trans("company.partnership"), value: 'partnership'},
-					{label: this.$options.filters.trans("company.trust"), value: 'trust'},
-				],
-				company_business_entity: {label: this.$options.filters.trans("company.company"), value: 'company'},
+				companyTypes: [],
+				company_business_entity: '',
 				company_postcode: '',
 				company_phone: '',
 				potentialCountries: '',
