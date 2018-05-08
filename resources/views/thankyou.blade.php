@@ -69,7 +69,7 @@
                             <h4>{{ __('auth.referral-info') }}</h4>
                             @if(!auth()->user()->parent_id)
                                 <div class="form-group">
-                                    <referrer></referrer> 
+                                    <referrer app_locale="{{ App::isLocale('zh') ? 'zh' : 'en' }}"></referrer> 
                                     @if ($errors->has('referrer'))
                                         <span class="invalid-feedback">
                                             <strong>{{ $errors->first('referrer') }}</strong>
@@ -271,6 +271,17 @@
                                         @endif
                                     </div> 
                                 </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.beneficiary_identification') }}  <span class="text-danger">*</span></label>
+                                        <input name='beneficiary_identification' type="text" class="form-control{{ $errors->has('beneficiary_identification') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.beneficiary_identification') }}" value="{{ old('beneficiary_identification') }}" required/>
+                                        @if ($errors->has('beneficiary_identification'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('beneficiary_identification') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div> 
+                                </div>
                             </div>
                                                         
                             <button type="submit" class="btn btn-rounded btn-success sign-up">{{ __('auth.submit') }}</button>
@@ -280,7 +291,9 @@
             </div>
         </div>
     </div><!--.page-center-->
-
+    <div class="copyright-text">
+        Copyright &copy 2018 Newleaf Plantation Berhad
+    </div>
 <script src="/js/lib/jquery/jquery-3.2.1.min.js"></script>
 <script src="/js/lib/popper/popper.min.js"></script>
 <script src="/js/lib/tether/tether.min.js"></script>

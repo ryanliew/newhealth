@@ -34,6 +34,6 @@ class HomeController extends Controller
         //return request()->code;
         $referrer = User::where('referral_code', request()->code)->get()->first();
 
-        return $referrer ? $referrer->name : __('auth.referrer-not-found');
+        return $referrer ? $referrer->name : 'auth.referrer-not-found';
     }
 }

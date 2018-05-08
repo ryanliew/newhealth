@@ -73,6 +73,7 @@ class ProfileController extends Controller
             'account_type' => request()->account_type,
             'account_no' => request()->account_no,
             'beneficiary_name' => request()->beneficiary_name,
+            'beneficiary_identification' => request()->beneficiary_identification,
         ]);
 
         auth()->user()->addresses()->create([
