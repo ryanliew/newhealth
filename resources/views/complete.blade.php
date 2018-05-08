@@ -59,6 +59,9 @@
             </div>
         </div>
     </div><!--.page-center-->
+    <div class="copyright-text text-center text-muted mb-3">
+        Copyright &copy 2018 Newleaf Plantation Berhad. All rights reserved.
+    </div>
 
 <script src="/js/lib/jquery/jquery-3.2.1.min.js"></script>
 <script src="/js/lib/popper/popper.min.js"></script>
