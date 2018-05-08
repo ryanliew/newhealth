@@ -69,6 +69,7 @@ return [
     'account_type' => '户口类型',
     'account_no' => '户口号码',
     'beneficiary_name' => '受益者名称',
+    'beneficiary_identification' => '受益者身份证/护照号码',
 
     'contact-personnels' => '公司联络人',
     'personnel-designation' => '职位',
