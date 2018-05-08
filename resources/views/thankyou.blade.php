@@ -45,74 +45,236 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm bg-white p-4">
-
+                
                         <div class="d-flex justify-content-center mb-3">
                             <img class="img-fluid" src="/img/logo.png">
                         </div>
-                        <form action="{{ route('register.success') }}" method="POST">
-                        <div class="alert alert-success" role="alert">
-                            <h2 class="alert-heading">{{ __('auth.thank-you') }} @if(auth()->user()->country_id) {{ __('auth.referral-id', ['code' => auth()->user()->referral_code]) }} @endif</h2>
-                            <p>{{ __('auth.success') }}</p>
-                            @if(auth()->user()->email == auth()->user()->social_id . "@email.com")
-                                <hr>
-                                <p class="mb-0">{{ __('auth.success-email') }}</p>
+                        <form id="app" method="POST" action="{{ url('/register/success') }}">
+                            <div class="alert alert-success" role="alert">
+                                <h2 class="alert-heading">{{ __('auth.thank-you') }} {{ __('auth.last-step') }}</h2>
+                                <p>{{ __('auth.success') }}</p>
+                            </div>
+                            @if($errors->count() > 0)
+                            <div class="alert alert-danger" role="alert">
+                                <h2 class="alert-heading">Error</h2>
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
                             @endif
 
-                            @if(!auth()->user()->country_id)
-                                <hr>
-                                <p>{{ __('auth.success-country') }}</p>
-                            @endif
-
+                            @csrf
+                            <h4>{{ __('auth.referral-info') }}</h4>
                             @if(!auth()->user()->parent_id)
-                                <hr>
-                                <p>{{ __('auth.success-referral') }}</p>
+                                <div class="form-group">
+                                    <referrer></referrer> 
+                                    @if ($errors->has('referrer'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('referrer') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
                             @endif
-                        </div>
-                        
-
-                        @csrf
-
-                        @if(auth()->user()->email == auth()->user()->social_id . "@email.com")
+                            <hr>
+                            <h4>{{ __('auth.personal-info') }}</h4>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.name') }}  <span class="text-danger">*</span></label>
+                                        <input name='name' type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.name') }}" value="{{ auth()->user()->name }}" required autofocus/>
+                                        @if ($errors->has('name'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('name') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.identification') }}  <span class="text-danger">*</span></label>
+                                        <input name='identification' type="text" class="form-control{{ $errors->has('identification') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.identification') }}" value="{{ old('identification') }}" required/>
+                                        @if ($errors->has('identification'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('identification') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group">
-                                <input name='email' type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.email') }}" value="{{ old('email') }}" required autofocus/>
+                                <label>{{ __('auth.email') }}  <span class="text-danger">*</span></label>
+                                <input name='email' type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.email') }}" value="{{ ends_with(auth()->user()->email, '@email.com') ? old('email') : auth()->user()->email }}" required autofocus/>
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                        @endif
 
-                        @if(!auth()->user()->country_id)
-                            <label>{{ __('auth.country') }} <span class="text-danger">*</span></label>
-                            <select class="select2" name="country_id">
-                               @foreach($countries as $country)
-                                    <option value="{{ $country->id }}">{{ $country->name }}</option>
-                               @endforeach
-                            </select>
-                        @endif
-                        
-                        @if(!auth()->user()->parent_id)
-                            <div class="form-group mt-3">
-                                <input type="text" class="form-control{{ $errors->has('referrer') ? ' is-invalid' : '' }}" name="referrer_code" value="{{ old('referrer') }}"  autofocus placeholder="{{ __('auth.referrer') }}"/>
-                                @if ($errors->has('referrer'))
+                            <div class="form-group">
+                                <label>{{ __('auth.address') }}  <span class="text-danger">*</span></label>
+                                <input name='address_line_1' type="text" class="form-control{{ $errors->has('address_line_1') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.address1') }}" value="{{ old('address_line_1') }}" required/>
+                                @if ($errors->has('address_line_1'))
                                     <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('referrer') }}</strong>
+                                        <strong>{{ $errors->first('address_line_1') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                        @endif
+                            <div class="form-group">
+                                <input name='address_line_2' type="text" class="form-control{{ $errors->has('address_line_2') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.address2') }}" value="{{ old('address_line_2') }}" />
+                                @if ($errors->has('address_line_2'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('address_line_2') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
 
-                        @if(auth()->user()->email !== auth()->user()->social_id . "@email.com"
-                            && auth()->user()->country_id
-                            && auth()->user()->parent_id)
-                            {{ __('auth.registration-complete') }}
-                        @else
+                            <div class="row">
+                                <div class="col-sm">
+                                    <label>{{ __('auth.country') }} <span class="text-danger">*</span></label>
+                                    <select class="select2" name="country_id">
+                                       @foreach($countries as $country)
+                                            <option value="{{ $country->id }}" @if(auth()->user()->country_id == $country->id) selected @endif>{{ $country->name }}</option>
+                                       @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.postcode') }}  <span class="text-danger">*</span></label>
+                                        <input name='postcode' type="text" class="form-control{{ $errors->has('postcode') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.postcode') }}" value="{{ old('postcode') }}" required/>
+                                        @if ($errors->has('postcode'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('postcode') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.nationality') }}  <span class="text-danger">*</span></label>
+                                        <input name='nationality' type="text" class="form-control{{ $errors->has('nationality') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.nationality') }}" value="{{ old('nationality') }}" required/>
+                                        @if ($errors->has('nationality'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('nationality') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.phone') }}  <span class="text-danger">*</span></label>
+                                        <input name='phone' type="tel" class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.phone') }}" value="{{ old('phone') }}"/>
+                                        @if ($errors->has('phone'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('phone') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>  
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.gender') }}</label>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" name="gender" type="radio" id="gender_male" value="male">
+                                            <label class="form-check-label" for="gender_male">{{ __('auth.gender_male') }}</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" name="gender" type="radio" id="gender_female" value="female">
+                                            <label class="form-check-label" for="gender_female">{{ __('auth.gender_female') }}</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <hr>
+                            <h4>{{ __('auth.company-info') }}</h4>
+                            <company-registration :countries="{{ json_encode($countries) }}" user_country="{{ auth()->user()->country_id }}" app_locale="{{ App::isLocale('zh') ? 'zh' : 'en' }}"></company-registration>
+
+                            <hr>
+                            <h4>{{ __('auth.bank-info') }}</h4>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.bank_name') }}  <span class="text-danger">*</span></label>
+                                        <input name='bank_name' type="text" class="form-control{{ $errors->has('bank_name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.bank_name') }}" value="{{ old('bank_name') }}" required/>
+                                        @if ($errors->has('bank_name'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('bank_name') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.bank_swift') }}</label>
+                                        <input name='bank_swift' type="text" class="form-control{{ $errors->has('bank_swift') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.bank_swift') }}" value="{{ old('bank_swift') }}"/>
+                                        @if ($errors->has('bank_swift'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('bank_swift') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.bank_address') }}  <span class="text-danger">*</span></label>
+                                        <input name='bank_address' type="text" class="form-control{{ $errors->has('bank_address') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.bank_address') }}" value="{{ old('bank_address') }}" required/>
+                                        @if ($errors->has('bank_address'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('bank_address') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.account_type') }}  <span class="text-danger">*</span></label>
+                                        <input name='account_type' type="text" class="form-control{{ $errors->has('account_type') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.account_type') }}" value="{{ old('account_type') }}" required/>
+                                        @if ($errors->has('account_type'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('account_type') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>   
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.account_no') }}  <span class="text-danger">*</span></label>
+                                        <input name='account_no' type="text" class="form-control{{ $errors->has('account_no') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.account_no') }}" value="{{ old('account_no') }}" required/>
+                                        @if ($errors->has('account_no'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('account_no') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.beneficiary_name') }}  <span class="text-danger">*</span></label>
+                                        <input name='beneficiary_name' type="text" class="form-control{{ $errors->has('beneficiary_name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.beneficiary_name') }}" value="{{ old('beneficiary_name') }}" required/>
+                                        @if ($errors->has('beneficiary_name'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('beneficiary_name') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div> 
+                                </div>
+                            </div>
+                                                        
                             <button type="submit" class="btn btn-rounded btn-success sign-up">{{ __('auth.submit') }}</button>
-                        @endif
-                        
-                       
-                        
+                        </form>
                     </div>
                 </div>
             </div>
@@ -143,5 +305,6 @@
         });
     </script>
 <script src="/js/start-ui.js"></script>
+<script src="/js/registration.js"></script>
 </body>
 </html>

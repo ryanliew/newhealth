@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Address;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -12,13 +13,39 @@ class ProfileController extends Controller
     	return json_encode($request->user());
     }
 
+    public function show()
+    {
+        return view('complete');
+    }
+
     public function update()
     {
+        // dd(request());
     	$validated = request()->validate([
-    		'email' => 'sometimes|required|email',
-    		'referrer_code' => 'exists:users,referral_code',
-    		'country_id' => 'sometimes|required|exists:countries,id'
+    		'email' => 'required|email',
+    		'country_id' => 'required|exists:countries,id',
+            'company_country_id' => 'sometimes|required|exists:countries,id',
+            'address_line_1' => 'required',
+            'postcode' => 'required',
+            'nationality' => 'required',
+            'phone' => 'required',
+            'identification' => 'required',
+            'company_name' => 'sometimes|required',
+            'company_business_registration' => 'sometimes|required',
+            'company_type' => 'sometimes|required',
+            'company_incorporation_place' => 'sometimes|required',
+            'company_incorporation_date' => 'sometimes|required',
+            'company_address_line_1' => 'sometimes|required',
+            'company_postcode' => 'sometimes|required',
+            'company_phone' => 'sometimes|required',
+            'company_email' => 'sometimes|required',
+            'bank_name' => 'required',
+            'bank_address' => 'required',
+            'account_type' => 'required',
+            'account_no' => 'required',
+            'beneficiary_name' => 'required',
     	]);
+
 
     	if(isset($validated['referrer_code']))
     	{
@@ -26,8 +53,62 @@ class ProfileController extends Controller
     		auth()->user()->appendToNode($referrer)->save();
     	}
 
-    	$user = auth()->user()->update($validated);
 
-    	return back();
+    	$user = auth()->user()->update([
+            'email' => request()->email,
+            'name' => request()->name,
+            'country_id' => request()->country_id,
+            'identification' => request()->identification,
+            'nationality' => request()->nationality,
+            'gender' => request()->gender,
+            'company_name' => request()->company_name,
+            'company_business_registration' => request()->company_business_registration,
+            'company_incorporation_place' => request()->company_incorporation_place,
+            'company_incorporation_date' => request()->company_incorporation_date,
+            'company_type' => request()->company_type,
+            'company_email' => request()->company_email,
+            'bank_name' => request()->bank_name,
+            'bank_swift' => request()->bank_swift,
+            'bank_address' => request()->bank_address,
+            'account_type' => request()->account_type,
+            'account_no' => request()->account_no,
+            'beneficiary_name' => request()->beneficiary_name,
+        ]);
+
+        auth()->user()->addresses()->create([
+            'line_1' => request()->address_line_1,
+            'line_2' => request()->address_line_2,
+            'country_id' => request()->country_id,
+            'postcode' => request()->postcode,
+            'phone' => request()->phone,
+            'type' => Address::PERSONAL()
+        ]);
+
+        if(isset($validated['company_address_line_1']))
+        {
+            auth()->user()->addresses()->create([
+                'line_1' => request()->company_address_line_1,
+                'line_2' => request()->company_address_line_2,
+                'country_id' => request()->company_country_id,
+                'postcode' => request()->company_postcode,
+                'phone' => request()->company_phone,
+                'type' => Address::PERSONAL()
+            ]);
+        }
+
+        if(isset(request()->personnel))
+        {
+            foreach(request()->personnel as $personnel)
+            {
+                auth()->user()->contacts()->create([
+                    'name' => $personnel[0],
+                    'designation' => $personnel[1],
+                    'email' => $personnel[2],
+                    'phone' => $personnel[3]
+                ]);
+            }
+        }
+
+    	return redirect()->route('register.complete');
     }
 }

@@ -15,7 +15,8 @@ return [
         'auth',
         'pagination',
         'passwords',
-        'validation'
+        'validation',
+        'company'
     ],
 
     /*

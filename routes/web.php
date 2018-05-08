@@ -21,6 +21,11 @@ Route::group(['middleware' => 'locale'], function() {
 	Auth::routes();
 	Route::get('/register/success', 'HomeController@thankyou')->name('register.success');
 	Route::post('/register/success', 'ProfileController@update')->name('register.success');
+	Route::get('/register/complete', 'ProfileController@show')->name('register.complete');
+});
+
+Route::group(['prefix' => 'internal'], function() {
+	Route::get('referrer', 'HomeController@getReferrer');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
