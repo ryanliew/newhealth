@@ -18,9 +18,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password', 'avatar_path', 'social_id', 'social_service', 'referral_code', 'country_id'
-    ];
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -34,6 +32,16 @@ class User extends Authenticatable
     public function country()
     {
         return $this->belongsTo('App\Country');
+    }
+
+    public function addresses()
+    {
+        return $this->hasMany('App\Address');
+    }
+
+    public function contacts()
+    {
+        return $this->hasMany('App\Contact');
     }
 
     public function setCountryIdAttribute($value)
