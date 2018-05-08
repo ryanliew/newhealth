@@ -9,12 +9,16 @@
 
 <script>
 	export default {
-		props: [''],
+		props: ['app_locale'],
 		data() {
 			return {
-				referrer_name: this.$options.filters.trans('auth.referrer-fill'),
+				referrer_name: '',
 				referrer_id: ''
 			};
+		},
+
+		created() {
+			lang.setLocale(this.app_locale);
 		},
 
 		methods: {
@@ -26,7 +30,7 @@
 			setReferrer(response) {
 				this.referrer_name = '';
 				if(response.data) {
-					this.referrer_name = response.data;
+					this.referrer_name = this.$options.filters.trans(response.data);
 				}
 			}
 		}	

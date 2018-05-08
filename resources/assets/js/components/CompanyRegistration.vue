@@ -124,7 +124,7 @@
 
 		components: { SelectorInput },
 
-		mounted() {
+		created() {
 			lang.setLocale(this.app_locale);
 
 			this.potentialCountries = this.countries.map(country => {

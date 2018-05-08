@@ -79,5 +79,5 @@ return [
     'referral-info' => '介绍者资料',
     'referrer-name' => '介绍者名称: :name',
     'referrer-fill' => '请输入介绍者ID',
-    'referrer-not-found' => '查无此人' 
+    'referrer-not-found' => 'ID错误' 
 ];
