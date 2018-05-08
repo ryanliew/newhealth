@@ -38,7 +38,7 @@ return [
     'success-country' => '我们也需要您的所在国家，这将帮助我们制定您的ID',
     'success-referral' => '若您有介绍人，请告诉我们他的ID',
     'referral-id' => '您的ID是 :code',
-    'registration-complete' => '完成，您已可以关闭此页面'
+    'registration-complete' => '完成，您已可以关闭此页面',
 
     'identification' => '身份证/护照 号码',
     'address' => '地址',
