@@ -79,7 +79,7 @@ class RegisterController extends Controller
         ]);
 
         $user->saveAsRoot();
-
+        
         return $user;
     }
 }
