@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(isset($user->identification))
+        if($user->identification !== "")
             return redirect()->route('register.complete');
 
         return redirect()->route('register.success');

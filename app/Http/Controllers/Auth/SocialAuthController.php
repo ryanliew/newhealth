@@ -16,7 +16,7 @@ class SocialAuthController extends Controller
 
     public function userHasLoggedIn($user)
     {
-    	if(isset($user->identification))
+    	if($user->identification !== "")
     		return redirect()->route('register.complete');
 
     	return redirect()->route('register.success');
