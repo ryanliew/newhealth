@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Address;
+use App\Notifications\RegisterSuccess;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class ProfileController extends Controller
 {
@@ -20,7 +22,6 @@ class ProfileController extends Controller
 
     public function update()
     {
-        // dd(request());
     	$validated = request()->validate([
     		'email' => 'required|email',
     		'country_id' => 'required|exists:countries,id',
@@ -109,6 +110,10 @@ class ProfileController extends Controller
                 ]);
             }
         }
+
+        // Send email to user to notify register success
+        auth()->user()->notify( new RegisterSuccess(auth()->user()) );
+                       
 
     	return redirect()->route('register.complete');
     }

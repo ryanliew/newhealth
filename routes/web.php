@@ -1,5 +1,7 @@
 <?php
 
+use App\Notifications\RegisterSuccess;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,3 +33,8 @@ Route::group(['prefix' => 'internal'], function() {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/locale', 'LocaleController@switch')->name('locale');
 Route::get('/social/{service}/login', 'Auth\SocialAuthController@login');
+
+Route::get('/testmail', function() {
+	App::setLocale('zh');
+	auth()->user()->notify(new RegisterSuccess(auth()->user()));
+});
