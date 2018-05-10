@@ -17,7 +17,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        if(isset($user->identification))
+            return redirect()->route('register.complete');
+
+        return redirect()->route('register.success');
     }
 
     /**
