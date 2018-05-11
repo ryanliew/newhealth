@@ -17,10 +17,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if(auth()->user()->identification !== "")
-            return redirect()->route('register.complete');
+        //dd(auth()->user()->identification);
+        if(is_null(auth()->user()->identification ))
+            return redirect()->route('register.success');
 
-        return redirect()->route('register.success');
+        return redirect()->route('register.complete');
     }
 
     /**
