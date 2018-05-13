@@ -9,3 +9,7 @@ Vue.filter('date', function(value){
 Vue.filter('trans', (...args) => {
 	return lang.get(...args);
 });
+
+Vue.filter('trans_choice', (...args) => {
+	return lang.choice(...args);
+});

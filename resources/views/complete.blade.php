@@ -51,8 +51,8 @@
                         </div>
                         
                         <div class="alert alert-success" role="alert">
-                            <h2 class="alert-heading">{{ __('auth.thank-you') }}</h2>
-                            <p>{{ __('auth.process-registration') }} @if(auth()->user()->country_id) {{ __('auth.referral-id', ['code' => auth()->user()->referral_code]) }} @endif</p>
+                            <h2 class="alert-heading">{{ __('auth.thank_you') }}</h2>
+                            <p>{{ __('auth.process_registration') }} @if(auth()->user()->country_id) {{ __('auth.referral_id', ['code' => auth()->user()->referral_code]) }} @endif</p>
                         </div>
                     </div>
                 </div>

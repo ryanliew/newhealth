@@ -84,14 +84,14 @@
                         </select>
                     </div>
                     <button type="submit" class="btn btn-rounded btn-success sign-up">{{ __('auth.register') }}</button>
-                    {{-- <p class="sign-note">{{ __('auth.already-have-account') }} <a href="{{ route('login') }}">{{ __('auth.login') }}</a></p> --}}
+                    <p class="sign-note">{{ __('auth.already_have_account') }} <a href="{{ route('login') }}?lang={{ App::isLocale('zh') ? 'zh' : 'en' }}">{{ __('auth.login') }}</a></p>
                     <!--<button type="button" class="close">
                         <span aria-hidden="true">&times;</span>
                     </button>-->
                     
                     {{-- <a href="{{ url('/social/wechat/login') }}" class="btn btn-wechat btn-block"><i class="fa fa-wechat"></i> {{ __('auth.wechat-signup') }}</a> --}}
-                    <a href="{{ url('/social/facebook/login') }}" class="btn btn-facebook btn-block"><i class="fa fa-facebook-square"></i> {{ __('auth.facebook-signup') }}</a>
-                    <a href="{{ url('/social/google/login') }}" class="btn btn-google btn-block"><i class="fa fa-google"></i> {{ __('auth.google-signup') }}</a>
+                    <a href="{{ url('/social/facebook/login') }}{{ request()->has('referrer') ? '?referrer=' . request()->referrer : '' }}" class="btn btn-facebook btn-block"><i class="fa fa-facebook-square"></i> {{ __('auth.facebook_signup') }}</a>
+                    <a href="{{ url('/social/google/login')}}{{ request()->has('referrer') ? '?referrer=' . request()->referrer : '' }}" class="btn btn-google btn-block"><i class="fa fa-google"></i> {{ __('auth.google_signup') }}</a>
                 </form>
                 
             </div>

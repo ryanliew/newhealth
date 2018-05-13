@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Country;
+use App\Package;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -18,10 +19,11 @@ class HomeController extends Controller
     public function index()
     {
         //dd(auth()->user()->identification);
-        if(is_null(auth()->user()->identification ))
-            return redirect()->route('register.success');
+        // if(is_null(auth()->user()->identification ))
+        //     return redirect()->route('register.success');
 
-        return redirect()->route('register.complete');
+        // return redirect()->route('register.complete');
+        return view('app');
     }
 
     /**
@@ -30,7 +32,7 @@ class HomeController extends Controller
      */
     public function thankyou()
     {
-        return view('thankyou', ['countries' => Country::all()]);
+        return view('success', ['countries' => Country::all(), 'packages' => Package::all()]);
     }
 
     public function getReferrer()
@@ -38,6 +40,6 @@ class HomeController extends Controller
         //return request()->code;
         $referrer = User::where('referral_code', request()->code)->get()->first();
 
-        return $referrer ? $referrer->name : 'auth.referrer-not-found';
+        return $referrer ? $referrer->name : 'auth.referrer_not_found';
     }
 }

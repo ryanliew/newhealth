@@ -45,8 +45,8 @@ class ProfileController extends Controller
             'account_type' => 'required',
             'account_no' => 'required',
             'beneficiary_name' => 'required',
+            'package' => 'required' 
     	]);
-
 
     	if(isset($validated['referrer_code']))
     	{
@@ -75,6 +75,7 @@ class ProfileController extends Controller
             'account_no' => request()->account_no,
             'beneficiary_name' => request()->beneficiary_name,
             'beneficiary_identification' => request()->beneficiary_identification,
+            'package_id' => request()->package
         ]);
 
         auth()->user()->addresses()->create([
@@ -94,7 +95,7 @@ class ProfileController extends Controller
                 'country_id' => request()->company_country_id,
                 'postcode' => request()->company_postcode,
                 'phone' => request()->company_phone,
-                'type' => Address::PERSONAL()
+                'type' => Address::COMPANY()
             ]);
         }
 
@@ -115,6 +116,6 @@ class ProfileController extends Controller
         auth()->user()->notify( new RegisterSuccess(auth()->user()) );
                        
 
-    	return redirect()->route('register.complete');
+    	return redirect()->route('home');
     }
 }

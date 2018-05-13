@@ -1,31 +1,35 @@
 <template>
 	<div>
-	 	<input type="text" class="form-control" name="referrer_code" v-model="referrer_id" autofocus :placeholder="$options.filters.trans('auth.referrer')" @change="searchForReferrer"/>
+	 	<input type="text" class="form-control" name="referrer_code" v-model="referrer_id" autofocus :placeholder="$options.filters.trans('auth.referrer')" @keydown="searchForReferrer"/>
 	 	<small class="form-text text-muted">
-			{{ 'auth.referrer-name' | trans({'name': referrer_name}) }}
+			{{ 'auth.referrer_name' | trans({'name': referrer_name}) }}
 	 	</small>
 	 </div>
 </template>
 
 <script>
+	import _ from 'lodash';
 	export default {
-		props: ['app_locale'],
+		props: ['app_locale', 'referrer'],
 		data() {
 			return {
 				referrer_name: '',
-				referrer_id: ''
+				referrer_id: this.referrer
 			};
 		},
 
 		created() {
 			lang.setLocale(this.app_locale);
+			if(this.referrer) {
+				this.searchForReferrer();
+			}
 		},
 
 		methods: {
-			searchForReferrer() {
+			searchForReferrer: _.throttle(function() {
 				axios.get('/internal/referrer?code=' + this.referrer_id)
 					.then(response => this.setReferrer(response));
-			},
+			}, 1000),
 
 			setReferrer(response) {
 				this.referrer_name = '';

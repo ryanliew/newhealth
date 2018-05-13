@@ -51,7 +51,7 @@
                         </div>
                         <form id="app" method="POST" action="{{ url('/register/success') }}">
                             <div class="alert alert-success" role="alert">
-                                <h2 class="alert-heading">{{ __('auth.thank-you') }} {{ __('auth.last-step') }}</h2>
+                                <h2 class="alert-heading">{{ __('auth.thank_you') }} {{ __('auth.last_step') }}</h2>
                                 <p>{{ __('auth.success') }}</p>
                             </div>
                             @if($errors->count() > 0)
@@ -66,19 +66,28 @@
                             @endif
 
                             @csrf
-                            <h4>{{ __('auth.referral-info') }}</h4>
+                            <h4>{{ __('auth.general_info') }}</h4>
                             @if(!auth()->user()->parent_id)
                                 <div class="form-group">
-                                    <referrer app_locale="{{ App::isLocale('zh') ? 'zh' : 'en' }}"></referrer> 
+                                    <referrer referrer="{{ session('referrer') }}" app_locale="{{ App::isLocale('zh') ? 'zh' : 'en' }}"></referrer> 
                                     @if ($errors->has('referrer'))
                                         <span class="invalid-feedback">
                                             <strong>{{ $errors->first('referrer') }}</strong>
                                         </span>
                                     @endif
                                 </div>
+                                <div class="form-group">
+                                    <label>{{ __('auth.select_package') }} <span class="text-danger">*</span></label>
+                                    <select class="select2" name="package" required>
+                                       @foreach($packages as $package)
+                                            <option value="{{ $package->id }}">{{ $package->tree_count }} {{ trans_choice('auth.tree', $package->tree_count) }}</option>
+                                       @endforeach
+                                    </select>
+                                </div>
+
                             @endif
                             <hr>
-                            <h4>{{ __('auth.personal-info') }}</h4>
+                            <h4>{{ __('auth.personal_info') }}</h4>
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
@@ -155,15 +164,17 @@
                             
                             <div class="row">
                                 <div class="col-sm">
-                                    <div class="form-group">
-                                        <label>{{ __('auth.nationality') }}  <span class="text-danger">*</span></label>
-                                        <input name='nationality' type="text" class="form-control{{ $errors->has('nationality') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.nationality') }}" value="{{ old('nationality') }}" required/>
-                                        @if ($errors->has('nationality'))
-                                            <span class="invalid-feedback">
-                                                <strong>{{ $errors->first('nationality') }}</strong>
-                                            </span>
-                                        @endif
-                                    </div>
+                                    <label>{{ __('auth.nationality') }} <span class="text-danger">*</span></label>
+                                    <select class="select2" name="nationality">
+                                       @foreach($countries as $country)
+                                            <option value="{{ $country->name }}" @if(auth()->user()->country_id == $country->id) selected @endif>{{ $country->name }}</option>
+                                       @endforeach
+                                    </select>
+                                     @if ($errors->has('nationality'))
+                                        <span class="invalid-feedback">
+                                            <strong>{{ $errors->first('nationality') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                                 <div class="col-sm">
                                     <div class="form-group">
@@ -193,11 +204,11 @@
 
                             
                             <hr>
-                            <h4>{{ __('auth.company-info') }}</h4>
+                            <h4>{{ __('auth.company_info') }}</h4>
                             <company-registration :countries="{{ json_encode($countries) }}" user_country="{{ auth()->user()->country_id }}" app_locale="{{ App::isLocale('zh') ? 'zh' : 'en' }}"></company-registration>
 
                             <hr>
-                            <h4>{{ __('auth.bank-info') }}</h4>
+                            <h4>{{ __('auth.bank_info') }}</h4>
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
