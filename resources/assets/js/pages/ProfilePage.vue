@@ -8,6 +8,19 @@
 							{{ 'auth.personal_info' | trans }}
 							
 						</h5>
+
+						<text-input v-model="user.referral_code" 
+							:defaultValue="user.referral_code"
+							:required="false"
+							type="text"
+							:label="$options.filters.trans('auth.referrer')"
+							name="referrer"
+							:editable="false"
+							:focus="false"
+							:hideLabel="false">
+						</text-input>
+
+						<referral-link :code="user.referral_code"></referral-link>
 						
 						<text-input v-model="user.name" 
 								:defaultValue="user.name"
@@ -85,19 +98,6 @@
 							:focus="false"
 							:hideLabel="false">
 						</text-input>
-
-						<text-input v-model="user.referral_code" 
-							:defaultValue="user.referral_code"
-							:required="false"
-							type="text"
-							:label="$options.filters.trans('auth.referrer')"
-							name="referrer"
-							:editable="false"
-							:focus="false"
-							:hideLabel="false">
-						</text-input>
-
-						<referral-link :code="user.referral_code"></referral-link>
 					</div>
 				</div>
 			</div>

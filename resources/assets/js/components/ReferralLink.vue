@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="mb-3">
 		<div class="input-group">
 			<div class="input-group-prepend">
 				<button type="button" class="btn btn-sm btn-info" @click="copyLink">
