@@ -19,7 +19,7 @@
 					>
 				<span class="input__label-content input__label-content--hoshi" v-if="!hideLabel">
 					<span v-text="label"></span>
-					<span v-if="required && editable" class="is-danger">*</span>
+					<span v-if="required && editable" class="text-danger">*</span>
 				</span>
 			</label>
 		</span>
@@ -174,6 +174,7 @@
 	height: calc(100% - 1em);
 	text-align: left;
 	pointer-events: none;
+	margin-bottom: 0;
 }
 
 .input__label-content--hoshi {

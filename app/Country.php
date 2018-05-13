@@ -31,4 +31,9 @@ class Country extends Model
     {
     	return $this->code_iso == "-" ? $this->code_fips : $this->code_iso;
     }
+
+    public function getDefaultLocaleAttribute(){
+        return country($this->code)->getLanguages();
+    }
+    
 }

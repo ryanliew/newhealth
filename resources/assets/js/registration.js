@@ -48,17 +48,17 @@ require('./filters');
 
 
 // Base components
-Vue.component('flash', require('./components/Flash.vue'));
-Vue.component('confirmation', require('./components/Confirmation.vue'));
-Vue.component('loader', require('./components/Loader.vue'));
-//Vue.component('navigation', require('./components/Navigation.vue'));
-Vue.component('modal', require('./components/Modal.vue'));
-Vue.component('table-view', require('./components/TableView.vue'));
-Vue.component('text-input', require('./components/TextInput.vue'));
-Vue.component('textarea-input', require('./components/TextareaInput.vue'));
-Vue.component('checkbox-input', require('./components/CheckboxInput.vue'));
-Vue.component('selector-input', require('./components/SelectorInput.vue'));
-Vue.component('image-input', require('./components/ImageInput.vue'));
+Vue.component('flash', require('./base/Flash.vue'));
+Vue.component('confirmation', require('./base/Confirmation.vue'));
+Vue.component('loader', require('./base/Loader.vue'));
+//Vue.component('navigation', require('./base/Navigation.vue'));
+Vue.component('modal', require('./base/Modal.vue'));
+Vue.component('table-view', require('./base/TableView.vue'));
+Vue.component('text-input', require('./base/TextInput.vue'));
+Vue.component('textarea-input', require('./base/TextareaInput.vue'));
+Vue.component('checkbox-input', require('./base/CheckboxInput.vue'));
+Vue.component('selector-input', require('./base/SelectorInput.vue'));
+Vue.component('image-input', require('./base/ImageInput.vue'));
 
 Vue.component('company-registration', require('./components/CompanyRegistration.vue'));
 Vue.component('referrer', require('./components/Referrer.vue'));

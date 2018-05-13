@@ -3,9 +3,9 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |__________________________________________________________________________
     | Authentication Language Lines
-    |--------------------------------------------------------------------------
+    |__________________________________________________________________________
     |
     | The following language lines are used during authentication for various
     | messages that we need to display to the user. You are free to modify
@@ -18,27 +18,29 @@ return [
     'login' => 'Login',
     'email' => 'Email address',
     'password' => 'Password',
-    'forgot-password' => 'Forgot your password',
+    'forgot_password' => 'Forgot your password',
     'remember' => 'Remember me',
-    'new-to-site' => "New to our site?",
+    'new_to_site' => "New to our site?",
     'register' => 'Sign up',
     'repeat' => 'Repeat ',
-    'already-have-account' => 'Already have an account?',
+    'already_have_account' => 'Already have an account?',
     'name' => 'Name',
-    'wechat-signup' => 'Register with WeChat',
-    'facebook-signup' => 'Register with Facebook',
-    'google-signup' => 'Register with Google',
+    'wechat_signup' => 'Register with WeChat',
+    'facebook_signup' => 'Register with Facebook',
+    'google_signup' => 'Register with Google',
+    'facebook_login' => 'Login with Facebook',
+    'google_login' => 'Login with Google',
     'referrer' => 'Referrer ID',
     'submit' => 'Submit',
     'country' => 'Country',
-    'thank-you' => 'Thank you.',
-    'last-step' => 'One last step.',
+    'thank_you' => 'Thank you.',
+    'last_step' => 'One last step.',
     'success' => 'Please fill in your details below for us to process your registration.',
-    'success-referral' => 'If you have a referrer, please let us know by filling in his/her ID in the form below',
-    'success-email' => 'We will also need your email address so that we can send you important notifications in the future',
-    'success-country' => 'Please also let us know your country as that is required for us to generate your referral code',
-    'referral-id' => 'Your referral ID is :code',
-    'registration-complete' => 'Registration complete, you may now close this window',
+    'success_referral' => 'If you have a referrer, please let us know by filling in his/her ID in the form below',
+    'success_email' => 'We will also need your email address so that we can send you important notifications in the future',
+    'success_country' => 'Please also let us know your country as that is required for us to generate your referral code',
+    'referral_id' => 'Your referral ID is :code',
+    'registration_complete' => 'Registration complete, you may now close this window',
     'identification' => 'National ID No./Passport No.',
     'address' => 'Address',
     'postcode' => 'Postcode',
@@ -50,18 +52,18 @@ return [
     'address1' => "Address Line 1",
     'address2' => "Address Line 2",
 
-    'registering-company' => "I am registering for a company",
-    'company-name' => "Company/Entity name",
-    'company-business-registration' => "Business registration No.",
-    'company-incorporation-date' => "Date of incorporation",
-    'company-incorporation-place' => "Incorporation place",
-    'company-regulatory-name' => "Regulatory name",
+    'registering_company' => "I am registering for a company",
+    'company_name' => "Company/Entity name",
+    'company_business_registration' => "Business registration No.",
+    'company_incorporation_date' => "Date of incorporation",
+    'company_incorporation_place' => "Incorporation place",
+    'company_regulatory_name' => "Regulatory name",
     'company_type' => "Type of business entity",
-    'company-address' => 'Company address',
+    'company_address' => 'Company address',
 
-    'personal-info' => 'Personal information',
-    'company-info' => 'Company information',
-    'bank-info' => 'Bank information',
+    'personal_info' => 'Personal information',
+    'company_info' => 'Company information',
+    'bank_info' => 'Bank information',
     'bank_name' => 'Bank name',
     'bank_swift' => 'Bank sort/swift code',
     'bank_address' => 'Bank address',
@@ -70,14 +72,19 @@ return [
     'beneficiary_name' => 'Beneficiary name',
     'beneficiary_identification' => 'Beneficiary National ID No./Passport No.',
 
-    'contact-personnels' => 'Contact personnels',
-    'personnel-designation' => 'Designation',
-    'add-personnel' => 'Add personnel',
-    'remove-personnel' => 'Remove personnel',
+    'contact_personnels' => 'Contact personnels',
+    'personnel_designation' => 'Designation',
+    'add_personnel' => 'Add personnel',
+    'remove_personnel' => 'Remove personnel',
 
-    'process-registration' => 'Your registration is being processed.',
-    'referral-info' => 'Referral info',
-    'referrer-name' => 'Referrer name: :name',
-    'referrer-fill' => 'Fill in the referrer ID',
-    'referrer-not-found' => 'Referrer not found'
+    'process_registration' => 'Your registration is being processed.',
+    'referral_info' => 'Referral info',
+    'general_info'  => 'General info',
+    'referrer_name' => 'Referrer name: :name',
+    'referrer_fill' => 'Fill in the referrer ID',
+    'referrer_not_found' => 'Referrer not found',
+
+    'select_package' => 'Select package',
+    'selected_package' => 'Selected package',
+    'tree' => 'Tree|Trees'
 ];

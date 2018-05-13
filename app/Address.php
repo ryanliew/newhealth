@@ -8,6 +8,7 @@ class Address extends Model
 {
 	protected $guarded = [];
 
+    protected $appends = ['display'];
     public function user()
     {
     	return $this->belongsTo('App\User');
@@ -17,6 +18,14 @@ class Address extends Model
     {
     	return $this->belongsTo('App\Country');
     }
+
+    public function getDisplayAttribute()
+    {
+        $display = $this->line_1 . ", " . $this->line_2;
+        $display .= $this->line_2 ? ", " : ""; 
+        $display .= $this->country->name . ", " . $this->postcode;
+        return $display;
+    }   
 
     public static function PERSONAL()
     {

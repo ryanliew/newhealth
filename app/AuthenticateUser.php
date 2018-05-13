@@ -25,7 +25,7 @@ class AuthenticateUser {
 		{
 			Auth::login($user, true);
 
-			return $listener->userHasLoggedIn($user);
+			return $listener->userHasLoggedIn($user, request()->referrerId);
 		}
 
 		return $listener->invalidUserInformation();
@@ -33,6 +33,7 @@ class AuthenticateUser {
 
 	public function getAuthorizationFirst($service)
 	{
+		session(['referrerId' => request()->referrer]);
 		return Socialite::driver($service)->redirect();
 	}
 

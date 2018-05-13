@@ -3,9 +3,9 @@
 return [
 
     /*
-    |--------------------------------------------------------------------------
+    |__________________________________________________________________________
     | Authentication Language Lines
-    |--------------------------------------------------------------------------
+    |__________________________________________________________________________
     |
     | The following language lines are used during authentication for various
     | messages that we need to display to the user. You are free to modify
@@ -18,27 +18,29 @@ return [
     'login' => '登入',
     'email' => '电邮',
     'password' => '密码',
-    'forgot-password' => '忘记密码',
+    'forgot_password' => '忘记密码',
     'remember' => '记得我',
-    'new-to-site' => "还未注册？",
+    'new_to_site' => "还未注册？",
     'register' => '注册帐号',
     'repeat' => '确定',
-    'already-have-account' => '已经有帐号？',
+    'already_have_account' => '已经有帐号？',
     'name' => '名字',
-    'wechat-signup' => '使用微信注册',
-    'facebook-signup' => '使用脸书注册',
-    'google-signup' => '使用谷歌注册',
-    'referrer' => '介绍人ID',
+    'wechat_signup' => '使用微信注册',
+    'facebook_signup' => '使用脸书注册',
+    'google_signup' => '使用谷歌注册',
+    'facebook_login' => '脸书登陆',
+    'google_login' => '谷歌登陆',
+    'referrer' => '介绍者ID',
     'submit' => '提交',
     'country' => '国家',
-    'thank-you' => '谢谢',
+    'thank_you' => '谢谢',
     'success' => '注册成功',
-    'last-step' => '最后一步',
-    'success-email' => '我们也需要您的电邮以作为日后的通讯管道',
-    'success-country' => '我们也需要您的所在国家，这将帮助我们制定您的ID',
-    'success-referral' => '若您有介绍人，请告诉我们他的ID',
-    'referral-id' => '您的ID是 :code',
-    'registration-complete' => '完成，您已可以关闭此页面',
+    'last_step' => '最后一步',
+    'success_email' => '我们也需要您的电邮以作为日后的通讯管道',
+    'success_country' => '我们也需要您的所在国家，这将帮助我们制定您的ID',
+    'success_referral' => '若您有介绍人，请告诉我们他的ID',
+    'referral_id' => '您的ID是 :code',
+    'registration_complete' => '完成，您已可以关闭此页面',
 
     'identification' => '身份证/护照 号码',
     'address' => '地址',
@@ -51,18 +53,18 @@ return [
     'address1' => "地址 1",
     'address2' => "地址 2",
 
-    'registering-company' => "我正在为我的公司注册",
-    'company-name' => "公司名称",
-    'company-business-registration' => "商业注册号码",
-    'company-incorporation-date' => "商业注册日期",
-    'company-incorporation-place' => "商业注册地点",
-    'company-regulatory-name' => "监管者名称",
+    'registering_company' => "我正在为我的公司注册",
+    'company_name' => "公司名称",
+    'company_business_registration' => "商业注册号码",
+    'company_incorporation_date' => "商业注册日期",
+    'company_incorporation_place' => "商业注册地点",
+    'company_regulatory_name' => "监管者名称",
     'company_type' => "商业类型",
-    'company-address' => '公司地址',
+    'company_address' => '公司地址',
 
-    'personal-info' => '个人资料',
-    'company-info' => '公司资料',
-    'bank-info' => '银行资料',
+    'personal_info' => '个人资料',
+    'company_info' => '公司资料',
+    'bank_info' => '银行资料',
     'bank_name' => '银行名称',
     'bank_swift' => '银行 sort/swift 代码',
     'bank_address' => '银行地址',
@@ -71,14 +73,19 @@ return [
     'beneficiary_name' => '受益者名称',
     'beneficiary_identification' => '受益者身份证/护照号码',
 
-    'contact-personnels' => '公司联络人',
-    'personnel-designation' => '职位',
-    'add-personnel' => '增加',
-    'remove-personnel' => '去除',
+    'contact_personnels' => '公司联络人',
+    'personnel_designation' => '职位',
+    'add_personnel' => '增加',
+    'remove_personnel' => '去除',
 
-    'process-registration' => '我们正在处理您的注册。',
-    'referral-info' => '介绍者资料',
-    'referrer-name' => '介绍者名称: :name',
-    'referrer-fill' => '请输入介绍者ID',
-    'referrer-not-found' => 'ID错误' 
+    'process_registration' => '我们正在处理您的注册。',
+    'referral_info' => '介绍者资料',
+    'general_info'  => '一般资料',
+    'referrer_name' => '介绍者名称: :name',
+    'referrer_fill' => '请输入介绍者ID',
+    'referrer_not_found' => 'ID错误',
+
+    'select_package' => '选择配套',
+    'selected_package' => '配套',
+    'tree' => '棵树|棵树' 
 ];

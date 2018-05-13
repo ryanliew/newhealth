@@ -19,19 +19,32 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 <link rel="stylesheet" href="/css/separate/pages/login.min.css">
-    <link rel="stylesheet" href="/css/lib/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/css/start-ui.css">
+    <link rel="stylesheet" href="/css/separate/buttons.css">
 </head>
 <body>
+    <div class="top-bar" style="position:fixed; right:0">
+                            
+        <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {!! App::isLocale('zh') ? '<span class="flag-icon flag-icon-cn"></span>' : '<span class="flag-icon flag-icon-us"></span>' !!}
 
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <div class="dropdown-menu-col">
+                    <a class="dropdown-item @if(App::isLocale('en')) current @endif" href="/login?lang=en"><span class="flag-icon flag-icon-us"></span> English</a>
+                    <a class="dropdown-item @if(App::isLocale('zh')) current @endif" href="/login?lang=zh"><span class="flag-icon flag-icon-cn"></span> 中文</a>
+                </div>
+            </div>
+        </div>
+    </div><!--.site-header-shown-->
     <div class="page-center">
         <div class="page-center-in">
             <div class="container-fluid">
                 <form class="sign-box" method="POST" action="{{ route('login') }}">
-                    <div class="sign-avatar">
-                        <img src="img/avatar-sign.png" alt="">
-                    </div>
+                    <div><img class="img-fluid" src="/img/logo.png"></div>
                     <header class="sign-title">{{ __('auth.login') }}</header>
 
                     @csrf
@@ -58,16 +71,17 @@
                             <input type="checkbox" name="remeber" id="signed-in"/>
                             <label for="signed-in">{{ __('auth.remember') }}</label>
                         </div>
-                        <div class="float-right reset">
-                            <a href="{{ route('password.request') }}">{{ __('auth.forgot-password') }}</a>
-                        </div>
+                        {{-- <div class="float-right reset">
+                            <a href="{{ route('password.request') }}">{{ __('auth.forgot_password') }}</a>
+                        </div> --}}
                     </div>
                     <button type="submit" class="btn btn-rounded">{{ __('auth.login') }}</button>
-                    <p class="sign-note">{{ __('auth.new-to-site') }} <a href="{{ route('register') }}">{{ __('auth.register') }}</a></p>
+                    <p class="sign-note">{{ __('auth.new_to_site') }} <a href="{{ route('register') }}?lang={{ App::isLocale('zh') ? 'zh' : 'en' }}">{{ __('auth.register') }}</a></p>
                     <!--<button type="button" class="close">
                         <span aria-hidden="true">&times;</span>
                     </button>-->
-                    
+                     <a href="{{ url('/social/facebook/login') }}" class="btn btn-facebook btn-block"><i class="fa fa-facebook-square"></i> {{ __('auth.facebook_login') }}</a>
+                    <a href="{{ url('/social/google/login') }}" class="btn btn-google btn-block"><i class="fa fa-google"></i> {{ __('auth.google_login') }}</a>
                 </form>
             </div>
         </div>

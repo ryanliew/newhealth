@@ -20,6 +20,9 @@ class User extends Authenticatable
      */
     protected $guarded = [];
 
+    protected $appends = ['address', 'company_address', 'default_locale'];
+
+    protected $with = ['package'];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -39,9 +42,24 @@ class User extends Authenticatable
         return $this->hasMany('App\Address');
     }
 
+    public function package()
+    {
+        return $this->belongsTo('App\Package');
+    }
+
     public function contacts()
     {
         return $this->hasMany('App\Contact');
+    }
+
+    public function getPersonalAddressAttribute()
+    {
+        return $this->addresses()->where('type', Address::PERSONAL())->first();
+    }
+
+    public function getCompanyAddressAttribute()
+    {
+        return $this->addresses()->where('type', Address::COMPANY())->first();
     }
 
     public function setCountryIdAttribute($value)
@@ -53,6 +71,33 @@ class User extends Authenticatable
         $this->attributes['referral_code'] = $this->generateReferralCode($country);
     }
 
+    public function getDefaultLocaleAttribute()
+    {
+        return $this->country->default_locale;
+    }
+
+    public function getAddressAttribute()
+    {
+        if($this->personal_address) {
+            return $this->personal_address->display;
+        }
+
+        return '';
+    }
+
+    public function getCompanyAddressDisplayAttribute()
+    {
+        if($this->personal_address) {
+            return $this->company_address->display;
+        }
+
+        return '';
+    }
+
+    public function getContactNumberAttribute()
+    {
+        return $this->personal_address ? $this->personal_address->phone : "";
+    }
     public function generateReferralCode($country)
     {
         $code = strtoupper($country->code) . '-' .  Carbon::now()->month . round(Carbon::now()->micro / 1000) . Carbon::now()->second . Carbon::now()->day;
