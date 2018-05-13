@@ -83,6 +83,7 @@
                            @endforeach
                         </select>
                     </div>
+                    <input type="hidden" name="referrer" value="{{ request()->referrer }}">
                     <button type="submit" class="btn btn-rounded btn-success sign-up">{{ __('auth.register') }}</button>
                     <p class="sign-note">{{ __('auth.already_have_account') }} <a href="{{ route('login') }}?lang={{ App::isLocale('zh') ? 'zh' : 'en' }}">{{ __('auth.login') }}</a></p>
                     <!--<button type="button" class="close">
