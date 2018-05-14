@@ -19,7 +19,7 @@ return [
     'email' => '电邮',
     'password' => '密码',
     'forgot_password' => '忘记密码',
-    'remember' => '记得我',
+    'remember' => '保持登入',
     'new_to_site' => "还未注册？",
     'register' => '注册帐号',
     'repeat' => '确定',
@@ -38,7 +38,7 @@ return [
     'last_step' => '最后一步',
     'success_email' => '我们也需要您的电邮以作为日后的通讯管道',
     'success_country' => '我们也需要您的所在国家，这将帮助我们制定您的ID',
-    'success_referral' => '若您有介绍人，请告诉我们他的ID',
+    'success_referral' => '若您有推荐者，请告诉我们他的ID',
     'referral_id' => '您的ID是 :code',
     'registration_complete' => '完成，您已可以关闭此页面',
 
@@ -79,10 +79,10 @@ return [
     'remove_personnel' => '去除',
 
     'process_registration' => '我们正在处理您的注册。',
-    'referral_info' => '介绍者资料',
+    'referral_info' => '推荐者资料',
     'general_info'  => '一般资料',
-    'referrer_name' => '介绍者名称: :name',
-    'referrer_fill' => '请输入介绍者ID',
+    'referrer_name' => '推荐者名称: :name',
+    'referrer_fill' => '请输入推荐者ID',
     'referrer_not_found' => 'ID错误',
 
     'select_package' => '选择配套',
