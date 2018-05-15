@@ -41,60 +41,62 @@
         </div>
     </div><!--.site-header-shown-->
 
-    <div class="page-center">
+    <div class="page-center login-bg">
         <div class="page-center-in">
             <div class="container-fluid">
-                <form class="sign-box" action="{{ route('register') }}" method="POST">
-                    @csrf
-                    <div><img class="img-fluid" src="/img/logo.png"></div>
-                    <header class="sign-title">{{ __('auth.register') }}</header>
-                    <div class="form-group">
-                        <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.name') }}" value="{{ old('name') }}" required autofocus/>
-                        @if ($errors->has('name'))
-                            <span class="invalid-feedback">
-                                <strong>{{ $errors->first('name') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required placeholder="{{ __('auth.email') }}"/>
-                        @if ($errors->has('email'))
-                            <span class="invalid-feedback">
-                                <strong>{{ $errors->first('email') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="{{ __('auth.password') }}"/>
-                        @if ($errors->has('password'))
-                            <span class="invalid-feedback">
-                                <strong>{{ $errors->first('password') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                    <div class="form-group">
-                        <input name="password_confirmation" type="password" class="form-control" placeholder="{{ __('auth.repeat') }}{{ __('auth.password') }}"/>
-                    </div>
-                    <div class="form-group">
-                        <label>{{ __('auth.country') }} <span class="text-danger">*</span></label>
-                        <select class="select2" name="country">
-                           @foreach($countries as $country)
-                                <option value="{{ $country->id }}">{{ $country->name }}</option>
-                           @endforeach
-                        </select>
-                    </div>
-                    <input type="hidden" name="referrer" value="{{ request()->referrer }}">
-                    <button type="submit" class="btn btn-rounded btn-success sign-up">{{ __('auth.register') }}</button>
-                    <p class="sign-note">{{ __('auth.already_have_account') }} <a href="{{ route('login') }}?lang={{ App::isLocale('zh') ? 'zh' : 'en' }}">{{ __('auth.login') }}</a></p>
-                    <!--<button type="button" class="close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>-->
-                    
-                    {{-- <a href="{{ url('/social/wechat/login') }}" class="btn btn-wechat btn-block"><i class="fa fa-wechat"></i> {{ __('auth.wechat-signup') }}</a> --}}
-                    <a href="{{ url('/social/facebook/login') }}{{ request()->has('referrer') ? '?referrer=' . request()->referrer : '' }}" class="btn btn-facebook btn-block"><i class="fa fa-facebook-square"></i> {{ __('auth.facebook_signup') }}</a>
-                    <a href="{{ url('/social/google/login')}}{{ request()->has('referrer') ? '?referrer=' . request()->referrer : '' }}" class="btn btn-google btn-block"><i class="fa fa-google"></i> {{ __('auth.google_signup') }}</a>
-                </form>
-                
+                <div class="col-md-5"></div>
+                <div class="col-md-7">
+                    <form class="sign-box" action="{{ route('register') }}" method="POST">
+                        @csrf
+                        <div><img class="img-fluid" src="/img/logo.png"></div>
+                        <header class="sign-title" style="font-size:18px; padding:30px 0;">{{ __('auth.register_today') }}<b>{{ __('auth.register') }}</b>{{ __('auth.en_space') }}{{ __('auth.register_message') }}</header>
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.name') }}" value="{{ old('name') }}" required autofocus/>
+                            @if ($errors->has('name'))
+                                <span class="invalid-feedback">
+                                    <strong>{{ $errors->first('name') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required placeholder="{{ __('auth.email') }}"/>
+                            @if ($errors->has('email'))
+                                <span class="invalid-feedback">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required placeholder="{{ __('auth.password') }}"/>
+                            @if ($errors->has('password'))
+                                <span class="invalid-feedback">
+                                    <strong>{{ $errors->first('password') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <input name="password_confirmation" type="password" class="form-control" placeholder="{{ __('auth.repeat') }}{{ __('auth.password') }}"/>
+                        </div>
+                        <div class="form-group">
+                            <label>{{ __('auth.country') }} <span class="text-danger">*</span></label>
+                            <select class="select2" name="country">
+                               @foreach($countries as $country)
+                                    <option value="{{ $country->id }}">{{ $country->name }}</option>
+                               @endforeach
+                            </select>
+                        </div>
+                        <input type="hidden" name="referrer" value="{{ request()->referrer }}">
+                        <button type="submit" class="btn btn-rounded btn-success sign-up">{{ __('auth.register') }}</button>
+                        <p class="sign-note">{{ __('auth.already_have_account') }} <a href="{{ route('login') }}?lang={{ App::isLocale('zh') ? 'zh' : 'en' }}">{{ __('auth.login') }}</a></p>
+                        <!--<button type="button" class="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>-->
+                        
+                        {{-- <a href="{{ url('/social/wechat/login') }}" class="btn btn-wechat btn-block"><i class="fa fa-wechat"></i> {{ __('auth.wechat-signup') }}</a> --}}
+                        <a href="{{ url('/social/facebook/login') }}{{ request()->has('referrer') ? '?referrer=' . request()->referrer : '' }}" class="btn btn-facebook btn-block"><i class="fa fa-facebook-square"></i> {{ __('auth.facebook_signup') }}</a>
+                        <a href="{{ url('/social/google/login')}}{{ request()->has('referrer') ? '?referrer=' . request()->referrer : '' }}" class="btn btn-google btn-block"><i class="fa fa-google"></i> {{ __('auth.google_signup') }}</a>
+                    </form>
+                </div>
             </div>
         </div>
     </div><!--.page-center-->
