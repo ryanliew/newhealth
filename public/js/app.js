@@ -68542,16 +68542,14 @@ window.user = '';
 window.intended = '';
 __webpack_require__(207);
 
-var routes = [{ path: '/', component: __WEBPACK_IMPORTED_MODULE_4__pages_ProfilePage_vue___default.a }, { path: '/dashboard', component: __WEBPACK_IMPORTED_MODULE_2__pages_Dashboard_vue___default.a }, { path: '/login', component: __WEBPACK_IMPORTED_MODULE_3__pages_LoginPage_vue___default.a }, { path: '/profile', component: __WEBPACK_IMPORTED_MODULE_4__pages_ProfilePage_vue___default.a }];
+var routes = [{ path: '/_=_', redirect: '/' }, // To counter facebook login
+{ path: '/', component: __WEBPACK_IMPORTED_MODULE_4__pages_ProfilePage_vue___default.a }, { path: '/dashboard', component: __WEBPACK_IMPORTED_MODULE_2__pages_Dashboard_vue___default.a }, { path: '/login', component: __WEBPACK_IMPORTED_MODULE_3__pages_LoginPage_vue___default.a }, { path: '/profile', component: __WEBPACK_IMPORTED_MODULE_4__pages_ProfilePage_vue___default.a }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({ routes: routes });
 
 router.beforeEach(function (to, from, next) {
 	if (to.fullPath !== '/login' && !user) {
-		// To counter facebook login
-		if (to.fullPath == "_=_") {
-			to.fullPath = "";
-		}
+
 		axios.get('/api/profile').then(function (response) {
 			user = response.data;next();
 		});

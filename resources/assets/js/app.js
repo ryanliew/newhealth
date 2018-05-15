@@ -39,6 +39,7 @@ window.intended = '';
 require('./filters');
 
 const routes = [
+	{ path: '/_=_', redirect: '/'}, // To counter facebook login
 	{ path: '/', component: ProfilePage }, 
 	{ path: '/dashboard', component:Dashboard },
 	{ path: '/login', component: LoginPage },
@@ -49,11 +50,7 @@ const router = new VueRouter({ routes });
 
 router.beforeEach((to, from, next) => {
 	if(to.fullPath !== '/login' && !user) {
-		// To counter facebook login
-		if(to.fullPath == "_=_")
-		{
-			to.fullPath = "";
-		}
+	
 		axios.get('/api/profile')
 			.then(response => { user = response.data; next(); })
 			//.catch(error => { intended = to.fullPath; window.location.href="/register"; });
