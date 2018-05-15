@@ -68549,8 +68549,8 @@ var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({ r
 router.beforeEach(function (to, from, next) {
 	if (to.fullPath !== '/login' && !user) {
 		// To counter facebook login
-		if (to.hash == "_=_") {
-			to.hash = "";
+		if (to.fullPath == "_=_") {
+			to.fullPath = "";
 		}
 		axios.get('/api/profile').then(function (response) {
 			user = response.data;next();
