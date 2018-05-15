@@ -32,7 +32,10 @@ class HomeController extends Controller
      */
     public function thankyou()
     {
-        return view('success', ['countries' => Country::all(), 'packages' => Package::all()]);
+        if(is_null(auth()->user()->identification))
+            return view('success', ['countries' => Country::all(), 'packages' => Package::all()]);
+
+        return redirect()->route('home');
     }
 
     public function getReferrer()

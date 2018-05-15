@@ -47,7 +47,7 @@
                     <div class="col-sm bg-white p-4">
                 
                         <div class="d-flex justify-content-center mb-3">
-                            <img class="img-fluid" width="258px" src="/img/logo.png">
+                            <img class="img-fluid" style="width:258px;height:72px;" src="/img/logo.png">
                         </div>
                         <form id="app" method="POST" action="{{ url('/register/success') }}">
                             <div class="alert alert-success" role="alert">
