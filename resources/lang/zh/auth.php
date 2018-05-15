@@ -28,8 +28,8 @@ return [
     'wechat_signup' => '使用微信注册',
     'facebook_signup' => '使用脸书注册',
     'google_signup' => '使用谷歌注册',
-    'facebook_login' => '脸书登陆',
-    'google_login' => '谷歌登陆',
+    'facebook_login' => '脸书登入',
+    'google_login' => '谷歌登入',
     'referrer' => '介绍者ID',
     'submit' => '提交',
     'country' => '国家',
@@ -87,5 +87,11 @@ return [
 
     'select_package' => '选择配套',
     'selected_package' => '配套',
-    'tree' => '棵树|棵树' 
+    'tree' => '棵树|棵树',
+    'hi' => '你好',
+    'grower' => '种植者',
+    'welcome_back' => '欢迎回来',
+    'en_space' => '',
+    'register_message' => '成为新叶种植着，参与上十亿美元的产业',
+    'register_today' => '今天就' 
 ];
