@@ -68548,8 +68548,10 @@ var router = new __WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]({ r
 
 router.beforeEach(function (to, from, next) {
 	if (to.fullPath !== '/login' && !user) {
-		intended = '/';
-
+		// To counter facebook login
+		if (to.hash == "_=_") {
+			to.hash = "";
+		}
 		axios.get('/api/profile').then(function (response) {
 			user = response.data;next();
 		});
@@ -71613,7 +71615,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         staticClass: "hidden-lg-down",
-        attrs: { src: "img/logo-2-mob.png", alt: "" }
+        attrs: { src: "/img/favicon.png", alt: "" }
       })
     ])
   },

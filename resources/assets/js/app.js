@@ -49,8 +49,11 @@ const router = new VueRouter({ routes });
 
 router.beforeEach((to, from, next) => {
 	if(to.fullPath !== '/login' && !user) {
-		intended = '/';
-		
+		// To counter facebook login
+		if(to.hash == "_=_")
+		{
+			to.hash = "";
+		}
 		axios.get('/api/profile')
 			.then(response => { user = response.data; next(); })
 			//.catch(error => { intended = to.fullPath; window.location.href="/register"; });
