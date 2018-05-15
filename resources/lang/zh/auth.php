@@ -21,7 +21,7 @@ return [
     'forgot_password' => '忘记密码',
     'remember' => '保持登入',
     'new_to_site' => "还未注册？",
-    'register' => '注册帐号',
+    'register' => '加盟',
     'repeat' => '确定',
     'already_have_account' => '已经有帐号？',
     'name' => '名字',
@@ -92,6 +92,6 @@ return [
     'grower' => '种植者',
     'welcome_back' => '欢迎回来',
     'en_space' => '',
-    'register_message' => '成为新叶种植着，参与上十亿美元的产业',
-    'register_today' => '今天就' 
+    'register_message' => '新叶榴莲种植计划！',
+    'register_today' => '榴莲种植新商机, 携手新叶创百亿, 马上' 
 ];
