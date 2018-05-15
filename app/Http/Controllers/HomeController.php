@@ -19,8 +19,8 @@ class HomeController extends Controller
     public function index()
     {
         //dd(auth()->user()->identification);
-        // if(is_null(auth()->user()->identification ))
-        //     return redirect()->route('register.success');
+        if(is_null(auth()->user()->identification ))
+            return redirect()->route('register.success');
 
         // return redirect()->route('register.complete');
         return view('app');
