@@ -89,7 +89,7 @@ return [
     'tree' => 'Tree|Trees',
     'hi' => 'Hi',
     'grower' => ' Grower',
-    'welcome_back' => 'Welcome back',
+    'welcome_back' => 'welcome back',
     'register_today' => '',
     'en_space' => ' ',
     'register_message' => 'as Newleaf grower and get involved in the multi-billion dollar industry today'
