@@ -4,7 +4,7 @@
 		    <div class="container-fluid">
 		        <a href="#" class="site-logo">
 		            <img class="hidden-md-down" src="/img/favicon.png" alt="">
-		            <img class="hidden-lg-down" src="img/logo-2-mob.png" alt="">
+		            <img class="hidden-lg-down" src="/img/favicon.png" alt="">
 		        </a>
 		
 		        <button id="show-hide-sidebar-toggle" class="show-hide-sidebar">
