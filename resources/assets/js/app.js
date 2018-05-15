@@ -50,9 +50,9 @@ const router = new VueRouter({ routes });
 router.beforeEach((to, from, next) => {
 	if(to.fullPath !== '/login' && !user) {
 		// To counter facebook login
-		if(to.hash == "_=_")
+		if(to.fullPath == "_=_")
 		{
-			to.hash = "";
+			to.fullPath = "";
 		}
 		axios.get('/api/profile')
 			.then(response => { user = response.data; next(); })
