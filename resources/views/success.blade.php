@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/css/separate/buttons.css">
 </head>
 <body>
-    <div class="top-bar" style="position:fixed; right:0">
+    <div class="top-bar" style="position:fixed; right:0; z-index: 5">
                             
         <div class="dropdown">
             <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -114,14 +114,34 @@
                             </div>
                             <div class="form-group">
                                 <label>{{ __('auth.email') }}  <span class="text-danger">*</span></label>
-                                <input name='email' type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.email') }}" value="{{ ends_with(auth()->user()->email, '@email.com') ? old('email') : auth()->user()->email }}" required autofocus/>
+                                <input name='email' type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.email') }}" value="{{ ends_with(auth()->user()->email, '@email.com') ? old('email') : auth()->user()->email }}" required/>
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
                             </div>
-
+                            @if(!is_null(auth()->user()->social_service))
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.password') }}  <span class="text-danger">*</span></label>
+                                        <input name='password' type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.password') }}" required/>
+                                        @if ($errors->has('password'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('password') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.repeat') }}{{ __('auth.password') }} <span class="text-danger">*</span></label>
+                                        <input name='password_confirmation' type="password" class="form-control" placeholder="{{ __('auth.repeat') }}{{ __('auth.password') }}" required/>
+                                    </div>
+                                </div>
+                            </div>
+                            @endif
                             <div class="form-group">
                                 <label>{{ __('auth.address') }}  <span class="text-danger">*</span></label>
                                 <input name='address_line_1' type="text" class="form-control{{ $errors->has('address_line_1') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.address1') }}" value="{{ old('address_line_1') }}" required/>
@@ -296,6 +316,7 @@
                             </div>
                                                         
                             <button type="submit" class="btn btn-rounded btn-success sign-up">{{ __('auth.submit') }}</button>
+                            <a class="btn btn-rounded btn-link" href="{{ route('register.cancel') }}">{{ __('auth.cancel') }}</a>
                         </form>
                     </div>
                 </div>

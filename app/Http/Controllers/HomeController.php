@@ -6,6 +6,7 @@ use App\Country;
 use App\Package;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -44,5 +45,11 @@ class HomeController extends Controller
         $referrer = User::where('referral_code', request()->code)->get()->first();
 
         return $referrer ? $referrer->name : 'auth.referrer_not_found';
+    }
+
+    public function cancel()
+    {
+        Auth::logout();
+        return redirect()->route('register');
     }
 }

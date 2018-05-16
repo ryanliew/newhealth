@@ -30,6 +30,7 @@ class ProfileController extends Controller
             'postcode' => 'required',
             'nationality' => 'required',
             'phone' => 'required',
+            'password' => 'sometimes|required|confirmed',
             'identification' => 'required',
             'company_name' => 'sometimes|required',
             'company_business_registration' => 'sometimes|required',
@@ -77,6 +78,11 @@ class ProfileController extends Controller
             'beneficiary_identification' => request()->beneficiary_identification,
             'package_id' => request()->package
         ]);
+
+        if(request()->has('password'))
+        {
+            auth()->user()->update([ 'password' => bcrypt(request()->password) ]);
+        }
 
         auth()->user()->addresses()->create([
             'line_1' => request()->address_line_1,

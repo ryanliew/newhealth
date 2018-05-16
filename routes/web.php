@@ -26,6 +26,7 @@ Route::group(['middleware' => 'locale'], function() {
 	Route::get('/register/complete', 'ProfileController@show')->name('register.complete');
 });
 
+
 Route::group(['prefix' => 'internal'], function() {
 	Route::get('referrer', 'HomeController@getReferrer');
 });
@@ -33,7 +34,7 @@ Route::group(['prefix' => 'internal'], function() {
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/locale', 'LocaleController@switch')->name('locale');
 Route::get('/social/{service}/login', 'Auth\SocialAuthController@login');
-
+Route::get('/register/cancel', 'HomeController@cancel')->name('register.cancel');
 Route::get('/testmail', function() {
 	App::setLocale('zh');
 	auth()->user()->notify(new RegisterSuccess(auth()->user()));
