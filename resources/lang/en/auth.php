@@ -92,5 +92,6 @@ return [
     'welcome_back' => 'welcome back',
     'register_today' => '',
     'en_space' => ' ',
-    'register_message' => 'as Newleaf grower and get involved in the multi-billion dollar industry today'
+    'register_message' => 'as Newleaf grower and get involved in the multi-billion dollar industry today',
+    'cancel' => 'Cancel'
 ];

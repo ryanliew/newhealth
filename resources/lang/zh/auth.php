@@ -93,5 +93,6 @@ return [
     'welcome_back' => '欢迎回来',
     'en_space' => '',
     'register_message' => '新叶榴莲种植计划！',
-    'register_today' => '榴莲种植新商机, 携手新叶创百亿, 马上' 
+    'register_today' => '榴莲种植新商机, 携手新叶创百亿, 马上',
+    'cancel' => '取消' 
 ];
