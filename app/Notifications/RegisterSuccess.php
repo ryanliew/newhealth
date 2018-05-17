@@ -2,25 +2,28 @@
 
 namespace App\Notifications;
 
+use App\Mail\RegisterSuccess as RegisterSuccessMail;
 use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use Illuminate\Support\Facades\App;
 
-class RegisterSuccess extends Notification
+class RegisterSuccess extends Notification implements ShouldQueue
 {
     use Queueable;
 
-    protected $user;
+    protected $user, $locale;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(User $user, $locale = 'en')
     {
         $this->user = $user;
+        $this->locale = $locale;
     }
 
     /**
@@ -41,9 +44,14 @@ class RegisterSuccess extends Notification
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
     public function toMail($notifiable)
-    {
-        return (new MailMessage)
-                    ->subject( __('mail.success-register') );
+    { 
+        App::setLocale($this->locale);
+        return (new RegisterSuccessMail($this->user, $this->locale))
+               ->to($this->user->email)
+               ->subject( __('mail.success_register') );
+        // return (new MailMessage)
+        //             ->markdown('vendor.notifications.email', ['user' => $this->user])
+        //             ->subject( __('mail.success_register') );
     }
 
     /**

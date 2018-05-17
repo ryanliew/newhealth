@@ -8,9 +8,9 @@
 
 <style type="text/css">
 
-    body{width: 100%; background-image:url("http://newleaf.com.my/img/slides/slide.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center center; background-color: #383434; margin:0; padding:0; -webkit-font-smoothing: antialiased;mso-margin-top-alt:0px; mso-margin-bottom-alt:0px; mso-padding-alt: 0px 0px 0px 0px;}
+    body{width: 100%; background-repeat: no-repeat; background-size: contain; background-position: left top; background-color: #ffffff !important; margin:0; padding:0; -webkit-font-smoothing: antialiased;mso-margin-top-alt:0px; mso-margin-bottom-alt:0px; mso-padding-alt: 0px 0px 0px 0px;}
 
-    p,h1,h2,h3,h4{margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0;}
+    p,h1,h2,h3,h4{margin-top:20px !important;margin-bottom:0;padding-top:0;padding-bottom:0;line-height:1;}
 
     span.preheader{display: none; font-size: 1px;}
 
@@ -20,29 +20,42 @@
 
     .menu-space{padding-right:25px;}
 
-    a,a:hover { text-decoration:none; color:#FFF;}
+    a,a:hover { text-decoration:none; color:#4D95AD;}
+    
+    .desktop-hidden{ display: none; }
 
+    .logo{ padding-right: 45px; width: 25vw; }
 
     @media only screen and (max-width:640px)
     {
         body {width:auto!important;}
-        table [class=main] {width:440px !important;}
-        table [class=two-left] {width:420px !important; margin:0px auto;}
-        table [class=full] {width:100% !important; margin:0px auto;}
-        table [class=two-left-inner] {width:400px !important; margin:0px auto;}
-        table [class=menu-icon] { display:none;}
+        table.main {width:440px !important;}
+        table.two-left {width:420px !important; margin:0px auto;}
+        table.full {width:100% !important; margin:0px auto;}
+        table.two-left-inner {width:400px !important; margin:0px auto;}
+        table.menu-icon { display:none;}
+        .mobile-hidden{ display:none; }
+        .desktop-hidden{ display:table-row !important; }
+        .mobile-wide{ width: 100%; }
+        .logo{ padding-right: 0 !important; padding-top: 30px; width: 80vw;}
 
     }
 
     @media only screen and (max-width:479px)
     {
         body {width:auto!important;}
-        table [class=main]  {width:310px !important;}
-        table [class=two-left] {width:300px !important; margin:0px auto;}
-        table [class=full] {width:100% !important; margin:0px auto;}
-        table [class=two-left-inner] {width:280px !important; margin:0px auto;}
-        table [class=menu-icon] { display:none;}  
+        table.main {width:310px !important;}
+        table.two-left {width:300px !important; margin:0px auto;}
+        table.full {width:100% !important; margin:0px auto;}
+        table.two-left-inner {width:280px !important; margin:0px auto;}
+        table.menu-icon { display:none;}  
+        .mobile-hidden{ display:none; }
+        .desktop-hidden{ display:table-row !important; }
+        .mobile-wide{ width: 100%; }
+        .logo{ padding-right: 0 !important; padding-top: 30px; width: 80vw; }
     }
+
+
 
 </style>
 
@@ -51,182 +64,63 @@
 <body yahoo="fix" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 
 <!--Main Table Start-->
-
-    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <table class="main" style="margin: auto;" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
-            <td align="center" valign="middle">
-        
-                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center" valign="middle">
-                            <table width="450" border="0" align="center" cellpadding="0" cellspacing="0" class="main">
-                                <tr>
-                                    <td height="90" align="center" valign="top" style="font-size:90px; line-height:90px;">&nbsp;</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                
-                <!-- Logo -->
-                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center" valign="middle">
-                            <table width="450" border="0" align="center" cellpadding="0" cellspacing="0" class="main">
-                                <tr>
-                                    <td align="center" valign="top" bgcolor="#FFFFFF" style="-moz-border-radius: 25px 25px 0px 0px; border-radius: 25px 25px 0px 0px; border-bottom:#e2e3e3 solid 1px;">
-                                        <table width="380" border="0" align="center" cellpadding="0" cellspacing="0" class="two-left-inner">
-                                            <tr>
-                                                <td height="35" align="center" valign="top" style="font-size:35px; line-height:35px;">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center" valign="top">
-                                                    <table border="0" align="center" cellpadding="0" cellspacing="0">
-                                                        <tr>
-                                                            <td align="center" valign="middle"><a href="https://portal.newleaf.com.my"><img  src="https://portal.newleaf.com.my/img/logo.png" width="135" alt="" /></a></td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td height="20" align="center" valign="top" style="font-size:20px; line-height:20px;">&nbsp;</td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                
-                <!-- Actual mail content -->
-                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center" valign="middle">
-                            <table width="450" border="0" align="center" cellpadding="0" cellspacing="0" class="main">
-                                <tr>
-                                    <td align="center" valign="top" bgcolor="#FFFFFF">
-                                        <table width="380" border="0" align="center" cellpadding="0" cellspacing="0" class="two-left-inner">
-                                            <tr>
-                                                <td height="60" align="center" valign="top" style="font-size:60px; line-height:60px;">&nbsp;</td>
-                                            </tr>
-                                            <tr>
-                                                <td align="center" valign="top">
-                                                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                                        <tr>
-                                                            <td align="center" valign="top">
-                                                                <table width="70" border="0" cellspacing="0" cellpadding="0">
-                                                                    <tr>
-                                                                        <td align="center" valign="top"><img  src="{{ auth()->user()->avatar_path }}" width="70" height="70" alt="" style="-moz-border-radius: 70px; border-radius: 70px;" /></td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td align="center" valign="top">&nbsp;</td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                  
-                                                        <tr>
-                                                            <td align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#4c4c4c; font-weight:normal; line-height:36px;">{{ __('mail.hello') }}! {{ auth()->user()->name }}</td>
-                                                        </tr>
-                                  
-                                                        <tr>
-                                                            <td align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:30px; color:#4c4c4c; font-weight:normal;">{{ __('mail.welcome') }}</td>
-                                                        </tr>
-                                  
-                                                        <tr>
-                                                            <td height="10" align="center" valign="top" style="font-size:10px; line-height:10px;">&nbsp;</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td align="center" valign="top" style="font-family:'Open Sans', sans-serif, Verdana; font-size:15px; color:#4c4c4c; font-weight:normal; line-height:24px; padding:0px 35px;">{{ __('mail.thank-you-register') }}</td>
-                                                        </tr>
-                                  
-                                                        <tr>
-                                                            <td align="center" valign="top">&nbsp;</td>
-                                                        </tr>
-                                  
-                                                        <tr>
-                                                            <td align="center" valign="top">
-                                                                <table width="155" border="0" align="center" cellpadding="0" cellspacing="0">
-                                                                    <tr>
-                                                                        <td height="50" align="center" valign="middle" bgcolor="#fe573c" style="font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFF; font-weight:normal; text-transform:uppercase; -moz-border-radius: 30px; border-radius: 30px;"><div style="text-decoration:none; color:#FFF;">{{ auth()->user()->referral_code }}</div></td>
-                                                                    </tr>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td align="center" valign="top">&nbsp;</td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#ccc; font-weight:normal; line-height:28px;">Newleaf Plantation Berhad</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#ccc; font-weight:bold; line-height:28px;">Copyright &copy; 2018 newleaf.com.my </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td height="50" align="center" valign="top" style="font-size:50px; line-height:50px;">&nbsp;</td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-
-                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center" valign="middle">
-                            <table width="450" border="0" align="center" cellpadding="0" cellspacing="0" class="main">
-                                <tr>
-                                    <td align="center" valign="top" bgcolor="#FFFFFF" style="-moz-border-radius:0px 0px 25px 25px; border-radius:0px 0px 25px 25px;">&nbsp;</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                
-                <!-- Copyright note -->
-                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center" valign="middle">
-                            <table width="450" border="0" align="center" cellpadding="0" cellspacing="0" class="main">
-                                <tr>
-                                    <td align="center" valign="top">
-                                        <table width="380" border="0" align="center" cellpadding="0" cellspacing="0" class="two-left-inner">
-                                            <tr>
-                                                <td height="35" align="center" valign="top" style="font-size:35px; line-height:35px;">&nbsp;</td>
-                                            </tr>
-                                            
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-
-                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center" valign="middle">
-                            <table width="450" border="0" align="center" cellpadding="0" cellspacing="0" class="main">
-                                <tr>
-                                    <td height="90" align="center" valign="top" style="font-size:90px; line-height:90px;">&nbsp;</td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-
+            <td class="mobile-hidden"><img src="https://portal.newleaf.com.my/img/left-durian-bg-01.jpg" height="350px"></td>
+            <td align="center" valign="middle" style="width:25vw;">
+                <a href="https://portal.newleaf.com.my"><img class="logo" src="https://portal.newleaf.com.my/img/logo.png"/></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="mobile-wide" style="word-wrap:break-word;font-size:0px;padding:10px 20px 20px 20px;border-bottom:1px solid #ccc;" align="left">
+                <div style="cursor:auto;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:11px;line-height:22px;text-align:left;">
+                    <p style="color:black;">
+                        <h2 style="font-size:36px;">{{ __('mail.welcome_onboard') }}<span style="color:#185C99;">{{ $user->name }}</span>{{ __('mail.welcome_onboard_behind') }}!</h2>
+                    </p>
+                    <p style="color:black;">
+                        <span style="font-size:14px;">{{ __('mail.thank_you_signup') }}</span>
+                    </p>
+                    <p></p>
+                    <p style="color:black;">
+                        <strong><span style="font-size:16px;">{{ __('mail.newleaf_grower_id') }} <span style="color:#185C99;">{{ $user->referral_code }}</span>@if($user->parent)<br><span style="color:#000000;">{{ __('mail.sponsor_name') }}: </span><span style="color:#185C99;"> {{ $user->parent->referrerl_code }}</span></span></strong><br><strong><span style="font-size:16px;">{{ __('mail.sponsor_name') }}: <span style="color:#185C99;">{{ $user->parent->name }}</span>@endif</span></strong>
+                    </p>
+                    <p style="color:black;">
+                        <span style="font-size:14px;">{{ __('mail.enquiry_program') }}</span>
+                    </p>
+                    <p style="color:black;">
+                        <span style="font-size:14px;">{{ __('mail.thank_you_signup_again') }}.</span>
+                    </p>
+                </div>
+            </td>
+            <td style="border-bottom:1px solid #ccc;"></td>
+        </tr>
+        <tr>
+            <td class="mobile-wide" style="word-wrap:break-word;font-size:0px;padding:0px 20px 30px 20px;" align="left">
+                <div style="cursor:auto;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:11px;line-height:22px;text-align:left;">
+                    <p>
+                        <span style="color:#777;font-size:14px;"><strong style="font-size:15px;">NEWLEAF PLANATION BERHAD (1251569-U)</strong><br>Suite E-7-1, Block E, Plaza Mont Kiara, No 2 Jalan Kiara, 50480 Kuala Lumpur<br><strong>T</strong> <a href="tel:+60362016336">+6036201 6336</a> | <strong>W</strong> <a href="http://www.newleaf.com.my">www.newleaf.com.my</a> | <strong>E</strong> <a href="mailto:enquiry@newleaf.com.my">enquiry@newleaf.com.my</a></span>
+                    </p>
+                </div>
+            </td>
+            <td class="mobile-hidden">
+                <strong style="color: #777;font-size: 15px;">{{ __('mail.follow_us') }}</strong>
+                <br>
+                <a href="#"><img src="https://portal.newleaf.com.my/img/mail/wechat.jpg"></a>
+                <a href="http://www.facebook.com"><img src="https://portal.newleaf.com.my/img/mail/facebook.jpg"></a>
+            </td>
+        </tr>
+        <tr class="desktop-hidden">
+            <td align="center">
+                <strong style="font-family:Ubuntu, Helvetica, Arial, sans-serif;color: #777;font-size: 15px;">{{ __('mail.follow_us') }}</strong>
+                <br>
+                <a href="#"><img src="https://portal.newleaf.com.my/img/mail/wechat.jpg"></a>
+                <a href="http://www.facebook.com"><img src="https://portal.newleaf.com.my/img/mail/facebook.jpg"></a>
+            </td>
+            <td>
             </td>
         </tr>
     </table>
+    
 
 <!--Main Table End-->
 

@@ -9,8 +9,15 @@ return [
     */
 
     'hello' => '您好',
-    'welcome' => '欢迎来到 Newleaf',
-    'success-register' => '注册完成!',
-    'thank-you-register' => '感谢您的加入, 我们正在处理您的注册. 在等待的当儿，你可以用以下的介绍者ID来介绍其他人.',
+    'success_register' => '注册成功',
+    'welcome_onboard' => '尊敬的',
+    'welcome_onboard_behind' => ', 欢迎您的加入',
+    'thank_you_signup' => '谢谢您加入新叶成为我们的种植者。我们非常兴奋有您的参与。我们希望我们可以一起成长和实现我们的梦想。在这之前，让我们以谦虚的态度来服务您直到我们的梦想实现。',
+    'newleaf_grower_id' => '您的新叶种植者ID是',
+    'sponsor_id' => '推荐者ID',
+    'sponsor_name' => '推荐者名字',
+    'enquiry_program' => '如果您有任何关于种植者计划的问题，请联系我们的客户服务中心电话：+60362016336(客服)（服务时间：星期一到星期五，早上9点到下午5点）或者您可以电邮到',
+    'thank_you_signup_again' => '再次的谢谢您的注册',
+    'follow_us' => '关注我们'
     
 ];
