@@ -119,7 +119,7 @@ class ProfileController extends Controller
         }
 
         // Send email to user to notify register success
-        auth()->user()->notify( new RegisterSuccess(auth()->user()) );
+        auth()->user()->notify( new RegisterSuccess(auth()->user(), App::getLocale()) );
                        
 
     	return redirect()->route('home');
