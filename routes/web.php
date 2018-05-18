@@ -36,6 +36,9 @@ Route::get('/locale', 'LocaleController@switch')->name('locale');
 Route::get('/social/{service}/login', 'Auth\SocialAuthController@login');
 Route::get('/register/cancel', 'HomeController@cancel')->name('register.cancel');
 Route::get('/testmail', function() {
-	App::setLocale('zh');
-	auth()->user()->notify(new RegisterSuccess(auth()->user(), 'zh'));
+	App::setLocale('en');
+	auth()->user()->notify(new RegisterSuccess(auth()->user(), 'en'));
+});
+Route::get('/preview', function(){
+	return view('presentation');
 });
