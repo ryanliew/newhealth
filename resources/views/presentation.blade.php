@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="msapplication-tap-highlight" content="no"/>
-    <title>Newleaf - PowerPoint Presentation</title>
+    <title>Newleaf - Preview</title>
     <meta charset="UTF-8">
 
     <link href="/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
