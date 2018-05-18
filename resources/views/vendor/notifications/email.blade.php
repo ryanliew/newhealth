@@ -10,7 +10,7 @@
 
     body{width: 100%; background-repeat: no-repeat; background-size: contain; background-position: left top; background-color: #ffffff !important; margin:0; padding:0; -webkit-font-smoothing: antialiased;mso-margin-top-alt:0px; mso-margin-bottom-alt:0px; mso-padding-alt: 0px 0px 0px 0px;}
 
-    p,h1,h2,h3,h4{margin-top:20px !important;margin-bottom:0;padding-top:0;padding-bottom:0;line-height:1;}
+    p,h1,h2,h3,h4{margin-top:20px !important;margin-bottom:0;padding-top:0;padding-bottom:0;line-height:1.5;}
 
     span.preheader{display: none; font-size: 1px;}
 
@@ -85,7 +85,7 @@
                         <strong><span style="font-size:16px;">{{ __('mail.newleaf_grower_id') }} <span style="color:#185C99;">{{ $user->referral_code }}</span>@if($user->parent)<br><span style="color:#000000;">{{ __('mail.sponsor_name') }}: </span><span style="color:#185C99;"> {{ $user->parent->referrerl_code }}</span></span></strong><br><strong><span style="font-size:16px;">{{ __('mail.sponsor_name') }}: <span style="color:#185C99;">{{ $user->parent->name }}</span>@endif</span></strong>
                     </p>
                     <p style="color:black;">
-                        <span style="font-size:14px;">{{ __('mail.enquiry_program') }}</span>
+                        <span style="font-size:14px;">{{ __('mail.enquiry_program') }}<a href="mailto:enquiry@newleaf.com.my">enquiry@newleaf.com.my</a></span>
                     </p>
                     <p style="color:black;">
                         <span style="font-size:14px;">{{ __('mail.thank_you_signup_again') }}.</span>
@@ -98,7 +98,7 @@
             <td class="mobile-wide" style="word-wrap:break-word;font-size:0px;padding:0px 20px 30px 20px;" align="left">
                 <div style="cursor:auto;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:11px;line-height:22px;text-align:left;">
                     <p>
-                        <span style="color:#777;font-size:14px;"><strong style="font-size:15px;">NEWLEAF PLANATION BERHAD (1251569-U)</strong><br>Suite E-7-1, Block E, Plaza Mont Kiara, No 2 Jalan Kiara, 50480 Kuala Lumpur<br><strong>T</strong> <a href="tel:+60362016336">+6036201 6336</a> | <strong>W</strong> <a href="http://www.newleaf.com.my">www.newleaf.com.my</a> | <strong>E</strong> <a href="mailto:enquiry@newleaf.com.my">enquiry@newleaf.com.my</a></span>
+                        <span style="color:#777;font-size:14px;"><strong style="font-size:15px;">NEWLEAF PLANATION BERHAD <small style="font-size:12px;">(1251569-U)</small></strong><br>Suite E-7-1, Block E, Plaza Mont Kiara, No 2 Jalan Kiara, 50480 Kuala Lumpur<br><strong>T</strong> <a href="tel:+60362016336">+6036201 6336</a> | <strong>W</strong> <a href="http://www.newleaf.com.my">www.newleaf.com.my</a> | <strong>E</strong> <a href="mailto:enquiry@newleaf.com.my">enquiry@newleaf.com.my</a></span>
                     </p>
                 </div>
             </td>
@@ -114,7 +114,7 @@
                 <strong style="font-family:Ubuntu, Helvetica, Arial, sans-serif;color: #777;font-size: 15px;">{{ __('mail.follow_us') }}</strong>
                 <br>
                 <a href="#"><img src="https://portal.newleaf.com.my/img/mail/wechat.jpg"></a>
-                <a href="http://www.facebook.com"><img src="https://portal.newleaf.com.my/img/mail/facebook.jpg"></a>
+                <a href="https://www.facebook.com/Newleaf-158391578339214/"><img src="https://portal.newleaf.com.my/img/mail/facebook.jpg"></a>
             </td>
             <td>
             </td>
