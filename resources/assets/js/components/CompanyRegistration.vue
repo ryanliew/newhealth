@@ -135,6 +135,16 @@
 				return obj;
 			});
 
+			this.company_country = _.head(_.filter(this.potentialCountries, function(country) {
+				return country.value == 162; // Malaysia
+			}));
+
+			if(this.user_country) {
+				this.company_country = _.head(_.filter(this.potentialCountries, function(country) {
+					return country.value == user_country;
+				}));
+			}
+
 			this.companyTypes = [
 					{label: this.$options.filters.trans("company.company"), value: 'company'},
 					{label: this.$options.filters.trans("company.sole"), value: 'sole'},

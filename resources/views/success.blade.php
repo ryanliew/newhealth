@@ -165,7 +165,7 @@
                                     <label>{{ __('auth.country') }} <span class="text-danger">*</span></label>
                                     <select class="select2" name="country_id">
                                        @foreach($countries as $country)
-                                            <option value="{{ $country->id }}" @if(auth()->user()->country_id == $country->id) selected @endif>{{ $country->name }}</option>
+                                            <option value="{{ $country->id }}" @if(auth()->user()->country_id == $country->id) selected @elseif($country->id == 162) selected @endif>{{ $country->name }}</option>
                                        @endforeach
                                     </select>
                                 </div>
@@ -187,7 +187,7 @@
                                     <label>{{ __('auth.nationality') }} <span class="text-danger">*</span></label>
                                     <select class="select2" name="nationality">
                                        @foreach($countries as $country)
-                                            <option value="{{ $country->name }}" @if(auth()->user()->country_id == $country->id) selected @endif>{{ $country->name }}</option>
+                                            <option value="{{ $country->name }}" @if(auth()->user()->country_id && auth()->user()->country_id == $country->id) selected @elseif($country->id == 162) selected @endif>{{ $country->name }}</option>
                                        @endforeach
                                     </select>
                                      @if ($errors->has('nationality'))

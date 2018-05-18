@@ -10,7 +10,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\App;
 
-class RegisterSuccess extends Notification implements ShouldQueue
+class RegisterSuccess extends Notification
 {
     use Queueable;
 
@@ -47,8 +47,9 @@ class RegisterSuccess extends Notification implements ShouldQueue
     { 
         App::setLocale($this->locale);
         return (new RegisterSuccessMail($this->user, $this->locale))
-               ->to($this->user->email)
-               ->subject( __('mail.success_register') );
+                ->onQueue('default')
+                ->to($this->user->email)
+                ->subject( __('mail.success_register') );
         // return (new MailMessage)
         //             ->markdown('vendor.notifications.email', ['user' => $this->user])
         //             ->subject( __('mail.success_register') );
