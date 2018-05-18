@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\App;
 
-class RegisterSuccess extends Mailable implements ShouldQueue
+class RegisterSuccess extends Mailable
 {
     use Queueable, SerializesModels;
 
