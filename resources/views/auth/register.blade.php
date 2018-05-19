@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/separate/vendor/select2.min.css"> 
     <link rel="stylesheet" href="/css/lib/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/start-ui.css">
+    <link rel="stylesheet" href="/css/start-ui.css?v=1.0">
     <link rel="stylesheet" href="/css/separate/buttons.css">
 </head>
 <body>
@@ -81,7 +81,7 @@
                             <label>{{ __('auth.country') }} <span class="text-danger">*</span></label>
                             <select class="select2" name="country">
                                @foreach($countries as $country)
-                                    <option value="{{ $country->id }}">{{ $country->name }}</option>
+                                    <option value="{{ $country->id }}" @if($country->id == 162) selected @endif>{{ $country->name }}</option>
                                @endforeach
                             </select>
                         </div>

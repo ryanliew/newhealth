@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="/css/separate/pages/login.min.css?v=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/lib/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/start-ui.css">
+    <link rel="stylesheet" href="/css/start-ui.css?v=1.0">
     <link rel="stylesheet" href="/css/separate/buttons.css">
 </head>
 <body>

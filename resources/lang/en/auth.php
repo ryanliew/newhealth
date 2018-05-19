@@ -79,12 +79,12 @@ return [
     'remove_personnel' => 'Remove personnel',
 
     'process_registration' => 'Your registration is being processed.',
-    'referral_info' => 'Referral info',
-    'general_info'  => 'General info',
+    'referral_info' => 'Referral information',
+    'general_info'  => 'General information',
     'referrer_name' => 'Referrer name: :name',
     'referrer_fill' => 'Fill in the referrer ID',
     'referrer_not_found' => 'Referrer not found',
-    'beneficiary_info' => 'Beneficiary info',
+    'beneficiary_info' => 'Beneficiary information',
 
     'select_package' => 'Select purchase',
     'selected_package' => 'Selected purchase',
