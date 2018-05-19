@@ -51,6 +51,7 @@ return [
     'gender_female' => 'Female',
     'address1' => "Address Line 1",
     'address2' => "Address Line 2",
+    'name_placeholder' => "per Passport/NRIC",
 
     'registering_company' => "Corporate Application",
     'company_name' => "Company/Entity name",
@@ -83,6 +84,7 @@ return [
     'referrer_name' => 'Referrer name: :name',
     'referrer_fill' => 'Fill in the referrer ID',
     'referrer_not_found' => 'Referrer not found',
+    'beneficiary_info' => 'Beneficiary info',
 
     'select_package' => 'Select purchase',
     'selected_package' => 'Selected purchase',
