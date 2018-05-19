@@ -13,21 +13,18 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\User::class, function (Faker $faker) {
+$factory->define(App\Purchase::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => bcrypt('secret'),
-        'remember_token' => str_random(10),
-        'identification' => str_random(12),
-        'country_id' => 162,
-        'nationality' => 'Malaysia',
-        'gender' => $faker->randomElement(['male', 'female'])
+        'user_id' => function() {
+            return factory('App\User')->create()->id;
+        },
+        'status' => 'pending',
+        'is_verified' => 'false'
     ];
 });
 
-$factory->state(App\User::class, 'admin', function () {
+$factory->state(App\Purchase::class, 'verified', function () {
 	return [
-		'is_admin' => true
+		'is_verified' => true
 	];
 });

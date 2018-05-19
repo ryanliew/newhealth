@@ -3,11 +3,11 @@
 		<div class="mobile-menu-left-overlay"></div>
 		<nav class="side-menu side-menu-compact">
 		    <ul class="side-menu-list">
-		        <li class="brown" :class="getMenuItemClass(item)" v-for="item in menu">
-		            <a :href="item.route" @click="triggerMenu(item)">
-		                <i class="font-icon" :class="item.icon"></i>
+		        <li :class="getMenuItemClass(item)" v-for="item in menu">
+		        	<router-link :to="item.route" @click="triggerMenu(item)">
+						<i class="font-icon" :class="item.icon"></i>
 		                <span class="lbl">{{ 'nav.' + item.title | trans }}</span>
-		            </a>
+		        	</router-link>
 		        </li>
 		    </ul>
 		</nav><!--.side-menu-->
@@ -20,14 +20,16 @@
 		data() {
 			return {
 				menu:[ 
-					{color:'brown' , icon:' glyphicon glyphicon-user' , title: 'profile', route: '#', opened: true}
+					{color:'brown' , icon:' glyphicon glyphicon-user' , title: 'profile', route: 'profile', opened: true},
+					{color:'brown' , icon:' glyphicon glyphicon-barcode' , title: 'purchases', route: 'purchases', opened: false}
 				]
 			};
 		},
 
 		methods: {
 			getMenuItemClass(item) {
-				return item.opened ? 'opened' : '';
+				let itemClass = item.opened ? 'opened' : '';
+				return itemClass + " " + item.color;
 			},
 
 			triggerMenu(item) {

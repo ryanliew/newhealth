@@ -17,12 +17,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['middleware' => 'auth:api'], function() {
+Route::post('/purchases', 'PurchaseController@store');
+Route::get('/packages', 'PackageController@index');
 
+Route::group(['prefix' => 'purchase'], function() {
+	Route::post('/verify/{purchase}', 'PurchaseController@verify');
+});
+
+Route::group(['middleware' => 'auth:api'], function() {
+	
 	Route::group(['prefix' => 'user/{user}'], function() {
 		Route::get('/company/contacts', 'UserController@showCompanyContacts');
+		Route::get('/purchases', 'PurchaseController@index');
 		Route::get('/', 'UserController@show');
-	});	
+	});
 
 });
 

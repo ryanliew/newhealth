@@ -1,14 +1,20 @@
 import VueRouter from 'vue-router';
+import VueNoty from 'vuejs-noty';
+import VueEvents from 'vue-events';
+
 import App from './layout/App.vue';
 import Dashboard from './pages/Dashboard.vue';
 import LoginPage from './pages/LoginPage.vue';
 import ProfilePage from './pages/ProfilePage.vue';
+import PurchasePage from './pages/PurchasePage.vue';
 import translations from './vue-translations.js';
-import VueNoty from 'vuejs-noty';
+
+
 require('./bootstrap');
 
 Vue.use(VueRouter);
 Vue.use(VueNoty);
+Vue.use(VueEvents);
 /**
  * Initialize translation functions
  * @type {[type]}
@@ -42,8 +48,8 @@ const routes = [
 	{ path: '/_=_', redirect: '/'}, // To counter facebook login
 	{ path: '/', component: ProfilePage }, 
 	{ path: '/dashboard', component:Dashboard },
-	{ path: '/login', component: LoginPage },
-	{ path: '/profile', component: ProfilePage }
+	{ path: '/profile', component: ProfilePage },
+	{ path: '/purchases', component: PurchasePage }
 ];
 
 const router = new VueRouter({ routes });

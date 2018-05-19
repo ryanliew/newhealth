@@ -49973,6 +49973,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -49982,14 +49990,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey'],
+	props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew'],
 
 	components: { Vuetable: __WEBPACK_IMPORTED_MODULE_0_vuetable_2_src_components_Vuetable___default.a, VuetablePagination: __WEBPACK_IMPORTED_MODULE_1__VuetablepaginationBulma___default.a, VuetablePaginationInfo: __WEBPACK_IMPORTED_MODULE_2_vuetable_2_src_components_VuetablePaginationInfo___default.a, VuetableFilterBar: __WEBPACK_IMPORTED_MODULE_3__VuetableFilterBar___default.a, Loader: __WEBPACK_IMPORTED_MODULE_5__Loader___default.a },
 
 	data: function data() {
 		return {
 			css: {
-				tableClass: 'table is-hoverable is-fullwidth responsive',
+				tableClass: 'table responsive',
 				ascendingIcon: 'fa fa-caret-up',
 				descendingIcon: 'fa fa-caret-down'
 			},
@@ -50010,6 +50018,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 	methods: {
+		customFetch: function customFetch(apiUrl, httpOptions) {
+			return axios.get(apiUrl, httpOptions);
+		},
 		refreshTable: function refreshTable() {
 			this.loading = true;
 			setTimeout(function () {
@@ -50052,8 +50063,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		onLoaded: function onLoaded() {
 			this.loading = false;
-			reswitch = true;
-			updateTables();
 		},
 		onCellClicked: function onCellClicked(data, field, event) {
 			if (this.detail == 'LotDetailRow' || this.detail == 'ProductDetailRow') this.$refs.vuetable.toggleDetailRow(data.id);
@@ -53828,6 +53837,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -53976,33 +53993,38 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "nav",
-    { staticClass: "pagination", attrs: { role: "navigation" } },
+    {
+      staticClass: "pagination",
+      attrs: { "aria-label": "Table navigation", role: "navigation" }
+    },
     [
-      !_vm.isOnFirstPage
-        ? _c(
-            "a",
-            {
-              staticClass: "pagination-previous",
-              on: {
-                click: function($event) {
-                  $event.preventDefault()
-                  _vm.loadPage("prev")
-                }
-              }
-            },
-            [_c("span", [_vm._v("«")])]
-          )
-        : _vm._e(),
-      _vm._v(" "),
       _c(
         "ul",
         { staticClass: "pagination-list" },
         [
+          _c("li", { staticClass: "page-item" }, [
+            !_vm.isOnFirstPage
+              ? _c(
+                  "a",
+                  {
+                    staticClass: "page-link",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.loadPage("prev")
+                      }
+                    }
+                  },
+                  [_c("span", [_vm._v("«")])]
+                )
+              : _vm._e()
+          ]),
+          _vm._v(" "),
           _vm.notEnoughPages
             ? _vm._l(_vm.totalPage, function(n) {
-                return _c("li", [
+                return _c("li", { staticClass: "page-item" }, [
                   _c("a", {
-                    staticClass: "pagination-link",
+                    staticClass: "page-link",
                     class: { "is-current": _vm.isCurrentPage(n) },
                     domProps: { innerHTML: _vm._s(n) },
                     on: {
@@ -54015,9 +54037,9 @@ var render = function() {
                 ])
               })
             : _vm._l(_vm.windowSize, function(n) {
-                return _c("li", [
+                return _c("li", { staticClass: "page-item" }, [
                   _c("a", {
-                    staticClass: "pagination-link",
+                    staticClass: "page-link",
                     class: {
                       "is-current": _vm.isCurrentPage(_vm.windowStart + n - 1)
                     },
@@ -54030,26 +54052,28 @@ var render = function() {
                     }
                   })
                 ])
-              })
+              }),
+          _vm._v(" "),
+          _c("li", { staticClass: "page-item" }, [
+            !_vm.isOnLastPage
+              ? _c(
+                  "a",
+                  {
+                    staticClass: "page-next",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.loadPage("next")
+                      }
+                    }
+                  },
+                  [_c("span", [_vm._v("»")])]
+                )
+              : _vm._e()
+          ])
         ],
         2
-      ),
-      _vm._v(" "),
-      !_vm.isOnLastPage
-        ? _c(
-            "a",
-            {
-              staticClass: "pagination-next",
-              on: {
-                click: function($event) {
-                  $event.preventDefault()
-                  _vm.loadPage("next")
-                }
-              }
-            },
-            [_c("span", [_vm._v("»")])]
-          )
-        : _vm._e()
+      )
     ]
   )
 }
@@ -54341,7 +54365,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['dateFilterable'],
+    props: ['dateFilterable', 'addNew'],
 
     data: function data() {
         return {
@@ -54361,6 +54385,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.filterDateStart = '';
             this.filterDateEnd = '';
             this.$events.fire('filter-reset');
+        },
+        doAddNew: function doAddNew() {
+            window.events.$emit('add_new');
         }
     }
 });
@@ -54373,127 +54400,136 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "level" }, [
-    _c("div", { staticClass: "level-left" }, [
-      _c("div", { staticClass: "level-item" }, [
-        _c("div", { staticClass: "field has-addons" }, [
-          _c("div", { staticClass: "control has-icons-left has-icons-right" }, [
+  return _c("div", { staticClass: "row mb-3 align-items-center" }, [
+    _c("div", { staticClass: "col" }),
+    _vm._v(" "),
+    _vm.dateFilterable
+      ? _c("div", { staticClass: "col-sm-auto" }, [
+          _c("div", { staticClass: "field" }, [
             _c("input", {
               directives: [
                 {
                   name: "model",
                   rawName: "v-model",
-                  value: _vm.filterText,
-                  expression: "filterText"
+                  value: _vm.filterDateStart,
+                  expression: "filterDateStart"
                 }
               ],
-              staticClass: "input",
-              attrs: { type: "text", placeholder: "Search" },
-              domProps: { value: _vm.filterText },
+              staticClass: "form-control",
+              attrs: { type: "date", placeholder: "Start date" },
+              domProps: { value: _vm.filterDateStart },
               on: {
-                keyup: function($event) {
-                  if (
-                    !("button" in $event) &&
-                    _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-                  ) {
-                    return null
-                  }
-                  return _vm.doFilter($event)
-                },
                 input: function($event) {
                   if ($event.target.composing) {
                     return
                   }
-                  _vm.filterText = $event.target.value
+                  _vm.filterDateStart = $event.target.value
                 }
               }
-            }),
-            _vm._v(" "),
-            _vm._m(0)
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "control" }, [
-            _c(
-              "button",
-              { staticClass: "button is-link", on: { click: _vm.resetFilter } },
-              [_vm._v("Reset")]
-            )
+            })
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _vm.dateFilterable
-        ? _c("div", { staticClass: "level-item" }, [
-            _c("div", { staticClass: "field" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.filterDateStart,
-                    expression: "filterDateStart"
-                  }
-                ],
-                staticClass: "input",
-                attrs: { type: "date", placeholder: "Start date" },
-                domProps: { value: _vm.filterDateStart },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.filterDateStart = $event.target.value
-                  }
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.dateFilterable
+      ? _c("div", { staticClass: "col-sm-auto" }, [_vm._v("\n        -\n    ")])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.dateFilterable
+      ? _c("div", { staticClass: "col-sm-auto" }, [
+          _c("div", { staticClass: "field" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.filterDateEnd,
+                  expression: "filterDateEnd"
                 }
-              })
-            ])
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.dateFilterable
-        ? _c("div", { staticClass: "level-item" }, [
-            _vm._v("\n            -\n        ")
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.dateFilterable
-        ? _c("div", { staticClass: "level-item" }, [
-            _c("div", { staticClass: "field" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.filterDateEnd,
-                    expression: "filterDateEnd"
+              ],
+              staticClass: "form-control",
+              attrs: { type: "date", placeholder: "End date" },
+              domProps: { value: _vm.filterDateEnd },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
                   }
-                ],
-                staticClass: "input",
-                attrs: { type: "date", placeholder: "End date" },
-                domProps: { value: _vm.filterDateEnd },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.filterDateEnd = $event.target.value
-                  }
+                  _vm.filterDateEnd = $event.target.value
                 }
-              })
-            ])
+              }
+            })
           ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.dateFilterable
-        ? _c("div", { staticClass: "level-item" }, [
-            _c(
-              "button",
-              { staticClass: "button is-link", on: { click: _vm.doFilter } },
-              [_vm._v("Filter by date")]
-            )
-          ])
-        : _vm._e()
-    ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.dateFilterable
+      ? _c("div", { staticClass: "col-sm-auto" }, [
+          _c(
+            "button",
+            { staticClass: "btn btn-primary", on: { click: _vm.doFilter } },
+            [_vm._v("Filter by date")]
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c("div", { staticClass: "col-sm-auto" }, [
+      _c("div", { staticClass: "input-group" }, [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.filterText,
+              expression: "filterText"
+            }
+          ],
+          staticClass: "form-control",
+          attrs: { type: "text", placeholder: "Search" },
+          domProps: { value: _vm.filterText },
+          on: {
+            keyup: function($event) {
+              if (
+                !("button" in $event) &&
+                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+              ) {
+                return null
+              }
+              return _vm.doFilter($event)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.filterText = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "input-group-append" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "button",
+            { staticClass: "btn btn-info", on: { click: _vm.resetFilter } },
+            [_vm._v("Reset")]
+          )
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _vm.addNew
+      ? _c("div", { staticClass: "col-sm-auto" }, [
+          _c(
+            "button",
+            { staticClass: "btn btn-primary", on: { click: _vm.doAddNew } },
+            [
+              _c("i", { staticClass: "fa fa-plus" }),
+              _vm._v(" " + _vm._s(_vm._f("trans")(_vm.addNew)))
+            ]
+          )
+        ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = [
@@ -54501,9 +54537,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "icon is-small is-left" }, [
-      _c("i", { staticClass: "fa fa-search" })
-    ])
+    return _c(
+      "button",
+      { staticClass: "btn btn-primary", attrs: { type: "button" } },
+      [_c("i", { staticClass: "fa fa-search" })]
+    )
   }
 ]
 render._withStripped = true
@@ -54523,60 +54561,68 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _vm.loading ? _c("loader") : _vm._e(),
-      _vm._v(" "),
-      _vm.searchables
-        ? _c("vuetable-filter-bar", {
-            attrs: { dateFilterable: _vm.dateFilterable }
-          })
-        : _vm._e(),
-      _vm._v(" "),
-      _c("vuetable", {
-        ref: "vuetable",
-        attrs: {
-          "api-url": _vm.url,
-          fields: _vm.fields,
-          "multi-sort": true,
-          css: _vm.css,
-          "append-params": _vm.params,
-          "detail-row-component": _vm.detail,
-          "pagination-path": "",
-          "no-data-template": _vm.empty
-        },
-        on: {
-          "vuetable:pagination-data": _vm.onPaginationData,
-          "vuetable:loaded": _vm.onLoaded,
-          "vuetable-refresh": _vm.refreshTable,
-          "vuetable:cell-clicked": _vm.onCellClicked
-        }
-      }),
-      _vm._v(" "),
-      _c("div", { staticClass: "level" }, [
-        _c(
-          "div",
-          { staticClass: "level-left" },
-          [_c("vuetable-pagination-info", { ref: "paginationInfo" })],
-          1
-        ),
+  return _c("div", { staticClass: "card" }, [
+    _c("h5", { staticClass: "card-header" }, [
+      _vm._v("\n\t\t" + _vm._s(_vm._f("trans")(_vm.title)) + "\n\t")
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "card-body" },
+      [
+        _vm.loading ? _c("loader") : _vm._e(),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "level-right" },
-          [
-            _c("vuetable-pagination", {
-              ref: "pagination",
-              on: { "vuetable-pagination:change-page": _vm.onChangePage }
+        _vm.searchables
+          ? _c("vuetable-filter-bar", {
+              attrs: { dateFilterable: _vm.dateFilterable, addNew: _vm.addNew }
             })
-          ],
-          1
-        )
-      ])
-    ],
-    1
-  )
+          : _vm._e(),
+        _vm._v(" "),
+        _c("vuetable", {
+          ref: "vuetable",
+          attrs: {
+            "api-url": _vm.url,
+            fields: _vm.fields,
+            httpFetch: _vm.customFetch,
+            "multi-sort": true,
+            css: _vm.css,
+            "append-params": _vm.params,
+            "detail-row-component": _vm.detail,
+            "pagination-path": "",
+            "no-data-template": _vm.empty
+          },
+          on: {
+            "vuetable:pagination-data": _vm.onPaginationData,
+            "vuetable:loaded": _vm.onLoaded,
+            "vuetable-refresh": _vm.refreshTable,
+            "vuetable:cell-clicked": _vm.onCellClicked
+          }
+        }),
+        _vm._v(" "),
+        _c("div", { staticClass: "level" }, [
+          _c(
+            "div",
+            { staticClass: "level-left" },
+            [_c("vuetable-pagination-info", { ref: "paginationInfo" })],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "level-right" },
+            [
+              _c("vuetable-pagination", {
+                ref: "pagination",
+                on: { "vuetable-pagination:change-page": _vm.onChangePage }
+              })
+            ],
+            1
+          )
+        ])
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

@@ -1,24 +1,32 @@
 <template>
-    <nav class="pagination" role="navigation">
-        <a v-if="!isOnFirstPage" class="pagination-previous" @click.prevent="loadPage('prev')">
-            <span>&laquo;</span>
-        </a>
+    <nav aria-label="Table navigation" class="pagination" role="navigation">
+        
         <ul class="pagination-list">
+            <li class="page-item">
+                <a v-if="!isOnFirstPage" class="page-link" @click.prevent="loadPage('prev')">
+                    <span>&laquo;</span>
+                </a>
+            </li>
             <template v-if="notEnoughPages">
-                <li v-for="n in totalPage">
-                    <a class="pagination-link" :class="{'is-current': isCurrentPage(n)}" @click.prevent="loadPage(n)" v-html="n"></a>
+                <li class="page-item" v-for="n in totalPage">
+                    <a class="page-link" :class="{'is-current': isCurrentPage(n)}" @click.prevent="loadPage(n)" v-html="n"></a>
                 </li>
             </template>
             <template v-else>
-                <li v-for="n in windowSize">
-                    <a class="pagination-link" :class="{'is-current': isCurrentPage(windowStart+n-1)}" @click.prevent="loadPage(windowStart+n-1)" v-html="windowStart+n-1"></a>
+                <li class="page-item" v-for="n in windowSize">
+                    <a class="page-link" :class="{'is-current': isCurrentPage(windowStart+n-1)}" @click.prevent="loadPage(windowStart+n-1)" v-html="windowStart+n-1">
+                        
+                    </a>
                 </li>
             </template>
+            <li class="page-item">
+                <a class="page-next" v-if="!isOnLastPage" @click.prevent="loadPage('next')">
+                    <span>&raquo;</span>
+                </a>
+            </li>
         </ul>
 
-        <a class="pagination-next" v-if="!isOnLastPage" @click.prevent="loadPage('next')">
-            <span>&raquo;</span>
-        </a>
+        
 
     </nav>
 </template>
