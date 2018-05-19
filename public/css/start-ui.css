@@ -1,8 +1,13 @@
 @charset "UTF-8";
+label {
+  text-transform: capitalize;
+}
+
 .label {
   display: inline-block;
   padding: .25em .4em;
   font-size: 75%;
+  text-transform: capitalize;
   font-weight: bold;
   line-height: 1;
   color: #fff;
