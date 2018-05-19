@@ -92,7 +92,7 @@
                                 <div class="col-sm">
                                     <div class="form-group">
                                         <label>{{ __('auth.name') }}  <span class="text-danger">*</span></label>
-                                        <input name='name' type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.name') }}" value="{{ auth()->user()->name }}" required autofocus/>
+                                        <input name='name' type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.name_placeholder') }}" value="{{ auth()->user()->name }}" required autofocus/>
                                         @if ($errors->has('name'))
                                             <span class="invalid-feedback">
                                                 <strong>{{ $errors->first('name') }}</strong>
@@ -290,6 +290,8 @@
                                     </div>  
                                 </div>
                             </div>
+                            <hr>
+                            <h4>{{ __('auth.beneficiary_info') }}</h4>
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
