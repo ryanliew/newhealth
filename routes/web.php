@@ -39,7 +39,8 @@ Route::get('/register/cancel', 'HomeController@cancel')->name('register.cancel')
 Route::get('/testmail', function() {
 	App::setLocale('en');
 	foreach(User::all() as $user) {
-		$user->notify(new RegisterSuccess($user, 'en'));
+		if(!is_null($user->identification))
+			$user->notify(new RegisterSuccess($user, 'en'));
 	}
 
 	//auth()->user()->notify(new RegisterSuccess(auth()->user(), 'en'));
