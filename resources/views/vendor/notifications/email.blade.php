@@ -24,7 +24,7 @@
     
     .desktop-hidden{ display: none; }
 
-    .logo{ padding-right: 45px; width: 25vw; }
+    .logo{ padding-right: 45px; width: 25vw;max-width:300px; }
 
     @media only screen and (max-width:640px)
     {
@@ -37,7 +37,7 @@
         .mobile-hidden{ display:none; }
         .desktop-hidden{ display:table-row !important; }
         .mobile-wide{ width: 100%; }
-        .logo{ padding-right: 0 !important; padding-top: 30px; width: 80vw;}
+        .logo{ padding-right: 0 !important; padding-top: 30px; width: 80vw; max-width: 80vw;}
 
     }
 
@@ -52,7 +52,7 @@
         .mobile-hidden{ display:none; }
         .desktop-hidden{ display:table-row !important; }
         .mobile-wide{ width: 100%; }
-        .logo{ padding-right: 0 !important; padding-top: 30px; width: 80vw; }
+        .logo{ padding-right: 0 !important; padding-top: 30px; width: 80vw; max-width: 80vw; }
     }
 
 
@@ -67,7 +67,7 @@
     <table class="main" style="margin: auto;" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
             <td class="mobile-hidden"><img src="https://portal.newleaf.com.my/img/left-durian-bg-01.jpg" height="350px"></td>
-            <td align="center" valign="middle" style="width:25vw;">
+            <td align="center" valign="middle" style="width:25vw;max-width:300px;">
                 <a href="https://portal.newleaf.com.my"><img class="logo" src="https://portal.newleaf.com.my/img/logo.png"/></a>
             </td>
         </tr>
@@ -85,7 +85,7 @@
                         <strong><span style="font-size:16px;">{{ __('mail.newleaf_grower_id') }} <span style="color:#185C99;">{{ $user->referral_code }}</span>@if($user->parent)<br><span style="color:#000000;">{{ __('mail.sponsor_name') }}: </span><span style="color:#185C99;"> {{ $user->parent->referrerl_code }}</span></span></strong><br><strong><span style="font-size:16px;">{{ __('mail.sponsor_name') }}: <span style="color:#185C99;">{{ $user->parent->name }}</span>@endif</span></strong>
                     </p>
                     <p style="color:black;">
-                        <span style="font-size:14px;">{{ __('mail.enquiry_program') }}<a href="mailto:enquiry@newleaf.com.my">enquiry@newleaf.com.my</a></span>
+                        <span style="font-size:14px;">{{ __('mail.enquiry_program') }}<a href="mailto:support@newleaf.com.my">support@newleaf.com.my</a></span>
                     </p>
                     <p style="color:black;">
                         <span style="font-size:14px;">{{ __('mail.thank_you_signup_again') }}.</span>
@@ -98,15 +98,15 @@
             <td class="mobile-wide" style="word-wrap:break-word;font-size:0px;padding:0px 20px 30px 20px;" align="left">
                 <div style="cursor:auto;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:11px;line-height:22px;text-align:left;">
                     <p>
-                        <span style="color:#777;font-size:14px;"><strong style="font-size:15px;">NEWLEAF PLANATION BERHAD <small style="font-size:12px;">(1251569-U)</small></strong><br>Suite E-7-1, Block E, Plaza Mont Kiara, No 2 Jalan Kiara, 50480 Kuala Lumpur<br><strong>T</strong> <a href="tel:+60362016336">+6036201 6336</a> | <strong>W</strong> <a href="http://www.newleaf.com.my">www.newleaf.com.my</a> | <strong>E</strong> <a href="mailto:enquiry@newleaf.com.my">enquiry@newleaf.com.my</a></span>
+                        <span style="font-family:Ubuntu, Helvetica, Arial, sans-serif;color:#777;font-size:14px;"><strong style="font-size:15px;">NEWLEAF PLANATION BERHAD <small style="font-size:12px;">(1251569-U)</small></strong><br>Suite E-7-1, Block E, Plaza Mont Kiara, No 2 Jalan Kiara, 50480 Kuala Lumpur<br><strong>T</strong> <a href="tel:+60362016336">+6036201 6336</a> | <strong>W</strong> <a href="http://www.newleaf.com.my">www.newleaf.com.my</a> | <strong>E</strong> <a href="mailto:support@newleaf.com.my">support@newleaf.com.my</a></span>
                     </p>
                 </div>
             </td>
             <td class="mobile-hidden">
-                <strong style="color: #777;font-size: 15px;">{{ __('mail.follow_us') }}</strong>
+                <strong style="font-family:Ubuntu, Helvetica, Arial, sans-serif;color: #777;font-size: 15px;">{{ __('mail.follow_us') }}</strong>
                 <br>
                 <a href="#"><img src="https://portal.newleaf.com.my/img/mail/wechat.jpg"></a>
-                <a href="http://www.facebook.com"><img src="https://portal.newleaf.com.my/img/mail/facebook.jpg"></a>
+                <a href="https://www.facebook.com/Newleaf-158391578339214/"><img src="https://portal.newleaf.com.my/img/mail/facebook.jpg"></a>
             </td>
         </tr>
         <tr class="desktop-hidden">
