@@ -4,7 +4,7 @@
 		<nav class="side-menu side-menu-compact">
 		    <ul class="side-menu-list">
 		        <li :class="getMenuItemClass(item)" v-for="item in menu">
-		        	<router-link :to="item.route" @click="triggerMenu(item)">
+		        	<router-link :to="item.route" @click.native="triggerMenu(item)">
 						<i class="font-icon" :class="item.icon"></i>
 		                <span class="lbl">{{ 'nav.' + item.title | trans }}</span>
 		        	</router-link>
@@ -21,7 +21,7 @@
 			return {
 				menu:[ 
 					{color:'brown' , icon:' glyphicon glyphicon-user' , title: 'profile', route: 'profile', opened: true},
-					{color:'brown' , icon:' glyphicon glyphicon-barcode' , title: 'purchases', route: 'purchases', opened: false}
+					//{color:'brown' , icon:' glyphicon glyphicon-barcode' , title: 'purchases', route: 'purchases', opened: false}
 				]
 			};
 		},
@@ -33,6 +33,7 @@
 			},
 
 			triggerMenu(item) {
+				console.log(item);
 				this.menu.forEach(function(mItem){
 					mItem.opened = false;
 				});
