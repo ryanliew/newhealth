@@ -1,31 +1,39 @@
 <template>
-	<div>
-		<loader v-if="loading"></loader>
-		<vuetable-filter-bar v-if="searchables" :dateFilterable="dateFilterable"></vuetable-filter-bar>
-		<vuetable ref="vuetable" 
-				:api-url="url"
-	    		:fields="fields"
-	    		:multi-sort="true"
-	    		:css="css"
-	    		:append-params="params"
-	    		:detail-row-component="detail"
-	    		pagination-path=""
-	    		@vuetable:pagination-data="onPaginationData"
-	    		@vuetable:loaded="onLoaded"
-	    		@vuetable-refresh="refreshTable"
-	    		@vuetable:cell-clicked="onCellClicked"
-	    		:no-data-template="empty">	
-	    </vuetable>
-	    <div class="level">
-	    	<div class="level-left">
-			    <vuetable-pagination-info ref="paginationInfo">
-				</vuetable-pagination-info>
-			</div>
-			<div class="level-right">
-			    <vuetable-pagination 
-			    	ref="pagination"
-			    	@vuetable-pagination:change-page="onChangePage">
-			    </vuetable-pagination>
+	<div class="card">
+		<h5 class="card-header">
+			{{ title | trans }}
+		</h5>
+		
+		
+		<div class="card-body">
+			<loader v-if="loading"></loader>
+			<vuetable-filter-bar v-if="searchables" :dateFilterable="dateFilterable" :addNew="addNew"></vuetable-filter-bar>	
+			<vuetable ref="vuetable" 
+					:api-url="url"
+		    		:fields="fields"
+		    		:httpFetch="customFetch"
+		    		:multi-sort="true"
+		    		:css="css"
+		    		:append-params="params"
+		    		:detail-row-component="detail"
+		    		pagination-path=""
+		    		@vuetable:pagination-data="onPaginationData"
+		    		@vuetable:loaded="onLoaded"
+		    		@vuetable-refresh="refreshTable"
+		    		@vuetable:cell-clicked="onCellClicked"
+		    		:no-data-template="empty">	
+		    </vuetable>
+		    <div class="level">
+		    	<div class="level-left">
+				    <vuetable-pagination-info ref="paginationInfo">
+					</vuetable-pagination-info>
+				</div>
+				<div class="level-right">
+				    <vuetable-pagination 
+				    	ref="pagination"
+				    	@vuetable-pagination:change-page="onChangePage">
+				    </vuetable-pagination>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -40,14 +48,14 @@
 	import Loader from './Loader';
 
 	export default {
-		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey'],
+		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew'],
 
 		components: { Vuetable, VuetablePagination, VuetablePaginationInfo, VuetableFilterBar, Loader },
 
 		data() {
 			return {
 				css: {
-					tableClass: 'table is-hoverable is-fullwidth responsive',
+					tableClass: 'table responsive',
 					ascendingIcon: 'fa fa-caret-up',
 					descendingIcon: 'fa fa-caret-down',
 				},
@@ -62,6 +70,10 @@
 		},
 
 		methods: {
+			customFetch(apiUrl, httpOptions) {
+				return axios.get(apiUrl, httpOptions);
+			},
+
 			refreshTable() {
 				this.loading = true;
 				setTimeout(function(){
@@ -102,8 +114,6 @@
 
 			onLoaded() {
 				this.loading = false;
-				reswitch = true;
-				updateTables();
 			},
 
 			onCellClicked(data, field, event) {

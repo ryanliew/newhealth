@@ -10,5 +10,6 @@ return [
 
     'profile' => 'Profile',
     'logout' => 'Logout',
-    'settings' => 'Settings'
+    'settings' => 'Settings',
+    'purchases' => 'Purchases'
 ];

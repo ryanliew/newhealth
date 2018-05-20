@@ -47,6 +47,16 @@ class User extends Authenticatable
         return $this->belongsTo('App\Package');
     }
 
+    public function purchases()
+    {
+        return $this->hasMany('App\Purchase');
+    }
+
+    public function payments()
+    {
+        return $this->hasMany('App\Payment');
+    }
+
     public function contacts()
     {
         return $this->hasMany('App\Contact');
