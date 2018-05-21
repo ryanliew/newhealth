@@ -1,0 +1,30 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Purchase Language Lines
+    |--------------------------------------------------------------------------
+    */
+
+    'pending' => 'Pending payment',
+    'pending_verification' => 'Pending verification',
+    'complete' => 'Complete',
+    'made_by' => 'Made by',
+    'purchase_date' => 'Purchase date',
+    'total_payable' => 'Total payable',
+    'status' => 'Status',
+    'actions' => 'Actions',
+    'make_new_purchase' => 'Make new purchase',
+    'purchases' => 'Purchases',
+    'past_purchases' => 'Purchase history',
+    'select_package' => 'Select from the packages below',
+    'selected_packages' => 'Selected packages',
+    'checkout' => 'Checkout',
+    'total' => 'Total',
+    'purchase_details' => 'Purchase details',
+
+    'success' => 'Purchase order created successfully'
+    
+];

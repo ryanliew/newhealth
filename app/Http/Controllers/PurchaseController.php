@@ -11,7 +11,15 @@ class PurchaseController extends Controller
 {
     public function index(User $user)
     {
-        return Controller::VueTableListResult($user->purchases());
+        return Controller::VueTableListResult($user->purchases()->with('packages', 'payment')
+                                                    ->select('purchases.id as id',
+                                                            'payment_id',
+                                                            'purchases.created_at as created_at',
+                                                            'purchases.total_price as total_price',
+                                                            'purchases.status as status',
+                                                            'users.name as user_name')
+                                                    ->leftJoin('users', 'users.id', '=', 'user_id')
+                                                );
     }
 
     public function store()
@@ -39,11 +47,11 @@ class PurchaseController extends Controller
 
     	$purchase->packages()->sync($packages);
 
-    	return $purchase;
+    	return json_encode(['message' => 'purchase.success', 'purchase' => Purchase::with('packages')->find($purchase->id)]);
     }
 
     public function verify(Purchase $purchase)
-    {
+    { 
         return $purchase->verify();      
-    }	
+    }
 }

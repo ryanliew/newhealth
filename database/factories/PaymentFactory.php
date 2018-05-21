@@ -24,8 +24,14 @@ $factory->define(App\Payment::class, function (Faker $faker) {
     ];
 });
 
-$factory->state(App\Payment::class, 'verified', function () {
+$factory->state(App\Payment::class, 'verified', function (Faker $faker) {
 	return [
 		'is_verified' => true
 	];
+});
+
+$factory->state(App\Payment::class, 'file', function(Faker $faker) {
+    return [
+        'payment_slip_path' => $faker->image
+    ];
 });

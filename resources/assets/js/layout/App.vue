@@ -49,10 +49,11 @@
 		<div class="page-content" id="body-content">
 			<div class="container-fluid">
 				<router-view></router-view>
+				<flash></flash>
 			</div><!--.container-fluid-->
 		</div><!--.page-content-->
 
-		<flash></flash>
+		
 	</div>	
 </template>
 

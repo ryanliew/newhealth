@@ -22,14 +22,36 @@ Vue.use(VueEvents);
 var Lang = require('lang.js');
 
 window.lang = new Lang();
+var defaultlang = 'en';
 
-lang.setLocale('en'); // Set up language switcher here
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+var defaultlang = getParameterByName('lang');
+
+console.log(defaultlang);
+
+lang.setLocale(defaultlang ? defaultlang : 'en'); // Set up language switcher here
 
 lang.setMessages(translations);
 
 Vue.mixin({
+	data() {
+		return {
+			lang: 'en'
+		};
+	},
+
 	created() {
 		window.events.$on("lang", function(){
+			this.lang = lang.getLocale();
 			this.$forceUpdate();
 		}.bind(this));
 	}
@@ -52,7 +74,7 @@ const routes = [
 	{ path: '/purchases', component: PurchasePage }
 ];
 
-const router = new VueRouter({ routes });
+const router = new VueRouter({ routes, linkActiveClass: 'opened' });
 
 router.beforeEach((to, from, next) => {
 	if(to.fullPath !== '/login' && !user) {
@@ -78,6 +100,9 @@ Vue.component('textarea-input', require('./base/TextareaInput.vue'));
 Vue.component('checkbox-input', require('./base/CheckboxInput.vue'));
 Vue.component('selector-input', require('./base/SelectorInput.vue'));
 Vue.component('image-input', require('./base/ImageInput.vue'));
+
+// Actions components
+Vue.component('PurchasesActions', require('./actions/PurchasesActions.vue'));
 
 // Project components
 Vue.component('side-nav', require('./components/SideNavigation.vue'));

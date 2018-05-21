@@ -2,39 +2,46 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
+use Tests\TestCase;
 
 class PaymentsTest extends TestCase
 {
     use DatabaseMigrations;
 
     /** @test */
-    public function only_members_can_submit_payment()
+    public function admins_can_verify_payment()
     {
-    		
-    }
+        $this->signIn();
+
+    	$payment = create('App\Payment');
+
+        $this->post('/api/payment/verify/' . $payment->id);
+
+        $this->assertDatabaseHas('payments', ['is_verified' => true]);
+    } 
 
     /** @test */
     public function members_can_submit_payment()
     {
-    	$this->submitPayment([]);
-    }  
+    	$this->signIn();
 
-    /** @test */
-    public function admins_can_verify_payment()
-    {
-    	
-    } 
+        Storage::fake('public');
 
-    protected function submitPayment($overrides = [])
-    {
-    	$this->withExceptionHandling()->signIn();
+        $purchase = create('App\Purchase');
 
-    	$payment = make('App\Payment', $overrides);
+    	$payment = factory('App\Payment')->states('file')->make(['payment_slip_path' => $file = UploadedFile::fake()->image('avatar.jpg')]);
 
-    	return $this->post(route('payments'), $payment->toArray());
+    	$this->json('POST', '/api/purchase/pay/' . $purchase->id, $payment->toArray());
+
+        $this->assertDatabaseHas('payments', ['is_verified' => false, 'payment_slip_path' => 'payments/' . $file->hashName() ]);
+
+        Storage::disk('public')->assertExists('payments/' . $file->hashName());
+
+        return $payment;
     }
 }	

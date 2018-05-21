@@ -16,9 +16,13 @@ return [
         'pagination',
         'passwords',
         'validation',
+        'nav',
+        'table',
+        'input',
         'company',
         'user',
-        'nav'
+        'purchase',
+        'payment'
     ],
 
     /*

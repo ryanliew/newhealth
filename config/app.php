@@ -153,6 +153,7 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         \SocialiteProviders\Manager\ServiceProvider::class,
         Kalnoy\Nestedset\NestedSetServiceProvider::class,
+        Bader\ClearOrdersBy\clearOrdersByServiceProvider::class,
         /*
          * Application Service Providers...
          */

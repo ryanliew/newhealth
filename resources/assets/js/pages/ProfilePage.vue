@@ -88,7 +88,7 @@
 							:hideLabel="false">
 						</text-input>
 
-						<text-input
+						<!-- <text-input
 							:defaultValue="user.package.tree_count + ' ' + $options.filters.trans_choice('auth.tree', user.package.tree_count)"
 							:required="false"
 							type="text"
@@ -97,7 +97,7 @@
 							:editable="false"
 							:focus="false"
 							:hideLabel="false">
-						</text-input>
+						</text-input> -->
 					</div>
 				</div>
 			</div>

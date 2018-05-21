@@ -22,7 +22,7 @@ abstract class TestCase extends BaseTestCase
     {
     	$user = $user ?: create('App\User');
 
-    	$this->be($user);
+    	$this->be($user, 'api');
 
     	return $this;
     }

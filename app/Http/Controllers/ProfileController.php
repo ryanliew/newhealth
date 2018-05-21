@@ -122,6 +122,6 @@ class ProfileController extends Controller
         auth()->user()->notify( new RegisterSuccess(auth()->user(), App::getLocale()) );
                        
 
-    	return redirect()->route('home');
+    	return redirect('home#/purchases?new=1&lang=' . App::getLocale());
     }
 }
