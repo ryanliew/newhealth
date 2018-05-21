@@ -4,12 +4,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Nav Language Lines
+    | Table component Language Lines
     |--------------------------------------------------------------------------
     */
 
-    'profile' => '我的资料',
-    'logout' => '登出',
-    'settings' => '设定',
-    'purchases' => '我的订单'
+    'reset' => 'Reset',
+    'search' => 'Search',
+    'filter_by_date' => 'Filter by date',
+    'back' => 'Back'
+    
 ];

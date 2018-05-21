@@ -32,6 +32,9 @@ Route::group(['prefix' => 'internal'], function() {
 	Route::get('referrer', 'HomeController@getReferrer');
 });
 
+Route::get('/phpinfo', function() {
+	phpinfo();
+});
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/locale', 'LocaleController@switch')->name('locale');
 Route::get('/social/{service}/login', 'Auth\SocialAuthController@login');

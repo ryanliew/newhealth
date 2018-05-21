@@ -21,14 +21,16 @@
 		    		@vuetable:loaded="onLoaded"
 		    		@vuetable-refresh="refreshTable"
 		    		@vuetable:cell-clicked="onCellClicked"
-		    		:no-data-template="empty">	
+		    		:no-data-template="empty"
+		    		v-show="!loading">	
 		    </vuetable>
-		    <div class="level">
-		    	<div class="level-left">
-				    <vuetable-pagination-info ref="paginationInfo">
+		    <div class="row align-items-center">
+		    	<div class="col-sm">
+				    <vuetable-pagination-info ref="paginationInfo"
+		    		:info-template="$options.filters.trans('pagination.info')">
 					</vuetable-pagination-info>
 				</div>
-				<div class="level-right">
+				<div class="col-sm-auto">
 				    <vuetable-pagination 
 				    	ref="pagination"
 				    	@vuetable-pagination:change-page="onChangePage">
@@ -68,6 +70,21 @@
 			this.$events.$on('filter-set', eventData => this.onFilterSet(eventData));
 			this.$events.$on('filter-reset', e => this.onFilterReset());
 		},
+
+		watch: {
+			lang: function(newlang, oldLang) {
+				this.fields = [
+					{ name: 'user_name', title: this.tableTitle('purchase.made_by'), sortField: 'users.name'},
+					{ name: 'created_at', title: this.tableTitle('purchase.purchase_date'), sortField: 'purchases.created_at', callback: 'date' },
+					{ name: 'total_price', title: this.tableTitle('purchase.total_payable'), sortField: 'purchases.total_price', callback: 'currency'},
+					{ name: 'status', title: this.tableTitle('purchase.status'), sortField: 'purchases.status', callback: 'purchaseStatusLabel'},
+					{ name: '__component:purchases-actions', title: this.tableTitle('purchase.actions')}
+				];
+
+				//this.$refs.purchases.refreshTable();
+				this.$refs.vuetable.$forceUpdate();
+			}
+		},	
 
 		methods: {
 			customFetch(apiUrl, httpOptions) {
@@ -117,42 +134,13 @@
 			},
 
 			onCellClicked(data, field, event) {
-				if(this.detail == 'LotDetailRow'
-					|| this.detail == 'ProductDetailRow')
-					this.$refs.vuetable.toggleDetailRow(data.id);
+				// if(this.detail == 'LotDetailRow'
+				// 	|| this.detail == 'ProductDetailRow')
+				// 	this.$refs.vuetable.toggleDetailRow(data.id);
 			},
 
 			purchaseStatusLabel(value) {
-				return this.$options.filters.formatPaymentStatus(value);
-				/*return value == 'true' 
-					? '<span class="tag is-success">Approved</span>'
-					: '<span class="tag is-warning">Processing</span>'*/
-			},
-
-			incomeLabel(value) {
-				return value ==='income' || value === 'profit'
-					? '<span class="tag is-success">Profit</span>'
-					: '<span class="tag is-danger">Expense</span>';
-			},
-
-			operatorStatusLabel(value) {
-				return value === 1
-					? '<span class="tag is-success">Verified</span>'
-					: '<span class="tag is-danger">Pending</span>';
-			},
-
-			commissionTypeLabel(value) {
-				return value === 1
-					? '<span class="tag is-info">By revenue</span>'
-					: '<span class="tag is-warning">By profit</span>';
-			},
-
-			inboundStatusLabel(value) {
-				return this.$options.filters.formatInboundStatus(value);
-			},
-
-			outboundStatusLabel(value) {
-				return this.$options.filters.formatOutboundStatus(value);
+				return this.$options.filters.formatPurchaseStatus(value);
 			},
 
 			image(value) {
@@ -169,6 +157,10 @@
 
 			date(value){
 				return this.$options.filters.date(value);
+			},
+
+			currency(value){
+				return this.$options.filters.currency(value);
 			},
 
 			customer(value){

@@ -20,9 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/purchases', 'PurchaseController@store');
 Route::get('/packages', 'PackageController@index');
 
-Route::group(['prefix' => 'purchase'], function() {
-	Route::post('/verify/{purchase}', 'PurchaseController@verify');
-});
+
 
 Route::group(['middleware' => 'auth:api'], function() {
 	
@@ -30,6 +28,15 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::get('/company/contacts', 'UserController@showCompanyContacts');
 		Route::get('/purchases', 'PurchaseController@index');
 		Route::get('/', 'UserController@show');
+	});
+
+	Route::group(['prefix' => 'purchase'], function() {
+		Route::post('/pay/{purchase}', 'PaymentController@pay');
+		Route::post('/verify/{purchase}', 'PurchaseController@verify');
+	});
+
+	Route::group(['prefix' => 'payment'], function() {
+		Route::post('/verify/{payment}', 'PaymentController@verify');
 	});
 
 });

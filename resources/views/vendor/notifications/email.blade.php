@@ -10,7 +10,7 @@
 
     body{width: 100%; background-repeat: no-repeat; background-size: contain; background-position: left top; background-color: #ffffff !important; margin:0; padding:0; -webkit-font-smoothing: antialiased;mso-margin-top-alt:0px; mso-margin-bottom-alt:0px; mso-padding-alt: 0px 0px 0px 0px;}
 
-    p,h1,h2,h3,h4{margin-top:20px !important;margin-bottom:0;padding-top:0;padding-bottom:0;line-height:1.5;}
+    p,h1,h2,h3,h4{margin-top:20px !important;margin-bottom:0;padding-top:0;padding-bottom:0;line-height:1.8;}
 
     span.preheader{display: none; font-size: 1px;}
 

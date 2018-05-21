@@ -51,8 +51,9 @@ class PurchasesTest extends TestCase
 
     	$purchase = create('App\Purchase', ['user_id' => $user->id]);
 
-    	$response = $this->get('/api/user/' . $user->id . '/purchases')->json();
+    	$response = $this->getJson('/api/user/' . $user->id . '/purchases')->json();
 
     	$this->assertCount(1, $response['data']);
-    }  
+    }
+    
 }

@@ -13,3 +13,25 @@ Vue.filter('trans', (...args) => {
 Vue.filter('trans_choice', (...args) => {
 	return lang.choice(...args);
 });
+
+Vue.filter('currency', function(value){
+	return value;
+});
+
+Vue.filter('formatPurchaseStatus', function(value){
+	let color = 'badge-success';
+	let text = 	lang.get('purchase.' + value);
+	switch(value) {
+		case 'pending':
+			color = 'badge-warning';
+			break;
+		case 'pending_verification':
+			color = 'badge-info';
+			break;
+		case 'complete':
+			color = 'badge-success';
+			break;
+	}
+
+	return '<span class="badge ' + color + '">' + text + '</span>';
+});

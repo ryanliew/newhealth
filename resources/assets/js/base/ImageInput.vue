@@ -1,25 +1,24 @@
 <template>
-	<div>
-		<div class="file has-name is-boxed">
-			<figure class="image is-128x128" v-if="defaultImage.src && (defaultImage.src.endsWith('.jpg') || defaultImage.src.endsWith('.png') || defaultImage.src.endsWith('.jpeg'))">
-				<img :src="defaultImage.src">
-			</figure>
-			<figure class="image is-128x128" v-if="defaultImage.file && defaultImage.file.type.match('^image.*')">
-				<img :src="defaultImage.src">
-			</figure>
-		  	<label class="file-label pl-5">
-			    <input class="file-input" :accept="accept" type="file" :name="name" @change="onChange">
-			    <span class="file-cta">
-				     <span class="file-icon">
-				        <i class="fa fa-image"></i>
-				     </span>
-				     <p v-html="fileLabel">
-				     </p>
-			    </span>
-			    <span class="file-name" v-text="defaultImage.name || defaultImage.file.name"></span>
-		  	</label>
+	<div class="form-group mb-3">
+		<label>{{ label | trans }} <span class="text-danger" v-if="required">*</span></label>
+		<div class="input-group">
+			<div class="input-group-prepend">
+				<a class="btn btn-primary" @click="toggleImageInputType">
+					<i class="fa" :class="iconClass"></i>
+				</a>
+			</div>
+			<div class="custom-file">
+			    <input type="file" :accept="accept" class="custom-file-input" :id="name" @change="onChange" v-if="!camera">
+			    <input type="file" :accept="accept" class="custom-file-input" capture="camera" :id="name" @change="onChange" v-else>
+			    <label class="custom-file-label" :for="name">{{ inputLabel | trans }}</label>
+			</div>
+
 		</div>
-	  	<span class="help is-danger" v-if="error" v-text="error"></span>
+		<span class="text-muted">{{ 'input.switch_file_mode' | trans }}</span>
+	  	<span class="text-danger" v-if="error" v-text="error"></span>
+		<img :src="defaultImage.src" class="img-thumbnail" v-if="defaultImage.src && (defaultImage.src.endsWith('.jpg') || defaultImage.src.endsWith('.png') || defaultImage.src.endsWith('.jpeg'))">
+		<img :src="defaultImage.src" class="img-thumbnail" v-if="defaultImage.file && defaultImage.file.type.match('^image.*')">
+		
 	 </div>
 </template>
 
@@ -28,7 +27,7 @@
 		props: ['label', 'name', 'required', 'defaultImage', 'error', 'accept'],
 		data() {
 			return {
-				
+				camera: false
 			};
 		},
 		methods: {
@@ -46,6 +45,10 @@
 
 					this.$emit('loaded', { src, file });
 				};	
+			},
+
+			toggleImageInputType() {
+				this.camera = !this.camera;
 			}
 		},
 
@@ -54,14 +57,12 @@
 				return this.defaultImage.name;
 			},
 
-			fileLabel() {
-				let text = ( this.defaultImage.src ? 'Change ' : 'Upload ' ) + this.label;
+			iconClass() {
+				return this.camera ? "fa-file" : "fa-camera";
+			},
 
-				if(this.required) {
-				    text += '<span class="is-danger">*</span>';
-				}
-
-				return text;
+			inputLabel() {
+				return this.camera ? 'input.take_from_camera' : 'input.choose_file';
 			}
 		}	
 	}

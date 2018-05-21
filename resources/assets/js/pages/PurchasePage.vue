@@ -3,14 +3,16 @@
 		<transition name="slide-fade" mode="out-in">
 			<table-view ref="purchases"
 						:fields="fields"
-						title="Purchases"
+						:title="$options.filters.trans('purchase.purchases')"
 						:url="url"
 						:searchables="searchables"
 						v-if="!isPurchasing"
-						addNew="Make new purchase">
+						:dateFilterable="true"
+						dateFilterKey="purchases.created_at"
+						addNew="purchase.make_new_purchase">
 			</table-view>
 
-			<purchase v-if="isPurchasing"></purchase>
+			<purchase :cancelable="cancelable" :selectedPurchase="selectedPurchase" v-if="isPurchasing" @back="back"></purchase>
 		</transition>
 	</div>
 </template>
@@ -25,13 +27,17 @@
 		data() {
 			return {
 				fields: [
-					{ name: 'created_at', title: 'Purchase date' },
-					{ name: 'total_amount', title: 'Total payable'},
-					{ name: 'status', title: 'Status'}
+					{ name: 'user_name', title: this.tableTitle('purchase.made_by'), sortField: 'users.name'},
+					{ name: 'created_at', title: this.tableTitle('purchase.purchase_date'), sortField: 'purchases.created_at', callback: 'date' },
+					{ name: 'total_price', title: this.tableTitle('purchase.total_payable'), sortField: 'purchases.total_price', callback: 'currency'},
+					{ name: 'status', title: this.tableTitle('purchase.status'), sortField: 'purchases.status', callback: 'purchaseStatusLabel'},
+					{ name: '__component:purchases-actions', title: this.tableTitle('purchase.actions')}
 				],
-				searchables: "status,total_amount",
+				searchables: "purchases.status,purchases.total_amount,users.name",
 				url: "/api/user/" + window.user.id + "/purchases",
-				isPurchasing: false
+				isPurchasing: false,
+				selectedPurchase: '',
+				cancelable: true
 			};
 		},
 
@@ -39,11 +45,55 @@
 			window.events.$on('add_new', function(){
 				this.addNewPurchase();
 			}.bind(this));
+
+			this.$events.on('view', data => this.view(data));
+			
+			if(this.getParameterByName('new') == '1') {
+				this.cancelable = false;
+				this.isPurchasing = true;
+			}
+			
 		},
 
 		methods: {
+			getParameterByName(name, url) {
+			    if (!url) url = window.location.href;
+			    name = name.replace(/[\[\]]/g, "\\$&");
+			    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			        results = regex.exec(url);
+			    if (!results) return null;
+			    if (!results[2]) return '';
+			    return decodeURIComponent(results[2].replace(/\+/g, " "));
+			},
+
 			addNewPurchase() {
 				this.isPurchasing = true;
+			},
+
+			back() {
+				this.isPurchasing = false;
+				this.selectedPurchase = '';
+			},
+
+			tableTitle(value) {
+				return this.$options.filters.trans(value);
+			},
+
+			view(purchase) {
+				this.selectedPurchase = purchase;
+				this.isPurchasing = true;
+			}
+		},
+
+		watch: {
+			lang: function(newlang, oldLang) {
+				this.fields = [
+					{ name: 'user_name', title: this.tableTitle('purchase.made_by'), sortField: 'users.name'},
+					{ name: 'created_at', title: this.tableTitle('purchase.purchase_date'), sortField: 'purchases.created_at', callback: 'date' },
+					{ name: 'total_price', title: this.tableTitle('purchase.total_payable'), sortField: 'purchases.total_price', callback: 'currency'},
+					{ name: 'status', title: this.tableTitle('purchase.status'), sortField: 'purchases.status', callback: 'purchaseStatusLabel'},
+					{ name: '__component:purchases-actions', title: this.tableTitle('purchase.actions')}
+				];
 			}
 		}	
 	}

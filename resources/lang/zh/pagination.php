@@ -12,9 +12,6 @@ return [
     | you want to customize your views to better match your application.
     |
     */
-
-    'previous' => '&laquo; Previous',
-    'next' => 'Next &raquo;',
-    'info' => 'Displaying {from} to {to} of {total} items'
+    'info' => '共{total}个数据，正在显示{from}到{to}'
 
 ];

@@ -18,10 +18,14 @@ class Purchase extends Model
     	return $this->belongsToMany('App\Package')->withPivot('amount', 'total_price')->withTimestamps();
     }
 
+    public function payment()
+    {
+        return $this->belongsTo('App\Payment');
+    }
+
     public function verify()
     {
     	$this->update(['status' => 'complete', 'is_verified' => true]);
-
         return $this;
     }
 }
