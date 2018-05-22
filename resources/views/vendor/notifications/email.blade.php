@@ -71,7 +71,7 @@
         </tr>
         <tr>
             <td align="center" valign="middle" style="width:25vw;max-width:300px;">
-                <a href="https://portal.newleaf.com.my"><img style="max-width:300px" class="logo" src="https://portal.newleaf.com.my/img/logo.png"/></a>
+                <a href="https://portal.newleaf.com.my"><img style="max-width:300px" class="logo" src="https://portal.newleaf.com.my/img/mail/email-logo.png"/></a>
             </td>
         </tr>
         <tr>
