@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 356);
+/******/ 	return __webpack_require__(__webpack_require__.s = 357);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -55616,14 +55616,15 @@ if (false) {
 /* 353 */,
 /* 354 */,
 /* 355 */,
-/* 356 */
+/* 356 */,
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(357);
+module.exports = __webpack_require__(358);
 
 
 /***/ }),
-/* 357 */
+/* 358 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55691,23 +55692,23 @@ Vue.component('checkbox-input', __webpack_require__(301));
 Vue.component('selector-input', __webpack_require__(182));
 Vue.component('image-input', __webpack_require__(307));
 
-Vue.component('company-registration', __webpack_require__(358));
-Vue.component('referrer', __webpack_require__(361));
+Vue.component('company-registration', __webpack_require__(359));
+Vue.component('referrer', __webpack_require__(362));
 
 var app = new Vue({
   el: '#app'
 });
 
 /***/ }),
-/* 358 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(359)
+var __vue_script__ = __webpack_require__(360)
 /* template */
-var __vue_template__ = __webpack_require__(360)
+var __vue_template__ = __webpack_require__(361)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -55746,7 +55747,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 359 */
+/* 360 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55927,7 +55928,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 360 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -56569,15 +56570,15 @@ if (false) {
 }
 
 /***/ }),
-/* 361 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(362)
+var __vue_script__ = __webpack_require__(363)
 /* template */
-var __vue_template__ = __webpack_require__(363)
+var __vue_template__ = __webpack_require__(364)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -56616,7 +56617,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 362 */
+/* 363 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56669,7 +56670,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 363 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
