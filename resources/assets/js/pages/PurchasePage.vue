@@ -33,7 +33,7 @@
 					{ name: 'status', title: this.tableTitle('purchase.status'), sortField: 'purchases.status', callback: 'purchaseStatusLabel'},
 					{ name: '__component:purchases-actions', title: this.tableTitle('purchase.actions')}
 				],
-				searchables: "purchases.status,purchases.total_amount,users.name",
+				searchables: "purchases.status,purchases.total_price,users.name",
 				isPurchasing: false,
 				selectedPurchase: '',
 				cancelable: true
