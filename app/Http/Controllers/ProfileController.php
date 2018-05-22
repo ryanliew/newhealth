@@ -45,8 +45,7 @@ class ProfileController extends Controller
             'bank_address' => 'required',
             'account_type' => 'required',
             'account_no' => 'required',
-            'beneficiary_name' => 'required',
-            'package' => 'required' 
+            'beneficiary_name' => 'required'
     	]);
 
     	if(isset($validated['referrer_code']))
@@ -75,8 +74,7 @@ class ProfileController extends Controller
             'account_type' => request()->account_type,
             'account_no' => request()->account_no,
             'beneficiary_name' => request()->beneficiary_name,
-            'beneficiary_identification' => request()->beneficiary_identification,
-            'package_id' => request()->package
+            'beneficiary_identification' => request()->beneficiary_identification
         ]);
 
         if(request()->has('password'))

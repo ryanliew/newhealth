@@ -77,15 +77,6 @@
                                         </span>
                                     @endif
                                 </div>
-                                <div class="form-group">
-                                    <label>{{ __('auth.select_package') }} <span class="text-danger">*</span></label>
-                                    <select class="select2" name="package" required>
-                                       @foreach($packages as $package)
-                                            <option value="{{ $package->id }}">{{ $package->tree_count }} {{ trans_choice('auth.tree', $package->tree_count) }}</option>
-                                       @endforeach
-                                    </select>
-                                </div>
-
                             @endif
                             <hr>
                             <h4>{{ __('auth.personal_info') }}</h4>
