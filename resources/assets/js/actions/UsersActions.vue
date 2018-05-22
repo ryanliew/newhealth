@@ -6,11 +6,6 @@
                     <i class="fa fa-eye"></i>
                 </span>
             </button>
-            <button type="button" class="btn btn-info" v-if="!rowData.payment && !user.is_admin" @click="itemAction('view', rowData, rowIndex)">
-                <span class="icon">
-                    <i class="fa fa-money"></i>
-                </span>
-            </button>
         </div>
     </div>
 </template>

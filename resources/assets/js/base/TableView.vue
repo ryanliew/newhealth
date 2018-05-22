@@ -71,21 +71,6 @@
 			this.$events.$on('filter-reset', e => this.onFilterReset());
 		},
 
-		watch: {
-			lang: function(newlang, oldLang) {
-				this.fields = [
-					{ name: 'user_name', title: this.tableTitle('purchase.made_by'), sortField: 'users.name'},
-					{ name: 'created_at', title: this.tableTitle('purchase.purchase_date'), sortField: 'purchases.created_at', callback: 'date' },
-					{ name: 'total_price', title: this.tableTitle('purchase.total_payable'), sortField: 'purchases.total_price', callback: 'currency'},
-					{ name: 'status', title: this.tableTitle('purchase.status'), sortField: 'purchases.status', callback: 'purchaseStatusLabel'},
-					{ name: '__component:purchases-actions', title: this.tableTitle('purchase.actions')}
-				];
-
-				//this.$refs.purchases.refreshTable();
-				this.$refs.vuetable.$forceUpdate();
-			}
-		},	
-
 		methods: {
 			customFetch(apiUrl, httpOptions) {
 				return axios.get(apiUrl, httpOptions);

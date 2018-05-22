@@ -108,9 +108,13 @@ class User extends Authenticatable
     {
         return $this->personal_address ? $this->personal_address->phone : "";
     }
+
     public function generateReferralCode($country)
     {
-        $code = strtoupper($country->code) . '-' .  Carbon::now()->month . round(Carbon::now()->micro / 1000) . Carbon::now()->second . Carbon::now()->day;
+        $code = strtoupper($country->code) . rand(pow(10, 4), pow(10, 5)-1);
+
+        if(User::where('referral_code', $code)->count() > 0)
+            $code = $this->generateReferralCode($country);
 
         return $code;
     }

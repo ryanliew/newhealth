@@ -24,6 +24,11 @@ Route::get('/packages', 'PackageController@index');
 
 Route::group(['middleware' => 'auth:api'], function() {
 	
+	Route::group(['prefix' => 'admin'], function() {
+		Route::get('/users', 'Admin\UserController@index');
+		Route::get('/purchases', 'Admin\PurchaseController@index');
+	});
+
 	Route::group(['prefix' => 'user/{user}'], function() {
 		Route::get('/company/contacts', 'UserController@showCompanyContacts');
 		Route::get('/purchases', 'PurchaseController@index');
