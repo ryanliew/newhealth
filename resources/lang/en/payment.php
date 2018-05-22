@@ -10,7 +10,9 @@ return [
 
     'payment' => 'Payment',
     'make_payment' => 'Make payment',
+    'payment_details' => 'Payment details',
     'verify' => 'Verify',
+    'verify_success' => 'Payment verified successfully',
     'amount' => 'Amount payable',
 
     'payment_slip' => 'Payment Slip',

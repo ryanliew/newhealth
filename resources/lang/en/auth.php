@@ -49,6 +49,7 @@ return [
     'gender' => 'Gender',
     'gender_male' => 'Male',
     'gender_female' => 'Female',
+    'gender_null' => 'N\A',
     'address1' => "Address Line 1",
     'address2' => "Address Line 2",
     'name_placeholder' => "per Passport/NRIC",

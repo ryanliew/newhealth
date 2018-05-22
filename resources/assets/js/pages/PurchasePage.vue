@@ -34,7 +34,6 @@
 					{ name: '__component:purchases-actions', title: this.tableTitle('purchase.actions')}
 				],
 				searchables: "purchases.status,purchases.total_amount,users.name",
-				url: "/api/user/" + window.user.id + "/purchases",
 				isPurchasing: false,
 				selectedPurchase: '',
 				cancelable: true
@@ -94,6 +93,12 @@
 					{ name: 'status', title: this.tableTitle('purchase.status'), sortField: 'purchases.status', callback: 'purchaseStatusLabel'},
 					{ name: '__component:purchases-actions', title: this.tableTitle('purchase.actions')}
 				];
+			}
+		},
+
+		computed: {
+			url() {
+				return window.user.is_admin ? "/api/admin/purchases" :"/api/user/" + window.user.id + "/purchases";
 			}
 		}	
 	}

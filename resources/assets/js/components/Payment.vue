@@ -12,8 +12,8 @@
 		</div>
 		<div class="card-body">
 			<form @submit.prevent="submit" 
-						@keydown="form.errors.clear($event.target.name)" 
-						@input="form.errors.clear($event.target.name)">
+				@keydown="form.errors.clear($event.target.name)" 
+				@input="form.errors.clear($event.target.name)">
 				<text-input v-model="payment.created_at" 
 					:defaultValue="payment.created_at"
 					:required="false"
@@ -47,9 +47,15 @@
 							v-if="!payment">
 				</image-input>
 
-				<img v-else class="img-fluid" :src="'storage/' + payment.payment_slip_path"/>
+				<img v-else class="img-fluid mb-3" :src="'storage/' + payment.payment_slip_path"/>
 				
 				<button type="submit" v-if="!payment" class="btn btn-success" :disabled="form.submitting" v-html="submitButtonContent"></button>
+			</form>
+			<form @submit.prevent="submitVerify" 
+				@keydown="form.errors.clear($event.target.name)" 
+				@input="form.errors.clear($event.target.name)"
+				v-if="user.is_admin && payment && !payment.is_verified">
+					<button type="submit" class="btn btn-primary" :disabled="verifyForm.submitting" v-html="submitVerifyButtonContent"></button>
 			</form>
 		</div>
 	</div>
@@ -72,9 +78,14 @@
 					payment_slip_path: '',
 					user_id: window.user.id
 				}),
+				verifyForm: new Form({
+
+				}),
 				paymentSlip: {name: 'No file selected'},
 				camera: false,
-				submitText: 'payment.submit_payment'
+				submitText: 'payment.submit_payment',
+				submitVerifyText: 'payment.verify',
+				user: window.user
 
 			};
 		},
@@ -100,17 +111,27 @@
 					.then(response => this.onSuccess(response));
 			},
 
-			onSuccess(response) {
+			onSuccess(response, shouldBack = true) {
 				flash(this.$options.filters.trans(response.message));
 				this.payment = response.payment;
 
-				this.back();
+				if(shouldBack)
+					this.back();
+			},
+
+			submitVerify() {
+				this.form.post('/api/payment/verify/' + this.payment.id)
+					.then(response => this.onSuccess(response, false));
 			}
 		},
 
 		computed: {
 			title() {
 				return this.payment ? 'payment.payment_details' : 'payment.make_payment';
+			},
+
+			submitVerifyButtonContent() {
+				return this.verifyForm.submitting ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : this.$options.filters.trans(this.submitVerifyText);
 			}
 		}
 	}

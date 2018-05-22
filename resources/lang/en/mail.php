@@ -12,12 +12,14 @@ return [
     'success_register' => 'Registration success',
     'welcome_onboard' => 'Welcome onboard, ',
     'welcome_onboard_behind' => '',
-    'thank_you_signup' => 'Thank you for joining Newleaf as a grower. We are very excited to have you here with us. We hope that we can grow together to achieve our dreams. Meanwhile, let us serve you with humble attitude until our dreams come true.',
+    'thank_you_signup' => 'Thank you for joining Newleaf as a grower. We are very excited to have you here with us. We hope that we can grow together to achieve our dreams.',
+    'thank_you_signup_2' => 'Meanwhile, let us serve you with humble attitude until our dreams come true.',
     'newleaf_grower_id' => 'Your Newleaf GROWER ID is',
     'sponsor_id' => 'Sponsor ID',
     'sponsor_name' => 'Sponsor Name',
-    'enquiry_program' => 'If you have further questions regarding the grower program, please call our Customer Support Center at +603 62016336 (Customer Support) (Operation Hours: Mon-Fri, 9am to 5pm) or you can write in your enquiry to our email ',
-    'thank_you_signup_again' => 'Thank you again for registering at Newleaf',
+    'enquiry_program' => 'If you have further questions regarding the grower program, please call our Customer Support Center at +603 62016336 (Customer Support)',
+    'enquiry_program_2' => '(Operation Hours: Mon-Fri, 9am to 5pm) or you can write in your enquiry to our email',
+    'thank_you_signup_again' => 'Thank you again for registering at Newleaf Plantation Berhad',
     'follow_us' => 'FOLLOW US'
     
 ];

@@ -11,5 +11,7 @@ return [
     'profile' => 'Profile',
     'logout' => 'Logout',
     'settings' => 'Settings',
-    'purchases' => 'Purchases'
+    'purchases' => 'Purchases',
+    'admin_purchases' => 'Purchases',
+    'users' => 'Users'
 ];

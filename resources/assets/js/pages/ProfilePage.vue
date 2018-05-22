@@ -3,17 +3,22 @@
 		<div class="row">
 			<div class="col-sm">
 				<div class="card">
+					<div class="card-header">
+						<div class="row align-items-center">
+							<div class="col">
+								{{ 'auth.personal_info' | trans }}
+							</div>
+							<div class="col-auto" v-if="cancelable">
+								<button class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
+							</div>
+						</div>
+					</div>
 					<div class="card-block">
-						<h5 class="card-title">
-							{{ 'auth.personal_info' | trans }}
-							
-						</h5>
-
 						<text-input v-model="user.referral_code" 
 							:defaultValue="user.referral_code"
 							:required="false"
 							type="text"
-							:label="$options.filters.trans('auth.referrer')"
+							:label="$options.filters.trans('user.referral_code')"
 							name="referrer"
 							:editable="false"
 							:focus="false"
@@ -103,11 +108,17 @@
 			</div>
 			<div class="col-sm">
 				<div class="card">
+					<div class="card-header">
+						<div class="row align-items-center">
+							<div class="col">
+								{{ 'auth.bank_info' | trans }}
+							</div>
+							<div class="col-auto" v-if="cancelable">
+								<button class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
+							</div>
+						</div>
+					</div>
 					<div class="card-block">
-						<h5 class="card-title">
-							{{ 'auth.bank_info' | trans }}
-							
-						</h5>
 
 						<text-input v-model="user.bank_name" 
 								:defaultValue="user.bank_name"
@@ -193,10 +204,9 @@
 			<div class="col-sm">
 				<div class="card">
 					<div class="card-block">
-						<h5 class="card-title">
+						<div class="card-header">
 							{{ 'auth.company_info' | trans }}
-							
-						</h5>
+						</div>
 						
 						<div class="row">
 							<div class="col-sm">
@@ -312,7 +322,7 @@
 <script>
 	import ReferralLink from "../components/ReferralLink.vue";
 	export default {
-		props: [''],
+		props: ['cancelable', 'selectedUser'],
 
 		components: { ReferralLink },
 
@@ -324,7 +334,7 @@
 		},
 
 		mounted() {
-			this.user = window.user;
+			this.user = this.selectedUser ? this.selectedUser : window.user;
 			this.getContacts();
 		},
 
@@ -339,6 +349,10 @@
 
 			setContacts(response) {
 				this.contacts = response.data;
+			},
+
+			back() {
+				this.$emit('back');
 			}
 		}	
 	}

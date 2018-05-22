@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard.vue';
 import LoginPage from './pages/LoginPage.vue';
 import ProfilePage from './pages/ProfilePage.vue';
 import PurchasePage from './pages/PurchasePage.vue';
+import UserPage from './pages/UserPage.vue';
 import translations from './vue-translations.js';
 
 
@@ -71,7 +72,8 @@ const routes = [
 	{ path: '/', component: ProfilePage }, 
 	{ path: '/dashboard', component:Dashboard },
 	{ path: '/profile', component: ProfilePage },
-	{ path: '/purchases', component: PurchasePage }
+	{ path: '/purchases', component: PurchasePage },
+	{ path: '/users', component: UserPage }
 ];
 
 const router = new VueRouter({ routes, linkActiveClass: 'opened' });
@@ -103,6 +105,7 @@ Vue.component('image-input', require('./base/ImageInput.vue'));
 
 // Actions components
 Vue.component('PurchasesActions', require('./actions/PurchasesActions.vue'));
+Vue.component('UsersActions', require('./actions/UsersActions.vue'));
 
 // Project components
 Vue.component('side-nav', require('./components/SideNavigation.vue'));

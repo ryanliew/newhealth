@@ -48,9 +48,9 @@ class ProfileController extends Controller
             'beneficiary_name' => 'required'
     	]);
 
-    	if(isset($validated['referrer_code']))
+    	if(request()->referrer_code && request()->referrer_code !== "")
     	{
-    		$referrer = User::where('referral_code', $validated['referrer_code'])->first();
+    		$referrer = User::where('referral_code', request()->referrer_code)->first();
     		auth()->user()->appendToNode($referrer)->save();
     	}
 

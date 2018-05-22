@@ -11,5 +11,7 @@ return [
     'profile' => '我的资料',
     'logout' => '登出',
     'settings' => '设定',
-    'purchases' => '我的订单'
+    'purchases' => '订单',
+    'admin_purchases' => '所有订单',
+    'users' => '用户'
 ];

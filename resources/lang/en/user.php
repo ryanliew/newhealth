@@ -9,5 +9,8 @@ return [
     */
 
     'copy-referral' => 'Copy referral link',
-   	'copied-link'  => 'Your referral link has been copied to the clipboard'
+   	'copied-link'  => 'Your referral link has been copied to the clipboard',
+   	'joined_at' => 'Joined at',
+   	'users' => 'Users',
+   	'referral_code' => 'Newleaf ID'
 ];

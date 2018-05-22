@@ -9,5 +9,8 @@ return [
     */
 
     'copy-referral' => '复制连接',
-   	'copied-link'  => '成功复制介绍连接' 
+   	'copied-link'  => '成功复制介绍连接',
+   	'joined_at' => '加盟日期',
+   	'users' => '用户',
+   	'referral_code' => '新叶ID'
 ];
