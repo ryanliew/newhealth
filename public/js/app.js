@@ -78796,11 +78796,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -78874,22 +78869,6 @@ var render = function() {
               },
               [_vm._m(1)]
             )
-          : _vm._e(),
-        _vm._v(" "),
-        _vm.user.is_admin
-          ? _c(
-              "button",
-              {
-                staticClass: "btn btn-success",
-                attrs: { type: "button" },
-                on: {
-                  click: function($event) {
-                    _vm.itemAction("verify", _vm.rowData, _vm.rowIndex)
-                  }
-                }
-              },
-              [_vm._m(2)]
-            )
           : _vm._e()
       ]
     )
@@ -78910,14 +78889,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "icon" }, [
       _c("i", { staticClass: "fa fa-money" })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("span", { staticClass: "icon" }, [
-      _c("i", { staticClass: "fa fa-check" })
     ])
   }
 ]

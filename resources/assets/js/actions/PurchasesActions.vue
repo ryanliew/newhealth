@@ -11,11 +11,6 @@
                     <i class="fa fa-money"></i>
                 </span>
             </button>
-            <button type="button" class="btn btn-success" v-if="user.is_admin" @click="itemAction('verify', rowData, rowIndex)">
-                <span class="icon">
-                    <i class="fa fa-check"></i>
-                </span>
-            </button>
         </div>
     </div>
 </template>
