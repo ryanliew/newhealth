@@ -60,7 +60,7 @@
                             <img src="https://portal.newleaf.com.my/img/mail/icon1.jpg">
                         </div>
                         <div style="float:left; margin-right:10px;">
-                            <img src="https://portal.newleaf.com.my/img/mail/icon2.jpg">
+                            <a href="https://www.facebook.com/Newleaf-158391578339214/"><img src="https://portal.newleaf.com.my/img/mail/icon2.jpg"></a>
                         </div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                             <img src="https://portal.newleaf.com.my/img/mail/icon1.jpg">
                         </div>
                         <div style="flaot:left;">
-                            <img src="https://portal.newleaf.com.my/img/mail/icon2.jpg">
+                            <a href="https://www.facebook.com/Newleaf-158391578339214/"><img src="https://portal.newleaf.com.my/img/mail/icon2.jpg"></a>
                         </div>
                     </div>
                 </div>
