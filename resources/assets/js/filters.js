@@ -15,7 +15,8 @@ Vue.filter('trans_choice', (...args) => {
 });
 
 Vue.filter('currency', function(value){
-	return value;
+	var formatter = new Intl.NumberFormat('en', { style: 'currency', currency:'MYR' });
+	return formatter.format(value);
 });
 
 Vue.filter('formatPurchaseStatus', function(value){

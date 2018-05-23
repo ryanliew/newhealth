@@ -34,13 +34,13 @@
 									x
 								</td>
 								<td>
-									{{ package.price }}	
+									{{ package.price | currency }}	
 								</td>
 								<td>
 									=
 								</td>
 								<td>
-									{{ getPackagePrice(form.packages[index].amount, package.price) }}
+									{{ getPackagePrice(form.packages[index].amount, package.price) | currency }}
 								</td>
 							</tr>
 							<tr>
@@ -50,7 +50,7 @@
 								<td></td>
 								<td><b>{{ 'purchase.total' | trans }}</b></td>
 								<td>=</td>
-								<td>{{ totalPrice }}</td>
+								<td>{{ totalPrice | currency}}</td>
 							</tr>
 						</tbody>
 						<tbody v-else>
@@ -63,13 +63,13 @@
 									x
 								</td>
 								<td>
-									{{ package.price }}	
+									{{ package.price | currency }}	
 								</td>
 								<td>
 									=
 								</td>
 								<td>
-									{{ package.pivot.total_price }}
+									{{ package.pivot.total_price | currency }}
 								</td>
 							</tr>
 							<tr>
@@ -79,7 +79,7 @@
 								<td></td>
 								<td><b>{{ 'purchase.total' | trans }}</b></td>
 								<td>=</td>
-								<td>{{ totalPrice }}</td>
+								<td>{{ totalPrice | currency }}</td>
 							</tr>
 						</tbody>
 					</table>

@@ -49061,7 +49061,8 @@ Vue.filter('trans_choice', function () {
 });
 
 Vue.filter('currency', function (value) {
-	return value;
+	var formatter = new Intl.NumberFormat('en', { style: 'currency', currency: 'MYR' });
+	return formatter.format(value);
 });
 
 Vue.filter('formatPurchaseStatus', function (value) {
@@ -74310,7 +74311,7 @@ var render = function() {
           _vm._v(" "),
           _c("text-input", {
             attrs: {
-              defaultValue: _vm.form.amount,
+              defaultValue: _vm.$options.filters.currency(_vm.form.amount),
               required: false,
               type: "number",
               label: _vm.$options.filters.trans("payment.amount"),
@@ -74503,7 +74504,7 @@ var render = function() {
                         _c("td", [
                           _vm._v(
                             "\n\t\t\t\t\t\t\t\t" +
-                              _vm._s(package.price) +
+                              _vm._s(_vm._f("currency")(package.price)) +
                               "\t\n\t\t\t\t\t\t\t"
                           )
                         ]),
@@ -74516,9 +74517,11 @@ var render = function() {
                           _vm._v(
                             "\n\t\t\t\t\t\t\t\t" +
                               _vm._s(
-                                _vm.getPackagePrice(
-                                  _vm.form.packages[index].amount,
-                                  package.price
+                                _vm._f("currency")(
+                                  _vm.getPackagePrice(
+                                    _vm.form.packages[index].amount,
+                                    package.price
+                                  )
                                 )
                               ) +
                               "\n\t\t\t\t\t\t\t"
@@ -74544,7 +74547,9 @@ var render = function() {
                       _vm._v(" "),
                       _c("td", [_vm._v("=")]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(_vm.totalPrice))])
+                      _c("td", [
+                        _vm._v(_vm._s(_vm._f("currency")(_vm.totalPrice)))
+                      ])
                     ])
                   ],
                   2
@@ -74581,7 +74586,7 @@ var render = function() {
                         _c("td", [
                           _vm._v(
                             "\n\t\t\t\t\t\t\t\t" +
-                              _vm._s(package.price) +
+                              _vm._s(_vm._f("currency")(package.price)) +
                               "\t\n\t\t\t\t\t\t\t"
                           )
                         ]),
@@ -74593,7 +74598,9 @@ var render = function() {
                         _c("td", [
                           _vm._v(
                             "\n\t\t\t\t\t\t\t\t" +
-                              _vm._s(package.pivot.total_price) +
+                              _vm._s(
+                                _vm._f("currency")(package.pivot.total_price)
+                              ) +
                               "\n\t\t\t\t\t\t\t"
                           )
                         ])
@@ -74617,7 +74624,9 @@ var render = function() {
                       _vm._v(" "),
                       _c("td", [_vm._v("=")]),
                       _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(_vm.totalPrice))])
+                      _c("td", [
+                        _vm._v(_vm._s(_vm._f("currency")(_vm.totalPrice)))
+                      ])
                     ])
                   ],
                   2

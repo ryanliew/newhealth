@@ -27,7 +27,7 @@
 				</text-input>
 
 				<text-input v-model="form.amount" 
-					:defaultValue="form.amount"
+					:defaultValue="$options.filters.currency(form.amount)"
 					:required="false"
 					type="number"
 					:label="$options.filters.trans('payment.amount')"
