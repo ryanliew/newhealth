@@ -1,122 +1,129 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
-<title>{{ config('app.name') }}</title>
-
 <style type="text/css">
-
-    body{width: 100%; background-repeat: no-repeat; background-size: contain; background-position: left top; background-color: #ffffff !important; margin:0; padding:0; -webkit-font-smoothing: antialiased;mso-margin-top-alt:0px; mso-margin-bottom-alt:0px; mso-padding-alt: 0px 0px 0px 0px;}
-
-    p,h1,h2,h3,h4{margin-top:20px !important;margin-bottom:0;padding-top:0;padding-bottom:0;line-height:1.8;}
-
-    span.preheader{display: none; font-size: 1px;}
-
-    html{width: 100%;}
-
-    table{font-size: 12px;border: 0;}
-
-    .menu-space{padding-right:25px;}
-
-    a,a:hover { text-decoration:none; color:#4D95AD;}
-    
-    .desktop-hidden{ display: none; }
-
-    .logo{ max-width:300px; }
-
-    @media only screen and (max-width:640px)
-    {
-        body {width:auto!important;}
-        table.main {width:440px !important;}
-        table.two-left {width:420px !important; margin:0px auto;}
-        table.full {width:100% !important; margin:0px auto;}
-        table.two-left-inner {width:400px !important; margin:0px auto;}
-        table.menu-icon { display:none;}
-        .mobile-hidden{ display:none; }
-        .desktop-hidden{ display:table-row !important; }
-        .mobile-wide{ width: 100%; }
-        .logo{ padding-top: 30px; max-width: 80vw;}
-
-    }
-
-    @media only screen and (max-width:479px)
-    {
-        body {width:auto!important;}
-        table.main {width:310px !important;}
-        table.two-left {width:300px !important; margin:0px auto;}
-        table.full {width:100% !important; margin:0px auto;}
-        table.two-left-inner {width:280px !important; margin:0px auto;}
-        table.menu-icon { display:none;}  
-        .mobile-hidden{ display:none; }
-        .desktop-hidden{ display:table-row !important; }
-        .mobile-wide{ width: 100%; }
-        .logo{ padding-top: 30px; max-width: 80vw; }
-    }
-
-
-
+        #mobileshow    { display:none; }
+        
+        @media screen and (max-width: 500px) {
+            #mobileshow   { display:block; }
+        }
 </style>
-
-</head>
-
-<body yahoo="fix" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-
-<!--Main Table Start-->
-    <table class="main" style="margin: auto;width:100%;" border="0" align="center" cellpadding="0" cellspacing="0">
-        <tr>
-            <td class="mobile-hidden"><img src="https://portal.newleaf.com.my/img/left-durian-bg-01.jpg" height="350px"></td>
-            
-        </tr>
-        <tr>
-            <td align="center" valign="middle" style="width:25vw;max-width:300px;">
-                <a href="https://portal.newleaf.com.my"><img style="max-width:300px" class="logo" src="https://portal.newleaf.com.my/img/mail/email-logo.png"/></a>
-            </td>
-        </tr>
-        <tr>
-            <td class="mobile-wide" style="word-wrap:break-word;font-size:0px;padding:10px 20px 20px 20px;border-bottom:1px solid #ccc;" align="center">
-                <div style="cursor:auto;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:11px;line-height:22px;text-align:center;">
-                    <p style="color:black;">
-                        <h2 style="font-size:36px;">{{ __('mail.welcome_onboard') }}<span style="color:#185C99;">{{ $user->name }}</span>{{ __('mail.welcome_onboard_behind') }}!</h2>
-                    </p>
-                    <p style="color:black;">
-                        <span style="font-size:14px;">{{ __('mail.thank_you_signup') }}<br>{{ __('mail.thank_you_signup_2') }}</span>
-                    </p>
-                    <p></p>
-                    <p style="color:black;">
-                        <strong><span style="font-size:16px;">{{ __('mail.newleaf_grower_id') }} <span style="color:#185C99;">{{ $user->referral_code }}</span>@if($user->parent)<br><span style="color:#000000;">{{ __('mail.sponsor_id') }}: </span><span style="color:#185C99;"> {{ $user->parent->referral_code }}</span></span></strong><br><strong><span style="font-size:16px;">{{ __('mail.sponsor_name') }}: <span style="color:#185C99;">{{ $user->parent->name }}</span>@endif</span></strong>
-                    </p>
-                    <p style="color:black;">
-                        <span style="font-size:14px;">{{ __('mail.enquiry_program') }}<br>{{ __('mail.enquiry_program_2') }}<a href="mailto:support@newleaf.com.my">support@newleaf.com.my</a></span>
-                    </p>
-                    <p style="color:black;">
-                        <span style="font-size:14px;">{{ __('mail.thank_you_signup_again') }}.</span>
-                    </p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td class="mobile-wide" style="word-wrap:break-word;font-size:0px;padding:0px 20px 30px 20px;" align="left">
-                <div style="cursor:auto;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:11px;line-height:22px;text-align:center;">
-                    <p>
-                        <span style="font-family:Ubuntu, Helvetica, Arial, sans-serif;color:#777;font-size:14px;"><strong style="font-size:15px;">NEWLEAF PLANATION BERHAD <small style="font-size:12px;">(1251569-U)</small></strong><br>Suite E-7-1, Block E, Plaza Mont Kiara, No 2 Jalan Kiara, 50480 Kuala Lumpur<br><strong>T</strong> <a href="tel:+60362016336">+6036201 6336</a> | <strong>W</strong> <a href="http://www.newleaf.com.my">www.newleaf.com.my</a> | <strong>E</strong> <a href="mailto:support@newleaf.com.my">support@newleaf.com.my</a></span>
-                    </p>
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td align="center" style="padding:0px 20px 30px 20px;">
-                <strong style="font-family:Ubuntu, Helvetica, Arial, sans-serif;color: #777;font-size: 15px;">{{ __('mail.follow_us') }}</strong>
-                <br>
-                <a href="#" style="margin-right: 10px;"><img src="https://portal.newleaf.com.my/img/mail/wechat.jpg"></a>
-                <a href="https://www.facebook.com/Newleaf-158391578339214/"><img src="https://portal.newleaf.com.my/img/mail/facebook.jpg"></a>
-            </td>
-        </tr>
-    </table>
+        
+<style type="text/css">
+        #mobileshow1   { display:block; }
+        
+        @media screen and (max-width: 500px) {
+            #mobileshow1   { display:none; }
+        }
+</style>
+        
+<body style="margin:0">
+    <!-- desktop view -->
+    <div id="mobileshow1">
     
+        <div style="width: 100%; height:auto;">
+            <img src="https://portal.newleaf.com.my/img/mail/background.png" width="100%" height="auto">
+        </div>
+        <div style="width: 80%; height:auto; margin:0 auto; font-family:Calibri">
+            <div style=" font-size:24px; "><b> {{ __('mail.welcome_onboard') }} <span style="color:#0e5796">{{ $user->name }}</span>{{ __('mail.welcome_onboard_behind') }}!</b>
+            </div>
+            <br>
 
-<!--Main Table End-->
+            <div style="width:80%; float:left;">
+                {{ __('mail.thank_you_signup') }} {{ __('mail.thank_you_signup_2') }}
+            </div>
 
+            <div style="width:80%; float:left; margin-top:10px;">
+                <b> {{ __('mail.newleaf_grower_id') }} <span style="color:#0e5796">{{ $user->referral_code }}</span>
+                    @if($user->parent)
+                    <br>
+                    <span style="color:#000000;">{{ __('mail.sponsor_id') }}: </span><span style="color:#0e5796;"> {{ $user->parent->referral_code }}</span>
+                    <br>
+                    <span>{{ __('mail.sponsor_name') }}: <span style="color:#0e5796;">{{ $user->parent->name }}</span>
+                    @endif 
+                </b><br><br>
+                {{ __('mail.enquiry_program') }}<br>{{ __('mail.enquiry_program_2') }}<a href="mailto:support@newleaf.com.my">support@newleaf.com.my</a>
+                <br><br>
+                {{ __('mail.thank_you_signup_again') }}.
+            </div>
+
+            <div style="width:100%; float:left; padding:20px 0; border-bottom:1px solid #999; margin-bottom:20px;"></div>
+             
+             
+            <div style="width:100%; padding:20px 0; ">
+                <div style="width:80%; float:left; text-align:left; color:#999">
+                    <b > NEWLEAF PLANATION BERHAD (1251569-U)</b><br>
+                    Suite E-7-1, Block E, Plaza Mont Kiara, No 2 Jalan Kiara, 50480 Kuala Lumpur<br>
+                    <b>T</b> +6036201 6336 | <b>W</b> www.newleaf.com.my | <b>E</b> support@newleaf.com.my
+                </div>
+                <div style="width:20%; float:right; color:#999">
+                    <div><b>FOLLOW US</b></div>
+                    <div>
+                        <div style="float:left; margin-right:10px;">
+                            <img src="https://portal.newleaf.com.my/img/mail/icon1.jpg">
+                        </div>
+                        <div style="float:left; margin-right:10px;">
+                            <img src="https://portal.newleaf.com.my/img/mail/icon2.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end desktop view -->
+
+    <!--mobile view -->
+       <div id="mobileshow">
+    
+    <div style="width: 100%; height:auto;">
+        <img src="https://portal.newleaf.com.my/img/mail/background.png" width="100%" height="auto">
+    </div>
+    <div style="padding:0 20px">
+        <div style="width: 100%; height:auto; margin:0 auto; font-family:Calibri; text-align:center;">
+            <div style=" font-size:24px; "><b> {{ __('mail.welcome_onboard') }} <span style="color:#0e5796">{{ $user->name }}</span>{{ __('mail.welcome_onboard_behind') }}!</b></div>
+            <br>
+            <div style="width:100%;  text-align:center;">
+                {{ __('mail.thank_you_signup') }} {{ __('mail.thank_you_signup_2') }}
+            </div>
+            
+            <div style="width:100%; float:left; margin-top:10px;">
+                <b> 
+                    {{ __('mail.newleaf_grower_id') }} <span style="color:#0e5796">{{ $user->referral_code }}</span>
+                        @if($user->parent)
+                        <br>
+                        <span style="color:#000000;">{{ __('mail.sponsor_id') }}: </span><span style="color:#0e5796;"> {{ $user->parent->referral_code }}</span>
+                        <br>
+                        <span>{{ __('mail.sponsor_name') }}: <span style="color:#0e5796;">{{ $user->parent->name }}</span>
+                        @endif 
+                </b>
+                <br><br>
+                {{ __('mail.enquiry_program') }}<br>{{ __('mail.enquiry_program_2') }} <a href="mailto:support@newleaf.com.my">support@newleaf.com.my</a> 
+                <br><br>
+                {{ __('mail.thank_you_signup_again') }}.
+            </div>
+             
+            <div style="width:100%; float:left; padding:20px 0; border-bottom:1px solid #999; margin-bottom:20px;"></div>
+             
+             
+            <div style="width:100%; padding:20px 0; ">
+                <div style="width:100%;  text-align:center; color:#999">
+                    <b> NEWLEAF PLANATION BERHAD (1251569-U)</b><br>
+                    Suite E-7-1, Block E, Plaza Mont Kiara, No 2 Jalan Kiara, 50480 Kuala Lumpur<br>
+                    <b>T</b> +6036201 6336 | <b>W</b> www.newleaf.com.my | <b>E</b> support@newleaf.com.my
+                </div>
+                <br><br>
+                <div style="width:100%; color:#999">
+                    <div><b>FOLLOW US</b></div>
+                    <div style="text-align:center; width:92px; margin:0 auto">
+                        <div style="float:left; margin-right:10px;">
+                            <img src="https://portal.newleaf.com.my/img/mail/icon1.jpg">
+                        </div>
+                        <div style="flaot:left;">
+                            <img src="https://portal.newleaf.com.my/img/mail/icon2.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- end mobile view -->
+    
 </body>
-</html>
