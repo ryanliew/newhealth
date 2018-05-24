@@ -8,7 +8,7 @@
     <!-- content -->
     <div style="width: 70%; margin:0 auto; font-family:Calibri">
         <div style="width:100%; height:auto">
-            <div style="width:275px; height:114px; "><img src="https://portal.newleaf.com.my/img/mail/logo.jpg"></div>
+            <div style="width:330px; height:90px; "><img height="90" width="330" src="https://portal.newleaf.com.my/img/mail/logo.jpg"></div>
         </div>
         
         <div>
@@ -33,7 +33,7 @@
                 </b>
                 <br><br>
                 {{ __('mail.enquiry_program') }}<br>({{ __('mail.customer_support') }}) {{ __('mail.enquiry_program_2') }}
-                <a href="mailto:support@newleaf.com.my">support@newleaf.com.my</a>
+                <a href="mailto:enquiry@newleaf.com.my">enquiry@newleaf.com.my</a>
                 <br><br>
                 {{ __('mail.thank_you_signup_again') }}.
             </div>
@@ -44,9 +44,9 @@
             
             <div style="width:100%; padding:20px 0; ">
                 <div style="width:80%; float:left; text-align: left; color:#999">
-                    <b > NEWLEAF PLANATION BERHAD (1251569-U)</b><br>
+                    <b > NEWLEAF PLANATION BERHAD <span style="font-size:12px">(1251569-U)</span></b><br>
                     Suite E-7-1, Block E, Plaza Mont Kiara, No 2 Jalan Kiara, 50480 Kuala Lumpur<br>
-                    <b>T</b> +6036201 6336 | <b>W</b> www.newleaf.com.my | <b>E</b> support@newleaf.com.my
+                    <b>T</b> +6036201 6336 | <b>W</b> www.newleaf.com.my | <b>E</b> enquiry@newleaf.com.my
                 </div>
                 <div style="width:20%; float:right; color:#999">
                     <div><b>FOLLOW US</b></div>
