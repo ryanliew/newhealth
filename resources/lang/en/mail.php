@@ -17,7 +17,8 @@ return [
     'newleaf_grower_id' => 'Your Newleaf GROWER ID is',
     'sponsor_id' => 'Sponsor ID',
     'sponsor_name' => 'Sponsor Name',
-    'enquiry_program' => 'If you have further questions regarding the grower program, please call our Customer Support Center at +603 62016336 (Customer Support)',
+    'enquiry_program' => 'If you have further questions regarding the grower program, please call our Customer Support Center at +603 62016336',
+    'customer_support' => 'Customer Support',
     'enquiry_program_2' => '(Operation Hours: Mon-Fri, 9am to 5pm) or you can write in your enquiry to our email',
     'thank_you_signup_again' => 'Thank you again for registering at Newleaf Plantation Berhad',
     'follow_us' => 'FOLLOW US'

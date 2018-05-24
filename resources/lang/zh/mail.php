@@ -17,7 +17,8 @@ return [
     'newleaf_grower_id' => '您的新叶种植者ID是',
     'sponsor_id' => '推荐者ID',
     'sponsor_name' => '推荐者名字',
-    'enquiry_program' => '如果您有任何关于种植者计划的问题，请联系我们的客户服务中心电话：+60362016336(客服)',
+    'enquiry_program' => '如果您有任何关于种植者计划的问题，请联系我们的客户服务中心电话：+60362016336',
+    'customer_support' => '客服',
     'enquiry_program_2' =>'（服务时间：星期一到星期五，早上9点到下午5点）或者您可以电邮到',
     'thank_you_signup_again' => '再次的谢谢您的注册',
     'follow_us' => '关注我们'
