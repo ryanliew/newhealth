@@ -1,7 +1,7 @@
 <body style="margin:0 auto;" >
     <!-- header -->
     <div style="width: 100%; height:auto;">
-        <img src="https://portal.newleaf.com.my/img/mail/background.png" width="100%" height="auto">
+        <img src="https://portal.newleaf.com.my/img/mail/background.jpg" width="100%" height="auto">
     </div>
     <!-- end header -->
     
