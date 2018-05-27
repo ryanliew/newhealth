@@ -87,4 +87,14 @@ class UserController extends Controller
     {
         return $user->contacts;
     }
+
+    public function getTree(User $user)
+    {   
+        $users = User::descendantsAndSelf($user->id);
+
+        if(!is_null($user->parent))
+            $users->push($user->parent);
+
+        return $users->toTree();
+    }
 }

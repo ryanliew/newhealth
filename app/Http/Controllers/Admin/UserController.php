@@ -12,4 +12,9 @@ class UserController extends Controller
     {
     	return Controller::VueTableListResult(User::with('contacts'));
     }
+
+    public function getTree()
+    {
+    	return User::all()->toTree();
+    }
 }
