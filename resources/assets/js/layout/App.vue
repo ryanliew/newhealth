@@ -31,10 +31,6 @@
 		                            <a @click="logout" class="dropdown-item"><span class="font-icon glyphicon glyphicon-log-out"></span>{{ 'nav.logout' | trans }}</a>
 		                        </div>
 		                    </div>
-		
-		                    <button type="button" class="burger-right">
-		                        <i class="font-icon-menu-addl"></i>
-		                    </button>
 		                </div><!--.site-header-shown-->
 		
 		                <div class="mobile-menu-right-overlay"></div>

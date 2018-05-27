@@ -13,5 +13,6 @@ return [
     'settings' => 'Settings',
     'purchases' => 'Purchases',
     'admin_purchases' => 'Purchases',
-    'users' => 'Users'
+    'users' => 'Users',
+    'organization' => 'Organization'
 ];

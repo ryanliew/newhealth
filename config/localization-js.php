@@ -22,7 +22,8 @@ return [
         'company',
         'user',
         'purchase',
-        'payment'
+        'payment',
+        'tree'
     ],
 
     /*

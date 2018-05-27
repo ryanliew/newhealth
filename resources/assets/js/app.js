@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage.vue';
 import ProfilePage from './pages/ProfilePage.vue';
 import PurchasePage from './pages/PurchasePage.vue';
 import UserPage from './pages/UserPage.vue';
+import GenoPage from './pages/GenoPage.vue';
 import translations from './vue-translations.js';
 
 
@@ -73,7 +74,8 @@ const routes = [
 	{ path: '/dashboard', component:Dashboard },
 	{ path: '/profile', component: ProfilePage },
 	{ path: '/purchases', component: PurchasePage },
-	{ path: '/users', component: UserPage }
+	{ path: '/users', component: UserPage },
+	{ path: '/organization', component: GenoPage }
 ];
 
 const router = new VueRouter({ routes, linkActiveClass: 'opened' });
