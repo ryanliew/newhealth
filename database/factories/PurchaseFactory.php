@@ -18,6 +18,9 @@ $factory->define(App\Purchase::class, function (Faker $faker) {
         'user_id' => function() {
             return factory('App\User')->create()->id;
         },
+        'payment_id' => function() {
+            return factory('App\Payment')->create()->id;
+        },
         'status' => 'pending',
         'is_verified' => 'false'
     ];

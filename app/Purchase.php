@@ -26,6 +26,8 @@ class Purchase extends Model
     public function verify()
     {
     	$this->update(['status' => 'complete', 'is_verified' => true]);
+
+        $this->user()->update([ 'tree_count' => $this->packages->sum(function($package){ return $package->pivot->amount; }) ]);
         return $this;
     }
 }

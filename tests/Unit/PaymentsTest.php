@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Purchase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
@@ -17,12 +18,28 @@ class PaymentsTest extends TestCase
     public function admins_can_verify_payment()
     {
         $this->signIn();
+        
+        $purchase = make('App\Purchase');
+
+        $package1 = create('App\Package');
+        $package2 = create('App\Package');
+
+        $total_amount = ( $package1->price * 2 ) + $package2->price + .0;
+
+        $this->post('/api/purchases', [ "user_id" => auth()->user()->id, 
+                                        "packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"8000.00"},{"amount":1,"id":' . $package2->id . ',"price":"24000.00"}]'
+                                                    ]);
+        $purchase = Purchase::first();
 
     	$payment = create('App\Payment');
+
+        $purchase->update(['payment_id' => $payment->id]);
 
         $this->post('/api/payment/verify/' . $payment->id);
 
         $this->assertDatabaseHas('payments', ['is_verified' => true]);
+        $this->assertDatabaseHas('purchases', ['is_verified' => true, 'id' => $purchase->id]);
+        $this->assertDatabaseHas('users', ['tree_count' => 3]);
     } 
 
     /** @test */

@@ -28,7 +28,8 @@
 				fields: [
 					{ name: 'name', title: this.tableTitle('auth.name'), sortField: 'name'},
 					{ name: 'created_at', title: this.tableTitle('user.joined_at'), sortField: 'created_at', callback: 'date' },
-					{ name: 'email', title: this.tableTitle('auth.email'), sortField: 'email', callback: 'currency'},
+					{ name: 'tree_count', title: this.tableTitle('user.tree_count'), sortField: 'tree_count' },
+					{ name: 'email', title: this.tableTitle('auth.email'), sortField: 'email'},
 					{ name: 'nationality', title: this.tableTitle('auth.nationality'), sortField: 'nationality'},
 					{ name: 'referral_code', title: this.tableTitle('user.referral_code'), sortField: 'referral_code'},
 					{ name: '__component:users-actions', title: this.tableTitle('purchase.actions')}

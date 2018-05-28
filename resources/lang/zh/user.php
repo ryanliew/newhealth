@@ -12,5 +12,6 @@ return [
    	'copied-link'  => '成功复制介绍连接',
    	'joined_at' => '加盟日期',
    	'users' => '用户',
-   	'referral_code' => '新叶ID'
+   	'referral_code' => '新叶ID',
+    'tree_count' => '种植数量'
 ];

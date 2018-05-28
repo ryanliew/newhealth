@@ -34,7 +34,7 @@ class PaymentController extends Controller
     {
         $payment->update(['is_verified' => true]);
 
-        $payment->purchase()->update(['is_verified' => true, 'status' => 'complete']);
+        $payment->purchase->verify();
 
         return json_encode(['message' => 'payment.verify_success', 'payment' => $payment]);
     }
