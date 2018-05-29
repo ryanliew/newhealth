@@ -15,7 +15,6 @@ return [
     'purchase_date' => 'Purchase date',
     'total_payable' => 'Total payable',
     'status' => 'Status',
-    'actions' => 'Actions',
     'make_new_purchase' => 'Make new purchase',
     'purchases' => 'Purchases',
     'past_purchases' => 'Purchase history',

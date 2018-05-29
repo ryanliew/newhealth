@@ -14,5 +14,6 @@ return [
     'purchases' => 'Purchases',
     'admin_purchases' => 'Purchases',
     'users' => 'Users',
-    'organization' => 'Organization'
+    'organization' => 'Organization',
+    'packages' => 'Packages'
 ];

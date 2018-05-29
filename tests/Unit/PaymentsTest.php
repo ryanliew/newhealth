@@ -51,7 +51,7 @@ class PaymentsTest extends TestCase
 
         $purchase = create('App\Purchase');
 
-    	$payment = factory('App\Payment')->states('file')->make(['payment_slip_path' => $file = UploadedFile::fake()->image('avatar.jpg')]);
+    	$payment = factory('App\Payment')->make(['payment_slip_path' => $file = UploadedFile::fake()->image('avatar.jpg')]);
 
     	$this->json('POST', '/api/purchase/pay/' . $purchase->id, $payment->toArray());
 

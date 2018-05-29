@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard.vue';
 import LoginPage from './pages/LoginPage.vue';
 import ProfilePage from './pages/ProfilePage.vue';
 import PurchasePage from './pages/PurchasePage.vue';
+import PackagePage from './pages/PackagePage.vue';
 import UserPage from './pages/UserPage.vue';
 import GenoPage from './pages/GenoPage.vue';
 import translations from './vue-translations.js';
@@ -75,7 +76,8 @@ const routes = [
 	{ path: '/profile', component: ProfilePage },
 	{ path: '/purchases', component: PurchasePage },
 	{ path: '/users', component: UserPage },
-	{ path: '/organization', component: GenoPage }
+	{ path: '/organization', component: GenoPage },
+	{ path: '/packages', component: PackagePage }
 ];
 
 const router = new VueRouter({ routes, linkActiveClass: 'opened' });
@@ -108,9 +110,13 @@ Vue.component('image-input', require('./base/ImageInput.vue'));
 // Actions components
 Vue.component('PurchasesActions', require('./actions/PurchasesActions.vue'));
 Vue.component('UsersActions', require('./actions/UsersActions.vue'));
+Vue.component('PackagesActions', require('./actions/PackagesActions.vue'));
 
 // Project components
 Vue.component('side-nav', require('./components/SideNavigation.vue'));
+
+// Custom table column
+Vue.component('TablePriceSwitcher', require('./components/TablePriceSwitcher.vue'));
 
 window.app = new Vue({
 	router,

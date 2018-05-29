@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Payment;
 use App\Purchase;
+use App\User;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
@@ -21,6 +22,8 @@ class PaymentController extends Controller
         ], $messages);
 
     	$payment = Payment::create(['amount' => request()->amount,
+                                    'amount_rmb' => request()->amount_rmb,
+                                    'is_rmb' => User::find(request()->user_id)->country_id == 48,
     								'user_id' => request()->user_id,
     								'payment_slip_path' => request()->file('payment_slip_path')->store('payments', 'public')
     								]);

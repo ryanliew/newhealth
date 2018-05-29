@@ -34,7 +34,20 @@
 					name="amount"
 					:editable="false"
 					:focus="false"
-					:hideLabel="false">
+					:hideLabel="false"
+					v-if="!purchase.is_rmb">
+				</text-input>
+
+				<text-input v-model="form.amount" 
+					:defaultValue="$options.filters.currency_rmb(form.amount_rmb)"
+					:required="false"
+					type="number"
+					:label="$options.filters.trans('payment.amount')"
+					name="amount_rmb"
+					:editable="false"
+					:focus="false"
+					:hideLabel="false"
+					v-else>
 				</text-input>
 
 				<image-input v-model="paymentSlip" :defaultImage="paymentSlip"
@@ -75,6 +88,7 @@
 				payment: '',
 				form: new Form({
 					amount: 0,
+					amount_rmb: 0,
 					payment_slip_path: '',
 					user_id: window.user.id
 				}),
@@ -93,6 +107,7 @@
 		mounted() {
 			this.payment = this.purchase.payment ? this.purchase.payment : '';
 			this.form.amount = this.purchase.total_price;
+			this.form.amount_rmb = this.purchase.total_price_rmb;
 		},
 
 		methods: {

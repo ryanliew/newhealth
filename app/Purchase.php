@@ -15,7 +15,7 @@ class Purchase extends Model
 
     public function packages()
     {
-    	return $this->belongsToMany('App\Package')->withPivot('amount', 'total_price')->withTimestamps();
+    	return $this->belongsToMany('App\Package')->withPivot('amount', 'total_price', 'total_price_rmb')->withTimestamps();
     }
 
     public function payment()
