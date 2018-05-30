@@ -6378,6 +6378,11 @@ pre + .form-group {
   vertical-align: middle;
   padding: 15px 0;
 }
+
+.auth.page-center-in {
+  height: 100vh;
+}
+
 .box-typical-center {
   display: table;
   width: 100%;

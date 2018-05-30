@@ -19,6 +19,7 @@ return [
     'email' => 'Email Address',
     'password' => 'Password',
     'forgot_password' => 'Forgot your password',
+    'reset_password' => 'Reset password',
     'remember' => 'Remember me',
     'new_to_site' => "New to our site?",
     'register' => 'Sign up',
@@ -96,5 +97,9 @@ return [
     'register_today' => '',
     'en_space' => ' ',
     'register_message' => 'as Newleaf grower and get involved in the multi-billion dollar industry today',
-    'cancel' => 'Cancel'
+    'cancel' => 'Cancel',
+
+    'enter_email_to_reset' => 'enter your email to reset your password',
+    'enter_email_and_password_to_reset' => 'Enter your email and new password',
+    'send_reset_link' => 'Send me the reset link'
 ];

@@ -203,11 +203,10 @@
 		<div class="row" v-if="user.company_name">
 			<div class="col-sm">
 				<div class="card">
-					<div class="card-block">
-						<div class="card-header">
-							{{ 'auth.company_info' | trans }}
-						</div>
-						
+					<div class="card-header">
+						{{ 'auth.company_info' | trans }}
+					</div>
+					<div class="card-block">				
 						<div class="row">
 							<div class="col-sm">
 								<text-input v-model="user.company_name" 

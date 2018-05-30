@@ -48,7 +48,7 @@ Route::get('/testmail', function() {
 	// 		$user->notify(new RegisterSuccess($user, 'en'));
 	// 	}
 	// }
-	auth()->user()->notify(new RegisterSuccess(auth()->user(), 'en'));
+	auth()->user()->notify(new RegisterSuccess(auth()->user(), 'zh'));
 });
 Route::get('/preview', function(){
 	return view('presentation');
