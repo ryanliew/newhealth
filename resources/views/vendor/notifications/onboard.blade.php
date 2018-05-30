@@ -23,6 +23,8 @@
             <br><br>
             <b> 
                 {{ __('mail.newleaf_grower_id') }} <span style="color:#0e5696">{{ $user->referral_code }}</span>
+                <br>
+                <span style="color:#000000;">{{ __('mail.username') }}: </span><span style="color:#0e5696;"> {{ $user->email }}</span>
                 @if($user->parent)
                 <br>
                 <span style="color:#000000;">{{ __('mail.sponsor_id') }}: </span><span style="color:#0e5696;"> {{ $user->parent->referral_code }}</span>

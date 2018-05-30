@@ -9,6 +9,7 @@ return [
     */
 
     'hello' => 'Hello',
+    'username' => 'Your user name is',
     'success_register' => 'Registration success',
     'welcome_onboard' => 'Welcome onboard, ',
     'welcome_onboard_behind' => '',

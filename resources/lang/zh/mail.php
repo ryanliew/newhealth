@@ -10,6 +10,7 @@ return [
 
     'hello' => '您好',
     'success_register' => '注册成功',
+    'username' => '您的户口登入电邮是',
     'welcome_onboard' => '尊敬的',
     'welcome_onboard_behind' => ', 欢迎您的加入',
     'thank_you_signup' => '谢谢您加入新叶成为我们的种植者。我们非常兴奋有您的参与。我们希望我们可以一起成长和实现我们的梦想。',

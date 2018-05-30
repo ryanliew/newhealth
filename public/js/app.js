@@ -75787,6 +75787,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	name: "geno-row",
@@ -75828,7 +75830,17 @@ var render = function() {
               ? _c("span", { staticClass: "badge badge-primary" }, [
                   _vm._v(_vm._s(_vm._f("trans")("tree.self")))
                 ])
-              : _vm._e()
+              : _vm._e(),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("span", { staticClass: "badge badge-success" }, [
+              _vm._v(
+                _vm._s(user.tree_count) +
+                  " " +
+                  _vm._s(_vm._f("trans_choice")("auth.tree", user.tree_count))
+              )
+            ])
           ]),
           _vm._v(" "),
           user.children.length > 0
