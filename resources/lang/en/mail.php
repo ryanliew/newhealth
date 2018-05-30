@@ -21,6 +21,10 @@ return [
     'customer_support' => 'Customer Support',
     'enquiry_program_2' => '(Operation Hours: Mon-Fri, 9am to 5pm) or you can write in your enquiry to our email',
     'thank_you_signup_again' => 'Thank you again for registering at Newleaf Plantation Berhad',
-    'follow_us' => 'FOLLOW US'
+    'follow_us' => 'FOLLOW US',
+
+    'reset_request_received' => 'You are receiving this email because we received a password reset request for your account.',
+    'reset_password' => 'Reset Password',
+    'reset_request_ignore' => 'If you did not request a password reset, no further action is required.'
     
 ];

@@ -78,6 +78,7 @@
                         </div>
                         <button type="submit" class="btn btn-rounded">{{ __('auth.login') }}</button>
                         <p class="sign-note">{{ __('auth.new_to_site') }} <a href="{{ route('register') }}?lang={{ App::isLocale('zh') ? 'zh' : 'en' }}">{{ __('auth.register') }}</a></p>
+                        <p class="sign-note"><a href="{{ route('password.request') }}?lang={{ App::isLocale('zh') ? 'zh' : 'en' }}">{{ __('auth.forgot_password') }}?</a></p>
                         <!--<button type="button" class="close">
                             <span aria-hidden="true">&times;</span>
                         </button>-->

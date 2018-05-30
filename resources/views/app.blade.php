@@ -30,5 +30,11 @@
         <script src="./js/lib/tether/tether.min.js"></script> 
         <script src="./js/plugins.js"></script>
         <script src="./js/start-ui.js"></script>
+
+        <script>
+            @if(session('status'))
+                flash('{{ session('status') }}');
+            @endif
+        </script>
     </body>
 </html>

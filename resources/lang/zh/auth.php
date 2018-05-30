@@ -19,6 +19,7 @@ return [
     'email' => '电邮',
     'password' => '密码',
     'forgot_password' => '忘记密码',
+    'reset_password' => '重设密码',
     'remember' => '保持登入',
     'new_to_site' => "还未注册？",
     'register' => '加盟',
@@ -96,5 +97,9 @@ return [
     'en_space' => '',
     'register_message' => '新叶榴莲种植计划！',
     'register_today' => '榴莲种植新商机, 携手新叶创百亿, 马上',
-    'cancel' => '取消' 
+    'cancel' => '取消',
+
+    'enter_email_to_reset' => '请输入您的电邮',
+    'enter_email_and_password_to_reset' => '请输入电邮和新密码',
+    'send_reset_link' => '确定重设密码'
 ];
