@@ -29,7 +29,7 @@ class Purchase extends Model
 
         $tree_count = $this->user->tree_count;
 
-        $this->user()->update([ 'tree_count' => $tree_count + $this->packages->sum(function($package){ return $package->pivot->amount; }) ]);
+        $this->user()->update([ 'tree_count' => $tree_count + $this->packages->sum(function($package){ return $package->pivot->amount * $package->tree_count; }) ]);
         return $this;
     }
 }
