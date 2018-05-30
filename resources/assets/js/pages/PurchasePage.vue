@@ -29,11 +29,11 @@
 				fields: [
 					{ name: 'user_name', title: this.tableTitle('purchase.made_by'), sortField: 'users.name'},
 					{ name: 'created_at', title: this.tableTitle('purchase.purchase_date'), sortField: 'purchases.created_at', callback: 'date' },
-					{ name: 'total_price', title: this.tableTitle('purchase.total_payable'), sortField: 'purchases.total_price', callback: 'currency'},
+					{ name: '__component:table-price-switcher', title: this.tableTitle('purchase.total_payable'), sortField: 'purchases.total_price' },
 					{ name: 'status', title: this.tableTitle('purchase.status'), sortField: 'purchases.status', callback: 'purchaseStatusLabel'},
-					{ name: '__component:purchases-actions', title: this.tableTitle('purchase.actions')}
+					{ name: '__component:purchases-actions', title: this.tableTitle('table.actions')}
 				],
-				searchables: "purchases.status,purchases.total_price,users.name",
+				searchables: "purchases.status,users.name",
 				isPurchasing: false,
 				selectedPurchase: '',
 				cancelable: true

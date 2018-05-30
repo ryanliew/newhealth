@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 363);
+/******/ 	return __webpack_require__(__webpack_require__.s = 369);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -19073,7 +19073,7 @@ module.exports = Cancel;
 /* 181 */
 /***/ (function(module, exports) {
 
-module.exports = { "en.auth": { "account_no": "Account No.", "account_type": "Account type", "add_personnel": "Add personnel", "address": "Address", "address1": "Address Line 1", "address2": "Address Line 2", "already_have_account": "Already have an account?", "bank_address": "Bank address", "bank_info": "Bank information", "bank_name": "Bank name", "bank_swift": "Bank SORT\/SWIFT code", "beneficiary_identification": "Beneficiary Passport\/NRIC", "beneficiary_info": "Beneficiary information", "beneficiary_name": "Beneficiary name", "cancel": "Cancel", "company_address": "Company address", "company_business_registration": "Business registration No.", "company_incorporation_date": "Date of incorporation", "company_incorporation_place": "Incorporation place", "company_info": "Company information", "company_name": "Company\/Entity name", "company_regulatory_name": "Regulatory body", "company_type": "Type of business entity", "contact_personnels": "Contact personnel", "country": "Country", "email": "Email Address", "en_space": " ", "facebook_login": "Login with Facebook", "facebook_signup": "Register with Facebook", "failed": "These credentials do not match our records.", "forgot_password": "Forgot your password", "gender": "Gender", "gender_female": "Female", "gender_male": "Male", "gender_null": "N\\A", "general_info": "General information", "google_login": "Login with Google", "google_signup": "Register with Google", "grower": " Grower", "hi": "Hi", "identification": "Passport\/NRIC", "last_step": "One last step.", "login": "Login", "name": "Name", "name_placeholder": "per Passport\/NRIC", "nationality": "Nationality", "new_to_site": "New to our site?", "password": "Password", "personal_info": "Personal information", "personnel_designation": "Designation", "phone": "Contact No.", "postcode": "Postcode", "process_registration": "Your registration is being processed.", "referral_id": "Your referral ID is :code", "referral_info": "Referral information", "referrer": "Referrer ID", "referrer_fill": "Fill in the referrer ID", "referrer_name": "Referrer name: :name", "referrer_not_found": "Referrer not found", "register": "Sign up", "register_message": "as Newleaf grower and get involved in the multi-billion dollar industry today", "register_today": "", "registering_company": "Corporate Application", "registration_complete": "Registration complete, you may now close this window", "remember": "Remember me", "remove_personnel": "Remove personnel", "repeat": "Repeat ", "select_package": "Select purchase", "selected_package": "Selected purchase", "submit": "Submit", "success": "Please fill in your details below for us to process your registration.", "success_country": "Please also let us know your country as that is required for us to generate your referral code", "success_email": "We will also need your email address so that we can send you important notifications in the future", "success_referral": "If you have a referrer, please let us know by filling in his\/her ID in the form below", "thank_you": "Thank you.", "throttle": "Too many login attempts. Please try again in :seconds seconds.", "tree": "Tree|Trees", "wechat_signup": "Register with WeChat", "welcome_back": "welcome back" }, "en.company": { "company": "Company", "partnership": "Partnership", "sole": "Sole proprietership", "trust": "Trust" }, "en.input": { "choose_file": "Click to choose file...", "switch_file_mode": "You can toggle between camera\/file mode by pressing at the blue button (only for mobile phone)", "take_from_camera": "Click to open camera..." }, "en.nav": { "admin_purchases": "Purchases", "logout": "Logout", "organization": "Organization", "profile": "Profile", "purchases": "Purchases", "settings": "Settings", "users": "Users" }, "en.pagination": { "info": "Displaying {from} to {to} of {total} items", "next": "Next &raquo;", "previous": "&laquo; Previous" }, "en.passwords": { "password": "Passwords must be at least six characters and match the confirmation.", "reset": "Your password has been reset!", "sent": "We have e-mailed your password reset link!", "token": "This password reset token is invalid.", "user": "We can't find a user with that e-mail address." }, "en.payment": { "amount": "Amount payable", "invalid_payment_slip": "Payment slip is required", "make_payment": "Make payment", "paid_on": "Paid on", "payment": "Payment", "payment_details": "Payment details", "payment_slip": "Payment Slip", "payment_slip_exceed_size": "Payment slip must not exceed 8MB", "submit_payment": "Submit payment", "success": "Payment has been recorded successfully", "verify": "Verify", "verify_success": "Payment verified successfully" }, "en.purchase": { "actions": "Actions", "checkout": "Checkout", "complete": "Complete", "made_by": "Made by", "make_new_purchase": "Make new purchase", "past_purchases": "Purchase history", "pending": "Pending payment", "pending_verification": "Pending verification", "purchase_date": "Purchase date", "purchase_details": "Purchase details", "purchases": "Purchases", "select_package": "Select from the packages below", "selected_packages": "Selected packages", "status": "Status", "success": "Purchase order created successfully", "total": "Total", "total_payable": "Total payable" }, "en.table": { "back": "Back", "filter_by_date": "Filter by date", "reset": "Reset", "search": "Search" }, "en.tree": { "self": "Me", "tree": "Organization chart" }, "en.user": { "copied-link": "Your referral link has been copied to the clipboard", "copy-referral": "Copy referral link", "joined_at": "Joined at", "referral_code": "Newleaf ID", "users": "Users" }, "en.validation": { "accepted": "The :attribute must be accepted.", "active_url": "The :attribute is not a valid URL.", "after": "The :attribute must be a date after :date.", "after_or_equal": "The :attribute must be a date after or equal to :date.", "alpha": "The :attribute may only contain letters.", "alpha_dash": "The :attribute may only contain letters, numbers, and dashes.", "alpha_num": "The :attribute may only contain letters and numbers.", "array": "The :attribute must be an array.", "attributes": [], "before": "The :attribute must be a date before :date.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": "The :attribute confirmation does not match.", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "The :attribute must be a valid email address.", "exists": "The selected :attribute is invalid.", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "The :attribute must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "The :attribute field is required.", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." }, "zh.auth": { "account_no": "\u6237\u53E3\u53F7\u7801", "account_type": "\u6237\u53E3\u7C7B\u578B", "add_personnel": "\u589E\u52A0", "address": "\u5730\u5740", "address1": "\u5730\u5740 1", "address2": "\u5730\u5740 2", "already_have_account": "\u5DF2\u7ECF\u6709\u5E10\u53F7\uFF1F", "bank_address": "\u94F6\u884C\u5730\u5740", "bank_info": "\u94F6\u884C\u8D44\u6599", "bank_name": "\u94F6\u884C\u540D\u79F0", "bank_swift": "\u94F6\u884C SORT/SWIFT \u4EE3\u7801", "beneficiary_identification": "\u53D7\u76CA\u4EBA\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "beneficiary_info": "\u53D7\u76CA\u4EBA\u8D44\u6599", "beneficiary_name": "\u53D7\u76CA\u4EBA\u540D\u79F0", "cancel": "\u53D6\u6D88", "company_address": "\u516C\u53F8\u5730\u5740", "company_business_registration": "\u5546\u4E1A\u6CE8\u518C\u53F7\u7801", "company_incorporation_date": "\u5546\u4E1A\u6CE8\u518C\u65E5\u671F", "company_incorporation_place": "\u6CE8\u518C\u5730\u70B9", "company_info": "\u516C\u53F8\u8D44\u6599", "company_name": "\u516C\u53F8\u540D\u79F0", "company_regulatory_name": "\u76D1\u7BA1\u5355\u4F4D\u540D\u79F0", "company_type": "\u5546\u4E1A\u7C7B\u578B", "contact_personnels": "\u516C\u53F8\u8054\u7EDC\u4EBA", "country": "\u56FD\u5BB6", "email": "\u7535\u90AE", "en_space": "", "facebook_login": "\u8138\u4E66\u767B\u5165", "facebook_signup": "\u4F7F\u7528\u8138\u4E66\u6CE8\u518C", "failed": "\u7535\u90AE/\u5BC6\u7801\u9519\u8BEF", "forgot_password": "\u5FD8\u8BB0\u5BC6\u7801", "gender": "\u6027\u522B", "gender_female": "\u5973", "gender_male": "\u7537", "general_info": "\u4E00\u822C\u8D44\u6599", "google_login": "\u8C37\u6B4C\u767B\u5165", "google_signup": "\u4F7F\u7528\u8C37\u6B4C\u6CE8\u518C", "grower": "\u79CD\u690D\u8005", "hi": "\u4F60\u597D", "identification": "\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "last_step": "\u6700\u540E\u4E00\u6B65", "login": "\u767B\u5165", "name": "\u540D\u5B57", "name_placeholder": "\u586B\u5199\u5B9E\u540D", "nationality": "\u56FD\u7C4D", "new_to_site": "\u8FD8\u672A\u6CE8\u518C\uFF1F", "password": "\u5BC6\u7801", "personal_info": "\u4E2A\u4EBA\u8D44\u6599", "personnel_designation": "\u804C\u4F4D", "phone": "\u7535\u8BDD\u53F7\u7801", "postcode": "\u90AE\u653F\u7F16\u7801", "process_registration": "\u6211\u4EEC\u6B63\u5728\u5904\u7406\u60A8\u7684\u6CE8\u518C\u3002", "referral_id": "\u60A8\u7684ID\u662F :code", "referral_info": "\u63A8\u8350\u8005\u8D44\u6599", "referrer": "\u4ECB\u7ECD\u8005ID", "referrer_fill": "\u8BF7\u8F93\u5165\u63A8\u8350\u8005ID", "referrer_name": "\u63A8\u8350\u8005\u540D\u79F0: :name", "referrer_not_found": "ID\u9519\u8BEF", "register": "\u52A0\u76DF", "register_message": "\u65B0\u53F6\u69B4\u83B2\u79CD\u690D\u8BA1\u5212\uFF01", "register_today": "\u69B4\u83B2\u79CD\u690D\u65B0\u5546\u673A, \u643A\u624B\u65B0\u53F6\u521B\u767E\u4EBF, \u9A6C\u4E0A", "registering_company": "\u673A\u6784\u7533\u8BF7", "registration_complete": "\u5B8C\u6210\uFF0C\u60A8\u5DF2\u53EF\u4EE5\u5173\u95ED\u6B64\u9875\u9762", "remember": "\u4FDD\u6301\u767B\u5165", "remove_personnel": "\u53BB\u9664", "repeat": "\u786E\u5B9A", "select_package": "\u9009\u62E9\u914D\u5957", "selected_package": "\u914D\u5957", "submit": "\u63D0\u4EA4", "success": "\u6CE8\u518C\u6210\u529F", "success_country": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u6240\u5728\u56FD\u5BB6\uFF0C\u8FD9\u5C06\u5E2E\u52A9\u6211\u4EEC\u5236\u5B9A\u60A8\u7684ID", "success_email": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u7535\u90AE\u4EE5\u4F5C\u4E3A\u65E5\u540E\u7684\u901A\u8BAF\u7BA1\u9053", "success_referral": "\u82E5\u60A8\u6709\u63A8\u8350\u8005\uFF0C\u8BF7\u544A\u8BC9\u6211\u4EEC\u4ED6\u7684ID", "thank_you": "\u8C22\u8C22", "throttle": "\u767B\u5165\u8FC7\u4E8E\u9891\u7E41\uFF0C\u8BF7\u5728 :seconds \u79D2\u540E\u518D\u8BD5", "tree": "\u68F5\u6811|\u68F5\u6811", "wechat_signup": "\u4F7F\u7528\u5FAE\u4FE1\u6CE8\u518C", "welcome_back": "\u6B22\u8FCE\u56DE\u6765" }, "zh.company": { "company": "\u516C\u53F8", "partnership": "\u5408\u4F19", "sole": "\u72EC\u8D44\u7ECF\u8425\u8005", "trust": "\u4FE1\u6258\u4E1A\u52A1" }, "zh.input": { "choose_file": "\u6309\u6B64\u9009\u62E9\u6587\u4EF6...", "switch_file_mode": "\u6309\u84DD\u8272\u6309\u94AE\u53EF\u5207\u6362\u6587\u4EF6\u9009\u62E9/\u7167\u76F8\u673A\u6A21\u5F0F(\u4EC5\u4F9B\u667A\u80FD\u7535\u8BDD\u4F7F\u7528)", "take_from_camera": "\u6309\u6B64\u6253\u5F00\u7167\u76F8\u673A..." }, "zh.nav": { "admin_purchases": "\u6240\u6709\u8BA2\u5355", "logout": "\u767B\u51FA", "organization": "\u7EC4\u7EC7", "profile": "\u6211\u7684\u8D44\u6599", "purchases": "\u8BA2\u5355", "settings": "\u8BBE\u5B9A", "users": "\u7528\u6237" }, "zh.pagination": { "info": "\u5171{total}\u4E2A\u6570\u636E\uFF0C\u6B63\u5728\u663E\u793A{from}\u5230{to}" }, "zh.payment": { "amount": "\u652F\u4ED8\u6570\u989D", "invalid_payment_slip": "\u8BF7\u9009\u62E9\u4ED8\u6B3E\u5355", "make_payment": "\u652F\u4ED8\u6B3E\u9879", "paid_on": "\u4ED8\u6B3E\u65E5\u671F", "payment": "\u4ED8\u6B3E", "payment_details": "\u4ED8\u6B3E\u8BE6\u60C5", "payment_slip": "\u4ED8\u6B3E\u5355", "payment_slip_exceed_size": "\u4ED8\u6B3E\u5355\u6587\u4EF6\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "submit_payment": "\u63D0\u4EA4\u4ED8\u6B3E\u5355", "success": "\u4ED8\u6B3E\u5355\u5DF2\u88AB\u63A5\u7EB3", "verify": "\u786E\u8BA4\u4ED8\u6B3E" }, "zh.purchase": { "actions": "\u64CD\u4F5C", "checkout": "\u4ED8\u6B3E", "complete": "\u5B8C\u6210", "made_by": "\u5BA2\u6237", "make_new_purchase": "\u8D2D\u4E70\u79CD\u690D\u914D\u5957", "past_purchases": "\u8FC7\u5F80\u8BA2\u5355\u8BB0\u5F55", "pending": "\u672A\u4ED8\u6B3E", "pending_verification": "\u5BA1\u6838\u4E2D", "purchase_date": "\u8D2D\u4E70\u65E5\u671F", "purchase_details": "\u8BA2\u5355\u8BE6\u60C5", "purchases": "\u8BA2\u5355\u8BB0\u5F55", "select_package": "\u9009\u62E9\u4EE5\u4E0B\u914D\u5957", "selected_packages": "\u5DF2\u9009\u62E9\u914D\u5957", "status": "\u72B6\u6001", "success": "\u8BA2\u5355\u5DF2\u88AB\u63A5\u7EB3", "total": "\u603B\u4EF7\u683C", "total_payable": "\u603B\u4EF7\u683C" }, "zh.table": { "back": "\u8FD4\u56DE", "filter_by_date": "\u8FC7\u6EE4\u65E5\u671F", "reset": "\u91CD\u8BBE", "search": "\u67E5\u627E" }, "zh.tree": { "self": "\u6211", "tree": "\u7EC4\u7EC7\u56FE" }, "zh.user": { "copied-link": "\u6210\u529F\u590D\u5236\u4ECB\u7ECD\u8FDE\u63A5", "copy-referral": "\u590D\u5236\u8FDE\u63A5", "joined_at": "\u52A0\u76DF\u65E5\u671F", "referral_code": "\u65B0\u53F6ID", "users": "\u7528\u6237" }, "zh.validation": { "accepted": ":attribute\u9700\u8981\u88AB\u63A5\u53D7", "active_url": ":attribute\u94FE\u63A5\u9519\u8BEF.", "after": ":attribute\u5FC5\u987B\u5728:date\u4E4B\u540E.", "after_or_equal": ":attribute\u5FC5\u987B\u662F\u548C:date\u4E00\u6837\u6216\u4E4B\u540E\u7684\u65E5\u671F.", "alpha": ":attribute\u53EA\u80FD\u6709\u5B57\u6BCD", "alpha_dash": ":attribute\u53EA\u80FD\u6709\u5B57\u6BCD\uFF0C\u53F7\u7801\uFF0C\u4EE5\u53CA\u201C-\u201D\u53F7", "alpha_num": ":attribute\u53EA\u80FD\u6709\u5B57\u6BCD\u4EE5\u53CA\u53F7\u7801", "attributes": [], "before": ":attribute\u5FC5\u987B\u5728:date\u4E4B\u524D.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": ":attribute\u4E0D\u76F8\u540C", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "\u8FD9\u5FC5\u987B\u662F\u4E00\u4E2A\u7535\u90AE\u5730\u5740", "exists": "\u9009\u9879\u9519\u8BEF", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "The :attribute must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "\u9700\u8981\u88AB\u586B\u5199", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." } };
+module.exports = { "en.auth": { "account_no": "Account No.", "account_type": "Account type", "add_personnel": "Add personnel", "address": "Address", "address1": "Address Line 1", "address2": "Address Line 2", "already_have_account": "Already have an account?", "bank_address": "Bank address", "bank_info": "Bank information", "bank_name": "Bank name", "bank_swift": "Bank SORT\/SWIFT code", "beneficiary_identification": "Beneficiary Passport\/NRIC", "beneficiary_info": "Beneficiary information", "beneficiary_name": "Beneficiary name", "cancel": "Cancel", "company_address": "Company address", "company_business_registration": "Business registration No.", "company_incorporation_date": "Date of incorporation", "company_incorporation_place": "Incorporation place", "company_info": "Company information", "company_name": "Company\/Entity name", "company_regulatory_name": "Regulatory body", "company_type": "Type of business entity", "contact_personnels": "Contact personnel", "country": "Country", "email": "Email Address", "en_space": " ", "facebook_login": "Login with Facebook", "facebook_signup": "Register with Facebook", "failed": "These credentials do not match our records.", "forgot_password": "Forgot your password", "gender": "Gender", "gender_female": "Female", "gender_male": "Male", "gender_null": "N\\A", "general_info": "General information", "google_login": "Login with Google", "google_signup": "Register with Google", "grower": " Grower", "hi": "Hi", "identification": "Passport\/NRIC", "last_step": "One last step.", "login": "Login", "name": "Name", "name_placeholder": "per Passport\/NRIC", "nationality": "Nationality", "new_to_site": "New to our site?", "password": "Password", "personal_info": "Personal information", "personnel_designation": "Designation", "phone": "Contact No.", "postcode": "Postcode", "process_registration": "Your registration is being processed.", "referral_id": "Your referral ID is :code", "referral_info": "Referral information", "referrer": "Referrer ID", "referrer_fill": "Fill in the referrer ID", "referrer_name": "Referrer name: :name", "referrer_not_found": "Referrer not found", "register": "Sign up", "register_message": "as Newleaf grower and get involved in the multi-billion dollar industry today", "register_today": "", "registering_company": "Corporate Application", "registration_complete": "Registration complete, you may now close this window", "remember": "Remember me", "remove_personnel": "Remove personnel", "repeat": "Repeat ", "select_package": "Select purchase", "selected_package": "Selected purchase", "submit": "Submit", "success": "Please fill in your details below for us to process your registration.", "success_country": "Please also let us know your country as that is required for us to generate your referral code", "success_email": "We will also need your email address so that we can send you important notifications in the future", "success_referral": "If you have a referrer, please let us know by filling in his\/her ID in the form below", "thank_you": "Thank you.", "throttle": "Too many login attempts. Please try again in :seconds seconds.", "tree": "Tree|Trees", "wechat_signup": "Register with WeChat", "welcome_back": "welcome back" }, "en.company": { "company": "Company", "partnership": "Partnership", "sole": "Sole proprietership", "trust": "Trust" }, "en.form": { "submit": "Submit" }, "en.input": { "choose_file": "Click to choose file...", "switch_file_mode": "You can toggle between camera\/file mode by pressing at the blue button (only for mobile phone)", "take_from_camera": "Click to open camera..." }, "en.nav": { "admin_purchases": "Purchases", "logout": "Logout", "organization": "Organization", "packages": "Packages", "profile": "Profile", "purchases": "Purchases", "settings": "Settings", "users": "Users" }, "en.package": { "actions": "Actions", "create_success": "Package created", "make_new_package": "Add new package", "package_details": "Package details", "packages": "Packages", "price": "Price (MYR)", "price_promotion": "Promotion price (MYR)", "price_rmb": "Price (RMB)", "price_rmb_promotion": "Promotion price (RMB)", "tree_count": "No. of trees", "update_success": "Package updated" }, "en.pagination": { "info": "Displaying {from} to {to} of {total} items", "next": "Next &raquo;", "previous": "&laquo; Previous" }, "en.passwords": { "password": "Passwords must be at least six characters and match the confirmation.", "reset": "Your password has been reset!", "sent": "We have e-mailed your password reset link!", "token": "This password reset token is invalid.", "user": "We can't find a user with that e-mail address." }, "en.payment": { "amount": "Amount payable", "invalid_payment_slip": "Payment slip is required", "make_payment": "Make payment", "paid_on": "Paid on", "payment": "Payment", "payment_details": "Payment details", "payment_slip": "Payment Slip", "payment_slip_exceed_size": "Payment slip must not exceed 8MB", "submit_payment": "Submit payment", "success": "Payment has been recorded successfully", "verify": "Verify", "verify_success": "Payment verified successfully" }, "en.purchase": { "checkout": "Checkout", "complete": "Complete", "made_by": "Made by", "make_new_purchase": "Make new purchase", "past_purchases": "Purchase history", "pending": "Pending payment", "pending_verification": "Pending verification", "purchase_date": "Purchase date", "purchase_details": "Purchase details", "purchases": "Purchases", "select_package": "Select from the packages below", "selected_packages": "Selected packages", "status": "Status", "success": "Purchase order created successfully", "total": "Total", "total_payable": "Total payable" }, "en.table": { "actions": "Actions", "back": "Back", "filter_by_date": "Filter by date", "reset": "Reset", "search": "Search" }, "en.tree": { "self": "Me", "tree": "Organization chart" }, "en.user": { "copied-link": "Your referral link has been copied to the clipboard", "copy-referral": "Copy referral link", "joined_at": "Joined at", "referral_code": "Newleaf ID", "tree_count": "No. of trees", "users": "Users" }, "en.validation": { "accepted": "The :attribute must be accepted.", "active_url": "The :attribute is not a valid URL.", "after": "The :attribute must be a date after :date.", "after_or_equal": "The :attribute must be a date after or equal to :date.", "alpha": "The :attribute may only contain letters.", "alpha_dash": "The :attribute may only contain letters, numbers, and dashes.", "alpha_num": "The :attribute may only contain letters and numbers.", "array": "The :attribute must be an array.", "attributes": [], "before": "The :attribute must be a date before :date.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": "The :attribute confirmation does not match.", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "The :attribute must be a valid email address.", "exists": "The selected :attribute is invalid.", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "The :attribute must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "The :attribute field is required.", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." }, "zh.auth": { "account_no": "\u6237\u53E3\u53F7\u7801", "account_type": "\u6237\u53E3\u7C7B\u578B", "add_personnel": "\u589E\u52A0", "address": "\u5730\u5740", "address1": "\u5730\u5740 1", "address2": "\u5730\u5740 2", "already_have_account": "\u5DF2\u7ECF\u6709\u5E10\u53F7\uFF1F", "bank_address": "\u94F6\u884C\u5730\u5740", "bank_info": "\u94F6\u884C\u8D44\u6599", "bank_name": "\u94F6\u884C\u540D\u79F0", "bank_swift": "\u94F6\u884C SORT/SWIFT \u4EE3\u7801", "beneficiary_identification": "\u53D7\u76CA\u4EBA\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "beneficiary_info": "\u53D7\u76CA\u4EBA\u8D44\u6599", "beneficiary_name": "\u53D7\u76CA\u4EBA\u540D\u79F0", "cancel": "\u53D6\u6D88", "company_address": "\u516C\u53F8\u5730\u5740", "company_business_registration": "\u5546\u4E1A\u6CE8\u518C\u53F7\u7801", "company_incorporation_date": "\u5546\u4E1A\u6CE8\u518C\u65E5\u671F", "company_incorporation_place": "\u6CE8\u518C\u5730\u70B9", "company_info": "\u516C\u53F8\u8D44\u6599", "company_name": "\u516C\u53F8\u540D\u79F0", "company_regulatory_name": "\u76D1\u7BA1\u5355\u4F4D\u540D\u79F0", "company_type": "\u5546\u4E1A\u7C7B\u578B", "contact_personnels": "\u516C\u53F8\u8054\u7EDC\u4EBA", "country": "\u56FD\u5BB6", "email": "\u7535\u90AE", "en_space": "", "facebook_login": "\u8138\u4E66\u767B\u5165", "facebook_signup": "\u4F7F\u7528\u8138\u4E66\u6CE8\u518C", "failed": "\u7535\u90AE/\u5BC6\u7801\u9519\u8BEF", "forgot_password": "\u5FD8\u8BB0\u5BC6\u7801", "gender": "\u6027\u522B", "gender_female": "\u5973", "gender_male": "\u7537", "general_info": "\u4E00\u822C\u8D44\u6599", "google_login": "\u8C37\u6B4C\u767B\u5165", "google_signup": "\u4F7F\u7528\u8C37\u6B4C\u6CE8\u518C", "grower": "\u79CD\u690D\u8005", "hi": "\u4F60\u597D", "identification": "\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "last_step": "\u6700\u540E\u4E00\u6B65", "login": "\u767B\u5165", "name": "\u540D\u5B57", "name_placeholder": "\u586B\u5199\u5B9E\u540D", "nationality": "\u56FD\u7C4D", "new_to_site": "\u8FD8\u672A\u6CE8\u518C\uFF1F", "password": "\u5BC6\u7801", "personal_info": "\u4E2A\u4EBA\u8D44\u6599", "personnel_designation": "\u804C\u4F4D", "phone": "\u7535\u8BDD\u53F7\u7801", "postcode": "\u90AE\u653F\u7F16\u7801", "process_registration": "\u6211\u4EEC\u6B63\u5728\u5904\u7406\u60A8\u7684\u6CE8\u518C\u3002", "referral_id": "\u60A8\u7684ID\u662F :code", "referral_info": "\u63A8\u8350\u8005\u8D44\u6599", "referrer": "\u4ECB\u7ECD\u8005ID", "referrer_fill": "\u8BF7\u8F93\u5165\u63A8\u8350\u8005ID", "referrer_name": "\u63A8\u8350\u8005\u540D\u79F0: :name", "referrer_not_found": "ID\u9519\u8BEF", "register": "\u52A0\u76DF", "register_message": "\u65B0\u53F6\u69B4\u83B2\u79CD\u690D\u8BA1\u5212\uFF01", "register_today": "\u69B4\u83B2\u79CD\u690D\u65B0\u5546\u673A, \u643A\u624B\u65B0\u53F6\u521B\u767E\u4EBF, \u9A6C\u4E0A", "registering_company": "\u673A\u6784\u7533\u8BF7", "registration_complete": "\u5B8C\u6210\uFF0C\u60A8\u5DF2\u53EF\u4EE5\u5173\u95ED\u6B64\u9875\u9762", "remember": "\u4FDD\u6301\u767B\u5165", "remove_personnel": "\u53BB\u9664", "repeat": "\u786E\u5B9A", "select_package": "\u9009\u62E9\u914D\u5957", "selected_package": "\u914D\u5957", "submit": "\u63D0\u4EA4", "success": "\u6CE8\u518C\u6210\u529F", "success_country": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u6240\u5728\u56FD\u5BB6\uFF0C\u8FD9\u5C06\u5E2E\u52A9\u6211\u4EEC\u5236\u5B9A\u60A8\u7684ID", "success_email": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u7535\u90AE\u4EE5\u4F5C\u4E3A\u65E5\u540E\u7684\u901A\u8BAF\u7BA1\u9053", "success_referral": "\u82E5\u60A8\u6709\u63A8\u8350\u8005\uFF0C\u8BF7\u544A\u8BC9\u6211\u4EEC\u4ED6\u7684ID", "thank_you": "\u8C22\u8C22", "throttle": "\u767B\u5165\u8FC7\u4E8E\u9891\u7E41\uFF0C\u8BF7\u5728 :seconds \u79D2\u540E\u518D\u8BD5", "tree": "\u68F5\u6811|\u68F5\u6811", "wechat_signup": "\u4F7F\u7528\u5FAE\u4FE1\u6CE8\u518C", "welcome_back": "\u6B22\u8FCE\u56DE\u6765" }, "zh.company": { "company": "\u516C\u53F8", "partnership": "\u5408\u4F19", "sole": "\u72EC\u8D44\u7ECF\u8425\u8005", "trust": "\u4FE1\u6258\u4E1A\u52A1" }, "zh.form": { "submit": "\u63D0\u4EA4" }, "zh.input": { "choose_file": "\u6309\u6B64\u9009\u62E9\u6587\u4EF6...", "switch_file_mode": "\u6309\u84DD\u8272\u6309\u94AE\u53EF\u5207\u6362\u6587\u4EF6\u9009\u62E9/\u7167\u76F8\u673A\u6A21\u5F0F(\u4EC5\u4F9B\u667A\u80FD\u7535\u8BDD\u4F7F\u7528)", "take_from_camera": "\u6309\u6B64\u6253\u5F00\u7167\u76F8\u673A..." }, "zh.nav": { "admin_purchases": "\u6240\u6709\u8BA2\u5355", "logout": "\u767B\u51FA", "organization": "\u7EC4\u7EC7", "packages": "\u914D\u5957", "profile": "\u6211\u7684\u8D44\u6599", "purchases": "\u8BA2\u5355", "settings": "\u8BBE\u5B9A", "users": "\u7528\u6237" }, "zh.package": { "create_success": "\u5DF2\u589E\u52A0\u914D\u5957", "make_new_package": "\u589E\u52A0\u914D\u5957", "package_details": "\u914D\u5957\u8BE6\u60C5", "packages": "\u914D\u5957", "price": "\u4EF7\u683C (\u9A6C\u5E01)", "price_promotion": "\u4F18\u60E0\u4EF7\u683C (\u9A6C\u5E01)", "price_rmb": "\u4EF7\u683C (\u4EBA\u6C11\u5E01)", "price_rmb_promotion": "\u4F18\u60E0\u4EF7\u683C (\u4EBA\u6C11\u5E01)", "tree_count": "\u79CD\u690D\u6570\u91CF", "update_success": "\u5DF2\u66F4\u65B0\u914D\u5957\u8BE6\u60C5" }, "zh.pagination": { "info": "\u5171{total}\u4E2A\u6570\u636E\uFF0C\u6B63\u5728\u663E\u793A{from}\u5230{to}" }, "zh.payment": { "amount": "\u652F\u4ED8\u6570\u989D", "invalid_payment_slip": "\u8BF7\u9009\u62E9\u4ED8\u6B3E\u5355", "make_payment": "\u652F\u4ED8\u6B3E\u9879", "paid_on": "\u4ED8\u6B3E\u65E5\u671F", "payment": "\u4ED8\u6B3E", "payment_details": "\u4ED8\u6B3E\u8BE6\u60C5", "payment_slip": "\u4ED8\u6B3E\u5355", "payment_slip_exceed_size": "\u4ED8\u6B3E\u5355\u6587\u4EF6\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "submit_payment": "\u63D0\u4EA4\u4ED8\u6B3E\u5355", "success": "\u4ED8\u6B3E\u5355\u5DF2\u88AB\u63A5\u7EB3", "verify": "\u786E\u8BA4\u4ED8\u6B3E" }, "zh.purchase": { "checkout": "\u4ED8\u6B3E", "complete": "\u5B8C\u6210", "made_by": "\u5BA2\u6237", "make_new_purchase": "\u8D2D\u4E70\u79CD\u690D\u914D\u5957", "past_purchases": "\u8FC7\u5F80\u8BA2\u5355\u8BB0\u5F55", "pending": "\u672A\u4ED8\u6B3E", "pending_verification": "\u5BA1\u6838\u4E2D", "purchase_date": "\u8D2D\u4E70\u65E5\u671F", "purchase_details": "\u8BA2\u5355\u8BE6\u60C5", "purchases": "\u8BA2\u5355\u8BB0\u5F55", "select_package": "\u9009\u62E9\u4EE5\u4E0B\u914D\u5957", "selected_packages": "\u5DF2\u9009\u62E9\u914D\u5957", "status": "\u72B6\u6001", "success": "\u8BA2\u5355\u5DF2\u88AB\u63A5\u7EB3", "total": "\u603B\u4EF7\u683C", "total_payable": "\u603B\u4EF7\u683C" }, "zh.table": { "actions": "\u64CD\u4F5C", "back": "\u8FD4\u56DE", "filter_by_date": "\u8FC7\u6EE4\u65E5\u671F", "reset": "\u91CD\u8BBE", "search": "\u67E5\u627E" }, "zh.tree": { "self": "\u6211", "tree": "\u7EC4\u7EC7\u56FE" }, "zh.user": { "copied-link": "\u6210\u529F\u590D\u5236\u4ECB\u7ECD\u8FDE\u63A5", "copy-referral": "\u590D\u5236\u8FDE\u63A5", "joined_at": "\u52A0\u76DF\u65E5\u671F", "referral_code": "\u65B0\u53F6ID", "tree_count": "\u79CD\u690D\u6570\u91CF", "users": "\u7528\u6237" }, "zh.validation": { "accepted": ":attribute\u9700\u8981\u88AB\u63A5\u53D7", "active_url": ":attribute\u94FE\u63A5\u9519\u8BEF.", "after": ":attribute\u5FC5\u987B\u5728:date\u4E4B\u540E.", "after_or_equal": ":attribute\u5FC5\u987B\u662F\u548C:date\u4E00\u6837\u6216\u4E4B\u540E\u7684\u65E5\u671F.", "alpha": ":attribute\u53EA\u80FD\u6709\u5B57\u6BCD", "alpha_dash": ":attribute\u53EA\u80FD\u6709\u5B57\u6BCD\uFF0C\u53F7\u7801\uFF0C\u4EE5\u53CA\u201C-\u201D\u53F7", "alpha_num": ":attribute\u53EA\u80FD\u6709\u5B57\u6BCD\u4EE5\u53CA\u53F7\u7801", "attributes": [], "before": ":attribute\u5FC5\u987B\u5728:date\u4E4B\u524D.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": ":attribute\u4E0D\u76F8\u540C", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "\u8FD9\u5FC5\u987B\u662F\u4E00\u4E2A\u7535\u90AE\u5730\u5740", "exists": "\u9009\u9879\u9519\u8BEF", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "The :attribute must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "\u9700\u8981\u88AB\u586B\u5199", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." } };
 
 /***/ }),
 /* 182 */
@@ -49065,6 +49065,11 @@ Vue.filter('currency', function (value) {
 	return formatter.format(value);
 });
 
+Vue.filter('currency_rmb', function (value) {
+	var formatter = new Intl.NumberFormat('en', { style: 'currency', currency: 'RMB' });
+	return formatter.format(value);
+});
+
 Vue.filter('formatPurchaseStatus', function (value) {
 	var color = 'badge-success';
 	var text = lang.get('purchase.' + value);
@@ -50100,23 +50105,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		image: function image(value) {
 			return '<figure class="image is-48x48"><img src="' + value + '"></figure>';
 		},
-		dangerousTag: function dangerousTag(value) {
-			return value === 1 ? '<span class="tag is-danger">Dangerous</span>' : '';
-		},
-		fragileTag: function fragileTag(value) {
-			return value === 1 ? '<span class="tag is-warning">Fragile</span>' : '';
-		},
 		date: function date(value) {
 			return this.$options.filters.date(value);
 		},
 		currency: function currency(value) {
 			return this.$options.filters.currency(value);
 		},
+		currency_rmb: function currency_rmb(value) {
+			return this.$options.filters.currency_rmb(value);
+		},
+		treecount: function treecount(value) {
+			return value + " " + this.$options.filters.trans_choice('auth.tree', value);
+		},
 		customer: function customer(value) {
 			return value ? value : "N/A";
-		},
-		convertToM: function convertToM(value) {
-			return this.$options.filters.convertToMeterCube(value);
 		}
 	}
 });
@@ -54377,7 +54379,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['dateFilterable', 'addNew'],
+    props: ['dateFilterable', 'addNew', 'searchables'],
 
     data: function data() {
         return {
@@ -54485,53 +54487,55 @@ var render = function() {
         ])
       : _vm._e(),
     _vm._v(" "),
-    _c("div", { staticClass: "col-sm-auto" }, [
-      _c("div", { staticClass: "input-group" }, [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.filterText,
-              expression: "filterText"
-            }
-          ],
-          staticClass: "form-control",
-          attrs: {
-            type: "text",
-            placeholder: _vm.$options.filters.trans("table.search")
-          },
-          domProps: { value: _vm.filterText },
-          on: {
-            keyup: function($event) {
-              if (
-                !("button" in $event) &&
-                _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
-              ) {
-                return null
+    _vm.searchables
+      ? _c("div", { staticClass: "col-sm-auto" }, [
+          _c("div", { staticClass: "input-group" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.filterText,
+                  expression: "filterText"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                placeholder: _vm.$options.filters.trans("table.search")
+              },
+              domProps: { value: _vm.filterText },
+              on: {
+                keyup: function($event) {
+                  if (
+                    !("button" in $event) &&
+                    _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+                  ) {
+                    return null
+                  }
+                  return _vm.doFilter($event)
+                },
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.filterText = $event.target.value
+                }
               }
-              return _vm.doFilter($event)
-            },
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.filterText = $event.target.value
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "input-group-append" }, [
-          _vm._m(0),
-          _vm._v(" "),
-          _c(
-            "button",
-            { staticClass: "btn btn-info", on: { click: _vm.resetFilter } },
-            [_vm._v(_vm._s(_vm._f("trans")("table.reset")))]
-          )
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "input-group-append" }, [
+              _vm._m(0),
+              _vm._v(" "),
+              _c(
+                "button",
+                { staticClass: "btn btn-info", on: { click: _vm.resetFilter } },
+                [_vm._v(_vm._s(_vm._f("trans")("table.reset")))]
+              )
+            ])
+          ])
         ])
-      ])
-    ]),
+      : _vm._e(),
     _vm._v(" "),
     _vm.addNew
       ? _c("div", { staticClass: "col-sm-auto" }, [
@@ -54587,11 +54591,13 @@ var render = function() {
       [
         _vm.loading ? _c("loader") : _vm._e(),
         _vm._v(" "),
-        _vm.searchables
-          ? _c("vuetable-filter-bar", {
-              attrs: { dateFilterable: _vm.dateFilterable, addNew: _vm.addNew }
-            })
-          : _vm._e(),
+        _c("vuetable-filter-bar", {
+          attrs: {
+            searchables: _vm.searchables,
+            dateFilterable: _vm.dateFilterable,
+            addNew: _vm.addNew
+          }
+        }),
         _vm._v(" "),
         _c("vuetable", {
           directives: [
@@ -55615,14 +55621,20 @@ if (false) {
 /* 360 */,
 /* 361 */,
 /* 362 */,
-/* 363 */
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(364);
+module.exports = __webpack_require__(370);
 
 
 /***/ }),
-/* 364 */
+/* 370 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55690,23 +55702,23 @@ Vue.component('checkbox-input', __webpack_require__(301));
 Vue.component('selector-input', __webpack_require__(182));
 Vue.component('image-input', __webpack_require__(307));
 
-Vue.component('company-registration', __webpack_require__(365));
-Vue.component('referrer', __webpack_require__(368));
+Vue.component('company-registration', __webpack_require__(371));
+Vue.component('referrer', __webpack_require__(374));
 
 var app = new Vue({
   el: '#app'
 });
 
 /***/ }),
-/* 365 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(366)
+var __vue_script__ = __webpack_require__(372)
 /* template */
-var __vue_template__ = __webpack_require__(367)
+var __vue_template__ = __webpack_require__(373)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -55745,7 +55757,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 366 */
+/* 372 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55926,7 +55938,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 367 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -56568,15 +56580,15 @@ if (false) {
 }
 
 /***/ }),
-/* 368 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(369)
+var __vue_script__ = __webpack_require__(375)
 /* template */
-var __vue_template__ = __webpack_require__(370)
+var __vue_template__ = __webpack_require__(376)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -56615,7 +56627,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 369 */
+/* 375 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56668,7 +56680,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 370 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {

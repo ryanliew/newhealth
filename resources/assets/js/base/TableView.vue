@@ -7,7 +7,7 @@
 		
 		<div class="card-body">
 			<loader v-if="loading"></loader>
-			<vuetable-filter-bar v-if="searchables" :dateFilterable="dateFilterable" :addNew="addNew"></vuetable-filter-bar>	
+			<vuetable-filter-bar :searchables="searchables" :dateFilterable="dateFilterable" :addNew="addNew"></vuetable-filter-bar>	
 			<vuetable ref="vuetable" 
 					:api-url="url"
 		    		:fields="fields"
@@ -132,14 +132,6 @@
 				return '<figure class="image is-48x48"><img src="'+ value +'"></figure>';
 			},
 
-			dangerousTag(value) {
-				return value === 1 ? '<span class="tag is-danger">Dangerous</span>' : '';
-			},
-
-			fragileTag(value){
-				return value === 1 ? '<span class="tag is-warning">Fragile</span>' : '';
-			},
-
 			date(value){
 				return this.$options.filters.date(value);
 			},
@@ -148,13 +140,17 @@
 				return this.$options.filters.currency(value);
 			},
 
+			currency_rmb(value){
+				return this.$options.filters.currency_rmb(value);
+			},
+
+			treecount(value){
+				return value + " " + this.$options.filters.trans_choice('auth.tree', value);
+			},
+
 			customer(value){
 				return value ? value : "N/A";
 			},
-
-			convertToM(value){
-				return this.$options.filters.convertToMeterCube(value);
-			}
 
 
 		}

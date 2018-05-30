@@ -15,7 +15,6 @@ return [
     'purchase_date' => '购买日期',
     'total_payable' => '总价格',
     'status' => '状态',
-    'actions' => '操作',
     'make_new_purchase' => '购买种植配套',
     'purchases' => '订单记录',
     'past_purchases' => '过往订单记录',

@@ -16,6 +16,8 @@ class PurchaseController extends Controller
                                                             'payment_id',
                                                             'purchases.created_at as created_at',
                                                             'purchases.total_price as total_price',
+                                                            'purchases.total_price_rmb as total_price_rmb',
+                                                            'purchases.is_rmb as is_rmb',
                                                             'purchases.status as status',
                                                             'users.name as user_name')
                                                     ->leftJoin('users', 'users.id', '=', 'user_id')
@@ -28,7 +30,9 @@ class PurchaseController extends Controller
         $processed_packages = [];
     	foreach ($packages as $key => $package) {
             if($package->amount > 0) {
-                $processed_packages[$package->id]['total_price'] = Package::find($package->id)->price * $package->amount;
+                $db_package = Package::find($package->id);
+                $processed_packages[$package->id]['total_price'] = $db_package->price * $package->amount;
+                $processed_packages[$package->id]['total_price_rmb'] = $db_package->price_rmb * $package->amount;
                 $processed_packages[$package->id]['amount'] = $package->amount;
             }
     	}
@@ -39,10 +43,15 @@ class PurchaseController extends Controller
     		return $package['total_price'];
     	});
 
+        $total_price_rmb = $packages->sum(function($package){
+            return $package['total_price_rmb'];
+        });
 
     	$purchase = Purchase::create([
     		'user_id' => request()->user_id,
-    		'total_price' => $total_price
+    		'total_price' => $total_price,
+            'total_price_rmb' => $total_price_rmb,
+            'is_rmb' => User::find(request()->user_id)->country_id == 48
     	]);
 
     	$purchase->packages()->sync($packages);

@@ -19,6 +19,11 @@ Vue.filter('currency', function(value){
 	return formatter.format(value);
 });
 
+Vue.filter('currency_rmb', function(value){
+	var formatter = new Intl.NumberFormat('en', { style: 'currency', currency:'RMB' });
+	return formatter.format(value);
+});
+
 Vue.filter('formatPurchaseStatus', function(value){
 	let color = 'badge-success';
 	let text = 	lang.get('purchase.' + value);

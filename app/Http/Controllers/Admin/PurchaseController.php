@@ -16,6 +16,8 @@ class PurchaseController extends Controller
                                                             'purchases.created_at as created_at',
                                                             'purchases.total_price as total_price',
                                                             'purchases.status as status',
+                                                            'purchases.is_rmb as is_rmb',
+                                                            'purchases.total_price_rmb as total_price_rmb',
                                                             'users.name as user_name')
                                                     ->leftJoin('users', 'users.id', '=', 'user_id')
                                                 );

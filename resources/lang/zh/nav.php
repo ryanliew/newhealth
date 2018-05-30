@@ -14,5 +14,6 @@ return [
     'purchases' => '订单',
     'admin_purchases' => '所有订单',
     'users' => '用户',
-    'organization' => '组织'
+    'organization' => '组织',
+    'packages' => '配套'
 ];

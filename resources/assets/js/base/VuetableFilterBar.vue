@@ -17,7 +17,7 @@
         <div class="col-sm-auto" v-if="dateFilterable">
             <button class="btn btn-primary" @click="doFilter">{{ 'table.filter_by_date' | trans }}</button>
         </div>
-        <div class="col-sm-auto">
+        <div class="col-sm-auto" v-if="searchables">
             <div class="input-group">
                 <input class="form-control" type="text" :placeholder="$options.filters.trans('table.search')" v-model="filterText" @keyup.enter="doFilter">
                 <div class="input-group-append">
@@ -36,7 +36,7 @@
 
 <script>
     export default {
-        props: ['dateFilterable', 'addNew'],
+        props: ['dateFilterable', 'addNew', 'searchables'],
 
         data () {
             return {

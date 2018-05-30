@@ -23,7 +23,9 @@ return [
         'user',
         'purchase',
         'payment',
-        'tree'
+        'tree',
+        'package',
+        'form'
     ],
 
     /*

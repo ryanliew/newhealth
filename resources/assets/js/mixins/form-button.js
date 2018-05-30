@@ -1,7 +1,7 @@
 export default {
 	data() {
 		return {
-			submitText: 'submit',
+			submitText: 'form.submit',
 			form: new Form({})
 		}
 	},

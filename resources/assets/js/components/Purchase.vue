@@ -33,14 +33,20 @@
 								<td>
 									x
 								</td>
-								<td>
-									{{ package.price | currency }}	
+								<td v-if="user.country_id !== 48">
+									{{ package.price_promotion ? package.price_promotion : package.price | currency }}	
+								</td>
+								<td v-else>
+									{{ package.price_rmb_promotion ? package.price_rmb_promotion : package.price_rmb | currency_rmb }}	
 								</td>
 								<td>
 									=
 								</td>
-								<td>
-									{{ getPackagePrice(form.packages[index].amount, package.price) | currency }}
+								<td v-if="user.country_id !== 48">
+									{{ getPackagePrice(form.packages[index].amount, package) | currency }}
+								</td>
+								<td v-else>
+									{{ getPackagePrice(form.packages[index].amount, package) | currency_rmb }}
 								</td>
 							</tr>
 							<tr>
@@ -50,7 +56,8 @@
 								<td></td>
 								<td><b>{{ 'purchase.total' | trans }}</b></td>
 								<td>=</td>
-								<td>{{ totalPrice | currency}}</td>
+								<td v-if="user.country_id !== 48">{{ totalPrice | currency}}</td>
+								<td v-else>{{ totalPrice | currency_rmb}}</td>
 							</tr>
 						</tbody>
 						<tbody v-else>
@@ -62,14 +69,20 @@
 								<td>
 									x
 								</td>
-								<td>
+								<td v-if="!purchase.is_rmb">
 									{{ package.price | currency }}	
+								</td>
+								<td v-else>
+									{{ package.price_rmb | currency_rmb }}	
 								</td>
 								<td>
 									=
 								</td>
-								<td>
+								<td v-if="!purchase.is_rmb">
 									{{ package.pivot.total_price | currency }}
+								</td>
+								<td v-else>
+									{{ package.pivot.total_price_rmb  | currency_rmb }}
 								</td>
 							</tr>
 							<tr>
@@ -79,7 +92,8 @@
 								<td></td>
 								<td><b>{{ 'purchase.total' | trans }}</b></td>
 								<td>=</td>
-								<td>{{ totalPrice | currency }}</td>
+								<td v-if="!purchase.is_rmb">{{ totalPrice | currency}}</td>
+								<td v-else>{{ totalPrice | currency_rmb}}</td>
 							</tr>
 						</tbody>
 					</table>
@@ -116,7 +130,8 @@
 					packages: [],
 					user_id: window.user.id	
 				}),
-				submitText: 'purchase.checkout'
+				submitText: 'purchase.checkout',
+				user: window.user
 			};
 		},
 
@@ -136,7 +151,8 @@
 					let obj = {};
 					obj['amount'] = 0;
 					obj['id'] = pack.id;
-					obj['price'] = pack.price;
+					obj['price'] = pack.price_promotion ? pack.price_promotion : pack.price;
+					obj['price_rmb'] = pack.price_rmb_promotion ? pack.price_rmb_promotion : pack.price_rmb;
 
 					return obj;
 				});
@@ -154,7 +170,13 @@
 				flash(this.$options.filters.trans(response.message));
 			},
 
-			getPackagePrice(amount = 0, price = 0) {
+			getPackagePrice(amount = 0, pack) {
+				let price = pack.price_promotion ? pack.price_promotion : pack.price;
+
+				if(window.user.country_id == 48)
+				{
+					price = pack.price_rmb_promotion ? pack.price_rmb_promotion : pack.price_rmb;
+				}
 				return amount * price;
 			},
 
@@ -167,16 +189,13 @@
 		computed: {
 			totalPrice() {
 				if(this.purchase)
-					return this.purchase.total_price;
+					return this.purchase.is_rmb ? this.purchase.total_price_rmb : this.purchase.total_price;
 
 				return _.sumBy(this.form.packages, function(pack){
-					return this.getPackagePrice(pack.amount, pack.price);
+					let price = window.user.country_id == 48 ? pack.price_rmb : pack.price;
+					return this.getPackagePrice(pack.amount, price);
 				}.bind(this))
 			},
-
-			// submitButtonContent() {
-			// 	return this.form.submitting ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : this.$options.filters.trans('purchase.checkout');
-			// },
 
 			title() {
 				let title = this.purchase ? 'purchase.purchase_details' : 'purchase.make_new_purchase';

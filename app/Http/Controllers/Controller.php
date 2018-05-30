@@ -55,5 +55,12 @@ class Controller extends BaseController
         }
 
     	return $result->paginate(50);
+    } 
+
+    public function message($message, $extras = [])
+    {
+        $extras["message"] = $message;
+
+        return json_encode($extras);
     }
 }
