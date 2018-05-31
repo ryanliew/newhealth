@@ -60,7 +60,14 @@
 							v-if="!payment">
 				</image-input>
 
-				<img v-else class="img-fluid mb-3" :src="'storage/' + payment.payment_slip_path"/>
+				<div class="mb-3" v-else>
+					<div v-if="payment.payment_slip_path.endsWith('.pdf')">
+						<a class="btn btn-danger" target="_blank" :href="'/storage/' + payment.payment_slip_path">
+							<span class="fa fa-2x fa-file-pdf-o pr-2"></span> Download PDF
+						</a>
+					</div>
+					<img v-else class="img-fluid" :src="'storage/' + payment.payment_slip_path"/>
+				</div>
 				
 				<button type="submit" v-if="!payment" class="btn btn-success" :disabled="form.submitting" v-html="submitButtonContent"></button>
 			</form>

@@ -74193,6 +74193,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -74402,10 +74409,31 @@ var render = function() {
                   expression: "paymentSlip"
                 }
               })
-            : _c("img", {
-                staticClass: "img-fluid mb-3",
-                attrs: { src: "storage/" + _vm.payment.payment_slip_path }
-              }),
+            : _c("div", { staticClass: "mb-3" }, [
+                _vm.payment.payment_slip_path.endsWith(".pdf")
+                  ? _c("div", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: {
+                            target: "_blank",
+                            href: "/storage/" + _vm.payment.payment_slip_path
+                          }
+                        },
+                        [
+                          _c("span", {
+                            staticClass: "fa fa-2x fa-file-pdf-o pr-2"
+                          }),
+                          _vm._v(" Download PDF\n\t\t\t\t\t")
+                        ]
+                      )
+                    ])
+                  : _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: { src: "storage/" + _vm.payment.payment_slip_path }
+                    })
+              ]),
           _vm._v(" "),
           !_vm.payment
             ? _c("button", {
