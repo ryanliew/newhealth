@@ -22,7 +22,7 @@ class User extends Authenticatable
      */
     protected $guarded = [];
 
-    protected $appends = ['address', 'company_address', 'default_locale'];
+    protected $appends = ['address', 'company_address', 'default_locale', 'is_std'];
 
     protected $with = ['package'];
     /**
@@ -109,6 +109,11 @@ class User extends Authenticatable
     public function getContactNumberAttribute()
     {
         return $this->personal_address ? $this->personal_address->phone : "";
+    }
+
+    public function getIsStdAttribute()
+    {
+        return !($this->country->name == "Malaysia" || $this->country->name == "Singapore");
     }
 
     public function generateReferralCode($country)

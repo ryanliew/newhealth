@@ -21,8 +21,8 @@ $factory->define(App\Payment::class, function (Faker $faker) {
         'amount' => $faker->randomFloat,
         'payment_slip_path' => 'some_path',
         'is_verified' => 'false',
-        'is_rmb' => 'false',
-        'amount_rmb' => $faker->randomFloat
+        'is_std' => 'false',
+        'amount_std' => $faker->randomFloat
     ];
 });
 

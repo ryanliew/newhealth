@@ -51,7 +51,7 @@
             </div>
             <div style="width:80%; float:left; text-align:left; color:#999">
                 Suite E-7-1, Block E, Plaza Mont Kiara, No 2 Jalan Kiara, 50480 Kuala Lumpur<br>
-                <b>T</b> +6036201 6336 | <b>W</b> www.newleaf.com.my | <b>E</b> enquiry@newleaf.com.my
+                <b>T</b> +6036201 6336 | <b>W</b> www.newleaf.com.my | <b>E</b> support@newleaf.com.my
             </div>
             <div style="width:20%; float:right; color:#999">
                 <div><b>FOLLOW US</b></div>

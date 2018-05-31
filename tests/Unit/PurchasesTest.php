@@ -31,24 +31,45 @@ class PurchasesTest extends TestCase
     }
 
     /** @test */
-    public function china_user_will_get_china_purchases()
+    public function other_user_will_get_other_purchases()
     {
-        $user = create('App\User', ["country_id" => 48]);
+        $user = create('App\User', ["country_id" => 48]); // Country that is not MY or SG
 
         $this->signIn($user);
 
         $purchase = make('App\Purchase');
 
-        $package1 = create('App\Package', ["price" => 8000, "price_rmb" => 3000]);
-        $package2 = create('App\Package', ["price" => 24000, "price_rmb" => 15000]);
+        $package1 = create('App\Package', ["price" => 8000, "price_std" => 3000]);
+        $package2 = create('App\Package', ["price" => 24000, "price_std" => 15000]);
 
-        $total_amount = ( $package1->price_rmb * 2 ) + $package2->price_rmb;
+        $total_amount = ( $package1->price_std * 2 ) + $package2->price_std;
 
         $this->post('/api/purchases', [ "user_id" => auth()->user()->id, 
-                                        "packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"8000.00", "price_rmb":"3000"},{"amount":"1","id":' . $package2->id . ',"price":"24000.00","price_rmb":"15000"}]'
+                                        "packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"8000.00", "price_std":"3000"},{"amount":"1","id":' . $package2->id . ',"price":"24000.00","price_std":"15000"}]'
                                                     ]);
-        $this->assertDatabaseHas('purchases', ['is_rmb' => true, 'total_price_rmb' => sprintf("%.1f", $total_amount)]);
+        $this->assertDatabaseHas('purchases', ['is_std' => true, 'total_price_std' => sprintf("%.1f", $total_amount)]);
+    } 
+
+    /** @test */
+    public function local_user_will_get_local_purchases()
+    {
+        $user = create('App\User', ["country_id" => 162]); // Country that is not MY or SG
+
+        $this->signIn($user);
+
+        $purchase = make('App\Purchase');
+
+        $package1 = create('App\Package', ["price" => 8000, "price_std" => 3000]);
+        $package2 = create('App\Package', ["price" => 24000, "price_std" => 15000]);
+
+        $total_amount = ( $package1->price_std * 2 ) + $package2->price_std;
+
+        $this->post('/api/purchases', [ "user_id" => auth()->user()->id, 
+                                        "packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"8000.00", "price_std":"3000"},{"amount":"1","id":' . $package2->id . ',"price":"24000.00","price_std":"15000"}]'
+                                                    ]);
+        $this->assertDatabaseHas('purchases', ['is_std' => false, 'total_price_std' => sprintf("%.1f", $total_amount)]);
     }  
+ 
 
     /** @test */
     public function admin_can_verify_purchase()
