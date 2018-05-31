@@ -14,6 +14,7 @@
 				</div>
 				<div class="card-body">
 					<h5 class="card-title mb-3">{{ instruction | trans }}</h5>
+					<h6>{{ 'purchase.base_price' | trans }}</h6>
 					<table class="table">
 						<tbody v-if="!purchase">
 							<tr v-for="(package, index) in packages">
@@ -33,7 +34,7 @@
 								<td>
 									x
 								</td>
-								<td v-if="user.is_std">
+								<td v-if="!user.is_std">
 									{{ package.price_promotion ? package.price_promotion : package.price | currency }}	
 								</td>
 								<td v-else>
@@ -42,7 +43,7 @@
 								<td>
 									=
 								</td>
-								<td v-if="user.is_std">
+								<td v-if="!user.is_std">
 									{{ getPackagePrice(form.packages[index].amount, package) | currency }}
 								</td>
 								<td v-else>
@@ -56,7 +57,7 @@
 								<td></td>
 								<td><b>{{ 'purchase.total' | trans }}</b></td>
 								<td>=</td>
-								<td v-if="user.is_std">{{ totalPrice | currency}}</td>
+								<td v-if="!user.is_std">{{ totalPrice | currency}}</td>
 								<td v-else>{{ totalPrice | currency_std}}</td>
 							</tr>
 						</tbody>
@@ -171,12 +172,14 @@
 			},
 
 			getPackagePrice(amount = 0, pack) {
+
 				let price = pack.price_promotion ? pack.price_promotion : pack.price;
 
-				if(window.user.is_std)
+				if(this.user.is_std)
 				{
 					price = pack.price_std_promotion ? pack.price_std_promotion : pack.price_std;
 				}
+
 				return amount * price;
 			},
 
@@ -192,8 +195,8 @@
 					return this.purchase.is_std ? this.purchase.total_price_std : this.purchase.total_price;
 
 				return _.sumBy(this.form.packages, function(pack){
-					let price = window.user.is_std ? pack.price_std : pack.price;
-					return this.getPackagePrice(pack.amount, price);
+					let amount = pack.amount ? pack.amount : 0;
+					return this.getPackagePrice(pack.amount, pack);
 				}.bind(this))
 			},
 

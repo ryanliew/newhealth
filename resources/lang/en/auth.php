@@ -55,7 +55,7 @@ return [
     'address2' => "Address Line 2",
     'name_placeholder' => "per Passport/NRIC",
 
-    'registering_company' => "Corporate Application",
+    'registering_company' => "Corporate Application (For corporate application only)",
     'company_name' => "Company/Entity name",
     'company_business_registration' => "Business registration No.",
     'company_incorporation_date' => "Date of incorporation",
