@@ -1,6 +1,6 @@
 <template>
     <div>
-        <span v-if="rowData.is_rmb">{{ rowData.total_price_rmb | currency_rmb }}</span>
+        <span v-if="rowData.is_std">{{ rowData.total_price_std | currency_std }}</span>
         <span v-else>{{ rowData.total_price | currency }}</span>
     </div>
 </template>

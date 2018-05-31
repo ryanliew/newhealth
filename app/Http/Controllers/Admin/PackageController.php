@@ -14,14 +14,14 @@ class PackageController extends Controller
             'tree_count.required' => 'package.tree_count_required',
             'tree_count.numeric' => 'package.tree_count_invalid',
             'price.required' => 'package.price_required',
-            'price_rmb.required' => 'package.price_rmb_required',
+            'price_std.required' => 'package.price_std_required',
             'price.numeric' => 'package.price_invalid',
-            'price_rmb.numeric' => 'package.price_rmb_numeric'
+            'price_std.numeric' => 'package.price_std_numeric'
         ];
 
         request()->validate([
             'price' => 'required|numeric',
-            'price_rmb' => 'required|numeric',
+            'price_std' => 'required|numeric',
             'tree_count' => 'required|numeric'
         ], $messages);
 	}

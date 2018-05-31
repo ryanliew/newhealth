@@ -33,20 +33,20 @@
 								<td>
 									x
 								</td>
-								<td v-if="user.country_id !== 48">
+								<td v-if="user.is_std">
 									{{ package.price_promotion ? package.price_promotion : package.price | currency }}	
 								</td>
 								<td v-else>
-									{{ package.price_rmb_promotion ? package.price_rmb_promotion : package.price_rmb | currency_rmb }}	
+									{{ package.price_std_promotion ? package.price_std_promotion : package.price_std | currency_std }}	
 								</td>
 								<td>
 									=
 								</td>
-								<td v-if="user.country_id !== 48">
+								<td v-if="user.is_std">
 									{{ getPackagePrice(form.packages[index].amount, package) | currency }}
 								</td>
 								<td v-else>
-									{{ getPackagePrice(form.packages[index].amount, package) | currency_rmb }}
+									{{ getPackagePrice(form.packages[index].amount, package) | currency_std }}
 								</td>
 							</tr>
 							<tr>
@@ -56,8 +56,8 @@
 								<td></td>
 								<td><b>{{ 'purchase.total' | trans }}</b></td>
 								<td>=</td>
-								<td v-if="user.country_id !== 48">{{ totalPrice | currency}}</td>
-								<td v-else>{{ totalPrice | currency_rmb}}</td>
+								<td v-if="user.is_std">{{ totalPrice | currency}}</td>
+								<td v-else>{{ totalPrice | currency_std}}</td>
 							</tr>
 						</tbody>
 						<tbody v-else>
@@ -69,20 +69,20 @@
 								<td>
 									x
 								</td>
-								<td v-if="!purchase.is_rmb">
+								<td v-if="!purchase.is_std">
 									{{ package.price | currency }}	
 								</td>
 								<td v-else>
-									{{ package.price_rmb | currency_rmb }}	
+									{{ package.price_std | currency_std }}	
 								</td>
 								<td>
 									=
 								</td>
-								<td v-if="!purchase.is_rmb">
+								<td v-if="!purchase.is_std">
 									{{ package.pivot.total_price | currency }}
 								</td>
 								<td v-else>
-									{{ package.pivot.total_price_rmb  | currency_rmb }}
+									{{ package.pivot.total_price_std  | currency_std }}
 								</td>
 							</tr>
 							<tr>
@@ -92,8 +92,8 @@
 								<td></td>
 								<td><b>{{ 'purchase.total' | trans }}</b></td>
 								<td>=</td>
-								<td v-if="!purchase.is_rmb">{{ totalPrice | currency}}</td>
-								<td v-else>{{ totalPrice | currency_rmb}}</td>
+								<td v-if="!purchase.is_std">{{ totalPrice | currency}}</td>
+								<td v-else>{{ totalPrice | currency_std}}</td>
 							</tr>
 						</tbody>
 					</table>
@@ -152,7 +152,7 @@
 					obj['amount'] = 0;
 					obj['id'] = pack.id;
 					obj['price'] = pack.price_promotion ? pack.price_promotion : pack.price;
-					obj['price_rmb'] = pack.price_rmb_promotion ? pack.price_rmb_promotion : pack.price_rmb;
+					obj['price_std'] = pack.price_std_promotion ? pack.price_std_promotion : pack.price_std;
 
 					return obj;
 				});
@@ -173,9 +173,9 @@
 			getPackagePrice(amount = 0, pack) {
 				let price = pack.price_promotion ? pack.price_promotion : pack.price;
 
-				if(window.user.country_id == 48)
+				if(window.user.is_std)
 				{
-					price = pack.price_rmb_promotion ? pack.price_rmb_promotion : pack.price_rmb;
+					price = pack.price_std_promotion ? pack.price_std_promotion : pack.price_std;
 				}
 				return amount * price;
 			},
@@ -189,10 +189,10 @@
 		computed: {
 			totalPrice() {
 				if(this.purchase)
-					return this.purchase.is_rmb ? this.purchase.total_price_rmb : this.purchase.total_price;
+					return this.purchase.is_std ? this.purchase.total_price_std : this.purchase.total_price;
 
 				return _.sumBy(this.form.packages, function(pack){
-					let price = window.user.country_id == 48 ? pack.price_rmb : pack.price;
+					let price = window.user.is_std ? pack.price_std : pack.price;
 					return this.getPackagePrice(pack.amount, price);
 				}.bind(this))
 			},

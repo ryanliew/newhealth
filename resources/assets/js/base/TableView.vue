@@ -140,8 +140,8 @@
 				return this.$options.filters.currency(value);
 			},
 
-			currency_rmb(value){
-				return this.$options.filters.currency_rmb(value);
+			currency_std(value){
+				return this.$options.filters.currency_std(value);
 			},
 
 			treecount(value){

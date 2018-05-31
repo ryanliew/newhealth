@@ -23,7 +23,7 @@ $factory->define(App\Package::class, function (Faker $faker) {
         'tree_count' => $treecount[$index],
         'price' => $treecount[$index] * 8000,
         'price_promotion' => $treecount[$index] * 6800,
-        'price_rmb' => $treecount[$index] * 3000,
-        'price_rmb_promotion' => $treecount[$index] * 1800
+        'price_std' => $treecount[$index] * 3000,
+        'price_std_promotion' => $treecount[$index] * 1800
     ];
 });
