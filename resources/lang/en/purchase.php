@@ -26,6 +26,8 @@ return [
 
     'success' => 'Purchase order created successfully',
 
-    'base_price' => 'Recommended Retail Price (RRP) per Tree: RM 8,000'
+    'base_price' => 'Recommended Retail Price (RRP) per Tree: RM 8,000',
+    'user' => 'Buyer',
+    'default_user' => 'Leave empty to buy for yourself'
     
 ];

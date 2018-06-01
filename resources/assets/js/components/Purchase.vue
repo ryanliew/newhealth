@@ -98,7 +98,30 @@
 							</tr>
 						</tbody>
 					</table>
-					<div class="row mr-5" v-if="!purchase">
+					<selector-input v-model="selectedUser" :defaultData="selectedUser" 
+									:label="$options.filters.trans('purchase.user')" 
+									:required="false"
+									name="user_id"
+									:potentialData="potentialUsers"
+									@input="updateSelectedUser()"
+									:editable="true"
+									:placeholder="$options.filters.trans('purchase.default_user')"
+									:error="form.errors.get('user_id')"
+									v-if="user.is_admin && !purchase">
+					</selector-input>
+
+					<text-input :defaultValue="purchase.user_name"
+							:required="false"
+							type="text"
+							:label="$options.filters.trans('purchase.user')"
+							name="amount"
+							:editable="false"
+							:focus="false"
+							:hideLabel="false"
+							v-if="user.is_admin && purchase">
+					</text-input>
+
+					<div class="row mr-5 mt-3" v-if="!purchase">
 						<div class="col-sm"></div>
 						<div class="col-sm-auto">
 							<button class="btn btn-primary btn-lg" @click="submitForm" :disabled="form.submitting" v-html="submitButtonContent"></button>
@@ -132,7 +155,9 @@
 					user_id: window.user.id	
 				}),
 				submitText: 'purchase.checkout',
-				user: window.user
+				user: window.user,
+				selectedUser: '',
+				potentialUsers: ''
 			};
 		},
 
@@ -159,6 +184,27 @@
 				});
 
 				this.packages = data;
+
+				this.getUsers();
+			},
+
+			getUsers() {
+				axios.get('/api/admin/users')
+					.then(response => this.setUsers(response.data.data));
+			},
+
+			setUsers(data) {
+				this.potentialUsers = data.map(user => {
+					let obj = {};
+					obj['value'] = user.id;
+					obj['label'] = user.name;
+
+					return obj;
+				});
+			},
+
+			updateSelectedUser() {
+				this.form.user_id = this.selectedUser.value;
 			},
 
 			submitForm() {
