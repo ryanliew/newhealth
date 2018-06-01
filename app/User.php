@@ -185,7 +185,8 @@ class User extends Authenticatable
             $user_level = 2;
         }
 
-        $this->update(['user_level' => $user_level]);
+        if($this->user_level >= $user_level)
+            $this->update(['user_level' => $user_level]);
     }
 
     // Reset password

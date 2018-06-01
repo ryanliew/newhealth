@@ -5,8 +5,8 @@
 		</div>
 		<div class="card-body">
 			<div class="row">
-				<div class="col-xl-auto col-12 m-auto">
-					<div class="tree-responsive m-auto">
+				<div class="col-12 m-auto">
+					<div class="tree-responsive m-auto p-2">
 						<div class="tree">
 							<GenoRow :users='tree'>
 							</GenoRow>
