@@ -74949,7 +74949,12 @@ var render = function() {
                             ? _c("td", [
                                 _vm._v(
                                   "\n\t\t\t\t\t\t\t\t" +
-                                    _vm._s(_vm._f("currency")(package.price)) +
+                                    _vm._s(
+                                      _vm._f("currency")(
+                                        package.pivot.total_price /
+                                          package.pivot.amount
+                                      )
+                                    ) +
                                     "\t\n\t\t\t\t\t\t\t"
                                 )
                               ])
@@ -74957,7 +74962,10 @@ var render = function() {
                                 _vm._v(
                                   "\n\t\t\t\t\t\t\t\t" +
                                     _vm._s(
-                                      _vm._f("currency_std")(package.price_std)
+                                      _vm._f("currency_std")(
+                                        package.pivot.total_price_std /
+                                          package.pivot.amount
+                                      )
                                     ) +
                                     "\t\n\t\t\t\t\t\t\t"
                                 )

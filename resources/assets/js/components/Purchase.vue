@@ -71,10 +71,10 @@
 									x
 								</td>
 								<td v-if="!purchase.is_std">
-									{{ package.price | currency }}	
+									{{ package.pivot.total_price / package.pivot.amount | currency }}	
 								</td>
 								<td v-else>
-									{{ package.price_std | currency_std }}	
+									{{ package.pivot.total_price_std / package.pivot.amount | currency_std }}	
 								</td>
 								<td>
 									=
