@@ -21,7 +21,7 @@
 							:searchables="searchables"
 							:dateFilterable="false"
 							dateFilterKey="transactions.created_at"
-							:monthFilterable="true"
+							:monthFilterable="false"
 							monthFilterKey="transactions.date">
 				</table-view>
 			</div>
@@ -61,13 +61,19 @@
 				],
 				searchables: "",
 				selectedUser: "",
-				month: moment().month(),
-				isViewingDetails: false
+				month: moment(),
+				isViewingDetails: false,
+				payForm: new Form({
+					user_id: "",
+					month: moment().format('YYYY-MM-DD'),
+					is_std: 0
+				})
 			};
 		},
 
 		mounted() {
 			this.$events.on('view', data => this.view(data));	
+			this.$events.on('pay', data => this.pay(data));	
 		},
 
 		methods: {
@@ -84,7 +90,27 @@
 			view(data) {
 				this.selectedUserId = data.user_id;
 				this.isViewingDetails = true;
-			}
+			},
+
+			pay(data) {
+				this.payForm.is_std = data.is_std;
+				this.payForm.user_id = data.user_id;
+
+				this.is_std = data.is_std;
+				this.payForm.month = this.$refs.transactions.getMonth();
+
+				this.payForm.post('/api/admin/transaction/paid')
+					.then(response => this.onSuccess(response));
+			},
+
+			onSuccess(response) {
+				flash(this.$options.filters.trans(response.message));
+				
+				if(this.is_std)
+					this.$refs.transactions_std.refreshTable()
+				else
+					this.$refs.transactions.refreshTable();
+			},
 
 		},
 

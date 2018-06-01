@@ -69,7 +69,8 @@
 					descendingIcon: 'fa fa-caret-down',
 				},
 				params: {},
-				loading: true
+				loading: true,
+				filterMonth: ''
 			};
 		},
 
@@ -126,6 +127,10 @@
 				Vue.nextTick( () => this.$refs.vuetable.refresh())
 			},
 
+			getMonth() {
+				return this.params.month;
+			},
+
 			onFilterReset() {
 				this.params = {}
 				Vue.nextTick( () => this.$refs.vuetable.refresh())
@@ -143,6 +148,10 @@
 
 			purchaseStatusLabel(value) {
 				return this.$options.filters.formatPurchaseStatus(value);
+			},
+
+			transactionPayoutStatusLabel(value) {
+				return this.$options.filters.formatPayoutStatus(value);
 			},
 
 			commisionTypeLabel(value) {

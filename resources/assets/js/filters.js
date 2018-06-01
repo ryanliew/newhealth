@@ -41,3 +41,15 @@ Vue.filter('formatPurchaseStatus', function(value){
 
 	return '<span class="badge ' + color + '">' + text + '</span>';
 });
+
+Vue.filter('formatPayoutStatus', function(value){
+	let color = 'badge-success';
+	let text = 	lang.get('transaction.' + value);
+	switch(value) {
+		case 'pending':
+			color = 'badge-info';
+			break;
+	}
+
+	return '<span class="badge ' + color + '">' + text + '</span>';
+});

@@ -41,8 +41,6 @@ function getParameterByName(name, url) {
 
 var defaultlang = getParameterByName('lang');
 
-console.log(defaultlang);
-
 lang.setLocale(defaultlang ? defaultlang : 'en'); // Set up language switcher here
 
 lang.setMessages(translations);

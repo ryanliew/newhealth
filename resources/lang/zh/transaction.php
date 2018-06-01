@@ -20,5 +20,10 @@ return [
     "amount_myr" => "金额 (马币)",
     "amount_std" => "金额 (美金)",
     "payouts" => "支出",
-    "std_payouts" => "支出 (美金)"
+    "std_payouts" => "支出 (美金)",
+
+    "status" => "支付状态",
+    "status_updated" => "支付完成",
+    'pending' => "未支付",
+    "paid" => "已支付"
 ];

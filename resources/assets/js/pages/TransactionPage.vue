@@ -7,7 +7,7 @@
 						:url="url"
 						:searchables="searchables"
 						:dateFilterable="true"
-						dateFilterKey="transactions.created_at"
+						dateFilterKey="transactions.date"
 						:hasBack="true"
 						@back="back">
 			</table-view>
@@ -25,6 +25,7 @@
 					{ name: 'date', title: this.tableTitle('transaction.created_at'), sortField: 'transactions.date', callback: 'date' },
 					{ name: 'type', title: this.tableTitle('transaction.type'), sortField: 'transactions.type', callback: 'commisionTypeLabel'},
 					{ name: '__component:transaction-description', title: this.tableTitle('transaction.description'), sortField: 'transactions.description'},
+					{ name: 'payout_status', title: this.tableTitle('transaction.status'), sortField: 'transactions.payout_status', callback: 'transactionPayoutStatusLabel'},
 					{ name: '__component:table-price-switcher', title: this.tableTitle('transaction.amount'), sortField: 'transactions.amount' }
 				],
 				searchables: ""

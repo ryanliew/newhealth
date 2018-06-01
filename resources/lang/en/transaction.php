@@ -20,5 +20,9 @@ return [
     "amount_myr" => "Amount (MYR)",
     "amount_std" => "Amount (USD)",
     "payouts" => "Payouts",
-    "std_payouts" => "Payouts (USD)"
+    "std_payouts" => "Payouts (USD)",
+    "status" => "Payout status",
+    "status_updated" => "Payout completed",
+    'pending' => "Pending",
+    "paid" => "Paid"
 ];

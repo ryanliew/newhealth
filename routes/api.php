@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::get('/purchases', 'Admin\PurchaseController@index');
 		Route::get('/transactions', 'Admin\TransactionController@index');
 		Route::get('/transactions/standard', 'Admin\TransactionController@index_standard');
+		Route::post('/transaction/paid', 'Admin\TransactionController@pay');
 
 		Route::group(['prefix' => '/packages'], function() {
 			Route::post('/', 'Admin\PackageController@store');
