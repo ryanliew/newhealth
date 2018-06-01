@@ -22,7 +22,7 @@
 		data() {
 			return {
 				fields: [
-					{ name: 'created_at', title: this.tableTitle('transaction.created_at'), sortField: 'transactions.created_at', callback: 'date' },
+					{ name: 'date', title: this.tableTitle('transaction.created_at'), sortField: 'transactions.date', callback: 'date' },
 					{ name: 'type', title: this.tableTitle('transaction.type'), sortField: 'transactions.type', callback: 'commisionTypeLabel'},
 					{ name: '__component:transaction-description', title: this.tableTitle('transaction.description'), sortField: 'transactions.description'},
 					{ name: '__component:table-price-switcher', title: this.tableTitle('transaction.amount'), sortField: 'transactions.amount' }
