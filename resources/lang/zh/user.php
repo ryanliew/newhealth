@@ -13,5 +13,6 @@ return [
    	'joined_at' => '加盟日期',
    	'users' => '用户',
    	'referral_code' => '新叶ID',
-    'tree_count' => '种植数量'
+    'tree_count' => '种植数量',
+    'level' => '级别'
 ];

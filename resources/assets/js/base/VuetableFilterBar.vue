@@ -17,6 +17,16 @@
         <div class="col-sm-auto" v-if="dateFilterable">
             <button class="btn btn-primary" @click="doFilter">{{ 'table.filter_by_date' | trans }}</button>
         </div>
+        <div class="col-sm-auto" v-if="monthFilterable">
+            <div class="input-group">
+                <input class="form-control" type="date" :placeholder="$options.filters.trans('table.filter_by_month')" v-model="filterMonth" @keyup.enter="doFilter">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" @click="doFilter">
+                        {{ 'table.filter_by_month' | trans }}
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="col-sm-auto" v-if="searchables">
             <div class="input-group">
                 <input class="form-control" type="text" :placeholder="$options.filters.trans('table.search')" v-model="filterText" @keyup.enter="doFilter">
@@ -35,20 +45,28 @@
 </template>
 
 <script>
+    import moment from 'moment';
+
     export default {
-        props: ['dateFilterable', 'addNew', 'searchables'],
+        props: ['dateFilterable', 'addNew', 'searchables', 'monthFilterable'],
 
         data () {
             return {
                 filterText: '',
                 filterDateStart: '',
-                filterDateEnd: ''
+                filterDateEnd: '',
+                filterMonth: ''
             }
+        },
+
+        mounted() {
+            this.filterMonth = moment().format("YYYY-MM-DD");
+            this.doFilter();
         },
 
         methods: {
             doFilter () {
-                this.$events.fire('filter-set', { text: this.filterText, start: this.filterDateStart, end: this.filterDateEnd });
+                this.$events.fire('filter-set', { month: this.filterMonth, text: this.filterText, start: this.filterDateStart, end: this.filterDateEnd });
             },
             resetFilter () {
                 this.filterText = '';

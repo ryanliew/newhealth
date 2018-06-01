@@ -12,6 +12,7 @@ return [
     'search' => 'Search',
     'filter_by_date' => 'Filter by date',
     'back' => 'Back',
-    'actions' => 'Actions'
+    'actions' => 'Actions',
+    'filter_by_month' => 'Filter by month'
     
 ];

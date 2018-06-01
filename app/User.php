@@ -22,7 +22,9 @@ class User extends Authenticatable
      */
     protected $guarded = [];
 
-    protected $appends = ['address', 'company_address', 'default_locale', 'is_std'];
+
+    protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale'];
+
 
     protected $with = ['package'];
     /**
@@ -62,6 +64,11 @@ class User extends Authenticatable
     public function contacts()
     {
         return $this->hasMany('App\Contact');
+    }
+
+    public function transactions()
+    {
+        return $this->hasMany('App\Transaction');
     }
 
     public function getPersonalAddressAttribute()
@@ -116,6 +123,13 @@ class User extends Authenticatable
         return !($this->country->name == "Malaysia" || $this->country->name == "Singapore");
     }
 
+
+    public function getGroupSaleAttribute()
+    {
+        return $this->descendants()->sum('tree_count') + $this->tree_count;
+    }
+
+
     public function generateReferralCode($country)
     {
         $code = strtoupper($country->code) . rand(pow(10, 4), pow(10, 5)-1);
@@ -124,6 +138,54 @@ class User extends Authenticatable
             $code = $this->generateReferralCode($country);
 
         return $code;
+    }
+
+
+    public function getCommisionPercentageAttribute()
+    {
+
+        switch($this->user_level) {
+            case 1:
+                $percentage = 8;
+                break;
+            case 2: 
+                $percentage = 10;
+                break;
+            case 3:
+                $percentage = 15;
+                break;
+            case 4:
+                $percentage = 20;
+                break;
+            default:
+                $percentage = 0;
+        }
+        
+        return $percentage / 100;
+    }
+
+    // Adjust user level
+    public function adjust_level()
+    {
+        $number_of_children = $this->children->count();
+        $number_of_group_sales = $this->group_sale;
+
+        $user_level = 1;
+
+        if($number_of_group_sales >= 200 && $number_of_children >= 10)
+        {
+            $user_level = 4;
+        }
+        else if($number_of_group_sales >= 100 && $number_of_children >= 5)
+        {
+            $user_level = 3;
+        }
+        else if($number_of_children >= 3)
+        {
+            $user_level = 2;
+        }
+
+        $this->update(['user_level' => $user_level]);
     }
 
     // Reset password

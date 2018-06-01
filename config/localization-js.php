@@ -25,7 +25,8 @@ return [
         'payment',
         'tree',
         'package',
-        'form'
+        'form',
+        'transaction'
     ],
 
     /*

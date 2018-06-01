@@ -64,4 +64,41 @@ class PaymentsTest extends TestCase
 
         return $payment;
     }
+
+    /** @test */
+    public function parent_will_receive_commision_once_payment_is_verified()
+    {
+        // We have a child and parent relationship
+        $parent = create('App\User');
+        $child = create('App\User');
+
+        $child->appendToNode($parent)->save();
+
+        $this->signIn();
+        
+        // We have 2 packages
+        $purchase = make('App\Purchase');
+
+        $package1 = create('App\Package', ['price' => 1000, 'price_std' => 500]);
+        $package2 = create('App\Package', ['price' => 2000, 'price_std' => 1000]);
+
+        //dd($parent->fresh()->commision_percentage);
+        $total_amount = (( $package1->price * 2 ) + $package2->price ) * $parent->fresh()->commision_percentage + .0;
+        $total_amount_std = (( $package1->price_std * 2 ) + $package2->price_std ) * $parent->fresh()->commision_percentage + .0;
+        // We have a purchase order with payment
+        $this->post('/api/purchases', [ "user_id" => $child->id, 
+                                        "packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"1000.00", "price_std": "500.00"},{"amount":1,"id":' . $package2->id . ',"price":"2000.00", "price_std": "1000"}]'
+                                                    ]);
+        $purchase = Purchase::first();
+
+        $payment = create('App\Payment');
+
+        $purchase->update(['payment_id' => $payment->id]);
+
+        // Admin verify the payment
+        $this->post('/api/payment/verify/' . $payment->id);
+ 
+        $this->assertDatabaseHas('transactions', ['user_id' => $parent->id, 'amount' => $total_amount . ".0", 'amount_std' => $total_amount_std . ".0", 'description' => 'tree_purchase', 'type' => 'one_time_commision', 'is_std' => $purchase->is_std, "target_id" => $child->id, "purchase_id" => $purchase->id]);
+        
+    } 
 }	

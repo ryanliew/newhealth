@@ -13,5 +13,6 @@ return [
    	'joined_at' => 'Joined at',
    	'users' => 'Users',
    	'referral_code' => 'Newleaf ID',
-  'tree_count' => 'No. of trees'
+    'tree_count' => 'No. of trees',
+    'level' => 'Member level'
 ];

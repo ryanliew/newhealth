@@ -20,6 +20,11 @@ class HomeController extends Controller
     public function index()
     {
         //dd(auth()->user()->identification);
+        if(!auth()->user())
+        {
+            return redirect("/");
+        }
+        
         if(is_null(auth()->user()->identification ))
             return redirect()->route('register.success');
 
