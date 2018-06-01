@@ -22,7 +22,9 @@ class User extends Authenticatable
      */
     protected $guarded = [];
 
+
     protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale'];
+
 
     protected $with = ['package'];
     /**
@@ -121,10 +123,12 @@ class User extends Authenticatable
         return !($this->country->name == "Malaysia" || $this->country->name == "Singapore");
     }
 
+
     public function getGroupSaleAttribute()
     {
         return $this->descendants()->sum('tree_count') + $this->tree_count;
     }
+
 
     public function generateReferralCode($country)
     {
@@ -135,6 +139,7 @@ class User extends Authenticatable
 
         return $code;
     }
+
 
     public function getCommisionPercentageAttribute()
     {

@@ -51,7 +51,7 @@ class Purchase extends Model
         {
             $user->adjust_level();
         }
-        
+
         return $this;
     }
 }
