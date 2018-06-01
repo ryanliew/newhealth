@@ -24,6 +24,9 @@ return [
     'total' => '总价格',
     'purchase_details' => '订单详情',
 
-    'success' => '订单已被接纳'
+    'success' => '订单已被接纳',
+
+
+    'base_price' => '单棵树零售价：美金 2,500'
     
 ];

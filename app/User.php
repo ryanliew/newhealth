@@ -3,9 +3,11 @@
 namespace App;
 
 use App\Country;
+use App\Notifications\ResetPasswordNotification;
 use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\App;
 use Kalnoy\Nestedset\NodeTrait;
 use Laravel\Passport\HasApiTokens;
 
@@ -20,7 +22,7 @@ class User extends Authenticatable
      */
     protected $guarded = [];
 
-    protected $appends = ['address', 'company_address', 'default_locale'];
+    protected $appends = ['address', 'company_address', 'default_locale', 'is_std'];
 
     protected $with = ['package'];
     /**
@@ -109,6 +111,11 @@ class User extends Authenticatable
         return $this->personal_address ? $this->personal_address->phone : "";
     }
 
+    public function getIsStdAttribute()
+    {
+        return !($this->country->name == "Malaysia" || $this->country->name == "Singapore");
+    }
+
     public function generateReferralCode($country)
     {
         $code = strtoupper($country->code) . rand(pow(10, 4), pow(10, 5)-1);
@@ -117,5 +124,11 @@ class User extends Authenticatable
             $code = $this->generateReferralCode($country);
 
         return $code;
+    }
+
+    // Reset password
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($this, App::getLocale(), $token));
     }
 }

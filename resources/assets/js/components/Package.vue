@@ -50,21 +50,21 @@
 								</text-input>
 							</div>
 							<div class="col-sm">
-								<text-input v-model="form.price_rmb" 
-									:defaultValue="form.price_rmb"
+								<text-input v-model="form.price_std" 
+									:defaultValue="form.price_std"
 									:required="true"
 									type="number"
-									:label="$options.filters.trans('package.price_rmb')"
-									name="price_rmb"
+									:label="$options.filters.trans('package.price_std')"
+									name="price_std"
 									:editable="true"
 									:focus="false"
 									:hideLabel="false">
 								</text-input>
-								<text-input v-model="form.price_rmb_promotion" 
-									:defaultValue="form.price_rmb_promotion"
+								<text-input v-model="form.price_std_promotion" 
+									:defaultValue="form.price_std_promotion"
 									:required="true"
 									type="number"
-									:label="$options.filters.trans('package.price_rmb_promotion')"
+									:label="$options.filters.trans('package.price_std_promotion')"
 									name="price_promotion"
 									:editable="true"
 									:focus="false"
@@ -91,12 +91,12 @@
 		data() {
 			return {
 				form: new Form({
-					name: '',
+					name: 'new',
 					tree_count: '',
 					price: '',
 					price_promotion: '',
-					price_rmb: '',
-					price_rmb_promotion: ''	
+					price_std: '',
+					price_std_promotion: ''	
 				}),
 
 			};
@@ -115,8 +115,8 @@
 				this.form.tree_count = this.selectedPackage.tree_count;
 				this.form.price = this.selectedPackage.price;
 				this.form.price_promotion = this.selectedPackage.price_promotion;
-				this.form.price_rmb = this.selectedPackage.price_rmb;
-				this.form.price_rmb_promotion = this.selectedPackage.price_rmb_promotion;
+				this.form.price_std = this.selectedPackage.price_std;
+				this.form.price_std_promotion = this.selectedPackage.price_std_promotion;
 			},
 
 			back() {

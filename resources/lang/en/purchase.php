@@ -24,6 +24,8 @@ return [
     'total' => 'Total',
     'purchase_details' => 'Purchase details',
 
-    'success' => 'Purchase order created successfully'
+    'success' => 'Purchase order created successfully',
+
+    'base_price' => 'Recommended Retail Price (RRP) per Tree: RM 8,000'
     
 ];

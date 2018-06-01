@@ -78,11 +78,12 @@
                         </div>
                         <button type="submit" class="btn btn-rounded">{{ __('auth.login') }}</button>
                         <p class="sign-note">{{ __('auth.new_to_site') }} <a href="{{ route('register') }}?lang={{ App::isLocale('zh') ? 'zh' : 'en' }}">{{ __('auth.register') }}</a></p>
+                        <p class="sign-note"><a href="{{ route('password.request') }}?lang={{ App::isLocale('zh') ? 'zh' : 'en' }}">{{ __('auth.forgot_password') }}?</a></p>
                         <!--<button type="button" class="close">
                             <span aria-hidden="true">&times;</span>
                         </button>-->
-                         <a href="{{ url('/social/facebook/login') }}" class="btn btn-facebook btn-block"><i class="fa fa-facebook-square"></i> {{ __('auth.facebook_login') }}</a>
-                        <a href="{{ url('/social/google/login') }}" class="btn btn-google btn-block"><i class="fa fa-google"></i> {{ __('auth.google_login') }}</a>
+                         {{-- <a href="{{ url('/social/facebook/login') }}" class="btn btn-facebook btn-block"><i class="fa fa-facebook-square"></i> {{ __('auth.facebook_login') }}</a>
+                        <a href="{{ url('/social/google/login') }}" class="btn btn-google btn-block"><i class="fa fa-google"></i> {{ __('auth.google_login') }}</a> --}}
                     </form>
                 </div>
             </div>

@@ -16,8 +16,8 @@ class PurchaseController extends Controller
                                                             'payment_id',
                                                             'purchases.created_at as created_at',
                                                             'purchases.total_price as total_price',
-                                                            'purchases.total_price_rmb as total_price_rmb',
-                                                            'purchases.is_rmb as is_rmb',
+                                                            'purchases.total_price_std as total_price_std',
+                                                            'purchases.is_std as is_std',
                                                             'purchases.status as status',
                                                             'users.name as user_name')
                                                     ->leftJoin('users', 'users.id', '=', 'user_id')
@@ -32,7 +32,7 @@ class PurchaseController extends Controller
             if($package->amount > 0) {
                 $db_package = Package::find($package->id);
                 $processed_packages[$package->id]['total_price'] = $db_package->price * $package->amount;
-                $processed_packages[$package->id]['total_price_rmb'] = $db_package->price_rmb * $package->amount;
+                $processed_packages[$package->id]['total_price_std'] = $db_package->price_std * $package->amount;
                 $processed_packages[$package->id]['amount'] = $package->amount;
             }
     	}
@@ -43,15 +43,17 @@ class PurchaseController extends Controller
     		return $package['total_price'];
     	});
 
-        $total_price_rmb = $packages->sum(function($package){
-            return $package['total_price_rmb'];
+        $user = User::find(request()->user_id);
+
+        $total_price_std = $packages->sum(function($package){
+            return $package['total_price_std'];
         });
 
     	$purchase = Purchase::create([
     		'user_id' => request()->user_id,
     		'total_price' => $total_price,
-            'total_price_rmb' => $total_price_rmb,
-            'is_rmb' => User::find(request()->user_id)->country_id == 48
+            'total_price_std' => $total_price_std,
+            'is_std' => $user->is_std
     	]);
 
     	$purchase->packages()->sync($packages);

@@ -17,7 +17,8 @@ class PaymentsTest extends TestCase
     /** @test */
     public function admins_can_verify_payment()
     {
-        $this->signIn();
+        $user = create('App\User', ['tree_count' => 2]);
+        $this->signIn($user);
         
         $purchase = make('App\Purchase');
 
@@ -25,6 +26,8 @@ class PaymentsTest extends TestCase
         $package2 = create('App\Package');
 
         $total_amount = ( $package1->price * 2 ) + $package2->price + .0;
+
+        $total_trees = ( $package1->tree_count * 2 ) + $package2->tree_count + 2;
 
         $this->post('/api/purchases', [ "user_id" => auth()->user()->id, 
                                         "packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"8000.00"},{"amount":1,"id":' . $package2->id . ',"price":"24000.00"}]'
@@ -39,7 +42,7 @@ class PaymentsTest extends TestCase
 
         $this->assertDatabaseHas('payments', ['is_verified' => true]);
         $this->assertDatabaseHas('purchases', ['is_verified' => true, 'id' => $purchase->id]);
-        $this->assertDatabaseHas('users', ['tree_count' => 3]);
+        $this->assertDatabaseHas('users', ['tree_count' => $total_trees]);
     } 
 
     /** @test */

@@ -9,20 +9,21 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\App;
 
-class RegisterSuccess extends Mailable
+class ResetPasswordNotificationMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $user, $locale;
+    public $locale, $user, $token;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(User $user, $locale)
+    public function __construct(User $user, $locale, $token)
     {
-        $this->user = $user;
         $this->locale = $locale;
+        $this->user = $user;
+        $this->token = $token;
     }
 
     /**
@@ -33,6 +34,6 @@ class RegisterSuccess extends Mailable
     public function build()
     {
         App::setLocale($this->locale);
-        return $this->view('vendor.notifications.onboard');
+        return $this->view('vendor.notifications.reset-password');
     }
 }

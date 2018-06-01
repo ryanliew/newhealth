@@ -15,7 +15,7 @@ class Purchase extends Model
 
     public function packages()
     {
-    	return $this->belongsToMany('App\Package')->withPivot('amount', 'total_price', 'total_price_rmb')->withTimestamps();
+    	return $this->belongsToMany('App\Package')->withPivot('amount', 'total_price', 'total_price_std')->withTimestamps();
     }
 
     public function payment()
@@ -27,7 +27,9 @@ class Purchase extends Model
     {
     	$this->update(['status' => 'complete', 'is_verified' => true]);
 
-        $this->user()->update([ 'tree_count' => $this->packages->sum(function($package){ return $package->pivot->amount; }) ]);
+        $tree_count = $this->user->tree_count;
+
+        $this->user()->update([ 'tree_count' => $tree_count + $this->packages->sum(function($package){ return $package->pivot->amount * $package->tree_count; }) ]);
         return $this;
     }
 }
