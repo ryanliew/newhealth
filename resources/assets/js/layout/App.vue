@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<loader v-if="isLoading"></loader>
 		<header class="site-header">
 		    <div class="container-fluid">
 		        <a href="#" class="site-logo">
@@ -59,7 +60,7 @@
 		props: [''],
 		data() {
 			return {
-
+				isLoading: false
 			};
 		},
 
@@ -67,6 +68,7 @@
 
 		methods: {
 			logout() {
+				this.isLoading = true;
 				axios.post('/logout')
 					.then(response => this.onLogoutSuccess(response))
 					.catch(response => this.onLogoutError(response));

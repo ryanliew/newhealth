@@ -18,6 +18,9 @@
 	  	<span class="text-danger" v-if="error" v-text="error"></span>
 		<img :src="defaultImage.src" class="img-thumbnail" v-if="defaultImage.src && (defaultImage.src.endsWith('.jpg') || defaultImage.src.endsWith('.png') || defaultImage.src.endsWith('.jpeg'))">
 		<img :src="defaultImage.src" class="img-thumbnail" v-if="defaultImage.file && defaultImage.file.type.match('^image.*')">
+		<span v-if="(defaultImage.src && defaultImage.src.endsWith('.pdf')) || (defaultImage.file && defaultImage.file.type.endsWith('pdf'))">
+			<i class="fa fa-file-pdf-o"></i> {{ defaultImage.file.name }}
+		</span>
 		
 	 </div>
 </template>
@@ -42,6 +45,8 @@
 
 				reader.onload = e => {
 					let src = e.target.result;
+					
+					flash(this.$options.filters.trans('input.file_selected', {name: file.name}));
 
 					this.$emit('loaded', { src, file });
 				};	

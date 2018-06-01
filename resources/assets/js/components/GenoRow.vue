@@ -6,6 +6,7 @@
 				<span class="badge badge-primary" v-if="getClass(user) == 'self'">{{ 'tree.self' |trans }}</span>
 				<br>
 				<span class="badge badge-success">{{ user.tree_count }} {{ 'auth.tree' | trans_choice(user.tree_count) }}</span>
+				<span class="badge badge-info">{{ 'user.level' | trans }}: {{ user.user_level }}</span>
 			</a>
 			<geno-row v-if="user.children.length > 0" :users="user.children">
 			</geno-row>

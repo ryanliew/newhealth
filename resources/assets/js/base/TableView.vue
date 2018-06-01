@@ -1,13 +1,20 @@
 <template>
 	<div class="card">
 		<h5 class="card-header">
-			{{ title | trans }}
+			<div class="row align-items-center">
+				<div class="col">
+					{{ title | trans }}
+				</div>
+				<div class="col-auto" v-if="hasBack">
+					<button class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
+				</div>
+			</div>
 		</h5>
 		
 		
 		<div class="card-body">
 			<loader v-if="loading"></loader>
-			<vuetable-filter-bar :searchables="searchables" :dateFilterable="dateFilterable" :addNew="addNew"></vuetable-filter-bar>	
+			<vuetable-filter-bar :searchables="searchables" :dateFilterable="dateFilterable" :monthFilterable="monthFilterable" :addNew="addNew"></vuetable-filter-bar>	
 			<vuetable ref="vuetable" 
 					:api-url="url"
 		    		:fields="fields"
@@ -50,7 +57,7 @@
 	import Loader from './Loader';
 
 	export default {
-		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew'],
+		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack'],
 
 		components: { Vuetable, VuetablePagination, VuetablePaginationInfo, VuetableFilterBar, Loader },
 
@@ -83,6 +90,10 @@
 				}.bind(this), 1000);
 			},
 
+			back() {
+				this.$emit('back');
+			},
+
 			onPaginationData(paginationData) {
 				this.$refs.pagination.setPaginationData(paginationData);
 				this.$refs.paginationInfo.setPaginationData(paginationData);
@@ -106,6 +117,12 @@
 					this.params.dateFilterKey = this.dateFilterKey;
 				}
 
+				if(filters.month)
+				{
+					this.params.month = filters.month;
+					this.params.monthFilterKey =this.monthFilterKey;
+				}
+
 				Vue.nextTick( () => this.$refs.vuetable.refresh())
 			},
 
@@ -126,6 +143,10 @@
 
 			purchaseStatusLabel(value) {
 				return this.$options.filters.formatPurchaseStatus(value);
+			},
+
+			commisionTypeLabel(value) {
+				return this.$options.filters.trans('transaction.' + value);
 			},
 
 			image(value) {

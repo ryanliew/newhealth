@@ -29,6 +29,8 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::get('/tree', 'Admin\UserController@getTree');
 		Route::get('/packages', 'Admin\PackageController@index');
 		Route::get('/purchases', 'Admin\PurchaseController@index');
+		Route::get('/transactions', 'Admin\TransactionController@index');
+		Route::get('/transactions/standard', 'Admin\TransactionController@index_standard');
 
 		Route::group(['prefix' => '/packages'], function() {
 			Route::post('/', 'Admin\PackageController@store');
@@ -39,6 +41,7 @@ Route::group(['middleware' => 'auth:api'], function() {
 	Route::group(['prefix' => 'user/{user}'], function() {
 		Route::get('/company/contacts', 'UserController@showCompanyContacts');
 		Route::get('/purchases', 'PurchaseController@index');
+		Route::get('/transactions', 'TransactionController@index');
 		Route::get('/tree', 'UserController@getTree');
 		Route::get('/', 'UserController@show');
 	});
