@@ -7,7 +7,7 @@
 				<br>
 				<span class="badge badge-success">{{ user.tree_count }} {{ 'auth.tree' | trans_choice(user.tree_count) }}</span>
 				<br>
-				<span class="badge badge-info">{{ 'user.level' | trans }}: {{ user.user_level }}</span>
+				<span class="badge badge-info">{{ 'user.level_' + user.user_level | trans }}</span>
 
 			</a>
 			<geno-row v-if="user.children.length > 0" :users="user.children">

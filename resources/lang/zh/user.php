@@ -14,5 +14,9 @@ return [
    	'users' => '用户',
    	'referral_code' => '新叶ID',
     'tree_count' => '种植数量',
-    'level' => '级别'
+    'level' => '级别',
+    'level_1' => '顾问',
+    'level_2' => '高级顾问',
+    'level_3' => '执行顾问',
+    'level_4' => '首席顾问'
 ];
