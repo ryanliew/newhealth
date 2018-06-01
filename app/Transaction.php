@@ -59,4 +59,9 @@ class Transaction extends Model
 	{
 		return 'tree_purchase';
 	}
+
+	public static function STATUS_PAID()
+	{
+		return 'paid';
+	}
 }
