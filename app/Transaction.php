@@ -34,9 +34,10 @@ class Transaction extends Model
 	 * @param  String $amount_std  Amount to give in USD
 	 * @param  Boolean $is_std	   Indicate whether the transaction is standard pricing or non standard pricing
 	 * @param  Date $date          The date of the operation that causes this transaction
+	 * @param  Float $percentage   The percentage of the commission amount for debugging purpose
  	 * @return Transaction         Created transaction
 	 */
-	public static function create(User $user, $type, $description, $amount, $amount_std, $is_std, $date)
+	public static function create(User $user, $type, $description, $amount, $amount_std, $is_std, $date, $percentage)
 	{
 	 	$transaction = $user->transactions()->create([
 	 		'type' => $type,
@@ -44,7 +45,8 @@ class Transaction extends Model
 	 		'amount' => $amount,
 	 		'amount_std' => $amount_std,
 	 		'is_std' => $is_std,
-	 		'date' => $date
+	 		'date' => $date,
+	 		'percentage' => $percentage
 	 	]);
 
 	 	return $transaction;
