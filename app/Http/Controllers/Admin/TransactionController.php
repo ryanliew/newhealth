@@ -21,7 +21,7 @@ class TransactionController extends Controller
     				->leftJoin('transactions', 'users.id', '=', 'transactions.user_id')
     				->whereRaw('MONTH(date) = ? AND YEAR(date) = ?', [$date->month, $date->year])
     				->where('transactions.is_std', 0)
-    				->select(DB::raw('sum(transactions.amount_std) as amount, user_id, name, bank_name, account_no, bank_address, bank_swift, payout_status, is_std'))
+    				->select(DB::raw('sum(transactions.amount) as amount, user_id, name, bank_name, account_no, bank_address, bank_swift, payout_status, is_std'))
                     ->groupBy('users.id', 'transactions.payout_status', 'is_std')
     				->orderByDesc('amount');
 
