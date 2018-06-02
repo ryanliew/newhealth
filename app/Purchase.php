@@ -42,30 +42,33 @@ class Purchase extends Model
         return $this;
     }
 
-    public function pay_and_roll_commission_upwards($user, $left_percentage = 0.2)
+    public function pay_and_roll_commission_upwards($user, $paid_percentage = 0.0)
     {
         if(!is_null($user->parent_id)) {
             $parent = $user->parent;
-             
-            $percentage = $parent->commision_percentage > $left_percentage ? $left_percentage : $parent->commision_percentage;
+
+            $percentage = $parent->commision_percentage > $paid_percentage ? $parent->commision_percentage - $paid_percentage : 0.0;
 
             // dd($this->total_price);
+            if($percentage > 0)
+            {
+                $transaction = Transaction::create($user->parent, 
+                                                    Transaction::TYPE_COMMISION(), 
+                                                    Transaction::DESCRIPTION_TREE_PURCHASE(), 
+                                                    $this->total_price * $percentage, 
+                                                    $this->total_price_std * 
+                                                    $percentage, 
+                                                    $this->is_std, 
+                                                    $this->created_at,
+                                                    $percentage);
 
-            $transaction = Transaction::create($user->parent, 
-                                                Transaction::TYPE_COMMISION(), 
-                                                Transaction::DESCRIPTION_TREE_PURCHASE(), 
-                                                $this->total_price * $percentage, 
-                                                $this->total_price_std * 
-                                                $percentage, 
-                                                $this->is_std, 
-                                                $this->created_at);
+                $transaction->update(['purchase_id' => $this->id, 'target_id' => $this->user_id]);
 
-            $transaction->update(['purchase_id' => $this->id, 'target_id' => $this->user_id]);
+                $paid_percentage +=  $percentage;
 
-            $left_percentage -=  $parent->commision_percentage;
+            }
 
-            if($left_percentage > 0 )
-                $this->pay_and_roll_commission_upwards($parent, $left_percentage);
+            $this->pay_and_roll_commission_upwards($parent, $paid_percentage);
         }
     }
 }
