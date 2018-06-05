@@ -13,14 +13,14 @@ return [
     |
     */
 
-    'accepted'             => ':attribute需要被接受',
-    'active_url'           => ':attribute链接错误.',
-    'after'                => ':attribute必须在:date之后.',
-    'after_or_equal'       => ':attribute必须是和:date一样或之后的日期.',
-    'alpha'                => ':attribute只能有字母',
-    'alpha_dash'           => ':attribute只能有字母，号码，以及“-”号',
-    'alpha_num'            => ':attribute只能有字母以及号码',
-    'before'               => ':attribute必须在:date之前.',
+    'accepted'             => '需要被接受',
+    'active_url'           => '链接错误.',
+    'after'                => '必须在:date之后.',
+    'after_or_equal'       => '必须是和:date一样或之后的日期.',
+    'alpha'                => '只能有字母',
+    'alpha_dash'           => '只能有字母，号码，以及“-”号',
+    'alpha_num'            => '只能有字母以及号码',
+    'before'               => '必须在:date之前.',
     'before_or_equal'      => 'The :attribute must be a date before or equal to :date.',
     'between'              => [
         'numeric' => 'The :attribute must be between :min and :max.',
@@ -65,7 +65,7 @@ return [
     ],
     'not_in'               => 'The selected :attribute is invalid.',
     'not_regex'            => 'The :attribute format is invalid.',
-    'numeric'              => 'The :attribute must be a number.',
+    'numeric'              => '只能填写数字',
     'present'              => 'The :attribute field must be present.',
     'regex'                => 'The :attribute format is invalid.',
     'required'             => '需要被填写',

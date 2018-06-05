@@ -24,7 +24,8 @@
 							name="tree_count"
 							:editable="true"
 							:focus="true"
-							:hideLabel="false">
+							:hideLabel="false"
+							:error="form.errors.get('tree_count')">
 						</text-input>
 						<div class="row">
 							<div class="col-sm">
@@ -36,11 +37,12 @@
 									name="price"
 									:editable="true"
 									:focus="false"
-									:hideLabel="false">
+									:hideLabel="false"
+									:error="form.errors.get('price')">
 								</text-input>
 								<text-input v-model="form.price_promotion" 
 									:defaultValue="form.price_promotion"
-									:required="true"
+									:required="false"
 									type="number"
 									:label="$options.filters.trans('package.price_promotion')"
 									name="price_promotion"
@@ -58,11 +60,12 @@
 									name="price_std"
 									:editable="true"
 									:focus="false"
-									:hideLabel="false">
+									:hideLabel="false"
+									:error="form.errors.get('price_std')">
 								</text-input>
 								<text-input v-model="form.price_std_promotion" 
 									:defaultValue="form.price_std_promotion"
-									:required="true"
+									:required="false"
 									type="number"
 									:label="$options.filters.trans('package.price_std_promotion')"
 									name="price_promotion"

@@ -8,18 +8,20 @@
 				:value="value" 
 				@input="updateValue($event.target.value)"
 				v-if="editable"
-				ref="input" />
+				ref="input"
+				:placeholder="placeholder" />
 		<p class="input__field input__field--hoshi"
 				v-html="value"
 				v-else>	
 		</p>
+		<span class="invalid-feedback" v-if="error"><strong>{{ error | trans }}</strong></span>
 	</div>
 </template>
 
 <script>
 	import moment from 'moment';
 	export default {
-		props: ['defaultValue', 'label', 'required', 'error', 'name', 'type', 'editable', 'focus', 'hideLabel'],
+		props: ['defaultValue', 'label', 'required', 'error', 'name', 'type', 'editable', 'focus', 'hideLabel', 'placeholder'],
 		data() {
 			return {
 				localValue: ''

@@ -108,6 +108,7 @@ Vue.component('textarea-input', require('./base/TextareaInput.vue'));
 Vue.component('checkbox-input', require('./base/CheckboxInput.vue'));
 Vue.component('selector-input', require('./base/SelectorInput.vue'));
 Vue.component('image-input', require('./base/ImageInput.vue'));
+Vue.component('radio-group-input', require('./base/RadioGroupInput.vue'));
 
 // Actions components
 Vue.component('PurchasesActions', require('./actions/PurchasesActions.vue'));

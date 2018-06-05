@@ -18,6 +18,6 @@ return [
     'package_details' => 'Package details',
     'make_new_package' => 'Add new package',
     'update_success' => 'Package updated',
-    'create_success' => 'Package created'
+    'create_success' => 'Package created',
     
 ];

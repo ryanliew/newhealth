@@ -8,7 +8,7 @@
 			<v-select :multiple="multiple" :options="potentialData" :value="this.defaultData" @input="updateValue" :name="name" :placeholder="$options.filters.trans(placeholder)" :closeOnSelect="!multiple || true">
 			</v-select>
 		</div>
-		<span class="help is-danger" v-if="error" v-text="error"></span>
+		<span class="text-danger" v-if="error" v-text="error"></span>
 	</div>
 </template>
 

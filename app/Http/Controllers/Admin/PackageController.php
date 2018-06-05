@@ -11,12 +11,12 @@ class PackageController extends Controller
 	public function validatePackage()
 	{
 		$messages = [
-            'tree_count.required' => 'package.tree_count_required',
-            'tree_count.numeric' => 'package.tree_count_invalid',
-            'price.required' => 'package.price_required',
-            'price_std.required' => 'package.price_std_required',
-            'price.numeric' => 'package.price_invalid',
-            'price_std.numeric' => 'package.price_std_numeric'
+            'tree_count.required' => 'validation.required',
+            'tree_count.numeric' => 'validation.numeric',
+            'price.required' => 'validation.required',
+            'price_std.required' => 'validation.required',
+            'price.numeric' => 'validation.numeric',
+            'price_std.numeric' => 'validation.numeric'
         ];
 
         request()->validate([

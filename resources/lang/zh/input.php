@@ -11,7 +11,9 @@ return [
     'switch_file_mode' => '按蓝色按钮可切换文件选择/照相机模式(仅供智能电话使用)',
     'choose_file' => '按此选择文件...',
     'take_from_camera' => '按此打开照相机...',
-    'file_selected' => "成功选择:name"
+    'file_selected' => "成功选择:name",
+    "male" => "男",
+    "female" => "女"
 
     
 ];

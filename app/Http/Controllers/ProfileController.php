@@ -66,6 +66,7 @@ class ProfileController extends Controller
             'company_business_registration' => request()->company_business_registration,
             'company_incorporation_place' => request()->company_incorporation_place,
             'company_incorporation_date' => request()->company_incorporation_date,
+            'company_regulatory_name' => request()->company_regulatory_name,
             'company_type' => request()->company_type,
             'company_email' => request()->company_email,
             'bank_name' => request()->bank_name,

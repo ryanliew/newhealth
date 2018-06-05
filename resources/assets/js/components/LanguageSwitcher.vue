@@ -30,7 +30,6 @@
 				this.current = language;
 
 				window.events.$emit("lang");
-				//console.log("Switched!");
 			},
 		}	
 	}

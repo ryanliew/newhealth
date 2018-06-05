@@ -26,7 +26,7 @@ class User extends Authenticatable
     protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale'];
 
 
-    protected $with = ['package'];
+    protected $with = ['package', 'addresses', 'contacts'];
     /**
      * The attributes that should be hidden for arrays.
      *

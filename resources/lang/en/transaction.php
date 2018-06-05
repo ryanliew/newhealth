@@ -14,7 +14,7 @@ return [
     "description" => "Description", 
     "amount" => "Amount",
 
-    "one_time_commision" => "One time commission",
+    "one_time_commision" => "Referral commission",
     "tree_purchase" => "Tree purchase by :name",
 
     "amount_myr" => "Amount (MYR)",
