@@ -3,7 +3,7 @@
 		<loader v-if="isLoading"></loader>
 		<header class="site-header">
 		    <div class="container-fluid">
-		        <a href="#" class="site-logo">
+		        <a href="http://www.newleaf.com.my" class="site-logo">
 		            <img class="hidden-md-down" src="/img/favicon.png" alt="">
 		            <img class="hidden-lg-down" src="/img/favicon.png" alt="">
 		        </a>
