@@ -18,5 +18,10 @@ return [
     'level_1' => '顾问',
     'level_2' => '高级顾问',
     'level_3' => '执行顾问',
-    'level_4' => '首席顾问'
+    'level_4' => '首席顾问',
+    'edit_profile' => '更新资料',
+    'change_password' => '更换密码',
+    'cancel_change_password' => '取消更换密码',
+    'profile_update_success'=> '资料已更新'
+
 ];

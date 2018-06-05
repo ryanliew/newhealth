@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('/purchases', 'PurchaseController@store');
 Route::get('/packages', 'PackageController@index');
-
+Route::get('/countries', 'CountryController@index');
 
 
 Route::group(['middleware' => 'auth:api'], function() {
@@ -44,6 +44,7 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::get('/purchases', 'PurchaseController@index');
 		Route::get('/transactions', 'TransactionController@index');
 		Route::get('/tree', 'UserController@getTree');
+		Route::post('/update', 'UserController@update');
 		Route::get('/', 'UserController@show');
 	});
 

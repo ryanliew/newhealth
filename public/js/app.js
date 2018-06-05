@@ -19073,7 +19073,7 @@ module.exports = Cancel;
 /* 181 */
 /***/ (function(module, exports) {
 
-module.exports = { "en.auth": { "account_no": "Account No.", "account_type": "Account type", "add_personnel": "Add personnel", "address": "Address", "address1": "Address Line 1", "address2": "Address Line 2", "already_have_account": "Already have an account?", "bank_address": "Bank address", "bank_info": "Bank information", "bank_name": "Bank name", "bank_swift": "Bank SORT\/SWIFT code", "beneficiary_identification": "Beneficiary Passport\/NRIC", "beneficiary_info": "Beneficiary information", "beneficiary_name": "Beneficiary name", "cancel": "Cancel", "company_address": "Company address", "company_business_registration": "Business registration No.", "company_incorporation_date": "Date of incorporation", "company_incorporation_place": "Incorporation place", "company_info": "Company information", "company_name": "Company\/Entity name", "company_regulatory_name": "Regulatory body", "company_type": "Type of business entity", "contact_personnels": "Contact personnel", "country": "Country", "email": "Email Address", "en_space": " ", "enter_email_and_password_to_reset": "Enter your email and new password", "enter_email_to_reset": "enter your email to reset your password", "facebook_login": "Login with Facebook", "facebook_signup": "Register with Facebook", "failed": "These credentials do not match our records.", "forgot_password": "Forgot your password", "gender": "Gender", "gender_female": "Female", "gender_male": "Male", "gender_null": "N\\A", "general_info": "General information", "google_login": "Login with Google", "google_signup": "Register with Google", "grower": " Grower", "hi": "Hi", "identification": "Passport\/NRIC", "last_step": "One last step.", "login": "Login", "name": "Name", "name_placeholder": "per Passport\/NRIC", "nationality": "Nationality", "new_to_site": "New to our site?", "password": "Password", "personal_info": "Personal information", "personnel_designation": "Designation", "phone": "Contact No.", "postcode": "Postcode", "process_registration": "Your registration is being processed.", "referral_id": "Your referral ID is :code", "referral_info": "Referral information", "referrer": "Referrer ID", "referrer_fill": "Fill in the referrer ID", "referrer_name": "Referrer name: :name", "referrer_not_found": "Referrer not found", "register": "Sign up", "register_message": "as Newleaf grower and get involved in the multi-billion dollar industry today", "register_today": "", "registering_company": "Corporate Application (For corporate application only)", "registration_complete": "Registration complete, you may now close this window", "remember": "Remember me", "remove_personnel": "Remove personnel", "repeat": "Repeat ", "reset_password": "Reset password", "select_package": "Select purchase", "selected_package": "Selected purchase", "send_reset_link": "Send me the reset link", "submit": "Submit", "success": "Please fill in your details below for us to process your registration.", "success_country": "Please also let us know your country as that is required for us to generate your referral code", "success_email": "We will also need your email address so that we can send you important notifications in the future", "success_referral": "If you have a referrer, please let us know by filling in his\/her ID in the form below", "thank_you": "Thank you.", "throttle": "Too many login attempts. Please try again in :seconds seconds.", "tree": "Tree|Trees", "wechat_signup": "Register with WeChat", "welcome_back": "welcome back" }, "en.company": { "company": "Company", "partnership": "Partnership", "sole": "Sole proprietership", "trust": "Trust" }, "en.form": { "submit": "Submit" }, "en.input": { "choose_file": "Click to choose file...", "file_selected": "Selected file :name", "switch_file_mode": "You can toggle between camera\/file mode by pressing at the blue button (only for mobile phone)", "take_from_camera": "Click to open camera..." }, "en.nav": { "admin_purchases": "Purchases", "logout": "Logout", "organization": "Organization", "packages": "Packages", "payouts": "Payouts", "profile": "Profile", "purchases": "Purchases", "settings": "Settings", "transactions": "Transactions", "users": "Users" }, "en.package": { "actions": "Actions", "create_success": "Package created", "make_new_package": "Add new package", "package_details": "Package details", "packages": "Packages", "price": "Price (MYR)", "price_promotion": "Promotion price (MYR)", "price_std": "Price (USD)", "price_std_promotion": "Promotion price (USD)", "tree_count": "No. of trees", "update_success": "Package updated" }, "en.pagination": { "info": "Displaying {from} to {to} of {total} items", "next": "Next &raquo;", "previous": "&laquo; Previous" }, "en.passwords": { "password": "Passwords must be at least six characters and match the confirmation.", "reset": "Your password has been reset!", "sent": "We have e-mailed your password reset link!", "token": "This password reset token is invalid.", "user": "We can't find a user with that e-mail address." }, "en.payment": { "amount": "Amount payable", "invalid_payment_slip": "Payment slip is required", "make_payment": "Make payment", "paid_on": "Paid on", "payment": "Payment", "payment_details": "Payment details", "payment_slip": "Payment Slip", "payment_slip_exceed_size": "Payment slip must not exceed 8MB", "submit_payment": "Submit payment", "success": "Payment has been recorded successfully", "verify": "Verify", "verify_success": "Payment verified successfully" }, "en.purchase": { "base_price": "Recommended Retail Price (RRP) per Tree: RM 8,000", "checkout": "Checkout", "complete": "Complete", "default_user": "Leave empty to buy for yourself", "made_by": "Made by", "make_new_purchase": "Make new purchase", "past_purchases": "Purchase history", "pending": "Pending payment", "pending_verification": "Pending verification", "purchase_date": "Purchase date", "purchase_details": "Purchase details", "purchases": "Purchases", "select_package": "Select from the packages below", "selected_packages": "Selected packages", "status": "Status", "success": "Purchase order created successfully", "total": "Total", "total_payable": "Total payable", "user": "Buyer" }, "en.table": { "actions": "Actions", "back": "Back", "filter_by_date": "Filter by date", "filter_by_month": "Filter by month", "reset": "Reset", "search": "Search" }, "en.transaction": { "amount": "Amount", "amount_myr": "Amount (MYR)", "amount_std": "Amount (USD)", "created_at": "Date", "description": "Description", "one_time_commision": "One time commission", "paid": "Paid", "payouts": "Payouts", "pending": "Pending", "status": "Payout status", "status_updated": "Payout completed", "std_payouts": "Payouts (USD)", "transactions": "Transaction", "tree_purchase": "Tree purchase by :name", "type": "Type" }, "en.tree": { "self": "Me", "tree": "Organization chart" }, "en.user": { "copied-link": "Your referral link has been copied to the clipboard", "copy-referral": "Copy referral link", "joined_at": "Joined at", "level": "Member level", "level_1": "Advisor", "level_2": "Senior Advisor", "level_3": "Executive Advisor", "level_4": "Chief Advisor", "referral_code": "Newleaf ID", "tree_count": "No. of trees", "users": "Users" }, "en.validation": { "accepted": "The :attribute must be accepted.", "active_url": "The :attribute is not a valid URL.", "after": "The :attribute must be a date after :date.", "after_or_equal": "The :attribute must be a date after or equal to :date.", "alpha": "The :attribute may only contain letters.", "alpha_dash": "The :attribute may only contain letters, numbers, and dashes.", "alpha_num": "The :attribute may only contain letters and numbers.", "array": "The :attribute must be an array.", "attributes": { "password": "Password" }, "before": "The :attribute must be a date before :date.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": "The :attribute confirmation does not match.", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "The :attribute must be a valid email address.", "exists": "The selected :attribute is invalid.", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "The :attribute must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "The :attribute field is required.", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." }, "zh.auth": { "account_no": "\u6237\u53E3\u53F7\u7801", "account_type": "\u6237\u53E3\u7C7B\u578B", "add_personnel": "\u589E\u52A0", "address": "\u5730\u5740", "address1": "\u5730\u5740 1", "address2": "\u5730\u5740 2", "already_have_account": "\u5DF2\u7ECF\u6709\u5E10\u53F7\uFF1F", "bank_address": "\u94F6\u884C\u5730\u5740", "bank_info": "\u94F6\u884C\u8D44\u6599", "bank_name": "\u94F6\u884C\u540D\u79F0", "bank_swift": "\u94F6\u884C SORT/SWIFT \u4EE3\u7801", "beneficiary_identification": "\u53D7\u76CA\u4EBA\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "beneficiary_info": "\u53D7\u76CA\u4EBA\u8D44\u6599", "beneficiary_name": "\u53D7\u76CA\u4EBA\u540D\u79F0", "cancel": "\u53D6\u6D88", "company_address": "\u516C\u53F8\u5730\u5740", "company_business_registration": "\u5546\u4E1A\u6CE8\u518C\u53F7\u7801", "company_incorporation_date": "\u5546\u4E1A\u6CE8\u518C\u65E5\u671F", "company_incorporation_place": "\u6CE8\u518C\u5730\u70B9", "company_info": "\u516C\u53F8\u8D44\u6599", "company_name": "\u516C\u53F8\u540D\u79F0", "company_regulatory_name": "\u76D1\u7BA1\u5355\u4F4D\u540D\u79F0", "company_type": "\u5546\u4E1A\u7C7B\u578B", "contact_personnels": "\u516C\u53F8\u8054\u7EDC\u4EBA", "country": "\u56FD\u5BB6", "email": "\u7535\u90AE", "en_space": "", "enter_email_and_password_to_reset": "\u8BF7\u8F93\u5165\u7535\u90AE\u548C\u65B0\u5BC6\u7801", "enter_email_to_reset": "\u8BF7\u8F93\u5165\u60A8\u7684\u7535\u90AE", "facebook_login": "\u8138\u4E66\u767B\u5165", "facebook_signup": "\u4F7F\u7528\u8138\u4E66\u6CE8\u518C", "failed": "\u7535\u90AE/\u5BC6\u7801\u9519\u8BEF", "forgot_password": "\u5FD8\u8BB0\u5BC6\u7801", "gender": "\u6027\u522B", "gender_female": "\u5973", "gender_male": "\u7537", "general_info": "\u4E00\u822C\u8D44\u6599", "google_login": "\u8C37\u6B4C\u767B\u5165", "google_signup": "\u4F7F\u7528\u8C37\u6B4C\u6CE8\u518C", "grower": "\u79CD\u690D\u8005", "hi": "\u4F60\u597D", "identification": "\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "last_step": "\u6700\u540E\u4E00\u6B65", "login": "\u767B\u5165", "name": "\u540D\u5B57", "name_placeholder": "\u586B\u5199\u5B9E\u540D", "nationality": "\u56FD\u7C4D", "new_to_site": "\u8FD8\u672A\u6CE8\u518C\uFF1F", "password": "\u5BC6\u7801", "personal_info": "\u4E2A\u4EBA\u8D44\u6599", "personnel_designation": "\u804C\u4F4D", "phone": "\u7535\u8BDD\u53F7\u7801", "postcode": "\u90AE\u653F\u7F16\u7801", "process_registration": "\u6211\u4EEC\u6B63\u5728\u5904\u7406\u60A8\u7684\u6CE8\u518C\u3002", "referral_id": "\u60A8\u7684ID\u662F :code", "referral_info": "\u63A8\u8350\u8005\u8D44\u6599", "referrer": "\u4ECB\u7ECD\u8005ID", "referrer_fill": "\u8BF7\u8F93\u5165\u63A8\u8350\u8005ID", "referrer_name": "\u63A8\u8350\u8005\u540D\u79F0: :name", "referrer_not_found": "ID\u9519\u8BEF", "register": "\u52A0\u76DF", "register_message": "\u65B0\u53F6\u69B4\u83B2\u79CD\u690D\u8BA1\u5212\uFF01", "register_today": "\u69B4\u83B2\u79CD\u690D\u65B0\u5546\u673A, \u643A\u624B\u65B0\u53F6\u521B\u767E\u4EBF, \u9A6C\u4E0A", "registering_company": "\u673A\u6784\u7533\u8BF7", "registration_complete": "\u5B8C\u6210\uFF0C\u60A8\u5DF2\u53EF\u4EE5\u5173\u95ED\u6B64\u9875\u9762", "remember": "\u4FDD\u6301\u767B\u5165", "remove_personnel": "\u53BB\u9664", "repeat": "\u786E\u5B9A", "reset_password": "\u91CD\u8BBE\u5BC6\u7801", "select_package": "\u9009\u62E9\u914D\u5957", "selected_package": "\u914D\u5957", "send_reset_link": "\u786E\u5B9A\u91CD\u8BBE\u5BC6\u7801", "submit": "\u63D0\u4EA4", "success": "\u6CE8\u518C\u6210\u529F", "success_country": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u6240\u5728\u56FD\u5BB6\uFF0C\u8FD9\u5C06\u5E2E\u52A9\u6211\u4EEC\u5236\u5B9A\u60A8\u7684ID", "success_email": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u7535\u90AE\u4EE5\u4F5C\u4E3A\u65E5\u540E\u7684\u901A\u8BAF\u7BA1\u9053", "success_referral": "\u82E5\u60A8\u6709\u63A8\u8350\u8005\uFF0C\u8BF7\u544A\u8BC9\u6211\u4EEC\u4ED6\u7684ID", "thank_you": "\u8C22\u8C22", "throttle": "\u767B\u5165\u8FC7\u4E8E\u9891\u7E41\uFF0C\u8BF7\u5728 :seconds \u79D2\u540E\u518D\u8BD5", "tree": "\u68F5\u6811|\u68F5\u6811", "wechat_signup": "\u4F7F\u7528\u5FAE\u4FE1\u6CE8\u518C", "welcome_back": "\u6B22\u8FCE\u56DE\u6765" }, "zh.company": { "company": "\u516C\u53F8", "partnership": "\u5408\u4F19", "sole": "\u72EC\u8D44\u7ECF\u8425\u8005", "trust": "\u4FE1\u6258\u4E1A\u52A1" }, "zh.form": { "submit": "\u63D0\u4EA4" }, "zh.input": { "choose_file": "\u6309\u6B64\u9009\u62E9\u6587\u4EF6...", "file_selected": "\u6210\u529F\u9009\u62E9:name", "switch_file_mode": "\u6309\u84DD\u8272\u6309\u94AE\u53EF\u5207\u6362\u6587\u4EF6\u9009\u62E9/\u7167\u76F8\u673A\u6A21\u5F0F(\u4EC5\u4F9B\u667A\u80FD\u7535\u8BDD\u4F7F\u7528)", "take_from_camera": "\u6309\u6B64\u6253\u5F00\u7167\u76F8\u673A..." }, "zh.nav": { "admin_purchases": "\u6240\u6709\u8BA2\u5355", "logout": "\u767B\u51FA", "organization": "\u7EC4\u7EC7", "packages": "\u914D\u5957", "profile": "\u6211\u7684\u8D44\u6599", "purchases": "\u8BA2\u5355", "settings": "\u8BBE\u5B9A", "users": "\u7528\u6237" }, "zh.package": { "create_success": "\u5DF2\u589E\u52A0\u914D\u5957", "make_new_package": "\u589E\u52A0\u914D\u5957", "package_details": "\u914D\u5957\u8BE6\u60C5", "packages": "\u914D\u5957", "price": "\u4EF7\u683C (\u9A6C\u5E01)", "price_promotion": "\u4F18\u60E0\u4EF7\u683C (\u9A6C\u5E01)", "price_std": "\u4EF7\u683C (\u7F8E\u91D1)", "price_std_promotion": "\u4F18\u60E0\u4EF7\u683C (\u7F8E\u91D1)", "tree_count": "\u79CD\u690D\u6570\u91CF", "update_success": "\u5DF2\u66F4\u65B0\u914D\u5957\u8BE6\u60C5" }, "zh.pagination": { "info": "\u5171{total}\u4E2A\u6570\u636E\uFF0C\u6B63\u5728\u663E\u793A{from}\u5230{to}" }, "zh.passwords": { "password": "\u5BC6\u7801\u5FC5\u987B\u6709\u6700\u5C116\u4E2A\u5B57\u6BCD", "reset": "\u6210\u529F\u5BC6\u7801\u91CD\u8BBE", "sent": "\u6211\u4EEC\u5DF2\u53D1\u9001\u5BC6\u7801\u91CD\u8BBE\u8FDE\u63A5\u5230\u60A8\u7684\u70B9\u90AE", "token": "\u60A8\u7684\u8BF7\u6C42\u5DF2\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u8BF7\u6C42", "user": "\u6B64\u7535\u90AE\u5730\u5740\u4E0D\u5728\u6211\u4EEC\u7684\u6570\u636E\u5E93\u91CC" }, "zh.payment": { "amount": "\u652F\u4ED8\u6570\u989D", "invalid_payment_slip": "\u8BF7\u9009\u62E9\u4ED8\u6B3E\u5355", "make_payment": "\u652F\u4ED8\u6B3E\u9879", "paid_on": "\u4ED8\u6B3E\u65E5\u671F", "payment": "\u4ED8\u6B3E", "payment_details": "\u4ED8\u6B3E\u8BE6\u60C5", "payment_slip": "\u4ED8\u6B3E\u5355", "payment_slip_exceed_size": "\u4ED8\u6B3E\u5355\u6587\u4EF6\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "submit_payment": "\u63D0\u4EA4\u4ED8\u6B3E\u5355", "success": "\u4ED8\u6B3E\u5355\u5DF2\u88AB\u63A5\u7EB3", "verify": "\u786E\u8BA4\u4ED8\u6B3E" }, "zh.purchase": { "base_price": "\u5355\u68F5\u6811\u96F6\u552E\u4EF7\uFF1A\u7F8E\u91D1 2,500", "checkout": "\u4ED8\u6B3E", "complete": "\u5B8C\u6210", "made_by": "\u5BA2\u6237", "make_new_purchase": "\u8D2D\u4E70\u79CD\u690D\u914D\u5957", "past_purchases": "\u8FC7\u5F80\u8BA2\u5355\u8BB0\u5F55", "pending": "\u672A\u4ED8\u6B3E", "pending_verification": "\u5BA1\u6838\u4E2D", "purchase_date": "\u8D2D\u4E70\u65E5\u671F", "purchase_details": "\u8BA2\u5355\u8BE6\u60C5", "purchases": "\u8BA2\u5355\u8BB0\u5F55", "select_package": "\u9009\u62E9\u4EE5\u4E0B\u914D\u5957", "selected_packages": "\u5DF2\u9009\u62E9\u914D\u5957", "status": "\u72B6\u6001", "success": "\u8BA2\u5355\u5DF2\u88AB\u63A5\u7EB3", "total": "\u603B\u4EF7\u683C", "total_payable": "\u603B\u4EF7\u683C" }, "zh.table": { "actions": "\u64CD\u4F5C", "back": "\u8FD4\u56DE", "filter_by_date": "\u65E5\u671F\u7B5B\u9009", "filter_by_month": "\u6708\u4EFD\u7B5B\u9009", "reset": "\u91CD\u8BBE", "search": "\u67E5\u627E" }, "zh.transaction": { "amount": "\u91D1\u989D", "amount_myr": "\u91D1\u989D (\u9A6C\u5E01)", "amount_std": "\u91D1\u989D (\u7F8E\u91D1)", "created_at": "\u65E5\u671F", "description": "\u9879\u76EE", "one_time_commision": "\u4E00\u6B21\u6027\u4F63\u91D1", "paid": "\u5DF2\u652F\u4ED8", "payouts": "\u652F\u51FA", "pending": "\u672A\u652F\u4ED8", "status": "\u652F\u4ED8\u72B6\u6001", "status_updated": "\u652F\u4ED8\u5B8C\u6210", "std_payouts": "\u652F\u51FA (\u7F8E\u91D1)", "transactions": "\u4EA4\u6613", "tree_purchase": ":name \u7684\u79CD\u690D\u9879\u76EE", "type": "\u79CD\u7C7B" }, "zh.tree": { "self": "\u6211", "tree": "\u7EC4\u7EC7\u56FE" }, "zh.user": { "copied-link": "\u6210\u529F\u590D\u5236\u4ECB\u7ECD\u8FDE\u63A5", "copy-referral": "\u590D\u5236\u8FDE\u63A5", "joined_at": "\u52A0\u76DF\u65E5\u671F", "level": "\u7EA7\u522B", "level_1": "\u987E\u95EE", "level_2": "\u9AD8\u7EA7\u987E\u95EE", "level_3": "\u6267\u884C\u987E\u95EE", "level_4": "\u9996\u5E2D\u987E\u95EE", "referral_code": "\u65B0\u53F6ID", "tree_count": "\u79CD\u690D\u6570\u91CF", "users": "\u7528\u6237" }, "zh.validation": { "accepted": ":attribute\u9700\u8981\u88AB\u63A5\u53D7", "active_url": ":attribute\u94FE\u63A5\u9519\u8BEF.", "after": ":attribute\u5FC5\u987B\u5728:date\u4E4B\u540E.", "after_or_equal": ":attribute\u5FC5\u987B\u662F\u548C:date\u4E00\u6837\u6216\u4E4B\u540E\u7684\u65E5\u671F.", "alpha": ":attribute\u53EA\u80FD\u6709\u5B57\u6BCD", "alpha_dash": ":attribute\u53EA\u80FD\u6709\u5B57\u6BCD\uFF0C\u53F7\u7801\uFF0C\u4EE5\u53CA\u201C-\u201D\u53F7", "alpha_num": ":attribute\u53EA\u80FD\u6709\u5B57\u6BCD\u4EE5\u53CA\u53F7\u7801", "attributes": { "password": "\u5BC6\u7801" }, "before": ":attribute\u5FC5\u987B\u5728:date\u4E4B\u524D.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": ":attribute\u4E0D\u76F8\u540C", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "\u8FD9\u5FC5\u987B\u662F\u4E00\u4E2A\u7535\u90AE\u5730\u5740", "exists": "\u9009\u9879\u9519\u8BEF", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "The :attribute must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "\u9700\u8981\u88AB\u586B\u5199", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." } };
+module.exports = { "en.auth": { "account_no": "Account No.", "account_type": "Account type", "add_personnel": "Add personnel", "address": "Address", "address1": "Address Line 1", "address2": "Address Line 2", "already_have_account": "Already have an account?", "bank_address": "Bank address", "bank_info": "Bank information", "bank_name": "Bank name", "bank_swift": "Bank SORT\/SWIFT code", "beneficiary_identification": "Beneficiary Passport\/NRIC", "beneficiary_info": "Beneficiary information", "beneficiary_name": "Beneficiary name", "cancel": "Cancel", "company_address": "Company address", "company_business_registration": "Business registration No.", "company_incorporation_date": "Date of incorporation", "company_incorporation_place": "Incorporation place", "company_info": "Company information", "company_name": "Company\/Entity name", "company_regulatory_name": "Regulatory body", "company_type": "Type of business entity", "contact_personnels": "Contact personnel", "country": "Country", "email": "Email Address", "en_space": " ", "enter_email_and_password_to_reset": "Enter your email and new password", "enter_email_to_reset": "enter your email to reset your password", "facebook_login": "Login with Facebook", "facebook_signup": "Register with Facebook", "failed": "These credentials do not match our records.", "forgot_password": "Forgot your password", "gender": "Gender", "gender_female": "Female", "gender_male": "Male", "gender_null": "N\\A", "general_info": "General information", "google_login": "Login with Google", "google_signup": "Register with Google", "grower": " Grower", "hi": "Hi", "identification": "Passport\/NRIC", "last_step": "One last step.", "login": "Login", "name": "Name", "name_placeholder": "per Passport\/NRIC", "nationality": "Nationality", "new_to_site": "New to our site?", "password": "Password", "personal_info": "Personal information", "personnel_designation": "Designation", "phone": "Contact No.", "postcode": "Postcode", "process_registration": "Your registration is being processed.", "referral_id": "Your referral ID is :code", "referral_info": "Referral information", "referrer": "Referrer ID", "referrer_fill": "Fill in the referrer ID", "referrer_name": "Referrer name: :name", "referrer_not_found": "Referrer not found", "register": "Sign up", "register_message": "as Newleaf grower and get involved in the multi-billion dollar industry today", "register_today": "", "registering_company": "Corporate Application (For corporate application only)", "registration_complete": "Registration complete, you may now close this window", "remember": "Remember me", "remove_personnel": "Remove personnel", "repeat": "Repeat ", "reset_password": "Reset password", "select_package": "Select purchase", "selected_package": "Selected purchase", "send_reset_link": "Send me the reset link", "submit": "Submit", "success": "Please fill in your details below for us to process your registration.", "success_country": "Please also let us know your country as that is required for us to generate your referral code", "success_email": "We will also need your email address so that we can send you important notifications in the future", "success_referral": "If you have a referrer, please let us know by filling in his\/her ID in the form below", "thank_you": "Thank you.", "throttle": "Too many login attempts. Please try again in :seconds seconds.", "tree": "Tree|Trees", "wechat_signup": "Register with WeChat", "welcome_back": "welcome back" }, "en.company": { "company": "Company", "partnership": "Partnership", "sole": "Sole proprietership", "trust": "Trust" }, "en.form": { "submit": "Submit" }, "en.input": { "choose_file": "Click to choose file...", "female": "Female", "file_selected": "Selected file :name", "male": "Male", "switch_file_mode": "You can toggle between camera\/file mode by pressing at the blue button (only for mobile phone)", "take_from_camera": "Click to open camera..." }, "en.nav": { "admin_purchases": "Purchases", "logout": "Logout", "organization": "Organization", "packages": "Packages", "payouts": "Payouts", "profile": "Profile", "purchases": "Purchases", "settings": "Settings", "transactions": "Transactions", "users": "Users" }, "en.package": { "actions": "Actions", "create_success": "Package created", "make_new_package": "Add new package", "package_details": "Package details", "packages": "Packages", "price": "Price (MYR)", "price_promotion": "Promotion price (MYR)", "price_std": "Price (USD)", "price_std_promotion": "Promotion price (USD)", "tree_count": "No. of trees", "update_success": "Package updated" }, "en.pagination": { "info": "Displaying {from} to {to} of {total} items", "next": "Next &raquo;", "previous": "&laquo; Previous" }, "en.passwords": { "password": "Passwords must be at least six characters and match the confirmation.", "reset": "Your password has been reset!", "sent": "We have e-mailed your password reset link!", "token": "This password reset token is invalid.", "user": "We can't find a user with that e-mail address." }, "en.payment": { "amount": "Amount payable", "invalid_payment_slip": "Payment slip is required", "make_payment": "Make payment", "paid_on": "Paid on", "payment": "Payment", "payment_details": "Payment details", "payment_slip": "Payment Slip", "payment_slip_exceed_size": "Payment slip must not exceed 8MB", "submit_payment": "Submit payment", "success": "Payment has been recorded successfully", "verify": "Verify", "verify_success": "Payment verified successfully" }, "en.purchase": { "base_price": "Recommended Retail Price (RRP) per Tree: RM 8,000", "checkout": "Checkout", "complete": "Complete", "default_user": "Leave empty to buy for yourself", "made_by": "Made by", "make_new_purchase": "Make new purchase", "past_purchases": "Purchase history", "pending": "Pending payment", "pending_verification": "Pending verification", "purchase_date": "Purchase date", "purchase_details": "Purchase details", "purchases": "Purchases", "select_package": "Select from the packages below", "selected_packages": "Selected packages", "status": "Status", "success": "Purchase order created successfully", "total": "Total", "total_payable": "Total payable", "user": "Buyer" }, "en.table": { "actions": "Actions", "back": "Back", "filter_by_date": "Filter by date", "filter_by_month": "Filter by month", "reset": "Reset", "search": "Search" }, "en.transaction": { "amount": "Amount", "amount_myr": "Amount (MYR)", "amount_std": "Amount (USD)", "created_at": "Date", "description": "Description", "one_time_commision": "One time commission", "paid": "Paid", "payouts": "Payouts", "pending": "Pending", "status": "Payout status", "status_updated": "Payout completed", "std_payouts": "Payouts (USD)", "transactions": "Transaction", "tree_purchase": "Tree purchase by :name", "type": "Type" }, "en.tree": { "self": "Me", "tree": "Organization chart" }, "en.user": { "cancel_change_password": "Cancel change password", "change_password": "Change password", "copied-link": "Your referral link has been copied to the clipboard", "copy-referral": "Copy referral link", "edit_profile": "Edit profile", "joined_at": "Joined at", "level": "Member level", "level_1": "Advisor", "level_2": "Senior Advisor", "level_3": "Executive Advisor", "level_4": "Chief Advisor", "profile_update_success": "Profile updated", "referral_code": "Newleaf ID", "tree_count": "No. of trees", "users": "Users" }, "en.validation": { "accepted": "The :attribute must be accepted.", "active_url": "The :attribute is not a valid URL.", "after": "The :attribute must be a date after :date.", "after_or_equal": "The :attribute must be a date after or equal to :date.", "alpha": "The :attribute may only contain letters.", "alpha_dash": "The :attribute may only contain letters, numbers, and dashes.", "alpha_num": "The :attribute may only contain letters and numbers.", "array": "The :attribute must be an array.", "attributes": { "password": "Password" }, "before": "The :attribute must be a date before :date.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": "The :attribute confirmation does not match.", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "The :attribute must be a valid email address.", "exists": "The selected :attribute is invalid.", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "This must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "This field is required.", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." }, "zh.auth": { "account_no": "\u6237\u53E3\u53F7\u7801", "account_type": "\u6237\u53E3\u7C7B\u578B", "add_personnel": "\u589E\u52A0", "address": "\u5730\u5740", "address1": "\u5730\u5740 1", "address2": "\u5730\u5740 2", "already_have_account": "\u5DF2\u7ECF\u6709\u5E10\u53F7\uFF1F", "bank_address": "\u94F6\u884C\u5730\u5740", "bank_info": "\u94F6\u884C\u8D44\u6599", "bank_name": "\u94F6\u884C\u540D\u79F0", "bank_swift": "\u94F6\u884C SORT/SWIFT \u4EE3\u7801", "beneficiary_identification": "\u53D7\u76CA\u4EBA\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "beneficiary_info": "\u53D7\u76CA\u4EBA\u8D44\u6599", "beneficiary_name": "\u53D7\u76CA\u4EBA\u540D\u79F0", "cancel": "\u53D6\u6D88", "company_address": "\u516C\u53F8\u5730\u5740", "company_business_registration": "\u5546\u4E1A\u6CE8\u518C\u53F7\u7801", "company_incorporation_date": "\u5546\u4E1A\u6CE8\u518C\u65E5\u671F", "company_incorporation_place": "\u6CE8\u518C\u5730\u70B9", "company_info": "\u516C\u53F8\u8D44\u6599", "company_name": "\u516C\u53F8\u540D\u79F0", "company_regulatory_name": "\u76D1\u7BA1\u5355\u4F4D\u540D\u79F0", "company_type": "\u5546\u4E1A\u7C7B\u578B", "contact_personnels": "\u516C\u53F8\u8054\u7EDC\u4EBA", "country": "\u56FD\u5BB6", "email": "\u7535\u90AE", "en_space": "", "enter_email_and_password_to_reset": "\u8BF7\u8F93\u5165\u7535\u90AE\u548C\u65B0\u5BC6\u7801", "enter_email_to_reset": "\u8BF7\u8F93\u5165\u60A8\u7684\u7535\u90AE", "facebook_login": "\u8138\u4E66\u767B\u5165", "facebook_signup": "\u4F7F\u7528\u8138\u4E66\u6CE8\u518C", "failed": "\u7535\u90AE/\u5BC6\u7801\u9519\u8BEF", "forgot_password": "\u5FD8\u8BB0\u5BC6\u7801", "gender": "\u6027\u522B", "gender_female": "\u5973", "gender_male": "\u7537", "general_info": "\u4E00\u822C\u8D44\u6599", "google_login": "\u8C37\u6B4C\u767B\u5165", "google_signup": "\u4F7F\u7528\u8C37\u6B4C\u6CE8\u518C", "grower": "\u79CD\u690D\u8005", "hi": "\u4F60\u597D", "identification": "\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "last_step": "\u6700\u540E\u4E00\u6B65", "login": "\u767B\u5165", "name": "\u540D\u5B57", "name_placeholder": "\u586B\u5199\u5B9E\u540D", "nationality": "\u56FD\u7C4D", "new_to_site": "\u8FD8\u672A\u6CE8\u518C\uFF1F", "password": "\u5BC6\u7801", "personal_info": "\u4E2A\u4EBA\u8D44\u6599", "personnel_designation": "\u804C\u4F4D", "phone": "\u7535\u8BDD\u53F7\u7801", "postcode": "\u90AE\u653F\u7F16\u7801", "process_registration": "\u6211\u4EEC\u6B63\u5728\u5904\u7406\u60A8\u7684\u6CE8\u518C\u3002", "referral_id": "\u60A8\u7684ID\u662F :code", "referral_info": "\u63A8\u8350\u8005\u8D44\u6599", "referrer": "\u4ECB\u7ECD\u8005ID", "referrer_fill": "\u8BF7\u8F93\u5165\u63A8\u8350\u8005ID", "referrer_name": "\u63A8\u8350\u8005\u540D\u79F0: :name", "referrer_not_found": "ID\u9519\u8BEF", "register": "\u52A0\u76DF", "register_message": "\u65B0\u53F6\u69B4\u83B2\u79CD\u690D\u8BA1\u5212\uFF01", "register_today": "\u69B4\u83B2\u79CD\u690D\u65B0\u5546\u673A, \u643A\u624B\u65B0\u53F6\u521B\u767E\u4EBF, \u9A6C\u4E0A", "registering_company": "\u673A\u6784\u7533\u8BF7", "registration_complete": "\u5B8C\u6210\uFF0C\u60A8\u5DF2\u53EF\u4EE5\u5173\u95ED\u6B64\u9875\u9762", "remember": "\u4FDD\u6301\u767B\u5165", "remove_personnel": "\u53BB\u9664", "repeat": "\u786E\u5B9A", "reset_password": "\u91CD\u8BBE\u5BC6\u7801", "select_package": "\u9009\u62E9\u914D\u5957", "selected_package": "\u914D\u5957", "send_reset_link": "\u786E\u5B9A\u91CD\u8BBE\u5BC6\u7801", "submit": "\u63D0\u4EA4", "success": "\u6CE8\u518C\u6210\u529F", "success_country": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u6240\u5728\u56FD\u5BB6\uFF0C\u8FD9\u5C06\u5E2E\u52A9\u6211\u4EEC\u5236\u5B9A\u60A8\u7684ID", "success_email": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u7535\u90AE\u4EE5\u4F5C\u4E3A\u65E5\u540E\u7684\u901A\u8BAF\u7BA1\u9053", "success_referral": "\u82E5\u60A8\u6709\u63A8\u8350\u8005\uFF0C\u8BF7\u544A\u8BC9\u6211\u4EEC\u4ED6\u7684ID", "thank_you": "\u8C22\u8C22", "throttle": "\u767B\u5165\u8FC7\u4E8E\u9891\u7E41\uFF0C\u8BF7\u5728 :seconds \u79D2\u540E\u518D\u8BD5", "tree": "\u68F5\u6811|\u68F5\u6811", "wechat_signup": "\u4F7F\u7528\u5FAE\u4FE1\u6CE8\u518C", "welcome_back": "\u6B22\u8FCE\u56DE\u6765" }, "zh.company": { "company": "\u516C\u53F8", "partnership": "\u5408\u4F19", "sole": "\u72EC\u8D44\u7ECF\u8425\u8005", "trust": "\u4FE1\u6258\u4E1A\u52A1" }, "zh.form": { "submit": "\u63D0\u4EA4" }, "zh.input": { "choose_file": "\u6309\u6B64\u9009\u62E9\u6587\u4EF6...", "female": "\u5973", "file_selected": "\u6210\u529F\u9009\u62E9:name", "male": "\u7537", "switch_file_mode": "\u6309\u84DD\u8272\u6309\u94AE\u53EF\u5207\u6362\u6587\u4EF6\u9009\u62E9/\u7167\u76F8\u673A\u6A21\u5F0F(\u4EC5\u4F9B\u667A\u80FD\u7535\u8BDD\u4F7F\u7528)", "take_from_camera": "\u6309\u6B64\u6253\u5F00\u7167\u76F8\u673A..." }, "zh.nav": { "admin_purchases": "\u6240\u6709\u8BA2\u5355", "logout": "\u767B\u51FA", "organization": "\u7EC4\u7EC7", "packages": "\u914D\u5957", "payouts": "\u652F\u51FA", "profile": "\u6211\u7684\u8D44\u6599", "purchases": "\u8BA2\u5355", "settings": "\u8BBE\u5B9A", "transactions": "\u4EA4\u6613", "users": "\u7528\u6237" }, "zh.package": { "create_success": "\u5DF2\u589E\u52A0\u914D\u5957", "make_new_package": "\u589E\u52A0\u914D\u5957", "package_details": "\u914D\u5957\u8BE6\u60C5", "packages": "\u914D\u5957", "price": "\u4EF7\u683C (\u9A6C\u5E01)", "price_promotion": "\u4F18\u60E0\u4EF7\u683C (\u9A6C\u5E01)", "price_std": "\u4EF7\u683C (\u7F8E\u91D1)", "price_std_promotion": "\u4F18\u60E0\u4EF7\u683C (\u7F8E\u91D1)", "tree_count": "\u79CD\u690D\u6570\u91CF", "update_success": "\u5DF2\u66F4\u65B0\u914D\u5957\u8BE6\u60C5" }, "zh.pagination": { "info": "\u5171{total}\u4E2A\u6570\u636E\uFF0C\u6B63\u5728\u663E\u793A{from}\u5230{to}" }, "zh.passwords": { "password": "\u5BC6\u7801\u5FC5\u987B\u6709\u6700\u5C116\u4E2A\u5B57\u6BCD", "reset": "\u6210\u529F\u5BC6\u7801\u91CD\u8BBE", "sent": "\u6211\u4EEC\u5DF2\u53D1\u9001\u5BC6\u7801\u91CD\u8BBE\u8FDE\u63A5\u5230\u60A8\u7684\u70B9\u90AE", "token": "\u60A8\u7684\u8BF7\u6C42\u5DF2\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u8BF7\u6C42", "user": "\u6B64\u7535\u90AE\u5730\u5740\u4E0D\u5728\u6211\u4EEC\u7684\u6570\u636E\u5E93\u91CC" }, "zh.payment": { "amount": "\u652F\u4ED8\u6570\u989D", "invalid_payment_slip": "\u8BF7\u9009\u62E9\u4ED8\u6B3E\u5355", "make_payment": "\u652F\u4ED8\u6B3E\u9879", "paid_on": "\u4ED8\u6B3E\u65E5\u671F", "payment": "\u4ED8\u6B3E", "payment_details": "\u4ED8\u6B3E\u8BE6\u60C5", "payment_slip": "\u4ED8\u6B3E\u5355", "payment_slip_exceed_size": "\u4ED8\u6B3E\u5355\u6587\u4EF6\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "submit_payment": "\u63D0\u4EA4\u4ED8\u6B3E\u5355", "success": "\u4ED8\u6B3E\u5355\u5DF2\u88AB\u63A5\u7EB3", "verify": "\u786E\u8BA4\u4ED8\u6B3E" }, "zh.purchase": { "base_price": "\u5355\u68F5\u6811\u96F6\u552E\u4EF7\uFF1A\u7F8E\u91D1 2,500", "checkout": "\u4ED8\u6B3E", "complete": "\u5B8C\u6210", "made_by": "\u5BA2\u6237", "make_new_purchase": "\u8D2D\u4E70\u79CD\u690D\u914D\u5957", "past_purchases": "\u8FC7\u5F80\u8BA2\u5355\u8BB0\u5F55", "pending": "\u672A\u4ED8\u6B3E", "pending_verification": "\u5BA1\u6838\u4E2D", "purchase_date": "\u8D2D\u4E70\u65E5\u671F", "purchase_details": "\u8BA2\u5355\u8BE6\u60C5", "purchases": "\u8BA2\u5355\u8BB0\u5F55", "select_package": "\u9009\u62E9\u4EE5\u4E0B\u914D\u5957", "selected_packages": "\u5DF2\u9009\u62E9\u914D\u5957", "status": "\u72B6\u6001", "success": "\u8BA2\u5355\u5DF2\u88AB\u63A5\u7EB3", "total": "\u603B\u4EF7\u683C", "total_payable": "\u603B\u4EF7\u683C" }, "zh.table": { "actions": "\u64CD\u4F5C", "back": "\u8FD4\u56DE", "filter_by_date": "\u65E5\u671F\u7B5B\u9009", "filter_by_month": "\u6708\u4EFD\u7B5B\u9009", "reset": "\u91CD\u8BBE", "search": "\u67E5\u627E" }, "zh.transaction": { "amount": "\u91D1\u989D", "amount_myr": "\u91D1\u989D (\u9A6C\u5E01)", "amount_std": "\u91D1\u989D (\u7F8E\u91D1)", "created_at": "\u65E5\u671F", "description": "\u9879\u76EE", "one_time_commision": "\u4E00\u6B21\u6027\u4F63\u91D1", "paid": "\u5DF2\u652F\u4ED8", "payouts": "\u652F\u51FA", "pending": "\u672A\u652F\u4ED8", "status": "\u652F\u4ED8\u72B6\u6001", "status_updated": "\u652F\u4ED8\u5B8C\u6210", "std_payouts": "\u652F\u51FA (\u7F8E\u91D1)", "transactions": "\u4EA4\u6613", "tree_purchase": ":name \u7684\u79CD\u690D\u9879\u76EE", "type": "\u79CD\u7C7B" }, "zh.tree": { "self": "\u6211", "tree": "\u7EC4\u7EC7\u56FE" }, "zh.user": { "copied-link": "\u6210\u529F\u590D\u5236\u4ECB\u7ECD\u8FDE\u63A5", "copy-referral": "\u590D\u5236\u8FDE\u63A5", "joined_at": "\u52A0\u76DF\u65E5\u671F", "level": "\u7EA7\u522B", "level_1": "\u987E\u95EE", "level_2": "\u9AD8\u7EA7\u987E\u95EE", "level_3": "\u6267\u884C\u987E\u95EE", "level_4": "\u9996\u5E2D\u987E\u95EE", "referral_code": "\u65B0\u53F6ID", "tree_count": "\u79CD\u690D\u6570\u91CF", "users": "\u7528\u6237" }, "zh.validation": { "accepted": "\u9700\u8981\u88AB\u63A5\u53D7", "active_url": "\u94FE\u63A5\u9519\u8BEF.", "after": "\u5FC5\u987B\u5728:date\u4E4B\u540E.", "after_or_equal": "\u5FC5\u987B\u662F\u548C:date\u4E00\u6837\u6216\u4E4B\u540E\u7684\u65E5\u671F.", "alpha": "\u53EA\u80FD\u6709\u5B57\u6BCD", "alpha_dash": "\u53EA\u80FD\u6709\u5B57\u6BCD\uFF0C\u53F7\u7801\uFF0C\u4EE5\u53CA\u201C-\u201D\u53F7", "alpha_num": "\u53EA\u80FD\u6709\u5B57\u6BCD\u4EE5\u53CA\u53F7\u7801", "attributes": { "password": "\u5BC6\u7801" }, "before": "\u5FC5\u987B\u5728:date\u4E4B\u524D.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": ":attribute\u4E0D\u76F8\u540C", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "\u8FD9\u5FC5\u987B\u662F\u4E00\u4E2A\u7535\u90AE\u5730\u5740", "exists": "\u9009\u9879\u9519\u8BEF", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "\u53EA\u80FD\u586B\u5199\u6570\u5B57", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "\u9700\u8981\u88AB\u586B\u5199", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." } };
 
 /***/ }),
 /* 182 */
@@ -54896,10 +54896,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['defaultValue', 'label', 'required', 'error', 'name', 'type', 'editable', 'focus', 'hideLabel'],
+	props: ['defaultValue', 'label', 'required', 'error', 'name', 'type', 'editable', 'focus', 'hideLabel', 'placeholder'],
 	data: function data() {
 		return {
 			localValue: ''
@@ -54962,7 +54964,12 @@ var render = function() {
       ? _c("input", {
           ref: "input",
           staticClass: "form-control",
-          attrs: { name: _vm.name, id: _vm.name, type: _vm.type || "text" },
+          attrs: {
+            name: _vm.name,
+            id: _vm.name,
+            type: _vm.type || "text",
+            placeholder: _vm.placeholder
+          },
           domProps: { value: _vm.value },
           on: {
             input: function($event) {
@@ -54973,7 +54980,13 @@ var render = function() {
       : _c("p", {
           staticClass: "input__field input__field--hoshi",
           domProps: { innerHTML: _vm._s(_vm.value) }
-        })
+        }),
+    _vm._v(" "),
+    _vm.error
+      ? _c("span", { staticClass: "invalid-feedback" }, [
+          _c("strong", [_vm._v(_vm._s(_vm._f("trans")(_vm.error)))])
+        ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = []
@@ -55489,7 +55502,7 @@ var render = function() {
     _vm._v(" "),
     _vm.error
       ? _c("span", {
-          staticClass: "help is-danger",
+          staticClass: "text-danger",
           domProps: { textContent: _vm._s(_vm.error) }
         })
       : _vm._e()
@@ -55742,7 +55755,7 @@ var normalizeComponent = __webpack_require__(1)
 /* script */
 var __vue_script__ = __webpack_require__(335)
 /* template */
-var __vue_template__ = __webpack_require__(339)
+var __vue_template__ = __webpack_require__(342)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -55787,9 +55800,9 @@ module.exports = Component.exports
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(364)
+var __vue_script__ = __webpack_require__(367)
 /* template */
-var __vue_template__ = __webpack_require__(365)
+var __vue_template__ = __webpack_require__(368)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -68732,7 +68745,7 @@ return jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(316);
-module.exports = __webpack_require__(392);
+module.exports = __webpack_require__(398);
 
 
 /***/ }),
@@ -68754,17 +68767,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_LoginPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__pages_LoginPage_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_ProfilePage_vue__ = __webpack_require__(311);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_ProfilePage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__pages_ProfilePage_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_PurchasePage_vue__ = __webpack_require__(340);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_PurchasePage_vue__ = __webpack_require__(343);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_PurchasePage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__pages_PurchasePage_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_PackagePage_vue__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_PackagePage_vue__ = __webpack_require__(352);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_PackagePage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__pages_PackagePage_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_UserPage_vue__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_UserPage_vue__ = __webpack_require__(358);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_UserPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__pages_UserPage_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_GenoPage_vue__ = __webpack_require__(358);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_GenoPage_vue__ = __webpack_require__(361);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_GenoPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__pages_GenoPage_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_TransactionPage_vue__ = __webpack_require__(312);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_TransactionPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__pages_TransactionPage_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_PayoutReportPage_vue__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_PayoutReportPage_vue__ = __webpack_require__(369);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_PayoutReportPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__pages_PayoutReportPage_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__vue_translations_js__ = __webpack_require__(181);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__vue_translations_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__vue_translations_js__);
@@ -68784,7 +68797,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__webpack_require__(369);
+__webpack_require__(372);
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]);
 Vue.use(__WEBPACK_IMPORTED_MODULE_1_vuejs_noty___default.a);
@@ -68866,19 +68879,20 @@ Vue.component('textarea-input', __webpack_require__(297));
 Vue.component('checkbox-input', __webpack_require__(302));
 Vue.component('selector-input', __webpack_require__(182));
 Vue.component('image-input', __webpack_require__(308));
+Vue.component('radio-group-input', __webpack_require__(374));
 
 // Actions components
-Vue.component('PurchasesActions', __webpack_require__(371));
-Vue.component('UsersActions', __webpack_require__(374));
-Vue.component('PackagesActions', __webpack_require__(377));
-Vue.component('PayoutsActions', __webpack_require__(380));
+Vue.component('PurchasesActions', __webpack_require__(377));
+Vue.component('UsersActions', __webpack_require__(380));
+Vue.component('PackagesActions', __webpack_require__(383));
+Vue.component('PayoutsActions', __webpack_require__(386));
 
 // Project components
-Vue.component('side-nav', __webpack_require__(383));
+Vue.component('side-nav', __webpack_require__(389));
 
 // Custom table column
-Vue.component('TablePriceSwitcher', __webpack_require__(386));
-Vue.component('TransactionDescription', __webpack_require__(389));
+Vue.component('TablePriceSwitcher', __webpack_require__(392));
+Vue.component('TransactionDescription', __webpack_require__(395));
 
 window.app = new Vue({
 	router: router,
@@ -71919,7 +71933,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.current = language;
 
 			window.events.$emit("lang");
-			//console.log("Switched!");
 		}
 	}
 });
@@ -72726,6 +72739,8 @@ if (false) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue__ = __webpack_require__(336);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_User_vue__ = __webpack_require__(339);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_User_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_User_vue__);
 //
 //
 //
@@ -73046,17 +73061,42 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: ['cancelable', 'selectedUser'],
 
-	components: { ReferralLink: __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default.a },
+	components: { ReferralLink: __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default.a, User: __WEBPACK_IMPORTED_MODULE_1__components_User_vue___default.a },
 
 	data: function data() {
 		return {
 			user: '',
-			contacts: ''
+			contacts: '',
+			isEditing: false
 		};
 	},
 	mounted: function mounted() {
@@ -73077,6 +73117,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		setContacts: function setContacts(response) {
 			this.contacts = response.data;
+		},
+		editComplete: function editComplete() {
+			this.isEditing = false;
+			this.getUser();
+		},
+		getUser: function getUser() {
+			var _this2 = this;
+
+			axios.get('/api/user/' + this.user.id).then(function (response) {
+				return _this2.setUser(response);
+			});
+		},
+		setUser: function setUser(response) {
+			this.user = response.data;
 		},
 		back: function back() {
 			this.$emit('back');
@@ -73225,621 +73279,2844 @@ if (false) {
 /* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(340)
+/* template */
+var __vue_template__ = __webpack_require__(341)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\User.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6bbe077c", Component.options)
+  } else {
+    hotAPI.reload("data-v-6bbe077c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 340 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_form_button_js__ = __webpack_require__(183);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	props: ['selectedUser'],
+
+	mixins: [__WEBPACK_IMPORTED_MODULE_0__mixins_form_button_js__["a" /* default */]],
+
+	data: function data() {
+		return {
+			form: new Form({
+				name: '',
+				identification: '',
+				email: '',
+				address_line_1: '',
+				address_line_2: '',
+				country_id: 162,
+				postcode: '',
+				nationality: 'Malaysia',
+				phone: '',
+				gender: '',
+				company_name: '',
+				company_business_registration: '',
+				company_incorporation_date: '',
+				company_incorporation_place: '',
+				company_regulatory_name: '',
+				company_type: 'company',
+				company_address_line_1: '',
+				company_address_line_2: '',
+				company_country_id: 162,
+				company_postcode: '',
+				company_phone: '',
+				company_email: '',
+				personnels: [],
+				bank_name: '',
+				bank_swift: '',
+				bank_address: '',
+				account_type: '',
+				account_no: '',
+				beneficiary_name: '',
+				beneficiary_identification: '',
+				isChangePassword: ''
+			}),
+			isCompanyRegistration: false,
+			companyTypes: [],
+			user: window.user,
+			companyCountry: { value: 162, label: "Malaysia" },
+			potentialCountry: [],
+			company_business_entity: {},
+			country: { value: 162, label: "Malaysia" },
+			nationality: { value: 162, label: "Malaysia" }
+		};
+	},
+	mounted: function mounted() {
+		this.companyTypes = [{ label: this.$options.filters.trans("company.company"), value: 'company' }, { label: this.$options.filters.trans("company.sole"), value: 'sole' }, { label: this.$options.filters.trans("company.partnership"), value: 'partnership' }, { label: this.$options.filters.trans("company.trust"), value: 'trust' }];
+		this.company_business_entity = { label: this.$options.filters.trans("company.company"), value: 'company' };
+
+		this.getCountries();
+	},
+
+
+	methods: {
+		getCountries: function getCountries() {
+			var _this = this;
+
+			axios.get('/api/countries').then(function (response) {
+				return _this.setCountry(response);
+			});
+		},
+		setCountry: function setCountry(response) {
+			this.potentialCountry = response.data.map(function (country) {
+				var obj = {};
+				obj['label'] = country.name;
+				obj['value'] = country.id;
+
+				return obj;
+			});
+
+			this.setUser();
+		},
+		setUser: function setUser() {
+			this.form.name = this.selectedUser.name;
+			this.form.identification = this.selectedUser.identification;
+			this.form.email = this.selectedUser.email;
+			this.form.gender = this.selectedUser.gender;
+			this.form.bank_name = this.selectedUser.bank_name;
+			this.form.bank_swift = this.selectedUser.bank_swift;
+			this.form.bank_address = this.selectedUser.bank_address;
+			this.form.account_type = this.selectedUser.account_type;
+			this.form.account_no = this.selectedUser.account_no;
+
+			this.form.beneficiary_name = this.selectedUser.beneficiary_name;
+			this.form.beneficiary_identification = this.selectedUser.beneficiary_identification;
+			var address = _.head(_.filter(this.selectedUser.addresses, function (address) {
+				return address.type == "personal";
+			}));
+
+			this.form.address_line_1 = address.line_1;
+			this.form.address_line_2 = address.line_2;
+			this.form.postcode = address.postcode;
+			this.form.country_id = address.country_id;
+			this.form.phone = address.phone;
+			this.country = { value: address.country.id, label: address.country.name };
+
+			this.form.nationality = this.selectedUser.nationality;
+
+			var nationality = _.filter(this.potentialCountry, function (country) {
+				return country.label == this.selectedUser.nationality;
+			}.bind(this));
+
+			this.nationality = _.head(nationality);
+
+			var company_address = _.head(_.filter(this.selectedUser.addresses, function (address) {
+				return address.type == "company";
+			}));
+
+			if (company_address.line_1) {
+				this.form.company_address_line_1 = company_address.line_1;
+				this.form.company_address_line_2 = company_address.line_2;
+				this.form.company_postcode = company_address.postcode;
+				this.form.company_country_id = company_address.country_id;
+				this.form.company_phone = company_address.phone;
+				this.form.company_email = this.selectedUser.company_email;
+				this.companyCountry = { value: address.country.id, label: address.country.name };
+
+				this.form.company_name = this.selectedUser.company_name;
+				this.form.company_business_registration = this.selectedUser.company_business_registration;
+				this.form.company_incorporation_date = this.selectedUser.company_incorporation_date;
+				this.form.company_incorporation_place = this.selectedUser.company_incorporation_place;
+				this.form.company_regulatory_name = this.selectedUser.company_regulatory_name;
+
+				this.form.personnels = this.selectedUser.contacts;
+
+				this.form.company_type = this.selectedUser.company_type;
+
+				var selectedType = _.filter(this.companyTypes, function (type) {
+					return type.value == this.selectedUser.company_type;
+				}.bind(this));
+
+				this.company_business_entity = _.head(selectedType);
+
+				this.isCompanyRegistration = true;
+			}
+		},
+		updateCompanyCountry: function updateCompanyCountry(data) {
+			this.form.company_country_id = data.value;
+		},
+		updateCountry: function updateCountry(data) {
+			this.form.country_id = data.value;
+		},
+		updateNationality: function updateNationality(data) {
+			this.form.nationality = data.label;
+		},
+		updateCompanyType: function updateCompanyType(data) {
+			this.form.company_type = data.value;
+		},
+		back: function back() {
+			this.$emit('back');
+		},
+		submit: function submit() {
+			var _this2 = this;
+
+			this.form.post('/api/user/' + this.selectedUser.id + "/update").then(function (response) {
+				return _this2.onSuccess(response);
+			});
+		},
+		onSuccess: function onSuccess(response) {
+			flash(this.$options.filters.trans(response.message));
+			this.back();
+		}
+	}
+});
+
+/***/ }),
+/* 341 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-sm" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("div", { staticClass: "row align-items-center" }, [
-              _c("div", { staticClass: "col" }, [
-                _vm._v(
-                  "\n\t\t\t\t\t\t\t" +
-                    _vm._s(_vm._f("trans")("auth.personal_info")) +
-                    "\n\t\t\t\t\t\t"
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-sm-12" }, [
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-header" }, [
+          _c("div", { staticClass: "row align-items-center" }, [
+            _c("div", { staticClass: "col" }, [
+              _vm._v(
+                "\n\t\t\t\t\t\t\t" +
+                  _vm._s(_vm._f("trans")("user.edit_profile")) +
+                  "\n\t\t\t\t\t\t"
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-auto" }, [
+              _c("button", {
+                staticClass: "btn btn-success",
+                attrs: { type: "submit", disabled: _vm.form.submitting },
+                domProps: { innerHTML: _vm._s(_vm.submitButtonContent) },
+                on: { click: _vm.submit }
+              }),
+              _vm._v(" "),
+              _c(
+                "button",
+                { staticClass: "btn btn-primary", on: { click: _vm.back } },
+                [
+                  _c("i", { staticClass: "fa fa-arrow-left" }),
+                  _vm._v(" " + _vm._s(_vm._f("trans")("table.back")))
+                ]
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-body" }, [
+          _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.submit($event)
+                },
+                keydown: function($event) {
+                  _vm.form.errors.clear($event.target.name)
+                },
+                input: function($event) {
+                  _vm.form.errors.clear($event.target.name)
+                }
+              }
+            },
+            [
+              _c("h4", [_vm._v(_vm._s(_vm._f("trans")("auth.personal_info")))]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("text-input", {
+                      attrs: {
+                        defaultValue: _vm.form.name,
+                        required: true,
+                        type: "text",
+                        label: _vm.$options.filters.trans("auth.name"),
+                        name: "name",
+                        editable: _vm.user.is_admin,
+                        focus: false,
+                        hideLabel: false,
+                        error: _vm.form.errors.get("name")
+                      },
+                      model: {
+                        value: _vm.form.name,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "name", $$v)
+                        },
+                        expression: "form.name"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("text-input", {
+                      attrs: {
+                        defaultValue: _vm.form.identification,
+                        required: true,
+                        type: "text",
+                        label: _vm.$options.filters.trans(
+                          "auth.identification"
+                        ),
+                        name: "identification",
+                        editable: _vm.user.is_admin,
+                        focus: false,
+                        hideLabel: false,
+                        error: _vm.form.errors.get("identification")
+                      },
+                      model: {
+                        value: _vm.form.identification,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "identification", $$v)
+                        },
+                        expression: "form.identification"
+                      }
+                    })
+                  ],
+                  1
                 )
               ]),
               _vm._v(" "),
-              _vm.cancelable
-                ? _c("div", { staticClass: "col-auto" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-primary",
-                        on: { click: _vm.back }
-                      },
-                      [
-                        _c("i", { staticClass: "fa fa-arrow-left" }),
-                        _vm._v(" " + _vm._s(_vm._f("trans")("table.back")))
-                      ]
-                    )
-                  ])
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "card-block" },
-            [
               _c("text-input", {
                 attrs: {
-                  defaultValue: _vm.user.referral_code,
-                  required: false,
-                  type: "text",
-                  label: _vm.$options.filters.trans("user.referral_code"),
-                  name: "referrer",
-                  editable: false,
-                  focus: false,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.user.referral_code,
-                  callback: function($$v) {
-                    _vm.$set(_vm.user, "referral_code", $$v)
-                  },
-                  expression: "user.referral_code"
-                }
-              }),
-              _vm._v(" "),
-              _c("referral-link", { attrs: { code: _vm.user.referral_code } }),
-              _vm._v(" "),
-              _c("text-input", {
-                attrs: {
-                  defaultValue: _vm.user.name,
-                  required: true,
-                  type: "text",
-                  label: _vm.$options.filters.trans("auth.name"),
-                  name: "name",
-                  editable: false,
-                  focus: true,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.user.name,
-                  callback: function($$v) {
-                    _vm.$set(_vm.user, "name", $$v)
-                  },
-                  expression: "user.name"
-                }
-              }),
-              _vm._v(" "),
-              _c("text-input", {
-                attrs: {
-                  defaultValue: _vm.user.identification,
-                  required: true,
-                  type: "text",
-                  label: _vm.$options.filters.trans("auth.identification"),
-                  name: "identification",
-                  editable: false,
-                  focus: false,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.user.identification,
-                  callback: function($$v) {
-                    _vm.$set(_vm.user, "identification", $$v)
-                  },
-                  expression: "user.identification"
-                }
-              }),
-              _vm._v(" "),
-              _c("text-input", {
-                attrs: {
-                  defaultValue: _vm.user.email,
+                  defaultValue: _vm.form.email,
                   required: true,
                   type: "email",
                   label: _vm.$options.filters.trans("auth.email"),
                   name: "email",
-                  editable: false,
+                  editable: _vm.user.is_admin,
                   focus: false,
-                  hideLabel: false
+                  hideLabel: false,
+                  error: _vm.form.errors.get("email")
                 },
                 model: {
-                  value: _vm.user.email,
+                  value: _vm.form.email,
                   callback: function($$v) {
-                    _vm.$set(_vm.user, "email", $$v)
+                    _vm.$set(_vm.form, "email", $$v)
                   },
-                  expression: "user.email"
+                  expression: "form.email"
                 }
               }),
               _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _vm.form.isChangePassword
+                  ? _c(
+                      "div",
+                      { staticClass: "col-sm" },
+                      [
+                        _c("text-input", {
+                          attrs: {
+                            defaultValue: _vm.form.password,
+                            required: true,
+                            type: "password",
+                            label: _vm.$options.filters.trans("auth.password"),
+                            name: "password",
+                            editable: true,
+                            focus: false,
+                            hideLabel: false,
+                            error: _vm.form.errors.get("password")
+                          },
+                          model: {
+                            value: _vm.form.password,
+                            callback: function($$v) {
+                              _vm.$set(_vm.form, "password", $$v)
+                            },
+                            expression: "form.password"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.form.isChangePassword
+                  ? _c(
+                      "div",
+                      { staticClass: "col-sm" },
+                      [
+                        _c("text-input", {
+                          attrs: {
+                            defaultValue: _vm.form.password_confirmation,
+                            required: true,
+                            type: "password",
+                            label:
+                              _vm.$options.filters.trans("auth.repeat") +
+                              " " +
+                              _vm.$options.filters.trans("auth.password"),
+                            name: "password",
+                            editable: true,
+                            focus: false,
+                            hideLabel: false
+                          },
+                          model: {
+                            value: _vm.form.password_confirmation,
+                            callback: function($$v) {
+                              _vm.$set(_vm.form, "password_confirmation", $$v)
+                            },
+                            expression: "form.password_confirmation"
+                          }
+                        })
+                      ],
+                      1
+                    )
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row mb-3" }, [
+                _c("div", { staticClass: "col-sm" }, [
+                  _vm.form.isChangePassword
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              _vm.form.isChangePassword = false
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            _vm._s(
+                              _vm._f("trans")("user.cancel_change_password")
+                            )
+                          )
+                        ]
+                      )
+                    : _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              _vm.form.isChangePassword = true
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            _vm._s(_vm._f("trans")("user.change_password"))
+                          )
+                        ]
+                      )
+                ])
+              ]),
+              _vm._v(" "),
               _c("text-input", {
                 attrs: {
-                  defaultValue: _vm.user.address,
+                  defaultValue: _vm.form.address_line_1,
                   required: true,
                   type: "text",
                   label: _vm.$options.filters.trans("auth.address"),
-                  name: "address",
-                  editable: false,
+                  placeholder: _vm.$options.filters.trans("auth.address1"),
+                  name: "address_line_1",
+                  editable: true,
                   focus: false,
-                  hideLabel: false
+                  hideLabel: false,
+                  error: _vm.form.errors.get("address_line_1")
                 },
                 model: {
-                  value: _vm.user.address,
+                  value: _vm.form.address_line_1,
                   callback: function($$v) {
-                    _vm.$set(_vm.user, "address", $$v)
+                    _vm.$set(_vm.form, "address_line_1", $$v)
                   },
-                  expression: "user.address"
+                  expression: "form.address_line_1"
                 }
               }),
               _vm._v(" "),
               _c("text-input", {
                 attrs: {
-                  defaultValue: _vm.user.nationality,
+                  defaultValue: _vm.form.address_line_2,
                   required: true,
                   type: "text",
-                  label: _vm.$options.filters.trans("auth.nationality"),
-                  name: "nationality",
-                  editable: false,
+                  placeholder: _vm.$options.filters.trans("auth.address2"),
+                  name: "address_line_2",
+                  editable: true,
                   focus: false,
-                  hideLabel: false
+                  hideLabel: true,
+                  error: _vm.form.errors.get("address_line_2")
                 },
                 model: {
-                  value: _vm.user.nationality,
+                  value: _vm.form.address_line_2,
                   callback: function($$v) {
-                    _vm.$set(_vm.user, "nationality", $$v)
+                    _vm.$set(_vm.form, "address_line_2", $$v)
                   },
-                  expression: "user.nationality"
+                  expression: "form.address_line_2"
                 }
               }),
               _vm._v(" "),
-              _c("text-input", {
-                attrs: {
-                  defaultValue: _vm.$options.filters.trans(
-                    "auth.gender_" + _vm.user.gender
-                  ),
-                  required: true,
-                  type: "text",
-                  label: _vm.$options.filters.trans("auth.gender"),
-                  name: "gender",
-                  editable: false,
-                  focus: false,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.user.gender,
-                  callback: function($$v) {
-                    _vm.$set(_vm.user, "gender", $$v)
-                  },
-                  expression: "user.gender"
-                }
-              })
-            ],
-            1
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-sm" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("div", { staticClass: "row align-items-center" }, [
-              _c("div", { staticClass: "col" }, [
-                _vm._v(
-                  "\n\t\t\t\t\t\t\t" +
-                    _vm._s(_vm._f("trans")("auth.bank_info")) +
-                    "\n\t\t\t\t\t\t"
-                )
-              ]),
-              _vm._v(" "),
-              _vm.cancelable
-                ? _c("div", { staticClass: "col-auto" }, [
-                    _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-primary",
-                        on: { click: _vm.back }
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("selector-input", {
+                      attrs: {
+                        defaultData: _vm.country,
+                        label: _vm.$options.filters.trans("auth.country"),
+                        required: true,
+                        name: "country",
+                        potentialData: _vm.potentialCountry,
+                        editable: true,
+                        placeholder: _vm.$options.filters.trans("auth.country"),
+                        hideLabel: true
                       },
-                      [
-                        _c("i", { staticClass: "fa fa-arrow-left" }),
-                        _vm._v(" " + _vm._s(_vm._f("trans")("table.back")))
-                      ]
-                    )
-                  ])
-                : _vm._e()
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "card-block" },
-            [
-              _c("text-input", {
-                attrs: {
-                  defaultValue: _vm.user.bank_name,
-                  required: true,
-                  type: "text",
-                  label: _vm.$options.filters.trans("auth.bank_name"),
-                  name: "bank_name",
-                  editable: false,
-                  focus: true,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.user.bank_name,
-                  callback: function($$v) {
-                    _vm.$set(_vm.user, "bank_name", $$v)
-                  },
-                  expression: "user.bank_name"
-                }
-              }),
-              _vm._v(" "),
-              _c("text-input", {
-                attrs: {
-                  defaultValue: _vm.user.bank_swift
-                    ? _vm.user.bank_swift
-                    : "N/A",
-                  required: true,
-                  type: "text",
-                  label: _vm.$options.filters.trans("auth.bank_swift"),
-                  name: "bank_swift",
-                  editable: false,
-                  focus: false,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.user.bank_swift,
-                  callback: function($$v) {
-                    _vm.$set(_vm.user, "bank_swift", $$v)
-                  },
-                  expression: "user.bank_swift"
-                }
-              }),
-              _vm._v(" "),
-              _c("text-input", {
-                attrs: {
-                  defaultValue: _vm.user.bank_address,
-                  required: true,
-                  type: "bank_address",
-                  label: _vm.$options.filters.trans("auth.bank_address"),
-                  name: "bank_address",
-                  editable: false,
-                  focus: false,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.user.bank_address,
-                  callback: function($$v) {
-                    _vm.$set(_vm.user, "bank_address", $$v)
-                  },
-                  expression: "user.bank_address"
-                }
-              }),
-              _vm._v(" "),
-              _c("text-input", {
-                attrs: {
-                  defaultValue: _vm.user.account_type,
-                  required: true,
-                  type: "text",
-                  label: _vm.$options.filters.trans("auth.account_type"),
-                  name: "account_type",
-                  editable: false,
-                  focus: false,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.user.account_type,
-                  callback: function($$v) {
-                    _vm.$set(_vm.user, "account_type", $$v)
-                  },
-                  expression: "user.account_type"
-                }
-              }),
-              _vm._v(" "),
-              _c("text-input", {
-                attrs: {
-                  defaultValue: _vm.user.account_no,
-                  required: true,
-                  type: "text",
-                  label: _vm.$options.filters.trans("auth.account_no"),
-                  name: "account_no",
-                  editable: false,
-                  focus: false,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.user.account_no,
-                  callback: function($$v) {
-                    _vm.$set(_vm.user, "account_no", $$v)
-                  },
-                  expression: "user.account_no"
-                }
-              }),
-              _vm._v(" "),
-              _c("text-input", {
-                attrs: {
-                  defaultValue: _vm.user.beneficiary_name,
-                  required: true,
-                  type: "text",
-                  label: _vm.$options.filters.trans("auth.beneficiary_name"),
-                  name: "beneficiary_name",
-                  editable: false,
-                  focus: false,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.user.beneficiary_name,
-                  callback: function($$v) {
-                    _vm.$set(_vm.user, "beneficiary_name", $$v)
-                  },
-                  expression: "user.beneficiary_name"
-                }
-              }),
-              _vm._v(" "),
-              _c("text-input", {
-                attrs: {
-                  defaultValue: _vm.user.beneficiary_identification,
-                  required: true,
-                  type: "text",
-                  label: _vm.$options.filters.trans(
-                    "auth.beneficiary_identification"
-                  ),
-                  name: "beneficiary_identification",
-                  editable: false,
-                  focus: false,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.user.beneficiary_identification,
-                  callback: function($$v) {
-                    _vm.$set(_vm.user, "beneficiary_identification", $$v)
-                  },
-                  expression: "user.beneficiary_identification"
-                }
-              })
-            ],
-            1
-          )
-        ])
-      ])
-    ]),
-    _vm._v(" "),
-    _vm.user.company_name
-      ? _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-sm" }, [
-            _c("div", { staticClass: "card" }, [
-              _c("div", { staticClass: "card-header" }, [
-                _vm._v(
-                  "\n\t\t\t\t\t" +
-                    _vm._s(_vm._f("trans")("auth.company_info")) +
-                    "\n\t\t\t\t"
+                      on: { input: _vm.updateCountry },
+                      model: {
+                        value: _vm.country,
+                        callback: function($$v) {
+                          _vm.country = $$v
+                        },
+                        expression: "country"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("text-input", {
+                      attrs: {
+                        defaultValue: _vm.form.postcode,
+                        required: true,
+                        type: "text",
+                        placeholder: _vm.$options.filters.trans(
+                          "auth.postcode"
+                        ),
+                        name: "postcode",
+                        editable: true,
+                        focus: false,
+                        hideLabel: true,
+                        error: _vm.form.errors.get("postcode")
+                      },
+                      model: {
+                        value: _vm.form.postcode,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "postcode", $$v)
+                        },
+                        expression: "form.postcode"
+                      }
+                    })
+                  ],
+                  1
                 )
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "card-block" }, [
-                _c("div", { staticClass: "row" }, [
-                  _c(
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("selector-input", {
+                      attrs: {
+                        defaultData: _vm.nationality,
+                        label: _vm.$options.filters.trans("auth.nationality"),
+                        required: true,
+                        name: "nationality",
+                        potentialData: _vm.potentialCountry,
+                        editable: true,
+                        placeholder: _vm.$options.filters.trans(
+                          "auth.nationality"
+                        ),
+                        hideLabel: false
+                      },
+                      on: { input: _vm.updateNationality },
+                      model: {
+                        value: _vm.nationality,
+                        callback: function($$v) {
+                          _vm.nationality = $$v
+                        },
+                        expression: "nationality"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("text-input", {
+                      attrs: {
+                        defaultValue: _vm.form.phone,
+                        required: true,
+                        type: "text",
+                        label: _vm.$options.filters.trans("auth.phone"),
+                        name: "phone",
+                        editable: true,
+                        focus: false,
+                        hideLabel: false,
+                        error: _vm.form.errors.get("phone")
+                      },
+                      model: {
+                        value: _vm.form.phone,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "phone", $$v)
+                        },
+                        expression: "form.phone"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("radio-group-input", {
+                      attrs: {
+                        values: ["male", "female"],
+                        defaultValue: _vm.form.gender,
+                        label: _vm.$options.filters.trans("auth.gender"),
+                        name: "gender"
+                      },
+                      model: {
+                        value: _vm.form.gender,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "gender", $$v)
+                        },
+                        expression: "form.gender"
+                      }
+                    })
+                  ],
+                  1
+                )
+              ]),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("h4", [_vm._v(_vm._s(_vm._f("trans")("auth.company_info")))]),
+              _vm._v(" "),
+              _c("div", { staticClass: "form-check" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.isCompanyRegistration,
+                      expression: "isCompanyRegistration"
+                    }
+                  ],
+                  staticClass: "form-check-input",
+                  attrs: { type: "checkbox", id: "company-registration" },
+                  domProps: {
+                    checked: Array.isArray(_vm.isCompanyRegistration)
+                      ? _vm._i(_vm.isCompanyRegistration, null) > -1
+                      : _vm.isCompanyRegistration
+                  },
+                  on: {
+                    change: function($event) {
+                      var $$a = _vm.isCompanyRegistration,
+                        $$el = $event.target,
+                        $$c = $$el.checked ? true : false
+                      if (Array.isArray($$a)) {
+                        var $$v = null,
+                          $$i = _vm._i($$a, $$v)
+                        if ($$el.checked) {
+                          $$i < 0 &&
+                            (_vm.isCompanyRegistration = $$a.concat([$$v]))
+                        } else {
+                          $$i > -1 &&
+                            (_vm.isCompanyRegistration = $$a
+                              .slice(0, $$i)
+                              .concat($$a.slice($$i + 1)))
+                        }
+                      } else {
+                        _vm.isCompanyRegistration = $$c
+                      }
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "label",
+                  {
+                    staticClass: "form-check-label",
+                    attrs: { for: "company-registration" }
+                  },
+                  [_vm._v(_vm._s(_vm._f("trans")("auth.registering_company")))]
+                )
+              ]),
+              _vm._v(" "),
+              _vm.isCompanyRegistration
+                ? _c(
                     "div",
-                    { staticClass: "col-sm" },
                     [
                       _c("text-input", {
                         attrs: {
-                          defaultValue: _vm.user.company_name,
+                          defaultValue: _vm.form.company_name,
                           required: true,
                           type: "text",
                           label: _vm.$options.filters.trans(
                             "auth.company_name"
                           ),
                           name: "company_name",
-                          editable: false,
-                          focus: true,
-                          hideLabel: false
-                        },
-                        model: {
-                          value: _vm.user.company_name,
-                          callback: function($$v) {
-                            _vm.$set(_vm.user, "company_name", $$v)
-                          },
-                          expression: "user.company_name"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("text-input", {
-                        attrs: {
-                          defaultValue: _vm.user.company_email,
-                          required: true,
-                          type: "text",
-                          label: _vm.$options.filters.trans("auth.email"),
-                          name: "company_email",
-                          editable: false,
-                          focus: true,
-                          hideLabel: false
-                        },
-                        model: {
-                          value: _vm.user.company_email,
-                          callback: function($$v) {
-                            _vm.$set(_vm.user, "company_email", $$v)
-                          },
-                          expression: "user.company_email"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("text-input", {
-                        attrs: {
-                          defaultValue: _vm.user.company_business_registration,
-                          required: true,
-                          type: "text",
-                          label: _vm.$options.filters.trans(
-                            "auth.company_business_registration"
-                          ),
-                          name: "company_business_registration",
-                          editable: false,
+                          editable: true,
                           focus: false,
-                          hideLabel: false
+                          hideLabel: false,
+                          error: _vm.form.errors.get("company_name")
                         },
                         model: {
-                          value: _vm.user.company_business_registration,
+                          value: _vm.form.company_name,
                           callback: function($$v) {
-                            _vm.$set(
-                              _vm.user,
-                              "company_business_registration",
-                              $$v
-                            )
+                            _vm.$set(_vm.form, "company_name", $$v)
                           },
-                          expression: "user.company_business_registration"
+                          expression: "form.company_name"
                         }
                       }),
                       _vm._v(" "),
-                      _c("text-input", {
-                        attrs: {
-                          defaultValue: _vm.user.company_incorporation_place,
-                          required: true,
-                          type: "text",
-                          label: _vm.$options.filters.trans(
-                            "auth.company_incorporation_place"
-                          ),
-                          name: "company_incorporation_place",
-                          editable: false,
-                          focus: false,
-                          hideLabel: false
-                        },
-                        model: {
-                          value: _vm.user.company_incorporation_place,
-                          callback: function($$v) {
-                            _vm.$set(
-                              _vm.user,
-                              "company_incorporation_place",
-                              $$v
-                            )
-                          },
-                          expression: "user.company_incorporation_place"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("text-input", {
-                        attrs: {
-                          defaultValue: _vm.user.company_incorporation_date,
-                          required: true,
-                          type: "text",
-                          label: _vm.$options.filters.trans(
-                            "auth.company_incorporation_date"
-                          ),
-                          name: "company_incorporation_date",
-                          editable: false,
-                          focus: false,
-                          hideLabel: false
-                        },
-                        model: {
-                          value: _vm.user.company_incorporation_date,
-                          callback: function($$v) {
-                            _vm.$set(
-                              _vm.user,
-                              "company_incorporation_date",
-                              $$v
-                            )
-                          },
-                          expression: "user.company_incorporation_date"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("text-input", {
-                        attrs: {
-                          defaultValue: _vm.$options.filters.trans(
-                            "company." + _vm.user.company_type
-                          ),
-                          required: true,
-                          type: "text",
-                          label: _vm.$options.filters.trans(
-                            "auth.company_type"
-                          ),
-                          name: "company_type",
-                          editable: false,
-                          focus: false,
-                          hideLabel: false
-                        },
-                        model: {
-                          value: _vm.user.company_type,
-                          callback: function($$v) {
-                            _vm.$set(_vm.user, "company_type", $$v)
-                          },
-                          expression: "user.company_type"
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("text-input", {
-                        attrs: {
-                          defaultValue: _vm.user.company_address.display,
-                          required: true,
-                          type: "text",
-                          label: _vm.$options.filters.trans("auth.address"),
-                          name: "company_address",
-                          editable: false,
-                          focus: false,
-                          hideLabel: false
-                        },
-                        model: {
-                          value: _vm.user.company_address.display,
-                          callback: function($$v) {
-                            _vm.$set(_vm.user.company_address, "display", $$v)
-                          },
-                          expression: "user.company_address.display"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm" }, [
-                    _c("h6", { staticClass: "card-title" }, [
-                      _vm._v(
-                        "\n\t\t\t\t\t\t\t\t" +
-                          _vm._s(_vm._f("trans")("auth.contact_personnels")) +
-                          "\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t"
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "table-responsive" }, [
-                      _c("table", { staticClass: "table" }, [
-                        _c("thead", [
-                          _c("th", [
-                            _vm._v(_vm._s(_vm._f("trans")("auth.name")))
-                          ]),
-                          _vm._v(" "),
-                          _c("th", [
-                            _vm._v(
-                              _vm._s(
-                                _vm._f("trans")("auth.personnel_designation")
-                              )
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("th", [
-                            _vm._v(_vm._s(_vm._f("trans")("auth.email")))
-                          ]),
-                          _vm._v(" "),
-                          _c("th", [
-                            _vm._v(_vm._s(_vm._f("trans")("auth.phone")))
-                          ])
-                        ]),
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          { staticClass: "col-sm" },
+                          [
+                            _c("text-input", {
+                              attrs: {
+                                defaultValue:
+                                  _vm.form.company_business_registration,
+                                required: true,
+                                type: "text",
+                                label: _vm.$options.filters.trans(
+                                  "auth.company_business_registration"
+                                ),
+                                name: "company_business_registration",
+                                editable: true,
+                                focus: false,
+                                hideLabel: false,
+                                error: _vm.form.errors.get(
+                                  "company_business_registration"
+                                )
+                              },
+                              model: {
+                                value: _vm.form.company_business_registration,
+                                callback: function($$v) {
+                                  _vm.$set(
+                                    _vm.form,
+                                    "company_business_registration",
+                                    $$v
+                                  )
+                                },
+                                expression: "form.company_business_registration"
+                              }
+                            })
+                          ],
+                          1
+                        ),
                         _vm._v(" "),
                         _c(
-                          "tbody",
-                          _vm._l(_vm.contacts, function(personnel, index) {
-                            return _c("tr", [
-                              _c("td", [_vm._v(_vm._s(personnel.name))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(personnel.designation))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(personnel.email))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(personnel.phone))])
-                            ])
-                          })
+                          "div",
+                          { staticClass: "col-sm" },
+                          [
+                            _c("text-input", {
+                              attrs: {
+                                defaultValue:
+                                  _vm.form.company_incorporation_date,
+                                required: true,
+                                type: "date",
+                                label: _vm.$options.filters.trans(
+                                  "auth.company_incorporation_date"
+                                ),
+                                name: "company_incorporation_date",
+                                editable: true,
+                                focus: false,
+                                hideLabel: false,
+                                error: _vm.form.errors.get(
+                                  "company_incorporation_date"
+                                )
+                              },
+                              model: {
+                                value: _vm.form.company_incorporation_date,
+                                callback: function($$v) {
+                                  _vm.$set(
+                                    _vm.form,
+                                    "company_incorporation_date",
+                                    $$v
+                                  )
+                                },
+                                expression: "form.company_incorporation_date"
+                              }
+                            })
+                          ],
+                          1
                         )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          { staticClass: "col-sm" },
+                          [
+                            _c("text-input", {
+                              attrs: {
+                                defaultValue:
+                                  _vm.form.company_incorporation_place,
+                                required: true,
+                                type: "text",
+                                label: _vm.$options.filters.trans(
+                                  "auth.company_incorporation_place"
+                                ),
+                                name: "company_incorporation_place",
+                                editable: true,
+                                focus: false,
+                                hideLabel: false,
+                                error: _vm.form.errors.get(
+                                  "company_incorporation_place"
+                                )
+                              },
+                              model: {
+                                value: _vm.form.company_incorporation_place,
+                                callback: function($$v) {
+                                  _vm.$set(
+                                    _vm.form,
+                                    "company_incorporation_place",
+                                    $$v
+                                  )
+                                },
+                                expression: "form.company_incorporation_place"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "col-sm" },
+                          [
+                            _c("text-input", {
+                              attrs: {
+                                defaultValue: _vm.form.company_regulatory_name,
+                                required: false,
+                                type: "text",
+                                label: _vm.$options.filters.trans(
+                                  "auth.company_regulatory_name"
+                                ),
+                                name: "company_regulatory_name",
+                                editable: true,
+                                focus: false,
+                                hideLabel: false,
+                                error: _vm.form.errors.get(
+                                  "company_regulatory_name"
+                                )
+                              },
+                              model: {
+                                value: _vm.form.company_regulatory_name,
+                                callback: function($$v) {
+                                  _vm.$set(
+                                    _vm.form,
+                                    "company_regulatory_name",
+                                    $$v
+                                  )
+                                },
+                                expression: "form.company_regulatory_name"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "col-sm" },
+                          [
+                            _c("selector-input", {
+                              attrs: {
+                                defaultData: _vm.company_business_entity,
+                                label: _vm.$options.filters.trans(
+                                  "auth.company_type"
+                                ),
+                                required: true,
+                                name: "company_type",
+                                potentialData: _vm.companyTypes,
+                                editable: true,
+                                placeholder: _vm.$options.filters.trans(
+                                  "auth.company_type"
+                                )
+                              },
+                              on: { input: _vm.updateCompanyType },
+                              model: {
+                                value: _vm.company_business_entity,
+                                callback: function($$v) {
+                                  _vm.company_business_entity = $$v
+                                },
+                                expression: "company_business_entity"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("text-input", {
+                        attrs: {
+                          defaultValue: _vm.form.company_address_line_1,
+                          required: true,
+                          type: "text",
+                          label: _vm.$options.filters.trans(
+                            "auth.company_address"
+                          ),
+                          name: "company_address_line_1",
+                          editable: true,
+                          focus: false,
+                          hideLabel: false,
+                          error: _vm.form.errors.get("company_address_line_1")
+                        },
+                        model: {
+                          value: _vm.form.company_address_line_1,
+                          callback: function($$v) {
+                            _vm.$set(_vm.form, "company_address_line_1", $$v)
+                          },
+                          expression: "form.company_address_line_1"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("text-input", {
+                        attrs: {
+                          defaultValue: _vm.form.company_address_line_2,
+                          required: true,
+                          type: "text",
+                          label: _vm.$options.filters.trans(
+                            "auth.company_address"
+                          ),
+                          name: "company_address_line_2",
+                          editable: true,
+                          focus: false,
+                          hideLabel: true,
+                          error: _vm.form.errors.get("company_address_line_2")
+                        },
+                        model: {
+                          value: _vm.form.company_address_line_2,
+                          callback: function($$v) {
+                            _vm.$set(_vm.form, "company_address_line_2", $$v)
+                          },
+                          expression: "form.company_address_line_2"
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          { staticClass: "col-sm" },
+                          [
+                            _c("selector-input", {
+                              attrs: {
+                                defaultData: _vm.companyCountry,
+                                label: _vm.$options.filters.trans(
+                                  "auth.country"
+                                ),
+                                required: true,
+                                name: "company_country",
+                                potentialData: _vm.potentialCountry,
+                                editable: true,
+                                placeholder:
+                                  _vm.$options.filters.trans("auth.country") +
+                                  " *",
+                                hideLabel: true
+                              },
+                              on: { input: _vm.updateCompanyCountry },
+                              model: {
+                                value: _vm.companyCountry,
+                                callback: function($$v) {
+                                  _vm.companyCountry = $$v
+                                },
+                                expression: "companyCountry"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "col-sm" },
+                          [
+                            _c("text-input", {
+                              attrs: {
+                                defaultValue: _vm.form.company_postcode,
+                                required: true,
+                                type: "text",
+                                placeholder: _vm.$options.filters.trans(
+                                  "auth.postcode"
+                                ),
+                                name: "company_postcode",
+                                editable: true,
+                                focus: false,
+                                hideLabel: true,
+                                error: _vm.form.errors.get("company_postcode")
+                              },
+                              model: {
+                                value: _vm.form.company_postcode,
+                                callback: function($$v) {
+                                  _vm.$set(_vm.form, "company_postcode", $$v)
+                                },
+                                expression: "form.company_postcode"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "row" }, [
+                        _c(
+                          "div",
+                          { staticClass: "col-sm" },
+                          [
+                            _c("text-input", {
+                              attrs: {
+                                defaultValue: _vm.form.company_phone,
+                                required: true,
+                                type: "text",
+                                placeholder: _vm.$options.filters.trans(
+                                  "auth.phone"
+                                ),
+                                name: "company_phone",
+                                editable: true,
+                                focus: false,
+                                hideLabel: true,
+                                error: _vm.form.errors.get("company_phone")
+                              },
+                              model: {
+                                value: _vm.form.company_phone,
+                                callback: function($$v) {
+                                  _vm.$set(_vm.form, "company_phone", $$v)
+                                },
+                                expression: "form.company_phone"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "col-sm" },
+                          [
+                            _c("text-input", {
+                              attrs: {
+                                defaultValue: _vm.form.company_email,
+                                required: true,
+                                type: "email",
+                                placeholder: _vm.$options.filters.trans(
+                                  "auth.email"
+                                ),
+                                name: "company_email",
+                                editable: true,
+                                focus: false,
+                                hideLabel: true,
+                                error: _vm.form.errors.get("company_email")
+                              },
+                              model: {
+                                value: _vm.form.company_email,
+                                callback: function($$v) {
+                                  _vm.$set(_vm.form, "company_email", $$v)
+                                },
+                                expression: "form.company_email"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("label", [
+                        _vm._v(
+                          _vm._s(_vm._f("trans")("auth.contact_personnels"))
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "table-responsive" }, [
+                        _c("table", { staticClass: "table" }, [
+                          _c("thead", [
+                            _c("th", [
+                              _vm._v(_vm._s(_vm._f("trans")("auth.name")))
+                            ]),
+                            _vm._v(" "),
+                            _c("th", [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("trans")("auth.personnel_designation")
+                                )
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("th", [
+                              _vm._v(_vm._s(_vm._f("trans")("auth.email")))
+                            ]),
+                            _vm._v(" "),
+                            _c("th", [
+                              _vm._v(_vm._s(_vm._f("trans")("auth.phone")))
+                            ]),
+                            _vm._v(" "),
+                            _c("th", [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "btn btn-sm btn-primary",
+                                  on: {
+                                    click: function($event) {
+                                      _vm.form.personnels.push({
+                                        name: "",
+                                        designation: "",
+                                        email: "",
+                                        phone: ""
+                                      })
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm._f("trans")("auth.add_personnel")
+                                    )
+                                  )
+                                ]
+                              )
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "tbody",
+                            _vm._l(_vm.form.personnels, function(
+                              personnel,
+                              index
+                            ) {
+                              return _c("tr", [
+                                _c(
+                                  "td",
+                                  [
+                                    _vm.form.personnels[index]
+                                      ? _c("text-input", {
+                                          attrs: {
+                                            defaultValue:
+                                              _vm.form.personnels[index].name,
+                                            required: true,
+                                            type: "text",
+                                            name: "personnel-name",
+                                            editable: true,
+                                            focus: false,
+                                            hideLabel: true
+                                          },
+                                          model: {
+                                            value:
+                                              _vm.form.personnels[index].name,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.form.personnels[index],
+                                                "name",
+                                                $$v
+                                              )
+                                            },
+                                            expression:
+                                              "form.personnels[index].name"
+                                          }
+                                        })
+                                      : _vm._e()
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "td",
+                                  [
+                                    _vm.form.personnels[index]
+                                      ? _c("text-input", {
+                                          attrs: {
+                                            defaultValue:
+                                              _vm.form.personnels[index]
+                                                .designation,
+                                            required: true,
+                                            type: "text",
+                                            name: "personnel-designation",
+                                            editable: true,
+                                            focus: false,
+                                            hideLabel: true
+                                          },
+                                          model: {
+                                            value:
+                                              _vm.form.personnels[index]
+                                                .designation,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.form.personnels[index],
+                                                "designation",
+                                                $$v
+                                              )
+                                            },
+                                            expression:
+                                              "form.personnels[index].designation"
+                                          }
+                                        })
+                                      : _vm._e()
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "td",
+                                  [
+                                    _vm.form.personnels[index]
+                                      ? _c("text-input", {
+                                          attrs: {
+                                            defaultValue:
+                                              _vm.form.personnels[index].email,
+                                            required: true,
+                                            type: "email",
+                                            name: "personnel-email",
+                                            editable: true,
+                                            focus: false,
+                                            hideLabel: true
+                                          },
+                                          model: {
+                                            value:
+                                              _vm.form.personnels[index].email,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.form.personnels[index],
+                                                "email",
+                                                $$v
+                                              )
+                                            },
+                                            expression:
+                                              "form.personnels[index].email"
+                                          }
+                                        })
+                                      : _vm._e()
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "td",
+                                  [
+                                    _vm.form.personnels[index]
+                                      ? _c("text-input", {
+                                          attrs: {
+                                            defaultValue:
+                                              _vm.form.personnels[index].phone,
+                                            required: true,
+                                            type: "text",
+                                            name: "personnel-phone",
+                                            editable: true,
+                                            focus: false,
+                                            hideLabel: true
+                                          },
+                                          model: {
+                                            value:
+                                              _vm.form.personnels[index].phone,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.form.personnels[index],
+                                                "phone",
+                                                $$v
+                                              )
+                                            },
+                                            expression:
+                                              "form.personnels[index].phone"
+                                          }
+                                        })
+                                      : _vm._e()
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c("td", [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "btn btn-sm btn-danger",
+                                      on: {
+                                        click: function($event) {
+                                          _vm.personnels.splice(index, 1)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("trans")(
+                                            "auth.remove_personnel"
+                                          )
+                                        )
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            })
+                          )
+                        ])
                       ])
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("h4", [_vm._v(_vm._s(_vm._f("trans")("auth.bank_info")))]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("text-input", {
+                      attrs: {
+                        defaultValue: _vm.form.bank_name,
+                        required: true,
+                        type: "text",
+                        label: _vm.$options.filters.trans("auth.bank_name"),
+                        name: "bank_name",
+                        editable: true,
+                        focus: false,
+                        hideLabel: false,
+                        error: _vm.form.errors.get("bank_name")
+                      },
+                      model: {
+                        value: _vm.form.bank_name,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "bank_name", $$v)
+                        },
+                        expression: "form.bank_name"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("text-input", {
+                      attrs: {
+                        defaultValue: _vm.form.bank_swift,
+                        required: false,
+                        type: "text",
+                        label: _vm.$options.filters.trans("auth.bank_swift"),
+                        name: "bank_swift",
+                        editable: true,
+                        focus: false,
+                        hideLabel: false,
+                        error: _vm.form.errors.get("bank_swift")
+                      },
+                      model: {
+                        value: _vm.form.bank_swift,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "bank_swift", $$v)
+                        },
+                        expression: "form.bank_swift"
+                      }
+                    })
+                  ],
+                  1
+                )
+              ]),
+              _vm._v(" "),
+              _c("text-input", {
+                attrs: {
+                  defaultValue: _vm.form.bank_address,
+                  required: true,
+                  type: "text",
+                  label: _vm.$options.filters.trans("auth.bank_address"),
+                  name: "bank_address",
+                  editable: true,
+                  focus: false,
+                  hideLabel: false,
+                  error: _vm.form.errors.get("bank_address")
+                },
+                model: {
+                  value: _vm.form.bank_address,
+                  callback: function($$v) {
+                    _vm.$set(_vm.form, "bank_address", $$v)
+                  },
+                  expression: "form.bank_address"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("text-input", {
+                      attrs: {
+                        defaultValue: _vm.form.account_type,
+                        required: true,
+                        type: "text",
+                        label: _vm.$options.filters.trans("auth.account_type"),
+                        name: "account_type",
+                        editable: true,
+                        focus: false,
+                        hideLabel: false,
+                        error: _vm.form.errors.get("account_type")
+                      },
+                      model: {
+                        value: _vm.form.account_type,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "account_type", $$v)
+                        },
+                        expression: "form.account_type"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("text-input", {
+                      attrs: {
+                        defaultValue: _vm.form.account_no,
+                        required: true,
+                        type: "text",
+                        label: _vm.$options.filters.trans("auth.account_no"),
+                        name: "account_no",
+                        editable: true,
+                        focus: false,
+                        hideLabel: false,
+                        error: _vm.form.errors.get("account_no")
+                      },
+                      model: {
+                        value: _vm.form.account_no,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "account_no", $$v)
+                        },
+                        expression: "form.account_no"
+                      }
+                    })
+                  ],
+                  1
+                )
+              ]),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c("h4", [
+                _vm._v(_vm._s(_vm._f("trans")("auth.beneficiary_info")))
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row" }, [
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("text-input", {
+                      attrs: {
+                        defaultValue: _vm.form.beneficiary_name,
+                        required: true,
+                        type: "text",
+                        label: _vm.$options.filters.trans(
+                          "auth.beneficiary_name"
+                        ),
+                        name: "beneficiary_name",
+                        editable: true,
+                        focus: false,
+                        hideLabel: false,
+                        error: _vm.form.errors.get("beneficiary_name")
+                      },
+                      model: {
+                        value: _vm.form.beneficiary_name,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "beneficiary_name", $$v)
+                        },
+                        expression: "form.beneficiary_name"
+                      }
+                    })
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-sm" },
+                  [
+                    _c("text-input", {
+                      attrs: {
+                        defaultValue: _vm.form.beneficiary_identification,
+                        required: true,
+                        type: "text",
+                        label: _vm.$options.filters.trans(
+                          "auth.beneficiary_identification"
+                        ),
+                        name: "beneficiary_identification",
+                        editable: true,
+                        focus: false,
+                        hideLabel: false,
+                        error: _vm.form.errors.get("beneficiary_identification")
+                      },
+                      model: {
+                        value: _vm.form.beneficiary_identification,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "beneficiary_identification", $$v)
+                        },
+                        expression: "form.beneficiary_identification"
+                      }
+                    })
+                  ],
+                  1
+                )
+              ]),
+              _vm._v(" "),
+              _c("button", {
+                staticClass: "btn btn-success",
+                attrs: { type: "submit", disabled: _vm.form.submitting },
+                domProps: { innerHTML: _vm._s(_vm.submitButtonContent) }
+              })
+            ],
+            1
+          )
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6bbe077c", module.exports)
+  }
+}
+
+/***/ }),
+/* 342 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "transition",
+        { attrs: { name: "slide-fade", mode: "out-in" } },
+        [
+          !_vm.isEditing
+            ? _c("div", [
+                _c("div", { staticClass: "row mb-3" }, [
+                  _c("div", { staticClass: "col-sm" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        on: {
+                          click: function($event) {
+                            _vm.isEditing = true
+                          }
+                        }
+                      },
+                      [_vm._v(_vm._s(_vm._f("trans")("user.edit_profile")))]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm" }, [
+                    _c("div", { staticClass: "card" }, [
+                      _c("div", { staticClass: "card-header" }, [
+                        _c("div", { staticClass: "row align-items-center" }, [
+                          _c("div", { staticClass: "col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t" +
+                                _vm._s(_vm._f("trans")("auth.personal_info")) +
+                                "\n\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _vm.cancelable
+                            ? _c("div", { staticClass: "col-auto" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-primary",
+                                    on: { click: _vm.back }
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "fa fa-arrow-left"
+                                    }),
+                                    _vm._v(
+                                      " " +
+                                        _vm._s(_vm._f("trans")("table.back"))
+                                    )
+                                  ]
+                                )
+                              ])
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "card-block" },
+                        [
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.referral_code,
+                              required: false,
+                              type: "text",
+                              label: _vm.$options.filters.trans(
+                                "user.referral_code"
+                              ),
+                              name: "referrer",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.referral_code,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "referral_code", $$v)
+                              },
+                              expression: "user.referral_code"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("referral-link", {
+                            attrs: { code: _vm.user.referral_code }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.name,
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans("auth.name"),
+                              name: "name",
+                              editable: false,
+                              focus: true,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.name,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "name", $$v)
+                              },
+                              expression: "user.name"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.identification,
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans(
+                                "auth.identification"
+                              ),
+                              name: "identification",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.identification,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "identification", $$v)
+                              },
+                              expression: "user.identification"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.email,
+                              required: true,
+                              type: "email",
+                              label: _vm.$options.filters.trans("auth.email"),
+                              name: "email",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.email,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "email", $$v)
+                              },
+                              expression: "user.email"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.address,
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans("auth.address"),
+                              name: "address",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.address,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "address", $$v)
+                              },
+                              expression: "user.address"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.nationality,
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans(
+                                "auth.nationality"
+                              ),
+                              name: "nationality",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.nationality,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "nationality", $$v)
+                              },
+                              expression: "user.nationality"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.$options.filters.trans(
+                                "auth.gender_" + _vm.user.gender
+                              ),
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans("auth.gender"),
+                              name: "gender",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.gender,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "gender", $$v)
+                              },
+                              expression: "user.gender"
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm" }, [
+                    _c("div", { staticClass: "card" }, [
+                      _c("div", { staticClass: "card-header" }, [
+                        _c("div", { staticClass: "row align-items-center" }, [
+                          _c("div", { staticClass: "col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t" +
+                                _vm._s(_vm._f("trans")("auth.bank_info")) +
+                                "\n\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _vm.cancelable
+                            ? _c("div", { staticClass: "col-auto" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn btn-primary",
+                                    on: { click: _vm.back }
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "fa fa-arrow-left"
+                                    }),
+                                    _vm._v(
+                                      " " +
+                                        _vm._s(_vm._f("trans")("table.back"))
+                                    )
+                                  ]
+                                )
+                              ])
+                            : _vm._e()
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "card-block" },
+                        [
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.bank_name,
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans(
+                                "auth.bank_name"
+                              ),
+                              name: "bank_name",
+                              editable: false,
+                              focus: true,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.bank_name,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "bank_name", $$v)
+                              },
+                              expression: "user.bank_name"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.bank_swift
+                                ? _vm.user.bank_swift
+                                : "N/A",
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans(
+                                "auth.bank_swift"
+                              ),
+                              name: "bank_swift",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.bank_swift,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "bank_swift", $$v)
+                              },
+                              expression: "user.bank_swift"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.bank_address,
+                              required: true,
+                              type: "bank_address",
+                              label: _vm.$options.filters.trans(
+                                "auth.bank_address"
+                              ),
+                              name: "bank_address",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.bank_address,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "bank_address", $$v)
+                              },
+                              expression: "user.bank_address"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.account_type,
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans(
+                                "auth.account_type"
+                              ),
+                              name: "account_type",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.account_type,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "account_type", $$v)
+                              },
+                              expression: "user.account_type"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.account_no,
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans(
+                                "auth.account_no"
+                              ),
+                              name: "account_no",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.account_no,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "account_no", $$v)
+                              },
+                              expression: "user.account_no"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.beneficiary_name,
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans(
+                                "auth.beneficiary_name"
+                              ),
+                              name: "beneficiary_name",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.beneficiary_name,
+                              callback: function($$v) {
+                                _vm.$set(_vm.user, "beneficiary_name", $$v)
+                              },
+                              expression: "user.beneficiary_name"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
+                              defaultValue: _vm.user.beneficiary_identification,
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans(
+                                "auth.beneficiary_identification"
+                              ),
+                              name: "beneficiary_identification",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            },
+                            model: {
+                              value: _vm.user.beneficiary_identification,
+                              callback: function($$v) {
+                                _vm.$set(
+                                  _vm.user,
+                                  "beneficiary_identification",
+                                  $$v
+                                )
+                              },
+                              expression: "user.beneficiary_identification"
+                            }
+                          })
+                        ],
+                        1
+                      )
                     ])
                   ])
-                ])
+                ]),
+                _vm._v(" "),
+                _vm.user.company_name
+                  ? _c("div", { staticClass: "row" }, [
+                      _c("div", { staticClass: "col-sm" }, [
+                        _c("div", { staticClass: "card" }, [
+                          _c("div", { staticClass: "card-header" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t" +
+                                _vm._s(_vm._f("trans")("auth.company_info")) +
+                                "\n\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "card-block" }, [
+                            _c("div", { staticClass: "row" }, [
+                              _c(
+                                "div",
+                                { staticClass: "col-sm" },
+                                [
+                                  _c("text-input", {
+                                    attrs: {
+                                      defaultValue: _vm.user.company_name,
+                                      required: true,
+                                      type: "text",
+                                      label: _vm.$options.filters.trans(
+                                        "auth.company_name"
+                                      ),
+                                      name: "company_name",
+                                      editable: false,
+                                      focus: true,
+                                      hideLabel: false
+                                    },
+                                    model: {
+                                      value: _vm.user.company_name,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.user, "company_name", $$v)
+                                      },
+                                      expression: "user.company_name"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("text-input", {
+                                    attrs: {
+                                      defaultValue: _vm.user.company_email,
+                                      required: true,
+                                      type: "text",
+                                      label: _vm.$options.filters.trans(
+                                        "auth.email"
+                                      ),
+                                      name: "company_email",
+                                      editable: false,
+                                      focus: true,
+                                      hideLabel: false
+                                    },
+                                    model: {
+                                      value: _vm.user.company_email,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.user, "company_email", $$v)
+                                      },
+                                      expression: "user.company_email"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("text-input", {
+                                    attrs: {
+                                      defaultValue:
+                                        _vm.user.company_business_registration,
+                                      required: true,
+                                      type: "text",
+                                      label: _vm.$options.filters.trans(
+                                        "auth.company_business_registration"
+                                      ),
+                                      name: "company_business_registration",
+                                      editable: false,
+                                      focus: false,
+                                      hideLabel: false
+                                    },
+                                    model: {
+                                      value:
+                                        _vm.user.company_business_registration,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.user,
+                                          "company_business_registration",
+                                          $$v
+                                        )
+                                      },
+                                      expression:
+                                        "user.company_business_registration"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("text-input", {
+                                    attrs: {
+                                      defaultValue:
+                                        _vm.user.company_incorporation_place,
+                                      required: true,
+                                      type: "text",
+                                      label: _vm.$options.filters.trans(
+                                        "auth.company_incorporation_place"
+                                      ),
+                                      name: "company_incorporation_place",
+                                      editable: false,
+                                      focus: false,
+                                      hideLabel: false
+                                    },
+                                    model: {
+                                      value:
+                                        _vm.user.company_incorporation_place,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.user,
+                                          "company_incorporation_place",
+                                          $$v
+                                        )
+                                      },
+                                      expression:
+                                        "user.company_incorporation_place"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("text-input", {
+                                    attrs: {
+                                      defaultValue:
+                                        _vm.user.company_regulatory_name,
+                                      required: true,
+                                      type: "text",
+                                      label: _vm.$options.filters.trans(
+                                        "auth.company_regulatory_name"
+                                      ),
+                                      name: "company_regulatory_name",
+                                      editable: false,
+                                      focus: false,
+                                      hideLabel: false
+                                    },
+                                    model: {
+                                      value: _vm.user.company_regulatory_name,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.user,
+                                          "company_regulatory_name",
+                                          $$v
+                                        )
+                                      },
+                                      expression: "user.company_regulatory_name"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("text-input", {
+                                    attrs: {
+                                      defaultValue:
+                                        _vm.user.company_incorporation_date,
+                                      required: true,
+                                      type: "text",
+                                      label: _vm.$options.filters.trans(
+                                        "auth.company_incorporation_date"
+                                      ),
+                                      name: "company_incorporation_date",
+                                      editable: false,
+                                      focus: false,
+                                      hideLabel: false
+                                    },
+                                    model: {
+                                      value:
+                                        _vm.user.company_incorporation_date,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.user,
+                                          "company_incorporation_date",
+                                          $$v
+                                        )
+                                      },
+                                      expression:
+                                        "user.company_incorporation_date"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("text-input", {
+                                    attrs: {
+                                      defaultValue: _vm.$options.filters.trans(
+                                        "company." + _vm.user.company_type
+                                      ),
+                                      required: true,
+                                      type: "text",
+                                      label: _vm.$options.filters.trans(
+                                        "auth.company_type"
+                                      ),
+                                      name: "company_type",
+                                      editable: false,
+                                      focus: false,
+                                      hideLabel: false
+                                    },
+                                    model: {
+                                      value: _vm.user.company_type,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.user, "company_type", $$v)
+                                      },
+                                      expression: "user.company_type"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("text-input", {
+                                    attrs: {
+                                      defaultValue:
+                                        _vm.user.company_address.display,
+                                      required: true,
+                                      type: "text",
+                                      label: _vm.$options.filters.trans(
+                                        "auth.address"
+                                      ),
+                                      name: "company_address",
+                                      editable: false,
+                                      focus: false,
+                                      hideLabel: false
+                                    },
+                                    model: {
+                                      value: _vm.user.company_address.display,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.user.company_address,
+                                          "display",
+                                          $$v
+                                        )
+                                      },
+                                      expression: "user.company_address.display"
+                                    }
+                                  })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "col-sm" }, [
+                                _c("h6", { staticClass: "card-title" }, [
+                                  _vm._v(
+                                    "\n\t\t\t\t\t\t\t\t\t\t" +
+                                      _vm._s(
+                                        _vm._f("trans")(
+                                          "auth.contact_personnels"
+                                        )
+                                      ) +
+                                      "\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t"
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "table-responsive" }, [
+                                  _c("table", { staticClass: "table" }, [
+                                    _c("thead", [
+                                      _c("th", [
+                                        _vm._v(
+                                          _vm._s(_vm._f("trans")("auth.name"))
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("th", [
+                                        _vm._v(
+                                          _vm._s(
+                                            _vm._f("trans")(
+                                              "auth.personnel_designation"
+                                            )
+                                          )
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("th", [
+                                        _vm._v(
+                                          _vm._s(_vm._f("trans")("auth.email"))
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("th", [
+                                        _vm._v(
+                                          _vm._s(_vm._f("trans")("auth.phone"))
+                                        )
+                                      ])
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "tbody",
+                                      _vm._l(_vm.contacts, function(
+                                        personnel,
+                                        index
+                                      ) {
+                                        return _c("tr", [
+                                          _c("td", [
+                                            _vm._v(_vm._s(personnel.name))
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("td", [
+                                            _vm._v(
+                                              _vm._s(personnel.designation)
+                                            )
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("td", [
+                                            _vm._v(_vm._s(personnel.email))
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("td", [
+                                            _vm._v(_vm._s(personnel.phone))
+                                          ])
+                                        ])
+                                      })
+                                    )
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  : _vm._e()
               ])
-            ])
-          ])
-        ])
-      : _vm._e()
-  ])
+            : _c("user", {
+                attrs: { selectedUser: _vm.user },
+                on: { back: _vm.editComplete }
+              })
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -73852,15 +76129,15 @@ if (false) {
 }
 
 /***/ }),
-/* 340 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(341)
+var __vue_script__ = __webpack_require__(344)
 /* template */
-var __vue_template__ = __webpack_require__(348)
+var __vue_template__ = __webpack_require__(351)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -73899,12 +76176,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 341 */
+/* 344 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Purchase_vue__ = __webpack_require__(342);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Purchase_vue__ = __webpack_require__(345);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Purchase_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Purchase_vue__);
 //
 //
@@ -73999,15 +76276,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 342 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(343)
+var __vue_script__ = __webpack_require__(346)
 /* template */
-var __vue_template__ = __webpack_require__(347)
+var __vue_template__ = __webpack_require__(350)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -74046,12 +76323,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 343 */
+/* 346 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Payment_vue__ = __webpack_require__(344);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Payment_vue__ = __webpack_require__(347);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Payment_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Payment_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixins_form_button_js__ = __webpack_require__(183);
 //
@@ -74316,15 +76593,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 344 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(345)
+var __vue_script__ = __webpack_require__(348)
 /* template */
-var __vue_template__ = __webpack_require__(346)
+var __vue_template__ = __webpack_require__(349)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -74363,7 +76640,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 345 */
+/* 348 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -74530,7 +76807,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 346 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -74739,7 +77016,7 @@ if (false) {
 }
 
 /***/ }),
-/* 347 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -75140,7 +77417,7 @@ if (false) {
 }
 
 /***/ }),
-/* 348 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -75196,15 +77473,15 @@ if (false) {
 }
 
 /***/ }),
-/* 349 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(350)
+var __vue_script__ = __webpack_require__(353)
 /* template */
-var __vue_template__ = __webpack_require__(354)
+var __vue_template__ = __webpack_require__(357)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -75243,12 +77520,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 350 */
+/* 353 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Package_vue__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Package_vue__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Package_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Package_vue__);
 //
 //
@@ -75321,15 +77598,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 351 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(352)
+var __vue_script__ = __webpack_require__(355)
 /* template */
-var __vue_template__ = __webpack_require__(353)
+var __vue_template__ = __webpack_require__(356)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -75368,12 +77645,15 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 352 */
+/* 355 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_form_button_js__ = __webpack_require__(183);
+//
+//
+//
 //
 //
 //
@@ -75521,7 +77801,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 353 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -75581,7 +77861,8 @@ var render = function() {
                   name: "tree_count",
                   editable: true,
                   focus: true,
-                  hideLabel: false
+                  hideLabel: false,
+                  error: _vm.form.errors.get("tree_count")
                 },
                 model: {
                   value: _vm.form.tree_count,
@@ -75606,7 +77887,8 @@ var render = function() {
                         name: "price",
                         editable: true,
                         focus: false,
-                        hideLabel: false
+                        hideLabel: false,
+                        error: _vm.form.errors.get("price")
                       },
                       model: {
                         value: _vm.form.price,
@@ -75620,7 +77902,7 @@ var render = function() {
                     _c("text-input", {
                       attrs: {
                         defaultValue: _vm.form.price_promotion,
-                        required: true,
+                        required: false,
                         type: "number",
                         label: _vm.$options.filters.trans(
                           "package.price_promotion"
@@ -75655,7 +77937,8 @@ var render = function() {
                         name: "price_std",
                         editable: true,
                         focus: false,
-                        hideLabel: false
+                        hideLabel: false,
+                        error: _vm.form.errors.get("price_std")
                       },
                       model: {
                         value: _vm.form.price_std,
@@ -75669,7 +77952,7 @@ var render = function() {
                     _c("text-input", {
                       attrs: {
                         defaultValue: _vm.form.price_std_promotion,
-                        required: true,
+                        required: false,
                         type: "number",
                         label: _vm.$options.filters.trans(
                           "package.price_std_promotion"
@@ -75716,7 +77999,7 @@ if (false) {
 }
 
 /***/ }),
-/* 354 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -75769,15 +78052,15 @@ if (false) {
 }
 
 /***/ }),
-/* 355 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(356)
+var __vue_script__ = __webpack_require__(359)
 /* template */
-var __vue_template__ = __webpack_require__(357)
+var __vue_template__ = __webpack_require__(360)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -75816,7 +78099,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 356 */
+/* 359 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -75897,7 +78180,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 357 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -75949,15 +78232,15 @@ if (false) {
 }
 
 /***/ }),
-/* 358 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(359)
+var __vue_script__ = __webpack_require__(362)
 /* template */
-var __vue_template__ = __webpack_require__(363)
+var __vue_template__ = __webpack_require__(366)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -75996,12 +78279,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 359 */
+/* 362 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_GenoRow_vue__ = __webpack_require__(360);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_GenoRow_vue__ = __webpack_require__(363);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_GenoRow_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_GenoRow_vue__);
 //
 //
@@ -76062,15 +78345,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 360 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(361)
+var __vue_script__ = __webpack_require__(364)
 /* template */
-var __vue_template__ = __webpack_require__(362)
+var __vue_template__ = __webpack_require__(365)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -76109,7 +78392,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 361 */
+/* 364 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -76153,7 +78436,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 362 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -76212,7 +78495,7 @@ if (false) {
 }
 
 /***/ }),
-/* 363 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -76251,7 +78534,7 @@ if (false) {
 }
 
 /***/ }),
-/* 364 */
+/* 367 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -76304,7 +78587,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 365 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -76349,15 +78632,15 @@ if (false) {
 }
 
 /***/ }),
-/* 366 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(367)
+var __vue_script__ = __webpack_require__(370)
 /* template */
-var __vue_template__ = __webpack_require__(368)
+var __vue_template__ = __webpack_require__(371)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -76396,7 +78679,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 367 */
+/* 370 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -76514,7 +78797,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 368 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -76586,7 +78869,7 @@ if (false) {
 }
 
 /***/ }),
-/* 369 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -76602,7 +78885,7 @@ window.Popper = __webpack_require__(313).default;
 try {
   window.$ = window.jQuery = __webpack_require__(314);
 
-  __webpack_require__(370);
+  __webpack_require__(373);
 } catch (e) {}
 
 /**
@@ -76656,7 +78939,7 @@ window.flash = function (message) {
 };
 
 /***/ }),
-/* 370 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -80589,15 +82872,142 @@ window.flash = function (message) {
 
 
 /***/ }),
-/* 371 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(372)
+var __vue_script__ = __webpack_require__(375)
 /* template */
-var __vue_template__ = __webpack_require__(373)
+var __vue_template__ = __webpack_require__(376)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\base\\RadioGroupInput.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5b3fa18c", Component.options)
+  } else {
+    hotAPI.reload("data-v-5b3fa18c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 375 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	props: ['defaultValue', 'values', 'label', 'name'],
+	data: function data() {
+		return {};
+	},
+
+
+	methods: {
+		updateValue: function updateValue(value) {
+			this.$emit('input', value);
+		}
+	}
+});
+
+/***/ }),
+/* 376 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "form-group" },
+    [
+      _c("label", [_vm._v(_vm._s(_vm.label))]),
+      _c("br"),
+      _vm._v(" "),
+      _vm._l(_vm.values, function(value) {
+        return _c("div", { staticClass: "form-check form-check-inline" }, [
+          _c("input", {
+            staticClass: "form-check-input",
+            attrs: { name: _vm.name, type: "radio", id: value },
+            domProps: { value: value, checked: value == _vm.defaultValue },
+            on: {
+              click: function($event) {
+                _vm.updateValue(value)
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            { staticClass: "form-check-label", attrs: { for: value } },
+            [_vm._v(_vm._s(_vm._f("trans")("input." + value)))]
+          )
+        ])
+      })
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5b3fa18c", module.exports)
+  }
+}
+
+/***/ }),
+/* 377 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(378)
+/* template */
+var __vue_template__ = __webpack_require__(379)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -80636,7 +83046,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 372 */
+/* 378 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80688,7 +83098,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 373 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -80764,15 +83174,15 @@ if (false) {
 }
 
 /***/ }),
-/* 374 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(375)
+var __vue_script__ = __webpack_require__(381)
 /* template */
-var __vue_template__ = __webpack_require__(376)
+var __vue_template__ = __webpack_require__(382)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -80811,7 +83221,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 375 */
+/* 381 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80858,7 +83268,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 376 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -80910,15 +83320,15 @@ if (false) {
 }
 
 /***/ }),
-/* 377 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(378)
+var __vue_script__ = __webpack_require__(384)
 /* template */
-var __vue_template__ = __webpack_require__(379)
+var __vue_template__ = __webpack_require__(385)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -80957,7 +83367,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 378 */
+/* 384 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81004,7 +83414,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 379 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -81058,15 +83468,15 @@ if (false) {
 }
 
 /***/ }),
-/* 380 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(381)
+var __vue_script__ = __webpack_require__(387)
 /* template */
-var __vue_template__ = __webpack_require__(382)
+var __vue_template__ = __webpack_require__(388)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -81105,7 +83515,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 381 */
+/* 387 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81159,7 +83569,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 382 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -81244,15 +83654,15 @@ if (false) {
 }
 
 /***/ }),
-/* 383 */
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(384)
+var __vue_script__ = __webpack_require__(390)
 /* template */
-var __vue_template__ = __webpack_require__(385)
+var __vue_template__ = __webpack_require__(391)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -81291,7 +83701,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 384 */
+/* 390 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81353,7 +83763,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 385 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -81403,15 +83813,15 @@ if (false) {
 }
 
 /***/ }),
-/* 386 */
+/* 392 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(387)
+var __vue_script__ = __webpack_require__(393)
 /* template */
-var __vue_template__ = __webpack_require__(388)
+var __vue_template__ = __webpack_require__(394)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -81450,7 +83860,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 387 */
+/* 393 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81488,7 +83898,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 388 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -81534,15 +83944,15 @@ if (false) {
 }
 
 /***/ }),
-/* 389 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(390)
+var __vue_script__ = __webpack_require__(396)
 /* template */
-var __vue_template__ = __webpack_require__(391)
+var __vue_template__ = __webpack_require__(397)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -81581,7 +83991,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 390 */
+/* 396 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81610,7 +84020,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 391 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -81640,7 +84050,7 @@ if (false) {
 }
 
 /***/ }),
-/* 392 */
+/* 398 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

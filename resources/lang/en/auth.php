@@ -44,6 +44,7 @@ return [
     'registration_complete' => 'Registration complete, you may now close this window',
     'identification' => 'Passport/NRIC',
     'address' => 'Address',
+    'address_line' => 'Address Line',
     'postcode' => 'Postcode',
     'nationality' => 'Nationality',
     'phone' => 'Contact No.',
