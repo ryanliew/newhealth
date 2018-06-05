@@ -1,8 +1,7 @@
 <template>
 	<div>
 		<transition name="slide-fade" mode="out-in">
-			<transaction-page @back="back" v-if="isViewingDetails" :userId="selectedUserId"></transaction-page>
-			<div v-else>
+			<div v-if="!isViewingDetails">
 				<table-view ref="transactions"
 							:fields="fields"
 							:title="$options.filters.trans('transaction.payouts')"
@@ -25,6 +24,7 @@
 							monthFilterKey="transactions.date">
 				</table-view>
 			</div>
+			<transaction-page @back="back" v-else :userId="selectedUserId" :filterMonth="filterMonth"></transaction-page>
 		</transition>
 	</div>
 </template>
@@ -62,6 +62,7 @@
 				searchables: "",
 				selectedUser: "",
 				month: moment(),
+				filterMonth: '',
 				isViewingDetails: false,
 				payForm: new Form({
 					user_id: "",
@@ -88,6 +89,7 @@
 			},
 
 			view(data) {
+				this.filterMonth = this.$refs.transactions.getMonth();
 				this.selectedUserId = data.user_id;
 				this.isViewingDetails = true;
 			},

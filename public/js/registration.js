@@ -50031,6 +50031,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -50040,7 +50042,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack'],
+	props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth'],
 
 	components: { Vuetable: __WEBPACK_IMPORTED_MODULE_0_vuetable_2_src_components_Vuetable___default.a, VuetablePagination: __WEBPACK_IMPORTED_MODULE_1__VuetablepaginationBulma___default.a, VuetablePaginationInfo: __WEBPACK_IMPORTED_MODULE_2_vuetable_2_src_components_VuetablePaginationInfo___default.a, VuetableFilterBar: __WEBPACK_IMPORTED_MODULE_3__VuetableFilterBar___default.a, Loader: __WEBPACK_IMPORTED_MODULE_5__Loader___default.a },
 
@@ -50052,10 +50054,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				descendingIcon: 'fa fa-caret-down'
 			},
 			params: {},
-			loading: true,
-			filterMonth: ''
+			loading: true
 		};
 	},
+
+
+	destroyed: function destroyed() {
+		this.$events.off('filter-set');
+		this.$events.off('filter-reset');
+	},
+
 	mounted: function mounted() {
 		var _this = this;
 
@@ -54431,7 +54439,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['dateFilterable', 'addNew', 'searchables', 'monthFilterable'],
+    props: ['dateFilterable', 'addNew', 'searchables', 'monthFilterable', 'defaultFilterMonth'],
 
     data: function data() {
         return {
@@ -54442,8 +54450,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         };
     },
     mounted: function mounted() {
-        this.filterMonth = __WEBPACK_IMPORTED_MODULE_0_moment___default()().format("YYYY-MM-DD");
-        this.doFilter();
+        var _this = this;
+
+        this.filterMonth = this.defaultFilterMonth ? this.defaultFilterMonth : __WEBPACK_IMPORTED_MODULE_0_moment___default()().format("YYYY-MM-DD");
+        this.filterDateStart = this.defaultFilterMonth ? __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.defaultFilterMonth).startOf('month').format("YYYY-MM-DD") : '';
+        this.filterDateEnd = this.defaultFilterMonth ? __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.defaultFilterMonth).endOf('month').format("YYYY-MM-DD") : '';
+
+        Vue.nextTick(function () {
+            return _this.doFilter();
+        });
     },
 
 
@@ -54728,38 +54743,46 @@ var render = function() {
             searchables: _vm.searchables,
             dateFilterable: _vm.dateFilterable,
             monthFilterable: _vm.monthFilterable,
-            addNew: _vm.addNew
+            addNew: _vm.addNew,
+            defaultFilterMonth: _vm.filterMonth
           }
         }),
         _vm._v(" "),
-        _c("vuetable", {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: !_vm.loading,
-              expression: "!loading"
-            }
+        _c(
+          "div",
+          { staticClass: "table-responsive" },
+          [
+            _c("vuetable", {
+              directives: [
+                {
+                  name: "show",
+                  rawName: "v-show",
+                  value: !_vm.loading,
+                  expression: "!loading"
+                }
+              ],
+              ref: "vuetable",
+              attrs: {
+                "api-url": _vm.url,
+                fields: _vm.fields,
+                httpFetch: _vm.customFetch,
+                "multi-sort": true,
+                css: _vm.css,
+                "append-params": _vm.params,
+                "detail-row-component": _vm.detail,
+                "pagination-path": "",
+                "no-data-template": _vm.empty
+              },
+              on: {
+                "vuetable:pagination-data": _vm.onPaginationData,
+                "vuetable:loaded": _vm.onLoaded,
+                "vuetable-refresh": _vm.refreshTable,
+                "vuetable:cell-clicked": _vm.onCellClicked
+              }
+            })
           ],
-          ref: "vuetable",
-          attrs: {
-            "api-url": _vm.url,
-            fields: _vm.fields,
-            httpFetch: _vm.customFetch,
-            "multi-sort": true,
-            css: _vm.css,
-            "append-params": _vm.params,
-            "detail-row-component": _vm.detail,
-            "pagination-path": "",
-            "no-data-template": _vm.empty
-          },
-          on: {
-            "vuetable:pagination-data": _vm.onPaginationData,
-            "vuetable:loaded": _vm.onLoaded,
-            "vuetable-refresh": _vm.refreshTable,
-            "vuetable:cell-clicked": _vm.onCellClicked
-          }
-        }),
+          1
+        ),
         _vm._v(" "),
         _c("div", { staticClass: "row align-items-center" }, [
           _c(

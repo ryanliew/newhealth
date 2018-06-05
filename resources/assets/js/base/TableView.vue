@@ -14,23 +14,25 @@
 		
 		<div class="card-body">
 			<loader v-if="loading"></loader>
-			<vuetable-filter-bar :searchables="searchables" :dateFilterable="dateFilterable" :monthFilterable="monthFilterable" :addNew="addNew"></vuetable-filter-bar>	
-			<vuetable ref="vuetable" 
-					:api-url="url"
-		    		:fields="fields"
-		    		:httpFetch="customFetch"
-		    		:multi-sort="true"
-		    		:css="css"
-		    		:append-params="params"
-		    		:detail-row-component="detail"
-		    		pagination-path=""
-		    		@vuetable:pagination-data="onPaginationData"
-		    		@vuetable:loaded="onLoaded"
-		    		@vuetable-refresh="refreshTable"
-		    		@vuetable:cell-clicked="onCellClicked"
-		    		:no-data-template="empty"
-		    		v-show="!loading">	
-		    </vuetable>
+			<vuetable-filter-bar :searchables="searchables" :dateFilterable="dateFilterable" :monthFilterable="monthFilterable" :addNew="addNew" :defaultFilterMonth="filterMonth"></vuetable-filter-bar>
+			<div class="table-responsive">
+				<vuetable ref="vuetable" 
+						:api-url="url"
+			    		:fields="fields"
+			    		:httpFetch="customFetch"
+			    		:multi-sort="true"
+			    		:css="css"
+			    		:append-params="params"
+			    		:detail-row-component="detail"
+			    		pagination-path=""
+			    		@vuetable:pagination-data="onPaginationData"
+			    		@vuetable:loaded="onLoaded"
+			    		@vuetable-refresh="refreshTable"
+			    		@vuetable:cell-clicked="onCellClicked"
+			    		:no-data-template="empty"
+			    		v-show="!loading">	
+			    </vuetable>
+			</div>
 		    <div class="row align-items-center">
 		    	<div class="col-sm">
 				    <vuetable-pagination-info ref="paginationInfo"
@@ -57,7 +59,7 @@
 	import Loader from './Loader';
 
 	export default {
-		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack'],
+		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth'],
 
 		components: { Vuetable, VuetablePagination, VuetablePaginationInfo, VuetableFilterBar, Loader },
 
@@ -69,9 +71,13 @@
 					descendingIcon: 'fa fa-caret-down',
 				},
 				params: {},
-				loading: true,
-				filterMonth: ''
+				loading: true
 			};
+		},
+
+		destroyed: function () {
+			this.$events.off('filter-set');
+			this.$events.off('filter-reset');
 		},
 
 		mounted() {

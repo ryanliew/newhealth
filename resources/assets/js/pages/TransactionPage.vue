@@ -9,6 +9,7 @@
 						:dateFilterable="true"
 						dateFilterKey="transactions.date"
 						:hasBack="true"
+						:filterMonth="filterMonth"
 						@back="back">
 			</table-view>
 		</transition>
@@ -17,7 +18,7 @@
 
 <script>
 	export default {
-		props: ['userId'],
+		props: ['userId', 'filterMonth'],
 
 		data() {
 			return {
