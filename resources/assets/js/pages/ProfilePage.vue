@@ -77,6 +77,16 @@
 									:focus="false"
 									:hideLabel="false">
 								</text-input>
+								
+								<text-input :defaultValue="contactNumber"
+									:required="true"
+									type="text"
+									:label="$options.filters.trans('auth.phone')"
+									name="phone"
+									:editable="false"
+									:focus="false"
+									:hideLabel="false">
+								</text-input>
 
 								<text-input v-model="user.nationality" 
 									:defaultValue="user.nationality"
@@ -99,6 +109,7 @@
 									:focus="false"
 									:hideLabel="false">
 								</text-input>
+
 
 								<!-- <text-input
 									:defaultValue="user.package.tree_count + ' ' + $options.filters.trans_choice('auth.tree', user.package.tree_count)"
@@ -303,6 +314,16 @@
 											:focus="false"
 											:hideLabel="false">
 										</text-input>
+
+										<text-input :defaultValue="companyContactNumber"
+											:required="true"
+											type="text"
+											:label="$options.filters.trans('auth.phone')"
+											name="phone"
+											:editable="false"
+											:focus="false"
+											:hideLabel="false">
+										</text-input>
 									</div>
 									<div class="col-sm">
 										<h6 class="card-title">
@@ -391,6 +412,30 @@
 
 			back() {
 				this.$emit('back');
+			}
+		},
+
+		computed: {
+			contactNumber() {
+				if(this.user)
+				{
+					return _.filter(this.user.addresses, function(address){
+						return address.type == "personal";
+					})[0].phone;
+				}
+
+				return '';
+			},
+
+			companyContactNumber() {
+				if(this.user && this.user.addresses.length > 1)
+				{
+					return _.filter(this.user.addresses, function(address){
+						return address.type == "company";
+					})[0].phone;
+				}
+
+				return '';
 			}
 		}	
 	}

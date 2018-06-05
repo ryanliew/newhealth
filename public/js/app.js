@@ -19077,6 +19077,27 @@ module.exports = { "en.auth": { "account_no": "Account No.", "account_type": "Ac
 
 /***/ }),
 /* 182 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+	data: function data() {
+		return {
+			submitText: 'form.submit',
+			form: new Form({})
+		};
+	},
+
+
+	computed: {
+		submitButtonContent: function submitButtonContent() {
+			return this.form.submitting ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : this.$options.filters.trans(this.submitText);
+		}
+	}
+});
+
+/***/ }),
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -19121,27 +19142,6 @@ if (false) {(function () {
 
 module.exports = Component.exports
 
-
-/***/ }),
-/* 183 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({
-	data: function data() {
-		return {
-			submitText: 'form.submit',
-			form: new Form({})
-		};
-	},
-
-
-	computed: {
-		submitButtonContent: function submitButtonContent() {
-			return this.form.submitting ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : this.$options.filters.trans(this.submitText);
-		}
-	}
-});
 
 /***/ }),
 /* 184 */
@@ -68900,7 +68900,7 @@ Vue.component('table-view', __webpack_require__(224));
 Vue.component('text-input', __webpack_require__(294));
 Vue.component('textarea-input', __webpack_require__(297));
 Vue.component('checkbox-input', __webpack_require__(302));
-Vue.component('selector-input', __webpack_require__(182));
+Vue.component('selector-input', __webpack_require__(183));
 Vue.component('image-input', __webpack_require__(308));
 Vue.component('radio-group-input', __webpack_require__(374));
 
@@ -72122,17 +72122,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("a", { staticClass: "site-logo", attrs: { href: "#" } }, [
-      _c("img", {
-        staticClass: "hidden-md-down",
-        attrs: { src: "/img/favicon.png", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "hidden-lg-down",
-        attrs: { src: "/img/favicon.png", alt: "" }
-      })
-    ])
+    return _c(
+      "a",
+      {
+        staticClass: "site-logo",
+        attrs: { href: "http://www.newleaf.com.my" }
+      },
+      [
+        _c("img", {
+          staticClass: "hidden-md-down",
+          attrs: { src: "/img/favicon.png", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("img", {
+          staticClass: "hidden-lg-down",
+          attrs: { src: "/img/favicon.png", alt: "" }
+        })
+      ]
+    )
   },
   function() {
     var _vm = this
@@ -73106,6 +73113,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -73157,6 +73185,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		back: function back() {
 			this.$emit('back');
+		}
+	},
+
+	computed: {
+		contactNumber: function contactNumber() {
+			if (this.user) {
+				return _.filter(this.user.addresses, function (address) {
+					return address.type == "personal";
+				})[0].phone;
+			}
+
+			return '';
+		},
+		companyContactNumber: function companyContactNumber() {
+			if (this.user && this.user.addresses.length > 1) {
+				return _.filter(this.user.addresses, function (address) {
+					return address.type == "company";
+				})[0].phone;
+			}
+
+			return '';
 		}
 	}
 });
@@ -73351,7 +73400,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_form_button_js__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_form_button_js__ = __webpack_require__(182);
 //
 //
 //
@@ -75566,6 +75615,19 @@ var render = function() {
                           _vm._v(" "),
                           _c("text-input", {
                             attrs: {
+                              defaultValue: _vm.contactNumber,
+                              required: true,
+                              type: "text",
+                              label: _vm.$options.filters.trans("auth.phone"),
+                              name: "phone",
+                              editable: false,
+                              focus: false,
+                              hideLabel: false
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("text-input", {
+                            attrs: {
                               defaultValue: _vm.user.nationality,
                               required: true,
                               type: "text",
@@ -76043,6 +76105,21 @@ var render = function() {
                                       },
                                       expression: "user.company_address.display"
                                     }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("text-input", {
+                                    attrs: {
+                                      defaultValue: _vm.companyContactNumber,
+                                      required: true,
+                                      type: "text",
+                                      label: _vm.$options.filters.trans(
+                                        "auth.phone"
+                                      ),
+                                      name: "phone",
+                                      editable: false,
+                                      focus: false,
+                                      hideLabel: false
+                                    }
                                   })
                                 ],
                                 1
@@ -76353,7 +76430,7 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Payment_vue__ = __webpack_require__(347);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Payment_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Payment_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixins_form_button_js__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mixins_form_button_js__ = __webpack_require__(182);
 //
 //
 //
@@ -76668,7 +76745,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_form_button_js__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_form_button_js__ = __webpack_require__(182);
 //
 //
 //
@@ -77673,7 +77750,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_form_button_js__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mixins_form_button_js__ = __webpack_require__(182);
 //
 //
 //
