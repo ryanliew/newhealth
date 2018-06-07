@@ -167,7 +167,7 @@ class User extends Authenticatable
     // Adjust user level
     public function adjust_level()
     {
-        $number_of_children = $this->children->count();
+        $number_of_children = $this->children()->where('tree_count', '>', 0)->count();
         $number_of_group_sales = $this->group_sale;
 
         $user_level = 1;
