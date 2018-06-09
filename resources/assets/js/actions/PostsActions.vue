@@ -6,7 +6,7 @@
                     <i class="fa fa-eye"></i>
                 </span>
             </button>
-            <button type="button" class="btn btn-info" @click="itemAction('edit', rowData, rowIndex)">
+            <button v-if="user.is_admin" type="button" class="btn btn-info" @click="itemAction('edit', rowData, rowIndex)">
                 <span class="icon">
                     <i class="fa fa-edit"></i>
                 </span>
