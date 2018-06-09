@@ -103,6 +103,6 @@ return [
     'enter_email_and_password_to_reset' => '请输入电邮和新密码',
     'send_reset_link' => '确定重设密码',
 
-    'terms_and_conditions' => '条款和条件',
+    'terms_and_conditions' => '条款及细则',
     'agree' => '我同意所有的'
 ];
