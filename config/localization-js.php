@@ -26,7 +26,8 @@ return [
         'tree',
         'package',
         'form',
-        'transaction'
+        'transaction',
+        'post'
     ],
 
     /*

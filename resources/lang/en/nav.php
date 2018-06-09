@@ -17,5 +17,7 @@ return [
     'organization' => 'Organization',
     'packages' => 'Packages',
     'transactions' => 'Transactions',
-    'payouts' => 'Payouts'
+    'payouts' => 'Payouts',
+    'news' => 'News',
+    'materials' => "Materials"
 ];
