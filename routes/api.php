@@ -32,6 +32,8 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::get('/transactions', 'Admin\TransactionController@index');
 		Route::get('/transactions/standard', 'Admin\TransactionController@index_standard');
 		Route::post('/transaction/paid', 'Admin\TransactionController@pay');
+		Route::post('/posts', 'PostController@store');
+		Route::post('/post/{post}/update', 'PostController@update');
 
 		Route::group(['prefix' => '/packages'], function() {
 			Route::post('/', 'Admin\PackageController@store');
@@ -55,6 +57,10 @@ Route::group(['middleware' => 'auth:api'], function() {
 
 	Route::group(['prefix' => 'payment'], function() {
 		Route::post('/verify/{payment}', 'PaymentController@verify');
+	});
+
+	Route::group(['prefix' => 'posts'], function() {
+		Route::get('/', 'PostController@index');
 	});
 
 });

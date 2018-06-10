@@ -24,6 +24,8 @@
 					{color:'brown' , icon:' glyphicon glyphicon-barcode' , title: 'purchases', route: 'purchases', opened: false},
 					{color:'brown' , icon:' fa fa-sitemap' , title: 'organization', route: 'organization', opened: false},
 					{color:'brown' , icon:' fa fa-money' , title: 'transactions', route: 'transactions', opened: false},
+					{color:'brown', icon:' fa fa-newspaper-o', title: 'news', route: 'news', opened: false},
+					{color:'brown', icon:' fa fa-file-pdf-o', title: 'materials', route: 'materials', opened: false},
 					{color:'blue' , icon:' fa fa-users' , title: 'users', route: 'users', opened: false, admin: true},
 					{color:'blue' , icon:' fa fa-gift' , title: 'packages', route: 'packages', opened: false, admin: true},
 					{color:'blue' , icon:' fa fa-bank' , title: 'payouts', route: 'payouts', opened: false, admin: true}

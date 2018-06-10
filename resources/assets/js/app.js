@@ -12,6 +12,8 @@ import UserPage from './pages/UserPage.vue';
 import GenoPage from './pages/GenoPage.vue';
 import TransactionPage from './pages/TransactionPage.vue';
 import PayoutReportPage from './pages/PayoutReportPage.vue';
+import PostPage from './pages/PostPage.vue';
+import MarketingMaterialPage from './pages/MarketingMaterialPage.vue';
 import translations from './vue-translations.js';
 
 
@@ -79,7 +81,9 @@ const routes = [
 	{ path: '/organization', component: GenoPage },
 	{ path: '/packages', component: PackagePage },
 	{ path: '/transactions', component: TransactionPage },
-	{ path: '/payouts', component: PayoutReportPage }
+	{ path: '/payouts', component: PayoutReportPage },
+	{ path: '/news', component: PostPage },
+	{ path: '/materials', component: MarketingMaterialPage }
 ];
 
 const router = new VueRouter({ routes, linkActiveClass: 'opened' });
@@ -115,6 +119,7 @@ Vue.component('PurchasesActions', require('./actions/PurchasesActions.vue'));
 Vue.component('UsersActions', require('./actions/UsersActions.vue'));
 Vue.component('PackagesActions', require('./actions/PackagesActions.vue'));
 Vue.component('PayoutsActions', require('./actions/PayoutsActions.vue'));
+Vue.component('PostsActions', require('./actions/PostsActions.vue'));
 
 // Project components
 Vue.component('side-nav', require('./components/SideNavigation.vue'));
@@ -122,6 +127,7 @@ Vue.component('side-nav', require('./components/SideNavigation.vue'));
 // Custom table column
 Vue.component('TablePriceSwitcher', require('./components/TablePriceSwitcher.vue'));
 Vue.component('TransactionDescription', require('./components/TransactionDescription.vue'));
+Vue.component('PostTitleSwitcher', require('./components/PostTitleSwitcher.vue'));
 
 window.app = new Vue({
 	router,

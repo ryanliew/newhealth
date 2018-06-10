@@ -1,34 +1,28 @@
 <template>
-	<transition name="fade">
-		<div class="modal is-active" v-if="active">
-		  	<div class="modal-background" @click="close"></div>
-		  	<div class="modal-content">
-		  		<div class="box">
-		  			<div class="level">
-		  				<div class="level-left">
-		  					<p class="modal-card-title"><slot name="header"></slot></p>
-		  				</div>
-		  				<div class="level-right">
-		  					<button class="delete" aria-label="close" @click="close"></button>
-		  				</div>
-		  			</div>
-				
-					<hr>
+	<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modelLabel" :id="id" aria-hidden="true">
+		<div class="modal-dialog" :class="size" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title"><slot name="header"></slot></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          	<span aria-hidden="true">&times;</span>
+			        </button>
+				</div>
+				<div class="modal-body">
 
 		    		<slot></slot>
-
-		    		<hr>
-
+		      	</div>
+		      	<div class="modal-footer">
 		      		<slot name="footer"></slot>
 		      	</div>
-		  	</div>
-		</div>
-	</transition>
+			</div>
+	  	</div>
+	</div>
 </template>
 
 <script>
 	export default {
-		props: ['active'],
+		props: ['active', 'id', 'size'],
 		data() {
 			return {
 

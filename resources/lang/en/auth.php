@@ -102,5 +102,8 @@ return [
 
     'enter_email_to_reset' => 'enter your email to reset your password',
     'enter_email_and_password_to_reset' => 'Enter your email and new password',
-    'send_reset_link' => 'Send me the reset link'
+    'send_reset_link' => 'Send me the reset link',
+
+    'terms_and_conditions' => 'Terms and conditions',
+    'agree' => 'By checking this box and submitting the registration form, I agree to all of the '
 ];
