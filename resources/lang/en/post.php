@@ -14,7 +14,7 @@ return [
     "content" => "Content", 
     "posts" => "News",
 
-    "add_new_post" => "Create news ",
+    "add_new_post" => "Create news",
     "edit_post" => "Edit news",
     "marketing_material" => 'Marketing materials',
     "newleaf_flyer" => "Newleaf Flyer",

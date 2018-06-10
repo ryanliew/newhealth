@@ -126,7 +126,7 @@
 					return this.isEditing ? 'post.edit_post' : this.postTitle;
 				}
 
-				return 'post.create_post';
+				return 'post.add_new_post';
 			},
 
 			postTitle() {
