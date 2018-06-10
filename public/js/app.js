@@ -84518,7 +84518,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				title_zh: '',
 				content_zh: ''
 			}),
-			user: window.user
+			user: window.user,
+			lang: lang
 		};
 	},
 	mounted: function mounted() {
@@ -84561,7 +84562,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return 'post.create_post';
 		},
 		postTitle: function postTitle() {
-			return lang == 'en' ? this.selectedPost.title : this.selectedPost.title_zh;
+			return this.lang.locale == 'en' ? this.selectedPost.title : this.selectedPost.title_zh;
 		}
 	}
 });
@@ -84704,7 +84705,7 @@ var render = function() {
                 1
               )
             : _c("div", [
-                _vm.lang == "en"
+                _vm.lang.locale == "en"
                   ? _c("div", {
                       domProps: { innerHTML: _vm._s(_vm.form.content) }
                     })
@@ -84856,19 +84857,21 @@ var render = function() {
           [_vm._m(0)]
         ),
         _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-info",
-            attrs: { type: "button" },
-            on: {
-              click: function($event) {
-                _vm.itemAction("edit", _vm.rowData, _vm.rowIndex)
-              }
-            }
-          },
-          [_vm._m(1)]
-        )
+        _vm.user.is_admin
+          ? _c(
+              "button",
+              {
+                staticClass: "btn btn-info",
+                attrs: { type: "button" },
+                on: {
+                  click: function($event) {
+                    _vm.itemAction("edit", _vm.rowData, _vm.rowIndex)
+                  }
+                }
+              },
+              [_vm._m(1)]
+            )
+          : _vm._e()
       ]
     )
   ])

@@ -54,7 +54,7 @@
 						<button type="submit" class="btn btn-success mt-3" :disabled="form.submitting" v-html="submitButtonContent"></button>
 					</form>
 					<div v-else>
-						<div v-html="form.content" v-if="lang == 'en'"></div>
+						<div v-html="form.content" v-if="lang.locale == 'en'"></div>
 						<div v-html="form.content_zh" v-else></div>
 					</div>
 				</div>
@@ -83,7 +83,8 @@
 					title_zh: '',
 					content_zh: ''
 				}),
-				user: window.user
+				user: window.user,
+				lang: lang
 			};
 		},
 
@@ -129,7 +130,7 @@
 			},
 
 			postTitle() {
-				return lang == 'en' ? this.selectedPost.title : this.selectedPost.title_zh;
+				return this.lang.locale == 'en' ? this.selectedPost.title : this.selectedPost.title_zh;
 			}
 		}	
 	}
