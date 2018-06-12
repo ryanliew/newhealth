@@ -73,8 +73,8 @@ return [
     'bank_address' => 'Bank address',
     'account_type' => 'Account type',
     'account_no' => 'Account No.',
-    'beneficiary_name' => 'Beneficiary name',
-    'beneficiary_identification' => 'Beneficiary Passport/NRIC',
+    'beneficiary_name' => 'Nominee name',
+    'beneficiary_identification' => 'Nominee Passport/NRIC',
 
     'contact_personnels' => 'Contact personnel',
     'personnel_designation' => 'Designation',
@@ -87,7 +87,7 @@ return [
     'referrer_name' => 'Referrer name: :name',
     'referrer_fill' => 'Fill in the referrer ID',
     'referrer_not_found' => 'Referrer not found',
-    'beneficiary_info' => 'Beneficiary information',
+    'beneficiary_info' => 'Nominee information',
 
     'select_package' => 'Select purchase',
     'selected_package' => 'Selected purchase',

@@ -1,10 +1,11 @@
 <template>
 	<div>
 		<transition name="slide-fade" mode="out-in">
-			<div v-if="!isEditing">
+			<div v-if="!isEditing && !isUploading">
 				<div class="row mb-3">
 					<div class="col-sm">
 						<button class="btn btn-primary" @click="isEditing = true">{{ 'user.edit_profile' | trans }}</button>
+						<button class="btn btn-primary" @click="isUploading = true">{{ 'user.kyc_documents' | trans }}</button>
 					</div>
 				</div>
 				<div class="row">
@@ -355,7 +356,8 @@
 					</div>
 				</div>
 			</div>
-			<user :selectedUser="user" @back="editComplete" v-else></user>
+			<user :selectedUser="user" @back="editComplete" v-if="isEditing"></user>
+			<user-documents :selectedUser="user" @back="editComplete" v-if="isUploading"></user-documents>
 
 		</transition>
 	</div>
@@ -363,18 +365,20 @@
 
 <script>
 	import ReferralLink from "../components/ReferralLink.vue";
+	import UserDocuments from "../components/UserDocuments";
 	import User from "../components/User.vue";
 
 	export default {
 		props: ['cancelable', 'selectedUser'],
 
-		components: { ReferralLink, User },
+		components: { ReferralLink, User, UserDocuments },
 
 		data() {
 			return {
 				user: '',
 				contacts: '',
-				isEditing: false
+				isEditing: false,
+				isUploading: false
 			};
 		},
 
@@ -397,6 +401,7 @@
 			},
 
 			editComplete() {
+				this.isUploading = false;
 				this.isEditing = false;
 				this.getUser();
 			},

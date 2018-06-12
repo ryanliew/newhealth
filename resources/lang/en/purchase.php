@@ -28,6 +28,9 @@ return [
 
     'base_price' => 'Recommended Retail Price (RRP) per Tree: RM 8,000',
     'user' => 'Buyer',
-    'default_user' => 'Leave empty to buy for yourself'
+    'default_user' => 'Leave empty to buy for yourself',
+    'update' => 'Update',
+    'cancel' => 'Cancel update',
+    'updated' => 'Purchase updated'
     
 ];

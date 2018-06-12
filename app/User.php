@@ -140,7 +140,6 @@ class User extends Authenticatable
         return $code;
     }
 
-
     public function getCommisionPercentageAttribute()
     {
 
