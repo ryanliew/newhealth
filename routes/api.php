@@ -47,10 +47,12 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::get('/transactions', 'TransactionController@index');
 		Route::get('/tree', 'UserController@getTree');
 		Route::post('/update', 'UserController@update');
+		Route::post('/kyc', 'UserController@update_documents');
 		Route::get('/', 'UserController@show');
 	});
 
 	Route::group(['prefix' => 'purchase'], function() {
+		Route::post('/{purchase}/update', 'PurchaseController@update');
 		Route::post('/pay/{purchase}', 'PaymentController@pay');
 		Route::post('/verify/{purchase}', 'PurchaseController@verify');
 	});

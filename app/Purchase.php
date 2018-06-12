@@ -3,11 +3,14 @@
 namespace App;
 
 use App\Transaction;
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class Purchase extends Model
 {
     protected $guarded = [];
+
+    protected $appends = ['user_name'];
 
     public function user()
     {
@@ -22,6 +25,11 @@ class Purchase extends Model
     public function payment()
     {
         return $this->belongsTo('App\Payment');
+    }
+
+    public function getUserNameAttribute()
+    {
+        return $this->user->name;
     }
 
     public function verify()

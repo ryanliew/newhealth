@@ -49,7 +49,7 @@
 					return this.localValue;
 				}
 
-				return !this.editable && this.type == 'date' ? this.$options.filters.date(this.defaultValue) : this.defaultValue;
+				return this.defaultValue;
 			},
 
 			labelClass() {

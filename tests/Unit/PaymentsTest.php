@@ -90,7 +90,7 @@ class PaymentsTest extends TestCase
         $parent_amount_std = (( $package1->price_std * 2 ) + $package2->price_std ) * 0.08;
         $grandparent_amount_std = (( $package1->price_std * 2 ) + $package2->price_std ) * 0.12;
         // We have a purchase order with payment
-        $this->post('/api/purchases', [ "user_id" => $child->id, 
+        $this->post('/api/purchases', [ "user_id" => $child->id, "purchase_date" => '2018-06-12',
                                         "packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"1000.00", "price_std": "500.00"},{"amount":1,"id":' . $package2->id . ',"price":"2000.00", "price_std": "1000"}]'
                                                     ]);
         $purchase = Purchase::first();
@@ -102,9 +102,9 @@ class PaymentsTest extends TestCase
         // Admin verify the payment
         $this->post('/api/payment/verify/' . $payment->id);
  
-        $this->assertDatabaseHas('transactions', ['user_id' => $parent->id, 'amount' => $parent_amount . ".0", 'amount_std' => $parent_amount_std . ".0", 'description' => 'tree_purchase', 'type' => 'one_time_commision', 'is_std' => $purchase->is_std, "target_id" => $child->id, "purchase_id" => $purchase->id]);
+        $this->assertDatabaseHas('transactions', ['user_id' => $parent->id, 'amount' => $parent_amount . ".0", 'amount_std' => $parent_amount_std . ".0", 'description' => 'tree_purchase', 'type' => 'one_time_commision', 'is_std' => $purchase->is_std, "target_id" => $child->id, "purchase_id" => $purchase->id, 'date' => $purchase->created_at]);
 
-        $this->assertDatabaseHas('transactions', ['user_id' => $grandparent->id, 'amount' => $grandparent_amount . ".0", 'amount_std' => $grandparent_amount_std . ".0", 'description' => 'tree_purchase', 'type' => 'one_time_commision', 'is_std' => $purchase->is_std, "target_id" => $child->id, "purchase_id" => $purchase->id]);
+        $this->assertDatabaseHas('transactions', ['user_id' => $grandparent->id, 'amount' => $grandparent_amount . ".0", 'amount_std' => $grandparent_amount_std . ".0", 'description' => 'tree_purchase', 'type' => 'one_time_commision', 'is_std' => $purchase->is_std, "target_id" => $child->id, "purchase_id" => $purchase->id, 'date' => $purchase->created_at]);
         
     } 
 }	

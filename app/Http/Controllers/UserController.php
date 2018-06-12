@@ -6,6 +6,7 @@ use App\Address;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
 class UserController extends Controller
@@ -196,5 +197,59 @@ class UserController extends Controller
             $users->push($user->parent);
 
         return $users->toTree();
+    }
+
+    public function update_documents(User $user)
+    {
+        $message = [
+            "*.required" => "validation.required",
+            "*.file" => "validation.file",
+            "*.max" => "user.file_exceed_size"
+        ];
+
+        $this->validate(request(), [
+            'identity' => 'required|max:8000',
+            'residence_proof' => 'required|max:8000',
+            'nominee_identity' => 'required|max:8000',
+            'bank_statement' => 'required|max:8000'
+        ], $message);
+
+        $identity = $user->kyc_identity; 
+        $residence_proof = $user->kyc_residence_proof; 
+        $nominee_identity = $user->kyc_nominee_identity; 
+        $bank_statement = $user->kyc_bank_statement;
+
+        if(request()->hasFile('identity'))
+        {
+            Storage::disk('public')->delete($user->kyc_identity);
+            $identity = request()->file('identity')->store('documents', 'public');
+        }
+
+        if(request()->hasFile('residence_proof'))
+        {
+            Storage::disk('public')->delete($user->kyc_residence_proof);
+            $residence_proof = request()->file('residence_proof')->store('documents', 'public');
+        }
+
+        if(request()->hasFile('nominee_identity'))
+        {
+            Storage::disk('public')->delete($user->kyc_nominee_identity);
+            $nominee_identity = request()->file('nominee_identity')->store('documents', 'public');
+        }
+
+        if(request()->hasFile('bank_statement'))
+        {
+            Storage::disk('public')->delete($user->kyc_bank_statement);
+            $bank_statement = request()->file('bank_statement')->store('documents', 'public');
+        }
+
+        $user->update([
+            "kyc_identity" => $identity,
+            "kyc_residence_proof" => $residence_proof,
+            "kyc_nominee_identity" => $nominee_identity,
+            "kyc_bank_statement" => $bank_statement
+        ]);
+
+        return json_encode(['message' => 'user.documents_success']);
     }
 }

@@ -71,8 +71,8 @@ return [
     'bank_address' => '银行地址',
     'account_type' => '户口类型',
     'account_no' => '户口号码',
-    'beneficiary_name' => '受益人名称',
-    'beneficiary_identification' => '受益人身份证/护照号码',
+    'beneficiary_name' => '提名人名称',
+    'beneficiary_identification' => '提名人身份证/护照号码',
     'name_placeholder' => "填写实名",
 
     'contact_personnels' => '公司联络人',
@@ -86,7 +86,7 @@ return [
     'referrer_name' => '推荐者名称: :name',
     'referrer_fill' => '请输入推荐者ID',
     'referrer_not_found' => 'ID错误',
-    'beneficiary_info' => '受益人资料',
+    'beneficiary_info' => '提名人资料',
 
     'select_package' => '选择配套',
     'selected_package' => '配套',

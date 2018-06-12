@@ -7,8 +7,13 @@
 						<div class="col">
 							{{ title | trans }}
 						</div>
-						<div class="col-auto" v-if="cancelable">
-							<button class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
+						<div class="col-auto">
+							<button class="btn btn-info" @click="update" v-if="!isEditing && canUpdatePurchase" v-html="updateButtonContent"></button>
+							<template v-if="isEditing && purchase">
+								<button class="btn btn-danger" @click="isEditing = false"><i class="fa fa-times"></i> {{ 'purchase.cancel' | trans }}</button>
+								<button class="btn btn-success" @click="submitForm" :disabled="totalPrice == 0"><i class="fa fa-check"></i> {{ 'purchase.update' | trans }}</button>
+							</template>
+							<button v-if="cancelable" class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
 						</div>
 					</div>
 				</div>
@@ -16,7 +21,7 @@
 					<h5 class="card-title mb-3">{{ instruction | trans }}</h5>
 					<h6>{{ 'purchase.base_price' | trans }}</h6>
 					<table class="table">
-						<tbody v-if="!purchase">
+						<tbody v-if="isEditing">
 							<tr v-for="(package, index) in packages">
 								<td>{{ package.tree_count }} {{ 'auth.tree' | trans_choice({'value' : package.tree_count})  }}</td>
 								<td>x</td>
@@ -107,7 +112,7 @@
 									:editable="true"
 									:placeholder="$options.filters.trans('purchase.default_user')"
 									:error="form.errors.get('user_id')"
-									v-if="user.is_admin && !purchase">
+									v-if="user.is_admin && !purchase && potentialUsers">
 					</selector-input>
 
 					<text-input :defaultValue="purchase.user_name"
@@ -121,10 +126,20 @@
 							v-if="user.is_admin && purchase">
 					</text-input>
 
+					<text-input v-model="form.purchase_date" :defaultValue="form.purchase_date"
+							:label="$options.filters.trans('purchase.purchase_date')"
+							:required="false"
+							name="purchase_date"
+							:editable="isEditing"
+							type="date"
+							v-if="user.is_admin"
+							class="mt-3">
+					</text-input>
+
 					<div class="row mr-5 mt-3" v-if="!purchase">
 						<div class="col-sm"></div>
 						<div class="col-sm-auto">
-							<button class="btn btn-primary btn-lg" @click="submitForm" :disabled="form.submitting" v-html="submitButtonContent"></button>
+							<button class="btn btn-primary btn-lg" @click="submitForm" :disabled="form.submitting || totalPrice == 0" v-html="submitButtonContent"></button>
 						</div>
 					</div>	
 				</div>
@@ -139,6 +154,7 @@
 <script>
 	import Payment from './Payment.vue';
 	import formButtonMixin from '../mixins/form-button.js';
+	import moment from 'moment';
 	export default {
 		props: ['selectedPurchase', 'cancelable'],
 
@@ -152,22 +168,28 @@
 				packages: [],
 				form: new Form({
 					packages: [],
-					user_id: window.user.id	
+					user_id: window.user.id,
+					purchase_date: ''
 				}),
 				submitText: 'purchase.checkout',
 				user: window.user,
 				selectedUser: '',
-				potentialUsers: ''
+				potentialUsers: '',
+				isEditing: this.selectedPurchase ? false : true,
+				loading: false,
+				updateText: 'purchase.update'
 			};
 		},
 
 		mounted() {
 			this.purchase = this.selectedPurchase;
+			this.form.purchase_date = this.purchase ? moment(this.purchase.created_at).format("YYYY-MM-DD") : moment().format("YYYY-MM-DD");
 			this.getPackages();
 		},
 
 		methods: {
 			getPackages() {
+				this.loading = true;
 				axios.get('/api/packages')
 					.then(response => this.setPackages(response.data));
 			},
@@ -175,7 +197,19 @@
 			setPackages(data) {
 				this.form.packages = data.map(pack => {
 					let obj = {};
-					obj['amount'] = 0;
+
+					let amount = 0;
+
+					if(this.purchase) {
+						let p = _.findIndex(this.purchase.packages, function(p){
+							return p.id == pack.id;
+						});
+
+						if(this.purchase.packages[p]) {
+							amount = this.purchase.packages[p].pivot.amount;
+						}
+					}
+					obj['amount'] = amount;
 					obj['id'] = pack.id;
 					obj['price'] = pack.price_promotion ? pack.price_promotion : pack.price;
 					obj['price_std'] = pack.price_std_promotion ? pack.price_std_promotion : pack.price_std;
@@ -184,7 +218,7 @@
 				});
 
 				this.packages = data;
-
+				this.loading = false;
 				this.getUsers();
 			},
 
@@ -208,12 +242,15 @@
 			},
 
 			submitForm() {
-				this.form.post('/api/purchases')
+				let url = this.purchase ? '/api/purchase/' + this.purchase.id + '/update' : '/api/purchases';
+				this.form.post(url)
 					.then(response => this.onSuccess(response));
 			},
 
 			onSuccess(response) {
 				this.purchase = response.purchase;
+				this.isEditing = false;
+				this.form.purchase_date = moment(response.purchase.created_at).format("YYYY-MM-DD");
 				flash(this.$options.filters.trans(response.message));
 			},
 
@@ -231,13 +268,19 @@
 
 			back() {
 				this.$emit('back');
-			}
+			},
+
+			update() {
+				this.getPackages();
+
+				this.isEditing = true;
+			},
 			
 		},
 
 		computed: {
 			totalPrice() {
-				if(this.purchase)
+				if(this.purchase && !this.isEditing)
 					return this.purchase.is_std ? this.purchase.total_price_std : this.purchase.total_price;
 
 				return _.sumBy(this.form.packages, function(pack){
@@ -253,9 +296,21 @@
 			},
 
 			instruction() {
-				let instruction = this.purchase ? 'purchase.selected_packages' : 'purchase.select_package';
+				let instruction = this.purchase && !this.isEditing ? 'purchase.selected_packages' : 'purchase.select_package';
 
 				return instruction;
+			},
+
+			updateButtonContent() {
+				return this.loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : this.$options.filters.trans(this.updateText);
+			},
+
+			canUpdatePurchase() {
+				if( this.user.is_admin )
+				{
+					return this.purchase.status !== "complete";
+				}
+				return this.purchase.payment ? false : true;
 			}
 		}	
 	}

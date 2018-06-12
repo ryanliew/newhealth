@@ -27,6 +27,11 @@ return [
     'success' => '订单已被接纳',
 
 
-    'base_price' => '单棵树零售价：美金 2,500'
+    'base_price' => '单棵树零售价：美金 2,500',
+    'user' => '买家',
+    'default_user' => '自身购买请留空',
+    'update' => '更改',
+    'cancel' => '取消更改',
+    'updated' => '更新成功'
     
 ];

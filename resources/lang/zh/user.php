@@ -22,6 +22,13 @@ return [
     'edit_profile' => '更新资料',
     'change_password' => '更换密码',
     'cancel_change_password' => '取消更换密码',
-    'profile_update_success'=> '资料已更新'
+    'profile_update_success'=> '资料已更新',
+
+    'kyc_documents' => 'KYC资料',
+    'update_document' => "更新KYC资料",
+    'identity' => "身份证/护照号码",
+    'bank_statement' => "近期银行户口资料",
+    'residence_proof' => '居留证明',
+    'nominee_identity' => '提名人身份证/护照号码'
 
 ];
