@@ -1,30 +1,11 @@
 <template>
-	<div>
-		<span class="text-input input--hoshi" :class="inputClass">
-			<textarea :rows="rows" :cols="cols" 
-					:name="name" 
-					:id="name" 
-					class="input__field input__field--hoshi" 
-					:type="type || 'text'" 
-					:value="value" 
-					@input="updateValue($event.target.value)"
-					v-if="editable"
-					ref="input" />
-			<span class="input__field input__field--hoshi"
-					v-html="value"
-					v-else>	
-			</span>
-			<label class="input__label input__label--hoshi"
-					:class="className"  
-					:for="name"
-					>
-				<span class="input__label-content input__label-content--hoshi" v-if="!hideLabel">
-					<span v-text="label"></span>
-					<span v-if="required && editable" class="is-danger">*</span>
-				</span>
-			</label>
-		</span>
-		<span class="help is-danger" v-if="error" v-text="error"></span>
+	<div class="form-group">
+		<div v-if="!hideLabel">
+			<label :for="name" v-text="label"></label> <span v-if="required && editable" class="text-danger">*</span>
+		</div>
+		<textarea class="form-control" :name="name" :id="name" :rows="rows" :cols="cols" @input="updateValue($event.target.value)">
+		</textarea>
+		<span class="invalid-feedback" v-if="error"><strong>{{ error | trans }}</strong></span>
 	</div>
 </template>
 

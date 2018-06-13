@@ -166,3 +166,24 @@ right connector from last child*/
 .tree li a:hover+ul ul::before{
   border-color:  #94a0b4;
 }
+
+
+/* Custom file uploader */
+.custom-file-uploader {
+  position: relative;
+}
+
+.custom-file-uploader .image-input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+.options {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+}

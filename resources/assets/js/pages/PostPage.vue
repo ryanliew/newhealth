@@ -48,6 +48,7 @@
 
 			this.$events.on('view', data => this.view(data));
 			this.$events.on('edit', data => this.edit(data));
+			this.$events.on('send', data => this.send(data));
 		},
 
 		methods: {
@@ -74,6 +75,17 @@
 			edit(data) {
 				this.selectedPost = data;
 				this.isEditing = true;
+			},
+
+			send(data) {
+				this.$events.fire('loading');
+				axios.post('/api/admin/post/' + data.id + "/notify")
+					.then(response => this.onSuccess(response));
+			},
+
+			onSuccess(response) {
+				flash(this.$options.filters.trans(response.data.message));
+				this.$events.fire('loading-complete');
 			}
 
 		},
