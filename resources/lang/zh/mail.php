@@ -29,5 +29,8 @@ return [
     'reset_request_ignore' => '如果您没有做出这样的请求，您不需要采取进一步行动',
 
     'click_to_login' => '按此登入',
+    'newleaf_newsletter' => '新叶通讯',
+    'newleaf_bulletin' => '新叶通告',
+    'latest_news' => '为您带来新叶最新消息与更新'
     
 ];

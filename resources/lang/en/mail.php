@@ -29,5 +29,8 @@ return [
     'reset_request_ignore' => 'If you did not request a password reset, no further action is required.',
 
     'click_to_login' => 'Click here to login',
+    'newleaf_newsletter' => 'Newleaf Newsletter',
+    'newleaf_bulletin' => 'Newleaf Bulletin',
+    'latest_news' => 'the latest news and updates from newleaf plantation'
     
 ];

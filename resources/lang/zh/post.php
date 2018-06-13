@@ -21,5 +21,8 @@ return [
     "advisor_incentive_program" => '顾问奖励计划',
     "newleaf_purchase_form" => '新叶购买表格',
     'yield_projection' => '产量预测',
-    "download" => '下载'
+    "download" => '下载',
+    'notify_success' => '发送成功',
+    'newleaf_bulletin' => '新叶通告',
+    'latest_news' => '为您带来新叶最新消息与更新'
 ];

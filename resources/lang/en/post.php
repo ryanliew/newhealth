@@ -21,5 +21,8 @@ return [
     "advisor_incentive_program" => 'Advisor Incentive Program',
     "newleaf_purchase_form" => 'Newleaf Purchase Form',
     'yield_projection' => 'Yield Projection',
-    'download' => 'Download'
+    'download' => 'Download',
+    'notify_success' => 'News has been sent to all growers!',
+    'newleaf_bulletin' => 'Newleaf Bulletin',
+    'latest_news' => 'the latest news and updates from newleaf plantation'
 ];

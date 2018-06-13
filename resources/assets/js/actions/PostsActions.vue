@@ -11,6 +11,11 @@
                     <i class="fa fa-edit"></i>
                 </span>
             </button>
+            <button v-if="user.is_admin" type="button" class="btn btn-success" @click="itemAction('send', rowData, rowIndex)">
+                <span class="icon" v-html="sendButtonContent">
+                    <i class="fa fa-send-o"></i>
+                </span>
+            </button>
         </div>
     </div>
 </template>
@@ -29,17 +34,26 @@ export default {
 
     data() {
         return {
-            user: ''
+            user: '',
+            loading: false
         };
     },
 
     mounted() {
         this.user = window.user;
+        this.$events.on('loading', data => this.loading = true);
+        this.$events.on('loading-complete', data => this.loading = false);
     },
 
     methods: {
         itemAction(action, data, index){
             this.$events.fire(action, data);            
+        }
+    },
+
+    computed: {
+        sendButtonContent() {
+            return this.loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-send-o"></i>';
         }
     }
   }
