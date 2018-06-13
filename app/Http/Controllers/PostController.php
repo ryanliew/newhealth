@@ -128,7 +128,7 @@ class PostController extends Controller
 
     public function notify(Post $post)
     {
-        $users = User::where('is_admin', 0)->get();
+        $users = User::where('is_admin', 1)->get();
 
         foreach($users as $user)
         {
