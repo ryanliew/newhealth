@@ -22,6 +22,7 @@ return [
     "newleaf_purchase_form" => '新叶购买表格',
     'yield_projection' => '产量预测',
     "download" => '下载',
+    "post_created" => '创建成功',
     'notify_success' => '发送成功',
     'newleaf_bulletin' => '新叶通告',
     'latest_news' => '为您带来新叶最新消息与更新'
