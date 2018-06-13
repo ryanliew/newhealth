@@ -11,7 +11,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\App;
 
-class NewsletterNotification extends Notification implements ShouldQueue
+class NewsletterNotification extends Notification
 {
     use Queueable;
 
