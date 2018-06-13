@@ -128,7 +128,7 @@ class PostController extends Controller
 
     public function notify(Post $post)
     {
-        $users = User::where('is_admin', 1)->get();
+        $users = User::where('is_admin', 0)->get();
 
         foreach($users as $user)
         {
@@ -136,5 +136,17 @@ class PostController extends Controller
         }
 
         return json_encode(['message' => 'post.notify_success']);
+    }
+
+    public function notifyAdmin(Post $post)
+    {
+        $users = User::where('is_admin', 1)->get();
+
+        foreach($users as $user)
+        {
+            $user->notify(new NewsletterNotification($post, $user));
+        }
+
+        return json_encode(['message' => 'post.notify_admins_success']);
     }
 }

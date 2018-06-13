@@ -32,6 +32,7 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::get('/transactions', 'Admin\TransactionController@index');
 		Route::get('/transactions/standard', 'Admin\TransactionController@index_standard');
 		Route::post('/transaction/paid', 'Admin\TransactionController@pay');
+		Route::post('/post/{post}/notify/admin', 'PostController@notifyAdmin');
 		Route::post('/post/{post}/update', 'PostController@update');
 		Route::post('/post/{post}/notify', 'PostController@notify');
 		Route::post('/posts', 'PostController@store');
