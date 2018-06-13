@@ -49,7 +49,7 @@ class ProfileController extends Controller
             'terms' => 'accepted'
     	]);
 
-    	/*if(request()->referrer_code && request()->referrer_code !== "")
+    	if(request()->referrer_code && request()->referrer_code !== "")
     	{
     		$referrer = User::where('referral_code', request()->referrer_code)->first();
     		auth()->user()->appendToNode($referrer)->save();
@@ -122,6 +122,6 @@ class ProfileController extends Controller
         auth()->user()->notify( new RegisterSuccess(auth()->user(), App::getLocale()) );
                        
 
-    	return redirect('home#/purchases?new=1&lang=' . App::getLocale());*/
+    	return redirect('home#/purchases?new=1&lang=' . App::getLocale());
     }
 }
