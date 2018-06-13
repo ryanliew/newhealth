@@ -49,6 +49,7 @@
 			this.$events.on('view', data => this.view(data));
 			this.$events.on('edit', data => this.edit(data));
 			this.$events.on('send', data => this.send(data));
+			this.$events.on('sendAdmin', data => this.sendAdmin(data));
 		},
 
 		methods: {
@@ -80,6 +81,12 @@
 			send(data) {
 				this.$events.fire('loading');
 				axios.post('/api/admin/post/' + data.id + "/notify")
+					.then(response => this.onSuccess(response));
+			},
+
+			sendAdmin(data) {
+				this.$events.fire('loading');
+				axios.post('/api/admin/post/' + data.id + "/notify/admin")
 					.then(response => this.onSuccess(response));
 			},
 

@@ -16,6 +16,11 @@
                     <i class="fa fa-send-o"></i>
                 </span>
             </button>
+            <button v-if="user.is_admin" type="button" class="btn btn-success" @click="itemAction('sendAdmin', rowData, rowIndex)">
+                <span class="icon" v-html="sendAdminButtonContent">
+                    <i class="fa fa-group"></i>
+                </span>
+            </button>
         </div>
     </div>
 </template>
@@ -54,6 +59,10 @@ export default {
     computed: {
         sendButtonContent() {
             return this.loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-send-o"></i>';
+        },
+
+        sendAdminButtonContent() {
+            return this.loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-group"></i>';
         }
     }
   }
