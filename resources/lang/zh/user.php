@@ -29,6 +29,7 @@ return [
     'identity' => "身份证/护照号码",
     'bank_statement' => "近期银行户口资料",
     'residence_proof' => '居留证明',
-    'nominee_identity' => '提名人身份证/护照号码'
+    'nominee_identity' => '提名人身份证/护照号码',
+    'cancel_update' => '取消更新'
 
 ];
