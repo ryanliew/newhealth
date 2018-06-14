@@ -50,7 +50,7 @@
             </td>
         </tr>
     </table>
-    <table style="height:25px">
+    <table style="height:10px">
         <tr>
             <td>
             </td>
@@ -134,10 +134,10 @@
             <td style="width:{{ (1170 - $post->thumbnail_table_width) / 2 }}px;"></td>
         </tr>
     </table>
-    <table style="width:1170px; padding: 10px;text-align:center;">
+    <table style="width:1170px; text-align:center;">
         <tr>
             <td>
-                <div style="padding: 50px">
+                <div style="padding: 30px">
                     @if($locale == 'zh')
                         {!! $post->content_zh !!}
                     @else
@@ -182,6 +182,8 @@
                 </table>
             </td>
             <td style="width:185px;"></td>
+        </tr>
+    </table>
     <!-- end content --> 
     
     <div style="width:100%; float:left; padding:20px 0; margin-bottom:20px;border-bottom:15px solid black"></div>
