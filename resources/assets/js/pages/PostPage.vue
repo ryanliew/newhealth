@@ -79,13 +79,13 @@
 			},
 
 			send(data) {
-				this.$events.fire('loading');
+				this.$events.fire('loading', data.id);
 				axios.post('/api/admin/post/' + data.id + "/notify")
 					.then(response => this.onSuccess(response));
 			},
 
 			sendAdmin(data) {
-				this.$events.fire('loading');
+				this.$events.fire('loading-admin', data.id);
 				axios.post('/api/admin/post/' + data.id + "/notify/admin")
 					.then(response => this.onSuccess(response));
 			},

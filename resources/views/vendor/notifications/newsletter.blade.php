@@ -11,6 +11,10 @@
         table, body {
             font-family: Helvetica;
         }
+
+        p {
+            font-size: 18px;
+        }
         
     </style>
    <table style="width:1170px; padding: 10px;margin: 0 auto;">
@@ -31,7 +35,7 @@
         <tr style="vertical-align: middle;">
             <td style="width:526.5px;">
                 <div style="padding-bottom:30px;border-bottom: 10px solid black;margin-bottom: 30px;">
-                    <b style="font-size: 45px;line-height:45px;" v-else>
+                    <b style="font-size: 35px;line-height:35px;" v-else>
                         @if($locale == 'zh')
                             {{ $post->title_zh }}
                         @else
@@ -42,7 +46,7 @@
                 <img src="{{ url( 'storage/' . $post->left_photo ) }}" width="100%" v-else>
             </td>
             <td>
-                <div style="padding: 50px">
+                <div style="padding: 50px; font-size: 17px;">
                     @if($locale == 'zh')
                         {!! $post->content_zh !!}
                     @else
