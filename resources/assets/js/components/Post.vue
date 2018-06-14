@@ -75,7 +75,7 @@
 												:error="form.errors.get('title')">
 											</text-input>
 										</template>
-										<b style="font-size: 45px;line-height:45px;" v-else>
+										<b style="font-size: 35px;line-height:35px;" v-else>
 											{{ postTitle }}
 										</b>
 									</div>
@@ -107,8 +107,8 @@
 											<vue-editor id="chinese" v-model="form.content_zh" :editorToolbar="customToolbar"></vue-editor>
 										</template>
 										<template v-else>
-											<div v-html="form.content" v-if="lang.locale == 'en'"></div>
-											<div v-html="form.content_zh" v-else></div>
+											<div style="font-size:17px;" v-html="form.content" v-if="lang.locale == 'en'"></div>
+											<div style="font-size:17px;" v-html="form.content_zh" v-else></div>
 										</template>
 									</div>
 								</td>

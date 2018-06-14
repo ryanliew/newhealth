@@ -40,14 +40,16 @@ export default {
     data() {
         return {
             user: '',
-            loading: false
+            loading: false,
+            loadingAdmin: false
         };
     },
 
     mounted() {
         this.user = window.user;
-        this.$events.on('loading', data => this.loading = true);
-        this.$events.on('loading-complete', data => this.loading = false);
+        this.$events.on('loading', data => this.setLoading(data));
+        this.$events.on('loading-admin', data => this.setLoadingAdmin(data));
+        this.$events.on('loading-complete', data => this.setLoadingComplete(data));
 
     },
 
@@ -58,6 +60,20 @@ export default {
     methods: {
         itemAction(action, data, index){
             this.$events.fire(action, data);            
+        },
+
+        setLoading(data) {
+            this.loading = data == this.rowData.id;
+        },
+
+        setLoadingAdmin(data) {
+            console.log(data);
+            this.loadingAdmin = data == this.rowData.id;
+        },
+
+        setLoadingComplete(data) {
+            this.loading = false;
+            this.loadingAdmin = false;
         }
     },
 
@@ -67,7 +83,7 @@ export default {
         },
 
         sendAdminButtonContent() {
-            return this.loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-group"></i>';
+            return this.loadingAdmin ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-group"></i>';
         }
     }
   }

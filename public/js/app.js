@@ -79802,7 +79802,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		send: function send(data) {
 			var _this2 = this;
 
-			this.$events.fire('loading');
+			this.$events.fire('loading', data.id);
 			axios.post('/api/admin/post/' + data.id + "/notify").then(function (response) {
 				return _this2.onSuccess(response);
 			});
@@ -79810,7 +79810,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		sendAdmin: function sendAdmin(data) {
 			var _this3 = this;
 
-			this.$events.fire('loading');
+			this.$events.fire('loading-admin', data.id);
 			axios.post('/api/admin/post/' + data.id + "/notify/admin").then(function (response) {
 				return _this3.onSuccess(response);
 			});
@@ -80325,8 +80325,8 @@ var render = function() {
                                 "b",
                                 {
                                   staticStyle: {
-                                    "font-size": "45px",
-                                    "line-height": "45px"
+                                    "font-size": "35px",
+                                    "line-height": "35px"
                                   }
                                 },
                                 [
@@ -80444,11 +80444,13 @@ var render = function() {
                             : [
                                 _vm.lang.locale == "en"
                                   ? _c("div", {
+                                      staticStyle: { "font-size": "17px" },
                                       domProps: {
                                         innerHTML: _vm._s(_vm.form.content)
                                       }
                                     })
                                   : _c("div", {
+                                      staticStyle: { "font-size": "17px" },
                                       domProps: {
                                         innerHTML: _vm._s(_vm.form.content_zh)
                                       }
@@ -85671,7 +85673,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             user: '',
-            loading: false
+            loading: false,
+            loadingAdmin: false
         };
     },
     mounted: function mounted() {
@@ -85679,10 +85682,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
         this.user = window.user;
         this.$events.on('loading', function (data) {
-            return _this.loading = true;
+            return _this.setLoading(data);
+        });
+        this.$events.on('loading-admin', function (data) {
+            return _this.setLoadingAdmin(data);
         });
         this.$events.on('loading-complete', function (data) {
-            return _this.loading = false;
+            return _this.setLoadingComplete(data);
         });
     },
     updated: function updated() {
@@ -85693,6 +85699,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         itemAction: function itemAction(action, data, index) {
             this.$events.fire(action, data);
+        },
+        setLoading: function setLoading(data) {
+            this.loading = data == this.rowData.id;
+        },
+        setLoadingAdmin: function setLoadingAdmin(data) {
+            console.log(data);
+            this.loadingAdmin = data == this.rowData.id;
+        },
+        setLoadingComplete: function setLoadingComplete(data) {
+            this.loading = false;
+            this.loadingAdmin = false;
         }
     },
 
@@ -85701,7 +85718,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return this.loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-send-o"></i>';
         },
         sendAdminButtonContent: function sendAdminButtonContent() {
-            return this.loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-group"></i>';
+            return this.loadingAdmin ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-group"></i>';
         }
     }
 });
