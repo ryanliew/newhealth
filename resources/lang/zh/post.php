@@ -27,5 +27,6 @@ return [
     'notify_success' => '成功发送给所有种植者',
     'notify_admin_success' => '成功发送给所有管理员',
     'newleaf_bulletin' => '新叶通告',
-    'latest_news' => '为您带来新叶最新消息与更新'
+    'latest_news' => '为您带来新叶最新消息与更新',
+    'published_date' => '发布日期'
 ];
