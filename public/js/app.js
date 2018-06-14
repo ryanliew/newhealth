@@ -80186,6 +80186,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -80247,7 +80255,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 			if (this.selectedPost.left_photo) this.leftPhoto.src = 'storage/' + this.selectedPost.left_photo;
 			if (this.selectedPost.right_photo) this.rightPhoto.src = 'storage/' + this.selectedPost.right_photo;
-			if (this.selectedPost.middlePhoto) this.middlePhoto.src = 'storage/' + this.selectedPost.middle_photo;
+			if (this.selectedPost.middle_photo) this.middlePhoto.src = 'storage/' + this.selectedPost.middle_photo;
 		}
 	},
 
@@ -80622,10 +80630,12 @@ var render = function() {
                                           )
                                         ]),
                                         _vm._v(" "),
-                                        _c("img", {
+                                        _c("div", {
+                                          style:
+                                            "height:360px;width:360px;background-size:cover;background-position:center;background-image:url(" +
+                                            _vm.leftPhoto.src +
+                                            ");",
                                           attrs: {
-                                            src: _vm.leftPhoto.src,
-                                            width: "100%",
                                             id: "left_photo_placeholder"
                                           }
                                         }),
@@ -80663,11 +80673,11 @@ var render = function() {
                                         )
                                       ]
                                     )
-                                  : _c("img", {
-                                      attrs: {
-                                        src: _vm.leftPhoto.src,
-                                        width: "100%"
-                                      }
+                                  : _c("div", {
+                                      style:
+                                        "height:360px;width:360px;background-image:url(" +
+                                        _vm.leftPhoto.src +
+                                        ");background-size:cover;background-position:center;"
                                     })
                               ])
                             ]),
@@ -80769,7 +80779,7 @@ var render = function() {
                                               on: {
                                                 click: function($event) {
                                                   _vm.openFileSelector(
-                                                    "left_photo"
+                                                    "middle_photo"
                                                   )
                                                 }
                                               }
@@ -80782,10 +80792,12 @@ var render = function() {
                                           )
                                         ]),
                                         _vm._v(" "),
-                                        _c("img", {
+                                        _c("div", {
+                                          style:
+                                            "height:360px;width:360px;background-image:url(" +
+                                            _vm.middlePhoto.src +
+                                            ");background-size:cover;background-position:center;",
                                           attrs: {
-                                            src: _vm.middlePhoto.src,
-                                            width: "100%",
                                             id: "middle_photo_placeholder"
                                           }
                                         }),
@@ -80823,11 +80835,11 @@ var render = function() {
                                         )
                                       ]
                                     )
-                                  : _c("img", {
-                                      attrs: {
-                                        src: _vm.middlePhoto.src,
-                                        width: "100%"
-                                      }
+                                  : _c("div", {
+                                      style:
+                                        "height:360px;width:360px;background-image:url(" +
+                                        _vm.middlePhoto.src +
+                                        ");background-size:cover;background-position:center;"
                                     })
                               ])
                             ]),
@@ -80943,11 +80955,13 @@ var render = function() {
                                           )
                                         ]),
                                         _vm._v(" "),
-                                        _c("img", {
+                                        _c("div", {
+                                          style:
+                                            "height:360px;width:360px;background-image:url(" +
+                                            _vm.rightPhoto.src +
+                                            ");background-size:cover;background-position:center;",
                                           attrs: {
-                                            src: _vm.rightPhoto.src,
-                                            width: "100%",
-                                            id: "right_photo_placeholder"
+                                            id: "middle_photo_placeholder"
                                           }
                                         }),
                                         _vm._v(" "),
@@ -80984,11 +80998,11 @@ var render = function() {
                                         )
                                       ]
                                     )
-                                  : _c("img", {
-                                      attrs: {
-                                        src: _vm.rightPhoto.src,
-                                        width: "100%"
-                                      }
+                                  : _c("div", {
+                                      style:
+                                        "height:360px;width:360px;background-image:url(" +
+                                        _vm.rightPhoto.src +
+                                        ");background-size:cover;background-position:center;"
                                     })
                               ])
                             ]),

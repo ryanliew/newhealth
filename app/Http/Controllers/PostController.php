@@ -9,6 +9,7 @@ use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class PostController extends Controller
 {
@@ -55,9 +56,9 @@ class PostController extends Controller
             'right_caption_zh' => request()->right_caption_zh,
             'middle_caption_zh' => request()->middle_caption_zh,
             'cover_photo' => request()->file('cover_photo')->store('posts', 'public'),
-            'left_photo' => request()->hasFile('left_photo') ? request()->file('left_photo')->store('posts', 'public') : '',
-            'right_photo' => request()->hasFile('right_photo') ? request()->file('right_photo')->store('posts', 'public') : '',
-            'middle_photo' => request()->hasFile('middle_photo') ? request()->file('middle_photo')->store('posts', 'public') : '',
+            'left_photo' => request()->hasFile('left_photo') ? $this->cropAndStorePhoto(request()->file('left_photo')) : '',
+            'right_photo' => request()->hasFile('right_photo') ? $this->cropAndStorePhoto(request()->file('right_photo')) : '',
+            'middle_photo' => request()->hasFile('middle_photo') ? $this->cropAndStorePhoto(request()->file('middle_photo')) : '',
 
         ]);
 
@@ -110,20 +111,20 @@ class PostController extends Controller
 
         if(request()->hasFile('left_photo'))
         {
-            Storage::disk('public')->delete($post->left_photo);
-            $left_photo = request()->file('left_photo')->store('posts', 'public');
+            $file = request()->file('left_photo');
+            $left_photo = $this->cropAndStorePhoto($file, $post->left_photo);
         }
 
         if(request()->hasFile('middle_photo'))
         {
-            Storage::disk('public')->delete($post->middle_photo);
-            $middle_photo = request()->file('middle_photo')->store('posts', 'public');
+            $file = request()->file('middle_photo');
+            $middle_photo = $this->cropAndStorePhoto($file, $post->middle_photo);
         }
 
         if(request()->hasFile('right_photo'))
         {
-            Storage::disk('public')->delete($post->right_photo);
-            $right_photo = request()->file('right_photo')->store('posts', 'public');
+            $file = request()->file('right_photo');
+            $right_photo = $this->cropAndStorePhoto($file, $post->right_photo);
         }
 
         $post->update([
@@ -144,6 +145,19 @@ class PostController extends Controller
         ]);
 
         return json_encode(['message' => 'post.update_success']);
+    }
+
+    public function cropAndStorePhoto($file, $original_path = '')
+    {
+        $path = $file->hashName('posts');
+        $image = Image::make($file);
+
+        $image->fit(360, 360);
+
+        Storage::disk('public')->delete($original_path);
+        Storage::disk('public')->put($path, (string) $image->encode());
+
+        return $path;
     }
 
     /**
