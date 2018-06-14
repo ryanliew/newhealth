@@ -48,8 +48,17 @@ class PostController extends Controller
             'user_id' => request()->user, 
             'title_zh' => request()->title_zh, 
             'content_zh' => request()->content_zh,
+            'left_caption' => request()->left_caption,
+            'right_caption' => request()->right_caption,
+            'middle_caption' => request()->middle_caption,
+            'left_caption_zh' => request()->left_caption_zh,
+            'right_caption_zh' => request()->right_caption_zh,
+            'middle_caption_zh' => request()->middle_caption_zh,
             'cover_photo' => request()->file('cover_photo')->store('posts', 'public'),
-            'left_photo' => request()->file('left_photo')->store('posts', 'public')
+            'left_photo' => request()->hasFile('left_photo') ? request()->file('left_photo')->store('posts', 'public') : '',
+            'right_photo' => request()->hasFile('right_photo') ? request()->file('right_photo')->store('posts', 'public') : '',
+            'middle_photo' => request()->hasFile('middle_photo') ? request()->file('middle_photo')->store('posts', 'public') : '',
+
         ]);
 
         return json_encode(['message' => 'post.create_success']);
@@ -90,6 +99,8 @@ class PostController extends Controller
 
         $left_photo = $post->left_photo;
         $cover_photo = $post->cover_photo;
+        $middle_photo = $post->middle_photo;
+        $right_photo = $post->right_photo;
 
         if(request()->hasFile('cover_photo'))
         {
@@ -103,13 +114,33 @@ class PostController extends Controller
             $left_photo = request()->file('left_photo')->store('posts', 'public');
         }
 
+        if(request()->hasFile('middle_photo'))
+        {
+            Storage::disk('public')->delete($post->middle_photo);
+            $middle_photo = request()->file('middle_photo')->store('posts', 'public');
+        }
+
+        if(request()->hasFile('right_photo'))
+        {
+            Storage::disk('public')->delete($post->right_photo);
+            $right_photo = request()->file('right_photo')->store('posts', 'public');
+        }
+
         $post->update([
             'title' => request()->title, 
             'content' => request()->content, 
             'title_zh' => request()->title_zh, 
             'content_zh' => request()->content_zh,
+            'left_caption' => request()->left_caption,
+            'right_caption' => request()->right_caption,
+            'middle_caption' => request()->middle_caption,
+            'left_caption_zh' => request()->left_caption_zh,
+            'right_caption_zh' => request()->right_caption_zh,
+            'middle_caption_zh' => request()->middle_caption_zh,
             'left_photo' => $left_photo,
-            'cover_photo' => $cover_photo
+            'cover_photo' => $cover_photo,
+            'right_photo' => $right_photo,
+            'middle_photo' => $middle_photo
         ]);
 
         return json_encode(['message' => 'post.update_success']);
