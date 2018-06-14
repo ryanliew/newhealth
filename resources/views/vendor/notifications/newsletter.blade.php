@@ -8,7 +8,7 @@
             border: 0px solid transparent;
         }
 
-        table {
+        table, body {
             font-family: Helvetica;
         }
         
@@ -16,7 +16,7 @@
    <table style="width:1170px; padding: 10px;margin: 0 auto;">
         <tr style="background: black">
             <td colspan="2">
-                <img src="{{ url('img/mail/newsletter-header.png') }}" width="100%">
+                <img src="{{ url('img/mail/newsletter-header.png') }}" width="100%" style="width：100%">
             </td>
         </tr>
         <tr>
@@ -29,7 +29,7 @@
             <td></td>
         </tr>
         <tr style="vertical-align: middle;">
-            <td style="width:45%;">
+            <td style="width:526.5px;">
                 <div style="padding-bottom:30px;border-bottom: 10px solid black;margin-bottom: 30px;">
                     <b style="font-size: 45px;line-height:45px;" v-else>
                         @if($locale == 'zh')
@@ -55,7 +55,7 @@
      
     <!-- footer -->
         
-        <div style="width:100%; text-align:center; ">
+        <div style="width:100%; text-align:center;font-family: Helvetica;">
             <img src="https://portal.newleaf.com.my/img/mail/email-logo.png"><br>
             <b> NEWLEAF PLANATION BERHAD </b><br>
             <span style="font-size:12px">(1251569-U)</span>

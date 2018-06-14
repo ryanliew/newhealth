@@ -23,6 +23,7 @@ return [
     'yield_projection' => '产量预测',
     "download" => '下载',
     "post_created" => '创建成功',
+    "update_success" => '更新成功',
     'notify_success' => '成功发送给所有种植者',
     'notify_admin_success' => '成功发送给所有管理员',
     'newleaf_bulletin' => '新叶通告',
