@@ -50,7 +50,7 @@
             </td>
         </tr>
     </table>
-    <table style="height:10px">
+    <table style="height:25px">
         <tr>
             <td>
             </td>

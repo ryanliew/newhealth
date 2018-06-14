@@ -103,7 +103,9 @@
 													<div class="options">
 														<button type="button" class="btn btn-xs btn-primary" @click="openFileSelector('left_photo')"><i class="fa fa-plus"></i></button>
 													</div>
-													<img :src="leftPhoto.src" width="100%" id="left_photo_placeholder">
+													<div id="left_photo_placeholder" :style="'height:360px;width:360px;background-size:cover;background-position:center;background-image:url(' + leftPhoto.src + ');'">
+													</div>
+													<!-- <img :src="leftPhoto.src" width="100%" id="left_photo_placeholder"> -->
 													<div class="image-input">
 														<image-input v-model="leftPhoto" :defaultImage="leftPhoto"
 															@loaded="leftPhotoLoaded"
@@ -115,7 +117,8 @@
 														</image-input>
 													</div>
 												</div>
-												<img :src="leftPhoto.src" width="100%" v-else>
+												<div :style="'height:360px;width:360px;background-image:url(' + leftPhoto.src + ');background-size:cover;background-position:center;'" v-else></div>
+												<!-- <img :src="leftPhoto.src" width="100%" v-else> -->
 											</td>
 										</tr>
 										<tr>
@@ -157,9 +160,11 @@
 											<td>
 												<div class="custom-file-uploader" v-if="isEditing">
 													<div class="options">
-														<button type="button" class="btn btn-xs btn-primary" @click="openFileSelector('left_photo')"><i class="fa fa-plus"></i></button>
+														<button type="button" class="btn btn-xs btn-primary" @click="openFileSelector('middle_photo')"><i class="fa fa-plus"></i></button>
 													</div>
-													<img :src="middlePhoto.src" width="100%" id="middle_photo_placeholder">
+													<div id="middle_photo_placeholder" :style="'height:360px;width:360px;background-image:url(' + middlePhoto.src + ');background-size:cover;background-position:center;'">
+													</div>
+													<!-- <img :src="middlePhoto.src" width="100%" id="middle_photo_placeholder"> -->
 													<div class="image-input">
 														<image-input v-model="middlePhoto" :defaultImage="middlePhoto"
 															@loaded="middlePhotoLoaded"
@@ -171,7 +176,8 @@
 														</image-input>
 													</div>
 												</div>
-												<img :src="middlePhoto.src" width="100%" v-else>
+												<div :style="'height:360px;width:360px;background-image:url(' + middlePhoto.src + ');background-size:cover;background-position:center;'" v-else></div>
+												<!-- <img :src="middlePhoto.src" width="100%" v-else> -->
 											</td>
 										</tr>
 										<tr>
@@ -215,7 +221,8 @@
 													<div class="options">
 														<button type="button" class="btn btn-xs btn-primary" @click="openFileSelector('right_photo')"><i class="fa fa-plus"></i></button>
 													</div>
-													<img :src="rightPhoto.src" width="100%" id="right_photo_placeholder">
+													<div id="middle_photo_placeholder" :style="'height:360px;width:360px;background-image:url(' + rightPhoto.src + ');background-size:cover;background-position:center;'"></div>
+													<!-- <img :src="rightPhoto.src" width="100%" id="right_photo_placeholder"> -->
 													<div class="image-input">
 														<image-input v-model="rightPhoto" :defaultImage="rightPhoto"
 															@loaded="rightPhotoLoaded"
@@ -227,7 +234,8 @@
 														</image-input>
 													</div>
 												</div>
-												<img :src="rightPhoto.src" width="100%" v-else>
+												<div :style="'height:360px;width:360px;background-image:url(' + rightPhoto.src + ');background-size:cover;background-position:center;'" v-else></div>
+												<!-- <img :src="rightPhoto.src" width="100%" v-else> -->
 											</td>
 										</tr>
 										<tr>
@@ -366,7 +374,7 @@
 					this.leftPhoto.src = 'storage/' + this.selectedPost.left_photo;
 				if(this.selectedPost.right_photo)
 					this.rightPhoto.src = 'storage/' + this.selectedPost.right_photo;
-				if(this.selectedPost.middlePhoto)
+				if(this.selectedPost.middle_photo)
 					this.middlePhoto.src = 'storage/' + this.selectedPost.middle_photo;
 			}
 		},
