@@ -19,18 +19,9 @@
 						@input="form.errors.clear($event.target.name)">
 						<table style="width:1170px; padding: 10px;margin: 0 auto;">
 							<tr style="background: black">
-								<td style="padding-top:35px;">
-									<b style="font-size:60px;color:white;margin-left: 30px;line-height: 44px;margin-top:15px;">{{ 'post.newleaf_bulletin' | trans }}</b>
-								</td>
-								<td></td>
-							</tr>
-							<tr style="background: black">
-								<td style="padding-bottom:20px;">
-									<span style="font-size:17px;color:white;margin-left: 31px;margin-bottom:15px;">{{ 'post.latest_news' | trans }}</span>
-								</td>
-								<td style="padding-bottom:20px;text-align:center;"> 
-									
-								</td>
+								<td colspan="2">
+					                <img src="/img/mail/newsletter-header.png" width="100%">
+					            </td>
 							</tr>
 							<tr>
 								<td colspan="2" style="padding-bottom:30px;">

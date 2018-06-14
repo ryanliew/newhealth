@@ -80016,15 +80016,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -80189,53 +80180,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("tr", { staticStyle: { background: "black" } }, [
-                    _c("td", { staticStyle: { "padding-top": "35px" } }, [
-                      _c(
-                        "b",
-                        {
-                          staticStyle: {
-                            "font-size": "60px",
-                            color: "white",
-                            "margin-left": "30px",
-                            "line-height": "44px",
-                            "margin-top": "15px"
-                          }
-                        },
-                        [
-                          _vm._v(
-                            _vm._s(_vm._f("trans")("post.newleaf_bulletin"))
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td")
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", { staticStyle: { background: "black" } }, [
-                    _c("td", { staticStyle: { "padding-bottom": "20px" } }, [
-                      _c(
-                        "span",
-                        {
-                          staticStyle: {
-                            "font-size": "17px",
-                            color: "white",
-                            "margin-left": "31px",
-                            "margin-bottom": "15px"
-                          }
-                        },
-                        [_vm._v(_vm._s(_vm._f("trans")("post.latest_news")))]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", {
-                      staticStyle: {
-                        "padding-bottom": "20px",
-                        "text-align": "center"
-                      }
-                    })
-                  ]),
+                  _vm._m(0),
                   _vm._v(" "),
                   _c("tr", [
                     _c(
@@ -80531,7 +80476,20 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", { staticStyle: { background: "black" } }, [
+      _c("td", { attrs: { colspan: "2" } }, [
+        _c("img", {
+          attrs: { src: "/img/mail/newsletter-header.png", width: "100%" }
+        })
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
