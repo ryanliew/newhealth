@@ -15,22 +15,18 @@
     </style>
    <table style="width:1170px; padding: 10px;margin: 0 auto;">
         <tr style="background: black">
-            <td style="padding:35px 0;" colspan="2">
-                <div style="width:100%">
-                    <b style="font-size:60px;color:white;margin-left: 30px;line-height: 44px;margin-top:15px;">{{ __('mail.newleaf_bulletin') }}</b>
-                </div>
-                <div style="float: left; margin-right: 30%">
-                    <span style="font-size:19.5px;color:white;margin-left: 31px;margin-bottom:15px;">{{ __('mail.latest_news') }}</span>
-                </div>
-                <div style="float:left;">
-                     <b style="font-size: 19.5px;color:white;">{{ $post->created_at->format("jS F Y") }}</b>
-                 </div>
+            <td colspan="2">
+                <img src="{{ url('img/mail/newsletter-header.png') }}" width="100%">
             </td>
         </tr>
         <tr>
             <td colspan="2">
-                <img src="{{ url( 'storage/' . $post->cover_photo ) }}" width="100%" v-else>
+                <img src="{{ url( 'storage/' . $post->cover_photo ) }}" width="100%">
             </td>
+        </tr>
+        <tr height="30px">
+            <td></td>
+            <td></td>
         </tr>
         <tr style="vertical-align: middle;">
             <td style="width:45%;">
@@ -60,7 +56,7 @@
     <!-- footer -->
         
         <div style="width:100%; text-align:center; ">
-            <img src="https://portal.newleaf.com.my/img/logo.png" style="width:250px;"><br>
+            <img src="https://portal.newleaf.com.my/img/mail/email-logo.png"><br>
             <b> NEWLEAF PLANATION BERHAD </b><br>
             <span style="font-size:12px">(1251569-U)</span>
             <div>
