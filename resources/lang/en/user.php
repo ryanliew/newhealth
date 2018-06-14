@@ -29,5 +29,6 @@ return [
     'identity' => "NRIC\Passport",
     'bank_statement' => "Recent bank statement",
     'residence_proof' => 'Residence proof',
-    'nominee_identity' => 'Nominee identity'
+    'nominee_identity' => 'Nominee identity',
+    'cancel_update' => 'Cancel update'
 ];
