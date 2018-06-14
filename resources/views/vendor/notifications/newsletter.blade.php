@@ -16,7 +16,7 @@
    <table style="width:1170px; padding: 10px;margin: 0 auto;">
         <tr style="background: black">
             <td colspan="2">
-                <img src="{{ url('img/email/newsletter-header.png') }}" width="100%">
+                <img src="{{ url('img/mail/newsletter-header.png') }}" width="100%">
             </td>
         </tr>
         <tr>
@@ -56,7 +56,7 @@
     <!-- footer -->
         
         <div style="width:100%; text-align:center; ">
-            <img src="https://portal.newleaf.com.my/img/email/email-logo.png"><br>
+            <img src="https://portal.newleaf.com.my/img/mail/email-logo.png"><br>
             <b> NEWLEAF PLANATION BERHAD </b><br>
             <span style="font-size:12px">(1251569-U)</span>
             <div>
