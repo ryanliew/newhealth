@@ -26,5 +26,5 @@ return [
     'notify_success' => 'News has been sent to all growers!',
     'notify_admin_success' => 'News has been sent to all admins!',
     'newleaf_bulletin' => 'Newleaf Bulletin',
-    'latest_news' => 'the latest news and updates from newleaf plantation'
+    'latest_news' => 'the latest news and updates from newleaf plantation berhad'
 ];

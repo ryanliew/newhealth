@@ -26,14 +26,14 @@
 							</tr>
 							<tr style="background: black">
 								<td style="padding-bottom:20px;">
-									<span style="font-size:19.5px;color:white;margin-left: 31px;margin-bottom:15px;">{{ 'post.latest_news' | trans }}</span>
+									<span style="font-size:17px;color:white;margin-left: 31px;margin-bottom:15px;">{{ 'post.latest_news' | trans }}</span>
 								</td>
 								<td style="padding-bottom:20px;text-align:center;"> 
-									<b style="font-size: 19.5px;color:white;">{{ date }}</b>
+									
 								</td>
 							</tr>
 							<tr>
-								<td colspan="2">
+								<td colspan="2" style="padding-bottom:30px;">
 									<div class="custom-file-uploader" v-if="isEditing">
 										<div class="options">
 											<button type="button" class="btn btn-xs btn-primary" @click="openFileSelector('cover_photo')"><i class="fa fa-plus"></i></button>
@@ -54,6 +54,8 @@
 
 								</td>
 							</tr>
+						</table>
+						<table style="width:1170px; padding: 10px;margin: 0 auto;">
 							<tr style="vertical-align: middle;">
 								<td style="width:45%;">
 									<div style="padding-bottom:30px;border-bottom: 10px solid black;margin-bottom: 30px;">
