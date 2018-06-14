@@ -23,6 +23,7 @@ return [
     'yield_projection' => 'Yield Projection',
     'download' => 'Download',
     'create_success' => "News created",
+    "update_success" => "News updated",
     'notify_success' => 'News has been sent to all growers!',
     'notify_admins_success' => 'News has been sent to all admins!',
     'newleaf_bulletin' => 'Newleaf Bulletin',
