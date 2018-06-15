@@ -18,14 +18,14 @@
         }
         
     </style>
-    <table style="width:1170px;text-align:center;">
+    <table style="width:1170px;text-align:center;" cellpadding="0" cellspacing="0">
         <tr style="background: black">
             <td>
                 <img src="{{ url('/img/mail/newsletter-header.png') }}" width="100%" style="width:100%;display:block;">
             </td>
         </tr>
     </table>
-    <table style="width:1170px;text-align:center;">
+    <table style="width:1170px;text-align:center;" cellpadding="0" cellspacing="0">
         <tr>
             <td>
                 <img src="{{ url('storage/' . $post->cover_photo) }}" width="100%" style="width:100%;display:block;">
