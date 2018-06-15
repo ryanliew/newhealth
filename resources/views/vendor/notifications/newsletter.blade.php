@@ -32,7 +32,7 @@
             </td>
         </tr>
     </table>
-    <table style="height:30px">
+    <table style="padding: 15px 0">
         <tr>
             <td></td>
         </tr>
@@ -57,7 +57,7 @@
             </td>
         </tr>
     </table>
-    <table style="height:25px">
+    <table style="padding:15px 0">
         <tr>
             <td>
             </td>
@@ -155,7 +155,7 @@
         </tr>
     </table>   
 
-    <table style="height: 25px;">
+    <table style="padding: 15px 0">
         <tr>
             <td>
             </td>   
