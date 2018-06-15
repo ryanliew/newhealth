@@ -20,14 +20,21 @@
     </style>
     <table style="width:1170px;text-align:center;">
         <tr style="background: black">
-            <td colspan="2">
+            <td>
                 <img src="{{ url('/img/mail/newsletter-header.png') }}" width="100%" style="width:100%">
             </td>
         </tr>
+    </table>
+    <table>
         <tr>
-            <td colspan="2" style="padding-bottom:30px;">
+            <td>
                 <img src="{{ url('storage/' . $post->cover_photo) }}" width="100%" style="width:100%">
             </td>
+        </tr>
+    </table>
+    <table style="height:30px">
+        <tr>
+            <td></td>
         </tr>
     </table>
     <table style="width:1170px;text-align:center;">
