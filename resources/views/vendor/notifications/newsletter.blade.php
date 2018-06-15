@@ -21,14 +21,14 @@
     <table style="width:1170px;text-align:center;">
         <tr style="background: black">
             <td>
-                <img src="{{ url('/img/mail/newsletter-header.png') }}" width="100%" style="width:100%">
+                <img src="{{ url('/img/mail/newsletter-header.png') }}" width="100%" style="width:100%;display:block;">
             </td>
         </tr>
     </table>
-    <table>
+    <table style="width:1170px;text-align:center;">
         <tr>
             <td>
-                <img src="{{ url('storage/' . $post->cover_photo) }}" width="100%" style="width:100%">
+                <img src="{{ url('storage/' . $post->cover_photo) }}" width="100%" style="width:100%;display:block;">
             </td>
         </tr>
     </table>
