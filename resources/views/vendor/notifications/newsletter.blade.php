@@ -63,7 +63,7 @@
                 <table style="width: {{ $post->thumbnail_table_width }}px; padding: 10px;text-align:center">
                     <tr style="vertical-align: middle;">
                         @if($post->left_photo)
-                        <td style="padding:10px;">
+                        <td >
                             <table>
                                 <tr>
                                     <td>
@@ -85,7 +85,7 @@
                         </td>
                         @endif
                         @if($post->middle_photo)
-                        <td style="padding:10px;">
+                        <td>
                             <table>
                                 <tr>
                                     <td>
@@ -107,7 +107,7 @@
                         </td>
                         @endif
                         @if($post->right_photo)
-                        <td style="padding:10px;">
+                        <td >
                             <table>
                                 <tr>
                                     <td>
@@ -146,7 +146,14 @@
                 </div>
             </td>   
         </tr>
-    </table>       
+    </table>   
+
+    <table style="height: 25px;">
+        <tr>
+            <td>
+            </td>   
+        </tr>
+    </table>     
      
     <!-- footer -->
     <table style="width:1170px">
