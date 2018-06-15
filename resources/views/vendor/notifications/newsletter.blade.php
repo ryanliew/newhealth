@@ -18,7 +18,7 @@
         }
         
     </style>
-    <table style="width:1170px; padding: 10px;text-align:center;">
+    <table style="width:1170px;text-align:center;">
         <tr style="background: black">
             <td colspan="2">
                 <img src="{{ url('/img/mail/newsletter-header.png') }}" width="100%" style="width:100%">
@@ -30,14 +30,14 @@
             </td>
         </tr>
     </table>
-    <table style="width:1170px; padding: 10px;text-align:center;">
+    <table style="width:1170px;text-align:center;">
         <tr>
             <td>
                 <b>{{ __('post.published_date') }}: {{ $post->created_at->format("jS F Y") }}</b>
             </td>
         </tr>
     </table>
-    <table style="width:1170px; padding: 10px;text-align:center;">
+    <table style="width:1170px;text-align:center;">
         <tr>
             <td>
                 <b style="font-size: 35px;line-height:35px;" v-else>
@@ -60,7 +60,7 @@
         <tr>
             <td style="width:{{ (1170 - $post->thumbnail_table_width) / 2 }}px;"></td>
             <td>
-                <table style="width: {{ $post->thumbnail_table_width }}px; padding: 10px;text-align:center">
+                <table style="width: {{ $post->thumbnail_table_width }}px;text-align:center">
                     <tr style="vertical-align: middle;">
                         @if($post->left_photo)
                         <td >
@@ -193,6 +193,6 @@
     </table>
     <!-- end content --> 
     
-    <div style="width:100%; float:left; padding:20px 0; margin-bottom:20px;border-bottom:15px solid black"></div>
+    <div style="width:100%; float:left; height:25px; margin-bottom:20px;border-bottom:15px solid black"></div>
          
 </body>
