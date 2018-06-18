@@ -9,7 +9,9 @@
 						v-if="!isPurchasing"
 						:dateFilterable="true"
 						dateFilterKey="purchases.created_at"
-						addNew="purchase.make_new_purchase">
+						addNew="purchase.make_new_purchase"
+						:canExport="true"
+						:exportUrl="exportUrl">
 			</table-view>
 
 			<purchase :cancelable="cancelable" :selectedPurchase="selectedPurchase" v-if="isPurchasing" @back="back"></purchase>
@@ -99,6 +101,10 @@
 		computed: {
 			url() {
 				return window.user.is_admin ? "/api/admin/purchases" :"/api/user/" + window.user.id + "/purchases";
+			},
+
+			exportUrl() {
+				return "/exports/purchases?user=" + window.user.id;
 			}
 		}	
 	}

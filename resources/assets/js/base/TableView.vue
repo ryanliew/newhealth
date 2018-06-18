@@ -5,6 +5,17 @@
 				<div class="col">
 					{{ title | trans }}
 				</div>
+				<div class="col-auto" v-if="canExport">
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle" type="button" id="exportMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    	{{ "table.export" | trans }}
+						</button>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="exportMenuButton">
+							<a class="dropdown-item" target="_blank" :href="exportPDFUrl"><i class="fa fa-file-pdf-o"></i> {{ 'table.export_pdf' | trans }}</a>
+						    <a class="dropdown-item" target="_blank" :href="exportExcelUrl"><i class="fa fa-file-excel-o"></i> {{ 'table.export_excel' | trans }}</a>
+						</div>
+					</div>
+				</div>
 				<div class="col-auto" v-if="hasBack">
 					<button class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
 				</div>
@@ -59,7 +70,7 @@
 	import Loader from './Loader';
 
 	export default {
-		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth'],
+		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth', 'canExport', 'exportUrl'],
 
 		components: { Vuetable, VuetablePagination, VuetablePaginationInfo, VuetableFilterBar, Loader },
 
@@ -187,8 +198,36 @@
 			customer(value){
 				return value ? value : "N/A";
 			},
+		},
 
+		computed: {
+			exportPDFUrl() {
+				let url = this.exportUrl;
+				if(this.params.start)
+					url += "&start=" + this.params.start + "&end=" + this.params.end;
 
+				if(this.params.month)
+					url += "&month=" + this.params.month;
+
+				if(this.params.filter) 
+					url += "&filter=" + this.params.filter + "&searchables=" + this.searchables;
+
+				return url + "&type=pdf";
+			},
+
+			exportExcelUrl() {
+				let url = this.exportUrl;
+				if(this.params.start)
+					url += "&start=" + this.params.start + "&end=" + this.params.end;
+
+				if(this.params.month)
+					url += "&month=" + this.params.month;
+
+				if(this.params.filter) 
+					url += "&filter=" + this.params.filter + "&searchables=" + this.searchables;
+
+				return url + "&type=excel";
+			}
 		}
 	}
 </script>

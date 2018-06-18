@@ -39,6 +39,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/locale', 'LocaleController@switch')->name('locale');
 Route::get('/social/{service}/login', 'Auth\SocialAuthController@login');
 Route::get('/register/cancel', 'HomeController@cancel')->name('register.cancel');
+
+Route::group(['prefix' => 'exports'], function() {
+	Route::get('/transactions', 'ExportController@transactions');
+	Route::get('/purchases', 'ExportController@purchases');
+});
+
+Route::get('testpdf', function() {
+	return view('pdf.transactions');
+});
+
 Route::get('/testmail', function() {
 	App::setLocale('en');
 	// foreach( User::all() as $user )
