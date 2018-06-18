@@ -476,11 +476,11 @@
 			},
 
 			titleLength() {
-				return this.form.title.length;
+				return this.form.title ? this.form.title.length : 0;
 			},
 
 			titleZhLength() {
-				return this.form.title_zh.length;
+				return this.form.title_zh ? this.form.title_zh.length : 0;
 			},
 
 			titleLengthColor() {

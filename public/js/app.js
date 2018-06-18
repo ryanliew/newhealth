@@ -80343,10 +80343,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return (hasLeftPhoto + hasRightPhoto + hasMiddlePhoto) * 390;
 		},
 		titleLength: function titleLength() {
-			return this.form.title.length;
+			return this.form.title ? this.form.title.length : 0;
 		},
 		titleZhLength: function titleZhLength() {
-			return this.form.title_zh.length;
+			return this.form.title_zh ? this.form.title_zh.length : 0;
 		},
 		titleLengthColor: function titleLengthColor() {
 			return this.titleLength > 255 ? 'text-danger' : '';
