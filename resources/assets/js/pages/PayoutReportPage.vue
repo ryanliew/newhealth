@@ -75,6 +75,7 @@
 		mounted() {
 			this.$events.on('view', data => this.view(data));	
 			this.$events.on('pay', data => this.pay(data));	
+			this.$events.on('export', data => this.export(data));
 		},
 
 		methods: {
@@ -103,6 +104,16 @@
 
 				this.payForm.post('/api/admin/transaction/paid')
 					.then(response => this.onSuccess(response));
+			},
+
+			export(data) {
+				let date = moment(this.$refs.transactions.getMonth());
+				let start = date.startOf('month');
+				let end = date.endOf('month');
+				let user = data.user_id;
+
+				window.open('/exports/transactions?user=' + user + '&start=' + start.format("YYYY-MM-DD") + '&end=' + end.format("YYYY-MM-DD") + '&type=pdf');
+
 			},
 
 			onSuccess(response) {

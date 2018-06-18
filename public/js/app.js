@@ -79659,6 +79659,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		this.$events.on('pay', function (data) {
 			return _this.pay(data);
 		});
+		this.$events.on('export', function (data) {
+			return _this.export(data);
+		});
 	},
 
 
@@ -79687,6 +79690,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.payForm.post('/api/admin/transaction/paid').then(function (response) {
 				return _this2.onSuccess(response);
 			});
+		},
+		export: function _export(data) {
+			var date = __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.$refs.transactions.getMonth());
+			var start = date.startOf('month');
+			var end = date.endOf('month');
+			var user = data.user_id;
+
+			window.open('/exports/transactions?user=' + user + '&start=' + start.format("YYYY-MM-DD") + '&end=' + end.format("YYYY-MM-DD") + '&type=pdf');
 		},
 		onSuccess: function onSuccess(response) {
 			flash(this.$options.filters.trans(response.message));
@@ -86356,6 +86367,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -86375,6 +86393,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     mounted: function mounted() {
         this.user = window.user;
+    },
+    updated: function updated() {
+        $('[data-toggle="tooltip"]').tooltip();
     },
 
 
@@ -86405,7 +86426,12 @@ var render = function() {
           "button",
           {
             staticClass: "btn btn-primary",
-            attrs: { type: "button" },
+            attrs: {
+              type: "button",
+              "data-toggle": "tooltip",
+              "data-placement": "bottom",
+              title: "View transaction details"
+            },
             on: {
               click: function($event) {
                 _vm.itemAction("view", _vm.rowData, _vm.rowIndex)
@@ -86429,7 +86455,12 @@ var render = function() {
               "button",
               {
                 staticClass: "btn btn-success",
-                attrs: { type: "button" },
+                attrs: {
+                  type: "button",
+                  "data-toggle": "tooltip",
+                  "data-placement": "bottom",
+                  title: "Mark as paid"
+                },
                 on: {
                   click: function($event) {
                     _vm.itemAction("pay", _vm.rowData, _vm.rowIndex)
@@ -86440,7 +86471,35 @@ var render = function() {
             )
           ]
         )
-      : _vm._e()
+      : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "btn-group",
+        attrs: { role: "group", "aria-label": "Payout actions" }
+      },
+      [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-info",
+            attrs: {
+              type: "button",
+              "data-toggle": "tooltip",
+              "data-placement": "bottom",
+              title: "Download commission report"
+            },
+            on: {
+              click: function($event) {
+                _vm.itemAction("export", _vm.rowData, _vm.rowIndex)
+              }
+            }
+          },
+          [_vm._m(2)]
+        )
+      ]
+    )
   ])
 }
 var staticRenderFns = [
@@ -86458,6 +86517,14 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("span", { staticClass: "icon" }, [
       _c("i", { staticClass: "fa fa-money" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "icon" }, [
+      _c("i", { staticClass: "fa fa-file-pdf-o" })
     ])
   }
 ]
