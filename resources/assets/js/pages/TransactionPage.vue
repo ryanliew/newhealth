@@ -10,7 +10,10 @@
 						dateFilterKey="transactions.date"
 						:hasBack="true"
 						:filterMonth="filterMonth"
-						@back="back">
+						@back="back"
+						:canExport="true"
+						:exportUrl="exportUrl"
+						>
 			</table-view>
 		</transition>
 	</div>
@@ -50,7 +53,13 @@
 				let id = this.userId ? this.userId : window.user.id;
 
 				return "/api/user/" + id + "/transactions";
-			} 
+			},
+
+			exportUrl() {
+				let id = this.userId ? this.userId : window.user.id;
+
+				return "/exports/transactions?user=" + id;
+			}
 		}
 	}
 </script>
