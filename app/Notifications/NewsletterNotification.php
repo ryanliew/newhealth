@@ -48,10 +48,12 @@ class NewsletterNotification extends Notification
     {
         $locale = $this->user->country_id == 48 ? 'zh' : 'en';
         App::setLocale($locale);
+        $title = $locale == 'zh' ? $this->post->title_zh : $this->post->title;
+
         return (new Newsletter($this->user, $this->post, $locale))
                 ->onQueue('default')
                 ->to($this->user->email)
-                ->subject( __('mail.newleaf_newsletter'));
+                ->subject( $title );
     }
 
     /**

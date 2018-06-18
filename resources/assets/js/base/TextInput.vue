@@ -14,7 +14,7 @@
 				v-html="value"
 				v-else>	
 		</p>
-		<span class="invalid-feedback" v-if="error"><strong>{{ error | trans }}</strong></span>
+		<span class="text-danger" v-if="error"><strong>{{ error | trans }}</strong></span>
 	</div>
 </template>
 

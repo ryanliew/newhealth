@@ -21,7 +21,7 @@
     <table style="width:1170px;text-align:center;" cellpadding="0" cellspacing="0">
         <tr style="background: black">
             <td>
-                <img src="{{ url('/img/mail/newsletter-header.png') }}" width="100%" style="width:100%;display:block;">
+                <img src="{{ url('/img/mail/Newleaf-Newsletter-Header.jpg') }}" width="100%" style="width:100%;display:block;">
             </td>
         </tr>
     </table>
@@ -44,6 +44,12 @@
             </td>
         </tr>
     </table>
+    <table style="padding:10px 0">
+        <tr>
+            <td>
+            </td>
+        </tr>
+    </table>
     <table style="width:1170px;text-align:center;">
         <tr>
             <td>
@@ -57,7 +63,7 @@
             </td>
         </tr>
     </table>
-    <table style="padding:15px 0">
+    <table style="padding:30px 0">
         <tr>
             <td>
             </td>
@@ -141,7 +147,7 @@
             <td style="width:{{ (1170 - $post->thumbnail_table_width) / 2 }}px;"></td>
         </tr>
     </table>
-    <table style="width:1170px; text-align:center;">
+    <table style="width:1170px; text-align:justify;">
         <tr>
             <td>
                 <div style="padding: 30px">

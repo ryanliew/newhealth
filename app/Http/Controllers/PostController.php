@@ -41,7 +41,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(['title' => 'required']);
+        request()->validate(['title' => 'required|max:255', 'title_zh' => 'max:255']);
 
         Post::create([
             'title' => request()->title, 
@@ -96,7 +96,7 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        request()->validate(['title' => 'required']);
+        request()->validate(['title' => 'required|max:255', 'title_zh' => 'max:255']);
 
         $left_photo = $post->left_photo;
         $cover_photo = $post->cover_photo;

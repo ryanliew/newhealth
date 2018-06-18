@@ -20,7 +20,7 @@
 						<table style="width:1170px; padding: 10px;margin: 0 auto;">
 							<tr style="background: black">
 								<td colspan="2">
-					                <img src="/img/mail/newsletter-header.png" width="100%">
+					                <img src="/img/mail/Newleaf-Newsletter-Header.jpg" width="100%">
 					            </td>
 							</tr>
 							<tr>
@@ -53,6 +53,12 @@
 								</td>
 							</tr>
 						</table>
+						<table style="height:25px">
+					        <tr>
+					            <td>
+					            </td>   
+					        </tr>
+					    </table> 
 						<table style="width:1170px; padding: 10px;margin: 0 auto;">
 							<tr>
 								<td>
@@ -68,6 +74,7 @@
 											:hideLabel="false"
 											:error="form.errors.get('title')">
 										</text-input>
+										<p class="text-right" :class="titleLengthColor">{{ titleLength }} / 255</p>
 										<hr>
 										<text-input v-model="form.title_zh" 
 											:defaultValue="form.title_zh"
@@ -78,8 +85,9 @@
 											:editable="user.is_admin"
 											:focus="false"
 											:hideLabel="false"
-											:error="form.errors.get('title')">
+											:error="form.errors.get('title_zh')">
 										</text-input>
+										<p class="text-right" :class="titleZhLengthColor">{{ titleZhLength }} / 255</p>
 									</template>
 									<b style="font-size: 35px;line-height:35px;" v-else>
 										{{ postTitle }}
@@ -285,15 +293,16 @@
 											<vue-editor id="chinese" v-model="form.content_zh" :editorToolbar="customToolbar"></vue-editor>
 										</template>
 										<template v-else>
-											<div style="font-size:17px;" v-html="form.content" v-if="lang.locale == 'en'"></div>
-											<div style="font-size:17px;" v-html="form.content_zh" v-else></div>
+											<div style="font-size:17px;text-align: justify" v-html="form.content" v-if="lang.locale == 'en'"></div>
+											<div style="font-size:17px;text-align: justify" v-html="form.content_zh" v-else></div>
 										</template>
 									</div>
 								</td>	
 							</tr>
 						</table>				
 							
-						<button type="submit" class="btn btn-success mt-3" :disabled="form.submitting" v-html="submitButtonContent" v-if="isEditing"></button>
+						<button type="submit" class="btn btn-success" :disabled="form.submitting" v-html="submitButtonContent" v-if="isEditing"></button>
+						<button type="button" class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
 					</form>
 				</div>
 			</div>
@@ -464,6 +473,22 @@
 				let hasMiddlePhoto = this.middlePhoto.src !== '/img/select-image.png' ? 1 : 0;
 				let hasRightPhoto = this.rightPhoto.src !== '/img/select-image.png' ? 1 : 0; 
 				return ( hasLeftPhoto + hasRightPhoto + hasMiddlePhoto ) * 390;
+			},
+
+			titleLength() {
+				return this.form.title.length;
+			},
+
+			titleZhLength() {
+				return this.form.title_zh.length;
+			},
+
+			titleLengthColor() {
+				return this.titleLength > 255 ? 'text-danger' : '';
+			},
+
+			titleZhLengthColor() {
+				return this.titleZhLength > 255 ? 'text-danger' : '';
 			}
 		}	
 	}

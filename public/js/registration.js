@@ -54988,7 +54988,7 @@ var render = function() {
         }),
     _vm._v(" "),
     _vm.error
-      ? _c("span", { staticClass: "invalid-feedback" }, [
+      ? _c("span", { staticClass: "text-danger" }, [
           _c("strong", [_vm._v(_vm._s(_vm._f("trans")(_vm.error)))])
         ])
       : _vm._e()
