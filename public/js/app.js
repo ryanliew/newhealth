@@ -55008,7 +55008,7 @@ var render = function() {
         }),
     _vm._v(" "),
     _vm.error
-      ? _c("span", { staticClass: "invalid-feedback" }, [
+      ? _c("span", { staticClass: "text-danger" }, [
           _c("strong", [_vm._v(_vm._s(_vm._f("trans")(_vm.error)))])
         ])
       : _vm._e()
@@ -80194,6 +80194,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -80332,6 +80341,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			var hasMiddlePhoto = this.middlePhoto.src !== '/img/select-image.png' ? 1 : 0;
 			var hasRightPhoto = this.rightPhoto.src !== '/img/select-image.png' ? 1 : 0;
 			return (hasLeftPhoto + hasRightPhoto + hasMiddlePhoto) * 390;
+		},
+		titleLength: function titleLength() {
+			return this.form.title.length;
+		},
+		titleZhLength: function titleZhLength() {
+			return this.form.title_zh.length;
+		},
+		titleLengthColor: function titleLengthColor() {
+			return this.titleLength > 255 ? 'text-danger' : '';
+		},
+		titleZhLengthColor: function titleZhLengthColor() {
+			return this.titleZhLength > 255 ? 'text-danger' : '';
 		}
 	}
 });
@@ -80501,6 +80522,8 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
               _c(
                 "table",
                 {
@@ -80538,6 +80561,15 @@ var render = function() {
                                 }
                               }),
                               _vm._v(" "),
+                              _c(
+                                "p",
+                                {
+                                  staticClass: "text-right",
+                                  class: _vm.titleLengthColor
+                                },
+                                [_vm._v(_vm._s(_vm.titleLength) + " / 255")]
+                              ),
+                              _vm._v(" "),
                               _c("hr"),
                               _vm._v(" "),
                               _c("text-input", {
@@ -80550,7 +80582,7 @@ var render = function() {
                                   editable: _vm.user.is_admin,
                                   focus: false,
                                   hideLabel: false,
-                                  error: _vm.form.errors.get("title")
+                                  error: _vm.form.errors.get("title_zh")
                                 },
                                 model: {
                                   value: _vm.form.title_zh,
@@ -80559,7 +80591,16 @@ var render = function() {
                                   },
                                   expression: "form.title_zh"
                                 }
-                              })
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "p",
+                                {
+                                  staticClass: "text-right",
+                                  class: _vm.titleZhLengthColor
+                                },
+                                [_vm._v(_vm._s(_vm.titleZhLength) + " / 255")]
+                              )
                             ]
                           : _c(
                               "b",
@@ -80584,7 +80625,7 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _vm._m(1),
+              _vm._m(2),
               _vm._v(" "),
               _c(
                 "table",
@@ -81142,13 +81183,19 @@ var render = function() {
                             : [
                                 _vm.lang.locale == "en"
                                   ? _c("div", {
-                                      staticStyle: { "font-size": "17px" },
+                                      staticStyle: {
+                                        "font-size": "17px",
+                                        "text-align": "justify"
+                                      },
                                       domProps: {
                                         innerHTML: _vm._s(_vm.form.content)
                                       }
                                     })
                                   : _c("div", {
-                                      staticStyle: { "font-size": "17px" },
+                                      staticStyle: {
+                                        "font-size": "17px",
+                                        "text-align": "justify"
+                                      },
                                       domProps: {
                                         innerHTML: _vm._s(_vm.form.content_zh)
                                       }
@@ -81164,11 +81211,24 @@ var render = function() {
               _vm._v(" "),
               _vm.isEditing
                 ? _c("button", {
-                    staticClass: "btn btn-success mt-3",
+                    staticClass: "btn btn-success",
                     attrs: { type: "submit", disabled: _vm.form.submitting },
                     domProps: { innerHTML: _vm._s(_vm.submitButtonContent) }
                   })
-                : _vm._e()
+                : _vm._e(),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  attrs: { type: "button" },
+                  on: { click: _vm.back }
+                },
+                [
+                  _c("i", { staticClass: "fa fa-arrow-left" }),
+                  _vm._v(" " + _vm._s(_vm._f("trans")("table.back")))
+                ]
+              )
             ]
           )
         ])
@@ -81184,9 +81244,20 @@ var staticRenderFns = [
     return _c("tr", { staticStyle: { background: "black" } }, [
       _c("td", { attrs: { colspan: "2" } }, [
         _c("img", {
-          attrs: { src: "/img/mail/newsletter-header.png", width: "100%" }
+          attrs: {
+            src: "/img/mail/Newleaf-Newsletter-Header.jpg",
+            width: "100%"
+          }
         })
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("table", { staticStyle: { height: "25px" } }, [
+      _c("tr", [_c("td")])
     ])
   },
   function() {
