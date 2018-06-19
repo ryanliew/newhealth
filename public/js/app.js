@@ -79693,11 +79693,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		export: function _export(data) {
 			var date = __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.$refs.transactions.getMonth());
-			var start = date.startOf('month');
-			var end = date.endOf('month');
 			var user = data.user_id;
 
-			window.open('/exports/transactions?user=' + user + '&start=' + start.format("YYYY-MM-DD") + '&end=' + end.format("YYYY-MM-DD") + '&type=pdf');
+			window.open('/exports/transactions?user=' + user + '&start=' + date.startOf('month').format("YYYY-MM-DD") + '&end=' + date.endOf('month').format("YYYY-MM-DD") + '&type=pdf&dateFilterKey=date');
 		},
 		onSuccess: function onSuccess(response) {
 			flash(this.$options.filters.trans(response.message));

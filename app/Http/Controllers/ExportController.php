@@ -6,6 +6,7 @@ use App\ExcelExports\PurchaseExports;
 use App\ExcelExports\TransactionExports;
 use App\Purchase;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -15,20 +16,23 @@ class ExportController extends Controller
     {
     	$user = User::find(request()->user);
 
-    	$transactions = Controller::VueTableListResult($user->transactions());
+    	$transactions = Controller::VueTableListResult($user->transactions(), false);
 
         $title = 'commissions_report';
+        $date = $transactions->min('date')->format("jS M Y") . " - " . $transactions->max('date')->format("jS M Y");
 
     	if(request()->has(['start', 'end']))
     	{
-    		$title .= request()->start . '_' . request()->end ;
+    		$title .= "_" . request()->start . '_' . request()->end ;
+            $date = Carbon::parse(request()->start)->format("jS M Y") . " - " . Carbon::parse(request()->end)->format("jS M Y");
     	}
 
-        // return view('pdf.transactions', ['transactions' => $transactions]);
+        // return view('pdf.transactions', ['transactions' => $transactions, 'date' => $date, 'user' => $user]);
         if(request()->type == 'pdf')
         {
+
         	$pdf = App::make('dompdf.wrapper');
-        	$pdf->loadView('pdf.transactions', ['transactions' => $transactions]);
+        	$pdf->loadView('pdf.transactions', ['transactions' => $transactions, 'date' => $date, 'user' => $user]);
         	return $pdf->download($title . '.pdf');
         }
 
