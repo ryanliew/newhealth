@@ -44,7 +44,7 @@
 				this.addNewPackage();
 			}.bind(this));
 
-			this.$events.on('edit', data => this.edit(data));			
+			this.$events.on('view', data => this.edit(data));			
 		},
 
 		methods: {
