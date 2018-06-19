@@ -24,12 +24,12 @@ return [
     'cancel_change_password' => 'Cancel change password',
     'profile_update_success'=> 'Profile updated',
 
-    'kyc_documents' => 'KYC Documents',
+    'kyc_documents' => 'Identify Verification Documents',
     'update_document' => "Update document",
-    'identity' => "NRIC\Passport",
-    'bank_statement' => "Recent bank statement",
-    'residence_proof' => 'Residence proof',
-    'nominee_identity' => 'Nominee identity',
+    'identity' => "Purchaser NRIC (for Malaysian) or Passport (for non-Malaysian)",
+    'bank_statement' => "Bank Statement",
+    'residence_proof' => 'Proof of Residence',
+    'nominee_identity' => 'Nominee NRIC (for Malaysian) or Passport (for non-Malaysian)',
     'cancel_update' => 'Cancel update',
     'documents_success' => 'Documents updated'
 ];
