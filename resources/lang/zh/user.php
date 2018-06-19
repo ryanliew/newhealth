@@ -24,12 +24,12 @@ return [
     'cancel_change_password' => '取消更换密码',
     'profile_update_success'=> '资料已更新',
 
-    'kyc_documents' => 'KYC资料',
-    'update_document' => "更新KYC资料",
-    'identity' => "身份证/护照号码",
-    'bank_statement' => "近期银行户口资料",
-    'residence_proof' => '居留证明',
-    'nominee_identity' => '提名人身份证/护照号码',
+    'kyc_documents' => '实名认证文件',
+    'update_document' => "更新实名认证文件",
+    'identity' => "购买者身份证件副本（马来西亚公民）或护照（非马来西亚公民）",
+    'bank_statement' => "银行流水账单",
+    'residence_proof' => '住址证明文件',
+    'nominee_identity' => '提名人身份证件副本（马来西亚公民）或护照（非马来西亚公民）',
     'cancel_update' => '取消更新',
     'documents_success' => '更新成功'
 
