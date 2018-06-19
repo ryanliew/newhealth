@@ -168,7 +168,7 @@
 				packages: [],
 				form: new Form({
 					packages: [],
-					user_id: window.user.id,
+					user_id: '',
 					purchase_date: ''
 				}),
 				submitText: 'purchase.checkout',
@@ -182,6 +182,8 @@
 		},
 
 		mounted() {
+			console.log(this.user.id);
+			this.form.user_id = this.user.id;
 			this.purchase = this.selectedPurchase;
 			this.form.purchase_date = this.purchase ? moment(this.purchase.created_at).format("YYYY-MM-DD") : moment().format("YYYY-MM-DD");
 			this.getPackages();
@@ -238,7 +240,7 @@
 			},
 
 			updateSelectedUser() {
-				this.form.user_id = this.selectedUser.value;
+				this.form.user_id = this.selectedUser ? this.selectedUser.value : this.user.id;
 			},
 
 			submitForm() {

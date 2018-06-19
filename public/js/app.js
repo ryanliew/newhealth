@@ -77266,7 +77266,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			packages: [],
 			form: new Form({
 				packages: [],
-				user_id: window.user.id,
+				user_id: '',
 				purchase_date: ''
 			}),
 			submitText: 'purchase.checkout',
@@ -77279,6 +77279,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		};
 	},
 	mounted: function mounted() {
+		console.log(this.user.id);
+		this.form.user_id = this.user.id;
 		this.purchase = this.selectedPurchase;
 		this.form.purchase_date = this.purchase ? __WEBPACK_IMPORTED_MODULE_2_moment___default()(this.purchase.created_at).format("YYYY-MM-DD") : __WEBPACK_IMPORTED_MODULE_2_moment___default()().format("YYYY-MM-DD");
 		this.getPackages();
@@ -77340,7 +77342,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			});
 		},
 		updateSelectedUser: function updateSelectedUser() {
-			this.form.user_id = this.selectedUser.value;
+			this.form.user_id = this.selectedUser ? this.selectedUser.value : this.user.id;
 		},
 		submitForm: function submitForm() {
 			var _this4 = this;
@@ -77620,6 +77622,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		submitVerifyButtonContent: function submitVerifyButtonContent() {
 			return this.verifyForm.submitting ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : this.$options.filters.trans(this.submitVerifyText);
+		}
+	},
+
+	watch: {
+		purchase: function purchase(val) {
+			this.form.amount = val.total_price;
+			this.form.amount_std = val.total_price_std;
 		}
 	}
 });

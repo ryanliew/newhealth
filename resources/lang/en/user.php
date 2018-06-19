@@ -30,5 +30,6 @@ return [
     'bank_statement' => "Recent bank statement",
     'residence_proof' => 'Residence proof',
     'nominee_identity' => 'Nominee identity',
-    'cancel_update' => 'Cancel update'
+    'cancel_update' => 'Cancel update',
+    'documents_success' => 'Documents updated'
 ];
