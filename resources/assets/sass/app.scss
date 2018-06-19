@@ -61,12 +61,9 @@
   overflow-x: auto;
 }
 
-@media (max-width:1300px)
-{
-  .tree {
-    min-width: 1300px;
-    overflow-x: auto;
-  }
+.tree {
+  min-width: 3300px;
+  overflow-x: auto;
 }
 
 .tree ul {

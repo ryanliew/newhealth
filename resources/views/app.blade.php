@@ -20,7 +20,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="./css/start-ui.css" rel="stylesheet" />
-        <link href="./css/app.css" rel="stylesheet" />
+        <link href="./css/app.css?v=1.0" rel="stylesheet" />
     </head>
     <body class="with-side-menu-compact">
         <div id="app"></div>
