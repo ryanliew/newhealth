@@ -73274,9 +73274,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		companyContactNumber: function companyContactNumber() {
 			if (this.user && this.user.addresses.length > 1) {
-				return _.filter(this.user.addresses, function (address) {
+				var result = _.filter(this.user.addresses, function (address) {
 					return address.type == "company";
-				})[0].phone;
+				});
+				if (result.length > 0) return result[0].phone;
 			}
 
 			return '';
