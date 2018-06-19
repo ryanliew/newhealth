@@ -68923,7 +68923,7 @@ Vue.mixin({
 	},
 	created: function created() {
 		window.events.$on("lang", function () {
-			this.lang = lang.getLocale();
+			this.lang = lang;
 			this.$forceUpdate();
 		}.bind(this));
 	}
@@ -80457,16 +80457,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return 'post.add_new_post';
 		},
 		postTitle: function postTitle() {
-			return this.lang == 'zh' ? this.selectedPost.title_zh : this.selectedPost.title;
+			return this.lang.locale == 'zh' ? this.selectedPost.title_zh : this.selectedPost.title;
 		},
 		leftCaption: function leftCaption() {
-			return this.lang == 'zh' ? this.selectedPost.left_caption_zh : this.selectedPost.left_caption;
+			return this.lang.locale == 'zh' ? this.selectedPost.left_caption_zh : this.selectedPost.left_caption;
 		},
 		rightCaption: function rightCaption() {
-			return this.lang == 'zh' ? this.selectedPost.right_caption_zh : this.selectedPost.right_caption;
+			return this.lang.locale == 'zh' ? this.selectedPost.right_caption_zh : this.selectedPost.right_caption;
 		},
 		middleCaption: function middleCaption() {
-			return this.lang == 'zh' ? this.selectedPost.middle_caption_zh : this.selectedPost.middle_caption;
+			return this.lang.locale == 'zh' ? this.selectedPost.middle_caption_zh : this.selectedPost.middle_caption;
 		},
 		date: function date() {
 			return this.selectedPost ? __WEBPACK_IMPORTED_MODULE_2_moment___default()(this.selectedPost.updated_at).format("Do MMMM YYYY") : __WEBPACK_IMPORTED_MODULE_2_moment___default()().format("Do MMMM YYYY");
@@ -87310,8 +87310,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
     },
 
+    mounted: function mounted() {
+        console.log(lang.locale);
+    },
     data: function data() {
-        return {};
+        return {
+            lang: lang
+        };
     }
 });
 
@@ -87324,7 +87329,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm.lang == "en"
+    _vm.lang.locale == "en"
       ? _c("div", [
           _c("span", { domProps: { textContent: _vm._s(_vm.rowData.title) } })
         ])

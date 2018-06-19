@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="lang == 'en'">
+        <div v-if="lang.locale == 'en'">
             <span v-text="rowData.title"></span>
         </div>
         <div v-else>
@@ -22,9 +22,13 @@ export default {
         }
     },
 
+    mounted() {
+        console.log(lang.locale);
+    },
+
     data() {
         return {
-            
+            lang: lang
         };
     },
   }
