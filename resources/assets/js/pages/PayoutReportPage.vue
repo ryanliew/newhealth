@@ -108,11 +108,9 @@
 
 			export(data) {
 				let date = moment(this.$refs.transactions.getMonth());
-				let start = date.startOf('month');
-				let end = date.endOf('month');
 				let user = data.user_id;
 
-				window.open('/exports/transactions?user=' + user + '&start=' + start.format("YYYY-MM-DD") + '&end=' + end.format("YYYY-MM-DD") + '&type=pdf');
+				window.open('/exports/transactions?user=' + user + '&start=' + date.startOf('month').format("YYYY-MM-DD") + '&end=' + date.endOf('month').format("YYYY-MM-DD") + '&type=pdf&dateFilterKey=date');
 
 			},
 
