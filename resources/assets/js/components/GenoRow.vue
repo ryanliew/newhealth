@@ -2,8 +2,8 @@
 	<ul>
 		<li :class="getClass(user)" v-for="user in users">
 			<a>
-				{{ user.name }} 
-				<span class="badge badge-primary" v-if="getClass(user) == 'self'">{{ 'tree.self' |trans }}</span>
+				{{ user.name }} <span class="badge badge-primary" v-if="getClass(user) == 'self'">{{ 'tree.self' |trans }}</span><br>
+				{{ user.referral_code }}
 				<br>
 				<span class="badge badge-success">{{ user.tree_count }} {{ 'auth.tree' | trans_choice(user.tree_count) }}</span>
 				<br>
