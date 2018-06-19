@@ -32,8 +32,10 @@ class PurchaseController extends Controller
     	foreach ($packages as $key => $package) {
             if($package->amount > 0) {
                 $db_package = Package::find($package->id);
-                $processed_packages[$package->id]['total_price'] = $db_package->price * $package->amount;
-                $processed_packages[$package->id]['total_price_std'] = $db_package->price_std * $package->amount;
+                $price = $db_package->price_promotion > 0 ? $db_package->price_promotion : $db_package->price;
+                $price_std = $db_package->price_std_promotion > 0 ? $db_package->price_std_promotion : $db_package->price_std;
+                $processed_packages[$package->id]['total_price'] = $price * $package->amount;
+                $processed_packages[$package->id]['total_price_std'] = $price_std * $package->amount;
                 $processed_packages[$package->id]['amount'] = $package->amount;
             }
     	}
@@ -70,8 +72,10 @@ class PurchaseController extends Controller
         foreach ($packages as $key => $package) {
             if($package->amount > 0) {
                 $db_package = Package::find($package->id);
-                $processed_packages[$package->id]['total_price'] = $db_package->price * $package->amount;
-                $processed_packages[$package->id]['total_price_std'] = $db_package->price_std * $package->amount;
+                $price = $db_package->price_promotion > 0 ? $db_package->price_promotion : $db_package->price;
+                $price_std = $db_package->price_std_promotion > 0 ? $db_package->price_std_promotion : $db_package->price_std;
+                $processed_packages[$package->id]['total_price'] = $price * $package->amount;
+                $processed_packages[$package->id]['total_price_std'] = $price_std * $package->amount;
                 $processed_packages[$package->id]['amount'] = $package->amount;
             }
         }

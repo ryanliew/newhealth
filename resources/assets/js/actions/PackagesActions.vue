@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="btn-group" role="group" aria-label="Purchase actions">
-            <button type="button" class="btn btn-primary" @click="itemAction('view', rowData, rowIndex)">
+            <button type="button" class="btn btn-info" @click="itemAction('view', rowData, rowIndex)">
                 <span class="icon">
-                    <i class="fa fa-eye"></i>
+                    <i class="fa fa-edit"></i>
                 </span>
             </button>
         </div>

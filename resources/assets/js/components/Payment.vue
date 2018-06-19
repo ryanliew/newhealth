@@ -155,6 +155,13 @@
 			submitVerifyButtonContent() {
 				return this.verifyForm.submitting ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : this.$options.filters.trans(this.submitVerifyText);
 			}
+		},
+
+		watch: {
+			purchase(val) {
+				this.form.amount = val.total_price;
+				this.form.amount_std = val.total_price_std;
+			}
 		}
 	}
 </script>
