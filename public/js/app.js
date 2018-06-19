@@ -79356,13 +79356,14 @@ var render = function() {
         { class: _vm.getClass(user) },
         [
           _c("a", [
-            _vm._v("\n\t\t\t" + _vm._s(user.name) + " \n\t\t\t"),
+            _vm._v("\n\t\t\t" + _vm._s(user.name) + " "),
             _vm.getClass(user) == "self"
               ? _c("span", { staticClass: "badge badge-primary" }, [
                   _vm._v(_vm._s(_vm._f("trans")("tree.self")))
                 ])
               : _vm._e(),
-            _vm._v(" "),
+            _c("br"),
+            _vm._v("\n\t\t\t" + _vm._s(user.referral_code) + "\n\t\t\t"),
             _c("br"),
             _vm._v(" "),
             _c("span", { staticClass: "badge badge-success" }, [
