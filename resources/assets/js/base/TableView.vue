@@ -5,14 +5,14 @@
 				<div class="col">
 					{{ title | trans }}
 				</div>
-				<div class="col-auto" v-if="canExport">
+				<div class="col-auto" v-if="canExportPDF || canExportExcel">
 					<div class="dropdown">
 						<button class="btn btn-primary dropdown-toggle" type="button" id="exportMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 						    	{{ "table.export" | trans }}
 						</button>
 						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="exportMenuButton">
-							<a class="dropdown-item" target="_blank" :href="exportPDFUrl"><i class="fa fa-file-pdf-o"></i> {{ 'table.export_pdf' | trans }}</a>
-						    <a class="dropdown-item" target="_blank" :href="exportExcelUrl"><i class="fa fa-file-excel-o"></i> {{ 'table.export_excel' | trans }}</a>
+							<a class="dropdown-item" target="_blank" :href="exportPDFUrl" v-if="canExportPDF"><i class="fa fa-file-pdf-o"></i> {{ 'table.export_pdf' | trans }}</a>
+						    <a class="dropdown-item" target="_blank" :href="exportExcelUrl" v-if="canExportExcel"><i class="fa fa-file-excel-o"></i> {{ 'table.export_excel' | trans }}</a>
 						</div>
 					</div>
 				</div>
@@ -70,7 +70,7 @@
 	import Loader from './Loader';
 
 	export default {
-		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth', 'canExport', 'exportUrl'],
+		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth', 'canExportPDF', 'canExportExcel', 'exportUrl'],
 
 		components: { Vuetable, VuetablePagination, VuetablePaginationInfo, VuetableFilterBar, Loader },
 

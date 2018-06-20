@@ -215,6 +215,28 @@
 									:focus="false"
 									:hideLabel="false">
 								</text-input>
+
+								<text-input v-model="user.beneficiary_address" 
+									:defaultValue="user.beneficiary_address"
+									:required="true"
+									type="text"
+									:label="$options.filters.trans('auth.beneficiary_address')"
+									name="beneficiary_address"
+									:editable="false"
+									:focus="false"
+									:hideLabel="false">
+								</text-input>
+
+								<text-input v-model="user.beneficiary_contact" 
+									:defaultValue="user.beneficiary_contact"
+									:required="true"
+									type="text"
+									:label="$options.filters.trans('auth.beneficiary_contact')"
+									name="beneficiary_contact"
+									:editable="false"
+									:focus="false"
+									:hideLabel="false">
+								</text-input>
 							</div>
 						</div>
 					</div>

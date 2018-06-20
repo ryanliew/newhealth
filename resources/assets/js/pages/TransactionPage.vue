@@ -11,7 +11,8 @@
 						:hasBack="true"
 						:filterMonth="filterMonth"
 						@back="back"
-						:canExport="true"
+						:canExportPDF="true"
+						:canExportExcel="true"
 						:exportUrl="exportUrl"
 						>
 			</table-view>

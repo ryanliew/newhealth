@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\ExcelExports\PurchaseExports;
 use App\ExcelExports\TransactionExports;
+use App\ExcelExports\UserExports;
 use App\Purchase;
 use App\User;
 use Carbon\Carbon;
@@ -124,6 +125,90 @@ class ExportController extends Controller
             }
 
             return new PurchaseExports($collection);
+        }
+    }
+
+    public function users()
+    {
+        $users = Controller::VueTableListResult(User::with('contacts'));
+
+        $title = 'users_data';
+
+        if(request()->has(['start', 'end']))
+        {
+            $title .= request()->start . '_' . request()->end ;
+        }
+
+        if(request()->type == 'excel')
+        {   
+            $collection = collect([["Newleaf ID", 
+                                    "Name", 
+                                    "Passport/NRIC", 
+                                    "Email Address", 
+                                    "Address",
+                                    "Contact No", 
+                                    "Nationality",
+                                    "Gender",
+                                    "Bank Name",
+                                    "Bank SORT/SWIFT",
+                                    "Bank Address",
+                                    "Bank Account Type",
+                                    "Bank Account No.",
+                                    "Nominee Name",
+                                    "Nominee Passport/NRIC",
+                                    "Nominee Address",
+                                    "Nominee Contact No.",
+                                    "Tree Purchases",
+                                    "Payment Status",
+                                    "Payment Amount",
+                                    "Date of purchase",
+                                    "Date of payment",
+                                    "Date of verification",
+                                    "ID verification status"
+                                ]]);
+
+            foreach($users as $key => $user)
+            {
+                $purchase = $user->purchases()->first();
+                $payment = $user->payments()->first();
+
+                $payment_amount = "N/A";
+
+                if($payment)
+                {
+                    if($payment->is_std)
+                        $payment_amount = $payment->amount_std;
+                    else
+                        $payment_amount = $payment->amount;
+                }
+                $collection->push([$user->referral_code,
+                                    $user->name,
+                                    $user->identification . "",
+                                    $user->email,
+                                    $user->address,
+                                    $user->contact_number . "",
+                                    $user->nationality,
+                                    $user->gender,
+                                    $user->bank_name,
+                                    $user->bank_swift . "",
+                                    $user->bank_address,
+                                    $user->account_type,
+                                    $user->account_no . "",
+                                    $user->beneficiary_name,
+                                    $user->beneficiary_identification,
+                                    $user->beneficiary_address,
+                                    $user->beneficiary_contact . "",
+                                    $user->tree_count,
+                                    $purchase ? $purchase->status : "N/A",
+                                    floatval($payment_amount),
+                                    $purchase ? $purchase->created_at->toDateString() : "N/A",
+                                    $payment ?  $payment->updated_at->toDateString() : "N/A",
+                                    $purchase && $purchase->is_verified ? $purchase->updated_at->toDateString() : "N/A",
+                                    $user->id_status
+                                    ]);
+            }
+
+            return new UserExports($collection);
         }
     }
 }

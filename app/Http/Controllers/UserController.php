@@ -101,7 +101,10 @@ class UserController extends Controller
             'bank_address' => 'required',
             'account_type' => 'required',
             'account_no' => 'required',
-            'beneficiary_name' => 'required'
+            'beneficiary_name' => 'required',
+            'beneficiary_contact' => 'required',
+            'beneficiary_address' => 'required|max:255',
+            'beneficiary_identification' => 'required'
         ]);
 
         $user->update([
@@ -124,7 +127,9 @@ class UserController extends Controller
             'account_type' => request()->account_type,
             'account_no' => request()->account_no,
             'beneficiary_name' => request()->beneficiary_name,
-            'beneficiary_identification' => request()->beneficiary_identification
+            'beneficiary_identification' => request()->beneficiary_identification,
+            'beneficiary_address' => request()->beneficiary_address,
+            'beneficiary_contact' => request()->beneficiary_contact
         ]);
 
         if(request()->has('isChangePassword'))
@@ -247,7 +252,8 @@ class UserController extends Controller
             "kyc_identity" => $identity,
             "kyc_residence_proof" => $residence_proof,
             "kyc_nominee_identity" => $nominee_identity,
-            "kyc_bank_statement" => $bank_statement
+            "kyc_bank_statement" => $bank_statement,
+            "id_status" => "pending_verification"
         ]);
 
         return json_encode(['message' => 'user.documents_success']);
