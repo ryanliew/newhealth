@@ -56,7 +56,7 @@ Vue.mixin({
 
 	created() {
 		window.events.$on("lang", function(){
-			this.lang = lang.getLocale();
+			this.lang = lang;
 			this.$forceUpdate();
 		}.bind(this));
 	}

@@ -449,19 +449,19 @@
 			},
 
 			postTitle() {
-				return this.lang == 'zh' ? this.selectedPost.title_zh : this.selectedPost.title;
+				return this.lang.locale == 'zh' ? this.selectedPost.title_zh : this.selectedPost.title;
 			},
 
 			leftCaption() {
-				return this.lang == 'zh' ? this.selectedPost.left_caption_zh : this.selectedPost.left_caption;
+				return this.lang.locale == 'zh' ? this.selectedPost.left_caption_zh : this.selectedPost.left_caption;
 			},
 
 			rightCaption() {
-				return this.lang == 'zh' ? this.selectedPost.right_caption_zh : this.selectedPost.right_caption;
+				return this.lang.locale == 'zh' ? this.selectedPost.right_caption_zh : this.selectedPost.right_caption;
 			},
 
 			middleCaption() {
-				return this.lang == 'zh' ? this.selectedPost.middle_caption_zh : this.selectedPost.middle_caption;
+				return this.lang.locale == 'zh' ? this.selectedPost.middle_caption_zh : this.selectedPost.middle_caption;
 			},
 
 			date() {
