@@ -40,7 +40,7 @@
 									<td>
 										x
 									</td>
-									<td v-if="!user.is_std">
+									<td v-if="!is_std">
 										<text-input v-model="form.packages[index].price" 
 											:defaultValue="form.packages[index].price"
 											:required="false"
@@ -67,7 +67,7 @@
 									<td>
 										=
 									</td>
-									<td v-if="!user.is_std">
+									<td v-if="!is_std">
 										{{ getPackagePrice(form.packages[index].amount, form.packages[index]) | currency }}
 									</td>
 									<td v-else>
@@ -81,7 +81,7 @@
 									<td></td>
 									<td><b>{{ 'purchase.total' | trans }}</b></td>
 									<td>=</td>
-									<td v-if="!user.is_std">{{ totalPrice | currency}}</td>
+									<td v-if="!is_std">{{ totalPrice | currency}}</td>
 									<td v-else>{{ totalPrice | currency_std}}</td>
 								</tr>
 							</tbody>
@@ -197,7 +197,8 @@
 				potentialUsers: '',
 				isEditing: this.selectedPurchase ? false : true,
 				loading: false,
-				updateText: 'purchase.update'
+				updateText: 'purchase.update',
+				is_std: false
 			};
 		},
 
@@ -256,6 +257,7 @@
 					let obj = {};
 					obj['value'] = user.id;
 					obj['label'] = user.name;
+					obj['is_std'] = user.country_id == 48;
 
 					return obj;
 				});
@@ -263,6 +265,7 @@
 
 			updateSelectedUser() {
 				this.form.user_id = this.selectedUser ? this.selectedUser.value : this.user.id;
+				this.is_std = this.selectedUser ? this.selectedUser.is_std : this.user.is_std;
 			},
 
 			submitForm() {
@@ -282,7 +285,7 @@
 
 				let price = pack.price;
 
-				if(this.user.is_std)
+				if(this.is_std)
 				{
 					price = pack.price_std;
 				}
