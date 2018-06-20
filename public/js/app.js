@@ -77370,7 +77370,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			potentialUsers: '',
 			isEditing: this.selectedPurchase ? false : true,
 			loading: false,
-			updateText: 'purchase.update'
+			updateText: 'purchase.update',
+			is_std: false
 		};
 	},
 	mounted: function mounted() {
@@ -77434,12 +77435,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				var obj = {};
 				obj['value'] = user.id;
 				obj['label'] = user.name;
+				obj['is_std'] = !(user.country_id == 162 || user.country_id == 211);
 
 				return obj;
 			});
 		},
 		updateSelectedUser: function updateSelectedUser() {
 			this.form.user_id = this.selectedUser ? this.selectedUser.value : this.user.id;
+			this.is_std = this.selectedUser ? this.selectedUser.is_std : this.user.is_std;
 		},
 		submitForm: function submitForm() {
 			var _this4 = this;
@@ -77462,7 +77465,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 			var price = pack.price;
 
-			if (this.user.is_std) {
+			if (this.is_std) {
 				price = pack.price_std;
 			}
 
@@ -78134,7 +78137,7 @@ var render = function() {
                               _vm._v("\n\t\t\t\t\t\t\t\t\tx\n\t\t\t\t\t\t\t\t")
                             ]),
                             _vm._v(" "),
-                            !_vm.user.is_std
+                            !_vm.is_std
                               ? _c(
                                   "td",
                                   [
@@ -78202,7 +78205,7 @@ var render = function() {
                               _vm._v("\n\t\t\t\t\t\t\t\t\t=\n\t\t\t\t\t\t\t\t")
                             ]),
                             _vm._v(" "),
-                            !_vm.user.is_std
+                            !_vm.is_std
                               ? _c("td", [
                                   _vm._v(
                                     "\n\t\t\t\t\t\t\t\t\t" +
@@ -78251,7 +78254,7 @@ var render = function() {
                           _vm._v(" "),
                           _c("td", [_vm._v("=")]),
                           _vm._v(" "),
-                          !_vm.user.is_std
+                          !_vm.is_std
                             ? _c("td", [
                                 _vm._v(
                                   _vm._s(_vm._f("currency")(_vm.totalPrice))
