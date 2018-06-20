@@ -69012,7 +69012,9 @@ router.beforeEach(function (to, from, next) {
 	if (to.fullPath !== '/login' && !user) {
 
 		axios.get('/api/profile').then(function (response) {
-			user = response.data;next();
+			user = response.data;if (user.country_id == 48) {
+				lang.setLocale('zh');
+			};window.events.$emit('defaultzh');next();
 		});
 		//.catch(error => { intended = to.fullPath; window.location.href="/register"; });
 	} else {
@@ -72075,10 +72077,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	props: [''],
 	data: function data() {
 		return {
-			languages: [{ flag: 'flag-icon-us', name: 'English', code: 'en', current: 'current' }, { flag: 'flag-icon-cn', name: '中文', code: 'zh', current: '' }],
+			languages: [{ flag: 'flag-icon-us', name: 'English', code: 'en', current: '' }, { flag: 'flag-icon-cn', name: '中文', code: 'zh', current: '' }],
 
 			current: { flag: 'flag-icon-us', name: 'English', code: 'en', current: 'current' }
 		};
+	},
+	mounted: function mounted() {
+		window.events.$on("defaultzh", this.setZhAsDefault());
 	},
 
 
@@ -72088,6 +72093,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.current = language;
 
 			window.events.$emit("lang");
+		},
+		setZhAsDefault: function setZhAsDefault() {
+			this.current = { flag: 'flag-icon-cn', name: '中文', code: 'zh', current: 'current' };
 		}
 	}
 });
@@ -77344,6 +77352,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -77375,6 +77391,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		};
 	},
 	mounted: function mounted() {
+		this.form.user_id = this.user.id;
+		this.is_std = this.user.country_id == 48;
 		this.purchase = this.selectedPurchase;
 		this.form.purchase_date = this.purchase ? __WEBPACK_IMPORTED_MODULE_2_moment___default()(this.purchase.created_at).format("YYYY-MM-DD") : __WEBPACK_IMPORTED_MODULE_2_moment___default()().format("YYYY-MM-DD");
 		this.getPackages();
@@ -77435,14 +77453,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				var obj = {};
 				obj['value'] = user.id;
 				obj['label'] = user.name;
-				obj['is_std'] = !(user.country_id == 162 || user.country_id == 211);
+				obj['is_std'] = user.country_id == 48;
 
 				return obj;
 			});
 		},
 		updateSelectedUser: function updateSelectedUser() {
 			this.form.user_id = this.selectedUser ? this.selectedUser.value : this.user.id;
-			this.is_std = this.selectedUser ? this.selectedUser.is_std : this.user.is_std;
+			this.is_std = this.selectedUser ? this.selectedUser.is_std : this.user.country_id == 48;
 		},
 		submitForm: function submitForm() {
 			var _this4 = this;
@@ -78141,64 +78159,93 @@ var render = function() {
                               ? _c(
                                   "td",
                                   [
-                                    _c("text-input", {
-                                      attrs: {
-                                        defaultValue:
-                                          _vm.form.packages[index].price,
-                                        required: false,
-                                        type: "number",
-                                        label: "label",
-                                        name: "amount",
-                                        editable: _vm.user.is_admin,
-                                        focus: false,
-                                        hideLabel: true
-                                      },
-                                      model: {
-                                        value: _vm.form.packages[index].price,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.form.packages[index],
-                                            "price",
-                                            $$v
+                                    _vm.user.is_admin
+                                      ? _c("text-input", {
+                                          attrs: {
+                                            defaultValue:
+                                              _vm.form.packages[index].price,
+                                            required: false,
+                                            type: "number",
+                                            label: "label",
+                                            name: "amount",
+                                            editable: _vm.user.is_admin,
+                                            focus: false,
+                                            hideLabel: true
+                                          },
+                                          model: {
+                                            value:
+                                              _vm.form.packages[index].price,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.form.packages[index],
+                                                "price",
+                                                $$v
+                                              )
+                                            },
+                                            expression:
+                                              "form.packages[index].price"
+                                          }
+                                        })
+                                      : [
+                                          _vm._v(
+                                            "\n\t\t\t\t\t\t\t\t\t\t" +
+                                              _vm._s(
+                                                _vm._f("currency")(
+                                                  _vm.form.packages[index].price
+                                                )
+                                              ) +
+                                              "\n\t\t\t\t\t\t\t\t\t"
                                           )
-                                        },
-                                        expression: "form.packages[index].price"
-                                      }
-                                    })
+                                        ]
                                   ],
-                                  1
+                                  2
                                 )
                               : _c(
                                   "td",
                                   [
-                                    _c("text-input", {
-                                      attrs: {
-                                        defaultValue:
-                                          _vm.form.packages[index].price_std,
-                                        required: false,
-                                        type: "number",
-                                        label: "label",
-                                        name: "amount",
-                                        editable: _vm.user.is_admin,
-                                        focus: false,
-                                        hideLabel: true
-                                      },
-                                      model: {
-                                        value:
-                                          _vm.form.packages[index].price_std,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.form.packages[index],
-                                            "price_std",
-                                            $$v
+                                    _vm.user.is_admin
+                                      ? _c("text-input", {
+                                          attrs: {
+                                            defaultValue:
+                                              _vm.form.packages[index]
+                                                .price_std,
+                                            required: false,
+                                            type: "number",
+                                            label: "label",
+                                            name: "amount",
+                                            editable: _vm.user.is_admin,
+                                            focus: false,
+                                            hideLabel: true
+                                          },
+                                          model: {
+                                            value:
+                                              _vm.form.packages[index]
+                                                .price_std,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.form.packages[index],
+                                                "price_std",
+                                                $$v
+                                              )
+                                            },
+                                            expression:
+                                              "form.packages[index].price_std"
+                                          }
+                                        })
+                                      : [
+                                          _vm._v(
+                                            "\n\t\t\t\t\t\t\t\t\t\t" +
+                                              _vm._s(
+                                                _vm._f("currency_std")(
+                                                  _vm.form.packages[index]
+                                                    .price_std
+                                                )
+                                              ) +
+                                              "\n\t\t\t\t\t\t\t\t\t"
                                           )
-                                        },
-                                        expression:
-                                          "form.packages[index].price_std"
-                                      }
-                                    })
+                                        ]
                                   ],
-                                  1
+                                  2
                                 ),
                             _vm._v(" "),
                             _c("td", [
