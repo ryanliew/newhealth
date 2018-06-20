@@ -513,6 +513,7 @@
 							</div>
 						</div>
 						<button type="submit" class="btn btn-success" :disabled="form.submitting" v-html="submitButtonContent"></button>
+						<button class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
 					</form>
 				</div>
 			</div>

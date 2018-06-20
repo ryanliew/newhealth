@@ -11,17 +11,25 @@
                     <i class="fa fa-edit"></i>
                 </span>
             </button>
-            <button v-if="user.is_admin" type="button" class="btn btn-success" data-toggle="tooltip" data-placement="bottom" title="Blast this news to growers" @click="itemAction('send', rowData, rowIndex)">
-                <span class="icon" v-html="sendButtonContent">
-                    <i class="fa fa-send-o"></i>
-                </span>
-            </button>
             <button v-if="user.is_admin" type="button" class="btn btn-success" data-toggle="tooltip" data-placement="bottom" title="Blast this news to admins" @click="itemAction('sendAdmin', rowData, rowIndex)">
                 <span class="icon" v-html="sendAdminButtonContent">
                     <i class="fa fa-group"></i>
                 </span>
             </button>
+            <button v-if="user.is_admin" type="button" class="btn btn-lg btn-danger" data-toggle="tooltip" data-placement="bottom" title="Blast this news to growers" @click="isConfirming = true">
+                <span class="icon" v-html="sendButtonContent">
+                    <i class="fa fa-send-o"></i>
+                </span>
+            </button>
         </div>
+
+        <confirmation 
+            message="confirmation.blast_newsletter_grower" 
+            :loading="loading" 
+            @confirmed="blastToUser"
+            @canceled="isConfirming = false"
+            v-if="isConfirming">
+        </confirmation>
     </div>
 </template>
 
@@ -41,7 +49,8 @@ export default {
         return {
             user: '',
             loading: false,
-            loadingAdmin: false
+            loadingAdmin: false,
+            isConfirming: false
         };
     },
 
@@ -67,13 +76,17 @@ export default {
         },
 
         setLoadingAdmin(data) {
-            console.log(data);
             this.loadingAdmin = data == this.rowData.id;
         },
 
         setLoadingComplete(data) {
             this.loading = false;
             this.loadingAdmin = false;
+            this.isConfirming = false;
+        },
+
+        blastToUser() {
+            this.itemAction('send', this.rowData, this.rowIndex);
         }
     },
 

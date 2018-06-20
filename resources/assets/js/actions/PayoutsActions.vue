@@ -8,7 +8,7 @@
             </button>
         </div>
         <div class="btn-group" role="group" aria-label="Payout actions" v-if="rowData.payout_status !== 'paid'">
-            <button type="button" class="btn btn-success" @click="itemAction('pay', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Mark as paid">
+            <button type="button" class="btn btn-success" @click="isConfirming = true" data-toggle="tooltip" data-placement="bottom" title="Mark as paid">
                 <span class="icon">
                     <i class="fa fa-money"></i>
                 </span>
@@ -21,6 +21,16 @@
                 </span>
             </button>
         </div>
+
+
+
+        <confirmation 
+            message="confirmation.confirm_change_to_paid" 
+            :loading="loading" 
+            @confirmed="pay"
+            @canceled="isConfirming = false"
+            v-if="isConfirming">
+        </confirmation>
     </div>
 </template>
 
@@ -38,7 +48,8 @@ export default {
 
     data() {
         return {
-            user: ''
+            user: '',
+            isConfirming: false
         };
     },
 
@@ -53,6 +64,10 @@ export default {
     methods: {
         itemAction(action, data, index){
             this.$events.fire(action, data);            
+        },
+
+        pay() {
+            this.itemAction('pay', this.rowData, this.rowIndex);
         }
     }
   }

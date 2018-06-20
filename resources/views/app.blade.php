@@ -19,14 +19,14 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="./css/start-ui.css" rel="stylesheet" />
+        <link href="./css/start-ui.css?v=1.1" rel="stylesheet" />
         <link href="./css/app.css?v=1.0" rel="stylesheet" />
     </head>
     <body class="with-side-menu-compact">
         <div id="app"></div>
        
         <script src="./js/form.js?v=1.2"></script> 
-        <script src="./js/app.js?v=1.23"></script>
+        <script src="./js/app.js?v=1.24"></script>
         <script src="./js/lib/tether/tether.min.js"></script> 
         <script src="./js/plugins.js"></script>
         <script src="./js/start-ui.js"></script>

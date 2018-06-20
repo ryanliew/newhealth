@@ -184,3 +184,21 @@ right connector from last child*/
   top: 0;
   z-index: 3;
 }
+
+.modal.confirmation {
+  display: block;
+  top: 0;
+}
+
+.modal-background {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.table-edit {
+  min-width: 654.5px;
+}
