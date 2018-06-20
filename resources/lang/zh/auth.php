@@ -73,6 +73,8 @@ return [
     'account_no' => '户口号码',
     'beneficiary_name' => '提名人名称',
     'beneficiary_identification' => '提名人身份证/护照号码',
+    'beneficiary_address' => '提名人住址',
+    'beneficiary_contact' => '提名人电话号码',
     'name_placeholder' => "填写实名",
 
     'contact_personnels' => '公司联络人',

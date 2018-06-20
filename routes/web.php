@@ -41,6 +41,7 @@ Route::get('/social/{service}/login', 'Auth\SocialAuthController@login');
 Route::get('/register/cancel', 'HomeController@cancel')->name('register.cancel');
 
 Route::group(['prefix' => 'exports'], function() {
+	Route::get('/users', 'ExportController@users');
 	Route::get('/transactions', 'ExportController@transactions');
 	Route::get('/purchases', 'ExportController@purchases');
 });

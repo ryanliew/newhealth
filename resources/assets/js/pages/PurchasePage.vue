@@ -10,7 +10,8 @@
 						:dateFilterable="true"
 						dateFilterKey="purchases.created_at"
 						addNew="purchase.make_new_purchase"
-						:canExport="true"
+						:canExportPDF="true"
+						:canExportExcel="true"
 						:exportUrl="exportUrl">
 			</table-view>
 

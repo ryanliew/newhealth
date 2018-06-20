@@ -8,7 +8,9 @@
 						:searchables="searchables"
 						v-if="!isViewing"
 						:dateFilterable="true"
-						dateFilterKey="created_at">
+						dateFilterKey="created_at"
+						:canExportExcel="true"
+						:exportUrl="exportUrl">
 			</table-view>
 
 			<ProfilePage :cancelable="true" :selectedUser="selectedUser" v-if="isViewing" @back="back"></ProfilePage>
@@ -37,7 +39,8 @@
 				searchables: "name,email,nationality",
 				isViewing: false,
 				selectedUser: '',
-				url: '/api/admin/users'
+				url: '/api/admin/users',
+				exportUrl: '/exports/users?'
 			};
 		},
 

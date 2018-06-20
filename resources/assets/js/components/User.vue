@@ -512,6 +512,34 @@
 								</text-input>
 							</div>
 						</div>
+						<div class="row">
+    						<div class="col-sm">
+    							<text-input v-model="form.beneficiary_address" 
+									:defaultValue="form.beneficiary_address"
+									:required="true"
+									type="text"
+									:label="$options.filters.trans('auth.beneficiary_address')"
+									name="beneficiary_address"
+									:editable="true"
+									:focus="false"
+									:hideLabel="false"
+									:error="form.errors.get('beneficiary_address')">
+								</text-input>
+							</div>
+							<div class="col-sm">
+								<text-input v-model="form.beneficiary_contact" 
+									:defaultValue="form.beneficiary_contact"
+									:required="true"
+									type="text"
+									:label="$options.filters.trans('auth.beneficiary_contact')"
+									name="beneficiary_contact"
+									:editable="true"
+									:focus="false"
+									:hideLabel="false"
+									:error="form.errors.get('beneficiary_contact')">
+								</text-input>
+							</div>
+						</div>
 						<button type="submit" class="btn btn-success" :disabled="form.submitting" v-html="submitButtonContent"></button>
 						<button class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
 					</form>
@@ -562,6 +590,8 @@
 					account_no: '',
 					beneficiary_name: '',
 					beneficiary_identification: '',
+					beneficiary_address: '',
+					beneficiary_contact: '',
 					isChangePassword: ''
 				}),
 				isCompanyRegistration: false,
@@ -619,6 +649,8 @@
 
 				this.form.beneficiary_name = this.selectedUser.beneficiary_name;
 				this.form.beneficiary_identification = this.selectedUser.beneficiary_identification;
+				this.form.beneficiary_address = this.selectedUser.beneficiary_address;
+				this.form.beneficiary_contact = this.selectedUser.beneficiary_contact;
 				let address =  _.head(_.filter(this.selectedUser.addresses, function(address) {
 								return address.type == "personal"; 
 							}));

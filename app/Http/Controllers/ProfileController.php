@@ -46,6 +46,9 @@ class ProfileController extends Controller
             'account_type' => 'required',
             'account_no' => 'required',
             'beneficiary_name' => 'required',
+            'beneficiary_contact' => 'required',
+            'beneficiary_address' => 'required|max:255',
+            'beneficiary_identification' => 'required',
             'terms' => 'accepted'
     	]);
 
@@ -76,7 +79,9 @@ class ProfileController extends Controller
             'account_type' => request()->account_type,
             'account_no' => request()->account_no,
             'beneficiary_name' => request()->beneficiary_name,
-            'beneficiary_identification' => request()->beneficiary_identification
+            'beneficiary_identification' => request()->beneficiary_identification,
+            'beneficiary_address' => request()->beneficiary_address,
+            'beneficiary_contact' => request()->beneficiary_contact
         ]);
 
         if(request()->has('password'))

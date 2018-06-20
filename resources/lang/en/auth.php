@@ -75,6 +75,8 @@ return [
     'account_no' => 'Account No.',
     'beneficiary_name' => 'Nominee name',
     'beneficiary_identification' => 'Nominee Passport/NRIC',
+    'beneficiary_address' => 'Nominee Address',
+    'beneficiary_contact' => 'Nominee Contact No.',
 
     'contact_personnels' => 'Contact personnel',
     'personnel_designation' => 'Designation',

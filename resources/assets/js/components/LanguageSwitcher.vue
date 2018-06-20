@@ -16,7 +16,7 @@
 		data() {
 			return {
 				languages: [
-					{flag: 'flag-icon-us', name: 'English', code: 'en', current: ''},
+					{flag: 'flag-icon-us', name: 'English', code: 'en', current: 'current'},
 					{flag: 'flag-icon-cn', name: '中文', code: 'zh', current: ''},
 				],
 
@@ -25,7 +25,9 @@
 		},
 
 		mounted() {
-			window.events.$on("defaultzh", this.setZhAsDefault());
+			window.events.$on("defaultzh", function(){
+				this.setZhAsDefault();
+			}.bind(this));
 		},
 
 		methods: {

@@ -308,6 +308,30 @@
                                     </div> 
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.beneficiary_address') }}  <span class="text-danger">*</span></label>
+                                        <input name='beneficiary_address' type="text" class="form-control{{ $errors->has('beneficiary_address') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.beneficiary_address') }}" value="{{ old('beneficiary_address') }}" required/>
+                                        @if ($errors->has('beneficiary_address'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('beneficiary_address') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div> 
+                                </div>
+                                <div class="col-sm">
+                                    <div class="form-group">
+                                        <label>{{ __('auth.beneficiary_contact') }}  <span class="text-danger">*</span></label>
+                                        <input name='beneficiary_contact' type="text" class="form-control{{ $errors->has('beneficiary_contact') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.beneficiary_contact') }}" value="{{ old('beneficiary_contact') }}" required/>
+                                        @if ($errors->has('beneficiary_contact'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ $errors->first('beneficiary_contact') }}</strong>
+                                            </span>
+                                        @endif
+                                    </div> 
+                                </div>
+                            </div>
 
                             <div class="form-check mt-2 mb-3">
                                 <input class="form-check-input" type="checkbox" id="agree" name="terms" required>
