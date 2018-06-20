@@ -257,7 +257,7 @@
 					let obj = {};
 					obj['value'] = user.id;
 					obj['label'] = user.name;
-					obj['is_std'] = user.country_id == 48;
+					obj['is_std'] = !(user.country_id == 162 || user.country_id == 211);
 
 					return obj;
 				});
