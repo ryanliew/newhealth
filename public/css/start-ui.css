@@ -12937,9 +12937,9 @@ html {
   top: 0;
   margin: 0;
   display: inline-block;
-  font-size: 2.125rem /*34/16*/;
+  font-size: 1.8rem /*34/16*/;
   line-height: normal;
-  min-height: 40px;
+  min-height: 33px;
 }
 .side-menu.side-menu-compact .side-menu-list .font-icon.active:after,
 .side-menu.side-menu-compact .side-menu-list .glyphicon.active:after,
@@ -12952,7 +12952,7 @@ html {
 }
 .side-menu.side-menu-compact .side-menu-list .lbl {
   display: block;
-  font-size: 0.875rem /*14/16*/;
+  font-size: 0.775rem /*14/16*/;
 }
 @media (max-width: 1056px) {
   .side-menu {

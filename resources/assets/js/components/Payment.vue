@@ -71,12 +71,19 @@
 				
 				<button type="submit" v-if="!payment" class="btn btn-success" :disabled="form.submitting" v-html="submitButtonContent"></button>
 			</form>
-			<form @submit.prevent="submitVerify" 
+			<form @submit.prevent="confirmVerify" 
 				@keydown="form.errors.clear($event.target.name)" 
 				@input="form.errors.clear($event.target.name)"
 				v-if="user.is_admin && payment && !payment.is_verified">
 					<button type="submit" class="btn btn-primary" :disabled="verifyForm.submitting" v-html="submitVerifyButtonContent"></button>
 			</form>
+			<confirmation
+				message="confirmation.verify_payment"
+				:loading="verifyForm.submitting"
+				@confirmed="submitVerify"
+				@canceled="isConfirmingVerify = false"
+				v-if="isConfirmingVerify">
+			</confirmation>
 		</div>
 	</div>
 	
@@ -106,7 +113,8 @@
 				camera: false,
 				submitText: 'payment.submit_payment',
 				submitVerifyText: 'payment.verify',
-				user: window.user
+				user: window.user,
+				isConfirmingVerify: false
 
 			};
 		},
@@ -136,9 +144,14 @@
 			onSuccess(response, shouldBack = true) {
 				flash(this.$options.filters.trans(response.message));
 				this.payment = response.payment;
+				this.isConfirmingVerify = false;
 
 				if(shouldBack)
 					this.back();
+			},
+
+			confirmVerify() {
+				this.isConfirmingVerify = true;
 			},
 
 			submitVerify() {

@@ -13,6 +13,7 @@ return [
      */
     'messages' => [
         'auth',
+        'confirmation',
         'pagination',
         'passwords',
         'validation',

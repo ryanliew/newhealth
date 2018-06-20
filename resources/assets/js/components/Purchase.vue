@@ -20,89 +20,109 @@
 				<div class="card-body">
 					<h5 class="card-title mb-3">{{ instruction | trans }}</h5>
 					<h6>{{ 'purchase.base_price' | trans }}</h6>
-					<table class="table">
-						<tbody v-if="isEditing">
-							<tr v-for="(package, index) in packages">
-								<td>{{ package.tree_count }} {{ 'auth.tree' | trans_choice({'value' : package.tree_count})  }}</td>
-								<td>x</td>
-								<td><text-input v-model="form.packages[index].amount" 
-										:defaultValue="form.packages[index].amount"
-										:required="false"
-										type="number"
-										label="label"
-										name="amount"
-										:editable="true"
-										:focus="false"
-										:hideLabel="true">
-									</text-input>
-								</td>
-								<td>
-									x
-								</td>
-								<td v-if="!user.is_std">
-									{{ package.price_promotion ? package.price_promotion : package.price | currency }}	
-								</td>
-								<td v-else>
-									{{ package.price_std_promotion ? package.price_std_promotion : package.price_std | currency_std }}	
-								</td>
-								<td>
-									=
-								</td>
-								<td v-if="!user.is_std">
-									{{ getPackagePrice(form.packages[index].amount, package) | currency }}
-								</td>
-								<td v-else>
-									{{ getPackagePrice(form.packages[index].amount, package) | currency_std }}
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td><b>{{ 'purchase.total' | trans }}</b></td>
-								<td>=</td>
-								<td v-if="!user.is_std">{{ totalPrice | currency}}</td>
-								<td v-else>{{ totalPrice | currency_std}}</td>
-							</tr>
-						</tbody>
-						<tbody v-else>
-							<tr v-for="(package, index) in purchase.packages">
-								<td>{{ package.tree_count }} {{ 'auth.tree' | trans_choice({'value' : package.tree_count})  }}</td>
-								<td>x</td>
-								<td>{{ package.pivot.amount }}
-								</td>
-								<td>
-									x
-								</td>
-								<td v-if="!purchase.is_std">
-									{{ package.pivot.total_price / package.pivot.amount | currency }}	
-								</td>
-								<td v-else>
-									{{ package.pivot.total_price_std / package.pivot.amount | currency_std }}	
-								</td>
-								<td>
-									=
-								</td>
-								<td v-if="!purchase.is_std">
-									{{ package.pivot.total_price | currency }}
-								</td>
-								<td v-else>
-									{{ package.pivot.total_price_std  | currency_std }}
-								</td>
-							</tr>
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td><b>{{ 'purchase.total' | trans }}</b></td>
-								<td>=</td>
-								<td v-if="!purchase.is_std">{{ totalPrice | currency}}</td>
-								<td v-else>{{ totalPrice | currency_std}}</td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="table-responsive">
+						<table class="table table-edit">
+							<tbody v-if="isEditing">
+								<tr v-for="(package, index) in packages">
+									<td>{{ package.tree_count }} {{ 'auth.tree' | trans_choice({'value' : package.tree_count})  }}</td>
+									<td>x</td>
+									<td><text-input v-model="form.packages[index].amount" 
+											:defaultValue="form.packages[index].amount"
+											:required="false"
+											type="number"
+											label="label"
+											name="amount"
+											:editable="true"
+											:focus="false"
+											:hideLabel="true">
+										</text-input>
+									</td>
+									<td>
+										x
+									</td>
+									<td v-if="!user.is_std">
+										<text-input v-model="form.packages[index].price" 
+											:defaultValue="form.packages[index].price"
+											:required="false"
+											type="number"
+											label="label"
+											name="amount"
+											:editable="user.is_admin"
+											:focus="false"
+											:hideLabel="true">
+										</text-input>	
+									</td>
+									<td v-else>
+										<text-input v-model="form.packages[index].price_std" 
+											:defaultValue="form.packages[index].price_std"
+											:required="false"
+											type="number"
+											label="label"
+											name="amount"
+											:editable="user.is_admin"
+											:focus="false"
+											:hideLabel="true">
+										</text-input>
+									</td>
+									<td>
+										=
+									</td>
+									<td v-if="!user.is_std">
+										{{ getPackagePrice(form.packages[index].amount, form.packages[index]) | currency }}
+									</td>
+									<td v-else>
+										{{ getPackagePrice(form.packages[index].amount, form.packages[index]) | currency_std }}
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><b>{{ 'purchase.total' | trans }}</b></td>
+									<td>=</td>
+									<td v-if="!user.is_std">{{ totalPrice | currency}}</td>
+									<td v-else>{{ totalPrice | currency_std}}</td>
+								</tr>
+							</tbody>
+							<tbody v-else>
+								<tr v-for="(package, index) in purchase.packages">
+									<td>{{ package.tree_count }} {{ 'auth.tree' | trans_choice({'value' : package.tree_count})  }}</td>
+									<td>x</td>
+									<td>{{ package.pivot.amount }}
+									</td>
+									<td>
+										x
+									</td>
+									<td v-if="!purchase.is_std">
+										{{ package.pivot.total_price / package.pivot.amount | currency }}	
+									</td>
+									<td v-else>
+										{{ package.pivot.total_price_std / package.pivot.amount | currency_std }}	
+									</td>
+									<td>
+										=
+									</td>
+									<td v-if="!purchase.is_std">
+										{{ package.pivot.total_price | currency }}
+									</td>
+									<td v-else>
+										{{ package.pivot.total_price_std  | currency_std }}
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td><b>{{ 'purchase.total' | trans }}</b></td>
+									<td>=</td>
+									<td v-if="!purchase.is_std">{{ totalPrice | currency}}</td>
+									<td v-else>{{ totalPrice | currency_std}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 					<selector-input v-model="selectedUser" :defaultData="selectedUser" 
 									:label="$options.filters.trans('purchase.user')" 
 									:required="false"
@@ -182,8 +202,6 @@
 		},
 
 		mounted() {
-			console.log(this.user.id);
-			this.form.user_id = this.user.id;
 			this.purchase = this.selectedPurchase;
 			this.form.purchase_date = this.purchase ? moment(this.purchase.created_at).format("YYYY-MM-DD") : moment().format("YYYY-MM-DD");
 			this.getPackages();
@@ -201,6 +219,8 @@
 					let obj = {};
 
 					let amount = 0;
+					let price = pack.price_promotion ? pack.price_promotion : pack.price;
+					let price_std = pack.price_std_promotion ? pack.price_std_promotion : pack.price_std;
 
 					if(this.purchase) {
 						let p = _.findIndex(this.purchase.packages, function(p){
@@ -209,12 +229,14 @@
 
 						if(this.purchase.packages[p]) {
 							amount = this.purchase.packages[p].pivot.amount;
+							price = this.purchase.packages[p].pivot.total_price / amount;
+							price_std = this.purchase.packages[p].pivot.total_price_std / amount;
 						}
 					}
 					obj['amount'] = amount;
 					obj['id'] = pack.id;
-					obj['price'] = pack.price_promotion ? pack.price_promotion : pack.price;
-					obj['price_std'] = pack.price_std_promotion ? pack.price_std_promotion : pack.price_std;
+					obj['price'] = price;
+					obj['price_std'] = price_std;
 
 					return obj;
 				});
@@ -258,11 +280,11 @@
 
 			getPackagePrice(amount = 0, pack) {
 
-				let price = pack.price_promotion ? pack.price_promotion : pack.price;
+				let price = pack.price;
 
 				if(this.user.is_std)
 				{
-					price = pack.price_std_promotion ? pack.price_std_promotion : pack.price_std;
+					price = pack.price_std;
 				}
 
 				return amount * price;
