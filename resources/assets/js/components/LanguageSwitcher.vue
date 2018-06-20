@@ -16,12 +16,16 @@
 		data() {
 			return {
 				languages: [
-					{flag: 'flag-icon-us', name: 'English', code: 'en', current: 'current'},
+					{flag: 'flag-icon-us', name: 'English', code: 'en', current: ''},
 					{flag: 'flag-icon-cn', name: '中文', code: 'zh', current: ''},
 				],
 
 				current: {flag: 'flag-icon-us', name: 'English', code: 'en', current: 'current'}
 			};
+		},
+
+		mounted() {
+			window.events.$on("defaultzh", this.setZhAsDefault());
 		},
 
 		methods: {
@@ -31,6 +35,10 @@
 
 				window.events.$emit("lang");
 			},
+
+			setZhAsDefault(){
+				this.current = {flag: 'flag-icon-cn', name: '中文', code: 'zh', current: 'current'}
+			}
 		}	
 	}
 </script>

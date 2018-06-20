@@ -92,7 +92,7 @@ router.beforeEach((to, from, next) => {
 	if(to.fullPath !== '/login' && !user) {
 	
 		axios.get('/api/profile')
-			.then(response => { user = response.data; next(); })
+			.then(response => { user = response.data; if(user.country_id == 48){ lang.setLocale('zh'); }; window.events.$emit('defaultzh'); next(); })
 			//.catch(error => { intended = to.fullPath; window.location.href="/register"; });
 					
 	} else {

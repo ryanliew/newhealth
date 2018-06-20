@@ -49,8 +49,12 @@
 											name="amount"
 											:editable="user.is_admin"
 											:focus="false"
-											:hideLabel="true">
+											:hideLabel="true"
+											v-if="user.is_admin">
 										</text-input>	
+										<template v-else>
+											{{ form.packages[index].price | currency }}
+										</template>
 									</td>
 									<td v-else>
 										<text-input v-model="form.packages[index].price_std" 
@@ -61,8 +65,12 @@
 											name="amount"
 											:editable="user.is_admin"
 											:focus="false"
-											:hideLabel="true">
+											:hideLabel="true"
+											v-if="user.is_admin">
 										</text-input>
+										<template v-else>
+											{{ form.packages[index].price_std | currency_std }}
+										</template>
 									</td>
 									<td>
 										=
@@ -203,6 +211,8 @@
 		},
 
 		mounted() {
+			this.form.user_id = this.user.id;
+			this.is_std = this.user.country_id == 48;
 			this.purchase = this.selectedPurchase;
 			this.form.purchase_date = this.purchase ? moment(this.purchase.created_at).format("YYYY-MM-DD") : moment().format("YYYY-MM-DD");
 			this.getPackages();
@@ -257,7 +267,7 @@
 					let obj = {};
 					obj['value'] = user.id;
 					obj['label'] = user.name;
-					obj['is_std'] = !(user.country_id == 162 || user.country_id == 211);
+					obj['is_std'] = user.country_id == 48;
 
 					return obj;
 				});
@@ -265,7 +275,7 @@
 
 			updateSelectedUser() {
 				this.form.user_id = this.selectedUser ? this.selectedUser.value : this.user.id;
-				this.is_std = this.selectedUser ? this.selectedUser.is_std : this.user.is_std;
+				this.is_std = this.selectedUser ? this.selectedUser.is_std : this.user.country_id == 48;
 			},
 
 			submitForm() {
