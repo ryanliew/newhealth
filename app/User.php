@@ -23,7 +23,7 @@ class User extends Authenticatable
     protected $guarded = [];
 
 
-    protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale'];
+    protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale'];
 
 
     protected $with = ['package', 'addresses', 'contacts'];
@@ -161,6 +161,11 @@ class User extends Authenticatable
         }
         
         return $percentage / 100;
+    }
+
+    public function getHasVerifiedSaleAttribute()
+    {
+        return $this->purchases()->where('is_verified', 1)->count() > 0;
     }
 
     // Adjust user level
