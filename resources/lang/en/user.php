@@ -39,7 +39,11 @@ return [
     'pending' => 'Pending',
     'verified' => 'Verified',
     'rejected' => 'Verification failed',
+    'execution_ready' => 'Execution ready',
+    'instruction_issued' => 'Instruction issued',
+    'complete' => 'Complete',
     'documents_verified' => 'Documents verified',
     'documents_rejected' => 'Documents rejected',
-    'reminder_sent' => "Reminder sent"
+    'reminder_sent' => "Reminder sent",
+    'legal_updated' => 'User legal status updated successfully'
 ];

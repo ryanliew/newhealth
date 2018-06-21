@@ -48,6 +48,8 @@
 		mounted() {
 			this.$events.on('view', data => this.view(data));
 			this.$events.on('remind', data => this.remind(data));
+			this.$events.on('previous', data => this.previous(data));
+			this.$events.on('next', data => this.next(data));
 		},
 
 		methods: {
@@ -79,6 +81,23 @@
 				this.$events.fire('loading', user.id);
 				axios.post('/api/user/' + user.id + '/kyc/remind')
 					.then(response => this.onSuccess(response));
+			},
+
+			previous(user){
+				this.$events.fire('loading-prev', user.id);
+				axios.post('/api/user/' + user.id + '/legal/previous')
+					.then(response => this.onStepSuccess(response));
+			},
+
+			next(user){
+				this.$events.fire('loading-next', user.id);
+				axios.post('/api/user/' + user.id + '/legal/next')
+					.then(response => this.onStepSuccess(response));
+			},
+
+			onStepSuccess(response) {
+				this.onSuccess(response);
+				this.$refs.users.refreshTable();
 			},
 
 			onSuccess(response) {

@@ -46,7 +46,7 @@ Vue.filter('formatPurchaseStatus', function(value){
 });
 
 Vue.filter('formatUserStatus', function(value){
-	let color = 'badge-success';
+	let color = 'badge-info';
 	let text = 	lang.get('user.' + value);
 	switch(value) {
 		case 'pending':
@@ -59,6 +59,9 @@ Vue.filter('formatUserStatus', function(value){
 			color = 'badge-danger';
 			break;
 		case 'verified':
+			color = 'badge-info';
+			break;
+		case 'complete':
 			color = 'badge-success';
 			break;
 	}
