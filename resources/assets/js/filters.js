@@ -34,6 +34,9 @@ Vue.filter('formatPurchaseStatus', function(value){
 		case 'pending_verification':
 			color = 'badge-info';
 			break;
+		case 'rejected':
+			color = 'badge-danger';
+			break;
 		case 'complete':
 			color = 'badge-success';
 			break;

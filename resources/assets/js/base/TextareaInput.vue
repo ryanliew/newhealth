@@ -3,9 +3,9 @@
 		<div v-if="!hideLabel">
 			<label :for="name" v-text="label"></label> <span v-if="required && editable" class="text-danger">*</span>
 		</div>
-		<textarea class="form-control" :name="name" :id="name" :rows="rows" :cols="cols" @input="updateValue($event.target.value)">
+		<textarea class="form-control" :name="name" :id="name" :rows="rows" :cols="cols" :required="required" @input="updateValue($event.target.value)">
 		</textarea>
-		<span class="invalid-feedback" v-if="error"><strong>{{ error | trans }}</strong></span>
+		<span class="text-danger" v-if="error"><strong>{{ error | trans }}</strong></span>
 	</div>
 </template>
 

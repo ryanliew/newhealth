@@ -32,6 +32,7 @@ return [
     'default_user' => '自身购买请留空',
     'update' => '更改',
     'cancel' => '取消更改',
-    'updated' => '更新成功'
+    'updated' => '更新成功',
+    'rejected' => '需要更新'
     
 ];

@@ -79,4 +79,11 @@ class Purchase extends Model
             $this->pay_and_roll_commission_upwards($parent, $paid_percentage);
         }
     }
+
+    public function reject($note)
+    {
+        $this->update(['status' => 'rejected']);
+
+        // Notify user about this
+    }
 }

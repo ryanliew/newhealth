@@ -30,7 +30,7 @@ class PaymentsTest extends TestCase
         $total_trees = ( $package1->tree_count * 2 ) + $package2->tree_count + 2;
 
         $this->post('/api/purchases', [ "user_id" => auth()->user()->id, 
-                                        "packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"8000.00"},{"amount":1,"id":' . $package2->id . ',"price":"24000.00"}]'
+                                        "packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"8000.00", "price_std":"2000.00"},{"amount":1,"id":' . $package2->id . ',"price":"24000.00", "price_std":"2000.00"}]'
                                                     ]);
         $purchase = Purchase::first();
 
@@ -106,5 +106,36 @@ class PaymentsTest extends TestCase
 
         $this->assertDatabaseHas('transactions', ['user_id' => $grandparent->id, 'amount' => $grandparent_amount . ".0", 'amount_std' => $grandparent_amount_std . ".0", 'description' => 'tree_purchase', 'type' => 'one_time_commision', 'is_std' => $purchase->is_std, "target_id" => $child->id, "purchase_id" => $purchase->id, 'date' => $purchase->created_at]);
         
+    } 
+
+    /** @test */
+    public function admins_can_reject_payment()
+    {
+        $user = create('App\User', ['tree_count' => 2]);
+        $this->signIn($user);
+        
+        $purchase = make('App\Purchase');
+
+        $package1 = create('App\Package');
+        $package2 = create('App\Package');
+
+        $total_amount = ( $package1->price * 2 ) + $package2->price + .0;
+
+        $total_trees = ( $package1->tree_count * 2 ) + $package2->tree_count + 2;
+
+        $this->post('/api/purchases', [ "user_id" => auth()->user()->id, 
+                                        "packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"8000.00", "price_std":"2000.00"},{"amount":1,"id":' . $package2->id . ',"price":"24000.00", "price_std":"2000.00"}]'
+                                                    ]);
+        $purchase = Purchase::first();
+
+        $payment = create('App\Payment');
+
+        $purchase->update(['payment_id' => $payment->id]);
+
+        $this->post('/api/payment/reject/' . $payment->id, ["reject_note" => "Some reject notes here"]);
+
+        $this->assertDatabaseHas('payments', ['is_verified' => false, 'reject_note' => "Some reject notes here"]);
+
+        $this->assertDatabaseHas('purchases', ['is_verified' => false, 'status' => "rejected"]);
     } 
 }	

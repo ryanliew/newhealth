@@ -14,8 +14,21 @@
 			<form @submit.prevent="submit" 
 				@keydown="form.errors.clear($event.target.name)" 
 				@input="form.errors.clear($event.target.name)">
-				<text-input v-model="payment.created_at" 
-					:defaultValue="payment.created_at"
+				<span class="badge badge-danger" v-if="purchase.status == 'rejected'">{{ 'purchase.rejected' | trans }}</span>
+				<text-input v-model="payment.reject_note" 
+					:defaultValue="payment.reject_note"
+					:required="false"
+					type="date"
+					:label="$options.filters.trans('payment.reject_note')"
+					name="date"
+					:editable="false"
+					:focus="false"
+					:hideLabel="false"
+					v-if="payment && purchase.status == 'rejected'">
+				</text-input>
+
+				<text-input v-model="payment.updated_at" 
+					:defaultValue="payment.updated_at"
 					:required="false"
 					type="date"
 					:label="$options.filters.trans('payment.paid_on')"
@@ -57,7 +70,7 @@
 							:required="true"
 							accept="image/*, .pdf"
 							:error="$options.filters.trans(form.errors.get('payment_slip_path'))"
-							v-if="!payment">
+							v-if="!payment || purchase.status == 'rejected'">
 				</image-input>
 
 				<div class="mb-3" v-else>
@@ -69,14 +82,48 @@
 					<img v-else class="img-fluid" :src="'storage/' + payment.payment_slip_path"/>
 				</div>
 				
-				<button type="submit" v-if="!payment" class="btn btn-success" :disabled="form.submitting" v-html="submitButtonContent"></button>
+				<button type="submit" v-if="!payment || purchase.status == 'rejected'" class="btn btn-success" :disabled="form.submitting" v-html="submitButtonContent"></button>
 			</form>
-			<form @submit.prevent="confirmVerify" 
-				@keydown="form.errors.clear($event.target.name)" 
-				@input="form.errors.clear($event.target.name)"
-				v-if="user.is_admin && payment && !payment.is_verified">
-					<button type="submit" class="btn btn-primary" :disabled="verifyForm.submitting" v-html="submitVerifyButtonContent"></button>
-			</form>
+			<div class="row no-gutters">
+				<div class="col-auto">
+					<form @submit.prevent="confirmVerify" 
+						@keydown="form.errors.clear($event.target.name)" 
+						@input="form.errors.clear($event.target.name)"
+						v-if="user.is_admin && payment && !payment.is_verified && purchase.status !== 'rejected'">
+							<button type="submit" class="btn btn-primary" :disabled="verifyForm.submitting" v-html="submitVerifyButtonContent"></button>
+					</form>
+				</div>
+				<div class="col-auto pl-2">
+					<form @submit.prevent="confirmReject" 
+						@keydown="form.errors.clear($event.target.name)" 
+						@input="form.errors.clear($event.target.name)"
+						v-if="user.is_admin && payment && !payment.is_verified && purchase.status !== 'rejected'"">
+							<button type="submit" class="btn btn-danger" :disabled="rejectForm.submitting" v-html="submitRejectButtonContent"></button>
+					</form>
+				</div>
+			</div>
+			<confirmation
+				message="confirmation.reject_payment"
+				:loading="rejectForm.submitting"
+				@confirmed="submitReject"
+				@canceled="isConfirmingReject = false"
+				v-if="isConfirmingReject">
+
+				<textarea-input v-model="rejectForm.reject_note" 
+					:defaultValue="rejectForm.reject_note"
+					:required="true"
+					type="text"
+					:label="$options.filters.trans('payment.reject_note')"
+					name="reject_note"
+					:editable="true"
+					:focus="false"
+					:hideLabel="false"
+					rows="3"
+					cols="5"
+					:error="rejectForm.errors.get('reject_note')">
+				</textarea-input>
+			</confirmation>
+
 			<confirmation
 				message="confirmation.verify_payment"
 				:loading="verifyForm.submitting"
@@ -109,12 +156,17 @@
 				verifyForm: new Form({
 
 				}),
+				rejectForm: new Form({
+					reject_note: ''
+				}),
 				paymentSlip: {name: 'No file selected'},
 				camera: false,
 				submitText: 'payment.submit_payment',
 				submitVerifyText: 'payment.verify',
+				submitRejectText: 'payment.reject',
 				user: window.user,
-				isConfirmingVerify: false
+				isConfirmingVerify: false,
+				isConfirmingReject: false
 
 			};
 		},
@@ -137,7 +189,7 @@
 			},
 
 			submit() {
-				this.form.post('/api/purchase/pay/' + this.purchase.id)
+				this.form.post(this.submitUrl)
 					.then(response => this.onSuccess(response));
 			},
 
@@ -145,6 +197,7 @@
 				flash(this.$options.filters.trans(response.message));
 				this.payment = response.payment;
 				this.isConfirmingVerify = false;
+				this.isConfirmingReject = false;
 
 				if(shouldBack)
 					this.back();
@@ -154,9 +207,18 @@
 				this.isConfirmingVerify = true;
 			},
 
+			confirmReject() {
+				this.isConfirmingReject = true;
+			},
+
 			submitVerify() {
-				this.form.post('/api/payment/verify/' + this.payment.id)
+				this.verifyForm.post('/api/payment/verify/' + this.payment.id)
 					.then(response => this.onSuccess(response, false));
+			},
+
+			submitReject() {
+				this.rejectForm.post('/api/payment/reject/' + this.payment.id)
+					.then(response => this.onSuccess(response, true));
 			}
 		},
 
@@ -167,6 +229,14 @@
 
 			submitVerifyButtonContent() {
 				return this.verifyForm.submitting ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : this.$options.filters.trans(this.submitVerifyText);
+			},
+
+			submitRejectButtonContent() {
+				return this.verifyForm.submitting ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : this.$options.filters.trans(this.submitRejectText);
+			},
+
+			submitUrl() {
+				return this.payment ? "/api/payment/update/" + this.payment.id : "/api/purchase/pay/" + this.purchase.id;
 			}
 		},
 

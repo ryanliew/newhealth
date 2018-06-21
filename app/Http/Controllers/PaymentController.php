@@ -33,6 +33,25 @@ class PaymentController extends Controller
     	return json_encode(['message' => 'payment.success', 'payment' => $payment]);
     }
 
+    public function revise(Payment $payment)
+    {
+        $messages = [
+            'payment_slip_path.required' => 'payment.invalid_payment_slip',
+            'payment_slip_path.file' => 'payment.invalid_payment_slip',
+            'payment_slip_path.max' => 'payment.payment_slip_exceed_size',
+        ];
+
+        $this->validate(request(), [
+            'payment_slip_path' => ['required', 'file', 'max:8000']
+        ], $messages);
+
+        $payment->update(['payment_slip_path' => request()->file('payment_slip_path')->store('payments', 'public')]);
+
+        $payment->purchase()->update(['status' => 'pending_verification']);
+
+        return json_encode(['message' => 'payment.success', 'payment' => $payment]);
+    }
+
     public function verify(Payment $payment)
     {
         $payment->update(['is_verified' => true]);
@@ -40,5 +59,18 @@ class PaymentController extends Controller
         $payment->purchase->verify();
 
         return json_encode(['message' => 'payment.verify_success', 'payment' => $payment]);
+    }
+
+    public function reject(Payment $payment)
+    {
+        $this->validate(request(), [
+            'reject_note' => 'required'
+        ]);
+
+        $payment->update(['is_verified' => false, 'reject_note' => request()->reject_note]);
+
+        $payment->purchase->reject(request()->reject_note);
+
+        return json_encode(['message' => 'payment.reject_success', 'payment' => $payment]);
     }
 }

@@ -61,6 +61,8 @@ Route::group(['middleware' => 'auth:api'], function() {
 
 	Route::group(['prefix' => 'payment'], function() {
 		Route::post('/verify/{payment}', 'PaymentController@verify');
+		Route::post('/reject/{payment}', 'PaymentController@reject');
+		Route::post('/update/{payment}', 'PaymentController@revise');
 	});
 
 	Route::group(['prefix' => 'posts'], function() {
