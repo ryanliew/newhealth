@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Notifications\PaymentRejectedNotification;
 use App\Transaction;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
@@ -78,5 +79,14 @@ class Purchase extends Model
 
             $this->pay_and_roll_commission_upwards($parent, $paid_percentage);
         }
+    }
+
+    public function reject($note)
+    {
+        $this->update(['status' => 'rejected']);
+
+        // Notify user about this
+        $locale = $this->user->country_id == 48 ? 'zh' : 'en';
+        $this->user->notify(new PaymentRejectedNotification($this, $locale, $this->user));
     }
 }

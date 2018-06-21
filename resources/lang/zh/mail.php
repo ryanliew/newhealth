@@ -31,6 +31,12 @@ return [
     'click_to_login' => '按此登入',
     'newleaf_newsletter' => '新叶通讯',
     'newleaf_bulletin' => '新叶通告',
-    'latest_news' => '为您带来新叶最新消息与更新'
+    'latest_news' => '为您带来新叶最新消息与更新',
+    'payment_rejected' => "付款驳回",
+    'payment_rejected_message' => "很抱歉，您最近的付款已被管理员驳回. 您可通过以下按钮进行修改",
+    'view_payment' => "查看付款",
+    'document_rejected' => "实名认证文件驳回",
+    'document_rejected_message' => '很抱歉，您的实名认证文件已被管理员驳回. 您可通过以下按钮进行修改',
+    'update_document' => '修改文件'
     
 ];

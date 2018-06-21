@@ -120,7 +120,7 @@ class User extends Authenticatable
 
     public function getIsStdAttribute()
     {
-        return !($this->country->name == "Malaysia" || $this->country->name == "Singapore");
+        return $this->country->name == "China";
     }
 
 

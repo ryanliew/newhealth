@@ -105,6 +105,10 @@
 				margin-top: 15px;
 			}
 
+			.page-break {
+				page-break-after: always;
+			}
+
 			table.phone td {
 				border-bottom: none;
 			}

@@ -13,6 +13,8 @@
                 </div>
                 <div class="modal-body">
                     {{ message | trans }}
+
+                    <slot></slot>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" @click="cancel">{{ 'confirmation.cancel' | trans }}</button>

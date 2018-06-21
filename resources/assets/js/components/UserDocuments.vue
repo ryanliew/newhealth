@@ -3,7 +3,7 @@
 		<div class="card-header">
 			<div class="row align-items-center">
 				<div class="col">
-					{{ 'user.kyc_documents' | trans }}
+					{{ 'user.kyc_documents' | trans }} <span v-html="$options.filters.formatUserStatus(selectedUser.id_status)"></span>
 				</div>
 				<div class="col-auto">
 					<button class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
@@ -11,8 +11,57 @@
 			</div>
 		</div>
 		<div class="card-block">
-			<button class="btn btn-primary" @click="updateDocument = true" v-if="!updateDocument">{{ 'user.update_document' | trans }}</button>
-			<button class="btn btn-danger" @click="updateDocument = false" v-else>{{ 'user.cancel_update' | trans }}</button>
+			<text-input v-model="selectedUser.reject_note" 
+				:defaultValue="selectedUser.reject_note"
+				:required="false"
+				type="date"
+				:label="$options.filters.trans('payment.reject_note')"
+				name="date"
+				:editable="false"
+				:focus="false"
+				:hideLabel="false"
+				v-if="selectedUser.id_status == 'rejected'">
+			</text-input>
+			<div class="row">
+				<div class="col-auto">
+					<button class="btn btn-primary" @click="updateDocument = true" v-if="!updateDocument">{{ 'user.update_document' | trans }}</button>
+					<button class="btn btn-danger" @click="updateDocument = false" v-else>{{ 'user.cancel_update' | trans }}</button>
+				</div>
+				<div class="col-auto" v-if="user.is_admin && selectedUser.id_status !== 'verified'">
+					<button class="btn btn-success" @click="isConfirmingVerify = true" v-if="selectedUser.id_status == 'pending_verification'">{{ 'user.verify' | trans }}</button>
+					<button class="btn btn-danger" @click="isConfirmingReject = true" v-if="selectedUser.id_status == 'pending_verification'">{{ 'user.reject' | trans }}</button>
+				</div>
+			</div>
+			<confirmation
+				message="confirmation.reject_user"
+				:loading="rejectForm.submitting"
+				@confirmed="submitReject"
+				@canceled="isConfirmingReject = false"
+				v-if="isConfirmingReject">
+
+				<textarea-input v-model="rejectForm.reject_note" 
+					:defaultValue="rejectForm.reject_note"
+					:required="true"
+					type="text"
+					:label="$options.filters.trans('payment.reject_note')"
+					name="reject_note"
+					:editable="true"
+					:focus="false"
+					:hideLabel="false"
+					rows="3"
+					cols="5"
+					:error="rejectForm.errors.get('reject_note')">
+				</textarea-input>
+			</confirmation>
+
+			<confirmation
+				message="confirmation.verify_user"
+				:loading="verifyForm.submitting"
+				@confirmed="submitVerify"
+				@canceled="isConfirmingVerify = false"
+				v-if="isConfirmingVerify">
+			</confirmation>
+
 			<form @submit.prevent="submit" 
 				@keydown="form.errors.clear($event.target.name)" 
 				@input="form.errors.clear($event.target.name)"
@@ -119,11 +168,20 @@
 					nominee_identity: '',
 					residence_proof: ''
 				}),
+				rejectForm: new Form({
+					reject_note: ''
+				}),
+				verifyForm: new Form({
+
+				}),
+				isConfirmingVerify: false,
+				isConfirmingReject: false,
 				bankStatement:  {name: 'No file selected', src: ''},
 				nomineeIdentity:  {name: 'No file selected', src: ''},
 				residenceProof:  {name: 'No file selected', src: ''},
 				identity: {name: 'No file selected', src: ''},
-				updateDocument: false
+				updateDocument: false,
+				user: window.user
 			};
 		},
 
@@ -176,9 +234,20 @@
 			},
 
 			onSuccess(response) {
-				flash(response.message);
-
+				flash(this.$options.filters.trans(response.message));
+				this.isConfirmingReject = false;
+				this.isConfirmingVerify = false;
 				this.back();
+			},
+
+			submitReject() {
+				this.rejectForm.post('/api/user/' + this.selectedUser.id + '/kyc/reject')
+					.then(response => this.onSuccess(response));
+			},
+
+			submitVerify() {
+				this.verifyForm.post('/api/user/' + this.selectedUser.id + '/kyc/verify')
+					.then(response => this.onSuccess(response));
 			}
 		}	
 	}

@@ -31,6 +31,14 @@ return [
     'click_to_login' => 'Click here to login',
     'newleaf_newsletter' => 'Newleaf Newsletter',
     'newleaf_bulletin' => 'Newleaf Bulletin',
-    'latest_news' => 'the latest news and updates from newleaf plantation'
+    'latest_news' => 'the latest news and updates from newleaf plantation',
+    'payment_rejected' => "Payment rejected",
+    'payment_rejected_message' => "One of your recent payment has been rejected. Please click the button below to act on it as soon as possible",
+    'view_payment' => "View payment",
+    'document_rejected' => "Identity verification documents rejected",
+    'document_rejected_message' => 'Your identity verification documents has been rejected. Please click the button below to submit a revision as soon as possible.',
+    'update_document' => 'Update documents',
+    'document_required' => "Identity verification documents required",
+    'document_required_message' => "We noticed that you have not provided your identity verification documents yet. Kindly proceed to our portal through the button below to update the documents as soon as possible."
     
 ];

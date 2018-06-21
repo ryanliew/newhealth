@@ -34,6 +34,7 @@
 					{ name: 'email', title: this.tableTitle('auth.email'), sortField: 'email'},
 					{ name: 'nationality', title: this.tableTitle('auth.nationality'), sortField: 'nationality'},
 					{ name: 'referral_code', title: this.tableTitle('user.referral_code'), sortField: 'referral_code'},
+					{ name: 'id_status', title: this.tableTitle('user.status'), sortField: 'id_status', callback: 'userStatusLabel'},
 					{ name: '__component:users-actions', title: this.tableTitle('table.actions')}
 				],
 				searchables: "name,email,nationality",
@@ -46,6 +47,7 @@
 
 		mounted() {
 			this.$events.on('view', data => this.view(data));
+			this.$events.on('remind', data => this.remind(data));
 		},
 
 		methods: {
@@ -71,6 +73,17 @@
 			view(user) {
 				this.selectedUser = user;
 				this.isViewing = true;
+			},
+
+			remind(user) {
+				this.$events.fire('loading', user.id);
+				axios.post('/api/user/' + user.id + '/kyc/remind')
+					.then(response => this.onSuccess(response));
+			},
+
+			onSuccess(response) {
+				flash(this.$options.filters.trans(response.data.message));
+				this.$events.fire('loading-complete');
 			}
 		},
 

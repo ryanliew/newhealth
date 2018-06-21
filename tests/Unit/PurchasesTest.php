@@ -24,7 +24,7 @@ class PurchasesTest extends TestCase
  		$total_amount = ( $package1->price * 2 ) + $package2->price + .0;
 
  		$this->post('/api/purchases', [ "user_id" => auth()->user()->id, 
- 										"packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"8000.00"},{"amount":"1","id":' . $package2->id . ',"price":"24000.00"}]'
+ 										"packages" => '[{"amount":"2","id":' . $package1->id . ',"price":"8000.00", "price_std":"2000.00"},{"amount":"1","id":' . $package2->id . ',"price":"24000.00", "price_std":"2000.00"}]'
  													]);
 
  		$this->assertDatabaseHas('purchases', ['total_price' => sprintf("%.1f", $total_amount)]);

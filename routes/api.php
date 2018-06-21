@@ -49,6 +49,9 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::get('/transactions', 'TransactionController@index');
 		Route::get('/tree', 'UserController@getTree');
 		Route::post('/update', 'UserController@update');
+		Route::post('/kyc/reject', 'UserController@reject_documents');
+		Route::post('/kyc/verify', 'UserController@verify_documents');
+		Route::post('/kyc/remind', 'UserController@remind_documents');
 		Route::post('/kyc', 'UserController@update_documents');
 		Route::get('/', 'UserController@show');
 	});
@@ -61,6 +64,8 @@ Route::group(['middleware' => 'auth:api'], function() {
 
 	Route::group(['prefix' => 'payment'], function() {
 		Route::post('/verify/{payment}', 'PaymentController@verify');
+		Route::post('/reject/{payment}', 'PaymentController@reject');
+		Route::post('/update/{payment}', 'PaymentController@revise');
 	});
 
 	Route::group(['prefix' => 'posts'], function() {

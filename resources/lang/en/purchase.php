@@ -31,6 +31,7 @@ return [
     'default_user' => 'Leave empty to buy for yourself',
     'update' => 'Update',
     'cancel' => 'Cancel update',
-    'updated' => 'Purchase updated'
+    'updated' => 'Purchase updated',
+    'rejected' => 'Rejected'
     
 ];

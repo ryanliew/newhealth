@@ -11,6 +11,8 @@ return [
     'payment' => '付款',
     'make_payment' => '支付款项',
     'verify' => '确认付款',
+    'verify_success' => '成功确认付款',
+    'reject_success' => '成功驳回付款',
     'amount' => '支付数额',
 
     'payment_slip' => '付款单',
@@ -20,7 +22,9 @@ return [
 
     'success' => "付款单已被接纳",
     'paid_on' => "付款日期",
-    'payment_details' => "付款详情"
+    'payment_details' => "付款详情",
+    'reject' => "驳回",
+    'reject_note' => "备注",
 
 
     

@@ -155,6 +155,7 @@
 
 			onLoaded() {
 				this.loading = false;
+				window.events.$emit('table-loaded');
 			},
 
 			onCellClicked(data, field, event) {
@@ -163,6 +164,10 @@
 				// 	this.$refs.vuetable.toggleDetailRow(data.id);
 			},
 
+			userStatusLabel(value) {
+				return this.$options.filters.formatUserStatus(value);
+			},
+			
 			purchaseStatusLabel(value) {
 				return this.$options.filters.formatPurchaseStatus(value);
 			},

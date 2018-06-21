@@ -34,7 +34,31 @@ Vue.filter('formatPurchaseStatus', function(value){
 		case 'pending_verification':
 			color = 'badge-info';
 			break;
+		case 'rejected':
+			color = 'badge-danger';
+			break;
 		case 'complete':
+			color = 'badge-success';
+			break;
+	}
+
+	return '<span class="badge ' + color + '">' + text + '</span>';
+});
+
+Vue.filter('formatUserStatus', function(value){
+	let color = 'badge-success';
+	let text = 	lang.get('user.' + value);
+	switch(value) {
+		case 'pending':
+			color = 'badge-warning';
+			break;
+		case 'pending_verification':
+			color = 'badge-info';
+			break;
+		case 'rejected':
+			color = 'badge-danger';
+			break;
+		case 'verified':
 			color = 'badge-success';
 			break;
 	}
