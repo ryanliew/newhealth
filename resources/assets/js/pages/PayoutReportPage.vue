@@ -10,7 +10,10 @@
 							:dateFilterable="false"
 							dateFilterKey="transactions.created_at"
 							:monthFilterable="true"
-							monthFilterKey="transactions.date">
+							monthFilterKey="transactions.date"
+							:canExportPDF="true"
+							:canExportExcel="true"
+							:exportUrl="exportUrl">
 				</table-view>
 
 				<table-view ref="transactions_std"
@@ -68,7 +71,8 @@
 					user_id: "",
 					month: moment().format('YYYY-MM-DD'),
 					is_std: 0
-				})
+				}),
+				exportUrl: "/exports/payouts?"
 			};
 		},
 

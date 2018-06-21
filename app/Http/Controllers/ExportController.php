@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ExcelExports\PayoutExports;
 use App\ExcelExports\PurchaseExports;
 use App\ExcelExports\TransactionExports;
 use App\ExcelExports\UserExports;
@@ -10,6 +11,7 @@ use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 
 class ExportController extends Controller
 {
@@ -209,6 +211,54 @@ class ExportController extends Controller
             }
 
             return new UserExports($collection);
+        }
+    }
+
+    public function payouts()
+    {
+        $date = Carbon::parse(request()->month);
+
+        if(!request()->month)
+            $date = Carbon::now();
+
+        $query = DB::table('users')
+                    ->leftJoin('transactions', 'users.id', '=', 'transactions.user_id')
+                    ->whereRaw('MONTH(date) = ? AND YEAR(date) = ?', [$date->month, $date->year])
+                    ->select(DB::raw('sum(transactions.amount) as amount, user_id, name, bank_name, account_no, bank_address, bank_swift, payout_status, is_std'))
+                    ->groupBy('users.id', 'transactions.payout_status', 'is_std')
+                    ->orderByDesc('amount');
+
+        $payouts = Controller::VueTableListResult($query);
+
+        $title = "payouts_report_" . strtolower($date->format("M_Y"));
+
+        // return view('pdf.purchases', ['purchases' => $purchases]);
+        if(request()->type == 'pdf')
+        {
+            $pdf = App::make('dompdf.wrapper');
+            $pdf->loadView('pdf.payouts', ['payouts' => $payouts, 'date' => $date->format("M Y")]);
+            return $pdf->download($title . '.pdf');
+        }
+
+        if(request()->type == 'excel')
+        {   
+            $collection = collect([["Name", "Bank name", "Bank SORT/SWIFT code", "Bank address", "Account No.", "Amount"]]);
+
+            foreach($payouts as $payout)
+            {
+                $currency = $payout->is_std ? "USD" : "RM";
+                $amount =  $currency . number_format($payout->amount, 2, ".", ",");
+                $collection->push([
+                                    $payout->name,
+                                    $payout->bank_name,
+                                    $payout->bank_swift,
+                                    $payout->bank_address,
+                                    $payout->account_no,
+                                    $amount
+                                ]);
+            }
+
+            return new PayoutExports($collection, strtolower($date->format("M_Y")));
         }
     }
 }

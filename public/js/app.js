@@ -80050,6 +80050,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -80071,7 +80074,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				user_id: "",
 				month: __WEBPACK_IMPORTED_MODULE_0_moment___default()().format('YYYY-MM-DD'),
 				is_std: 0
-			})
+			}),
+			exportUrl: "/exports/payouts?"
 		};
 	},
 	mounted: function mounted() {
@@ -80167,7 +80171,10 @@ var render = function() {
                       dateFilterable: false,
                       dateFilterKey: "transactions.created_at",
                       monthFilterable: true,
-                      monthFilterKey: "transactions.date"
+                      monthFilterKey: "transactions.date",
+                      canExportPDF: true,
+                      canExportExcel: true,
+                      exportUrl: _vm.exportUrl
                     }
                   }),
                   _vm._v(" "),
