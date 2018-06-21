@@ -6,6 +6,16 @@
                     <i class="fa fa-eye"></i>
                 </span>
             </button>
+            <button type="button" class="btn btn-warning" @click="itemAction('previous', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Set to previous legal step" v-if="!(rowData.id_status == 'pending' || rowData.id_status == 'pending_verification' || rowData.id_status == 'rejected' || rowData.id_status == 'verified')">
+                <span class="icon" v-html="legalLeftButtonContent">
+                    <i class="fa fa-arrow-left"></i>
+                </span>
+            </button>
+            <button type="button" class="btn btn-warning" @click="itemAction('next', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Set to next legal step" v-if="!(rowData.id_status == 'pending' || rowData.id_status == 'pending_verification' || rowData.id_status == 'rejected' || rowData.id_status == 'complete')">
+                <span class="icon" v-html="legalRightButtonContent">
+                    <i class="fa fa-arrow-right"></i>
+                </span>
+            </button>
             <button v-if="user.is_admin && rowData.id_status == 'pending'" type="button" class="btn btn-info btn-lg" data-toggle="tooltip" data-placement="bottom" title="Send verification reminder" @click="isConfirming = true">
                 <span class="icon" v-html="sendButtonContent">
                     <i class="fa fa-send-o"></i>
@@ -39,13 +49,17 @@ export default {
         return {
             user: window.user,
             isConfirming: false,
-            loading: false
+            loading: false,
+            loadingLeft: false,
+            loadingRight: false
         };
     },
 
     mounted() {
         this.user = window.user;
         this.$events.on('loading', data => this.setLoading(data));
+        this.$events.on('loading-left', data => this.setLoadingLeft(data));
+        this.$events.on('loading-right', data => this.setLoadingRight(data));
         this.$events.on('loading-complete', data => this.setLoadingComplete(data));
     },
 
@@ -62,8 +76,18 @@ export default {
             this.loading = data == this.rowData.id;
         },
 
+        setLoadingLeft(data) {
+            this.loadingLeft = data == this.rowData.id;
+        },
+
+        setLoadingRight(data) {
+            this.loadingRight = data == this.rowData.id;
+        },
+
         setLoadingComplete(data) {
             this.loading = false;
+            this.loadingLeft = false;
+            this.loadingRight = false;
             this.isConfirming = false;
         },
 
@@ -75,6 +99,14 @@ export default {
     computed: {
         sendButtonContent() {
             return this.loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-send-o"></i>';
+        },
+
+        legalLeftButtonContent() {
+            return this.loadingLeft ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-arrow-left"></i>';
+        },
+
+        legalRightButtonContent() {
+            return this.loadingRight ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-arrow-right"></i>';
         },
     }
   }

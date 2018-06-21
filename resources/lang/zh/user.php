@@ -40,6 +40,7 @@ return [
     'rejected' => '审核失败',
     'documents_verified' => '文件审核成功',
     'documents_rejected' => '文件审核失败',
-    'reminder_sent' => "已发送提示"
+    'reminder_sent' => "已发送提示",
+    'legal_updated' => '种植者法律程序更新成功'
 
 ];

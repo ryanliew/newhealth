@@ -116,16 +116,16 @@
 								</text-input>
 
 
-								<!-- <text-input
-									:defaultValue="user.package.tree_count + ' ' + $options.filters.trans_choice('auth.tree', user.package.tree_count)"
+								<text-input
+									:defaultValue="$options.filters.formatUserStatus(user.id_status)"
 									:required="false"
 									type="text"
-									:label="$options.filters.trans('auth.selected_package')"
+									:label="$options.filters.trans('user.status')"
 									name="package"
 									:editable="false"
 									:focus="false"
 									:hideLabel="false">
-								</text-input> -->
+								</text-input>
 							</div>
 						</div>
 					</div>
