@@ -155,6 +155,7 @@
 
 			onLoaded() {
 				this.loading = false;
+				window.events.$emit('table-loaded');
 			},
 
 			onCellClicked(data, field, event) {

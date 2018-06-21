@@ -31,6 +31,9 @@ return [
     'click_to_login' => 'Click here to login',
     'newleaf_newsletter' => 'Newleaf Newsletter',
     'newleaf_bulletin' => 'Newleaf Bulletin',
-    'latest_news' => 'the latest news and updates from newleaf plantation'
+    'latest_news' => 'the latest news and updates from newleaf plantation',
+    'payment_rejected' => "Payment rejected",
+    'payment_rejected_message' => "Unfortunately one of your recent payment has been rejected. Please click the button below to act on it as soon as possible",
+    'view_payment' => "View payment"
     
 ];

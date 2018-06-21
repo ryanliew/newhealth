@@ -54,6 +54,14 @@
 				this.cancelable = false;
 				this.isPurchasing = true;
 			}
+
+			if(this.getParameterByName('id')) {
+				window.events.$on('table-loaded', function(){
+					let data = _.filter(this.$refs.purchases.$refs.vuetable.tableData, function(purchase) { return purchase.id == this.getParameterByName('id'); }.bind(this));
+					if(data.length > 0)
+						this.view(data[0]);
+				}.bind(this));
+			}
 			
 		},
 

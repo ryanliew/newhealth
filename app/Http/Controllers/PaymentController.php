@@ -6,6 +6,7 @@ use App\Payment;
 use App\Purchase;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PaymentController extends Controller
 {
@@ -44,6 +45,8 @@ class PaymentController extends Controller
         $this->validate(request(), [
             'payment_slip_path' => ['required', 'file', 'max:8000']
         ], $messages);
+
+        Storage::disk('public')->delete($payment->payment_slip_path);
 
         $payment->update(['payment_slip_path' => request()->file('payment_slip_path')->store('payments', 'public')]);
 

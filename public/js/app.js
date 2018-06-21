@@ -50242,6 +50242,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		onLoaded: function onLoaded() {
 			this.loading = false;
+			window.events.$emit('table-loaded');
 		},
 		onCellClicked: function onCellClicked(data, field, event) {
 			// if(this.detail == 'LotDetailRow'
@@ -77267,6 +77268,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		if (this.getParameterByName('new') == '1') {
 			this.cancelable = false;
 			this.isPurchasing = true;
+		}
+
+		if (this.getParameterByName('id')) {
+			window.events.$on('table-loaded', function () {
+				var data = _.filter(this.$refs.purchases.$refs.vuetable.tableData, function (purchase) {
+					return purchase.id == this.getParameterByName('id');
+				}.bind(this));
+				if (data.length > 0) this.view(data[0]);
+			}.bind(this));
 		}
 	},
 

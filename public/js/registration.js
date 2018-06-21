@@ -50222,6 +50222,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		onLoaded: function onLoaded() {
 			this.loading = false;
+			window.events.$emit('table-loaded');
 		},
 		onCellClicked: function onCellClicked(data, field, event) {
 			// if(this.detail == 'LotDetailRow'
