@@ -6,12 +6,12 @@
                     <i class="fa fa-eye"></i>
                 </span>
             </button>
-            <button type="button" class="btn btn-warning" @click="itemAction('previous', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Set to previous legal step" v-if="!(rowData.id_status == 'pending' || rowData.id_status == 'pending_verification' || rowData.id_status == 'rejected' || rowData.id_status == 'verified')">
+            <button type="button" class="btn btn-warning" @click="itemAction('previous', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Set to previous legal step" v-if="!(rowData.id_status == 'pending' || rowData.id_status == 'pending_verification' || rowData.id_status == 'rejected' || rowData.id_status == 'verified') && rowData.has_verified_sale">
                 <span class="icon" v-html="legalLeftButtonContent">
                     <i class="fa fa-arrow-left"></i>
                 </span>
             </button>
-            <button type="button" class="btn btn-warning" @click="itemAction('next', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Set to next legal step" v-if="!(rowData.id_status == 'pending' || rowData.id_status == 'pending_verification' || rowData.id_status == 'rejected' || rowData.id_status == 'complete')">
+            <button type="button" class="btn btn-warning" @click="itemAction('next', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Set to next legal step" v-if="!(rowData.id_status == 'pending' || rowData.id_status == 'pending_verification' || rowData.id_status == 'rejected' || rowData.id_status == 'complete') && rowData.has_verified_sale">
                 <span class="icon" v-html="legalRightButtonContent">
                     <i class="fa fa-arrow-right"></i>
                 </span>

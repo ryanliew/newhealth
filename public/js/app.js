@@ -87174,7 +87174,7 @@ var render = function() {
             _vm.rowData.id_status == "pending_verification" ||
             _vm.rowData.id_status == "rejected" ||
             _vm.rowData.id_status == "verified"
-          )
+          ) && _vm.rowData.has_verified_sale
             ? _c(
                 "button",
                 {
@@ -87211,7 +87211,7 @@ var render = function() {
             _vm.rowData.id_status == "pending_verification" ||
             _vm.rowData.id_status == "rejected" ||
             _vm.rowData.id_status == "complete"
-          )
+          ) && _vm.rowData.has_verified_sale
             ? _c(
                 "button",
                 {
