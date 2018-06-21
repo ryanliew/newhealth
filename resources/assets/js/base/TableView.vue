@@ -164,6 +164,10 @@
 				// 	this.$refs.vuetable.toggleDetailRow(data.id);
 			},
 
+			userStatusLabel(value) {
+				return this.$options.filters.formatUserStatus(value);
+			},
+			
 			purchaseStatusLabel(value) {
 				return this.$options.filters.formatPurchaseStatus(value);
 			},

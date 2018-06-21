@@ -31,6 +31,15 @@ return [
     'residence_proof' => '住址证明文件',
     'nominee_identity' => '提名人身份证件副本（马来西亚公民）或护照（非马来西亚公民）',
     'cancel_update' => '取消更新',
-    'documents_success' => '更新成功'
+    'documents_success' => '更新成功',
+    'verify' => "认证",
+    'reject' => '驳回',
+    'pending_verification' => '审核中',
+    'pending' => '未审核',
+    'verified' => '已通过审核',
+    'rejected' => '审核失败',
+    'documents_verified' => '文件审核成功',
+    'documents_rejected' => '文件审核失败',
+    'reminder_sent' => "已发送提示"
 
 ];

@@ -24,6 +24,6 @@ return [
     'success' => "Payment has been recorded successfully",
     'paid_on' => "Paid on",
     'reject' => "Reject",
-    'reject_note' => "Reason",
+    'reject_note' => "Reject reason",
     
 ];

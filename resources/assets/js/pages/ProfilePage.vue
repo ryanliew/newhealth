@@ -5,7 +5,11 @@
 				<div class="row mb-3">
 					<div class="col-sm">
 						<button class="btn btn-primary" @click="isEditing = true">{{ 'user.edit_profile' | trans }}</button>
-						<button class="btn btn-primary" @click="isUploading = true">{{ 'user.kyc_documents' | trans }}</button>
+						<button class="btn btn-primary" @click="isUploading = true">
+							{{ 'user.kyc_documents' | trans }} 
+							<span class="badge badge-pill badge-danger" v-if="user.id_status == 'rejected'">!</span>
+							<span class="badge badge-pill badge-warning" v-if="user.id_status == 'pending'">!</span>
+						</button>
 					</div>
 				</div>
 				<div class="row">
@@ -407,9 +411,24 @@
 		mounted() {
 			this.user = this.selectedUser ? this.selectedUser : window.user;
 			this.getContacts();
+
+			if(this.getParameterByName('document'))
+			{
+				this.isUploading = true;
+			}
 		},
 
 		methods: {
+			getParameterByName(name, url) {
+			    if (!url) url = window.location.href;
+			    name = name.replace(/[\[\]]/g, "\\$&");
+			    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			        results = regex.exec(url);
+			    if (!results) return null;
+			    if (!results[2]) return '';
+			    return decodeURIComponent(results[2].replace(/\+/g, " "));
+			},
+
 			getContacts() {
 				if(user.company_name)
 				{
@@ -446,9 +465,12 @@
 			contactNumber() {
 				if(this.user)
 				{
-					return _.filter(this.user.addresses, function(address){
+					let result = _.filter(this.user.addresses, function(address){
 						return address.type == "personal";
-					})[0].phone;
+					});
+
+					if(result.length > 0)
+						return result[0].phone;
 				}
 
 				return '';
