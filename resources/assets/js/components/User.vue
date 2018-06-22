@@ -43,8 +43,16 @@
 									:editable="user.is_admin"
 									:focus="false"
 									:hideLabel="false"
-									:error="form.errors.get('identification')">
+									:error="form.errors.get('identification')"
+									extraClass="mb-0">
 								</text-input>
+								<radio-group-input v-model="form.id_type"
+													:values="['nric', 'passport']" 
+													:defaultValue="form.id_type"
+													label=""
+													name="id_type"
+													:hideLabel="true">
+								</radio-group-input>
 							</div>
 						</div>
 						<text-input v-model="form.email" 
@@ -562,6 +570,7 @@
 				form: new Form({
 					name: '',
 					identification: '',
+					id_type: '',
 					email: '',
 					address_line_1: '',
 					address_line_2: '',
@@ -639,6 +648,7 @@
 			setUser() {
 				this.form.name = this.selectedUser.name;
 				this.form.identification = this.selectedUser.identification;
+				this.form.id_type = this.selectedUser.id_type;
 				this.form.email = this.selectedUser.email;
 				this.form.gender = this.selectedUser.gender;
 				this.form.bank_name = this.selectedUser.bank_name;

@@ -13,7 +13,9 @@ return [
     'take_from_camera' => 'Click to open camera...',
     'file_selected' => "Selected file :name",
     'male' => "Male",
-    'female' => "Female"
+    'female' => "Female",
+    'nric' => "NRIC",
+    'passport' => "Passport"
 
     
 ];

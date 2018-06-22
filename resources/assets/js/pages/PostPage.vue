@@ -10,9 +10,11 @@
 						:filterMonth="filterMonth"
 						:addNew="canAddNew"
 						@back="back"
-						v-if="!isViewing && !isEditing">
+						v-show="!isViewing && !isEditing">
 			</table-view>
-			<post :selectedPost="selectedPost" :isEditing="isEditing" v-else @back="back"></post>
+		</transition>
+		<transition name="slide-fade" mode="out-in">
+			<post :selectedPost="selectedPost" :isEditing="isEditing" v-if="isViewing || isEditing" @back="back"></post>
 		</transition>
 	</div>
 </template>
@@ -62,6 +64,7 @@
 				this.selectedPost = '';
 				this.isViewing = false;
 				this.isEditing = false;
+				this.$refs.posts.refreshTable();
 			},
 
 			view(data) {

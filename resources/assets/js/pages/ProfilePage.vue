@@ -1,14 +1,13 @@
 <template>
 	<div>
 		<transition name="slide-fade" mode="out-in">
-			<div v-if="!isEditing && !isUploading">
+			<div v-if="!isEditing">
 				<div class="row mb-3">
 					<div class="col-sm">
 						<button class="btn btn-primary" @click="isEditing = true">{{ 'user.edit_profile' | trans }}</button>
 						<button class="btn btn-primary" @click="isUploading = true">
 							{{ 'user.kyc_documents' | trans }} 
-							<span class="badge badge-pill badge-danger" v-if="user.id_status == 'rejected'">!</span>
-							<span class="badge badge-pill badge-warning" v-if="user.id_status == 'pending'">!</span>
+							
 						</button>
 					</div>
 				</div>
@@ -26,6 +25,16 @@
 								</div>
 							</div>
 							<div class="card-block">
+								<text-input
+									:defaultValue="$options.filters.formatUserStatus(user.id_status)"
+									:required="false"
+									type="text"
+									:label="$options.filters.trans('user.status')"
+									name="package"
+									:editable="false"
+									:focus="false"
+									:hideLabel="false">
+								</text-input>
 								<text-input v-model="user.referral_code" 
 									:defaultValue="user.referral_code"
 									:required="false"
@@ -54,7 +63,7 @@
 									:defaultValue="user.identification"
 									:required="true"
 									type="text"
-									:label="$options.filters.trans('auth.identification')"
+									:label="$options.filters.trans('input.' + user.id_type)"
 									name="identification"
 									:editable="false"
 									:focus="false"
@@ -110,18 +119,6 @@
 									type="text"
 									:label="$options.filters.trans('auth.gender')"
 									name="gender"
-									:editable="false"
-									:focus="false"
-									:hideLabel="false">
-								</text-input>
-
-
-								<text-input
-									:defaultValue="$options.filters.formatUserStatus(user.id_status)"
-									:required="false"
-									type="text"
-									:label="$options.filters.trans('user.status')"
-									name="package"
 									:editable="false"
 									:focus="false"
 									:hideLabel="false">
@@ -245,6 +242,7 @@
 						</div>
 					</div>
 				</div>
+				<user-documents :selectedUser="user"></user-documents>
 				<div class="row" v-if="user.company_name">
 					<div class="col-sm">
 						<div class="card">
@@ -383,7 +381,6 @@
 				</div>
 			</div>
 			<user :selectedUser="user" @back="editComplete" v-if="isEditing"></user>
-			<user-documents :selectedUser="user" @back="editComplete" v-if="isUploading"></user-documents>
 
 		</transition>
 	</div>

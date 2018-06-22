@@ -1,5 +1,5 @@
 <template>
-	<div class="form-group">
+	<div class="form-group" :class="extraClass">
 		<label v-if="!hideLabel ":for="name" :class="labelClass">{{ label }} <span v-if="required && editable" class="text-danger">*</span></label>
 		<input :name="name" 
 				:id="name" 
@@ -21,7 +21,7 @@
 <script>
 	import moment from 'moment';
 	export default {
-		props: ['defaultValue', 'label', 'required', 'error', 'name', 'type', 'editable', 'focus', 'hideLabel', 'placeholder'],
+		props: ['defaultValue', 'label', 'required', 'error', 'name', 'type', 'editable', 'focus', 'hideLabel', 'placeholder', 'extraClass'],
 		data() {
 			return {
 				localValue: ''
