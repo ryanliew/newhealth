@@ -102,6 +102,14 @@
                                             </span>
                                         @endif
                                     </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="id_type" type="radio" id="type_nric" value="nric">
+                                        <label class="form-check-label" for="type_nric">{{ __('input.nric') }}</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" name="id_type" type="radio" id="type_passport" value="passport">
+                                        <label class="form-check-label" for="type_passport">{{ __('input.passport') }}</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">

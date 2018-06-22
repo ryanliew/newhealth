@@ -141,8 +141,8 @@
 
 			if(this.user_country) {
 				this.company_country = _.head(_.filter(this.potentialCountries, function(country) {
-					return country.value == user_country;
-				}));
+					return country.value == this.user_country;
+				}.bind(this)));
 			}
 
 			this.companyTypes = [

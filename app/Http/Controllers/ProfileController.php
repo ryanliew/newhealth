@@ -64,6 +64,7 @@ class ProfileController extends Controller
             'name' => request()->name,
             'country_id' => request()->country_id,
             'identification' => request()->identification,
+            'id_type' => request()->id_type,
             'nationality' => request()->nationality,
             'gender' => request()->gender,
             'company_name' => request()->company_name,

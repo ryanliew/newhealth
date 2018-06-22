@@ -113,6 +113,7 @@ class UserController extends Controller
             'email' => request()->email,
             'name' => request()->name,
             'country_id' => request()->country_id,
+            'id_type' => request()->id_type,
             'identification' => request()->identification,
             'nationality' => request()->nationality,
             'gender' => request()->gender,

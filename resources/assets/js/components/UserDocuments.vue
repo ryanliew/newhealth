@@ -3,11 +3,11 @@
 		<div class="card-header">
 			<div class="row align-items-center">
 				<div class="col">
-					{{ 'user.kyc_documents' | trans }} <span v-html="$options.filters.formatUserStatus(selectedUser.id_status)"></span>
+					{{ 'user.kyc_documents' | trans }} <span class="badge badge-pill badge-danger" v-if="selectedUser.id_status == 'rejected'">!</span><span class="badge badge-pill badge-warning" v-if="selectedUser.id_status == 'pending'">!</span>
 				</div>
-				<div class="col-auto">
+				<!-- <div class="col-auto">
 					<button class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
-				</div>
+				</div> -->
 			</div>
 		</div>
 		<div class="card-block">

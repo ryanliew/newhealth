@@ -13,7 +13,9 @@ return [
     'take_from_camera' => '按此打开照相机...',
     'file_selected' => "成功选择:name",
     "male" => "男",
-    "female" => "女"
+    "female" => "女",
+    'nric' => "身份证",
+    'passport' => "护照"
 
     
 ];

@@ -16,7 +16,7 @@
                     <i class="fa fa-arrow-right"></i>
                 </span>
             </button>
-            <button v-if="user.is_admin && rowData.id_status == 'pending'" type="button" class="btn btn-info btn-lg" data-toggle="tooltip" data-placement="bottom" title="Send verification reminder" @click="isConfirming = true">
+            <button v-if="user.is_admin && (rowData.id_status == 'pending' || rowData.id_status == 'rejected')" type="button" class="btn btn-info btn-lg" data-toggle="tooltip" data-placement="bottom" title="Send verification reminder" @click="isConfirming = true">
                 <span class="icon" v-html="sendButtonContent">
                     <i class="fa fa-send-o"></i>
                 </span>
