@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<transition name="slide-fade" mode="out-in">
-			<div v-if="!isViewingDetails">
+			<div v-show="!isViewingDetails">
 				<table-view ref="transactions"
 							:fields="fields"
 							:title="$options.filters.trans('transaction.payouts')"
@@ -27,7 +27,9 @@
 							monthFilterKey="transactions.date">
 				</table-view>
 			</div>
-			<transaction-page @back="back" v-else :userId="selectedUserId" :filterMonth="filterMonth"></transaction-page>
+		</transition>
+		<transition name="slide-fade" mode="out-in">
+			<transaction-page @back="back" v-if="isViewingDetails" :userId="selectedUserId" :filterMonth="filterMonth"></transaction-page>
 		</transition>
 	</div>
 </template>
@@ -91,6 +93,7 @@
 			back() {
 				this.selectedUser = '';
 				this.isViewingDetails = false;
+				Vue.nextTick( function() { this.$refs.transactions.mountEvents(); this.$refs.transactions_std.mountEvents(); }.bind(this));
 			},
 
 			view(data) {

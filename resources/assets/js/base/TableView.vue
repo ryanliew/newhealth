@@ -87,13 +87,13 @@
 		},
 
 		destroyed: function () {
+			console.log("Dismounted");
 			this.$events.off('filter-set');
 			this.$events.off('filter-reset');
 		},
 
 		mounted() {
-			this.$events.$on('filter-set', eventData => this.onFilterSet(eventData));
-			this.$events.$on('filter-reset', e => this.onFilterReset());
+			this.mountEvents();
 		},
 
 		methods: {
@@ -106,6 +106,12 @@
 				setTimeout(function(){
 					this.$refs.vuetable.refresh();
 				}.bind(this), 1000);
+			},
+
+			mountEvents() {
+				console.log("Mounted");
+				this.$events.$on('filter-set', eventData => this.onFilterSet(eventData));
+				this.$events.$on('filter-reset', e => this.onFilterReset());
 			},
 
 			back() {

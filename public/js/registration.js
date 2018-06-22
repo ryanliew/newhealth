@@ -50173,19 +50173,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 	destroyed: function destroyed() {
+		console.log("Dismounted");
 		this.$events.off('filter-set');
 		this.$events.off('filter-reset');
 	},
 
 	mounted: function mounted() {
-		var _this = this;
-
-		this.$events.$on('filter-set', function (eventData) {
-			return _this.onFilterSet(eventData);
-		});
-		this.$events.$on('filter-reset', function (e) {
-			return _this.onFilterReset();
-		});
+		this.mountEvents();
 	},
 
 
@@ -50198,6 +50192,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			setTimeout(function () {
 				this.$refs.vuetable.refresh();
 			}.bind(this), 1000);
+		},
+		mountEvents: function mountEvents() {
+			var _this = this;
+
+			console.log("Mounted");
+			this.$events.$on('filter-set', function (eventData) {
+				return _this.onFilterSet(eventData);
+			});
+			this.$events.$on('filter-reset', function (e) {
+				return _this.onFilterReset();
+			});
 		},
 		back: function back() {
 			this.$emit('back');
@@ -54604,6 +54609,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         doFilter: function doFilter() {
+            console.log("Clicked");
             this.$events.fire('filter-set', { month: this.filterMonth, text: this.filterText, start: this.filterDateStart, end: this.filterDateEnd });
         },
         resetFilter: function resetFilter() {

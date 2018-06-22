@@ -50193,19 +50193,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 	destroyed: function destroyed() {
+		console.log("Dismounted");
 		this.$events.off('filter-set');
 		this.$events.off('filter-reset');
 	},
 
 	mounted: function mounted() {
-		var _this = this;
-
-		this.$events.$on('filter-set', function (eventData) {
-			return _this.onFilterSet(eventData);
-		});
-		this.$events.$on('filter-reset', function (e) {
-			return _this.onFilterReset();
-		});
+		this.mountEvents();
 	},
 
 
@@ -50218,6 +50212,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			setTimeout(function () {
 				this.$refs.vuetable.refresh();
 			}.bind(this), 1000);
+		},
+		mountEvents: function mountEvents() {
+			var _this = this;
+
+			console.log("Mounted");
+			this.$events.$on('filter-set', function (eventData) {
+				return _this.onFilterSet(eventData);
+			});
+			this.$events.$on('filter-reset', function (e) {
+				return _this.onFilterReset();
+			});
 		},
 		back: function back() {
 			this.$emit('back');
@@ -54624,6 +54629,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         doFilter: function doFilter() {
+            console.log("Clicked");
             this.$events.fire('filter-set', { month: this.filterMonth, text: this.filterText, start: this.filterDateStart, end: this.filterDateEnd });
         },
         resetFilter: function resetFilter() {
@@ -80620,6 +80626,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -80667,6 +80675,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		back: function back() {
 			this.selectedUser = '';
 			this.isViewingDetails = false;
+			Vue.nextTick(function () {
+				this.$refs.transactions.mountEvents();this.$refs.transactions_std.mountEvents();
+			}.bind(this));
 		},
 		view: function view(data) {
 			this.filterMonth = this.$refs.transactions.getMonth();
@@ -80720,56 +80731,68 @@ var render = function() {
   return _c(
     "div",
     [
+      _c("transition", { attrs: { name: "slide-fade", mode: "out-in" } }, [
+        _c(
+          "div",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: !_vm.isViewingDetails,
+                expression: "!isViewingDetails"
+              }
+            ]
+          },
+          [
+            _c("table-view", {
+              ref: "transactions",
+              attrs: {
+                fields: _vm.fields,
+                title: _vm.$options.filters.trans("transaction.payouts"),
+                url: _vm.url,
+                searchables: _vm.searchables,
+                dateFilterable: false,
+                dateFilterKey: "transactions.created_at",
+                monthFilterable: true,
+                monthFilterKey: "transactions.date",
+                canExportPDF: true,
+                canExportExcel: true,
+                exportUrl: _vm.exportUrl
+              }
+            }),
+            _vm._v(" "),
+            _c("table-view", {
+              ref: "transactions_std",
+              attrs: {
+                fields: _vm.std_fields,
+                title: _vm.$options.filters.trans("transaction.std_payouts"),
+                url: _vm.std_url,
+                searchables: _vm.searchables,
+                dateFilterable: false,
+                dateFilterKey: "transactions.created_at",
+                monthFilterable: false,
+                monthFilterKey: "transactions.date"
+              }
+            })
+          ],
+          1
+        )
+      ]),
+      _vm._v(" "),
       _c(
         "transition",
         { attrs: { name: "slide-fade", mode: "out-in" } },
         [
-          !_vm.isViewingDetails
-            ? _c(
-                "div",
-                [
-                  _c("table-view", {
-                    ref: "transactions",
-                    attrs: {
-                      fields: _vm.fields,
-                      title: _vm.$options.filters.trans("transaction.payouts"),
-                      url: _vm.url,
-                      searchables: _vm.searchables,
-                      dateFilterable: false,
-                      dateFilterKey: "transactions.created_at",
-                      monthFilterable: true,
-                      monthFilterKey: "transactions.date",
-                      canExportPDF: true,
-                      canExportExcel: true,
-                      exportUrl: _vm.exportUrl
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("table-view", {
-                    ref: "transactions_std",
-                    attrs: {
-                      fields: _vm.std_fields,
-                      title: _vm.$options.filters.trans(
-                        "transaction.std_payouts"
-                      ),
-                      url: _vm.std_url,
-                      searchables: _vm.searchables,
-                      dateFilterable: false,
-                      dateFilterKey: "transactions.created_at",
-                      monthFilterable: false,
-                      monthFilterKey: "transactions.date"
-                    }
-                  })
-                ],
-                1
-              )
-            : _c("transaction-page", {
+          _vm.isViewingDetails
+            ? _c("transaction-page", {
                 attrs: {
                   userId: _vm.selectedUserId,
                   filterMonth: _vm.filterMonth
                 },
                 on: { back: _vm.back }
               })
+            : _vm._e()
         ],
         1
       )
@@ -80861,6 +80884,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -80909,6 +80934,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.selectedPost = '';
 			this.isViewing = false;
 			this.isEditing = false;
+			this.$refs.posts.refreshTable();
 		},
 		view: function view(data) {
 			this.selectedPost = data;
@@ -82415,27 +82441,44 @@ var render = function() {
         "transition",
         { attrs: { name: "slide-fade", mode: "out-in" } },
         [
-          !_vm.isViewing && !_vm.isEditing
-            ? _c("table-view", {
-                ref: "posts",
-                attrs: {
-                  fields: _vm.fields,
-                  title: _vm.$options.filters.trans("post.posts"),
-                  url: _vm.url,
-                  searchables: _vm.searchables,
-                  dateFilterable: false,
-                  filterMonth: _vm.filterMonth,
-                  addNew: _vm.canAddNew
-                },
-                on: { back: _vm.back }
-              })
-            : _c("post", {
+          _c("table-view", {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: !_vm.isViewing && !_vm.isEditing,
+                expression: "!isViewing && !isEditing"
+              }
+            ],
+            ref: "posts",
+            attrs: {
+              fields: _vm.fields,
+              title: _vm.$options.filters.trans("post.posts"),
+              url: _vm.url,
+              searchables: _vm.searchables,
+              dateFilterable: false,
+              filterMonth: _vm.filterMonth,
+              addNew: _vm.canAddNew
+            },
+            on: { back: _vm.back }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "transition",
+        { attrs: { name: "slide-fade", mode: "out-in" } },
+        [
+          _vm.isViewing || _vm.isEditing
+            ? _c("post", {
                 attrs: {
                   selectedPost: _vm.selectedPost,
                   isEditing: _vm.isEditing
                 },
                 on: { back: _vm.back }
               })
+            : _vm._e()
         ],
         1
       )
