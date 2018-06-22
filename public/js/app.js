@@ -77521,6 +77521,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -77580,6 +77581,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		back: function back() {
 			this.isPurchasing = false;
 			this.selectedPurchase = '';
+			this.$refs.purchases.refreshTable();
 		},
 		tableTitle: function tableTitle(value) {
 			return this.$options.filters.trans(value);
@@ -79235,24 +79237,37 @@ var render = function() {
         "transition",
         { attrs: { name: "slide-fade", mode: "out-in" } },
         [
-          !_vm.isPurchasing
-            ? _c("table-view", {
-                ref: "purchases",
-                attrs: {
-                  fields: _vm.fields,
-                  title: _vm.$options.filters.trans("purchase.purchases"),
-                  url: _vm.url,
-                  searchables: _vm.searchables,
-                  dateFilterable: true,
-                  dateFilterKey: "purchases.created_at",
-                  addNew: "purchase.make_new_purchase",
-                  canExportPDF: true,
-                  canExportExcel: true,
-                  exportUrl: _vm.exportUrl
-                }
-              })
-            : _vm._e(),
-          _vm._v(" "),
+          _c("table-view", {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: !_vm.isPurchasing,
+                expression: "!isPurchasing"
+              }
+            ],
+            ref: "purchases",
+            attrs: {
+              fields: _vm.fields,
+              title: _vm.$options.filters.trans("purchase.purchases"),
+              url: _vm.url,
+              searchables: _vm.searchables,
+              dateFilterable: true,
+              dateFilterKey: "purchases.created_at",
+              addNew: "purchase.make_new_purchase",
+              canExportPDF: true,
+              canExportExcel: true,
+              exportUrl: _vm.exportUrl
+            }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "transition",
+        { attrs: { name: "slide-fade", mode: "out-in" } },
+        [
           _vm.isPurchasing
             ? _c("purchase", {
                 attrs: {

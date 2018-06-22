@@ -131,7 +131,8 @@ class UserController extends Controller
             'beneficiary_name' => request()->beneficiary_name,
             'beneficiary_identification' => request()->beneficiary_identification,
             'beneficiary_address' => request()->beneficiary_address,
-            'beneficiary_contact' => request()->beneficiary_contact
+            'beneficiary_contact' => request()->beneficiary_contact,
+            'id_status' => 'pending_verification'
         ]);
 
         if(request()->has('isChangePassword'))

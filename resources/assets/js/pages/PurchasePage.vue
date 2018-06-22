@@ -6,7 +6,7 @@
 						:title="$options.filters.trans('purchase.purchases')"
 						:url="url"
 						:searchables="searchables"
-						v-if="!isPurchasing"
+						v-show="!isPurchasing"
 						:dateFilterable="true"
 						dateFilterKey="purchases.created_at"
 						addNew="purchase.make_new_purchase"
@@ -14,7 +14,8 @@
 						:canExportExcel="true"
 						:exportUrl="exportUrl">
 			</table-view>
-
+		</transition>
+		<transition name="slide-fade" mode="out-in">
 			<purchase :cancelable="cancelable" :selectedPurchase="selectedPurchase" v-if="isPurchasing" @back="back"></purchase>
 		</transition>
 	</div>
@@ -83,6 +84,7 @@
 			back() {
 				this.isPurchasing = false;
 				this.selectedPurchase = '';
+				this.$refs.purchases.refreshTable();
 			},
 
 			tableTitle(value) {
