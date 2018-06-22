@@ -37,7 +37,7 @@
 					{ name: 'id_status', title: this.tableTitle('user.status'), sortField: 'id_status', callback: 'userStatusLabel'},
 					{ name: '__component:users-actions', title: this.tableTitle('table.actions')}
 				],
-				searchables: "name,email,nationality",
+				searchables: "name,email,nationality,id_status",
 				isViewing: false,
 				selectedUser: '',
 				url: '/api/admin/users',
