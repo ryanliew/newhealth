@@ -6,13 +6,14 @@
 						:title="$options.filters.trans('user.users')"
 						:url="url"
 						:searchables="searchables"
-						v-if="!isViewing"
+						v-show="!isViewing"
 						:dateFilterable="true"
 						dateFilterKey="created_at"
 						:canExportExcel="true"
 						:exportUrl="exportUrl">
 			</table-view>
-
+		</transition>
+		<transition name="slide-fade" mode="out-in">
 			<ProfilePage :cancelable="true" :selectedUser="selectedUser" v-if="isViewing" @back="back"></ProfilePage>
 		</transition>
 	</div>
@@ -66,6 +67,7 @@
 			back() {
 				this.isViewing = false;
 				this.selectedUser = '';
+				this.$refs.users.refreshTable();
 			},
 
 			tableTitle(value) {
