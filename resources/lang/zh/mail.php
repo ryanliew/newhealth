@@ -37,6 +37,9 @@ return [
     'view_payment' => "查看付款",
     'document_rejected' => "实名认证文件驳回",
     'document_rejected_message' => '很抱歉，您的实名认证文件已被管理员驳回. 您可通过以下按钮进行修改',
-    'update_document' => '修改文件'
+    'update_document' => '修改文件',
+
+    'document_required' => "个人资料或实名认证文件不完整",
+    'document_required_message' => "至今为止，您还未提供完整的个人资料或实名认证文件。请即刻登入平台完善及提交所需资料或文件。"
     
 ];

@@ -241,7 +241,6 @@
 			},
 
 			setKycDocs() {
-				console.log("Setting docs");
 				if(this.selectedUser.kyc_identity) {
 					this.form.identity = this.selectedUser.kyc_identity;
 					this.form.nominee_identity = this.selectedUser.kyc_nominee_identity;
