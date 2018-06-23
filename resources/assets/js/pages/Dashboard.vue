@@ -3,15 +3,15 @@
 		<transition name="slide-fade" mode="out-in">
 			<div v-if="!isViewing && !isPurchasing">
 				<div class="row">
-		            <div class="col-sm-3">
+		            <!-- <div class="col-sm-3">
 		                <article class="statistic-box green">
 		                    <div>
 		                        <div class="number">{{ trees_sold }}</div>
 		                        <div class="caption"><div>{{ 'dashboard.trees_sold_global' | trans }}</div></div>
 		                    </div>
 		                </article>
-		            </div><!--.col-->
-		            <div class="col-sm-3">
+		            </div> --><!--.col-->
+		            <div class="col-sm-4">
 		                <article class="statistic-box yellow">
 		                    <div>
 		                        <div class="number">{{ user.group_sale }}</div>
@@ -19,7 +19,7 @@
 		                    </div>
 		                </article>
 		            </div><!--.col-->
-		            <div class="col-sm-3">
+		            <div class="col-sm-4">
 		                <article class="statistic-box red">
 		                    <div>
 		                        <div class="number">{{ 'user.level_' + user.user_level | trans }}</div>
@@ -27,7 +27,7 @@
 		                    </div>
 		                </article>
 		            </div><!--.col-->
-		            <div class="col-sm-3">
+		            <div class="col-sm-4">
 		                <article class="statistic-box purple">
 		                    <div>
 		                        <div class="number" v-if="user.is_std">{{ user.commission_received_std | currency_std }}</div>
