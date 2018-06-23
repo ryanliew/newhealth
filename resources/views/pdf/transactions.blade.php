@@ -8,6 +8,7 @@
 	<br>
 	<b>TO:</b><br>
 	{{ $user->name }}<br>
+	{{ $user->identification }}<br>
 	{{ $user->bank_name }}<br>
 	{{ $user->account_no }}<br>
 	@if($user->bank_swift){{ $user->bank_swift }}<br>@endif

@@ -186,17 +186,7 @@
 		},
 
 		mounted() {
-			if(this.selectedUser.kyc_identity) {
-				this.form.identity = this.selectedUser.kyc_identity;
-				this.form.nominee_identity = this.selectedUser.kyc_nominee_identity;
-				this.form.bank_statement = this.selectedUser.kyc_bank_statement;
-				this.form.residence_proof = this.selectedUser.kyc_residence_proof;
-
-				this.identity = {name: this.selectedUser.kyc_identity, src: "storage/" + this.selectedUser.kyc_identity};
-				this.nomineeIdentity = {name: this.selectedUser.kyc_nominee_identity, src: "storage/" + this.selectedUser.kyc_nominee_identity};
-				this.bankStatement = {name: this.selectedUser.kyc_bank_statement, src: "storage/" + this.selectedUser.kyc_bank_statement};
-				this.residenceProof = {name: this.selectedUser.kyc_residence_proof, src: "storage/" + this.selectedUser.kyc_residence_proof};
-			}
+			
 		},
 
 		methods: {
@@ -248,6 +238,27 @@
 			submitVerify() {
 				this.verifyForm.post('/api/user/' + this.selectedUser.id + '/kyc/verify')
 					.then(response => this.onSuccess(response));
+			},
+
+			setKycDocs() {
+				console.log("Setting docs");
+				if(this.selectedUser.kyc_identity) {
+					this.form.identity = this.selectedUser.kyc_identity;
+					this.form.nominee_identity = this.selectedUser.kyc_nominee_identity;
+					this.form.bank_statement = this.selectedUser.kyc_bank_statement;
+					this.form.residence_proof = this.selectedUser.kyc_residence_proof;
+
+					this.identity = {name: this.selectedUser.kyc_identity, src: "storage/" + this.selectedUser.kyc_identity};
+					this.nomineeIdentity = {name: this.selectedUser.kyc_nominee_identity, src: "storage/" + this.selectedUser.kyc_nominee_identity};
+					this.bankStatement = {name: this.selectedUser.kyc_bank_statement, src: "storage/" + this.selectedUser.kyc_bank_statement};
+					this.residenceProof = {name: this.selectedUser.kyc_residence_proof, src: "storage/" + this.selectedUser.kyc_residence_proof};
+				}
+			}
+		},
+
+		watch: {
+			selectedUser() {
+				this.setKycDocs();
 			}
 		}	
 	}
