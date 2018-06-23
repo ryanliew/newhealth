@@ -23,6 +23,7 @@ return [
     'change_password' => '更换密码',
     'cancel_change_password' => '取消更换密码',
     'profile_update_success'=> '资料已更新',
+    'status' => '状态',
 
     'kyc_documents' => '实名认证文件',
     'update_document' => "更新实名认证文件",
@@ -41,6 +42,13 @@ return [
     'documents_verified' => '文件审核成功',
     'documents_rejected' => '文件审核失败',
     'reminder_sent' => "已发送提示",
-    'legal_updated' => '种植者法律程序更新成功'
+    'legal_updated' => '种植者法律程序更新成功',
+
+    'level_instruction' => "直推 :target 位种植者. 还需 :left 位",
+    'level_instruction_2' => "组织业绩达 :target 棵树. 还需 :left 棵",
+
+    'instruction_issued_to_lawyer' => "律师处理中",
+    "sales_agreement_ready_for_execution" => "等待签署销售协议",
+    "sales_agreement_executed" => "销售协议完成"
 
 ];

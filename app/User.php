@@ -23,7 +23,7 @@ class User extends Authenticatable
     protected $guarded = [];
 
 
-    protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale'];
+    protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std'];
 
 
     protected $with = ['package', 'addresses', 'contacts'];
@@ -168,6 +168,38 @@ class User extends Authenticatable
         return $this->purchases()->where('is_verified', 1)->count() > 0;
     }
 
+    public function getDirectReferrerNeededAttribute()
+    {
+        $children = 10;
+
+        switch($this->user_level) {
+            case 2:
+                $children = 5;
+                break;
+            case 1:
+                $children = 3;
+                break;
+        }
+
+        return $children;
+    }
+
+    public function getGroupSaleNeededAttribute()
+    {
+        $sale = 0;
+
+        switch($this->user_level) {
+            case 2:
+                $sale = 100;
+                break;
+            case 3:
+                $sale = 200;
+                break;       
+        }
+
+        return $sale;
+    }
+
     // Adjust user level
     public function adjust_level()
     {
@@ -191,6 +223,26 @@ class User extends Authenticatable
 
         if($this->user_level < $user_level)
             $this->update(['user_level' => $user_level]);
+    }
+
+    public function getCommissionReceivedAttribute()
+    {
+        return $this->transactions()->where("is_std", false)->sum("amount");
+    }
+
+    public function getCommissionReceivedStdAttribute()
+    {
+        return $this->transactions()->where("is_std", true)->sum("amount_std");
+    }
+
+    public function getDirectDescendantsCountAttribute()
+    {
+        return $this->children()->where('tree_count', '>', 0)->count();
+    }
+
+    public function getDescendantsCountAttribute()
+    {
+        return $this->descendants()->count();
     }
 
     // Reset password

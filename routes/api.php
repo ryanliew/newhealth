@@ -20,14 +20,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/purchases', 'PurchaseController@store');
 Route::get('/packages', 'PackageController@index');
 Route::get('/countries', 'CountryController@index');
-
+Route::get('/dashboard/{user}', 'HomeController@dashboard');
 
 Route::group(['middleware' => 'auth:api'], function() {
 	
 	Route::group(['prefix' => 'admin'], function() {
+		Route::get('/users/pending', 'Admin\UserController@indexPending');
 		Route::get('/users', 'Admin\UserController@index');
 		Route::get('/tree', 'Admin\UserController@getTree');
 		Route::get('/packages', 'Admin\PackageController@index');
+		Route::get('/purchases/pending', 'Admin\PurchaseController@indexPending');
 		Route::get('/purchases', 'Admin\PurchaseController@index');
 		Route::get('/transactions', 'Admin\TransactionController@index');
 		Route::get('/transactions/standard', 'Admin\TransactionController@index_standard');

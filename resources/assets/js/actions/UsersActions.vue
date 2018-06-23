@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="btn-group" role="group" aria-label="Purchase actions">
-            <button type="button" class="btn btn-primary" @click="itemAction('view', rowData, rowIndex)">
+            <button type="button" class="btn btn-primary" @click="itemAction('viewUser', rowData, rowIndex)">
                 <span class="icon">
                     <i class="fa fa-eye"></i>
                 </span>

@@ -13,6 +13,7 @@ return [
     'complete' => 'Complete',
     'made_by' => 'Made by',
     'purchase_date' => 'Purchase date',
+    'pending_purchases' => "Pending purchases",
     'total_payable' => 'Total payable',
     'status' => 'Status',
     'make_new_purchase' => 'Make new purchase',

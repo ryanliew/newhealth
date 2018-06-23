@@ -5,10 +5,6 @@
 				<div class="row mb-3">
 					<div class="col-sm">
 						<button class="btn btn-primary" @click="isEditing = true">{{ 'user.edit_profile' | trans }}</button>
-						<button class="btn btn-primary" @click="isUploading = true">
-							{{ 'user.kyc_documents' | trans }} 
-							
-						</button>
 					</div>
 				</div>
 				<div class="row">

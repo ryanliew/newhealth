@@ -8,6 +8,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
+    'dashboard' => 'Dashboard',
     'profile' => 'Profile',
     'logout' => 'Logout',
     'settings' => 'Settings',
