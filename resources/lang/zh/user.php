@@ -24,6 +24,7 @@ return [
     'cancel_change_password' => '取消更换密码',
     'profile_update_success'=> '资料已更新',
     'status' => '状态',
+    'users_pending' => '需关注用户',
 
     'kyc_documents' => '实名认证文件',
     'update_document' => "更新实名认证文件",

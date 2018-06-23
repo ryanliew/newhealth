@@ -23,6 +23,7 @@ return [
     'change_password' => 'Change password',
     'cancel_change_password' => 'Cancel change password',
     'profile_update_success'=> 'Profile updated',
+    'users_pending' => 'Pending users',
 
     'kyc_documents' => 'Identity Verification Documents',
     'update_document' => "Update document",

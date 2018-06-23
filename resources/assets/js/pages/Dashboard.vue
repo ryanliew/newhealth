@@ -158,7 +158,8 @@
 							<transition name="slide-fade" mode="out-in">
 								<table-view ref="users"
 											:fields="userFields"
-											:title="$options.filters.trans('user.users')"
+											:title="$options.filters.trans('user.users_pending')"
+											empty="No more pending users"
 											:url="userUrl"
 											v-show="!isViewing">
 								</table-view>
