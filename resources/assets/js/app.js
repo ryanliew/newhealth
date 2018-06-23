@@ -73,7 +73,7 @@ require('./filters');
 
 const routes = [
 	{ path: '/_=_', redirect: '/'}, // To counter facebook login
-	{ path: '/', component: ProfilePage }, 
+	{ path: '/', redirect: '/dashboard' }, 
 	{ path: '/dashboard', component:Dashboard },
 	{ path: '/profile', component: ProfilePage },
 	{ path: '/purchases', component: PurchasePage },
