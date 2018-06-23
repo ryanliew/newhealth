@@ -170,14 +170,14 @@ class User extends Authenticatable
 
     public function getDirectReferrerNeededAttribute()
     {
-        $children = 10;
+        $children = 20;
 
         switch($this->user_level) {
             case 2:
-                $children = 5;
+                $children = 10;
                 break;
             case 1:
-                $children = 3;
+                $children = 5;
                 break;
         }
 

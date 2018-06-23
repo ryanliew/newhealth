@@ -37,8 +37,8 @@ return [
     'view_payment' => "View payment",
     'document_rejected' => "Identity verification documents rejected",
     'document_rejected_message' => 'Your identity verification documents has been rejected. Please click the button below to submit a revision as soon as possible.',
-    'update_document' => 'Update documents',
+    'update_document' => 'Login',
     'document_required' => "Identity verification documents required",
-    'document_required_message' => "We noticed that you have not provided your identity verification documents yet. Kindly proceed to our portal through the button below to update the documents as soon as possible."
+    'document_required_message' => "We noticed that your personal information is incomplete. Kindly update all required information and submit required identity verification documents at grower's portal for account verification."
     
 ];
