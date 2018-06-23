@@ -20,6 +20,7 @@
 		data() {
 			return {
 				menu:[ 
+					{color:'brown' , icon:' font-icon font-icon-speed' , title: 'dashboard', route: 'dashboard', opened: true},
 					{color:'brown' , icon:' glyphicon glyphicon-user' , title: 'profile', route: 'profile', opened: false},
 					{color:'brown' , icon:' glyphicon glyphicon-barcode' , title: 'purchases', route: 'purchases', opened: false},
 					{color:'brown' , icon:' fa fa-sitemap' , title: 'organization', route: 'organization', opened: false},

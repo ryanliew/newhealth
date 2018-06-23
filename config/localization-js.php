@@ -14,6 +14,7 @@ return [
     'messages' => [
         'auth',
         'confirmation',
+        'dashboard',
         'pagination',
         'passwords',
         'validation',

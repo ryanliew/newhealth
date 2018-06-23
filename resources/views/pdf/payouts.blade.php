@@ -31,8 +31,7 @@
 						<td cellspacing="0" cellpadding="0">{{ $payout->bank_address }}</td>
 						<td cellspacing="0" cellpadding="0">{{ $payout->account_no }}</td>
 						<td cellspacing="0" cellpadding="0">
-							<div class="currency">RM</div>
-							<div class="amount text-right">{{ number_format($payout->amount, 2, ".", ",") }}</div>
+							<div class="amount text-right">RM{{ number_format($payout->amount, 2, ".", ",") }}</div>
 						</td>
 					</tr>
 				@endif
@@ -69,10 +68,7 @@
 						<td cellspacing="0" cellpadding="0">{{ $payout->bank_swift }}</td>
 						<td cellspacing="0" cellpadding="0">{{ $payout->bank_address }}</td>
 						<td cellspacing="0" cellpadding="0">{{ $payout->account_no }}</td>
-						<td cellspacing="0" cellpadding="0">
-							<div class="currency">USD</div>
-							<div class="amount text-right">{{ number_format($payout->amount, 2, ".", ",") }}</div>
-						</td>
+						<td cellspacing="0" cellpadding="0"><div class="amount text-right">USD{{ number_format($payout->amount, 2, ".", ",") }}</div></td>
 					</tr>
 				@endif
 			@endforeach

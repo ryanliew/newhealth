@@ -202,3 +202,28 @@ right connector from last child*/
 .table-edit {
   min-width: 654.5px;
 }
+
+.box-normal-content {
+  padding: 17px 20px;
+}
+
+.box-typical-dashboard .card, .box-typical-dashboard .card-header {
+  border: 0px solid transparent;
+  margin-bottom: 0;
+}
+
+.box-typical-dashboard .card-body .row.mb-3 {
+  margin-bottom: 0 !important;
+}
+
+.box-typical-dashboard .card-body {
+  padding: 0;
+}
+
+.box-typical-dashboard .card-body .vue-pagination-row {
+  padding: 1rem;
+}
+
+.box-typical-dashboard .card-body .table-responsive {
+  max-height: 264px;
+}

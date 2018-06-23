@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 315);
+/******/ 	return __webpack_require__(__webpack_require__.s = 316);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -19094,7 +19094,7 @@ module.exports = Cancel;
 /* 182 */
 /***/ (function(module, exports) {
 
-module.exports = { "en.auth": { "account_no": "Account No.", "account_type": "Account type", "add_personnel": "Add personnel", "address": "Address", "address1": "Address Line 1", "address2": "Address Line 2", "address_line": "Address Line", "agree": "By checking this box and submitting the registration form, I agree to all of the ", "already_have_account": "Already have an account?", "bank_address": "Bank address", "bank_info": "Bank information", "bank_name": "Bank name", "bank_swift": "Bank SORT\/SWIFT code", "beneficiary_address": "Nominee Address", "beneficiary_contact": "Nominee Contact No.", "beneficiary_identification": "Nominee Passport\/NRIC", "beneficiary_info": "Nominee information", "beneficiary_name": "Nominee name", "cancel": "Cancel", "company_address": "Company address", "company_business_registration": "Business registration No.", "company_incorporation_date": "Date of incorporation", "company_incorporation_place": "Incorporation place", "company_info": "Company information", "company_name": "Company\/Entity name", "company_regulatory_name": "Regulatory body", "company_type": "Type of business entity", "contact_personnels": "Contact personnel", "country": "Country", "email": "Email Address", "en_space": " ", "enter_email_and_password_to_reset": "Enter your email and new password", "enter_email_to_reset": "enter your email to reset your password", "facebook_login": "Login with Facebook", "facebook_signup": "Register with Facebook", "failed": "These credentials do not match our records.", "forgot_password": "Forgot your password", "gender": "Gender", "gender_female": "Female", "gender_male": "Male", "gender_null": "N\\A", "general_info": "General information", "google_login": "Login with Google", "google_signup": "Register with Google", "grower": " Grower", "hi": "Hi", "identification": "Passport\/NRIC", "last_step": "One last step.", "login": "Login", "name": "Name", "name_placeholder": "per Passport\/NRIC", "nationality": "Nationality", "new_to_site": "New to our site?", "password": "Password", "personal_info": "Personal information", "personnel_designation": "Designation", "phone": "Contact No.", "postcode": "Postcode", "process_registration": "Your registration is being processed.", "referral_id": "Your referral ID is :code", "referral_info": "Referral information", "referrer": "Referrer ID", "referrer_fill": "Fill in the referrer ID", "referrer_name": "Referrer name: :name", "referrer_not_found": "Referrer not found", "register": "Sign up", "register_message": "as Newleaf grower and get involved in the multi-billion dollar industry today", "register_today": "", "registering_company": "Corporate Application (For corporate application only)", "registration_complete": "Registration complete, you may now close this window", "remember": "Remember me", "remove_personnel": "Remove personnel", "repeat": "Repeat ", "reset_password": "Reset password", "select_package": "Select purchase", "selected_package": "Selected purchase", "send_reset_link": "Send me the reset link", "submit": "Submit", "success": "Please fill in your details below for us to process your registration.", "success_country": "Please also let us know your country as that is required for us to generate your referral code", "success_email": "We will also need your email address so that we can send you important notifications in the future", "success_referral": "If you have a referrer, please let us know by filling in his\/her ID in the form below", "terms_and_conditions": "Terms and conditions", "thank_you": "Thank you.", "throttle": "Too many login attempts. Please try again in :seconds seconds.", "tree": "Tree|Trees", "wechat_signup": "Register with WeChat", "welcome_back": "welcome back" }, "en.company": { "company": "Company", "partnership": "Partnership", "sole": "Sole proprietership", "trust": "Trust" }, "en.confirmation": { "blast_newsletter_grower": "This will blast the news to all growers. Are you sure?", "cancel": "Cancel", "confirm": "Confirm", "confirmation": "Confirm action", "reject_payment": "Payment will be rejected and grower will be notified. Are you sure?", "reject_user": "This will reject the identity verification documents and grower will be notified. Are you sure?", "remind_user_identification": "Grower will be notified. Are you sure?", "verify_payment": "This will verify the payment, distribute commission and adjust related growers rank. Are you sure?", "verify_user": "This will verify the identity verification documents. Are you sure?" }, "en.form": { "submit": "Submit" }, "en.input": { "choose_file": "Click to choose file...", "female": "Female", "file_selected": "Selected file :name", "male": "Male", "nric": "NRIC", "passport": "Passport", "switch_file_mode": "You can toggle between camera\/file mode by pressing at the blue button (only for mobile phone)", "take_from_camera": "Click to open camera..." }, "en.nav": { "admin_purchases": "Purchases", "logout": "Logout", "materials": "Materials", "news": "News", "organization": "Organization", "packages": "Packages", "payouts": "Payouts", "profile": "Profile", "purchases": "Purchases", "settings": "Settings", "transactions": "Transactions", "users": "Users" }, "en.package": { "actions": "Actions", "create_success": "Package created", "make_new_package": "Add new package", "package_details": "Package details", "packages": "Packages", "price": "Price (MYR)", "price_promotion": "Promotion price (MYR)", "price_std": "Price (USD)", "price_std_promotion": "Promotion price (USD)", "tree_count": "No. of trees", "update_success": "Package updated" }, "en.pagination": { "info": "Displaying {from} to {to} of {total} items", "next": "Next &raquo;", "previous": "&laquo; Previous" }, "en.passwords": { "password": "Passwords must be at least six characters and match the confirmation.", "reset": "Your password has been reset!", "sent": "We have e-mailed your password reset link!", "token": "This password reset token is invalid.", "user": "We can't find a user with that e-mail address." }, "en.payment": { "amount": "Amount payable", "invalid_payment_slip": "Payment slip is required", "make_payment": "Make payment", "paid_on": "Paid on", "payment": "Payment", "payment_details": "Payment details", "payment_slip": "Payment Slip", "payment_slip_exceed_size": "Payment slip must not exceed 8MB", "reject": "Reject", "reject_note": "Reject reason", "reject_success": "Payment rejected successfully", "submit_payment": "Submit payment", "success": "Payment has been recorded successfully", "verify": "Verify", "verify_success": "Payment verified successfully" }, "en.post": { "add_new_post": "Create news", "advisor_incentive_program": "Advisor Incentive Program", "content": "Content", "create_success": "News created", "created_at": "Created at", "download": "Download", "edit_post": "Edit news", "last_update": "Last updated", "latest_news": "the latest news and updates from newleaf plantation berhad", "marketing_material": "Marketing materials", "newleaf_bulletin": "Newleaf Bulletin", "newleaf_flyer": "Newleaf Flyer", "newleaf_purchase_form": "Newleaf Purchase Form", "notify_admins_success": "News has been sent to all admins!", "notify_success": "News has been sent to all growers!", "posts": "News", "published_date": "Published date", "title": "Title", "update_success": "News updated", "yield_projection": "Yield Projection" }, "en.purchase": { "base_price": "Recommended Retail Price (RRP) per Tree: RM 8,000", "cancel": "Cancel update", "checkout": "Checkout", "complete": "Complete", "default_user": "Leave empty to buy for yourself", "made_by": "Made by", "make_new_purchase": "Make new purchase", "past_purchases": "Purchase history", "pending": "Pending payment", "pending_verification": "Pending verification", "purchase_date": "Purchase date", "purchase_details": "Purchase details", "purchases": "Purchases", "rejected": "Rejected", "select_package": "Select from the packages below", "selected_packages": "Selected packages", "status": "Status", "success": "Purchase order created successfully", "total": "Total", "total_payable": "Total payable", "update": "Update", "updated": "Purchase updated", "user": "Buyer" }, "en.table": { "actions": "Actions", "back": "Back", "export": "Export", "export_excel": "Export as Excel", "export_pdf": "Export as PDF", "filter_by_date": "Filter by date", "filter_by_month": "Filter by month", "reset": "Reset", "search": "Search" }, "en.transaction": { "amount": "Amount", "amount_myr": "Amount (MYR)", "amount_std": "Amount (USD)", "created_at": "Date", "description": "Description", "one_time_commision": "Referral commission", "paid": "Paid", "payouts": "Payouts", "pending": "Pending", "status": "Payout status", "status_updated": "Payout completed", "std_payouts": "Payouts (USD)", "transactions": "Transaction", "tree_purchase": "Tree purchase by :name", "type": "Type" }, "en.tree": { "self": "Me", "tree": "Organization chart" }, "en.user": { "bank_statement": "Bank Statement", "cancel_change_password": "Cancel change password", "cancel_update": "Cancel update", "change_password": "Change password", "complete": "Complete", "copied-link": "Your referral link has been copied to the clipboard", "copy-referral": "Copy referral link", "documents_rejected": "Documents rejected", "documents_success": "Documents updated", "documents_verified": "Documents verified", "edit_profile": "Edit profile", "execution_ready": "Execution ready", "identity": "Purchaser NRIC (for Malaysian) or Passport (for non-Malaysian)", "instruction_issued": "Instruction issued", "joined_at": "Joined at", "kyc_documents": "Identity Verification Documents", "legal_updated": "User legal status updated successfully", "level": "Member level", "level_1": "Advisor", "level_2": "Senior Advisor", "level_3": "Executive Advisor", "level_4": "Chief Advisor", "nominee_identity": "Nominee NRIC (for Malaysian) or Passport (for non-Malaysian)", "pending": "Pending", "pending_verification": "Pending verification", "profile_update_success": "Profile updated", "referral_code": "Newleaf ID", "reject": "Reject", "rejected": "Verification failed", "reminder_sent": "Reminder sent", "residence_proof": "Proof of Residence", "status": "Status", "tree_count": "No. of trees", "update_document": "Update document", "users": "Users", "verified": "Verified", "verify": "Verify" }, "en.validation": { "accepted": "The :attribute must be accepted.", "active_url": "The :attribute is not a valid URL.", "after": "The :attribute must be a date after :date.", "after_or_equal": "The :attribute must be a date after or equal to :date.", "alpha": "The :attribute may only contain letters.", "alpha_dash": "The :attribute may only contain letters, numbers, and dashes.", "alpha_num": "The :attribute may only contain letters and numbers.", "array": "The :attribute must be an array.", "attributes": { "password": "Password" }, "before": "The :attribute must be a date before :date.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": "The :attribute confirmation does not match.", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "The :attribute must be a valid email address.", "exists": "The selected :attribute is invalid.", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "This must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "This field is required.", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." }, "zh.auth": { "account_no": "\u6237\u53E3\u53F7\u7801", "account_type": "\u6237\u53E3\u7C7B\u578B", "add_personnel": "\u589E\u52A0", "address": "\u5730\u5740", "address1": "\u5730\u5740 1", "address2": "\u5730\u5740 2", "agree": "\u6211\u540C\u610F\u6240\u6709\u7684", "already_have_account": "\u5DF2\u7ECF\u6709\u5E10\u53F7\uFF1F", "bank_address": "\u94F6\u884C\u5730\u5740", "bank_info": "\u94F6\u884C\u8D44\u6599", "bank_name": "\u94F6\u884C\u540D\u79F0", "bank_swift": "\u94F6\u884C SORT/SWIFT \u4EE3\u7801", "beneficiary_address": "\u63D0\u540D\u4EBA\u4F4F\u5740", "beneficiary_contact": "\u63D0\u540D\u4EBA\u7535\u8BDD\u53F7\u7801", "beneficiary_identification": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "beneficiary_info": "\u63D0\u540D\u4EBA\u8D44\u6599", "beneficiary_name": "\u63D0\u540D\u4EBA\u540D\u79F0", "cancel": "\u53D6\u6D88", "company_address": "\u516C\u53F8\u5730\u5740", "company_business_registration": "\u5546\u4E1A\u6CE8\u518C\u53F7\u7801", "company_incorporation_date": "\u5546\u4E1A\u6CE8\u518C\u65E5\u671F", "company_incorporation_place": "\u6CE8\u518C\u5730\u70B9", "company_info": "\u516C\u53F8\u8D44\u6599", "company_name": "\u516C\u53F8\u540D\u79F0", "company_regulatory_name": "\u76D1\u7BA1\u5355\u4F4D\u540D\u79F0", "company_type": "\u5546\u4E1A\u7C7B\u578B", "contact_personnels": "\u516C\u53F8\u8054\u7EDC\u4EBA", "country": "\u56FD\u5BB6", "email": "\u7535\u90AE", "en_space": "", "enter_email_and_password_to_reset": "\u8BF7\u8F93\u5165\u7535\u90AE\u548C\u65B0\u5BC6\u7801", "enter_email_to_reset": "\u8BF7\u8F93\u5165\u60A8\u7684\u7535\u90AE", "facebook_login": "\u8138\u4E66\u767B\u5165", "facebook_signup": "\u4F7F\u7528\u8138\u4E66\u6CE8\u518C", "failed": "\u7535\u90AE/\u5BC6\u7801\u9519\u8BEF", "forgot_password": "\u5FD8\u8BB0\u5BC6\u7801", "gender": "\u6027\u522B", "gender_female": "\u5973", "gender_male": "\u7537", "general_info": "\u4E00\u822C\u8D44\u6599", "google_login": "\u8C37\u6B4C\u767B\u5165", "google_signup": "\u4F7F\u7528\u8C37\u6B4C\u6CE8\u518C", "grower": "\u79CD\u690D\u8005", "hi": "\u4F60\u597D", "identification": "\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "last_step": "\u6700\u540E\u4E00\u6B65", "login": "\u767B\u5165", "name": "\u540D\u5B57", "name_placeholder": "\u586B\u5199\u5B9E\u540D", "nationality": "\u56FD\u7C4D", "new_to_site": "\u8FD8\u672A\u6CE8\u518C\uFF1F", "password": "\u5BC6\u7801", "personal_info": "\u4E2A\u4EBA\u8D44\u6599", "personnel_designation": "\u804C\u4F4D", "phone": "\u7535\u8BDD\u53F7\u7801", "postcode": "\u90AE\u653F\u7F16\u7801", "process_registration": "\u6211\u4EEC\u6B63\u5728\u5904\u7406\u60A8\u7684\u6CE8\u518C\u3002", "referral_id": "\u60A8\u7684ID\u662F :code", "referral_info": "\u63A8\u8350\u8005\u8D44\u6599", "referrer": "\u4ECB\u7ECD\u8005ID", "referrer_fill": "\u8BF7\u8F93\u5165\u63A8\u8350\u8005ID", "referrer_name": "\u63A8\u8350\u8005\u540D\u79F0: :name", "referrer_not_found": "ID\u9519\u8BEF", "register": "\u52A0\u76DF", "register_message": "\u65B0\u53F6\u69B4\u83B2\u79CD\u690D\u8BA1\u5212\uFF01", "register_today": "\u69B4\u83B2\u79CD\u690D\u65B0\u5546\u673A, \u643A\u624B\u65B0\u53F6\u521B\u767E\u4EBF, \u9A6C\u4E0A", "registering_company": "\u673A\u6784\u7533\u8BF7", "registration_complete": "\u5B8C\u6210\uFF0C\u60A8\u5DF2\u53EF\u4EE5\u5173\u95ED\u6B64\u9875\u9762", "remember": "\u4FDD\u6301\u767B\u5165", "remove_personnel": "\u53BB\u9664", "repeat": "\u786E\u5B9A", "reset_password": "\u91CD\u8BBE\u5BC6\u7801", "select_package": "\u9009\u62E9\u914D\u5957", "selected_package": "\u914D\u5957", "send_reset_link": "\u786E\u5B9A\u91CD\u8BBE\u5BC6\u7801", "submit": "\u63D0\u4EA4", "success": "\u6CE8\u518C\u6210\u529F", "success_country": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u6240\u5728\u56FD\u5BB6\uFF0C\u8FD9\u5C06\u5E2E\u52A9\u6211\u4EEC\u5236\u5B9A\u60A8\u7684ID", "success_email": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u7535\u90AE\u4EE5\u4F5C\u4E3A\u65E5\u540E\u7684\u901A\u8BAF\u7BA1\u9053", "success_referral": "\u82E5\u60A8\u6709\u63A8\u8350\u8005\uFF0C\u8BF7\u544A\u8BC9\u6211\u4EEC\u4ED6\u7684ID", "terms_and_conditions": "\u6761\u6B3E\u53CA\u7EC6\u5219", "thank_you": "\u8C22\u8C22", "throttle": "\u767B\u5165\u8FC7\u4E8E\u9891\u7E41\uFF0C\u8BF7\u5728 :seconds \u79D2\u540E\u518D\u8BD5", "tree": "\u68F5\u6811|\u68F5\u6811", "wechat_signup": "\u4F7F\u7528\u5FAE\u4FE1\u6CE8\u518C", "welcome_back": "\u6B22\u8FCE\u56DE\u6765" }, "zh.company": { "company": "\u516C\u53F8", "partnership": "\u5408\u4F19", "sole": "\u72EC\u8D44\u7ECF\u8425\u8005", "trust": "\u4FE1\u6258\u4E1A\u52A1" }, "zh.confirmation": { "blast_newsletter_grower": "\u786E\u5B9A\u53D1\u9001\u6D88\u606F\u7ED9\u6240\u6709\u79CD\u690D\u7740?", "cancel": "\u53D6\u6D88", "confirm": "\u786E\u5B9A", "confirmation": "\u884C\u52A8\u786E\u8BA4", "reject_payment": "\u786E\u5B9A\u9A73\u56DE\u4ED8\u6B3E?", "reject_user": "\u786E\u5B9A\u9A73\u56DE\u79CD\u690D\u8005?", "remind_user_identification": "\u786E\u5B9A\u63D0\u9192\u79CD\u690D\u8005?", "verify_payment": "\u786E\u5B9A\u8BA4\u8BC1\u4ED8\u6B3E?", "verify_user": "\u786E\u5B9A\u8BA4\u8BC1\u79CD\u690D\u8005?" }, "zh.form": { "submit": "\u63D0\u4EA4" }, "zh.input": { "choose_file": "\u6309\u6B64\u9009\u62E9\u6587\u4EF6...", "female": "\u5973", "file_selected": "\u6210\u529F\u9009\u62E9:name", "male": "\u7537", "nric": "\u8EAB\u4EFD\u8BC1", "passport": "\u62A4\u7167", "switch_file_mode": "\u6309\u84DD\u8272\u6309\u94AE\u53EF\u5207\u6362\u6587\u4EF6\u9009\u62E9/\u7167\u76F8\u673A\u6A21\u5F0F(\u4EC5\u4F9B\u667A\u80FD\u7535\u8BDD\u4F7F\u7528)", "take_from_camera": "\u6309\u6B64\u6253\u5F00\u7167\u76F8\u673A..." }, "zh.nav": { "admin_purchases": "\u6240\u6709\u8BA2\u5355", "logout": "\u767B\u51FA", "materials": "\u9500\u552E\u8F85\u52A9", "news": "\u6700\u65B0\u6D88\u606F", "organization": "\u7EC4\u7EC7", "packages": "\u914D\u5957", "payouts": "\u652F\u51FA", "profile": "\u6211\u7684\u8D44\u6599", "purchases": "\u8BA2\u5355", "settings": "\u8BBE\u5B9A", "transactions": "\u4EA4\u6613", "users": "\u7528\u6237" }, "zh.package": { "create_success": "\u5DF2\u589E\u52A0\u914D\u5957", "make_new_package": "\u589E\u52A0\u914D\u5957", "package_details": "\u914D\u5957\u8BE6\u60C5", "packages": "\u914D\u5957", "price": "\u4EF7\u683C (\u9A6C\u5E01)", "price_promotion": "\u4F18\u60E0\u4EF7\u683C (\u9A6C\u5E01)", "price_std": "\u4EF7\u683C (\u7F8E\u91D1)", "price_std_promotion": "\u4F18\u60E0\u4EF7\u683C (\u7F8E\u91D1)", "tree_count": "\u79CD\u690D\u6570\u91CF", "update_success": "\u5DF2\u66F4\u65B0\u914D\u5957\u8BE6\u60C5" }, "zh.pagination": { "info": "\u5171{total}\u4E2A\u6570\u636E\uFF0C\u6B63\u5728\u663E\u793A{from}\u5230{to}" }, "zh.passwords": { "password": "\u5BC6\u7801\u5FC5\u987B\u6709\u6700\u5C116\u4E2A\u5B57\u6BCD", "reset": "\u6210\u529F\u5BC6\u7801\u91CD\u8BBE", "sent": "\u6211\u4EEC\u5DF2\u53D1\u9001\u5BC6\u7801\u91CD\u8BBE\u8FDE\u63A5\u5230\u60A8\u7684\u70B9\u90AE", "token": "\u60A8\u7684\u8BF7\u6C42\u5DF2\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u8BF7\u6C42", "user": "\u6B64\u7535\u90AE\u5730\u5740\u4E0D\u5728\u6211\u4EEC\u7684\u6570\u636E\u5E93\u91CC" }, "zh.payment": { "amount": "\u652F\u4ED8\u6570\u989D", "invalid_payment_slip": "\u8BF7\u9009\u62E9\u4ED8\u6B3E\u5355", "make_payment": "\u652F\u4ED8\u6B3E\u9879", "paid_on": "\u4ED8\u6B3E\u65E5\u671F", "payment": "\u4ED8\u6B3E", "payment_details": "\u4ED8\u6B3E\u8BE6\u60C5", "payment_slip": "\u4ED8\u6B3E\u5355", "payment_slip_exceed_size": "\u4ED8\u6B3E\u5355\u6587\u4EF6\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "reject": "\u9A73\u56DE", "reject_note": "\u5907\u6CE8", "reject_success": "\u6210\u529F\u9A73\u56DE\u4ED8\u6B3E", "submit_payment": "\u63D0\u4EA4\u4ED8\u6B3E\u5355", "success": "\u4ED8\u6B3E\u5355\u5DF2\u88AB\u63A5\u7EB3", "verify": "\u786E\u8BA4\u4ED8\u6B3E", "verify_success": "\u6210\u529F\u786E\u8BA4\u4ED8\u6B3E" }, "zh.post": { "add_new_post": "\u521B\u5EFA\u65B0\u6D88\u606F", "advisor_incentive_program": "\u987E\u95EE\u5956\u52B1\u8BA1\u5212", "content": "\u5185\u5BB9", "created_at": "\u53D1\u5E03\u4E8E", "download": "\u4E0B\u8F7D", "edit_post": "\u66F4\u65B0\u6D88\u606F", "last_update": "\u66F4\u65B0\u4E8E", "latest_news": "\u4E3A\u60A8\u5E26\u6765\u65B0\u53F6\u6700\u65B0\u6D88\u606F\u4E0E\u66F4\u65B0", "marketing_material": "\u65B0\u53F6\u8425\u9500", "newleaf_bulletin": "\u65B0\u53F6\u901A\u544A", "newleaf_flyer": "\u65B0\u53F6\u4F20\u5355", "newleaf_purchase_form": "\u65B0\u53F6\u8D2D\u4E70\u8868\u683C", "notify_admin_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u7BA1\u7406\u5458", "notify_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u79CD\u690D\u8005", "post_created": "\u521B\u5EFA\u6210\u529F", "posts": "\u6700\u65B0\u6D88\u606F", "published_date": "\u53D1\u5E03\u65E5\u671F", "title": "\u6807\u9898", "update_success": "\u66F4\u65B0\u6210\u529F", "yield_projection": "\u4EA7\u91CF\u9884\u6D4B" }, "zh.purchase": { "base_price": "\u5355\u68F5\u6811\u96F6\u552E\u4EF7\uFF1A\u7F8E\u91D1 2,500", "cancel": "\u53D6\u6D88\u66F4\u6539", "checkout": "\u4ED8\u6B3E", "complete": "\u5B8C\u6210", "default_user": "\u81EA\u8EAB\u8D2D\u4E70\u8BF7\u7559\u7A7A", "made_by": "\u5BA2\u6237", "make_new_purchase": "\u8D2D\u4E70\u79CD\u690D\u914D\u5957", "past_purchases": "\u8FC7\u5F80\u8BA2\u5355\u8BB0\u5F55", "pending": "\u672A\u4ED8\u6B3E", "pending_verification": "\u5BA1\u6838\u4E2D", "purchase_date": "\u8D2D\u4E70\u65E5\u671F", "purchase_details": "\u8BA2\u5355\u8BE6\u60C5", "purchases": "\u8BA2\u5355\u8BB0\u5F55", "rejected": "\u9700\u8981\u66F4\u65B0", "select_package": "\u9009\u62E9\u4EE5\u4E0B\u914D\u5957", "selected_packages": "\u5DF2\u9009\u62E9\u914D\u5957", "status": "\u72B6\u6001", "success": "\u8BA2\u5355\u5DF2\u88AB\u63A5\u7EB3", "total": "\u603B\u4EF7\u683C", "total_payable": "\u603B\u4EF7\u683C", "update": "\u66F4\u6539", "updated": "\u66F4\u65B0\u6210\u529F", "user": "\u4E70\u5BB6" }, "zh.table": { "actions": "\u64CD\u4F5C", "back": "\u8FD4\u56DE", "export": "\u6587\u4EF6\u8F93\u51FA", "export_excel": "Excel\u8F93\u51FA", "export_pdf": "PDF\u8F93\u51FA", "filter_by_date": "\u65E5\u671F\u7B5B\u9009", "filter_by_month": "\u6708\u4EFD\u7B5B\u9009", "reset": "\u91CD\u8BBE", "search": "\u67E5\u627E" }, "zh.transaction": { "amount": "\u91D1\u989D", "amount_myr": "\u91D1\u989D (\u9A6C\u5E01)", "amount_std": "\u91D1\u989D (\u7F8E\u91D1)", "created_at": "\u65E5\u671F", "description": "\u9879\u76EE", "one_time_commision": "\u4E00\u6B21\u6027\u4F63\u91D1", "paid": "\u5DF2\u652F\u4ED8", "payouts": "\u652F\u51FA", "pending": "\u672A\u652F\u4ED8", "status": "\u652F\u4ED8\u72B6\u6001", "status_updated": "\u652F\u4ED8\u5B8C\u6210", "std_payouts": "\u652F\u51FA (\u7F8E\u91D1)", "transactions": "\u4EA4\u6613", "tree_purchase": ":name \u7684\u79CD\u690D\u9879\u76EE", "type": "\u79CD\u7C7B" }, "zh.tree": { "self": "\u6211", "tree": "\u7EC4\u7EC7\u56FE" }, "zh.user": { "bank_statement": "\u94F6\u884C\u6D41\u6C34\u8D26\u5355", "cancel_change_password": "\u53D6\u6D88\u66F4\u6362\u5BC6\u7801", "cancel_update": "\u53D6\u6D88\u66F4\u65B0", "change_password": "\u66F4\u6362\u5BC6\u7801", "copied-link": "\u6210\u529F\u590D\u5236\u4ECB\u7ECD\u8FDE\u63A5", "copy-referral": "\u590D\u5236\u8FDE\u63A5", "documents_rejected": "\u6587\u4EF6\u5BA1\u6838\u5931\u8D25", "documents_success": "\u66F4\u65B0\u6210\u529F", "documents_verified": "\u6587\u4EF6\u5BA1\u6838\u6210\u529F", "edit_profile": "\u66F4\u65B0\u8D44\u6599", "identity": "\u8D2D\u4E70\u8005\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "joined_at": "\u52A0\u76DF\u65E5\u671F", "kyc_documents": "\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "legal_updated": "\u79CD\u690D\u8005\u6CD5\u5F8B\u7A0B\u5E8F\u66F4\u65B0\u6210\u529F", "level": "\u7EA7\u522B", "level_1": "\u987E\u95EE", "level_2": "\u9AD8\u7EA7\u987E\u95EE", "level_3": "\u6267\u884C\u987E\u95EE", "level_4": "\u9996\u5E2D\u987E\u95EE", "nominee_identity": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "pending": "\u672A\u5BA1\u6838", "pending_verification": "\u5BA1\u6838\u4E2D", "profile_update_success": "\u8D44\u6599\u5DF2\u66F4\u65B0", "referral_code": "\u65B0\u53F6ID", "reject": "\u9A73\u56DE", "rejected": "\u5BA1\u6838\u5931\u8D25", "reminder_sent": "\u5DF2\u53D1\u9001\u63D0\u793A", "residence_proof": "\u4F4F\u5740\u8BC1\u660E\u6587\u4EF6", "tree_count": "\u79CD\u690D\u6570\u91CF", "update_document": "\u66F4\u65B0\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "users": "\u7528\u6237", "verified": "\u5DF2\u901A\u8FC7\u5BA1\u6838", "verify": "\u8BA4\u8BC1" }, "zh.validation": { "accepted": "\u9700\u8981\u88AB\u63A5\u53D7", "active_url": "\u94FE\u63A5\u9519\u8BEF.", "after": "\u5FC5\u987B\u5728:date\u4E4B\u540E.", "after_or_equal": "\u5FC5\u987B\u662F\u548C:date\u4E00\u6837\u6216\u4E4B\u540E\u7684\u65E5\u671F.", "alpha": "\u53EA\u80FD\u6709\u5B57\u6BCD", "alpha_dash": "\u53EA\u80FD\u6709\u5B57\u6BCD\uFF0C\u53F7\u7801\uFF0C\u4EE5\u53CA\u201C-\u201D\u53F7", "alpha_num": "\u53EA\u80FD\u6709\u5B57\u6BCD\u4EE5\u53CA\u53F7\u7801", "attributes": { "password": "\u5BC6\u7801" }, "before": "\u5FC5\u987B\u5728:date\u4E4B\u524D.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": ":attribute\u4E0D\u76F8\u540C", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "\u8FD9\u5FC5\u987B\u662F\u4E00\u4E2A\u7535\u90AE\u5730\u5740", "exists": "\u9009\u9879\u9519\u8BEF", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "\u53EA\u80FD\u586B\u5199\u6570\u5B57", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "\u9700\u8981\u88AB\u586B\u5199", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." } };
+module.exports = { "en.auth": { "account_no": "Account No.", "account_type": "Account type", "add_personnel": "Add personnel", "address": "Address", "address1": "Address Line 1", "address2": "Address Line 2", "address_line": "Address Line", "agree": "By checking this box and submitting the registration form, I agree to all of the ", "already_have_account": "Already have an account?", "bank_address": "Bank address", "bank_info": "Bank information", "bank_name": "Bank name", "bank_swift": "Bank SORT\/SWIFT code", "beneficiary_address": "Nominee Address", "beneficiary_contact": "Nominee Contact No.", "beneficiary_identification": "Nominee Passport\/NRIC", "beneficiary_info": "Nominee information", "beneficiary_name": "Nominee name", "cancel": "Cancel", "company_address": "Company address", "company_business_registration": "Business registration No.", "company_incorporation_date": "Date of incorporation", "company_incorporation_place": "Incorporation place", "company_info": "Company information", "company_name": "Company\/Entity name", "company_regulatory_name": "Regulatory body", "company_type": "Type of business entity", "contact_personnels": "Contact personnel", "country": "Country", "email": "Email Address", "en_space": " ", "enter_email_and_password_to_reset": "Enter your email and new password", "enter_email_to_reset": "enter your email to reset your password", "facebook_login": "Login with Facebook", "facebook_signup": "Register with Facebook", "failed": "These credentials do not match our records.", "forgot_password": "Forgot your password", "gender": "Gender", "gender_female": "Female", "gender_male": "Male", "gender_null": "N\\A", "general_info": "General information", "google_login": "Login with Google", "google_signup": "Register with Google", "grower": " Grower", "hi": "Hi", "identification": "Passport\/NRIC", "last_step": "One last step.", "login": "Login", "name": "Name", "name_placeholder": "per Passport\/NRIC", "nationality": "Nationality", "new_to_site": "New to our site?", "password": "Password", "personal_info": "Personal information", "personnel_designation": "Designation", "phone": "Contact No.", "postcode": "Postcode", "process_registration": "Your registration is being processed.", "referral_id": "Your referral ID is :code", "referral_info": "Referral information", "referrer": "Referrer ID", "referrer_fill": "Fill in the referrer ID", "referrer_name": "Referrer name: :name", "referrer_not_found": "Referrer not found", "register": "Sign up", "register_message": "as Newleaf grower and get involved in the multi-billion dollar industry today", "register_today": "", "registering_company": "Corporate Application (For corporate application only)", "registration_complete": "Registration complete, you may now close this window", "remember": "Remember me", "remove_personnel": "Remove personnel", "repeat": "Repeat ", "reset_password": "Reset password", "select_package": "Select purchase", "selected_package": "Selected purchase", "send_reset_link": "Send me the reset link", "submit": "Submit", "success": "Please fill in your details below for us to process your registration.", "success_country": "Please also let us know your country as that is required for us to generate your referral code", "success_email": "We will also need your email address so that we can send you important notifications in the future", "success_referral": "If you have a referrer, please let us know by filling in his\/her ID in the form below", "terms_and_conditions": "Terms and conditions", "thank_you": "Thank you.", "throttle": "Too many login attempts. Please try again in :seconds seconds.", "tree": "Tree|Trees", "wechat_signup": "Register with WeChat", "welcome_back": "welcome back" }, "en.company": { "company": "Company", "partnership": "Partnership", "sole": "Sole proprietership", "trust": "Trust" }, "en.confirmation": { "blast_newsletter_grower": "This will blast the news to all growers. Are you sure?", "cancel": "Cancel", "confirm": "Confirm", "confirmation": "Confirm action", "reject_payment": "Payment will be rejected and grower will be notified. Are you sure?", "reject_user": "This will reject the identity verification documents and grower will be notified. Are you sure?", "remind_user_identification": "Grower will be notified. Are you sure?", "verify_payment": "This will verify the payment, distribute commission and adjust related growers rank. Are you sure?", "verify_user": "This will verify the identity verification documents. Are you sure?" }, "en.dashboard": { "commission_earned": "Commission earned", "current_grower_level": "Current grower level", "group_sale": "Group sale", "grower_level": "Grower level", "my_account_status": "My account status", "my_downlines": "My downlines", "next_grower_level": "Next grower level", "trees_sold_global": "Global trees sold" }, "en.form": { "submit": "Submit" }, "en.input": { "choose_file": "Click to choose file...", "female": "Female", "file_selected": "Selected file :name", "male": "Male", "nric": "NRIC", "passport": "Passport", "switch_file_mode": "You can toggle between camera\/file mode by pressing at the blue button (only for mobile phone)", "take_from_camera": "Click to open camera..." }, "en.nav": { "admin_purchases": "Purchases", "logout": "Logout", "materials": "Materials", "news": "News", "organization": "Organization", "packages": "Packages", "payouts": "Payouts", "profile": "Profile", "purchases": "Purchases", "settings": "Settings", "transactions": "Transactions", "users": "Users" }, "en.package": { "actions": "Actions", "create_success": "Package created", "make_new_package": "Add new package", "package_details": "Package details", "packages": "Packages", "price": "Price (MYR)", "price_promotion": "Promotion price (MYR)", "price_std": "Price (USD)", "price_std_promotion": "Promotion price (USD)", "tree_count": "No. of trees", "update_success": "Package updated" }, "en.pagination": { "info": "Displaying {from} to {to} of {total} items", "next": "Next &raquo;", "previous": "&laquo; Previous" }, "en.passwords": { "password": "Passwords must be at least six characters and match the confirmation.", "reset": "Your password has been reset!", "sent": "We have e-mailed your password reset link!", "token": "This password reset token is invalid.", "user": "We can't find a user with that e-mail address." }, "en.payment": { "amount": "Amount payable", "invalid_payment_slip": "Payment slip is required", "make_payment": "Make payment", "paid_on": "Paid on", "payment": "Payment", "payment_details": "Payment details", "payment_slip": "Payment Slip", "payment_slip_exceed_size": "Payment slip must not exceed 8MB", "reject": "Reject", "reject_note": "Reject reason", "reject_success": "Payment rejected successfully", "submit_payment": "Submit payment", "success": "Payment has been recorded successfully", "verify": "Verify", "verify_success": "Payment verified successfully" }, "en.post": { "add_new_post": "Create news", "advisor_incentive_program": "Advisor Incentive Program", "content": "Content", "create_success": "News created", "created_at": "Created at", "download": "Download", "edit_post": "Edit news", "last_update": "Last updated", "latest_news": "the latest news and updates from newleaf plantation berhad", "marketing_material": "Marketing materials", "newleaf_bulletin": "Newleaf Bulletin", "newleaf_flyer": "Newleaf Flyer", "newleaf_purchase_form": "Newleaf Purchase Form", "notify_admins_success": "News has been sent to all admins!", "notify_success": "News has been sent to all growers!", "posts": "News", "published_date": "Published date", "title": "Title", "update_success": "News updated", "yield_projection": "Yield Projection" }, "en.purchase": { "base_price": "Recommended Retail Price (RRP) per Tree: RM 8,000", "cancel": "Cancel update", "checkout": "Checkout", "complete": "Complete", "default_user": "Leave empty to buy for yourself", "made_by": "Made by", "make_new_purchase": "Make new purchase", "past_purchases": "Purchase history", "pending": "Pending payment", "pending_purchases": "Pending purchases", "pending_verification": "Pending verification", "purchase_date": "Purchase date", "purchase_details": "Purchase details", "purchases": "Purchases", "rejected": "Rejected", "select_package": "Select from the packages below", "selected_packages": "Selected packages", "status": "Status", "success": "Purchase order created successfully", "total": "Total", "total_payable": "Total payable", "update": "Update", "updated": "Purchase updated", "user": "Buyer" }, "en.table": { "actions": "Actions", "back": "Back", "export": "Export", "export_excel": "Export as Excel", "export_pdf": "Export as PDF", "filter_by_date": "Filter by date", "filter_by_month": "Filter by month", "reset": "Reset", "search": "Search" }, "en.transaction": { "amount": "Amount", "amount_myr": "Amount (MYR)", "amount_std": "Amount (USD)", "created_at": "Date", "description": "Description", "one_time_commision": "Referral commission", "paid": "Paid", "payouts": "Payouts", "pending": "Pending", "status": "Payout status", "status_updated": "Payout completed", "std_payouts": "Payouts (USD)", "transactions": "Transaction", "tree_purchase": "Tree purchase by :name", "type": "Type" }, "en.tree": { "self": "Me", "tree": "Organization chart" }, "en.user": { "bank_statement": "Bank Statement", "cancel_change_password": "Cancel change password", "cancel_update": "Cancel update", "change_password": "Change password", "complete": "Complete", "copied-link": "Your referral link has been copied to the clipboard", "copy-referral": "Copy referral link", "documents_rejected": "Documents rejected", "documents_success": "Documents updated", "documents_verified": "Documents verified", "edit_profile": "Edit profile", "execution_ready": "Execution ready", "identity": "Purchaser NRIC (for Malaysian) or Passport (for non-Malaysian)", "instruction_issued": "Instruction issued", "instruction_issued_to_lawyer": "Instruction issued to lawyer", "joined_at": "Joined at", "kyc_documents": "Identity Verification Documents", "legal_updated": "User legal status updated successfully", "level": "Member level", "level_1": "Advisor", "level_2": "Senior Advisor", "level_3": "Executive Advisor", "level_4": "Chief Advisor", "level_instruction": "Refer :target direct growers. :left to go.", "level_instruction_2": "Group sales of :target subscriptions. :left to go.", "nominee_identity": "Nominee NRIC (for Malaysian) or Passport (for non-Malaysian)", "pending": "Pending", "pending_verification": "Pending verification", "profile_update_success": "Profile updated", "referral_code": "Newleaf ID", "reject": "Reject", "rejected": "Verification failed", "reminder_sent": "Reminder sent", "residence_proof": "Proof of Residence", "sales_agreement_executed": "Sales agreement executed", "sales_agreement_ready_for_execution": "Sales agreement ready for execution", "status": "Status", "tree_count": "No. of trees", "update_document": "Update document", "users": "Users", "verified": "Verified", "verify": "Verify" }, "en.validation": { "accepted": "The :attribute must be accepted.", "active_url": "The :attribute is not a valid URL.", "after": "The :attribute must be a date after :date.", "after_or_equal": "The :attribute must be a date after or equal to :date.", "alpha": "The :attribute may only contain letters.", "alpha_dash": "The :attribute may only contain letters, numbers, and dashes.", "alpha_num": "The :attribute may only contain letters and numbers.", "array": "The :attribute must be an array.", "attributes": { "password": "Password" }, "before": "The :attribute must be a date before :date.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": "The :attribute confirmation does not match.", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "The :attribute must be a valid email address.", "exists": "The selected :attribute is invalid.", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "This must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "This field is required.", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." }, "zh.auth": { "account_no": "\u6237\u53E3\u53F7\u7801", "account_type": "\u6237\u53E3\u7C7B\u578B", "add_personnel": "\u589E\u52A0", "address": "\u5730\u5740", "address1": "\u5730\u5740 1", "address2": "\u5730\u5740 2", "agree": "\u6211\u540C\u610F\u6240\u6709\u7684", "already_have_account": "\u5DF2\u7ECF\u6709\u5E10\u53F7\uFF1F", "bank_address": "\u94F6\u884C\u5730\u5740", "bank_info": "\u94F6\u884C\u8D44\u6599", "bank_name": "\u94F6\u884C\u540D\u79F0", "bank_swift": "\u94F6\u884C SORT/SWIFT \u4EE3\u7801", "beneficiary_address": "\u63D0\u540D\u4EBA\u4F4F\u5740", "beneficiary_contact": "\u63D0\u540D\u4EBA\u7535\u8BDD\u53F7\u7801", "beneficiary_identification": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "beneficiary_info": "\u63D0\u540D\u4EBA\u8D44\u6599", "beneficiary_name": "\u63D0\u540D\u4EBA\u540D\u79F0", "cancel": "\u53D6\u6D88", "company_address": "\u516C\u53F8\u5730\u5740", "company_business_registration": "\u5546\u4E1A\u6CE8\u518C\u53F7\u7801", "company_incorporation_date": "\u5546\u4E1A\u6CE8\u518C\u65E5\u671F", "company_incorporation_place": "\u6CE8\u518C\u5730\u70B9", "company_info": "\u516C\u53F8\u8D44\u6599", "company_name": "\u516C\u53F8\u540D\u79F0", "company_regulatory_name": "\u76D1\u7BA1\u5355\u4F4D\u540D\u79F0", "company_type": "\u5546\u4E1A\u7C7B\u578B", "contact_personnels": "\u516C\u53F8\u8054\u7EDC\u4EBA", "country": "\u56FD\u5BB6", "email": "\u7535\u90AE", "en_space": "", "enter_email_and_password_to_reset": "\u8BF7\u8F93\u5165\u7535\u90AE\u548C\u65B0\u5BC6\u7801", "enter_email_to_reset": "\u8BF7\u8F93\u5165\u60A8\u7684\u7535\u90AE", "facebook_login": "\u8138\u4E66\u767B\u5165", "facebook_signup": "\u4F7F\u7528\u8138\u4E66\u6CE8\u518C", "failed": "\u7535\u90AE/\u5BC6\u7801\u9519\u8BEF", "forgot_password": "\u5FD8\u8BB0\u5BC6\u7801", "gender": "\u6027\u522B", "gender_female": "\u5973", "gender_male": "\u7537", "general_info": "\u4E00\u822C\u8D44\u6599", "google_login": "\u8C37\u6B4C\u767B\u5165", "google_signup": "\u4F7F\u7528\u8C37\u6B4C\u6CE8\u518C", "grower": "\u79CD\u690D\u8005", "hi": "\u4F60\u597D", "identification": "\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "last_step": "\u6700\u540E\u4E00\u6B65", "login": "\u767B\u5165", "name": "\u540D\u5B57", "name_placeholder": "\u586B\u5199\u5B9E\u540D", "nationality": "\u56FD\u7C4D", "new_to_site": "\u8FD8\u672A\u6CE8\u518C\uFF1F", "password": "\u5BC6\u7801", "personal_info": "\u4E2A\u4EBA\u8D44\u6599", "personnel_designation": "\u804C\u4F4D", "phone": "\u7535\u8BDD\u53F7\u7801", "postcode": "\u90AE\u653F\u7F16\u7801", "process_registration": "\u6211\u4EEC\u6B63\u5728\u5904\u7406\u60A8\u7684\u6CE8\u518C\u3002", "referral_id": "\u60A8\u7684ID\u662F :code", "referral_info": "\u63A8\u8350\u8005\u8D44\u6599", "referrer": "\u4ECB\u7ECD\u8005ID", "referrer_fill": "\u8BF7\u8F93\u5165\u63A8\u8350\u8005ID", "referrer_name": "\u63A8\u8350\u8005\u540D\u79F0: :name", "referrer_not_found": "ID\u9519\u8BEF", "register": "\u52A0\u76DF", "register_message": "\u65B0\u53F6\u69B4\u83B2\u79CD\u690D\u8BA1\u5212\uFF01", "register_today": "\u69B4\u83B2\u79CD\u690D\u65B0\u5546\u673A, \u643A\u624B\u65B0\u53F6\u521B\u767E\u4EBF, \u9A6C\u4E0A", "registering_company": "\u673A\u6784\u7533\u8BF7", "registration_complete": "\u5B8C\u6210\uFF0C\u60A8\u5DF2\u53EF\u4EE5\u5173\u95ED\u6B64\u9875\u9762", "remember": "\u4FDD\u6301\u767B\u5165", "remove_personnel": "\u53BB\u9664", "repeat": "\u786E\u5B9A", "reset_password": "\u91CD\u8BBE\u5BC6\u7801", "select_package": "\u9009\u62E9\u914D\u5957", "selected_package": "\u914D\u5957", "send_reset_link": "\u786E\u5B9A\u91CD\u8BBE\u5BC6\u7801", "submit": "\u63D0\u4EA4", "success": "\u6CE8\u518C\u6210\u529F", "success_country": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u6240\u5728\u56FD\u5BB6\uFF0C\u8FD9\u5C06\u5E2E\u52A9\u6211\u4EEC\u5236\u5B9A\u60A8\u7684ID", "success_email": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u7535\u90AE\u4EE5\u4F5C\u4E3A\u65E5\u540E\u7684\u901A\u8BAF\u7BA1\u9053", "success_referral": "\u82E5\u60A8\u6709\u63A8\u8350\u8005\uFF0C\u8BF7\u544A\u8BC9\u6211\u4EEC\u4ED6\u7684ID", "terms_and_conditions": "\u6761\u6B3E\u53CA\u7EC6\u5219", "thank_you": "\u8C22\u8C22", "throttle": "\u767B\u5165\u8FC7\u4E8E\u9891\u7E41\uFF0C\u8BF7\u5728 :seconds \u79D2\u540E\u518D\u8BD5", "tree": "\u68F5\u6811|\u68F5\u6811", "wechat_signup": "\u4F7F\u7528\u5FAE\u4FE1\u6CE8\u518C", "welcome_back": "\u6B22\u8FCE\u56DE\u6765" }, "zh.company": { "company": "\u516C\u53F8", "partnership": "\u5408\u4F19", "sole": "\u72EC\u8D44\u7ECF\u8425\u8005", "trust": "\u4FE1\u6258\u4E1A\u52A1" }, "zh.confirmation": { "blast_newsletter_grower": "\u786E\u5B9A\u53D1\u9001\u6D88\u606F\u7ED9\u6240\u6709\u79CD\u690D\u7740?", "cancel": "\u53D6\u6D88", "confirm": "\u786E\u5B9A", "confirmation": "\u884C\u52A8\u786E\u8BA4", "reject_payment": "\u786E\u5B9A\u9A73\u56DE\u4ED8\u6B3E?", "reject_user": "\u786E\u5B9A\u9A73\u56DE\u79CD\u690D\u8005?", "remind_user_identification": "\u786E\u5B9A\u63D0\u9192\u79CD\u690D\u8005?", "verify_payment": "\u786E\u5B9A\u8BA4\u8BC1\u4ED8\u6B3E?", "verify_user": "\u786E\u5B9A\u8BA4\u8BC1\u79CD\u690D\u8005?" }, "zh.dashboard": { "commission_earned": "\u8D5A\u5F97\u5956\u91D1", "current_grower_level": "\u5F53\u524D\u8058\u9636", "group_sale": "\u7EC4\u7EC7\u4E1A\u7EE9", "grower_level": "\u8058\u9636", "my_account_status": "\u6211\u7684\u8D26\u53F7", "my_downlines": "\u6211\u7684\u4E0B\u7EBF", "next_grower_level": "\u4E0B\u4E2A\u8058\u9636", "trees_sold_global": "\u603B\u4E1A\u7EE9" }, "zh.form": { "submit": "\u63D0\u4EA4" }, "zh.input": { "choose_file": "\u6309\u6B64\u9009\u62E9\u6587\u4EF6...", "female": "\u5973", "file_selected": "\u6210\u529F\u9009\u62E9:name", "male": "\u7537", "nric": "\u8EAB\u4EFD\u8BC1", "passport": "\u62A4\u7167", "switch_file_mode": "\u6309\u84DD\u8272\u6309\u94AE\u53EF\u5207\u6362\u6587\u4EF6\u9009\u62E9/\u7167\u76F8\u673A\u6A21\u5F0F(\u4EC5\u4F9B\u667A\u80FD\u7535\u8BDD\u4F7F\u7528)", "take_from_camera": "\u6309\u6B64\u6253\u5F00\u7167\u76F8\u673A..." }, "zh.nav": { "admin_purchases": "\u6240\u6709\u8BA2\u5355", "logout": "\u767B\u51FA", "materials": "\u9500\u552E\u8F85\u52A9", "news": "\u6700\u65B0\u6D88\u606F", "organization": "\u7EC4\u7EC7", "packages": "\u914D\u5957", "payouts": "\u652F\u51FA", "profile": "\u6211\u7684\u8D44\u6599", "purchases": "\u8BA2\u5355", "settings": "\u8BBE\u5B9A", "transactions": "\u4EA4\u6613", "users": "\u7528\u6237" }, "zh.package": { "create_success": "\u5DF2\u589E\u52A0\u914D\u5957", "make_new_package": "\u589E\u52A0\u914D\u5957", "package_details": "\u914D\u5957\u8BE6\u60C5", "packages": "\u914D\u5957", "price": "\u4EF7\u683C (\u9A6C\u5E01)", "price_promotion": "\u4F18\u60E0\u4EF7\u683C (\u9A6C\u5E01)", "price_std": "\u4EF7\u683C (\u7F8E\u91D1)", "price_std_promotion": "\u4F18\u60E0\u4EF7\u683C (\u7F8E\u91D1)", "tree_count": "\u79CD\u690D\u6570\u91CF", "update_success": "\u5DF2\u66F4\u65B0\u914D\u5957\u8BE6\u60C5" }, "zh.pagination": { "info": "\u5171{total}\u4E2A\u6570\u636E\uFF0C\u6B63\u5728\u663E\u793A{from}\u5230{to}" }, "zh.passwords": { "password": "\u5BC6\u7801\u5FC5\u987B\u6709\u6700\u5C116\u4E2A\u5B57\u6BCD", "reset": "\u6210\u529F\u5BC6\u7801\u91CD\u8BBE", "sent": "\u6211\u4EEC\u5DF2\u53D1\u9001\u5BC6\u7801\u91CD\u8BBE\u8FDE\u63A5\u5230\u60A8\u7684\u70B9\u90AE", "token": "\u60A8\u7684\u8BF7\u6C42\u5DF2\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u8BF7\u6C42", "user": "\u6B64\u7535\u90AE\u5730\u5740\u4E0D\u5728\u6211\u4EEC\u7684\u6570\u636E\u5E93\u91CC" }, "zh.payment": { "amount": "\u652F\u4ED8\u6570\u989D", "invalid_payment_slip": "\u8BF7\u9009\u62E9\u4ED8\u6B3E\u5355", "make_payment": "\u652F\u4ED8\u6B3E\u9879", "paid_on": "\u4ED8\u6B3E\u65E5\u671F", "payment": "\u4ED8\u6B3E", "payment_details": "\u4ED8\u6B3E\u8BE6\u60C5", "payment_slip": "\u4ED8\u6B3E\u5355", "payment_slip_exceed_size": "\u4ED8\u6B3E\u5355\u6587\u4EF6\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "reject": "\u9A73\u56DE", "reject_note": "\u5907\u6CE8", "reject_success": "\u6210\u529F\u9A73\u56DE\u4ED8\u6B3E", "submit_payment": "\u63D0\u4EA4\u4ED8\u6B3E\u5355", "success": "\u4ED8\u6B3E\u5355\u5DF2\u88AB\u63A5\u7EB3", "verify": "\u786E\u8BA4\u4ED8\u6B3E", "verify_success": "\u6210\u529F\u786E\u8BA4\u4ED8\u6B3E" }, "zh.post": { "add_new_post": "\u521B\u5EFA\u65B0\u6D88\u606F", "advisor_incentive_program": "\u987E\u95EE\u5956\u52B1\u8BA1\u5212", "content": "\u5185\u5BB9", "created_at": "\u53D1\u5E03\u4E8E", "download": "\u4E0B\u8F7D", "edit_post": "\u66F4\u65B0\u6D88\u606F", "last_update": "\u66F4\u65B0\u4E8E", "latest_news": "\u4E3A\u60A8\u5E26\u6765\u65B0\u53F6\u6700\u65B0\u6D88\u606F\u4E0E\u66F4\u65B0", "marketing_material": "\u65B0\u53F6\u8425\u9500", "newleaf_bulletin": "\u65B0\u53F6\u901A\u544A", "newleaf_flyer": "\u65B0\u53F6\u4F20\u5355", "newleaf_purchase_form": "\u65B0\u53F6\u8D2D\u4E70\u8868\u683C", "notify_admin_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u7BA1\u7406\u5458", "notify_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u79CD\u690D\u8005", "post_created": "\u521B\u5EFA\u6210\u529F", "posts": "\u6700\u65B0\u6D88\u606F", "published_date": "\u53D1\u5E03\u65E5\u671F", "title": "\u6807\u9898", "update_success": "\u66F4\u65B0\u6210\u529F", "yield_projection": "\u4EA7\u91CF\u9884\u6D4B" }, "zh.purchase": { "base_price": "\u5355\u68F5\u6811\u96F6\u552E\u4EF7\uFF1A\u7F8E\u91D1 2,500", "cancel": "\u53D6\u6D88\u66F4\u6539", "checkout": "\u4ED8\u6B3E", "complete": "\u5B8C\u6210", "default_user": "\u81EA\u8EAB\u8D2D\u4E70\u8BF7\u7559\u7A7A", "made_by": "\u5BA2\u6237", "make_new_purchase": "\u8D2D\u4E70\u79CD\u690D\u914D\u5957", "past_purchases": "\u8FC7\u5F80\u8BA2\u5355\u8BB0\u5F55", "pending": "\u672A\u4ED8\u6B3E", "pending_verification": "\u5BA1\u6838\u4E2D", "purchase_date": "\u8D2D\u4E70\u65E5\u671F", "purchase_details": "\u8BA2\u5355\u8BE6\u60C5", "purchases": "\u8BA2\u5355\u8BB0\u5F55", "rejected": "\u9700\u8981\u66F4\u65B0", "select_package": "\u9009\u62E9\u4EE5\u4E0B\u914D\u5957", "selected_packages": "\u5DF2\u9009\u62E9\u914D\u5957", "status": "\u72B6\u6001", "success": "\u8BA2\u5355\u5DF2\u88AB\u63A5\u7EB3", "total": "\u603B\u4EF7\u683C", "total_payable": "\u603B\u4EF7\u683C", "update": "\u66F4\u6539", "updated": "\u66F4\u65B0\u6210\u529F", "user": "\u4E70\u5BB6" }, "zh.table": { "actions": "\u64CD\u4F5C", "back": "\u8FD4\u56DE", "export": "\u6587\u4EF6\u8F93\u51FA", "export_excel": "Excel\u8F93\u51FA", "export_pdf": "PDF\u8F93\u51FA", "filter_by_date": "\u65E5\u671F\u7B5B\u9009", "filter_by_month": "\u6708\u4EFD\u7B5B\u9009", "reset": "\u91CD\u8BBE", "search": "\u67E5\u627E" }, "zh.transaction": { "amount": "\u91D1\u989D", "amount_myr": "\u91D1\u989D (\u9A6C\u5E01)", "amount_std": "\u91D1\u989D (\u7F8E\u91D1)", "created_at": "\u65E5\u671F", "description": "\u9879\u76EE", "one_time_commision": "\u4E00\u6B21\u6027\u4F63\u91D1", "paid": "\u5DF2\u652F\u4ED8", "payouts": "\u652F\u51FA", "pending": "\u672A\u652F\u4ED8", "status": "\u652F\u4ED8\u72B6\u6001", "status_updated": "\u652F\u4ED8\u5B8C\u6210", "std_payouts": "\u652F\u51FA (\u7F8E\u91D1)", "transactions": "\u4EA4\u6613", "tree_purchase": ":name \u7684\u79CD\u690D\u9879\u76EE", "type": "\u79CD\u7C7B" }, "zh.tree": { "self": "\u6211", "tree": "\u7EC4\u7EC7\u56FE" }, "zh.user": { "bank_statement": "\u94F6\u884C\u6D41\u6C34\u8D26\u5355", "cancel_change_password": "\u53D6\u6D88\u66F4\u6362\u5BC6\u7801", "cancel_update": "\u53D6\u6D88\u66F4\u65B0", "change_password": "\u66F4\u6362\u5BC6\u7801", "copied-link": "\u6210\u529F\u590D\u5236\u4ECB\u7ECD\u8FDE\u63A5", "copy-referral": "\u590D\u5236\u8FDE\u63A5", "documents_rejected": "\u6587\u4EF6\u5BA1\u6838\u5931\u8D25", "documents_success": "\u66F4\u65B0\u6210\u529F", "documents_verified": "\u6587\u4EF6\u5BA1\u6838\u6210\u529F", "edit_profile": "\u66F4\u65B0\u8D44\u6599", "identity": "\u8D2D\u4E70\u8005\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "instruction_issued_to_lawyer": "\u5F8B\u5E08\u5904\u7406\u4E2D", "joined_at": "\u52A0\u76DF\u65E5\u671F", "kyc_documents": "\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "legal_updated": "\u79CD\u690D\u8005\u6CD5\u5F8B\u7A0B\u5E8F\u66F4\u65B0\u6210\u529F", "level": "\u7EA7\u522B", "level_1": "\u987E\u95EE", "level_2": "\u9AD8\u7EA7\u987E\u95EE", "level_3": "\u6267\u884C\u987E\u95EE", "level_4": "\u9996\u5E2D\u987E\u95EE", "level_instruction": "\u76F4\u63A8 :target \u4F4D\u79CD\u690D\u8005. \u8FD8\u9700 :left \u4F4D", "level_instruction_2": "\u7EC4\u7EC7\u4E1A\u7EE9\u8FBE :target \u68F5\u6811. \u8FD8\u9700 :left \u68F5", "nominee_identity": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "pending": "\u672A\u5BA1\u6838", "pending_verification": "\u5BA1\u6838\u4E2D", "profile_update_success": "\u8D44\u6599\u5DF2\u66F4\u65B0", "referral_code": "\u65B0\u53F6ID", "reject": "\u9A73\u56DE", "rejected": "\u5BA1\u6838\u5931\u8D25", "reminder_sent": "\u5DF2\u53D1\u9001\u63D0\u793A", "residence_proof": "\u4F4F\u5740\u8BC1\u660E\u6587\u4EF6", "sales_agreement_executed": "\u9500\u552E\u534F\u8BAE\u5B8C\u6210", "sales_agreement_ready_for_execution": "\u7B49\u5F85\u7B7E\u7F72\u9500\u552E\u534F\u8BAE", "status": "\u72B6\u6001", "tree_count": "\u79CD\u690D\u6570\u91CF", "update_document": "\u66F4\u65B0\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "users": "\u7528\u6237", "verified": "\u5DF2\u901A\u8FC7\u5BA1\u6838", "verify": "\u8BA4\u8BC1" }, "zh.validation": { "accepted": "\u9700\u8981\u88AB\u63A5\u53D7", "active_url": "\u94FE\u63A5\u9519\u8BEF.", "after": "\u5FC5\u987B\u5728:date\u4E4B\u540E.", "after_or_equal": "\u5FC5\u987B\u662F\u548C:date\u4E00\u6837\u6216\u4E4B\u540E\u7684\u65E5\u671F.", "alpha": "\u53EA\u80FD\u6709\u5B57\u6BCD", "alpha_dash": "\u53EA\u80FD\u6709\u5B57\u6BCD\uFF0C\u53F7\u7801\uFF0C\u4EE5\u53CA\u201C-\u201D\u53F7", "alpha_num": "\u53EA\u80FD\u6709\u5B57\u6BCD\u4EE5\u53CA\u53F7\u7801", "attributes": { "password": "\u5BC6\u7801" }, "before": "\u5FC5\u987B\u5728:date\u4E4B\u524D.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": ":attribute\u4E0D\u76F8\u540C", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "\u8FD9\u5FC5\u987B\u662F\u4E00\u4E2A\u7535\u90AE\u5730\u5740", "exists": "\u9009\u9879\u9519\u8BEF", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "\u53EA\u80FD\u586B\u5199\u6570\u5B57", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "\u9700\u8981\u88AB\u586B\u5199", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." } };
 
 /***/ }),
 /* 183 */
@@ -55022,33 +55022,39 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "row align-items-center" }, [
-          _c(
-            "div",
-            { staticClass: "col-sm" },
-            [
-              _c("vuetable-pagination-info", {
-                ref: "paginationInfo",
-                attrs: {
-                  "info-template": _vm.$options.filters.trans("pagination.info")
-                }
-              })
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "col-sm-auto" },
-            [
-              _c("vuetable-pagination", {
-                ref: "pagination",
-                on: { "vuetable-pagination:change-page": _vm.onChangePage }
-              })
-            ],
-            1
-          )
-        ])
+        _c(
+          "div",
+          { staticClass: "row align-items-center vue-pagination-row" },
+          [
+            _c(
+              "div",
+              { staticClass: "col-sm" },
+              [
+                _c("vuetable-pagination-info", {
+                  ref: "paginationInfo",
+                  attrs: {
+                    "info-template": _vm.$options.filters.trans(
+                      "pagination.info"
+                    )
+                  }
+                })
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-sm-auto" },
+              [
+                _c("vuetable-pagination", {
+                  ref: "pagination",
+                  on: { "vuetable-pagination:change-page": _vm.onChangePage }
+                })
+              ],
+              1
+            )
+          ]
+        )
       ],
       1
     )
@@ -55959,7 +55965,54 @@ if (false) {
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(335)
+var __vue_script__ = __webpack_require__(329)
+/* template */
+var __vue_template__ = __webpack_require__(330)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\ReferralLink.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-724134ae", Component.options)
+  } else {
+    hotAPI.reload("data-v-724134ae", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 312 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(338)
 /* template */
 var __vue_template__ = __webpack_require__(345)
 /* template functional */
@@ -56000,7 +56053,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 312 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -56047,7 +56100,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -58576,7 +58629,7 @@ Popper.Defaults = Defaults;
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(12)))
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -68947,31 +69000,31 @@ return jQuery;
 
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(316);
+__webpack_require__(317);
 module.exports = __webpack_require__(417);
 
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_router__ = __webpack_require__(317);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuejs_noty__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_router__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuejs_noty__ = __webpack_require__(319);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuejs_noty___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vuejs_noty__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_events__ = __webpack_require__(319);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_events__ = __webpack_require__(320);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_events___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue_events__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layout_App_vue__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layout_App_vue__ = __webpack_require__(321);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layout_App_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__layout_App_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_Dashboard_vue__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_Dashboard_vue__ = __webpack_require__(327);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_Dashboard_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__pages_Dashboard_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_LoginPage_vue__ = __webpack_require__(329);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_LoginPage_vue__ = __webpack_require__(332);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_LoginPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__pages_LoginPage_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_ProfilePage_vue__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_ProfilePage_vue__ = __webpack_require__(312);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_ProfilePage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__pages_ProfilePage_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_PurchasePage_vue__ = __webpack_require__(346);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_PurchasePage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__pages_PurchasePage_vue__);
@@ -68981,7 +69034,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_UserPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__pages_UserPage_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_GenoPage_vue__ = __webpack_require__(364);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_GenoPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__pages_GenoPage_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_TransactionPage_vue__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_TransactionPage_vue__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_TransactionPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__pages_TransactionPage_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_PayoutReportPage_vue__ = __webpack_require__(372);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_PayoutReportPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__pages_PayoutReportPage_vue__);
@@ -69123,7 +69176,7 @@ window.app = new Vue({
 });
 
 /***/ }),
-/* 317 */
+/* 318 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71753,7 +71806,7 @@ if (inBrowser && window.Vue) {
 
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 !function(t,e){ true?module.exports=e():"function"==typeof define&&define.amd?define([],e):"object"==typeof exports?exports["vuejs-noty"]=e():t["vuejs-noty"]=e()}(this,function(){return function(t){function e(o){if(n[o])return n[o].exports;var i=n[o]={i:o,l:!1,exports:{}};return t[o].call(i.exports,i,i.exports,e),i.l=!0,i.exports}var n={};return e.m=t,e.c=n,e.i=function(t){return t},e.d=function(t,n,o){e.o(t,n)||Object.defineProperty(t,n,{configurable:!1,enumerable:!0,get:o})},e.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(n,"a",n),n},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="",e(e.s=12)}([function(t,e,n){t.exports=!n(1)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,e){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,e){var n=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=n)},function(t,e){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,e){var n=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=n)},function(t,e){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,e,n){var o=n(17);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==o(t)?t.split(""):Object(t)}},function(t,e){var n=Math.ceil,o=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?o:n)(t)}},function(t,e,n){var o=n(6),i=n(5);t.exports=function(t){return o(i(t))}},function(t,e,n){t.exports={default:n(13),__esModule:!0}},function(t,e){},function(t,e,n){!function(e,n){t.exports=n()}(0,function(){return function(t){function e(o){if(n[o])return n[o].exports;var i=n[o]={i:o,l:!1,exports:{}};return t[o].call(i.exports,i,i.exports,e),i.l=!0,i.exports}var n={};return e.m=t,e.c=n,e.i=function(t){return t},e.d=function(t,n,o){e.o(t,n)||Object.defineProperty(t,n,{configurable:!1,enumerable:!0,get:o})},e.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(n,"a",n),n},e.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},e.p="",e(e.s=6)}([function(t,e,n){"use strict";function o(t,e,n){var o=void 0;if(!n){for(o in e)if(e.hasOwnProperty(o)&&e[o]===t)return!0}else for(o in e)if(e.hasOwnProperty(o)&&e[o]===t)return!0;return!1}function i(t){t=t||window.event,void 0!==t.stopPropagation?t.stopPropagation():t.cancelBubble=!0}function r(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",e="noty_"+t+"_";return e+="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(t){var e=16*Math.random()|0;return("x"===t?e:3&e|8).toString(16)})}function s(t){var e=t.offsetHeight,n=window.getComputedStyle(t);return e+=parseInt(n.marginTop)+parseInt(n.marginBottom)}function u(t,e,n){var o=arguments.length>3&&void 0!==arguments[3]&&arguments[3];e=e.split(" ");for(var i=0;i<e.length;i++)document.addEventListener?t.addEventListener(e[i],n,o):document.attachEvent&&t.attachEvent("on"+e[i],n)}function a(t,e){return("string"==typeof t?t:d(t)).indexOf(" "+e+" ")>=0}function c(t,e){var n=d(t),o=n+e;a(n,e)||(t.className=o.substring(1))}function l(t,e){var n=d(t),o=void 0;a(t,e)&&(o=n.replace(" "+e+" "," "),t.className=o.substring(1,o.length-1))}function f(t){t.parentNode&&t.parentNode.removeChild(t)}function d(t){return(" "+(t&&t.className||"")+" ").replace(/\s+/gi," ")}function h(){function t(){b.PageHidden=document[s],o()}function e(){b.PageHidden=!0,o()}function n(){b.PageHidden=!1,o()}function o(){b.PageHidden?i():r()}function i(){setTimeout(function(){Object.keys(b.Store).forEach(function(t){b.Store.hasOwnProperty(t)&&b.Store[t].options.visibilityControl&&b.Store[t].stop()})},100)}function r(){setTimeout(function(){Object.keys(b.Store).forEach(function(t){b.Store.hasOwnProperty(t)&&b.Store[t].options.visibilityControl&&b.Store[t].resume()}),b.queueRenderAll()},100)}var s=void 0,a=void 0;void 0!==document.hidden?(s="hidden",a="visibilitychange"):void 0!==document.msHidden?(s="msHidden",a="msvisibilitychange"):void 0!==document.webkitHidden&&(s="webkitHidden",a="webkitvisibilitychange"),u(document,a,t),u(window,"blur",e),u(window,"focus",n)}function p(t){if(t.hasSound){var e=document.createElement("audio");t.options.sounds.sources.forEach(function(t){var n=document.createElement("source");n.src=t,n.type="audio/"+v(t),e.appendChild(n)}),t.barDom?t.barDom.appendChild(e):document.querySelector("body").appendChild(e),e.volume=t.options.sounds.volume,t.soundPlayed||(e.play(),t.soundPlayed=!0),e.onended=function(){f(e)}}}function v(t){return t.match(/\.([^.]+)$/)[1]}Object.defineProperty(e,"__esModule",{value:!0}),e.css=e.deepExtend=e.animationEndEvents=void 0;var m="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t};e.inArray=o,e.stopPropagation=i,e.generateID=r,e.outerHeight=s,e.addListener=u,e.hasClass=a,e.addClass=c,e.removeClass=l,e.remove=f,e.classList=d,e.visibilityChangeFlow=h,e.createAudioElements=p;var y=n(1),b=function(t){if(t&&t.__esModule)return t;var e={};if(null!=t)for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e.default=t,e}(y);e.animationEndEvents="webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",e.deepExtend=function t(e){e=e||{};for(var n=1;n<arguments.length;n++){var o=arguments[n];if(o)for(var i in o)o.hasOwnProperty(i)&&(Array.isArray(o[i])?e[i]=o[i]:"object"===m(o[i])&&null!==o[i]?e[i]=t(e[i],o[i]):e[i]=o[i])}return e},e.css=function(){function t(t){return t.replace(/^-ms-/,"ms-").replace(/-([\da-z])/gi,function(t,e){return e.toUpperCase()})}function e(t){var e=document.body.style;if(t in e)return t;for(var n=i.length,o=t.charAt(0).toUpperCase()+t.slice(1),r=void 0;n--;)if((r=i[n]+o)in e)return r;return t}function n(n){return n=t(n),r[n]||(r[n]=e(n))}function o(t,e,o){e=n(e),t.style[e]=o}var i=["Webkit","O","Moz","ms"],r={};return function(t,e){var n=arguments,i=void 0,r=void 0;if(2===n.length)for(i in e)e.hasOwnProperty(i)&&void 0!==(r=e[i])&&e.hasOwnProperty(i)&&o(t,i,r);else o(t,n[1],n[2])}}()},function(t,e,n){"use strict";function o(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"global",e=0,n=E;return P.hasOwnProperty(t)&&(n=P[t].maxVisible,Object.keys(D).forEach(function(n){D[n].options.queue!==t||D[n].closed||e++})),{current:e,maxVisible:n}}function i(t){P.hasOwnProperty(t.options.queue)||(P[t.options.queue]={maxVisible:E,queue:[]}),P[t.options.queue].queue.push(t)}function r(t){if(P.hasOwnProperty(t.options.queue)){var e=[];Object.keys(P[t.options.queue].queue).forEach(function(n){P[t.options.queue].queue[n].id!==t.id&&e.push(P[t.options.queue].queue[n])}),P[t.options.queue].queue=e}}function s(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"global";if(P.hasOwnProperty(t)){var e=P[t].queue.shift();e&&e.show()}}function u(){Object.keys(P).forEach(function(t){s(t)})}function a(t){var e=x.generateID("ghost"),n=document.createElement("div");n.setAttribute("id",e),x.css(n,{height:x.outerHeight(t.barDom)+"px"}),t.barDom.insertAdjacentHTML("afterend",n.outerHTML),x.remove(t.barDom),n=document.getElementById(e),x.addClass(n,"noty_fix_effects_height"),x.addListener(n,x.animationEndEvents,function(){x.remove(n)})}function c(t){v(t);var e='<div class="noty_body">'+t.options.text+"</div>"+f(t)+'<div class="noty_progressbar"></div>';t.barDom=document.createElement("div"),t.barDom.setAttribute("id",t.id),x.addClass(t.barDom,"noty_bar noty_type__"+t.options.type+" noty_theme__"+t.options.theme),t.barDom.innerHTML=e,b(t,"onTemplate")}function l(t){return!(!t.options.buttons||!Object.keys(t.options.buttons).length)}function f(t){if(l(t)){var e=document.createElement("div");return x.addClass(e,"noty_buttons"),Object.keys(t.options.buttons).forEach(function(n){e.appendChild(t.options.buttons[n].dom)}),t.options.buttons.forEach(function(t){e.appendChild(t.dom)}),e.outerHTML}return""}function d(t){t.options.modal&&(0===S&&p(),e.DocModalCount=S+=1)}function h(t){if(t.options.modal&&S>0&&(e.DocModalCount=S-=1,S<=0)){var n=document.querySelector(".noty_modal");n&&(x.removeClass(n,"noty_modal_open"),x.addClass(n,"noty_modal_close"),x.addListener(n,x.animationEndEvents,function(){x.remove(n)}))}}function p(){var t=document.querySelector("body"),e=document.createElement("div");x.addClass(e,"noty_modal"),t.insertBefore(e,t.firstChild),x.addClass(e,"noty_modal_open"),x.addListener(e,x.animationEndEvents,function(){x.removeClass(e,"noty_modal_open")})}function v(t){if(t.options.container)return void(t.layoutDom=document.querySelector(t.options.container));var e="noty_layout__"+t.options.layout;t.layoutDom=document.querySelector("div#"+e),t.layoutDom||(t.layoutDom=document.createElement("div"),t.layoutDom.setAttribute("id",e),x.addClass(t.layoutDom,"noty_layout"),document.querySelector("body").appendChild(t.layoutDom))}function m(t){t.options.timeout&&(t.options.progressBar&&t.progressDom&&x.css(t.progressDom,{transition:"width "+t.options.timeout+"ms linear",width:"0%"}),clearTimeout(t.closeTimer),t.closeTimer=setTimeout(function(){t.close()},t.options.timeout))}function y(t){t.options.timeout&&t.closeTimer&&(clearTimeout(t.closeTimer),t.closeTimer=-1,t.options.progressBar&&t.progressDom&&x.css(t.progressDom,{transition:"width 0ms linear",width:"100%"}))}function b(t,e){t.listeners.hasOwnProperty(e)&&t.listeners[e].forEach(function(e){"function"==typeof e&&e.apply(t)})}function w(t){b(t,"afterShow"),m(t),x.addListener(t.barDom,"mouseenter",function(){y(t)}),x.addListener(t.barDom,"mouseleave",function(){m(t)})}function g(t){delete D[t.id],t.closing=!1,b(t,"afterClose"),x.remove(t.barDom),0!==t.layoutDom.querySelectorAll(".noty_bar").length||t.options.container||x.remove(t.layoutDom),(x.inArray("docVisible",t.options.titleCount.conditions)||x.inArray("docHidden",t.options.titleCount.conditions))&&C.decrement(),s(t.options.queue)}Object.defineProperty(e,"__esModule",{value:!0}),e.Defaults=e.Store=e.Queues=e.DefaultMaxVisible=e.docTitle=e.DocModalCount=e.PageHidden=void 0,e.getQueueCounts=o,e.addToQueue=i,e.removeFromQueue=r,e.queueRender=s,e.queueRenderAll=u,e.ghostFix=a,e.build=c,e.hasButtons=l,e.handleModal=d,e.handleModalClose=h,e.queueClose=m,e.dequeueClose=y,e.fire=b,e.openFlow=w,e.closeFlow=g;var _=n(0),x=function(t){if(t&&t.__esModule)return t;var e={};if(null!=t)for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e.default=t,e}(_),S=(e.PageHidden=!1,e.DocModalCount=0),k={originalTitle:null,count:0,changed:!1,timer:-1},C=e.docTitle={increment:function(){k.count++,C._update()},decrement:function(){if(--k.count<=0)return void C._clear();C._update()},_update:function(){var t=document.title;k.changed?document.title="("+k.count+") "+k.originalTitle:(k.originalTitle=t,document.title="("+k.count+") "+t,k.changed=!0)},_clear:function(){k.changed&&(k.count=0,document.title=k.originalTitle,k.changed=!1)}},E=e.DefaultMaxVisible=5,P=e.Queues={global:{maxVisible:E,queue:[]}},D=e.Store={};e.Defaults={type:"alert",layout:"topRight",theme:"mint",text:"",timeout:!1,progressBar:!0,closeWith:["click"],animation:{open:"noty_effects_open",close:"noty_effects_close"},id:!1,force:!1,killer:!1,queue:"global",container:!1,buttons:[],callbacks:{beforeShow:null,onShow:null,afterShow:null,onClose:null,afterClose:null,onHover:null,onTemplate:null},sounds:{sources:[],volume:1,conditions:[]},titleCount:{conditions:[]},modal:!1,visibilityControl:!0}},function(t,e,n){"use strict";function o(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(e,"__esModule",{value:!0}),e.NotyButton=void 0;var i=n(0),r=function(t){if(t&&t.__esModule)return t;var e={};if(null!=t)for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e.default=t,e}(i);e.NotyButton=function t(e,n,i){var s=this,u=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};return o(this,t),this.dom=document.createElement("button"),this.dom.innerHTML=e,this.id=u.id=u.id||r.generateID("button"),this.cb=i,Object.keys(u).forEach(function(t){s.dom.setAttribute(t,u[t])}),r.addClass(this.dom,n||"noty_btn"),this}},function(t,e,n){"use strict";function o(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(e,"__esModule",{value:!0});var i=function(){function t(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}return function(e,n,o){return n&&t(e.prototype,n),o&&t(e,o),e}}();e.Push=function(){function t(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"/service-worker.js";return o(this,t),this.subData={},this.workerPath=e,this.listeners={onPermissionGranted:[],onPermissionDenied:[],onSubscriptionSuccess:[],onSubscriptionCancel:[],onWorkerError:[],onWorkerSuccess:[],onWorkerNotSupported:[]},this}return i(t,[{key:"on",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:function(){};return"function"==typeof e&&this.listeners.hasOwnProperty(t)&&this.listeners[t].push(e),this}},{key:"fire",value:function(t){var e=this,n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[];this.listeners.hasOwnProperty(t)&&this.listeners[t].forEach(function(t){"function"==typeof t&&t.apply(e,n)})}},{key:"create",value:function(){console.log("NOT IMPLEMENTED YET")}},{key:"isSupported",value:function(){var t=!1;try{t=window.Notification||window.webkitNotifications||navigator.mozNotification||window.external&&void 0!==window.external.msIsSiteMode()}catch(t){}return t}},{key:"getPermissionStatus",value:function(){var t="default";if(window.Notification&&window.Notification.permissionLevel)t=window.Notification.permissionLevel;else if(window.webkitNotifications&&window.webkitNotifications.checkPermission)switch(window.webkitNotifications.checkPermission()){case 1:t="default";break;case 0:t="granted";break;default:t="denied"}else window.Notification&&window.Notification.permission?t=window.Notification.permission:navigator.mozNotification?t="granted":window.external&&void 0!==window.external.msIsSiteMode()&&(t=window.external.msIsSiteMode()?"granted":"default");return t.toString().toLowerCase()}},{key:"getEndpoint",value:function(t){var e=t.endpoint,n=t.subscriptionId;return n&&-1===e.indexOf(n)&&(e+="/"+n),e}},{key:"isSWRegistered",value:function(){try{return"activated"===navigator.serviceWorker.controller.state}catch(t){return!1}}},{key:"unregisterWorker",value:function(){var t=this;"serviceWorker"in navigator&&navigator.serviceWorker.getRegistrations().then(function(e){var n=!0,o=!1,i=void 0;try{for(var r,s=e[Symbol.iterator]();!(n=(r=s.next()).done);n=!0){r.value.unregister(),t.fire("onSubscriptionCancel")}}catch(t){o=!0,i=t}finally{try{!n&&s.return&&s.return()}finally{if(o)throw i}}})}},{key:"requestSubscription",value:function(){var t=this,e=!(arguments.length>0&&void 0!==arguments[0])||arguments[0],n=this,o=this.getPermissionStatus(),i=function(o){"granted"===o?(t.fire("onPermissionGranted"),"serviceWorker"in navigator?navigator.serviceWorker.register(t.workerPath).then(function(){navigator.serviceWorker.ready.then(function(t){n.fire("onWorkerSuccess"),t.pushManager.subscribe({userVisibleOnly:e}).then(function(t){var e=t.getKey("p256dh"),o=t.getKey("auth");n.subData={endpoint:n.getEndpoint(t),p256dh:e?window.btoa(String.fromCharCode.apply(null,new Uint8Array(e))):null,auth:o?window.btoa(String.fromCharCode.apply(null,new Uint8Array(o))):null},n.fire("onSubscriptionSuccess",[n.subData])}).catch(function(t){n.fire("onWorkerError",[t])})})}):n.fire("onWorkerNotSupported")):"denied"===o&&(t.fire("onPermissionDenied"),t.unregisterWorker())};"default"===o?window.Notification&&window.Notification.requestPermission?window.Notification.requestPermission(i):window.webkitNotifications&&window.webkitNotifications.checkPermission&&window.webkitNotifications.requestPermission(i):i(o)}}]),t}()},function(t,e,n){(function(e,o){/*!
@@ -71766,7 +71819,7 @@ if (inBrowser && window.Vue) {
 !function(e,n){t.exports=n()}(0,function(){"use strict";function t(t){return"function"==typeof t||"object"==typeof t&&null!==t}function i(t){return"function"==typeof t}function r(t){z=t}function s(t){U=t}function u(){return void 0!==R?function(){R(c)}:a()}function a(){var t=setTimeout;return function(){return t(c,1)}}function c(){for(var t=0;t<Q;t+=2){(0,X[t])(X[t+1]),X[t]=void 0,X[t+1]=void 0}Q=0}function l(t,e){var n=arguments,o=this,i=new this.constructor(d);void 0===i[tt]&&j(i);var r=o._state;return r?function(){var t=n[r-1];U(function(){return D(r,i,t,o._result)})}():k(o,i,t,e),i}function f(t){var e=this;if(t&&"object"==typeof t&&t.constructor===e)return t;var n=new e(d);return g(n,t),n}function d(){}function h(){return new TypeError("You cannot resolve a promise with itself")}function p(){return new TypeError("A promises callback cannot return that same promise.")}function v(t){try{return t.then}catch(t){return it.error=t,it}}function m(t,e,n,o){try{t.call(e,n,o)}catch(t){return t}}function y(t,e,n){U(function(t){var o=!1,i=m(n,e,function(n){o||(o=!0,e!==n?g(t,n):x(t,n))},function(e){o||(o=!0,S(t,e))},"Settle: "+(t._label||" unknown promise"));!o&&i&&(o=!0,S(t,i))},t)}function b(t,e){e._state===nt?x(t,e._result):e._state===ot?S(t,e._result):k(e,void 0,function(e){return g(t,e)},function(e){return S(t,e)})}function w(t,e,n){e.constructor===t.constructor&&n===l&&e.constructor.resolve===f?b(t,e):n===it?(S(t,it.error),it.error=null):void 0===n?x(t,e):i(n)?y(t,e,n):x(t,e)}function g(e,n){e===n?S(e,h()):t(n)?w(e,n,v(n)):x(e,n)}function _(t){t._onerror&&t._onerror(t._result),C(t)}function x(t,e){t._state===et&&(t._result=e,t._state=nt,0!==t._subscribers.length&&U(C,t))}function S(t,e){t._state===et&&(t._state=ot,t._result=e,U(_,t))}function k(t,e,n,o){var i=t._subscribers,r=i.length;t._onerror=null,i[r]=e,i[r+nt]=n,i[r+ot]=o,0===r&&t._state&&U(C,t)}function C(t){var e=t._subscribers,n=t._state;if(0!==e.length){for(var o=void 0,i=void 0,r=t._result,s=0;s<e.length;s+=3)o=e[s],i=e[s+n],o?D(n,o,i,r):i(r);t._subscribers.length=0}}function E(){this.error=null}function P(t,e){try{return t(e)}catch(t){return rt.error=t,rt}}function D(t,e,n,o){var r=i(n),s=void 0,u=void 0,a=void 0,c=void 0;if(r){if(s=P(n,o),s===rt?(c=!0,u=s.error,s.error=null):a=!0,e===s)return void S(e,p())}else s=o,a=!0;e._state!==et||(r&&a?g(e,s):c?S(e,u):t===nt?x(e,s):t===ot&&S(e,s))}function O(t,e){try{e(function(e){g(t,e)},function(e){S(t,e)})}catch(e){S(t,e)}}function T(){return st++}function j(t){t[tt]=st++,t._state=void 0,t._result=void 0,t._subscribers=[]}function M(t,e){this._instanceConstructor=t,this.promise=new t(d),this.promise[tt]||j(this.promise),V(e)?(this._input=e,this.length=e.length,this._remaining=e.length,this._result=new Array(this.length),0===this.length?x(this.promise,this._result):(this.length=this.length||0,this._enumerate(),0===this._remaining&&x(this.promise,this._result))):S(this.promise,A())}function A(){return new Error("Array Methods must be provided an Array")}function q(t){return new M(this,t).promise}function N(t){var e=this;return new e(V(t)?function(n,o){for(var i=t.length,r=0;r<i;r++)e.resolve(t[r]).then(n,o)}:function(t,e){return e(new TypeError("You must pass an array to race."))})}function H(t){var e=this,n=new e(d);return S(n,t),n}function L(){throw new TypeError("You must pass a resolver function as the first argument to the promise constructor")}function W(){throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.")}function F(t){this[tt]=T(),this._result=this._state=void 0,this._subscribers=[],d!==t&&("function"!=typeof t&&L(),this instanceof F?O(this,t):W())}function B(){var t=void 0;if(void 0!==o)t=o;else if("undefined"!=typeof self)t=self;else try{t=Function("return this")()}catch(t){throw new Error("polyfill failed because global object is unavailable in this environment")}var e=t.Promise;if(e){var n=null;try{n=Object.prototype.toString.call(e.resolve())}catch(t){}if("[object Promise]"===n&&!e.cast)return}t.Promise=F}var I=void 0;I=Array.isArray?Array.isArray:function(t){return"[object Array]"===Object.prototype.toString.call(t)};var V=I,Q=0,R=void 0,z=void 0,U=function(t,e){X[Q]=t,X[Q+1]=e,2===(Q+=2)&&(z?z(c):Z())},G="undefined"!=typeof window?window:void 0,Y=G||{},K=Y.MutationObserver||Y.WebKitMutationObserver,$="undefined"==typeof self&&void 0!==e&&"[object process]"==={}.toString.call(e),J="undefined"!=typeof Uint8ClampedArray&&"undefined"!=typeof importScripts&&"undefined"!=typeof MessageChannel,X=new Array(1e3),Z=void 0;Z=$?function(){return function(){return e.nextTick(c)}}():K?function(){var t=0,e=new K(c),n=document.createTextNode("");return e.observe(n,{characterData:!0}),function(){n.data=t=++t%2}}():J?function(){var t=new MessageChannel;return t.port1.onmessage=c,function(){return t.port2.postMessage(0)}}():void 0===G?function(){try{var t=n(9);return R=t.runOnLoop||t.runOnContext,u()}catch(t){return a()}}():a();var tt=Math.random().toString(36).substring(16),et=void 0,nt=1,ot=2,it=new E,rt=new E,st=0;return M.prototype._enumerate=function(){for(var t=this.length,e=this._input,n=0;this._state===et&&n<t;n++)this._eachEntry(e[n],n)},M.prototype._eachEntry=function(t,e){var n=this._instanceConstructor,o=n.resolve;if(o===f){var i=v(t);if(i===l&&t._state!==et)this._settledAt(t._state,e,t._result);else if("function"!=typeof i)this._remaining--,this._result[e]=t;else if(n===F){var r=new n(d);w(r,t,i),this._willSettleAt(r,e)}else this._willSettleAt(new n(function(e){return e(t)}),e)}else this._willSettleAt(o(t),e)},M.prototype._settledAt=function(t,e,n){var o=this.promise;o._state===et&&(this._remaining--,t===ot?S(o,n):this._result[e]=n),0===this._remaining&&x(o,this._result)},M.prototype._willSettleAt=function(t,e){var n=this;k(t,void 0,function(t){return n._settledAt(nt,e,t)},function(t){return n._settledAt(ot,e,t)})},F.all=q,F.race=N,F.resolve=f,F.reject=H,F._setScheduler=r,F._setAsap=s,F._asap=U,F.prototype={constructor:F,then:l,catch:function(t){return this.then(null,t)}},F.polyfill=B,F.Promise=F,F})}).call(e,n(7),n(8))},function(t,e){},function(t,e,n){"use strict";function o(t){if(t&&t.__esModule)return t;var e={};if(null!=t)for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e.default=t,e}function i(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(e,"__esModule",{value:!0});var r=function(){function t(t,e){for(var n=0;n<e.length;n++){var o=e[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(t,o.key,o)}}return function(e,n,o){return n&&t(e.prototype,n),o&&t(e,o),e}}();n(5);var s=n(4),u=function(t){return t&&t.__esModule?t:{default:t}}(s),a=n(0),c=o(a),l=n(1),f=o(l),d=n(2),h=n(3),p=function(){function t(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return i(this,t),this.options=c.deepExtend({},f.Defaults,e),this.id=this.options.id||c.generateID("bar"),this.closeTimer=-1,this.barDom=null,this.layoutDom=null,this.progressDom=null,this.showing=!1,this.shown=!1,this.closed=!1,this.closing=!1,this.killable=this.options.timeout||this.options.closeWith.length>0,this.hasSound=this.options.sounds.sources.length>0,this.soundPlayed=!1,this.listeners={beforeShow:[],onShow:[],afterShow:[],onClose:[],afterClose:[],onHover:[],onTemplate:[]},this.promises={show:null,close:null},this.on("beforeShow",this.options.callbacks.beforeShow),this.on("onShow",this.options.callbacks.onShow),this.on("afterShow",this.options.callbacks.afterShow),this.on("onClose",this.options.callbacks.onClose),this.on("afterClose",this.options.callbacks.afterClose),this.on("onHover",this.options.callbacks.onHover),this.on("onTemplate",this.options.callbacks.onTemplate),this}return r(t,[{key:"on",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:function(){};return"function"==typeof e&&this.listeners.hasOwnProperty(t)&&this.listeners[t].push(e),this}},{key:"show",value:function(){var e=this;if(!0!==this.options.killer||f.PageHidden)if("string"!=typeof this.options.killer||f.PageHidden){var n=f.getQueueCounts(this.options.queue);if(n.current>=n.maxVisible||f.PageHidden)return f.addToQueue(this),f.PageHidden&&this.hasSound&&c.inArray("docHidden",this.options.sounds.conditions)&&c.createAudioElements(this),f.PageHidden&&c.inArray("docHidden",this.options.titleCount.conditions)&&f.docTitle.increment(),this}else t.closeAll(this.options.killer);else t.closeAll();if(f.Store[this.id]=this,f.fire(this,"beforeShow"),this.showing=!0,this.closing)return this.showing=!1,this;if(f.build(this),f.handleModal(this),this.options.force?this.layoutDom.insertBefore(this.barDom,this.layoutDom.firstChild):this.layoutDom.appendChild(this.barDom),this.hasSound&&!this.soundPlayed&&c.inArray("docVisible",this.options.sounds.conditions)&&c.createAudioElements(this),c.inArray("docVisible",this.options.titleCount.conditions)&&f.docTitle.increment(),this.shown=!0,this.closed=!1,f.hasButtons(this)&&Object.keys(this.options.buttons).forEach(function(t){var n=e.barDom.querySelector("#"+e.options.buttons[t].id);c.addListener(n,"click",function(n){c.stopPropagation(n),e.options.buttons[t].cb()})}),this.progressDom=this.barDom.querySelector(".noty_progressbar"),c.inArray("click",this.options.closeWith)&&(c.addClass(this.barDom,"noty_close_with_click"),c.addListener(this.barDom,"click",function(t){c.stopPropagation(t),e.close()},!1)),c.addListener(this.barDom,"mouseenter",function(){f.fire(e,"onHover")},!1),this.options.timeout&&c.addClass(this.barDom,"noty_has_timeout"),c.inArray("button",this.options.closeWith)){c.addClass(this.barDom,"noty_close_with_button");var o=document.createElement("div");c.addClass(o,"noty_close_button"),o.innerHTML="×",this.barDom.appendChild(o),c.addListener(o,"click",function(t){c.stopPropagation(t),e.close()},!1)}return f.fire(this,"onShow"),null===this.options.animation.open?this.promises.show=new u.default(function(t){t()}):"function"==typeof this.options.animation.open?this.promises.show=new u.default(this.options.animation.open.bind(this)):(c.addClass(this.barDom,this.options.animation.open),this.promises.show=new u.default(function(t){c.addListener(e.barDom,c.animationEndEvents,function(){c.removeClass(e.barDom,e.options.animation.open),t()})})),this.promises.show.then(function(){var t=e;setTimeout(function(){f.openFlow(t)},100)}),this}},{key:"stop",value:function(){return f.dequeueClose(this),this}},{key:"resume",value:function(){return f.queueClose(this),this}},{key:"setTimeout",value:function(t){function e(e){return t.apply(this,arguments)}return e.toString=function(){return t.toString()},e}(function(t){if(this.stop(),this.options.timeout=t,this.barDom){this.options.timeout?c.addClass(this.barDom,"noty_has_timeout"):c.removeClass(this.barDom,"noty_has_timeout");var e=this;setTimeout(function(){e.resume()},100)}return this})},{key:"setText",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return this.barDom&&(this.barDom.querySelector(".noty_body").innerHTML=t),e&&(this.options.text=t),this}},{key:"setType",value:function(t){var e=this,n=arguments.length>1&&void 0!==arguments[1]&&arguments[1];if(this.barDom){c.classList(this.barDom).split(" ").forEach(function(t){"noty_type__"===t.substring(0,11)&&c.removeClass(e.barDom,t)}),c.addClass(this.barDom,"noty_type__"+t)}return n&&(this.options.type=t),this}},{key:"setTheme",value:function(t){var e=this,n=arguments.length>1&&void 0!==arguments[1]&&arguments[1];if(this.barDom){c.classList(this.barDom).split(" ").forEach(function(t){"noty_theme__"===t.substring(0,12)&&c.removeClass(e.barDom,t)}),c.addClass(this.barDom,"noty_theme__"+t)}return n&&(this.options.theme=t),this}},{key:"close",value:function(){var t=this;return this.closed?this:this.shown?(f.fire(this,"onClose"),this.closing=!0,null===this.options.animation.close?this.promises.close=new u.default(function(t){t()}):"function"==typeof this.options.animation.close?this.promises.close=new u.default(this.options.animation.close.bind(this)):(c.addClass(this.barDom,this.options.animation.close),this.promises.close=new u.default(function(e){c.addListener(t.barDom,c.animationEndEvents,function(){t.options.force?c.remove(t.barDom):f.ghostFix(t),e()})})),this.promises.close.then(function(){f.closeFlow(t),f.handleModalClose(t)}),this.closed=!0,this):(f.removeFromQueue(this),this)}}],[{key:"closeAll",value:function(){var t=arguments.length>0&&void 0!==arguments[0]&&arguments[0];return Object.keys(f.Store).forEach(function(e){t?f.Store[e].options.queue===t&&f.Store[e].killable&&f.Store[e].close():f.Store[e].killable&&f.Store[e].close()}),this}},{key:"overrideDefaults",value:function(t){return f.Defaults=c.deepExtend({},f.Defaults,t),this}},{key:"setMaxVisible",value:function(){var t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:f.DefaultMaxVisible,e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"global";return f.Queues.hasOwnProperty(e)||(f.Queues[e]={maxVisible:t,queue:[]}),f.Queues[e].maxVisible=t,this}},{key:"button",value:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:null,n=arguments[2],o=arguments.length>3&&void 0!==arguments[3]?arguments[3]:{};return new d.NotyButton(t,e,n,o)}},{key:"version",value:function(){return"3.1.0"}},{key:"Push",value:function(t){return new h.Push(t)}}]),t}();e.default=p,c.visibilityChangeFlow(),t.exports=e.default},function(t,e){function n(){throw new Error("setTimeout has not been defined")}function o(){throw new Error("clearTimeout has not been defined")}function i(t){if(l===setTimeout)return setTimeout(t,0);if((l===n||!l)&&setTimeout)return l=setTimeout,setTimeout(t,0);try{return l(t,0)}catch(e){try{return l.call(null,t,0)}catch(e){return l.call(this,t,0)}}}function r(t){if(f===clearTimeout)return clearTimeout(t);if((f===o||!f)&&clearTimeout)return f=clearTimeout,clearTimeout(t);try{return f(t)}catch(e){try{return f.call(null,t)}catch(e){return f.call(this,t)}}}function s(){v&&h&&(v=!1,h.length?p=h.concat(p):m=-1,p.length&&u())}function u(){if(!v){var t=i(s);v=!0;for(var e=p.length;e;){for(h=p,p=[];++m<e;)h&&h[m].run();m=-1,e=p.length}h=null,v=!1,r(t)}}function a(t,e){this.fun=t,this.array=e}function c(){}var l,f,d=t.exports={};!function(){try{l="function"==typeof setTimeout?setTimeout:n}catch(t){l=n}try{f="function"==typeof clearTimeout?clearTimeout:o}catch(t){f=o}}();var h,p=[],v=!1,m=-1;d.nextTick=function(t){var e=new Array(arguments.length-1);if(arguments.length>1)for(var n=1;n<arguments.length;n++)e[n-1]=arguments[n];p.push(new a(t,e)),1!==p.length||v||i(u)},a.prototype.run=function(){this.fun.apply(null,this.array)},d.title="browser",d.browser=!0,d.env={},d.argv=[],d.version="",d.versions={},d.on=c,d.addListener=c,d.once=c,d.off=c,d.removeListener=c,d.removeAllListeners=c,d.emit=c,d.binding=function(t){throw new Error("process.binding is not supported")},d.cwd=function(){return"/"},d.chdir=function(t){throw new Error("process.chdir is not supported")},d.umask=function(){return 0}},function(t,e){var n;n=function(){return this}();try{n=n||Function("return this")()||(0,eval)("this")}catch(t){"object"==typeof window&&(n=window)}t.exports=n},function(t,e){}])})},function(t,e,n){"use strict";function o(t){return t&&t.__esModule?t:{default:t}}Object.defineProperty(e,"__esModule",{value:!0});var i=n(9),r=o(i),s=n(11),u=o(s);n(10);var a={layout:"topRight",theme:"mint",timeout:5e3,progressBar:!0,closeWith:["click"]},c={options:{},setOptions:function(t){return this.options=(0,r.default)({},a,t),this},show:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"alert",n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},o=(0,r.default)({},this.options,n,{type:e,text:t});return new u.default(o).show()},success:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return this.show(t,"success",e)},error:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return this.show(t,"error",e)},warning:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return this.show(t,"warning",e)},info:function(t){var e=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};return this.show(t,"info",e)}};e.default={install:function(t,e){var n=c.setOptions(e);t.prototype.$noty=n,t.noty=n}}},function(t,e,n){n(39),t.exports=n(4).Object.assign},function(t,e){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,e,n){var o=n(3);t.exports=function(t){if(!o(t))throw TypeError(t+" is not an object!");return t}},function(t,e,n){var o=n(8),i=n(35),r=n(34);t.exports=function(t){return function(e,n,s){var u,a=o(e),c=i(a.length),l=r(s,c);if(t&&n!=n){for(;c>l;)if((u=a[l++])!=u)return!0}else for(;c>l;l++)if((t||l in a)&&a[l]===n)return t||l||0;return!t&&-1}}},function(t,e){var n={}.toString;t.exports=function(t){return n.call(t).slice(8,-1)}},function(t,e,n){var o=n(14);t.exports=function(t,e,n){if(o(t),void 0===e)return t;switch(n){case 1:return function(n){return t.call(e,n)};case 2:return function(n,o){return t.call(e,n,o)};case 3:return function(n,o,i){return t.call(e,n,o,i)}}return function(){return t.apply(e,arguments)}}},function(t,e,n){var o=n(3),i=n(2).document,r=o(i)&&o(i.createElement);t.exports=function(t){return r?i.createElement(t):{}}},function(t,e){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,e,n){var o=n(2),i=n(4),r=n(18),s=n(23),u=function(t,e,n){var a,c,l,f=t&u.F,d=t&u.G,h=t&u.S,p=t&u.P,v=t&u.B,m=t&u.W,y=d?i:i[e]||(i[e]={}),b=y.prototype,w=d?o:h?o[e]:(o[e]||{}).prototype;d&&(n=e);for(a in n)(c=!f&&w&&void 0!==w[a])&&a in y||(l=c?w[a]:n[a],y[a]=d&&"function"!=typeof w[a]?n[a]:v&&c?r(l,o):m&&w[a]==l?function(t){var e=function(e,n,o){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(e);case 2:return new t(e,n)}return new t(e,n,o)}return t.apply(this,arguments)};return e.prototype=t.prototype,e}(l):p&&"function"==typeof l?r(Function.call,l):l,p&&((y.virtual||(y.virtual={}))[a]=l,t&u.R&&b&&!b[a]&&s(b,a,l)))};u.F=1,u.G=2,u.S=4,u.P=8,u.B=16,u.W=32,u.U=64,u.R=128,t.exports=u},function(t,e){var n={}.hasOwnProperty;t.exports=function(t,e){return n.call(t,e)}},function(t,e,n){var o=n(26),i=n(31);t.exports=n(0)?function(t,e,n){return o.f(t,e,i(1,n))}:function(t,e,n){return t[e]=n,t}},function(t,e,n){t.exports=!n(0)&&!n(1)(function(){return 7!=Object.defineProperty(n(19)("div"),"a",{get:function(){return 7}}).a})},function(t,e,n){"use strict";var o=n(29),i=n(27),r=n(30),s=n(36),u=n(6),a=Object.assign;t.exports=!a||n(1)(function(){var t={},e={},n=Symbol(),o="abcdefghijklmnopqrst";return t[n]=7,o.split("").forEach(function(t){e[t]=t}),7!=a({},t)[n]||Object.keys(a({},e)).join("")!=o})?function(t,e){for(var n=s(t),a=arguments.length,c=1,l=i.f,f=r.f;a>c;)for(var d,h=u(arguments[c++]),p=l?o(h).concat(l(h)):o(h),v=p.length,m=0;v>m;)f.call(h,d=p[m++])&&(n[d]=h[d]);return n}:a},function(t,e,n){var o=n(15),i=n(24),r=n(37),s=Object.defineProperty;e.f=n(0)?Object.defineProperty:function(t,e,n){if(o(t),e=r(e,!0),o(n),i)try{return s(t,e,n)}catch(t){}if("get"in n||"set"in n)throw TypeError("Accessors not supported!");return"value"in n&&(t[e]=n.value),t}},function(t,e){e.f=Object.getOwnPropertySymbols},function(t,e,n){var o=n(22),i=n(8),r=n(16)(!1),s=n(32)("IE_PROTO");t.exports=function(t,e){var n,u=i(t),a=0,c=[];for(n in u)n!=s&&o(u,n)&&c.push(n);for(;e.length>a;)o(u,n=e[a++])&&(~r(c,n)||c.push(n));return c}},function(t,e,n){var o=n(28),i=n(20);t.exports=Object.keys||function(t){return o(t,i)}},function(t,e){e.f={}.propertyIsEnumerable},function(t,e){t.exports=function(t,e){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:e}}},function(t,e,n){var o=n(33)("keys"),i=n(38);t.exports=function(t){return o[t]||(o[t]=i(t))}},function(t,e,n){var o=n(2),i=o["__core-js_shared__"]||(o["__core-js_shared__"]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,e,n){var o=n(7),i=Math.max,r=Math.min;t.exports=function(t,e){return t=o(t),t<0?i(t+e,0):r(t,e)}},function(t,e,n){var o=n(7),i=Math.min;t.exports=function(t){return t>0?i(o(t),9007199254740991):0}},function(t,e,n){var o=n(5);t.exports=function(t){return Object(o(t))}},function(t,e,n){var o=n(3);t.exports=function(t,e){if(!o(t))return t;var n,i;if(e&&"function"==typeof(n=t.toString)&&!o(i=n.call(t)))return i;if("function"==typeof(n=t.valueOf)&&!o(i=n.call(t)))return i;if(!e&&"function"==typeof(n=t.toString)&&!o(i=n.call(t)))return i;throw TypeError("Can't convert object to primitive value")}},function(t,e){var n=0,o=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++n+o).toString(36))}},function(t,e,n){var o=n(21);o(o.S+o.F,"Object",{assign:n(25)})}])});
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -71923,15 +71976,15 @@ if (typeof window !== 'undefined' && window.Vue) {
 exports.default = plugin;
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(321)
+var __vue_script__ = __webpack_require__(322)
 /* template */
-var __vue_template__ = __webpack_require__(325)
+var __vue_template__ = __webpack_require__(326)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -71970,12 +72023,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 321 */
+/* 322 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_LanguageSwitcher_vue__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_LanguageSwitcher_vue__ = __webpack_require__(323);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_LanguageSwitcher_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_LanguageSwitcher_vue__);
 //
 //
@@ -72069,15 +72122,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 322 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(323)
+var __vue_script__ = __webpack_require__(324)
 /* template */
-var __vue_template__ = __webpack_require__(324)
+var __vue_template__ = __webpack_require__(325)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -72116,7 +72169,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 323 */
+/* 324 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72166,7 +72219,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 324 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -72223,7 +72276,7 @@ if (false) {
 }
 
 /***/ }),
-/* 325 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -72397,15 +72450,15 @@ if (false) {
 }
 
 /***/ }),
-/* 326 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(327)
+var __vue_script__ = __webpack_require__(328)
 /* template */
-var __vue_template__ = __webpack_require__(328)
+var __vue_template__ = __webpack_require__(331)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -72444,7 +72497,351 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 327 */
+/* 328 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue__ = __webpack_require__(348);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	props: [''],
+
+	components: { ReferralLink: __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default.a, Purchase: __WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue___default.a, ProfilePage: __WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue___default.a },
+
+	data: function data() {
+		return {
+			trees_sold: 0,
+			user: window.user,
+			descendants: [],
+			purchaseFields: [{ name: 'user_name', title: this.tableTitle('purchase.made_by'), sortField: 'users.name' }, { name: 'created_at', title: this.tableTitle('purchase.purchase_date'), sortField: 'purchases.created_at', callback: 'date' }, { name: '__component:table-price-switcher', title: this.tableTitle('purchase.total_payable'), sortField: 'purchases.total_price' }, { name: '__component:purchases-actions', title: this.tableTitle('table.actions') }],
+			userFields: [{ name: 'name', title: this.tableTitle('auth.name'), sortField: 'name' }, { name: 'id_status', title: this.tableTitle('user.status'), sortField: 'id_status', callback: 'userStatusLabel' }, { name: '__component:users-actions', title: this.tableTitle('table.actions') }],
+			isPurchasing: false,
+			isViewing: false,
+			selectedPurchase: '',
+			selectedUser: '',
+			purchaseUrl: "/api/admin/purchases/pending",
+			userUrl: "/api/admin/users/pending"
+		};
+	},
+	mounted: function mounted() {
+		var _this = this;
+
+		this.getDashboardData();
+		this.$events.on('view', function (data) {
+			return _this.viewPurchase(data);
+		});
+
+		this.$events.on('viewUser', function (data) {
+			return _this.viewUser(data);
+		});
+		this.$events.on('remind', function (data) {
+			return _this.remind(data);
+		});
+		this.$events.on('previous', function (data) {
+			return _this.previous(data);
+		});
+		this.$events.on('next', function (data) {
+			return _this.next(data);
+		});
+	},
+
+
+	methods: {
+		getDashboardData: function getDashboardData() {
+			var _this2 = this;
+
+			axios.get("/api/dashboard/" + this.user.id).then(function (response) {
+				return _this2.setDashboardData(response.data);
+			});
+		},
+		setDashboardData: function setDashboardData(data) {
+			this.trees_sold = data.trees_sold;
+			this.descendants = data.descendants;
+		},
+		getStepClass: function getStepClass(level) {
+			var stepClass = '';
+			if (this.statusLevel >= level) ;
+			stepClass = 'active';
+
+			return stepClass;
+		},
+		getStepIcon: function getStepIcon(level) {
+			var icon = '';
+			if (this.statusLevel >= level) icon = '<i class="font-icon font-icon-check-bird"></i>';
+
+			return icon;
+		},
+		tableTitle: function tableTitle(value) {
+			return this.$options.filters.trans(value);
+		},
+		viewPurchase: function viewPurchase(data) {
+			this.selectedPurchase = data;
+			this.isPurchasing = true;
+		},
+		viewUser: function viewUser(data) {
+			this.selectedUser = data;
+			this.isViewing = true;
+		},
+		back: function back() {
+			this.isViewing = false;
+			this.isPurchasing = false;
+		},
+		remind: function remind(user) {
+			var _this3 = this;
+
+			this.$events.fire('loading', user.id);
+			axios.post('/api/user/' + user.id + '/kyc/remind').then(function (response) {
+				return _this3.onSuccess(response);
+			});
+		},
+		previous: function previous(user) {
+			var _this4 = this;
+
+			this.$events.fire('loading-prev', user.id);
+			axios.post('/api/user/' + user.id + '/legal/previous').then(function (response) {
+				return _this4.onStepSuccess(response);
+			});
+		},
+		next: function next(user) {
+			var _this5 = this;
+
+			this.$events.fire('loading-next', user.id);
+			axios.post('/api/user/' + user.id + '/legal/next').then(function (response) {
+				return _this5.onStepSuccess(response);
+			});
+		},
+		onStepSuccess: function onStepSuccess(response) {
+			this.onSuccess(response);
+			this.$refs.users.refreshTable();
+		},
+		onSuccess: function onSuccess(response) {
+			flash(this.$options.filters.trans(response.data.message));
+			this.$events.fire('loading-complete');
+		}
+	},
+
+	computed: {
+		statusLevel: function statusLevel() {
+			var level = 0;
+			switch (this.user.id_status) {
+				case "verified":
+					level = 1;
+					break;
+				case "instruction_issued":
+					level = 2;
+					break;
+				case "execution_ready":
+					level = 3;
+					break;
+				case "complete":
+					level = 4;
+					break;
+			}
+
+			return level;
+		},
+		directReferrerPercentage: function directReferrerPercentage() {
+			return this.user.direct_descendants_count / this.user.direct_referrer_needed * 100;
+		},
+		directReferrerRemaining: function directReferrerRemaining() {
+			return this.user.direct_referrer_needed - this.user.direct_descendants_count;
+		},
+		groupSalePercentage: function groupSalePercentage() {
+			return this.user.group_sale / this.user.group_sale_needed * 100;
+		},
+		groupSaleRemaining: function groupSaleRemaining() {
+			return this.user.group_sale_needed - this.user.group_sale;
+		}
+	}
+});
+
+/***/ }),
+/* 329 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72455,33 +72852,726 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: [''],
-
+	props: ['code'],
 	data: function data() {
 		return {};
+	},
+
+
+	methods: {
+		copyLink: function copyLink() {
+			var input = document.getElementById("copy");
+			input.select();
+			document.execCommand("Copy");
+
+			flash(this.$options.filters.trans("user.copied-link"));
+		}
+	},
+
+	computed: {
+		url: function url() {
+			return window.location.protocol + "//" + window.location.hostname + '/register?referrer=' + this.code;
+		}
 	}
 });
 
 /***/ }),
-/* 328 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "mb-3" }, [
+    _c("div", { staticClass: "input-group" }, [
+      _c("div", { staticClass: "input-group-prepend" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-sm btn-info",
+            attrs: { type: "button" },
+            on: { click: _vm.copyLink }
+          },
+          [
+            _vm._v(
+              "\n\t\t\t\t" +
+                _vm._s(_vm._f("trans")("user.copy-referral")) +
+                "\n\t\t\t"
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "text", id: "copy" },
+        domProps: { value: _vm.url }
+      })
+    ])
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("You are logged in!")])])
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-724134ae", module.exports)
   }
-]
+}
+
+/***/ }),
+/* 331 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "transition",
+        { attrs: { name: "slide-fade", mode: "out-in" } },
+        [
+          !_vm.isViewing && !_vm.isPurchasing
+            ? _c("div", [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-3" }, [
+                    _c("article", { staticClass: "statistic-box green" }, [
+                      _c("div", [
+                        _c("div", { staticClass: "number" }, [
+                          _vm._v(_vm._s(_vm.trees_sold))
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "caption" }, [
+                          _c("div", [
+                            _vm._v(
+                              _vm._s(
+                                _vm._f("trans")("dashboard.trees_sold_global")
+                              )
+                            )
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-3" }, [
+                    _c("article", { staticClass: "statistic-box yellow" }, [
+                      _c("div", [
+                        _c("div", { staticClass: "number" }, [
+                          _vm._v(_vm._s(_vm.user.group_sale))
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "caption" }, [
+                          _c("div", [
+                            _vm._v(
+                              _vm._s(_vm._f("trans")("dashboard.group_sale"))
+                            )
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-3" }, [
+                    _c("article", { staticClass: "statistic-box red" }, [
+                      _c("div", [
+                        _c("div", { staticClass: "number" }, [
+                          _vm._v(
+                            _vm._s(
+                              _vm._f("trans")(
+                                "user.level_" + _vm.user.user_level
+                              )
+                            )
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "caption" }, [
+                          _c("div", [
+                            _vm._v(
+                              _vm._s(
+                                _vm._f("trans")(
+                                  "dashboard.current_grower_level"
+                                )
+                              )
+                            )
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-3" }, [
+                    _c("article", { staticClass: "statistic-box purple" }, [
+                      _c("div", [
+                        _vm.user.is_std
+                          ? _c("div", { staticClass: "number" }, [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("currency_std")(
+                                    _vm.user.commission_received_std
+                                  )
+                                )
+                              )
+                            ])
+                          : _c("div", { staticClass: "number" }, [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("currency")(
+                                    _vm.user.commission_received
+                                  )
+                                )
+                              )
+                            ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "caption" }, [
+                          _c("div", [
+                            _vm._v(
+                              _vm._s(
+                                _vm._f("trans")("dashboard.commission_earned")
+                              )
+                            )
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-6 dashboard-column" }, [
+                    _c(
+                      "section",
+                      {
+                        staticClass:
+                          "box-typical box-typical-dashboard panel panel-default scrollable"
+                      },
+                      [
+                        _c(
+                          "header",
+                          { staticClass: "box-typical-header panel-heading" },
+                          [
+                            _c("h3", { staticClass: "panel-title" }, [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("trans")("dashboard.my_downlines")
+                                ) + " "
+                              ),
+                              _c(
+                                "span",
+                                { staticClass: "badge badge-primary" },
+                                [_vm._v(_vm._s(_vm.user.descendants_count))]
+                              )
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "box-typical-body panel-body" },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "box-normal-content" },
+                              [
+                                _c("text-input", {
+                                  attrs: {
+                                    defaultValue: _vm.user.referral_code,
+                                    required: false,
+                                    type: "text",
+                                    label: _vm.$options.filters.trans(
+                                      "user.referral_code"
+                                    ),
+                                    name: "referrer",
+                                    editable: false,
+                                    focus: false,
+                                    hideLabel: false
+                                  },
+                                  model: {
+                                    value: _vm.user.referral_code,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.user, "referral_code", $$v)
+                                    },
+                                    expression: "user.referral_code"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("referral-link", {
+                                  attrs: { code: _vm.user.referral_code }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "table",
+                              { staticClass: "tbl-typical" },
+                              [
+                                _c("tr", [
+                                  _c("th", [
+                                    _c("div", [
+                                      _vm._v(
+                                        _vm._s(_vm._f("trans")("auth.name"))
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("th", [
+                                    _c("div", [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("trans")(
+                                            "dashboard.grower_level"
+                                          )
+                                        )
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("th", [
+                                    _c("div", [
+                                      _vm._v(
+                                        _vm._s(_vm._f("trans")("user.status"))
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("th", [
+                                    _c("div", [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("trans")("user.tree_count")
+                                        )
+                                      )
+                                    ])
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _vm._l(_vm.descendants, function(descendant) {
+                                  return _c("tr", [
+                                    _c("td", [_vm._v(_vm._s(descendant.name))]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _c(
+                                        "span",
+                                        { staticClass: "label label-success" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm._f("trans")(
+                                                "user.level_" +
+                                                  descendant.user_level
+                                              )
+                                            )
+                                          )
+                                        ]
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", {
+                                      domProps: {
+                                        innerHTML: _vm._s(
+                                          _vm.$options.filters.formatUserStatus(
+                                            descendant.id_status
+                                          )
+                                        )
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _vm._v(_vm._s(descendant.tree_count))
+                                    ])
+                                  ])
+                                })
+                              ],
+                              2
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm.user.is_admin
+                      ? _c(
+                          "section",
+                          {
+                            staticClass:
+                              "box-typical box-typical-dashboard panel panel-default scrollable"
+                          },
+                          [
+                            _c(
+                              "transition",
+                              { attrs: { name: "slide-fade", mode: "out-in" } },
+                              [
+                                _c("table-view", {
+                                  directives: [
+                                    {
+                                      name: "show",
+                                      rawName: "v-show",
+                                      value: !_vm.isPurchasing,
+                                      expression: "!isPurchasing"
+                                    }
+                                  ],
+                                  ref: "purchases",
+                                  attrs: {
+                                    fields: _vm.purchaseFields,
+                                    title: _vm.$options.filters.trans(
+                                      "purchase.pending_purchases"
+                                    ),
+                                    url: _vm.purchaseUrl,
+                                    empty:
+                                      "No purchases that are pending verification"
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c("transition", {
+                              attrs: { name: "slide-fade", mode: "out-in" }
+                            })
+                          ],
+                          1
+                        )
+                      : _vm._e()
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6 dashboard-column" }, [
+                    _c(
+                      "section",
+                      {
+                        staticClass:
+                          "box-typical box-typical-dashboard panel panel-default scrollable"
+                      },
+                      [
+                        _c(
+                          "header",
+                          { staticClass: "box-typical-header panel-heading" },
+                          [
+                            _c("h3", { staticClass: "panel-title" }, [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("trans")("dashboard.my_account_status")
+                                )
+                              )
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "panel-body box-normal-content" },
+                          [
+                            _c("div", { staticClass: "steps-icon-progress" }, [
+                              _c("ul", [
+                                _c("li", { class: _vm.getStepClass(1) }, [
+                                  _c("div", {
+                                    staticClass: "icon",
+                                    domProps: {
+                                      innerHTML: _vm._s(_vm.getStepIcon(1))
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "caption" }, [
+                                    _vm._v(
+                                      _vm._s(_vm._f("trans")("user.verified"))
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("li", { class: _vm.getStepClass(2) }, [
+                                  _c("div", {
+                                    staticClass: "icon",
+                                    domProps: {
+                                      innerHTML: _vm._s(_vm.getStepIcon(2))
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "caption" }, [
+                                    _vm._v(
+                                      _vm._s(
+                                        _vm._f("trans")(
+                                          "user.instruction_issued_to_lawyer"
+                                        )
+                                      )
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("li", { class: _vm.getStepClass(3) }, [
+                                  _c("div", {
+                                    staticClass: "icon",
+                                    domProps: {
+                                      innerHTML: _vm._s(_vm.getStepIcon(3))
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "caption" }, [
+                                    _vm._v(
+                                      _vm._s(
+                                        _vm._f("trans")(
+                                          "user.sales_agreement_ready_for_execution"
+                                        )
+                                      )
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("li", { class: _vm.getStepClass(4) }, [
+                                  _c("div", {
+                                    staticClass: "icon",
+                                    domProps: {
+                                      innerHTML: _vm._s(_vm.getStepIcon(4))
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "caption" }, [
+                                    _vm._v(
+                                      _vm._s(
+                                        _vm._f("trans")(
+                                          "user.sales_agreement_executed"
+                                        )
+                                      )
+                                    )
+                                  ])
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "next-step text-center" },
+                              [
+                                _c("b", [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm._f("trans")(
+                                        "dashboard.next_grower_level"
+                                      )
+                                    )
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("h2", [
+                                  _c(
+                                    "span",
+                                    { staticClass: "label label-primary mb-3" },
+                                    [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("trans")(
+                                            "user.level_" +
+                                              (_vm.user.user_level + 1)
+                                          )
+                                        )
+                                      )
+                                    ]
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c("span", [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm._f("trans")(
+                                        "user.level_instruction",
+                                        {
+                                          target:
+                                            _vm.user.direct_referrer_needed,
+                                          left: _vm.directReferrerRemaining
+                                        }
+                                      )
+                                    )
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "progress-with-amount mb-3" },
+                                  [
+                                    _c("div", { staticClass: "progress" }, [
+                                      _c("div", {
+                                        staticClass:
+                                          "progress-bar progress-bar-striped progress-bar-animated",
+                                        style:
+                                          "width:" +
+                                          _vm.directReferrerPercentage +
+                                          "%;",
+                                        attrs: {
+                                          role: "progressbar",
+                                          "aria-valuenow":
+                                            _vm.user.direct_descendants_count,
+                                          "aria-valuemin": "0",
+                                          "aria-valuemax":
+                                            _vm.user.direct_referrer_needed
+                                        }
+                                      })
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "progress-with-amount-number"
+                                      },
+                                      [
+                                        _vm._v(
+                                          _vm._s(_vm.directReferrerPercentage) +
+                                            "%"
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _vm.user.user_level > 1
+                                  ? [
+                                      _c("span", [
+                                        _vm._v(
+                                          _vm._s(
+                                            _vm._f("trans")(
+                                              "user.level_instruction_2",
+                                              {
+                                                target:
+                                                  _vm.user.group_sale_needed,
+                                                left: _vm.groupSaleRemaining
+                                              }
+                                            )
+                                          )
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        { staticClass: "progress-with-amount" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "progress" },
+                                            [
+                                              _c("div", {
+                                                staticClass:
+                                                  "progress-bar progress-bar-striped progress-bar-animated",
+                                                style:
+                                                  "width:" +
+                                                  _vm.groupSalePercentage +
+                                                  "%;",
+                                                attrs: {
+                                                  role: "progressbar",
+                                                  "aria-valuenow":
+                                                    _vm.user.group_sale,
+                                                  "aria-valuemin": "0",
+                                                  "aria-valuemax":
+                                                    _vm.user.group_sale_needed
+                                                }
+                                              })
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "progress-with-amount-number"
+                                            },
+                                            [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm.groupSalePercentage
+                                                ) + "%"
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ]
+                                  : _vm._e()
+                              ],
+                              2
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _vm.user.is_admin
+                      ? _c(
+                          "section",
+                          {
+                            staticClass:
+                              "box-typical box-typical-dashboard panel panel-default scrollable"
+                          },
+                          [
+                            _c(
+                              "transition",
+                              { attrs: { name: "slide-fade", mode: "out-in" } },
+                              [
+                                _c("table-view", {
+                                  directives: [
+                                    {
+                                      name: "show",
+                                      rawName: "v-show",
+                                      value: !_vm.isViewing,
+                                      expression: "!isViewing"
+                                    }
+                                  ],
+                                  ref: "users",
+                                  attrs: {
+                                    fields: _vm.userFields,
+                                    title: _vm.$options.filters.trans(
+                                      "user.users"
+                                    ),
+                                    url: _vm.userUrl
+                                  }
+                                })
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      : _vm._e()
+                  ])
+                ])
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.isPurchasing
+            ? _c("purchase", {
+                attrs: {
+                  cancelable: true,
+                  selectedPurchase: _vm.selectedPurchase
+                },
+                on: { back: _vm.back }
+              })
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.isViewing
+            ? _c("ProfilePage", {
+                attrs: { cancelable: true, selectedUser: _vm.selectedUser },
+                on: { back: _vm.back }
+              })
+            : _vm._e()
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -72492,15 +73582,15 @@ if (false) {
 }
 
 /***/ }),
-/* 329 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(330)
+var __vue_script__ = __webpack_require__(333)
 /* template */
-var __vue_template__ = __webpack_require__(334)
+var __vue_template__ = __webpack_require__(337)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -72539,12 +73629,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 330 */
+/* 333 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_LoginComponent__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_LoginComponent__ = __webpack_require__(334);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_LoginComponent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_LoginComponent__);
 //
 //
@@ -72567,15 +73657,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 331 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(332)
+var __vue_script__ = __webpack_require__(335)
 /* template */
-var __vue_template__ = __webpack_require__(333)
+var __vue_template__ = __webpack_require__(336)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -72614,7 +73704,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 332 */
+/* 335 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -72712,7 +73802,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 333 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -72947,7 +74037,7 @@ if (false) {
 }
 
 /***/ }),
-/* 334 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -72967,21 +74057,17 @@ if (false) {
 }
 
 /***/ }),
-/* 335 */
+/* 338 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue__ = __webpack_require__(311);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_UserDocuments__ = __webpack_require__(339);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_UserDocuments___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_UserDocuments__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_User_vue__ = __webpack_require__(342);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_User_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_User_vue__);
-//
-//
-//
-//
 //
 //
 //
@@ -73460,143 +74546,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		}
 	}
 });
-
-/***/ }),
-/* 336 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(337)
-/* template */
-var __vue_template__ = __webpack_require__(338)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\ReferralLink.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-724134ae", Component.options)
-  } else {
-    hotAPI.reload("data-v-724134ae", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 337 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['code'],
-	data: function data() {
-		return {};
-	},
-
-
-	methods: {
-		copyLink: function copyLink() {
-			var input = document.getElementById("copy");
-			input.select();
-			document.execCommand("Copy");
-
-			flash(this.$options.filters.trans("user.copied-link"));
-		}
-	},
-
-	computed: {
-		url: function url() {
-			return window.location.protocol + "//" + window.location.hostname + '/register?referrer=' + this.code;
-		}
-	}
-});
-
-/***/ }),
-/* 338 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mb-3" }, [
-    _c("div", { staticClass: "input-group" }, [
-      _c("div", { staticClass: "input-group-prepend" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-sm btn-info",
-            attrs: { type: "button" },
-            on: { click: _vm.copyLink }
-          },
-          [
-            _vm._v(
-              "\n\t\t\t\t" +
-                _vm._s(_vm._f("trans")("user.copy-referral")) +
-                "\n\t\t\t"
-            )
-          ]
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "text", id: "copy" },
-        domProps: { value: _vm.url }
-      })
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-724134ae", module.exports)
-  }
-}
 
 /***/ }),
 /* 339 */
@@ -76596,25 +77545,6 @@ var render = function() {
                           }
                         },
                         [_vm._v(_vm._s(_vm._f("trans")("user.edit_profile")))]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-primary",
-                          on: {
-                            click: function($event) {
-                              _vm.isUploading = true
-                            }
-                          }
-                        },
-                        [
-                          _vm._v(
-                            "\n\t\t\t\t\t\t" +
-                              _vm._s(_vm._f("trans")("user.kyc_documents")) +
-                              " \n\t\t\t\t\t\t\n\t\t\t\t\t"
-                          )
-                        ]
                       )
                     ])
                   ]),
@@ -79966,7 +80896,7 @@ module.exports = Component.exports
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ProfilePage_vue__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ProfilePage_vue__ = __webpack_require__(312);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ProfilePage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__ProfilePage_vue__);
 //
 //
@@ -80009,7 +80939,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	mounted: function mounted() {
 		var _this = this;
 
-		this.$events.on('view', function (data) {
+		this.$events.on('viewUser', function (data) {
 			return _this.view(data);
 		});
 		this.$events.on('remind', function (data) {
@@ -80624,7 +81554,7 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__TransactionPage_vue__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__TransactionPage_vue__ = __webpack_require__(313);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__TransactionPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__TransactionPage_vue__);
 //
 //
@@ -82777,7 +83707,7 @@ if (false) {
 
 
 window._ = __webpack_require__(185);
-window.Popper = __webpack_require__(313).default;
+window.Popper = __webpack_require__(314).default;
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -82786,7 +83716,7 @@ window.Popper = __webpack_require__(313).default;
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(314);
+  window.$ = window.jQuery = __webpack_require__(315);
 
   __webpack_require__(386);
 } catch (e) {}
@@ -82851,7 +83781,7 @@ window.flash = function (message) {
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-   true ? factory(exports, __webpack_require__(314), __webpack_require__(313)) :
+   true ? factory(exports, __webpack_require__(315), __webpack_require__(314)) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
   (factory((global.bootstrap = {}),global.jQuery,global.Popper));
 }(this, (function (exports,$,Popper) { 'use strict';
@@ -87272,7 +88202,7 @@ var render = function() {
               attrs: { type: "button" },
               on: {
                 click: function($event) {
-                  _vm.itemAction("view", _vm.rowData, _vm.rowIndex)
+                  _vm.itemAction("viewUser", _vm.rowData, _vm.rowIndex)
                 }
               }
             },
@@ -88243,7 +89173,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	props: [''],
 	data: function data() {
 		return {
-			menu: [{ color: 'brown', icon: ' glyphicon glyphicon-user', title: 'profile', route: 'profile', opened: false }, { color: 'brown', icon: ' glyphicon glyphicon-barcode', title: 'purchases', route: 'purchases', opened: false }, { color: 'brown', icon: ' fa fa-sitemap', title: 'organization', route: 'organization', opened: false }, { color: 'brown', icon: ' fa fa-money', title: 'transactions', route: 'transactions', opened: false }, { color: 'brown', icon: ' fa fa-newspaper-o', title: 'news', route: 'news', opened: false }, { color: 'brown', icon: ' fa fa-file-pdf-o', title: 'materials', route: 'materials', opened: false }, { color: 'blue', icon: ' fa fa-users', title: 'users', route: 'users', opened: false, admin: true }, { color: 'blue', icon: ' fa fa-gift', title: 'packages', route: 'packages', opened: false, admin: true }, { color: 'blue', icon: ' fa fa-bank', title: 'payouts', route: 'payouts', opened: false, admin: true }],
+			menu: [{ color: 'brown', icon: ' font-icon font-icon-speed', title: 'dashboard', route: 'dashboard', opened: true }, { color: 'brown', icon: ' glyphicon glyphicon-user', title: 'profile', route: 'profile', opened: false }, { color: 'brown', icon: ' glyphicon glyphicon-barcode', title: 'purchases', route: 'purchases', opened: false }, { color: 'brown', icon: ' fa fa-sitemap', title: 'organization', route: 'organization', opened: false }, { color: 'brown', icon: ' fa fa-money', title: 'transactions', route: 'transactions', opened: false }, { color: 'brown', icon: ' fa fa-newspaper-o', title: 'news', route: 'news', opened: false }, { color: 'brown', icon: ' fa fa-file-pdf-o', title: 'materials', route: 'materials', opened: false }, { color: 'blue', icon: ' fa fa-users', title: 'users', route: 'users', opened: false, admin: true }, { color: 'blue', icon: ' fa fa-gift', title: 'packages', route: 'packages', opened: false, admin: true }, { color: 'blue', icon: ' fa fa-bank', title: 'payouts', route: 'payouts', opened: false, admin: true }],
 			user: ''
 		};
 	},

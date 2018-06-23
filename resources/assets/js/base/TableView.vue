@@ -44,7 +44,7 @@
 			    		v-show="!loading">	
 			    </vuetable>
 			</div>
-		    <div class="row align-items-center">
+		    <div class="row align-items-center vue-pagination-row">
 		    	<div class="col-sm">
 				    <vuetable-pagination-info ref="paginationInfo"
 		    		:info-template="$options.filters.trans('pagination.info')">

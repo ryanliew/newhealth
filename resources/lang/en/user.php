@@ -45,5 +45,12 @@ return [
     'documents_verified' => 'Documents verified',
     'documents_rejected' => 'Documents rejected',
     'reminder_sent' => "Reminder sent",
-    'legal_updated' => 'User legal status updated successfully'
+    'legal_updated' => 'User legal status updated successfully',
+
+    'level_instruction' => "Refer :target direct growers. :left to go.",
+    'level_instruction_2' => "Group sales of :target subscriptions. :left to go.",
+
+    'instruction_issued_to_lawyer' => "Instruction issued to lawyer",
+    "sales_agreement_ready_for_execution" => "Sales agreement ready for execution",
+    "sales_agreement_executed" => "Sales agreement executed"
 ];

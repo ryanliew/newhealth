@@ -57,4 +57,15 @@ class HomeController extends Controller
         Auth::logout();
         return redirect()->route('register');
     }
+
+    public function dashboard(User $user)
+    {
+        $data = array();
+
+        $data['trees_sold'] = User::sum("tree_count");
+
+        $data['descendants'] = $user->descendants;
+
+        return json_encode($data);
+    }
 }

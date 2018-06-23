@@ -47,7 +47,7 @@
 		},
 
 		mounted() {
-			this.$events.on('view', data => this.view(data));
+			this.$events.on('viewUser', data => this.view(data));
 			this.$events.on('remind', data => this.remind(data));
 			this.$events.on('previous', data => this.previous(data));
 			this.$events.on('next', data => this.next(data));
