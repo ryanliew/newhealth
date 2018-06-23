@@ -74961,6 +74961,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	},
 	mounted: function mounted() {
 		this.user = this.selectedUser ? this.selectedUser : window.user;
+		this.$refs.documents.setKycDocs();
 		this.getContacts();
 
 		if (this.getParameterByName('document')) {
@@ -75005,6 +75006,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		setUser: function setUser(response) {
 			this.user = response.data;
+			this.$refs.documents.setKycDocs();
 		},
 		back: function back() {
 			this.$emit('back');
@@ -75274,19 +75276,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			user: window.user
 		};
 	},
-	mounted: function mounted() {
-		if (this.selectedUser.kyc_identity) {
-			this.form.identity = this.selectedUser.kyc_identity;
-			this.form.nominee_identity = this.selectedUser.kyc_nominee_identity;
-			this.form.bank_statement = this.selectedUser.kyc_bank_statement;
-			this.form.residence_proof = this.selectedUser.kyc_residence_proof;
-
-			this.identity = { name: this.selectedUser.kyc_identity, src: "storage/" + this.selectedUser.kyc_identity };
-			this.nomineeIdentity = { name: this.selectedUser.kyc_nominee_identity, src: "storage/" + this.selectedUser.kyc_nominee_identity };
-			this.bankStatement = { name: this.selectedUser.kyc_bank_statement, src: "storage/" + this.selectedUser.kyc_bank_statement };
-			this.residenceProof = { name: this.selectedUser.kyc_residence_proof, src: "storage/" + this.selectedUser.kyc_residence_proof };
-		}
-	},
+	mounted: function mounted() {},
 
 
 	methods: {
@@ -75339,6 +75329,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.verifyForm.post('/api/user/' + this.selectedUser.id + '/kyc/verify').then(function (response) {
 				return _this3.onSuccess(response);
 			});
+		},
+		setKycDocs: function setKycDocs() {
+			console.log("Setting docs");
+			if (this.selectedUser.kyc_identity) {
+				this.form.identity = this.selectedUser.kyc_identity;
+				this.form.nominee_identity = this.selectedUser.kyc_nominee_identity;
+				this.form.bank_statement = this.selectedUser.kyc_bank_statement;
+				this.form.residence_proof = this.selectedUser.kyc_residence_proof;
+
+				this.identity = { name: this.selectedUser.kyc_identity, src: "storage/" + this.selectedUser.kyc_identity };
+				this.nomineeIdentity = { name: this.selectedUser.kyc_nominee_identity, src: "storage/" + this.selectedUser.kyc_nominee_identity };
+				this.bankStatement = { name: this.selectedUser.kyc_bank_statement, src: "storage/" + this.selectedUser.kyc_bank_statement };
+				this.residenceProof = { name: this.selectedUser.kyc_residence_proof, src: "storage/" + this.selectedUser.kyc_residence_proof };
+			}
+		}
+	},
+
+	watch: {
+		selectedUser: function selectedUser() {
+			this.setKycDocs();
 		}
 	}
 });
@@ -78521,7 +78531,10 @@ var render = function() {
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("user-documents", { attrs: { selectedUser: _vm.user } }),
+                  _c("user-documents", {
+                    ref: "documents",
+                    attrs: { selectedUser: _vm.user }
+                  }),
                   _vm._v(" "),
                   _vm.user.company_name
                     ? _c("div", { staticClass: "row" }, [
@@ -78921,7 +78934,31 @@ var render = function() {
           !_vm.isViewing && !_vm.isPurchasing
             ? _c("div", [
                 _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-sm-4" }, [
+                  _vm.user.is_admin
+                    ? _c("div", { staticClass: "col-sm" }, [
+                        _c("article", { staticClass: "statistic-box green" }, [
+                          _c("div", [
+                            _c("div", { staticClass: "number" }, [
+                              _vm._v(_vm._s(_vm.trees_sold))
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "caption" }, [
+                              _c("div", [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm._f("trans")(
+                                      "dashboard.trees_sold_global"
+                                    )
+                                  )
+                                )
+                              ])
+                            ])
+                          ])
+                        ])
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm" }, [
                     _c("article", { staticClass: "statistic-box yellow" }, [
                       _c("div", [
                         _c("div", { staticClass: "number" }, [
@@ -78939,7 +78976,7 @@ var render = function() {
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-4" }, [
+                  _c("div", { staticClass: "col-sm" }, [
                     _c("article", { staticClass: "statistic-box red" }, [
                       _c("div", [
                         _c("div", { staticClass: "number" }, [
@@ -78967,7 +79004,7 @@ var render = function() {
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-4" }, [
+                  _c("div", { staticClass: "col-sm" }, [
                     _c("article", { staticClass: "statistic-box purple" }, [
                       _c("div", [
                         _vm.user.is_std

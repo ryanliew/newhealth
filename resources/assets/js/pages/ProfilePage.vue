@@ -238,7 +238,7 @@
 						</div>
 					</div>
 				</div>
-				<user-documents :selectedUser="user"></user-documents>
+				<user-documents :selectedUser="user" ref="documents"></user-documents>
 				<div class="row" v-if="user.company_name">
 					<div class="col-sm">
 						<div class="card">
@@ -403,6 +403,7 @@
 
 		mounted() {
 			this.user = this.selectedUser ? this.selectedUser : window.user;
+			this.$refs.documents.setKycDocs();
 			this.getContacts();
 
 			if(this.getParameterByName('document'))
@@ -447,6 +448,7 @@
 
 			setUser(response) {
 				this.user = response.data;
+				this.$refs.documents.setKycDocs();
 			},
 
 			back() {
