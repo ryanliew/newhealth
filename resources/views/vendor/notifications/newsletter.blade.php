@@ -73,7 +73,7 @@
         <tr>
             <td style="width:{{ (1170 - $post->thumbnail_table_width) / 2 }}px;"></td>
             <td>
-                <table style="width: {{ $post->thumbnail_table_width }}px;text-align:center">
+                <table style="width: {{ $post->thumbnail_table_width }}px;text-align:justify">
                     <tr style="vertical-align: middle;">
                         @if($post->left_photo)
                         <td >
