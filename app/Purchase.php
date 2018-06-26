@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Notifications\PaymentRejectedNotification;
+use App\Notifications\PurchaseCompleteNotification;
 use App\Transaction;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
@@ -47,6 +48,9 @@ class Purchase extends Model
         {
             $user->adjust_level();
         }
+        
+        // Notify user to download receipt
+        $this->user->notify(new PurchaseCompleteNotification($this));
 
         return $this;
     }

@@ -261,4 +261,16 @@ class ExportController extends Controller
             return new PayoutExports($collection, strtolower($date->format("M_Y")));
         }
     }
+
+    public function receipt(Purchase $purchase)
+    {
+        
+        $title = 'receipt';
+
+        // return view('pdf.transactions', ['transactions' => $transactions, 'date' => $date, 'user' => $user]);
+
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadView('pdf.receipt', ['purchase' => $purchase, 'user' => $purchase->user]);
+        return $pdf->download($title . '.pdf');
+    }
 }

@@ -51,6 +51,14 @@
 			this.$events.on('remind', data => this.remind(data));
 			this.$events.on('previous', data => this.previous(data));
 			this.$events.on('next', data => this.next(data));
+
+			if(this.getParameterByName('id')) {
+				window.events.$on('table-loaded', function(){
+					let data = _.filter(this.$refs.users.$refs.vuetable.tableData, function(user) { return user.id == this.getParameterByName('id'); }.bind(this));
+					if(data.length > 0)
+						this.view(data[0]);
+				}.bind(this));
+			}
 		},
 
 		methods: {

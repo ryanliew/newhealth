@@ -8,7 +8,7 @@
 						:searchables="searchables"
 						:dateFilterable="true"
 						dateFilterKey="transactions.date"
-						:hasBack="true"
+						:hasBack="cancelable"
 						:filterMonth="filterMonth"
 						@back="back"
 						:canExportPDF="true"
@@ -22,7 +22,7 @@
 
 <script>
 	export default {
-		props: ['userId', 'filterMonth'],
+		props: ['userId', 'filterMonth', 'cancelable'],
 
 		data() {
 			return {

@@ -50,7 +50,7 @@
 			}.bind(this));
 
 			this.$events.on('view', data => this.view(data));
-			
+			this.$events.on('receipt', data => this.receipt(data));
 			if(this.getParameterByName('new') == '1') {
 				this.cancelable = false;
 				this.isPurchasing = true;
@@ -94,6 +94,10 @@
 			view(purchase) {
 				this.selectedPurchase = purchase;
 				this.isPurchasing = true;
+			},
+
+			receipt(purchase){
+				window.location.href = "/exports/receipt/" + purchase.id;
 			}
 		},
 

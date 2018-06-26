@@ -12,7 +12,7 @@
 	<h3>Payouts for RM</h3>
 	<table class="has-border">
 		<thead>
-			<tr>
+			<tr class="with-bg">
 				<th>Name</th>
 				<th>Bank name</th>
 				<th>Bank SORT/SWIFT Code</th>

@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Address;
 use App\Notifications\IdentityVerificationDocumentsRejectedNotification;
+use App\Notifications\KYCUpdatedNotification;
 use App\Notifications\RemindUploadDocumentNotification;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
@@ -257,6 +259,7 @@ class UserController extends Controller
             "id_status" => "pending_verification"
         ]);
 
+        Notification::send($user, new KYCUpdatedNotification($user));
         return json_encode(['message' => 'user.documents_success']);
     }
 

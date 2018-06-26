@@ -33,6 +33,9 @@ return [
     'update' => 'Update',
     'cancel' => 'Cancel update',
     'updated' => 'Purchase updated',
-    'rejected' => 'Rejected'
+    'rejected' => 'Rejected',
+
+    'receipt_description' => 'Deposit for (:number) tree purchase',
+    'download_receipt' => "Download receipt"
     
 ];

@@ -55,7 +55,6 @@
 		},
 
 		methods: {
-
 			tableTitle(value) {
 				return this.$options.filters.trans(value);
 			},

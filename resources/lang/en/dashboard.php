@@ -15,6 +15,8 @@ return [
     'grower_level' => 'Grower level',
     'next_grower_level' => 'Next grower level',
     'my_downlines' => 'My downlines',
-    'my_account_status' => 'My account status'
+    'my_account_status' => 'My account status',
+    'date' => "Date",
+    "latest_news" => "Latest news"
     
 ];

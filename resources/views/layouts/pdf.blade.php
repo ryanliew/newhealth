@@ -130,7 +130,7 @@
 				text-align: center;
 			}
 
-			th, .with-bg {
+			.with-bg {
 				background-color: #b4c5e7;
 			}
 
@@ -148,8 +148,12 @@
 				border: 2px solid black;
 			}
 
-			.title {
+			.title, .text-center {
 				text-align: center;
+			}
+
+			tfoot {
+				padding-top:300px;
 			}
 
 

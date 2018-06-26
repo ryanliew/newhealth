@@ -17,7 +17,7 @@ return [
     'users' => '用户',
     'organization' => '组织',
     'packages' => '配套',
-    'transactions' => '交易',
+    'transactions' => '佣金',
     'payouts' => '支出',
     'news' => '最新消息',
     'materials' => "销售辅助"
