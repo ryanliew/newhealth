@@ -37,6 +37,15 @@
 		                    </div>
 		                </article>
 		            </div><!--.col-->
+		            <div class="col-sm">
+		            	<article class="statistic-box green">
+		                    <div>
+		                        <div class="number" v-if="user.is_std">{{ user.unpaid_commission_std | currency_std }}</div>
+		                        <div class="number" v-else>{{ user.unpaid_commission | currency }}</div>
+		                        <div class="caption"><div>{{ 'dashboard.accrued_commission' | trans }}</div></div>
+		                    </div>
+		                </article>
+		            </div>
 		        </div>
 		        <div class="row">
 		        	<div class="col-md-6 dashboard-column">

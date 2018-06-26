@@ -23,7 +23,7 @@ class User extends Authenticatable
     protected $guarded = [];
 
 
-    protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std'];
+    protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std', 'unpaid_commission', 'unpaid_commission_std'];
 
 
     protected $with = ['package', 'addresses', 'contacts'];
@@ -243,6 +243,16 @@ class User extends Authenticatable
     public function getDescendantsCountAttribute()
     {
         return $this->descendants()->count();
+    }
+
+    public function getUnpaidCommissionAttribute()
+    {
+        return $this->transactions()->where("is_std", false)->where("payout_status", false)->sum("amount");
+    }
+
+    public function getUnpaidCommissionStdAttribute()
+    {
+        return $this->transactions()->where("is_std", true)->where("payout_status", false)->sum("amount");
     }
 
     // Reset password
