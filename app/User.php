@@ -177,7 +177,7 @@ class User extends Authenticatable
                 $children = 10;
                 break;
             case 1:
-                $children = 5;
+                $children = 3;
                 break;
         }
 
@@ -208,11 +208,11 @@ class User extends Authenticatable
 
         $user_level = 1;
 
-        if($number_of_group_sales >= 200 && $number_of_children >= 10)
+        if($number_of_group_sales >= 200 && $number_of_children >= 20)
         {
             $user_level = 4;
         }
-        else if($number_of_group_sales >= 100 && $number_of_children >= 5)
+        else if($number_of_group_sales >= 100 && $number_of_children >= 10)
         {
             $user_level = 3;
         }

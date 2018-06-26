@@ -292,7 +292,7 @@ class UserController extends Controller
 
     public function forward_legal(User $user)
     {
-        $new_status = '';
+        $new_status = 'verified';
         switch($user->id_status) {
             case 'verified':
                 $new_status = 'instruction_issued';
@@ -312,7 +312,7 @@ class UserController extends Controller
 
     public function rewind_legal(User $user)
     {
-        $new_status = '';
+        $new_status = 'verified';
         switch($user->id_status) {
             case 'complete':
                 $new_status = 'execution_ready';
