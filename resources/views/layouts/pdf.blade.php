@@ -46,7 +46,7 @@
 				text-transform: uppercase;
 				font-weight: bold;
 				font-size: 25px;
-				width: 50%;
+				width: 65%;
 				float: left;
 				text-align: left;
 				position: relative;
@@ -54,16 +54,22 @@
 			}
 
 			.header-image {
-				width: 50%;
+				width: 30%;
 				float: left;
 				position: relative;
 				padding: 0 15px;
 				margin-bottom: 40px;
 			}
 
-			.company-details, .extra-details {
+			.company-details {
 				float: left;
-				width: 50%;
+				width: 75%;
+				padding: 0 15px;
+			}
+
+			.extra-details {
+				float: left;
+				width: 20%;
 				padding: 0 15px;
 			}
 
