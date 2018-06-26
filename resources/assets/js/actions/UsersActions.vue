@@ -6,12 +6,12 @@
                     <i class="fa fa-eye"></i>
                 </span>
             </button>
-            <button type="button" class="btn btn-warning" @click="itemAction('previous', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Set to previous legal step" v-if="!(rowData.id_status == 'pending' || rowData.id_status == 'pending_verification' || rowData.id_status == 'rejected' || rowData.id_status == 'verified') && rowData.has_verified_sale">
+            <button type="button" class="btn btn-warning" :disabled="loadingLeft" @click="itemAction('previous', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Set to previous legal step" v-if="!(rowData.id_status == 'pending' || rowData.id_status == 'pending_verification' || rowData.id_status == 'rejected' || rowData.id_status == 'verified') && rowData.has_verified_sale">
                 <span class="icon" v-html="legalLeftButtonContent">
                     <i class="fa fa-arrow-left"></i>
                 </span>
             </button>
-            <button type="button" class="btn btn-warning" @click="itemAction('next', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Set to next legal step" v-if="!(rowData.id_status == 'pending' || rowData.id_status == 'pending_verification' || rowData.id_status == 'rejected' || rowData.id_status == 'complete') && rowData.has_verified_sale">
+            <button type="button" class="btn btn-warning" :disabled="loadingRight" @click="itemAction('next', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Set to next legal step" v-if="!(rowData.id_status == 'pending' || rowData.id_status == 'pending_verification' || rowData.id_status == 'rejected' || rowData.id_status == 'complete') && rowData.has_verified_sale">
                 <span class="icon" v-html="legalRightButtonContent">
                     <i class="fa fa-arrow-right"></i>
                 </span>
@@ -58,8 +58,8 @@ export default {
     mounted() {
         this.user = window.user;
         this.$events.on('loading', data => this.setLoading(data));
-        this.$events.on('loading-left', data => this.setLoadingLeft(data));
-        this.$events.on('loading-right', data => this.setLoadingRight(data));
+        this.$events.on('loading-prev', data => this.setLoadingLeft(data));
+        this.$events.on('loading-next', data => this.setLoadingRight(data));
         this.$events.on('loading-complete', data => this.setLoadingComplete(data));
     },
 
@@ -69,6 +69,7 @@ export default {
 
     methods: {
         itemAction(action, data, index){
+            console.log("firing " + action);
             this.$events.fire(action, data);            
         },
 

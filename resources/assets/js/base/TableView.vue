@@ -87,7 +87,6 @@
 		},
 
 		destroyed: function () {
-			console.log("Dismounted");
 			this.$events.off('filter-set');
 			this.$events.off('filter-reset');
 		},
@@ -109,7 +108,6 @@
 			},
 
 			mountEvents() {
-				console.log("Mounted");
 				this.$events.$on('filter-set', eventData => this.onFilterSet(eventData));
 				this.$events.$on('filter-reset', e => this.onFilterReset());
 			},
