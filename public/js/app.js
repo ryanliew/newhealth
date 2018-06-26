@@ -49537,7 +49537,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
 
         window.events.$on('flash', function (data) {
-            console.log("Flashing data");
             _this.flash(data);
         });
     },
@@ -50240,7 +50239,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 	destroyed: function destroyed() {
-		console.log("Dismounted");
 		this.$events.off('filter-set');
 		this.$events.off('filter-reset');
 	},
@@ -50263,7 +50261,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		mountEvents: function mountEvents() {
 			var _this = this;
 
-			console.log("Mounted");
 			this.$events.$on('filter-set', function (eventData) {
 				return _this.onFilterSet(eventData);
 			});
@@ -88143,10 +88140,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.$events.on('loading', function (data) {
             return _this.setLoading(data);
         });
-        this.$events.on('loading-left', function (data) {
+        this.$events.on('loading-prev', function (data) {
             return _this.setLoadingLeft(data);
         });
-        this.$events.on('loading-right', function (data) {
+        this.$events.on('loading-next', function (data) {
             return _this.setLoadingRight(data);
         });
         this.$events.on('loading-complete', function (data) {
@@ -88160,6 +88157,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     methods: {
         itemAction: function itemAction(action, data, index) {
+            console.log("firing " + action);
             this.$events.fire(action, data);
         },
         setLoading: function setLoading(data) {
@@ -88239,6 +88237,7 @@ var render = function() {
                   staticClass: "btn btn-warning",
                   attrs: {
                     type: "button",
+                    disabled: _vm.loadingLeft,
                     "data-toggle": "tooltip",
                     "data-placement": "bottom",
                     title: "Set to previous legal step"
@@ -88276,6 +88275,7 @@ var render = function() {
                   staticClass: "btn btn-warning",
                   attrs: {
                     type: "button",
+                    disabled: _vm.loadingRight,
                     "data-toggle": "tooltip",
                     "data-placement": "bottom",
                     title: "Set to next legal step"

@@ -18,7 +18,6 @@
             }
 
             window.events.$on('flash', data => {
-                console.log("Flashing data");
                 this.flash(data);
             });
         },
