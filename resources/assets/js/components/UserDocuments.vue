@@ -225,6 +225,7 @@
 
 			onSuccess(response) {
 				flash(this.$options.filters.trans(response.message));
+				this.updateDocument = false;
 				this.isConfirmingReject = false;
 				this.isConfirmingVerify = false;
 				this.back();

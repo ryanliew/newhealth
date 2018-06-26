@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Country;
 use App\Package;
+use App\Post;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -65,6 +66,8 @@ class HomeController extends Controller
         $data['trees_sold'] = User::sum("tree_count");
 
         $data['descendants'] = $user->descendants;
+
+        $data['posts'] = Post::latest()->limit(5)->get();
 
         return json_encode($data);
     }

@@ -8,7 +8,7 @@ return [
     |--------------------------------------------------------------------------
     */
 
-    'transactions' => 'Transaction',
+    'transactions' => 'Commissions',
     "created_at" => "Date",
     "type" => "Type",
     "description" => "Description", 

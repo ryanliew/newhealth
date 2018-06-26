@@ -40,6 +40,10 @@ return [
     'update_document' => '修改文件',
 
     'document_required' => "个人资料或实名认证文件不完整",
-    'document_required_message' => "至今为止，您还未提供完整的个人资料或实名认证文件。请即刻登入平台完善及提交所需资料或文件。"
+    'document_required_message' => "至今为止，您还未提供完整的个人资料或实名认证文件。请即刻登入平台完善及提交所需资料或文件。",
+
+    'purchase_verified' => "购买完成",
+    "purchase_verified_message" => "您的付款已核对，您可以通过一下按钮或平台的购买页面获取您的收据",
+    "download_receipt" => "下载收据"
     
 ];

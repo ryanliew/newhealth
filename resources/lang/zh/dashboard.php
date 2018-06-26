@@ -15,6 +15,8 @@ return [
     'grower_level' => '聘阶',
     'next_grower_level' => '下个聘阶',
     'my_downlines' => '我的下线',
-    'my_account_status' => '我的账号'
+    'my_account_status' => '我的账号',
+    'date' => "日期",
+    "latest_news" => "最新消息"
     
 ];

@@ -22,13 +22,13 @@
 
         <link rel="stylesheet" href="/css/separate/elements/steps.min.css">
         <link href="./css/start-ui.css?v=1.2" rel="stylesheet" />
-        <link href="./css/app.css?v=1.1" rel="stylesheet" />
+        <link href="./css/app.css?v=1.2" rel="stylesheet" />
     </head>
     <body class="with-side-menu-compact">
         <div id="app"></div>
        
         <script src="./js/form.js?v=1.2"></script> 
-        <script src="./js/app.js?v=1.39"></script>
+        <script src="./js/app.js?v=1.4"></script>
         <script src="./js/lib/tether/tether.min.js"></script> 
         <script src="./js/plugins.js"></script>
         <script src="./js/start-ui.js"></script>

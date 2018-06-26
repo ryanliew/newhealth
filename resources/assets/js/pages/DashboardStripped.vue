@@ -187,7 +187,7 @@
 		        </div>
 		    </div>
 	        <purchase :cancelable="true" :selectedPurchase="selectedPurchase" v-if="isPurchasing" @back="back"></purchase>
-	        <ProfilePage :cancelable="true" :selectedUser="selectedUser" v-if="isViewing" @back="back"></ProfilePage>
+	        
 	    </transition>
 
 	    <transition name="slide-fade" mode="out-in">
@@ -199,13 +199,12 @@
 <script>	
 	import ReferralLink from "../components/ReferralLink.vue";
 	import Purchase from "../components/Purchase.vue";
-	import ProfilePage from "./ProfilePage.vue";
 	import Post from "../components/Post.vue";
 
 	export default {
 		props: ['viewingUser'],
 
-		components: { ReferralLink, Purchase, ProfilePage, Post },
+		components: { ReferralLink, Purchase, Post },
 
 		data() {
 			return {

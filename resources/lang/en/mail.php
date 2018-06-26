@@ -35,10 +35,18 @@ return [
     'payment_rejected' => "Payment rejected",
     'payment_rejected_message' => "One of your recent payment has been rejected. Please click the button below to act on it as soon as possible",
     'view_payment' => "View payment",
+
     'document_rejected' => "Identity verification documents rejected",
     'document_rejected_message' => 'Your identity verification documents has been rejected. Please click the button below to submit a revision as soon as possible.',
     'update_document' => 'Login',
     'document_required' => "Identity verification documents required",
-    'document_required_message' => "We noticed that your personal information is incomplete. Kindly update all required information and submit required identity verification documents at grower's portal for account verification."
+    'document_required_message' => "We noticed that your personal information is incomplete. Kindly update all required information and submit required identity verification documents at grower's portal for account verification",
+
+    'purchase_verified' => "Purchase completed",
+    "purchase_verified_message" => "Your purchase has been verified, click the button below to download your receipt. Alternatively, you can also download this receipt at grower's portal purchase page",
+    "download_receipt" => "Download receipt",
+
+    "documents_updated" => "Identity Verification Documents updated",
+    "documents_updated_message" => ":name has updated his Identity Verification Documents. Press the button below to check it out"
     
 ];

@@ -4,6 +4,7 @@
 			{{ 'tree.tree' | trans }}
 		</div>
 		<div class="card-body">
+			<loader v-if="loading"></loader>
 			<div class="row">
 				<div class="col-12 m-auto">
 					<div class="tree-responsive m-auto p-2">
@@ -22,17 +23,20 @@
 	import GenoRow from "../components/GenoRow.vue";
 
 	export default {
-		props: [''],
+		props: ['viewingUser'],
 
 		components: { GenoRow },
 
 		data() {
 			return {
-				tree: ''
+				tree: '',
+				user: '',
+				loading: true
 			};
 		},
 
 		mounted() {
+			this.user = this.viewingUser ? this.viewingUser : window.user;
 			this.getTree();
 		},
 
@@ -44,12 +48,16 @@
 
 			setTree(response) {
 				this.tree = response.data;
+				this.loading = false;
 			}
 		},
 
 		computed: {
 			url() {
-				return window.user.is_admin ? "/api/admin/tree" :"/api/user/" + window.user.id + "/tree";
+				if(this.viewingUser)
+					return "/api/user/" + this.user.id + "/tree"
+
+				return this.user ? "/api/admin/tree" :"/api/user/" + this.user.id + "/tree";
 			}
 		}		
 	}

@@ -17,8 +17,9 @@ return [
     'users' => 'Users',
     'organization' => 'Organization',
     'packages' => 'Packages',
-    'transactions' => 'Transactions',
+    'transactions' => 'Commissions',
     'payouts' => 'Payouts',
     'news' => 'News',
-    'materials' => "Materials"
+    'materials' => "Materials",
+    'exit' => "Exit"
 ];
