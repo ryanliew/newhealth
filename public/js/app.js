@@ -80946,7 +80946,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		url: function url() {
 			if (this.viewingUser) return "/api/user/" + this.user.id + "/tree";
 
-			return this.user ? "/api/admin/tree" : "/api/user/" + this.user.id + "/tree";
+			return this.user ? "/api/user/" + this.user.id + "/tree" : "/api/admin/tree";
 		}
 	}
 });
