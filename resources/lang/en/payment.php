@@ -25,5 +25,13 @@ return [
     'paid_on' => "Paid on",
     'reject' => "Reject",
     'reject_note' => "Reject reason",
+
+    "bank_details" => "Bank Details",
+    "beneficiary_name" => "Beneficiary Name",
+    "beneficiary_address" => "Beneficiary Address",
+    "beneficiary_bank" => "Beneficiary Bank",
+    "bank_address" => "Bank Address",
+    "bank_account_no" => "Account No.",
+    "bank_swift" => "SWIFT Code"
     
 ];

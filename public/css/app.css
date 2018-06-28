@@ -11319,3 +11319,26 @@ right connector from last child*/
   text-decoration: underline !important;
 }
 
+.payment-details-grid {
+  grid-template-columns: 15% 35% 15% 35%;
+  grid-template-rows: auto auto auto;
+  display: grid;
+  margin-bottom: 15px;
+}
+
+.payment-details-grid div:not(.text-center) {
+  font-weight: bold;
+  background: #ccc;
+}
+
+.payment-details-grid div {
+  padding: 10px 5px;
+}
+
+@media screen and (max-width: 590px) {
+  .payment-details-grid {
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto auto auto auto auto;
+  }
+}
+

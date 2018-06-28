@@ -26,6 +26,14 @@ return [
     'reject' => "驳回",
     'reject_note' => "备注",
 
+    "bank_details" => "汇款详情",
+    "beneficiary_name" => "收款账户名称",
+    "beneficiary_address" => "收款账户地址",
+    "beneficiary_bank" => "收款银行",
+    "bank_address" => "收款银行地址",
+    "bank_account_no" => "收款账号",
+    "bank_swift" => "银行国际代码"
+
 
     
 ];
