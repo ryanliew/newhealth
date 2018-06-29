@@ -20,6 +20,8 @@ return [
     'transactions' => '佣金',
     'payouts' => '支出',
     'news' => '最新消息',
-    'materials' => "销售辅助"
+    'trees' => "种植管理",
+    'materials' => "销售辅助",
+    'exit' => '离开'
 
 ];

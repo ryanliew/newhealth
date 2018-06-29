@@ -14,6 +14,7 @@ import TransactionPage from './pages/TransactionPage.vue';
 import PayoutReportPage from './pages/PayoutReportPage.vue';
 import PostPage from './pages/PostPage.vue';
 import MarketingMaterialPage from './pages/MarketingMaterialPage.vue';
+import TreeManagementPage from './pages/TreeManagementPage.vue';
 import translations from './vue-translations.js';
 
 
@@ -83,7 +84,8 @@ const routes = [
 	{ path: '/transactions', component: TransactionPage },
 	{ path: '/payouts', component: PayoutReportPage },
 	{ path: '/news', component: PostPage },
-	{ path: '/materials', component: MarketingMaterialPage }
+	{ path: '/materials', component: MarketingMaterialPage },
+	{ path: '/trees', component: TreeManagementPage }
 ];
 
 const router = new VueRouter({ routes, linkActiveClass: 'opened' });

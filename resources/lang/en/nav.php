@@ -21,5 +21,6 @@ return [
     'payouts' => 'Payouts',
     'news' => 'News',
     'materials' => "Materials",
+    'trees' => "Tree management",
     'exit' => "Exit"
 ];
