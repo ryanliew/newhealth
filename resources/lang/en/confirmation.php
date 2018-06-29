@@ -16,6 +16,7 @@ return [
     'reject_payment' => "Payment will be rejected and grower will be notified. Are you sure?",
     'verify_user' => 'This will verify the identity verification documents. Are you sure?',
     'reject_user' => 'This will reject the identity verification documents and grower will be notified. Are you sure?',
-    'remind_user_identification' => "Grower will be notified. Are you sure?"
+    'remind_user_identification' => "Grower will be notified. Are you sure?",
+    "change_legal_status" => "This will change the legal status for the grower. Are you sure?"
     
 ];

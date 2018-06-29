@@ -293,22 +293,10 @@ class UserController extends Controller
         return json_encode(['message' => 'user.reminder_sent']);
     }
 
-    public function forward_legal(User $user)
+    public function update_legal(User $user)
     {
-        $new_status = 'verified';
-        switch($user->id_status) {
-            case 'verified':
-                $new_status = 'instruction_issued';
-                break;
-            case 'instruction_issued': 
-                $new_status = "execution_ready";
-                break;
-            case 'execution_ready':
-                $new_status = 'complete';
-                break;
-        }
 
-        $user->update(['id_status' => $new_status]);
+        $user->update(['id_status' => request()->status]);
 
         return json_encode(['message' => 'user.legal_updated']);
     }

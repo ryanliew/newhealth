@@ -54,8 +54,7 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::post('/kyc/reject', 'UserController@reject_documents');
 		Route::post('/kyc/verify', 'UserController@verify_documents');
 		Route::post('/kyc/remind', 'UserController@remind_documents');
-		Route::post('/legal/next', 'UserController@forward_legal');
-		Route::post('/legal/previous', 'UserController@rewind_legal');
+		Route::post('/legal', 'UserController@update_legal');
 		Route::post('/kyc', 'UserController@update_documents');
 		Route::get('/', 'UserController@show');
 	});
