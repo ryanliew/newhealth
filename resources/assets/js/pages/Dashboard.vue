@@ -191,6 +191,26 @@
 											v-show="!isViewing">
 								</table-view>
 							</transition>
+							<confirmation
+					            message="confirmation.change_legal_status"
+					            :loading="isLegalLoading"
+					            @confirmed="submitLegal"
+					            @canceled="isChangingStatus = false"
+					            v-if="isChangingStatus">
+
+					            <div class="mt-2">
+						            <selector-input
+						            	:potentialData="legalStatus"
+						            	:defaultData="selectedLegalStatus"
+						            	v-model="selectedLegalStatus"
+						            	label="Status"
+						            	:required="true"
+						            	:unclearable="true"
+						            	:error="statusForm.errors.get('status')"
+						            	>
+						            </selector-input>
+						        </div>
+					        </confirmation>
 		        		</section>
 		        	</div>
 		        </div>
@@ -240,7 +260,18 @@
 				selectedPost: '',
 				purchaseUrl: "/api/admin/purchases/pending",
 				userUrl: "/api/admin/users/pending",
-				posts: []
+				posts: [],
+				statusForm: new Form({
+					status: ''
+				}),
+				isLegalLoading: false,
+				selectedLegalStatus: {label: "Instruction issued to lawyer", value: "instruction_issued"},
+				isChangingStatus: false,
+				legalStatus: [
+					{label: "Instruction issued to lawyer", value: "instruction_issued"},
+					{label: "Sales agreement ready for execution", value: "execution_ready"},
+					{label: "Sales agreement executed", value: "complete"},
+				]
 			};
 		},
 
@@ -251,7 +282,7 @@
 
 			this.$events.on('viewUser', data => this.viewUser(data));
 			this.$events.on('remind', data => this.remind(data));
-			this.$events.on('previous', data => this.previous(data));
+			this.$events.on('legal', data => this.legal(data));
 			this.$events.on('next', data => this.next(data));
 		},
 
@@ -314,20 +345,25 @@
 					.then(response => this.onSuccess(response));
 			},
 
-			previous(user){
-				this.$events.fire('loading-prev', user.id);
-				axios.post('/api/user/' + user.id + '/legal/previous')
-					.then(response => this.onStepSuccess(response));
+			legal(user) {
+				this.selectedUser = user;
+				let selectedLegalStatus = _.filter(this.legalStatus, function(status){ return user.id_status == status.value;});
+				if(selectedLegalStatus.length > 0) this.selectedLegalStatus = selectedLegalStatus[0];
+				this.isChangingStatus = true;
 			},
 
-			next(user){
-				this.$events.fire('loading-next', user.id);
-				axios.post('/api/user/' + user.id + '/legal/next')
+			submitLegal() {
+				this.isLegalLoading = true;
+				this.statusForm.status = this.selectedLegalStatus.value;
+				this.statusForm.post("/api/user/" + this.selectedUser.id + "/legal")
 					.then(response => this.onStepSuccess(response));
 			},
 
 			onStepSuccess(response) {
+				response.data = { message: response.message };
 				this.onSuccess(response);
+				this.isChangingStatus = false;
+				this.isLegalLoading = false;
 				this.$refs.users.refreshTable();
 			},
 

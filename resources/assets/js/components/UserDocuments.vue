@@ -27,7 +27,7 @@
 					<button class="btn btn-primary" @click="updateDocument = true" v-if="!updateDocument">{{ 'user.update_document' | trans }}</button>
 					<button class="btn btn-danger" @click="updateDocument = false" v-else>{{ 'user.cancel_update' | trans }}</button>
 				</div>
-				<div class="col-auto" v-if="user.is_admin && selectedUser.id_status !== 'verified'">
+				<div class="col-auto" v-if="user.is_admin && shouldShow">
 					<button class="btn btn-success" @click="isConfirmingVerify = true" v-if="selectedUser.id_status == 'pending_verification'">{{ 'user.verify' | trans }}</button>
 					<button class="btn btn-danger" @click="isConfirmingReject = true" v-if="selectedUser.id_status == 'pending_verification'">{{ 'user.reject' | trans }}</button>
 				</div>
@@ -181,12 +181,13 @@
 				residenceProof:  {name: 'No file selected', src: ''},
 				identity: {name: 'No file selected', src: ''},
 				updateDocument: false,
-				user: window.user
+				user: window.user,
+				shouldShow: true
 			};
 		},
 
 		mounted() {
-			
+			this.shouldShow = this.selectedUser.id_status !== 'verified';
 		},
 
 		methods: {
@@ -232,11 +233,13 @@
 			},
 
 			submitReject() {
+				this.shouldShow = false;
 				this.rejectForm.post('/api/user/' + this.selectedUser.id + '/kyc/reject')
 					.then(response => this.onSuccess(response));
 			},
 
 			submitVerify() {
+				this.shouldShow = false;
 				this.verifyForm.post('/api/user/' + this.selectedUser.id + '/kyc/verify')
 					.then(response => this.onSuccess(response));
 			},
