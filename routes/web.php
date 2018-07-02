@@ -63,6 +63,3 @@ Route::get('/testmail', function() {
 	// }
 	auth()->user()->notify(new RegisterSuccess(auth()->user(), 'zh'));
 });
-Route::get('/preview', function(){
-	return view('presentation');
-});

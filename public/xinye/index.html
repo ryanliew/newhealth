@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html style=background-color:#000000;>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <link rel="apple-touch-icon-precomposed" href="data/apple-touch-icon.png"/>
+    
+    <title>新叶</title>
+    <meta charset="UTF-8">
+
+    <link href="/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
+    <link href="/img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
+    <link href="/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
+    <link href="/img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
+    <link href="/img/favicon.png" rel="icon" type="image/png">
+    <style>body {background-color:#000000;}#spr0_3f5b209e {display:none;}</style>
+
+    <style>
+		#playerView {
+			position:relative;
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+			-webkit-user-select:none;
+			-moz-user-select:none;
+			-webkit-touch-callout:none;
+			-webkit-user-drag:none;
+		}
+		#playerView * {
+			position:absolute;
+		}
+    </style>
+</head>
+<body>
+	<div id="preloader"></div>
+	<script src="data/player.js?4358158A"></script>
+    <div id="content"></div>
+    <script>
+		if (!ispring.compatibility.performRedirectIfNeeded("data/html5-unsupported.html"))
+		{
+			(function(startup){
+				function start(savedPresentationState)
+				{
+					var presInfo = "eNrdmtFu2jAUhl+l8nUA+ziJHXZFWdshVWtVqt0UhDIIg5WRKAmgCfHucxy6EnII94cLnJjfzvFHgj6R7NmSddke+h7c978GLd/v9Vsu7wWtoM9lq38f3Mqe2+vdqeDAHJabsGl2rBv43GEL1vVc005N9zROo2GSTrxAAfelSSVb1gUufIdtioMss3kaRRPdVm0+AY8H4osJRay7Z+vi7b14M7t5uokcFrLum/2AJYmJZXbXRCTYw83DVRbZbrt1GB+cMr3OKmm3OZ1U0/LK3PlpWlxJJ83pYpmf4Xm1EN+GSxL1mVfVsNcc3p6GdXPNGVbG5XSE1HE5Pa+kgyvpn5W0ak5vN5X0lVVuZ6fp4wl8MZ1X6lYcp23i7E/lDC6ulYwdTH9S9Icf/avzs8BhqYmG7GDP+j2bf8x6+Dju8bIbmAY832xtT+dgszAPR51stZxFov27+Aqn571T+83O/g8zRXDns6bIHsbUyducC/uB21ZuoFxPgHY9BQqilhCHsVP8YNjVvI2PKy5rnB0H8/LlHkeXV3LJZ2m3TM12imwRJlF27BqW8/0om7/H5r1s52Wzi8vwGQ/FahQApQCUKeg6BYlSkJQpBHUKLkrBJUzB53UKHkrBo0xB1Cn4KAWfMgWoU1AoBUWZgqxT0CgFTZmCW6cQoBQCyhS8OgXBcW3ilDn4CIcL+kjZH33EHwUukIKyQfqIQQpcIQVlh/QRhxS4RArKFqkQixS4RgrKHqkQjxS4SArKJqkQkxS4SgrKLqkQlxS4TArKNqkQmxS4TgrKPqkQnwTcJ4GyTyrEJwH3SaDskwr7P/LCH5KUfVIhPgm4TwJln1SITwLuk0DZJzXik4D7JFD2SY34JOA+CZR9UiM+CbhPAmWf1IhPAu6TQNknNeKTgPskUPZJ7TXd35W4WUrKZqkb73hL3DElZcfUqpEIbpuSsm1q3Ujkwq1wyt6pEe+UuHdKyt4ZIN4pce+UpLxzbAHs2fPtZDB8fhl8f5g8Pj08Tb693N2bdS/yPOmOOqPObrdrL7MkXa5/ZfFqky/jddaexn9GHUPifPDr09Pj6+C5eJxvaIfcRK3HKEzXxeYwnue7MI1uwvXsprfJF7FNvMbxqngQ6h9o3+i3";
+					PresentationPlayer.start(presInfo, "content", "playerView", onPlayerInit, savedPresentationState);
+					function onPlayerInit(player)
+					{
+						(player);
+					}
+				}
+		
+				if (startup)
+					startup(start);
+				else
+					start();
+			})();
+		};
+    </script>
+</body>
+</html>
