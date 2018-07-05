@@ -51,7 +51,7 @@
                         <div><img class="img-fluid" src="/img/logo.png"></div>
                         <header class="sign-title" style="font-size:18px; padding:30px 0;">{{ __('auth.register_today') }}<b>{{ __('auth.register') }}</b>{{ __('auth.en_space') }}{{ __('auth.register_message') }}</header>
                         <div class="form-group">
-                            <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.name') }}" value="{{ old('name') }}" required autofocus/>
+                            <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.full_name') }}" value="{{ old('name') }}" required autofocus/>
                             @if ($errors->has('name'))
                                 <span class="invalid-feedback">
                                     <strong>{{ $errors->first('name') }}</strong>

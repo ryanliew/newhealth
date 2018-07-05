@@ -26,6 +26,7 @@ return [
     'repeat' => 'Repeat ',
     'already_have_account' => 'Already have an account?',
     'name' => 'Name',
+    'full_name' => 'Name (as per NRiC/Passport)',
     'wechat_signup' => 'Register with WeChat',
     'facebook_signup' => 'Register with Facebook',
     'google_signup' => 'Register with Google',

@@ -11342,3 +11342,8 @@ right connector from last child*/
   }
 }
 
+.document .img-thumbnail {
+  max-height: 300px;
+  width: auto;
+}
+
