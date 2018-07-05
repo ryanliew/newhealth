@@ -48,6 +48,11 @@
                         <div><img class="img-fluid" src="/img/logo.png"></div>
                         <header class="sign-title" style="padding:30px 0; font-size:22px">{{ __('auth.hi') }}<b>{{ __('auth.grower') }}</b>, {{ __('auth.welcome_back') }}!</header>
 
+                        @if(session('message'))
+                        <div class="alert alert-primary" role="alert">
+                            {{ __( session('message')) }}
+                        </div>
+                        @endif
                         @csrf
                         
                         <div class="form-group">

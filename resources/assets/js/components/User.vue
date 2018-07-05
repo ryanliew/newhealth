@@ -15,11 +15,14 @@
 					</div>
 				</div>
 				<div class="card-body">
+					<div class="notice" v-if="!can_edit">
+						{{ 'user.lock_down_front' | trans }} <a href="mailto:support@newleaf.com.my">support@newleaf.com.my</a> {{ 'user.lock_down_back'| trans }}
+					</div>
 					<form @submit.prevent="submit" 
 						@keydown="form.errors.clear($event.target.name)" 
 						@input="form.errors.clear($event.target.name)">
-						<h4>{{ 'auth.personal_info' | trans }}</h4>
-						<div class="row">
+						<h4 v-if="can_edit">{{ 'auth.personal_info' | trans }}</h4>
+						<div class="row" v-if="can_edit">
 							<div class="col-sm">
 								<text-input v-model="form.name" 
 									:defaultValue="form.name"
@@ -51,7 +54,8 @@
 													:defaultValue="form.id_type"
 													label=""
 													name="id_type"
-													:hideLabel="true">
+													:hideLabel="true"
+													:editable="can_edit">
 								</radio-group-input>
 							</div>
 						</div>
@@ -64,7 +68,8 @@
 							:editable="user.is_admin"
 							:focus="false"
 							:hideLabel="false"
-							:error="form.errors.get('email')">
+							:error="form.errors.get('email')"
+							v-if="can_edit">
 						</text-input>
 						<div class="row">
 							<div class="col-sm" v-if="form.isChangePassword">
@@ -99,455 +104,458 @@
 								<button type="button" class="btn btn-primary" @click="form.isChangePassword = true" v-else>{{ 'user.change_password' | trans }}</button>
 							</div>
 						</div>
-						<text-input v-model="form.address_line_1" 
-							:defaultValue="form.address_line_1"
-							:required="true"
-							type="text"
-							:label="$options.filters.trans('auth.address')"
-							:placeholder="$options.filters.trans('auth.address1')"
-							name="address_line_1"
-							:editable="true"
-							:focus="false"
-							:hideLabel="false"
-							:error="form.errors.get('address_line_1')">
-						</text-input>
-						<text-input v-model="form.address_line_2" 
-							:defaultValue="form.address_line_2"
-							:required="true"
-							type="text"
-							:placeholder="$options.filters.trans('auth.address2')"
-							name="address_line_2"
-							:editable="true"
-							:focus="false"
-							:hideLabel="true"
-							:error="form.errors.get('address_line_2')">
-						</text-input>
-						<div class="row">
-							<div class="col-sm">
-								<selector-input v-model="country" :defaultData="country" 
-										:label="$options.filters.trans('auth.country')" 
-										:required="true"
-										name="country"
-										:potentialData="potentialCountry"
-										:editable="true"
-										:placeholder="$options.filters.trans('auth.country')"
-										:hideLabel="true"
-										@input="updateCountry"
-										>
-								</selector-input>
-							</div>
-							<div class="col-sm">
-								<text-input v-model="form.postcode" 
-									:defaultValue="form.postcode"
-									:required="true"
-									type="text"
-									:placeholder="$options.filters.trans('auth.postcode')"
-									name="postcode"
-									:editable="true"
-									:focus="false"
-									:hideLabel="true"
-									:error="form.errors.get('postcode')">
-								</text-input>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-sm">
-								<selector-input v-model="nationality" :defaultData="nationality" 
-										:label="$options.filters.trans('auth.nationality')" 
-										:required="true"
-										name="nationality"
-										:potentialData="potentialCountry"
-										:editable="true"
-										:placeholder="$options.filters.trans('auth.nationality')"
-										:hideLabel="false"
-										@input="updateNationality"
-										>
-								</selector-input>
-							</div>
-							<div class="col-sm">
-								<text-input v-model="form.phone" 
-									:defaultValue="form.phone"
-									:required="true"
-									type="text"
-									:label="$options.filters.trans('auth.phone')"
-									name="phone"
-									:editable="true"
-									:focus="false"
-									:hideLabel="false"
-									:error="form.errors.get('phone')">
-								</text-input>
-							</div>
-							<div class="col-sm">
-								<radio-group-input v-model="form.gender"
-													:values="['male', 'female']" 
-													:defaultValue="form.gender"
-													:label="$options.filters.trans('auth.gender')"
-													name="gender">
-								</radio-group-input>
-							</div>
-						</div>
-						<hr>
-						<h4>{{ 'auth.company_info' | trans }}</h4>
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" id="company-registration" v-model="isCompanyRegistration">
-							<label class="form-check-label" for="company-registration">{{ 'auth.registering_company' | trans }}</label>
-						</div>
-
-						<div v-if="isCompanyRegistration">
-							<text-input v-model="form.company_name" 
-									:defaultValue="form.company_name"
-									:required="true"
-									type="text"
-									:label="$options.filters.trans('auth.company_name')"
-									name="company_name"
-									:editable="true"
-									:focus="false"
-									:hideLabel="false"
-									:error="form.errors.get('company_name')">
-								</text-input>
-							<div class="row">
-								<div class="col-sm">
-									<text-input v-model="form.company_business_registration" 
-										:defaultValue="form.company_business_registration"
-										:required="true"
-										type="text"
-										:label="$options.filters.trans('auth.company_business_registration')"
-										name="company_business_registration"
-										:editable="true"
-										:focus="false"
-										:hideLabel="false"
-										:error="form.errors.get('company_business_registration')">
-									</text-input>
-								</div>
-								<div class="col-sm">
-									<text-input v-model="form.company_incorporation_date" 
-										:defaultValue="form.company_incorporation_date"
-										:required="true"
-										type="date"
-										:label="$options.filters.trans('auth.company_incorporation_date')"
-										name="company_incorporation_date"
-										:editable="true"
-										:focus="false"
-										:hideLabel="false"
-										:error="form.errors.get('company_incorporation_date')">
-									</text-input>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm">
-									<text-input v-model="form.company_incorporation_place" 
-										:defaultValue="form.company_incorporation_place"
-										:required="true"
-										type="text"
-										:label="$options.filters.trans('auth.company_incorporation_place')"
-										name="company_incorporation_place"
-										:editable="true"
-										:focus="false"
-										:hideLabel="false"
-										:error="form.errors.get('company_incorporation_place')">
-									</text-input>
-								</div>
-								<div class="col-sm">
-									<text-input v-model="form.company_regulatory_name" 
-										:defaultValue="form.company_regulatory_name"
-										:required="false"
-										type="text"
-										:label="$options.filters.trans('auth.company_regulatory_name')"
-										name="company_regulatory_name"
-										:editable="true"
-										:focus="false"
-										:hideLabel="false"
-										:error="form.errors.get('company_regulatory_name')">
-									</text-input>
-								</div>
-								<div class="col-sm">
-									<selector-input v-model="company_business_entity" :defaultData="company_business_entity" 
-													:label="$options.filters.trans('auth.company_type')" 
-													:required="true"
-													name="company_type"
-													:potentialData="companyTypes"
-													:editable="true"
-													:placeholder="$options.filters.trans('auth.company_type')"
-													@input="updateCompanyType"
-													>
-									</selector-input>
-								</div>
-							</div>
-							
-							<text-input v-model="form.company_address_line_1" 
-								:defaultValue="form.company_address_line_1"
+						<template v-if='can_edit'>
+							<text-input v-model="form.address_line_1" 
+								:defaultValue="form.address_line_1"
 								:required="true"
 								type="text"
-								:label="$options.filters.trans('auth.company_address')"
-								name="company_address_line_1"
-								:editable="true"
+								:label="$options.filters.trans('auth.address')"
+								:placeholder="$options.filters.trans('auth.address1')"
+								name="address_line_1"
+								:editable="can_edit"
 								:focus="false"
 								:hideLabel="false"
-								:error="form.errors.get('company_address_line_1')">
+								:error="form.errors.get('address_line_1')">
 							</text-input>
-							<text-input v-model="form.company_address_line_2" 
-								:defaultValue="form.company_address_line_2"
+							<text-input v-model="form.address_line_2" 
+								:defaultValue="form.address_line_2"
 								:required="true"
 								type="text"
-								:label="$options.filters.trans('auth.company_address')"
-								name="company_address_line_2"
-								:editable="true"
+								:placeholder="$options.filters.trans('auth.address2')"
+								name="address_line_2"
+								:editable="can_edit"
 								:focus="false"
 								:hideLabel="true"
-								:error="form.errors.get('company_address_line_2')">
+								:error="form.errors.get('address_line_2')">
 							</text-input>
-				            
-
-				            <div class="row">
-				                <div class="col-sm">
-				                    <selector-input v-model="companyCountry" :defaultData="companyCountry" 
-													:label="$options.filters.trans('auth.country')" 
-													:required="true"
-													name="company_country"
-													:potentialData="potentialCountry"
-													:editable="true"
-													:placeholder="$options.filters.trans('auth.country') + ' *'"
-													:hideLabel="true"
-													@input="updateCompanyCountry"
-													>
+							<div class="row">
+								<div class="col-sm">
+									<selector-input v-model="country" :defaultData="country" 
+											:label="$options.filters.trans('auth.country')" 
+											:required="true"
+											name="country"
+											:potentialData="potentialCountry"
+											:editable="can_edit"
+											:placeholder="$options.filters.trans('auth.country')"
+											:hideLabel="true"
+											@input="updateCountry"
+											>
 									</selector-input>
-				                </div>
-				                <div class="col-sm">
-				                	<text-input v-model="form.company_postcode" 
-										:defaultValue="form.company_postcode"
+								</div>
+								<div class="col-sm">
+									<text-input v-model="form.postcode" 
+										:defaultValue="form.postcode"
 										:required="true"
 										type="text"
 										:placeholder="$options.filters.trans('auth.postcode')"
-										name="company_postcode"
-										:editable="true"
+										name="postcode"
+										:editable="can_edit"
 										:focus="false"
 										:hideLabel="true"
-										:error="form.errors.get('company_postcode')">
+										:error="form.errors.get('postcode')">
 									</text-input>
-				                </div>
-				            </div>
-
-				             <div class="row">
-				                <div class="col-sm">
-				                    <text-input v-model="form.company_phone" 
-										:defaultValue="form.company_phone"
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm">
+									<selector-input v-model="nationality" :defaultData="nationality" 
+											:label="$options.filters.trans('auth.nationality')" 
+											:required="true"
+											name="nationality"
+											:potentialData="potentialCountry"
+											:editable="can_edit"
+											:placeholder="$options.filters.trans('auth.nationality')"
+											:hideLabel="false"
+											@input="updateNationality"
+											>
+									</selector-input>
+								</div>
+								<div class="col-sm">
+									<text-input v-model="form.phone" 
+										:defaultValue="form.phone"
 										:required="true"
 										type="text"
-										:placeholder="$options.filters.trans('auth.phone')"
-										name="company_phone"
-										:editable="true"
+										:label="$options.filters.trans('auth.phone')"
+										name="phone"
+										:editable="can_edit"
 										:focus="false"
-										:hideLabel="true"
-										:error="form.errors.get('company_phone')">
+										:hideLabel="false"
+										:error="form.errors.get('phone')">
 									</text-input>
-				                </div>
-				                <div class="col-sm">
-				                    <text-input v-model="form.company_email" 
-										:defaultValue="form.company_email"
+								</div>
+								<div class="col-sm">
+									<radio-group-input v-model="form.gender"
+														:values="['male', 'female']" 
+														:defaultValue="form.gender"
+														:label="$options.filters.trans('auth.gender')"
+														name="gender"
+														:editable="can_edit">
+									</radio-group-input>
+								</div>
+							</div>
+							<hr>
+							<h4>{{ 'auth.company_info' | trans }}</h4>
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" id="company-registration" v-model="isCompanyRegistration">
+								<label class="form-check-label" for="company-registration">{{ 'auth.registering_company' | trans }}</label>
+							</div>
+
+							<div v-if="isCompanyRegistration">
+								<text-input v-model="form.company_name" 
+										:defaultValue="form.company_name"
 										:required="true"
-										type="email"
-										:placeholder="$options.filters.trans('auth.email')"
-										name="company_email"
-										:editable="true"
+										type="text"
+										:label="$options.filters.trans('auth.company_name')"
+										name="company_name"
+										:editable="can_edit"
 										:focus="false"
-										:hideLabel="true"
-										:error="form.errors.get('company_email')">
+										:hideLabel="false"
+										:error="form.errors.get('company_name')">
 									</text-input>
-				                </div>
-				            </div>
-							
-							<label>{{ 'auth.contact_personnels' | trans }}</label>
-							<div class="table-responsive">
-								<table class="table">
-									<thead>
-										<th>{{ 'auth.name' | trans }}</th>
-										<th>{{ 'auth.personnel_designation' | trans }}</th>
-										<th>{{ 'auth.email' | trans }}</th>
-										<th>{{ 'auth.phone' | trans }}</th>
-										<th><a @click="form.personnels.push({name: '', designation: '', email: '', phone: ''})" class="btn btn-sm btn-primary">{{ 'auth.add_personnel' | trans }}</a></th>
-									</thead>
-									<tbody>
-										<tr v-for="(personnel,index) in form.personnels">
-											<td>
-												<text-input v-model="form.personnels[index].name" 
-													:defaultValue="form.personnels[index].name"
-													:required="true"
-													type="text"
-													name="personnel-name"
-													:editable="true"
-													:focus="false"
-													:hideLabel="true"
-													v-if="form.personnels[index]">
-												</text-input>
-											</td>
-											<td>
-												<text-input v-model="form.personnels[index].designation" 
-													:defaultValue="form.personnels[index].designation"
-													:required="true"
-													type="text"
-													name="personnel-designation"
-													:editable="true"
-													:focus="false"
-													:hideLabel="true"
-													v-if="form.personnels[index]">
-												</text-input>
-											</td>
-											<td>
-												<text-input v-model="form.personnels[index].email" 
-													:defaultValue="form.personnels[index].email"
-													:required="true"
-													type="email"
-													name="personnel-email"
-													:editable="true"
-													:focus="false"
-													:hideLabel="true"
-													v-if="form.personnels[index]">
-												</text-input></td>
-											<td>
-												<text-input v-model="form.personnels[index].phone" 
-													:defaultValue="form.personnels[index].phone"
-													:required="true"
-													type="text"
-													name="personnel-phone"
-													:editable="true"
-													:focus="false"
-													:hideLabel="true"
-													v-if="form.personnels[index]">
-												</text-input>
-											</td>
-											<td><a @click="personnels.splice(index, 1)" class="btn btn-sm btn-danger">{{ 'auth.remove_personnel' | trans }}</a></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<hr>
-    					<h4>{{ 'auth.bank_info' | trans }}</h4>
-    					<div class="row">
-							<div class="col-sm">
-								<text-input v-model="form.bank_name" 
-									:defaultValue="form.bank_name"
+								<div class="row">
+									<div class="col-sm">
+										<text-input v-model="form.company_business_registration" 
+											:defaultValue="form.company_business_registration"
+											:required="true"
+											type="text"
+											:label="$options.filters.trans('auth.company_business_registration')"
+											name="company_business_registration"
+											:editable="can_edit"
+											:focus="false"
+											:hideLabel="false"
+											:error="form.errors.get('company_business_registration')">
+										</text-input>
+									</div>
+									<div class="col-sm">
+										<text-input v-model="form.company_incorporation_date" 
+											:defaultValue="form.company_incorporation_date"
+											:required="true"
+											type="date"
+											:label="$options.filters.trans('auth.company_incorporation_date')"
+											name="company_incorporation_date"
+											:editable="can_edit"
+											:focus="false"
+											:hideLabel="false"
+											:error="form.errors.get('company_incorporation_date')">
+										</text-input>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm">
+										<text-input v-model="form.company_incorporation_place" 
+											:defaultValue="form.company_incorporation_place"
+											:required="true"
+											type="text"
+											:label="$options.filters.trans('auth.company_incorporation_place')"
+											name="company_incorporation_place"
+											:editable="can_edit"
+											:focus="false"
+											:hideLabel="false"
+											:error="form.errors.get('company_incorporation_place')">
+										</text-input>
+									</div>
+									<div class="col-sm">
+										<text-input v-model="form.company_regulatory_name" 
+											:defaultValue="form.company_regulatory_name"
+											:required="false"
+											type="text"
+											:label="$options.filters.trans('auth.company_regulatory_name')"
+											name="company_regulatory_name"
+											:editable="can_edit"
+											:focus="false"
+											:hideLabel="false"
+											:error="form.errors.get('company_regulatory_name')">
+										</text-input>
+									</div>
+									<div class="col-sm">
+										<selector-input v-model="company_business_entity" :defaultData="company_business_entity" 
+														:label="$options.filters.trans('auth.company_type')" 
+														:required="true"
+														name="company_type"
+														:potentialData="companyTypes"
+														:editable="can_edit"
+														:placeholder="$options.filters.trans('auth.company_type')"
+														@input="updateCompanyType"
+														>
+										</selector-input>
+									</div>
+								</div>
+								
+								<text-input v-model="form.company_address_line_1" 
+									:defaultValue="form.company_address_line_1"
 									:required="true"
 									type="text"
-									:label="$options.filters.trans('auth.bank_name')"
-									name="bank_name"
-									:editable="true"
+									:label="$options.filters.trans('auth.company_address')"
+									name="company_address_line_1"
+									:editable="can_edit"
 									:focus="false"
 									:hideLabel="false"
-									:error="form.errors.get('bank_name')">
+									:error="form.errors.get('company_address_line_1')">
 								</text-input>
-							</div>
-							<div class="col-sm">
-								<text-input v-model="form.bank_swift" 
-									:defaultValue="form.bank_swift"
-									:required="false"
-									type="text"
-									:label="$options.filters.trans('auth.bank_swift')"
-									name="bank_swift"
-									:editable="true"
-									:focus="false"
-									:hideLabel="false"
-									:error="form.errors.get('bank_swift')">
-								</text-input>
-							</div>
-    					</div>
-    					<text-input v-model="form.bank_address" 
-							:defaultValue="form.bank_address"
-							:required="true"
-							type="text"
-							:label="$options.filters.trans('auth.bank_address')"
-							name="bank_address"
-							:editable="true"
-							:focus="false"
-							:hideLabel="false"
-							:error="form.errors.get('bank_address')">
-						</text-input>
-						<div class="row">
-							<div class="col-sm">
-								<text-input v-model="form.account_type" 
-									:defaultValue="form.account_type"
+								<text-input v-model="form.company_address_line_2" 
+									:defaultValue="form.company_address_line_2"
 									:required="true"
 									type="text"
-									:label="$options.filters.trans('auth.account_type')"
-									name="account_type"
-									:editable="true"
+									:label="$options.filters.trans('auth.company_address')"
+									name="company_address_line_2"
+									:editable="can_edit"
 									:focus="false"
-									:hideLabel="false"
-									:error="form.errors.get('account_type')">
+									:hideLabel="true"
+									:error="form.errors.get('company_address_line_2')">
 								</text-input>
+					            
+
+					            <div class="row">
+					                <div class="col-sm">
+					                    <selector-input v-model="companyCountry" :defaultData="companyCountry" 
+														:label="$options.filters.trans('auth.country')" 
+														:required="true"
+														name="company_country"
+														:potentialData="potentialCountry"
+														:editable="can_edit"
+														:placeholder="$options.filters.trans('auth.country') + ' *'"
+														:hideLabel="true"
+														@input="updateCompanyCountry"
+														>
+										</selector-input>
+					                </div>
+					                <div class="col-sm">
+					                	<text-input v-model="form.company_postcode" 
+											:defaultValue="form.company_postcode"
+											:required="true"
+											type="text"
+											:placeholder="$options.filters.trans('auth.postcode')"
+											name="company_postcode"
+											:editable="can_edit"
+											:focus="false"
+											:hideLabel="true"
+											:error="form.errors.get('company_postcode')">
+										</text-input>
+					                </div>
+					            </div>
+
+					             <div class="row">
+					                <div class="col-sm">
+					                    <text-input v-model="form.company_phone" 
+											:defaultValue="form.company_phone"
+											:required="true"
+											type="text"
+											:placeholder="$options.filters.trans('auth.phone')"
+											name="company_phone"
+											:editable="can_edit"
+											:focus="false"
+											:hideLabel="true"
+											:error="form.errors.get('company_phone')">
+										</text-input>
+					                </div>
+					                <div class="col-sm">
+					                    <text-input v-model="form.company_email" 
+											:defaultValue="form.company_email"
+											:required="true"
+											type="email"
+											:placeholder="$options.filters.trans('auth.email')"
+											name="company_email"
+											:editable="can_edit"
+											:focus="false"
+											:hideLabel="true"
+											:error="form.errors.get('company_email')">
+										</text-input>
+					                </div>
+					            </div>
+								
+								<label>{{ 'auth.contact_personnels' | trans }}</label>
+								<div class="table-responsive">
+									<table class="table">
+										<thead>
+											<th>{{ 'auth.name' | trans }}</th>
+											<th>{{ 'auth.personnel_designation' | trans }}</th>
+											<th>{{ 'auth.email' | trans }}</th>
+											<th>{{ 'auth.phone' | trans }}</th>
+											<th><a @click="form.personnels.push({name: '', designation: '', email: '', phone: ''})" class="btn btn-sm btn-primary">{{ 'auth.add_personnel' | trans }}</a></th>
+										</thead>
+										<tbody>
+											<tr v-for="(personnel,index) in form.personnels">
+												<td>
+													<text-input v-model="form.personnels[index].name" 
+														:defaultValue="form.personnels[index].name"
+														:required="true"
+														type="text"
+														name="personnel-name"
+														:editable="can_edit"
+														:focus="false"
+														:hideLabel="true"
+														v-if="form.personnels[index]">
+													</text-input>
+												</td>
+												<td>
+													<text-input v-model="form.personnels[index].designation" 
+														:defaultValue="form.personnels[index].designation"
+														:required="true"
+														type="text"
+														name="personnel-designation"
+														:editable="can_edit"
+														:focus="false"
+														:hideLabel="true"
+														v-if="form.personnels[index]">
+													</text-input>
+												</td>
+												<td>
+													<text-input v-model="form.personnels[index].email" 
+														:defaultValue="form.personnels[index].email"
+														:required="true"
+														type="email"
+														name="personnel-email"
+														:editable="can_edit"
+														:focus="false"
+														:hideLabel="true"
+														v-if="form.personnels[index]">
+													</text-input></td>
+												<td>
+													<text-input v-model="form.personnels[index].phone" 
+														:defaultValue="form.personnels[index].phone"
+														:required="true"
+														type="text"
+														name="personnel-phone"
+														:editable="can_edit"
+														:focus="false"
+														:hideLabel="true"
+														v-if="form.personnels[index]">
+													</text-input>
+												</td>
+												<td><a @click="personnels.splice(index, 1)" class="btn btn-sm btn-danger">{{ 'auth.remove_personnel' | trans }}</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
 							</div>
-							<div class="col-sm">
-								<text-input v-model="form.account_no" 
-									:defaultValue="form.account_no"
-									:required="true"
-									type="text"
-									:label="$options.filters.trans('auth.account_no')"
-									name="account_no"
-									:editable="true"
-									:focus="false"
-									:hideLabel="false"
-									:error="form.errors.get('account_no')">
-								</text-input>
+							<hr>
+	    					<h4>{{ 'auth.bank_info' | trans }}</h4>
+	    					<div class="row">
+								<div class="col-sm">
+									<text-input v-model="form.bank_name" 
+										:defaultValue="form.bank_name"
+										:required="true"
+										type="text"
+										:label="$options.filters.trans('auth.bank_name')"
+										name="bank_name"
+										:editable="can_edit"
+										:focus="false"
+										:hideLabel="false"
+										:error="form.errors.get('bank_name')">
+									</text-input>
+								</div>
+								<div class="col-sm">
+									<text-input v-model="form.bank_swift" 
+										:defaultValue="form.bank_swift"
+										:required="false"
+										type="text"
+										:label="$options.filters.trans('auth.bank_swift')"
+										name="bank_swift"
+										:editable="can_edit"
+										:focus="false"
+										:hideLabel="false"
+										:error="form.errors.get('bank_swift')">
+									</text-input>
+								</div>
+	    					</div>
+	    					<text-input v-model="form.bank_address" 
+								:defaultValue="form.bank_address"
+								:required="true"
+								type="text"
+								:label="$options.filters.trans('auth.bank_address')"
+								name="bank_address"
+								:editable="can_edit"
+								:focus="false"
+								:hideLabel="false"
+								:error="form.errors.get('bank_address')">
+							</text-input>
+							<div class="row">
+								<div class="col-sm">
+									<text-input v-model="form.account_type" 
+										:defaultValue="form.account_type"
+										:required="true"
+										type="text"
+										:label="$options.filters.trans('auth.account_type')"
+										name="account_type"
+										:editable="can_edit"
+										:focus="false"
+										:hideLabel="false"
+										:error="form.errors.get('account_type')">
+									</text-input>
+								</div>
+								<div class="col-sm">
+									<text-input v-model="form.account_no" 
+										:defaultValue="form.account_no"
+										:required="true"
+										type="text"
+										:label="$options.filters.trans('auth.account_no')"
+										name="account_no"
+										:editable="can_edit"
+										:focus="false"
+										:hideLabel="false"
+										:error="form.errors.get('account_no')">
+									</text-input>
+								</div>
 							</div>
-						</div>
-						<hr>
-    					<h4>{{ 'auth.beneficiary_info' | trans }}</h4>
-    					<div class="row">
-    						<div class="col-sm">
-    							<text-input v-model="form.beneficiary_name" 
-									:defaultValue="form.beneficiary_name"
-									:required="true"
-									type="text"
-									:label="$options.filters.trans('auth.beneficiary_name')"
-									name="beneficiary_name"
-									:editable="true"
-									:focus="false"
-									:hideLabel="false"
-									:error="form.errors.get('beneficiary_name')">
-								</text-input>
+							<hr>
+	    					<h4>{{ 'auth.beneficiary_info' | trans }}</h4>
+	    					<div class="row">
+	    						<div class="col-sm">
+	    							<text-input v-model="form.beneficiary_name" 
+										:defaultValue="form.beneficiary_name"
+										:required="true"
+										type="text"
+										:label="$options.filters.trans('auth.beneficiary_name')"
+										name="beneficiary_name"
+										:editable="can_edit"
+										:focus="false"
+										:hideLabel="false"
+										:error="form.errors.get('beneficiary_name')">
+									</text-input>
+								</div>
+								<div class="col-sm">
+									<text-input v-model="form.beneficiary_identification" 
+										:defaultValue="form.beneficiary_identification"
+										:required="true"
+										type="text"
+										:label="$options.filters.trans('auth.beneficiary_identification')"
+										name="beneficiary_identification"
+										:editable="can_edit"
+										:focus="false"
+										:hideLabel="false"
+										:error="form.errors.get('beneficiary_identification')">
+									</text-input>
+								</div>
 							</div>
-							<div class="col-sm">
-								<text-input v-model="form.beneficiary_identification" 
-									:defaultValue="form.beneficiary_identification"
-									:required="true"
-									type="text"
-									:label="$options.filters.trans('auth.beneficiary_identification')"
-									name="beneficiary_identification"
-									:editable="true"
-									:focus="false"
-									:hideLabel="false"
-									:error="form.errors.get('beneficiary_identification')">
-								</text-input>
+							<div class="row">
+	    						<div class="col-sm">
+	    							<text-input v-model="form.beneficiary_address" 
+										:defaultValue="form.beneficiary_address"
+										:required="true"
+										type="text"
+										:label="$options.filters.trans('auth.beneficiary_address')"
+										name="beneficiary_address"
+										:editable="can_edit"
+										:focus="false"
+										:hideLabel="false"
+										:error="form.errors.get('beneficiary_address')">
+									</text-input>
+								</div>
+								<div class="col-sm">
+									<text-input v-model="form.beneficiary_contact" 
+										:defaultValue="form.beneficiary_contact"
+										:required="true"
+										type="text"
+										:label="$options.filters.trans('auth.beneficiary_contact')"
+										name="beneficiary_contact"
+										:editable="can_edit"
+										:focus="false"
+										:hideLabel="false"
+										:error="form.errors.get('beneficiary_contact')">
+									</text-input>
+								</div>
 							</div>
-						</div>
-						<div class="row">
-    						<div class="col-sm">
-    							<text-input v-model="form.beneficiary_address" 
-									:defaultValue="form.beneficiary_address"
-									:required="true"
-									type="text"
-									:label="$options.filters.trans('auth.beneficiary_address')"
-									name="beneficiary_address"
-									:editable="true"
-									:focus="false"
-									:hideLabel="false"
-									:error="form.errors.get('beneficiary_address')">
-								</text-input>
-							</div>
-							<div class="col-sm">
-								<text-input v-model="form.beneficiary_contact" 
-									:defaultValue="form.beneficiary_contact"
-									:required="true"
-									type="text"
-									:label="$options.filters.trans('auth.beneficiary_contact')"
-									name="beneficiary_contact"
-									:editable="true"
-									:focus="false"
-									:hideLabel="false"
-									:error="form.errors.get('beneficiary_contact')">
-								</text-input>
-							</div>
-						</div>
+						</template>
 						<button type="submit" class="btn btn-success" :disabled="form.submitting" v-html="submitButtonContent"></button>
 						<button class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
 					</form>
@@ -744,6 +752,14 @@
 				flash(this.$options.filters.trans(response.message));
 				this.back();
 			}
-		}	
+		},
+
+		computed: {
+			can_edit() {
+				return this.selectedUser.id_status == 'pending' || this.selectedUser.id_status == 'rejected' || this.user.is_admin
+			}
+		}
+
+
 	}
 </script>

@@ -53,5 +53,14 @@ return [
 
     'instruction_issued_to_lawyer' => "Instruction issued to lawyer",
     "sales_agreement_ready_for_execution" => "Sales agreement ready for execution",
-    "sales_agreement_executed" => "Sales agreement executed"
+    "sales_agreement_executed" => "Sales agreement executed",
+
+    "lock_down_front" => "Please email",
+    "lock_down_back" => "for any discrepancy",
+
+    "locked" => 'User has been locked',
+    "unlocked" => "User has been unlocked",
+
+    "locked_message" => "Your account has been locked. Please contact support@newleaf.com.my for more information",
+    "deleted" => "User has been deleted"
 ];

@@ -69,7 +69,6 @@
 
         methods: {
             doFilter () {
-                console.log("Clicked");
                 this.$events.fire('filter-set', { month: this.filterMonth, text: this.filterText, start: this.filterDateStart, end: this.filterDateEnd });
             },
             resetFilter () {

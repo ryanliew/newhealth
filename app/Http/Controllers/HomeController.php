@@ -21,6 +21,12 @@ class HomeController extends Controller
     public function index()
     {
         //dd(auth()->user()->identification);
+        
+        if(auth()->user()->is_locked)
+        {
+            Auth::logout();
+            return redirect("/login")->with('message', "user.locked_message");
+        }
         if(!auth()->user())
         {
             return redirect("/");

@@ -56,6 +56,8 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::post('/kyc/remind', 'UserController@remind_documents');
 		Route::post('/legal', 'UserController@update_legal');
 		Route::post('/kyc', 'UserController@update_documents');
+		Route::post('/lock', "UserController@update_lock");
+		Route::post('/delete', "UserController@delete");
 		Route::get('/', 'UserController@show');
 	});
 

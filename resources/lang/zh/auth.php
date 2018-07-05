@@ -26,6 +26,7 @@ return [
     'repeat' => '确定',
     'already_have_account' => '已经有帐号？',
     'name' => '名字',
+    'full_name' => '全名',
     'wechat_signup' => '使用微信注册',
     'facebook_signup' => '使用脸书注册',
     'google_signup' => '使用谷歌注册',

@@ -82,6 +82,9 @@
 			this.$events.on('viewUser', data => this.view(data));
 			this.$events.on('remind', data => this.remind(data));
 			this.$events.on('legal', data => this.legal(data));
+
+			this.$events.on('lock', data => this.lock(data));
+			this.$events.on('delete', data => this.delete(data));
 			// this.$events.on('next', data => this.next(data));
 
 			if(this.getParameterByName('id')) {
@@ -132,6 +135,18 @@
 				this.isChangingStatus = true;
 			},
 
+			lock(user) {
+				this.$events.fire('loading-lock', user.id);
+				axios.post('/api/user/' + user.id + '/lock')
+					.then(response => this.onStepSuccess(response));
+			},
+
+			delete(user) {
+				this.$events.fire('loading-delete', user.id);
+				axios.post('/api/user/' + user.id + "/delete")
+					.then(response => this.onStepSuccess(response));
+			},
+
 			submitLegal() {
 				this.isLegalLoading = true;
 				this.statusForm.status = this.selectedLegalStatus.value;
@@ -140,11 +155,11 @@
 			},
 
 			onStepSuccess(response) {
-				response.data = { message: response.message };
-				this.onSuccess(response);
+				response.data = { message: response.message ? response.message : response.data.message };
 				this.isChangingStatus = false;
 				this.isLegalLoading = false;
 				this.$refs.users.refreshTable();
+				this.onSuccess(response);
 			},
 
 			onSuccess(response) {

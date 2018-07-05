@@ -111,6 +111,7 @@ class UserController extends Controller
             'beneficiary_identification' => 'required'
         ]);
 
+        $status = $user->id_status == "pending" || $user->id_status == "rejected" ? "pending_verification" : $user->id_status;
         $user->update([
             'email' => request()->email,
             'name' => request()->name,
@@ -135,7 +136,7 @@ class UserController extends Controller
             'beneficiary_identification' => request()->beneficiary_identification,
             'beneficiary_address' => request()->beneficiary_address,
             'beneficiary_contact' => request()->beneficiary_contact,
-            'id_status' => 'pending_verification'
+            'id_status' => $status
         ]);
 
         if(request()->has('isChangePassword'))
@@ -319,5 +320,33 @@ class UserController extends Controller
         $user->update(['id_status' => $new_status]);
 
         return json_encode(['message' => 'user.legal_updated']);
+    }
+
+    public function update_lock(User $user)
+    {
+        $user->is_locked = !$user->is_locked;
+
+        $user->save();
+
+        $message = $user->is_locked ? "user.locked" : "user.unlocked";
+
+        return json_encode(['message' => $message]);
+    }
+
+    public function delete(User $user)
+    {
+        foreach($user->purchases as $purchase) {
+            $purchase->packages()->detach();
+        }
+
+        $user->transactions()->delete();
+        $user->purchases()->delete();
+
+        foreach($user->children as $children) {
+            $children->appendToNode($user->parent)->save();
+        }
+        $user->delete();
+
+        return json_encode(['message' => "user.deleted"]);
     }
 }

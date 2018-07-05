@@ -256,3 +256,8 @@ right connector from last child*/
     grid-template-rows: auto auto auto auto auto auto;
   }
 }
+
+.document .img-thumbnail {
+  max-height: 300px;
+  width: auto;
+}
