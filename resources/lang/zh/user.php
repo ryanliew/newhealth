@@ -50,6 +50,14 @@ return [
 
     'instruction_issued_to_lawyer' => "律师处理中",
     "sales_agreement_ready_for_execution" => "等待签署销售协议",
-    "sales_agreement_executed" => "销售协议完成"
+    "sales_agreement_executed" => "销售协议完成",
+
+    "lock_down" => "若有出入，请电邮至",
+    "lock_down_back" => "通知我们",
+    "locked" => '用户已被封锁',
+    "unlocked" => "用户已被解锁",
+
+
+    "locked_message" => "您的账号已被管理员封锁, 请电邮至support@newleaf.com.my了解详情"
 
 ];

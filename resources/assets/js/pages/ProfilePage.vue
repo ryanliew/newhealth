@@ -487,7 +487,6 @@
 
 			setUser(response) {
 				this.user = response.data;
-				this.$refs.documents.setKycDocs();
 			},
 
 			back() {

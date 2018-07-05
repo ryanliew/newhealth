@@ -4,9 +4,12 @@
 			<span v-text="$options.filters.trans(label)"></span>
 			<span v-if="required" class="text-danger">*</span>
 		</label>
-		<div class="control" :class="canClearCss">
+		<div class="control" :class="canClearCss" v-if="editable">
 			<v-select :multiple="multiple" :options="potentialData" :value="this.defaultData" @input="updateValue" :name="name" :placeholder="$options.filters.trans(placeholder)" :closeOnSelect="!multiple || true">
 			</v-select>
+		</div>
+		<div v-else>
+			{{ defaultData.label }}
 		</div>
 		<span class="text-danger" v-if="error" v-text="error"></span>
 	</div>
@@ -15,7 +18,7 @@
 <script>
 	import vSelect from 'vue-select';
 	export default {
-		props: ['potentialData', 'label', 'defaultData', 'error', 'name', 'placeholder', 'required', 'multiple', 'unclearable', 'hideLabel'],
+		props: { potentialData: Array, label: String, defaultData: String, error: String, name: String, placeholder: String, required: {default: false}, multiple: {default: false}, unclearable: {default: false}, hideLabel: {default: false}, editable: {default: true}},
 
 		components: { vSelect },
 

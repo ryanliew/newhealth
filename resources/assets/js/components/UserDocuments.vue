@@ -22,7 +22,7 @@
 				:hideLabel="false"
 				v-if="selectedUser.id_status == 'rejected'">
 			</text-input>
-			<div class="row">
+			<div class="row" v-if="can_edit">
 				<div class="col-auto">
 					<button class="btn btn-primary" @click="updateDocument = true" v-if="!updateDocument">{{ 'user.update_document' | trans }}</button>
 					<button class="btn btn-danger" @click="updateDocument = false" v-else>{{ 'user.cancel_update' | trans }}</button>
@@ -188,6 +188,7 @@
 
 		mounted() {
 			this.shouldShow = this.selectedUser.id_status !== 'verified';
+			this.setKycDocs();
 		},
 
 		methods: {
@@ -256,6 +257,13 @@
 					this.bankStatement = {name: this.selectedUser.kyc_bank_statement, src: "storage/" + this.selectedUser.kyc_bank_statement};
 					this.residenceProof = {name: this.selectedUser.kyc_residence_proof, src: "storage/" + this.selectedUser.kyc_residence_proof};
 				}
+				console.log(this.selectedUser.kyc_identity);
+			}
+		},
+
+		computed: {
+			can_edit() {
+				return this.selectedUser.id_status == "pending" || this.selectedUser.id_status == "rejected" || this.user.is_admin;
 			}
 		},
 

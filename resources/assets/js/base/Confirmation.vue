@@ -18,7 +18,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" @click="cancel">{{ 'confirmation.cancel' | trans }}</button>
-                    <button type="button" class="btn btn-primary" v-html="buttonContent" @click="confirm"></button>
+                    <button type="button" class="btn btn-primary" v-html="buttonContent" :disabled="loading" @click="confirm"></button>
                 </div>
             </div>
         </div>
