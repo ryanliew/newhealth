@@ -73,7 +73,6 @@ export default {
 
     mounted() {
         this.user = window.user;
-        console.log("mounted" + this.rowData.id);
         this.$events.on('loading', data => this.setLoading(data));
         this.$events.on('loading-lock', data => this.setLoadingLock(data));
         this.$events.on('loading-delete', data => this.setLoadingDelete(data));

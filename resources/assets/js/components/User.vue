@@ -609,7 +609,9 @@
 					beneficiary_identification: '',
 					beneficiary_address: '',
 					beneficiary_contact: '',
-					isChangePassword: ''
+					isChangePassword: '',
+					password: '',
+					password_confirmation: ''
 				}),
 				isCompanyRegistration: false,
 				companyTypes: [],

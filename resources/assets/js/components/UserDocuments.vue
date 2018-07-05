@@ -257,7 +257,6 @@
 					this.bankStatement = {name: this.selectedUser.kyc_bank_statement, src: "storage/" + this.selectedUser.kyc_bank_statement};
 					this.residenceProof = {name: this.selectedUser.kyc_residence_proof, src: "storage/" + this.selectedUser.kyc_residence_proof};
 				}
-				console.log(this.selectedUser.kyc_identity);
 			}
 		},
 

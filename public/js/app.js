@@ -55859,7 +55859,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: { potentialData: Array, label: String, defaultData: String, error: String, name: String, placeholder: String, required: { default: false }, multiple: { default: false }, unclearable: { default: false }, hideLabel: { default: false }, editable: { default: true } },
+	props: { potentialData: Array, label: String, defaultData: Object, error: String, name: String, placeholder: String, required: { default: false }, multiple: { default: false }, unclearable: { default: false }, hideLabel: { default: false }, editable: { default: true } },
 
 	components: { vSelect: __WEBPACK_IMPORTED_MODULE_0_vue_select___default.a },
 
@@ -75666,7 +75666,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				this.bankStatement = { name: this.selectedUser.kyc_bank_statement, src: "storage/" + this.selectedUser.kyc_bank_statement };
 				this.residenceProof = { name: this.selectedUser.kyc_residence_proof, src: "storage/" + this.selectedUser.kyc_residence_proof };
 			}
-			console.log(this.selectedUser.kyc_identity);
 		}
 	},
 
@@ -76793,7 +76792,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				beneficiary_identification: '',
 				beneficiary_address: '',
 				beneficiary_contact: '',
-				isChangePassword: ''
+				isChangePassword: '',
+				password: '',
+				password_confirmation: ''
 			}),
 			isCompanyRegistration: false,
 			companyTypes: [],
@@ -90313,7 +90314,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this = this;
 
         this.user = window.user;
-        console.log("mounted" + this.rowData.id);
         this.$events.on('loading', function (data) {
             return _this.setLoading(data);
         });

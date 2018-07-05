@@ -55609,7 +55609,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: { potentialData: Array, label: String, defaultData: String, error: String, name: String, placeholder: String, required: { default: false }, multiple: { default: false }, unclearable: { default: false }, hideLabel: { default: false }, editable: { default: true } },
+	props: { potentialData: Array, label: String, defaultData: Object, error: String, name: String, placeholder: String, required: { default: false }, multiple: { default: false }, unclearable: { default: false }, hideLabel: { default: false }, editable: { default: true } },
 
 	components: { vSelect: __WEBPACK_IMPORTED_MODULE_0_vue_select___default.a },
 
