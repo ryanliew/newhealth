@@ -105,4 +105,15 @@ class PurchaseController extends Controller
     { 
         return $purchase->verify();      
     }
+
+    public function delete(Purchase $purchase)
+    {
+        $purchase->packages()->detach();
+
+        $purchase->payment()->delete();
+
+        $purchase->delete();
+
+        return json_encode(['message' => 'purchase.deleted']);
+    }
 }

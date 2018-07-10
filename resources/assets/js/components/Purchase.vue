@@ -76,10 +76,10 @@
 										=
 									</td>
 									<td v-if="!is_std">
-										{{ getPackagePrice(form.packages[index].amount, form.packages[index]) | currency }}
+										{{ getPackagePrice(form.packages[index].amount, form.packages[index], index) | currency }}
 									</td>
 									<td v-else>
-										{{ getPackagePrice(form.packages[index].amount, form.packages[index]) | currency_std }}
+										{{ getPackagePrice(form.packages[index].amount, form.packages[index], index) | currency_std }}
 									</td>
 								</tr>
 								<tr>
@@ -291,9 +291,13 @@
 				flash(this.$options.filters.trans(response.message));
 			},
 
-			getPackagePrice(amount = 0, pack) {
-
+			getPackagePrice(amount = 0, pack, index) {
 				let price = pack.price;
+
+				if(amount < 0) {
+					amount = 0;
+					this.form.packages[index].amount = 0;
+				}
 
 				if(this.is_std)
 				{
