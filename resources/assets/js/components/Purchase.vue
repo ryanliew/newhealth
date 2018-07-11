@@ -22,7 +22,7 @@
 					<h6>{{ 'purchase.base_price' | trans }}</h6>
 					<div class="table-responsive">
 						<table class="table table-edit">
-							<tbody v-if="isEditing">
+							<tbody v-if="isEditing && form.packages.length > 0">
 								<tr v-for="(package, index) in packages">
 									<td>{{ package.tree_count }} {{ 'auth.tree' | trans_choice({'value' : package.tree_count})  }}</td>
 									<td>x</td>

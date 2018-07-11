@@ -74374,7 +74374,7 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "table-responsive" }, [
               _c("table", { staticClass: "table table-edit" }, [
-                _vm.isEditing
+                _vm.isEditing && _vm.form.packages.length > 0
                   ? _c(
                       "tbody",
                       [
