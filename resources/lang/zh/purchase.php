@@ -23,6 +23,7 @@ return [
     'checkout' => '付款',
     'total' => '总价格',
     'purchase_details' => '订单详情',
+    'deleted' => '订单已被删除',
 
     'success' => '订单已被接纳',
 

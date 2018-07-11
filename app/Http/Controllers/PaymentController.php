@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Notifications\PaymentUpdatedNotification;
 use App\Payment;
 use App\Purchase;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 
 class PaymentController extends Controller
@@ -31,6 +33,8 @@ class PaymentController extends Controller
 
     	$purchase->update(['payment_id' => $payment->id, 'status' => 'pending_verification']);
 
+        Notification::send($payment->user, new PaymentUpdatedNotification($payment));
+
     	return json_encode(['message' => 'payment.success', 'payment' => $payment]);
     }
 
@@ -51,6 +55,8 @@ class PaymentController extends Controller
         $payment->update(['payment_slip_path' => request()->file('payment_slip_path')->store('payments', 'public')]);
 
         $payment->purchase()->update(['status' => 'pending_verification']);
+
+        Notification::send($payment->user, new PaymentUpdatedNotification($payment));
 
         return json_encode(['message' => 'payment.success', 'payment' => $payment]);
     }

@@ -47,6 +47,10 @@ return [
     "download_receipt" => "Download receipt",
 
     "documents_updated" => "Identity Verification Documents updated",
-    "documents_updated_message" => ":name has updated his Identity Verification Documents. Press the button below to check it out"
+    "documents_updated_message" => ":name has updated his Identity Verification Documents. Press the button below to check it out",
+
+    "payments_updated" => "Payment slip uploaded",
+    "payments_updated_message" => ":name has uploaded his payment slip. Press the button below to check it out",
+    "view_payment" => "View payment"
     
 ];

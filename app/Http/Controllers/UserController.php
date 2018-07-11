@@ -261,6 +261,7 @@ class UserController extends Controller
         ]);
 
         Notification::send($user, new KYCUpdatedNotification($user));
+        
         return json_encode(['message' => 'user.documents_success']);
     }
 

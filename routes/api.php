@@ -65,6 +65,7 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::post('/{purchase}/update', 'PurchaseController@update');
 		Route::post('/pay/{purchase}', 'PaymentController@pay');
 		Route::post('/verify/{purchase}', 'PurchaseController@verify');
+		Route::post('/delete/{purchase}', 'PurchaseController@delete');
 	});
 
 	Route::group(['prefix' => 'payment'], function() {

@@ -51,6 +51,7 @@
 
 			this.$events.on('view', data => this.view(data));
 			this.$events.on('receipt', data => this.receipt(data));
+			this.$events.on('delete', data => this.postDelete(data));
 			if(this.getParameterByName('new') == '1') {
 				this.cancelable = false;
 				this.isPurchasing = true;
@@ -98,6 +99,18 @@
 
 			receipt(purchase){
 				window.location.href = "/exports/receipt/" + purchase.id;
+			},
+
+			postDelete(purchase) {
+				axios.post("/api/purchase/delete/" + purchase.id)
+					.then(response => this.onSuccess(response));
+			},
+
+			onSuccess(response) {
+				flash(this.$options.filters.trans(response.data.message));
+				this.$events.fire('loading-complete');
+
+				this.$refs.purchases.refreshTable();
 			}
 		},
 

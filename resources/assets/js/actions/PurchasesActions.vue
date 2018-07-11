@@ -16,7 +16,23 @@
                     <i class="fa fa-money"></i>
                 </span>
             </button>
+            <button type="button" class="btn btn-danger" v-if="user.is_admin" @click="isConfirming = true">
+                <span class="icon">
+                    <i class="fa fa-times"></i>
+                </span>
+            </button>
         </div>
+
+
+
+
+        <confirmation 
+            message="confirmation.delete_purchase" 
+            :loading="loading" 
+            @confirmed="proceedDelete"
+            @canceled="isConfirming = false"
+            v-if="isConfirming">
+        </confirmation>
     </div>
 </template>
 
@@ -34,12 +50,16 @@ export default {
 
     data() {
         return {
-            user: ''
+            user: '',
+            isConfirming: false,
+            loading: false
         };
     },
 
     mounted() {
         this.user = window.user;
+        this.$events.on('loading', data => this.setLoading(data));
+        this.$events.on('loading-complete', data => this.setLoadingComplete(data));
     },
 
     updated() {
@@ -49,7 +69,20 @@ export default {
     methods: {
         itemAction(action, data, index){
             this.$events.fire(action, data);            
-        }
+        },
+
+        proceedDelete() {
+            this.itemAction('delete', this.rowData, this.rowIndex);
+        },
+
+        setLoading(data) {
+            this.loading = data == this.rowData.id;
+        },
+
+        setLoadingComplete(data) {
+            this.loading = false;
+            this.isConfirming = false;
+        },
     }
   }
 </script>

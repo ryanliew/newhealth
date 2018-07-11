@@ -24,6 +24,7 @@ return [
     'checkout' => 'Checkout',
     'total' => 'Total',
     'purchase_details' => 'Purchase details',
+    "deleted" => "Purchase deleted",
 
     'success' => 'Purchase order created successfully',
 

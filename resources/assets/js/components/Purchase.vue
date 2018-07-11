@@ -22,7 +22,7 @@
 					<h6>{{ 'purchase.base_price' | trans }}</h6>
 					<div class="table-responsive">
 						<table class="table table-edit">
-							<tbody v-if="isEditing">
+							<tbody v-if="isEditing && form.packages.length > 0">
 								<tr v-for="(package, index) in packages">
 									<td>{{ package.tree_count }} {{ 'auth.tree' | trans_choice({'value' : package.tree_count})  }}</td>
 									<td>x</td>
@@ -76,10 +76,10 @@
 										=
 									</td>
 									<td v-if="!is_std">
-										{{ getPackagePrice(form.packages[index].amount, form.packages[index]) | currency }}
+										{{ getPackagePrice(form.packages[index].amount, form.packages[index], index) | currency }}
 									</td>
 									<td v-else>
-										{{ getPackagePrice(form.packages[index].amount, form.packages[index]) | currency_std }}
+										{{ getPackagePrice(form.packages[index].amount, form.packages[index], index) | currency_std }}
 									</td>
 								</tr>
 								<tr>
@@ -291,9 +291,13 @@
 				flash(this.$options.filters.trans(response.message));
 			},
 
-			getPackagePrice(amount = 0, pack) {
-
+			getPackagePrice(amount = 0, pack, index) {
 				let price = pack.price;
+
+				if(amount < 0) {
+					amount = 0;
+					this.form.packages[index].amount = 0;
+				}
 
 				if(this.is_std)
 				{
