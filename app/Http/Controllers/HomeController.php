@@ -21,16 +21,17 @@ class HomeController extends Controller
     public function index()
     {
         //dd(auth()->user()->identification);
-        
+        if(!auth()->user())
+        {
+            return redirect("/");
+        }
+
         if(auth()->user()->is_locked)
         {
             Auth::logout();
             return redirect("/login")->with('message', "user.locked_message");
         }
-        if(!auth()->user())
-        {
-            return redirect("/");
-        }
+        
         
         if(is_null(auth()->user()->identification ))
             return redirect()->route('register.success');

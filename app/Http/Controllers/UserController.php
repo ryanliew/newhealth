@@ -111,7 +111,7 @@ class UserController extends Controller
             'beneficiary_identification' => 'required'
         ]);
 
-        $status = $user->id_status == "pending" || $user->id_status == "rejected" ? "pending_verification" : $user->id_status;
+        $status = $user->id_status == "verified" || $user->id_status == "rejected" ? "pending_verification" : $user->id_status;
         $user->update([
             'email' => request()->email,
             'name' => request()->name,
