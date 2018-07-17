@@ -90418,7 +90418,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this = this;
 
         this.user = window.user;
-        this.$events.on('loading', function (data) {
+        this.$events.once('loading', function (data) {
             return _this.setLoading(data);
         });
         this.$events.on('loading-lock', function (data) {
@@ -90450,6 +90450,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.delete_loading = data == this.rowData.id;
         },
         setLoadingComplete: function setLoadingComplete(data) {
+            var _this2 = this;
+
             this.loading = false;
             this.lock_loading = false;
             this.delete_loading = false;
@@ -90457,6 +90459,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.isDeleting = false;
             this.isConfirming = false;
             this.isDeleteConfirming = false;
+
+            this.$events.once('loading', function (data) {
+                return _this2.setLoading(data);
+            });
         },
         remindUser: function remindUser() {
             if (!this.isReminding) {

@@ -73,7 +73,7 @@ export default {
 
     mounted() {
         this.user = window.user;
-        this.$events.on('loading', data => this.setLoading(data));
+        this.$events.once('loading', data => this.setLoading(data));
         this.$events.on('loading-lock', data => this.setLoadingLock(data));
         this.$events.on('loading-delete', data => this.setLoadingDelete(data));
         this.$events.on('loading-complete', data => this.setLoadingComplete(data));
@@ -108,6 +108,8 @@ export default {
             this.isDeleting = false;
             this.isConfirming = false;
             this.isDeleteConfirming = false;
+
+            this.$events.once('loading', data => this.setLoading(data));
         },
 
         remindUser() {
