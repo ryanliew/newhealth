@@ -49,9 +49,8 @@
 				this.addNewPurchase();
 			}.bind(this));
 
-			this.$events.on('view', data => this.view(data));
-			this.$events.on('receipt', data => this.receipt(data));
-			this.$events.on('delete', data => this.postDelete(data));
+			this.turnOnEvents();
+			
 			if(this.getParameterByName('new') == '1') {
 				this.cancelable = false;
 				this.isPurchasing = true;
@@ -65,6 +64,10 @@
 				}.bind(this));
 			}
 			
+		},
+
+		beforeDestroy() {
+			this.turnOffEvents();
 		},
 
 		methods: {
@@ -83,6 +86,7 @@
 			},
 
 			back() {
+				this.turnOnEvents();
 				this.isPurchasing = false;
 				this.selectedPurchase = '';
 				this.$refs.purchases.refreshTable();
@@ -93,15 +97,18 @@
 			},
 
 			view(purchase) {
+				this.turnOffEvents();
 				this.selectedPurchase = purchase;
 				this.isPurchasing = true;
 			},
 
 			receipt(purchase){
+				this.turnOffEvents();
 				window.location.href = "/exports/receipt/" + purchase.id;
 			},
 
 			postDelete(purchase) {
+				this.turnOffEvents();
 				axios.post("/api/purchase/delete/" + purchase.id)
 					.then(response => this.onSuccess(response));
 			},
@@ -111,6 +118,19 @@
 				this.$events.fire('loading-complete');
 
 				this.$refs.purchases.refreshTable();
+				this.turnOnEvents();
+			},
+
+			turnOnEvents() {
+				this.$events.on('view', data => this.view(data));
+				this.$events.on('receipt', data => this.receipt(data));
+				this.$events.on('delete', data => this.postDelete(data));
+			},
+
+			turnOffEvents() {
+				this.$events.off('view');
+				this.$events.off('receipt');
+				this.$events.off('delete');
 			}
 		},
 

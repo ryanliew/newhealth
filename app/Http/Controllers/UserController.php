@@ -9,6 +9,7 @@ use App\Notifications\RemindUploadDocumentNotification;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
@@ -336,6 +337,8 @@ class UserController extends Controller
 
     public function delete(User $user)
     {
+        Log::info("Deleted user " . $user->name . " by " . auth()->user()->name);
+
         foreach($user->purchases as $purchase) {
             $purchase->packages()->detach();
         }

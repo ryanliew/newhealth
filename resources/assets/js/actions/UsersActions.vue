@@ -73,10 +73,17 @@ export default {
 
     mounted() {
         this.user = window.user;
-        this.$events.once('loading', data => this.setLoading(data));
+        this.$events.on('loading', data => this.setLoading(data));
         this.$events.on('loading-lock', data => this.setLoadingLock(data));
         this.$events.on('loading-delete', data => this.setLoadingDelete(data));
         this.$events.on('loading-complete', data => this.setLoadingComplete(data));
+    },
+
+    beforeDestroy() {
+        this.$events.off('loading');
+        this.$events.off('loading-lock');
+        this.$events.off('loading-delete');
+        this.$events.off('loading-complete');
     },
 
     updated() {
@@ -108,8 +115,6 @@ export default {
             this.isDeleting = false;
             this.isConfirming = false;
             this.isDeleteConfirming = false;
-
-            this.$events.once('loading', data => this.setLoading(data));
         },
 
         remindUser() {

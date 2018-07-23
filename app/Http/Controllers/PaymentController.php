@@ -7,6 +7,7 @@ use App\Payment;
 use App\Purchase;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Storage;
 
@@ -63,6 +64,8 @@ class PaymentController extends Controller
 
     public function verify(Payment $payment)
     {
+        Log::info("Verified payment " . $payment->id . " by " . auth()->user()->name);
+
         $payment->update(['is_verified' => true]);
 
         $payment->purchase->verify();
@@ -75,6 +78,8 @@ class PaymentController extends Controller
         $this->validate(request(), [
             'reject_note' => 'required'
         ]);
+
+        Log::info("Rejected payment " . $payment->id . " by " . auth()->user()->name);
 
         $payment->update(['is_verified' => false, 'reject_note' => request()->reject_note]);
 

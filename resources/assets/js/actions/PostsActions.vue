@@ -62,6 +62,12 @@ export default {
 
     },
 
+    beforeDestroy() {
+        this.$events.off('loading');
+        this.$events.off('loading-admin');
+        this.$events.off('loading-complete');
+    },
+
     updated() {
         $('[data-toggle="tooltip"]').tooltip();
     },

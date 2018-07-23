@@ -108,6 +108,8 @@ class PurchaseController extends Controller
 
     public function delete(Purchase $purchase)
     {
+        Log::info("Deleted purchase " . $purchase->user->name . " by " . auth()->user()->name);
+
         $purchase->packages()->detach();
 
         $purchase->payment()->delete();

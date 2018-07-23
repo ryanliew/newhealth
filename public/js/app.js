@@ -72940,6 +72940,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return _this.next(data);
 		});
 	},
+	beforeDestroy: function beforeDestroy() {
+		this.$events.off('view');
+
+		this.$events.off('viewUser');
+		this.$events.off('remind');
+		this.$events.off('legal');
+		this.$events.off('next');
+	},
 
 
 	methods: {
@@ -78793,6 +78801,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return _this.next(data);
 		});
 	},
+	beforeDestroy: function beforeDestroy() {
+		this.$events.off('view');
+
+		this.$events.off('viewUser');
+		this.$events.off('remind');
+		this.$events.off('previous');
+		this.$events.off('next');
+	},
 
 
 	methods: {
@@ -83890,21 +83906,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		};
 	},
 	mounted: function mounted() {
-		var _this = this;
-
 		window.events.$on('add_new', function () {
 			this.addNewPurchase();
 		}.bind(this));
 
-		this.$events.on('view', function (data) {
-			return _this.view(data);
-		});
-		this.$events.on('receipt', function (data) {
-			return _this.receipt(data);
-		});
-		this.$events.on('delete', function (data) {
-			return _this.postDelete(data);
-		});
+		this.turnOnEvents();
+
 		if (this.getParameterByName('new') == '1') {
 			this.cancelable = false;
 			this.isPurchasing = true;
@@ -83918,6 +83925,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				if (data.length > 0) this.view(data[0]);
 			}.bind(this));
 		}
+	},
+	beforeDestroy: function beforeDestroy() {
+		this.turnOffEvents();
 	},
 
 
@@ -83935,6 +83945,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.isPurchasing = true;
 		},
 		back: function back() {
+			this.turnOnEvents();
 			this.isPurchasing = false;
 			this.selectedPurchase = '';
 			this.$refs.purchases.refreshTable();
@@ -83943,17 +83954,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return this.$options.filters.trans(value);
 		},
 		view: function view(purchase) {
+			this.turnOffEvents();
 			this.selectedPurchase = purchase;
 			this.isPurchasing = true;
 		},
 		receipt: function receipt(purchase) {
+			this.turnOffEvents();
 			window.location.href = "/exports/receipt/" + purchase.id;
 		},
 		postDelete: function postDelete(purchase) {
-			var _this2 = this;
+			var _this = this;
 
+			this.turnOffEvents();
 			axios.post("/api/purchase/delete/" + purchase.id).then(function (response) {
-				return _this2.onSuccess(response);
+				return _this.onSuccess(response);
 			});
 		},
 		onSuccess: function onSuccess(response) {
@@ -83961,6 +83975,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.$events.fire('loading-complete');
 
 			this.$refs.purchases.refreshTable();
+			this.turnOnEvents();
+		},
+		turnOnEvents: function turnOnEvents() {
+			var _this2 = this;
+
+			this.$events.on('view', function (data) {
+				return _this2.view(data);
+			});
+			this.$events.on('receipt', function (data) {
+				return _this2.receipt(data);
+			});
+			this.$events.on('delete', function (data) {
+				return _this2.postDelete(data);
+			});
+		},
+		turnOffEvents: function turnOffEvents() {
+			this.$events.off('view');
+			this.$events.off('receipt');
+			this.$events.off('delete');
 		}
 	},
 
@@ -84150,6 +84183,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		this.$events.on('view', function (data) {
 			return _this.edit(data);
 		});
+	},
+	beforeDestroy: function beforeDestroy() {
+		this.$events.off('view');
+		window.events.$off('add_new');
 	},
 
 
@@ -84753,24 +84790,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		};
 	},
 	mounted: function mounted() {
-		var _this = this;
-
-		this.$events.on('viewUser', function (data) {
-			return _this.view(data);
-		});
-		this.$events.on('remind', function (data) {
-			return _this.remind(data);
-		});
-		this.$events.on('legal', function (data) {
-			return _this.legal(data);
-		});
-
-		this.$events.on('lock', function (data) {
-			return _this.lock(data);
-		});
-		this.$events.on('delete', function (data) {
-			return _this.delete(data);
-		});
+		this.turnOnEvents();
 		// this.$events.on('next', data => this.next(data));
 
 		if (this.getParameterByName('id')) {
@@ -84781,6 +84801,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				if (data.length > 0) this.view(data[0]);
 			}.bind(this));
 		}
+	},
+	beforeDestroy: function beforeDestroy() {
+		this.turnOffEvents();
 	},
 
 
@@ -84795,6 +84818,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return decodeURIComponent(results[2].replace(/\+/g, " "));
 		},
 		back: function back() {
+			this.turnOnEvents();
 			this.isViewing = false;
 			this.selectedUser = '';
 			this.$refs.users.refreshTable();
@@ -84803,15 +84827,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return this.$options.filters.trans(value);
 		},
 		view: function view(user) {
+			this.turnOffEvents();
 			this.selectedUser = user;
 			this.isViewing = true;
 		},
 		remind: function remind(user) {
-			var _this2 = this;
+			var _this = this;
 
+			this.turnOffEvents();
 			this.$events.fire('loading', user.id);
 			axios.post('/api/user/' + user.id + '/kyc/remind').then(function (response) {
-				return _this2.onSuccess(response);
+				return _this.onSuccess(response);
 			});
 		},
 		legal: function legal(user) {
@@ -84823,28 +84849,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.isChangingStatus = true;
 		},
 		lock: function lock(user) {
-			var _this3 = this;
+			var _this2 = this;
 
+			this.turnOffEvents();
 			this.$events.fire('loading-lock', user.id);
 			axios.post('/api/user/' + user.id + '/lock').then(function (response) {
-				return _this3.onStepSuccess(response);
+				return _this2.onStepSuccess(response);
 			});
 		},
 		delete: function _delete(user) {
-			var _this4 = this;
+			var _this3 = this;
 
+			this.turnOffEvents();
 			this.$events.fire('loading-delete', user.id);
 			axios.post('/api/user/' + user.id + "/delete").then(function (response) {
-				return _this4.onStepSuccess(response);
+				return _this3.onStepSuccess(response);
 			});
 		},
 		submitLegal: function submitLegal() {
-			var _this5 = this;
+			var _this4 = this;
 
+			this.turnOffEvents();
 			this.isLegalLoading = true;
 			this.statusForm.status = this.selectedLegalStatus.value;
 			this.statusForm.post("/api/user/" + this.selectedUser.id + "/legal").then(function (response) {
-				return _this5.onStepSuccess(response);
+				return _this4.onStepSuccess(response);
 			});
 		},
 		onStepSuccess: function onStepSuccess(response) {
@@ -84855,8 +84884,37 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.onSuccess(response);
 		},
 		onSuccess: function onSuccess(response) {
+			this.turnOnEvents();
 			flash(this.$options.filters.trans(response.data.message));
 			this.$events.fire('loading-complete');
+		},
+		turnOnEvents: function turnOnEvents() {
+			var _this5 = this;
+
+			this.$events.on('viewUser', function (data) {
+				return _this5.view(data);
+			});
+			this.$events.on('remind', function (data) {
+				return _this5.remind(data);
+			});
+			this.$events.on('legal', function (data) {
+				return _this5.legal(data);
+			});
+
+			this.$events.on('lock', function (data) {
+				return _this5.lock(data);
+			});
+			this.$events.on('delete', function (data) {
+				return _this5.delete(data);
+			});
+		},
+		turnOffEvents: function turnOffEvents() {
+			this.$events.off('viewUser');
+			this.$events.off('remind');
+			this.$events.off('legal');
+
+			this.$events.off('lock');
+			this.$events.off('delete');
 		}
 	},
 
@@ -85109,6 +85167,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return _this.export(data);
 		});
 	},
+	beforeDestroy: function beforeDestroy() {
+		this.$events.off('view');
+		this.$events.off('pay');
+		this.$events.off('export');
+	},
 
 
 	methods: {
@@ -85130,6 +85193,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		pay: function pay(data) {
 			var _this2 = this;
 
+			this.$events.off('pay');
 			this.payForm.is_std = data.is_std;
 			this.payForm.user_id = data.user_id;
 
@@ -85147,9 +85211,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			window.open('/exports/transactions?user=' + user + '&start=' + date.startOf('month').format("YYYY-MM-DD") + '&end=' + date.endOf('month').format("YYYY-MM-DD") + '&type=pdf&dateFilterKey=date');
 		},
 		onSuccess: function onSuccess(response) {
+			var _this3 = this;
+
 			flash(this.$options.filters.trans(response.message));
 
 			if (this.is_std) this.$refs.transactions_std.refreshTable();else this.$refs.transactions.refreshTable();
+
+			this.$events.on('pay', function (data) {
+				return _this3.pay(data);
+			});
 		}
 	},
 
@@ -90117,6 +90187,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return _this.setLoadingComplete(data);
         });
     },
+    beforeDestroy: function beforeDestroy() {
+        this.$events.off('loading');
+        this.$events.off('loading-complete');
+    },
     updated: function updated() {
         $('[data-toggle="tooltip"]').tooltip();
     },
@@ -90418,7 +90492,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this = this;
 
         this.user = window.user;
-        this.$events.once('loading', function (data) {
+        this.$events.on('loading', function (data) {
             return _this.setLoading(data);
         });
         this.$events.on('loading-lock', function (data) {
@@ -90430,6 +90504,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.$events.on('loading-complete', function (data) {
             return _this.setLoadingComplete(data);
         });
+    },
+    beforeDestroy: function beforeDestroy() {
+        this.$events.off('loading');
+        this.$events.off('loading-lock');
+        this.$events.off('loading-delete');
+        this.$events.off('loading-complete');
     },
     updated: function updated() {
         $('[data-toggle="tooltip"]').tooltip();
@@ -90450,8 +90530,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.delete_loading = data == this.rowData.id;
         },
         setLoadingComplete: function setLoadingComplete(data) {
-            var _this2 = this;
-
             this.loading = false;
             this.lock_loading = false;
             this.delete_loading = false;
@@ -90459,10 +90537,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.isDeleting = false;
             this.isConfirming = false;
             this.isDeleteConfirming = false;
-
-            this.$events.once('loading', function (data) {
-                return _this2.setLoading(data);
-            });
         },
         remindUser: function remindUser() {
             if (!this.isReminding) {
@@ -91250,6 +91324,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.$events.on('loading-complete', function (data) {
             return _this.setLoadingComplete(data);
         });
+    },
+    beforeDestroy: function beforeDestroy() {
+        this.$events.off('loading');
+        this.$events.off('loading-admin');
+        this.$events.off('loading-complete');
     },
     updated: function updated() {
         $('[data-toggle="tooltip"]').tooltip();
