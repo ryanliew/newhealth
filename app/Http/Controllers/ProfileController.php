@@ -59,7 +59,7 @@ class ProfileController extends Controller
     	}
 
 
-    	$user = auth()->user()->update([
+    	auth()->user()->update([
             'email' => request()->email,
             'name' => request()->name,
             'country_id' => request()->country_id,
@@ -90,7 +90,12 @@ class ProfileController extends Controller
             auth()->user()->update([ 'password' => bcrypt(request()->password) ]);
         }
 
-        auth()->user()->addresses()->create([
+        auth()->user()->addresses()->updateOrCreate(
+            [
+                'type' => Address::PERSONAL(),
+                'user_id' => auth()->id()
+            ],
+            [
             'line_1' => request()->address_line_1,
             'line_2' => request()->address_line_2,
             'country_id' => request()->country_id,
@@ -101,7 +106,12 @@ class ProfileController extends Controller
 
         if(isset($validated['company_address_line_1']))
         {
-            auth()->user()->addresses()->create([
+            auth()->user()->addresses()->updateOrCreate(
+                [
+                'type' => Address::PERSONAL(),
+                'user_id' => auth()->id()
+                ],
+                [
                 'line_1' => request()->company_address_line_1,
                 'line_2' => request()->company_address_line_2,
                 'country_id' => request()->company_country_id,

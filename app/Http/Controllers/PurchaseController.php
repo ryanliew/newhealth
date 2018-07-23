@@ -6,6 +6,7 @@ use App\Package;
 use App\Purchase;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class PurchaseController extends Controller
 {
