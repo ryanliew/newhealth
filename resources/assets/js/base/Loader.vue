@@ -25,9 +25,9 @@
 
 <style scoped>
 .loader-container {
-	width: 100%;
-	position: absolute;
-	height: 100%;
+	width: 100vw;
+	position: fixed;
+	height: 100vh;
 	display: flex;
 	top: 0;
 	left: 0;
