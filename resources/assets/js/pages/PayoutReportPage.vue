@@ -84,6 +84,12 @@
 			this.$events.on('export', data => this.export(data));
 		},
 
+		beforeDestroy() {
+			this.$events.off('view');
+			this.$events.off('pay');
+			this.$events.off('export');
+		},
+
 		methods: {
 
 			tableTitle(value) {
@@ -103,6 +109,7 @@
 			},
 
 			pay(data) {
+				this.$events.off('pay');
 				this.payForm.is_std = data.is_std;
 				this.payForm.user_id = data.user_id;
 
@@ -128,6 +135,9 @@
 					this.$refs.transactions_std.refreshTable()
 				else
 					this.$refs.transactions.refreshTable();
+
+
+				this.$events.on('pay', data => this.pay(data));	
 			},
 
 		},

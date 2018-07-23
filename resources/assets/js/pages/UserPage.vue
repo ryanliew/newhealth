@@ -79,12 +79,7 @@
 		},
 
 		mounted() {
-			this.$events.on('viewUser', data => this.view(data));
-			this.$events.on('remind', data => this.remind(data));
-			this.$events.on('legal', data => this.legal(data));
-
-			this.$events.on('lock', data => this.lock(data));
-			this.$events.on('delete', data => this.delete(data));
+			this.turnOnEvents();
 			// this.$events.on('next', data => this.next(data));
 
 			if(this.getParameterByName('id')) {
@@ -94,6 +89,10 @@
 						this.view(data[0]);
 				}.bind(this));
 			}
+		},
+
+		beforeDestroy() {
+			this.turnOffEvents();
 		},
 
 		methods: {
@@ -108,6 +107,7 @@
 			},
 
 			back() {
+				this.turnOnEvents();
 				this.isViewing = false;
 				this.selectedUser = '';
 				this.$refs.users.refreshTable();
@@ -118,11 +118,13 @@
 			},
 
 			view(user) {
+				this.turnOffEvents();
 				this.selectedUser = user;
 				this.isViewing = true;
 			},
 
 			remind(user) {
+				this.turnOffEvents();
 				this.$events.fire('loading', user.id);
 				axios.post('/api/user/' + user.id + '/kyc/remind')
 					.then(response => this.onSuccess(response));
@@ -136,18 +138,21 @@
 			},
 
 			lock(user) {
+				this.turnOffEvents();
 				this.$events.fire('loading-lock', user.id);
 				axios.post('/api/user/' + user.id + '/lock')
 					.then(response => this.onStepSuccess(response));
 			},
 
 			delete(user) {
+				this.turnOffEvents();
 				this.$events.fire('loading-delete', user.id);
 				axios.post('/api/user/' + user.id + "/delete")
 					.then(response => this.onStepSuccess(response));
 			},
 
 			submitLegal() {
+				this.turnOffEvents();
 				this.isLegalLoading = true;
 				this.statusForm.status = this.selectedLegalStatus.value;
 				this.statusForm.post("/api/user/" + this.selectedUser.id + "/legal")
@@ -163,8 +168,27 @@
 			},
 
 			onSuccess(response) {
+				this.turnOnEvents();
 				flash(this.$options.filters.trans(response.data.message));
 				this.$events.fire('loading-complete');
+			},
+
+			turnOnEvents() {
+				this.$events.on('viewUser', data => this.view(data));
+				this.$events.on('remind', data => this.remind(data));
+				this.$events.on('legal', data => this.legal(data));
+
+				this.$events.on('lock', data => this.lock(data));
+				this.$events.on('delete', data => this.delete(data));
+			},
+
+			turnOffEvents() {
+				this.$events.off('viewUser');
+				this.$events.off('remind');
+				this.$events.off('legal');
+
+				this.$events.off('lock');
+				this.$events.off('delete');
 			}
 		},
 

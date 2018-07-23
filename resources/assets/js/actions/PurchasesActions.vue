@@ -62,6 +62,11 @@ export default {
         this.$events.on('loading-complete', data => this.setLoadingComplete(data));
     },
 
+    beforeDestroy() {
+        this.$events.off('loading');
+        this.$events.off('loading-complete');
+    },
+
     updated() {
         $('[data-toggle="tooltip"]').tooltip();
     },

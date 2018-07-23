@@ -245,6 +245,15 @@
 			this.$events.on('next', data => this.next(data));
 		},
 
+		beforeDestroy() {
+			this.$events.off('view');
+
+			this.$events.off('viewUser');
+			this.$events.off('remind');
+			this.$events.off('previous');
+			this.$events.off('next');
+		},
+
 		methods: {
 			getDashboardData() {
 				axios.get("/api/dashboard/" + this.user.id)

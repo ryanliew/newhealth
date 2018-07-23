@@ -47,6 +47,11 @@
 			this.$events.on('view', data => this.edit(data));			
 		},
 
+		beforeDestroy() {
+			this.$events.off('view');
+			window.events.$off('add_new');
+		},
+
 		methods: {
 			addNewPackage() {
 				this.isEditing = true;
