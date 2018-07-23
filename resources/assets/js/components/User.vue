@@ -666,7 +666,7 @@
 				this.form.bank_address = this.selectedUser.bank_address;
 				this.form.account_type = this.selectedUser.account_type;
 				this.form.account_no = this.selectedUser.account_no;
-
+				this.form.id_status = this.selectedUser.id_status;
 				this.form.beneficiary_name = this.selectedUser.beneficiary_name;
 				this.form.beneficiary_identification = this.selectedUser.beneficiary_identification;
 				this.form.beneficiary_address = this.selectedUser.beneficiary_address;
