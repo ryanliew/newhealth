@@ -65,11 +65,13 @@ class PaymentController extends Controller
     public function verify(Payment $payment)
     {
         Log::info("Verified payment " . $payment->id . " by " . auth()->user()->name);
+        if(!$payment->is_verified)
+        {
+            $payment->update(['is_verified' => true]);
 
-        $payment->update(['is_verified' => true]);
-
-        $payment->purchase->verify();
-
+            $payment->purchase->verify();
+        }
+        
         return json_encode(['message' => 'payment.verify_success', 'payment' => $payment]);
     }
 
