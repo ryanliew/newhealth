@@ -48,7 +48,7 @@
     import moment from 'moment';
 
     export default {
-        props: ['dateFilterable', 'addNew', 'searchables', 'monthFilterable', 'defaultFilterMonth'],
+        props: ['dateFilterable', 'addNew', 'searchables', 'monthFilterable', 'defaultFilterMonth', 'defaultCurrentMonth'],
 
         data () {
             return {
@@ -61,10 +61,19 @@
 
         mounted() {
             this.filterMonth = this.defaultFilterMonth ? this.defaultFilterMonth : moment().format("YYYY-MM-DD");
-            this.filterDateStart = this.defaultFilterMonth ? moment(this.defaultFilterMonth).startOf('month').format("YYYY-MM-DD") : '';
-            this.filterDateEnd = this.defaultFilterMonth ? moment(this.defaultFilterMonth).endOf('month').format("YYYY-MM-DD") : '';
 
-            Vue.nextTick( () => this.doFilter() );
+            if(this.defaultCurrentMonth) {
+                this.filterDateStart = moment().startOf('month').format("YYYY-MM-DD");
+                this.filterDateEnd = moment().endOf('month').format("YYYY-MM-DD");
+            }
+            
+            if(this.defaultFilterMonth)
+            {
+                this.filterDateStart = moment(this.defaultFilterMonth).startOf('month').format("YYYY-MM-DD");
+                this.filterDateEnd = moment(this.defaultFilterMonth).endOf('month').format("YYYY-MM-DD");
+            }
+
+            window.events.$once("table-loaded", data => this.doFilter());
         },
 
         methods: {
