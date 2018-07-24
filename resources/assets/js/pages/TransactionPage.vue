@@ -9,11 +9,12 @@
 						:dateFilterable="true"
 						dateFilterKey="transactions.date"
 						:hasBack="cancelable"
-						:filterMonth="filterMonth"
+						:filterMonth="filterMonthDefault"
 						@back="back"
 						:canExportPDF="true"
 						:canExportExcel="true"
 						:exportUrl="exportUrl"
+						:defaultCurrentMonth="true"
 						>
 			</table-view>
 		</transition>
@@ -21,6 +22,7 @@
 </template>
 
 <script>
+	import moment from 'moment';
 	export default {
 		props: ['userId', 'filterMonth', 'cancelable'],
 
@@ -33,8 +35,17 @@
 					{ name: 'payout_status', title: this.tableTitle('transaction.status'), sortField: 'transactions.payout_status', callback: 'transactionPayoutStatusLabel'},
 					{ name: '__component:table-price-switcher', title: this.tableTitle('transaction.amount'), sortField: 'transactions.amount' }
 				],
-				searchables: ""
+				searchables: "",
+				filterMonthDefault: ""
 			};
+		},
+
+		created() {
+			this.filterMonthDefault = this.filterMonth;
+
+			if(!this.filterMonth) {
+				this.filterMonthDefault = moment().format("YYYY-MM-DD");
+			}
 		},
 
 		methods: {

@@ -50409,7 +50409,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth', 'canExportPDF', 'canExportExcel', 'exportUrl'],
+	props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth', 'canExportPDF', 'canExportExcel', 'exportUrl', 'defaultCurrentMonth'],
 
 	components: { Vuetable: __WEBPACK_IMPORTED_MODULE_0_vuetable_2_src_components_Vuetable___default.a, VuetablePagination: __WEBPACK_IMPORTED_MODULE_1__VuetablepaginationBulma___default.a, VuetablePaginationInfo: __WEBPACK_IMPORTED_MODULE_2_vuetable_2_src_components_VuetablePaginationInfo___default.a, VuetableFilterBar: __WEBPACK_IMPORTED_MODULE_3__VuetableFilterBar___default.a, Loader: __WEBPACK_IMPORTED_MODULE_5__Loader___default.a },
 
@@ -50485,7 +50485,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				this.params.month = filters.month;
 				this.params.monthFilterKey = this.monthFilterKey;
 			}
-
+			console.log("complete event");
 			Vue.nextTick(function () {
 				return _this2.$refs.vuetable.refresh();
 			});
@@ -50500,6 +50500,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			Vue.nextTick(function () {
 				return _this3.$refs.vuetable.refresh();
 			});
+
+			console.log("Filter reset");
 		},
 		onLoaded: function onLoaded() {
 			this.loading = false;
@@ -54836,7 +54838,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['dateFilterable', 'addNew', 'searchables', 'monthFilterable', 'defaultFilterMonth'],
+    props: ['dateFilterable', 'addNew', 'searchables', 'monthFilterable', 'defaultFilterMonth', 'defaultCurrentMonth'],
 
     data: function data() {
         return {
@@ -54850,10 +54852,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this = this;
 
         this.filterMonth = this.defaultFilterMonth ? this.defaultFilterMonth : __WEBPACK_IMPORTED_MODULE_0_moment___default()().format("YYYY-MM-DD");
-        this.filterDateStart = this.defaultFilterMonth ? __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.defaultFilterMonth).startOf('month').format("YYYY-MM-DD") : '';
-        this.filterDateEnd = this.defaultFilterMonth ? __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.defaultFilterMonth).endOf('month').format("YYYY-MM-DD") : '';
 
-        Vue.nextTick(function () {
+        if (this.defaultCurrentMonth) {
+            this.filterDateStart = __WEBPACK_IMPORTED_MODULE_0_moment___default()().startOf('month').format("YYYY-MM-DD");
+            this.filterDateEnd = __WEBPACK_IMPORTED_MODULE_0_moment___default()().endOf('month').format("YYYY-MM-DD");
+        }
+
+        if (this.defaultFilterMonth) {
+            this.filterDateStart = __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.defaultFilterMonth).startOf('month').format("YYYY-MM-DD");
+            this.filterDateEnd = __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.defaultFilterMonth).endOf('month').format("YYYY-MM-DD");
+        }
+
+        window.events.$once("table-loaded", function (data) {
             return _this.doFilter();
         });
     },
@@ -55213,7 +55223,8 @@ var render = function() {
             dateFilterable: _vm.dateFilterable,
             monthFilterable: _vm.monthFilterable,
             addNew: _vm.addNew,
-            defaultFilterMonth: _vm.filterMonth
+            defaultFilterMonth: _vm.filterMonth,
+            defaultCurrentMonth: _vm.defaultCurrentMonth
           }
         }),
         _vm._v(" "),
@@ -79289,10 +79300,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			coverPhoto: { name: 'No file selected', src: '/img/select-image.png' },
 			leftPhoto: { name: 'No file selected', src: '/img/select-image.png' },
 			rightPhoto: { name: 'No file selected', src: '/img/select-image.png' },
-			middlePhoto: { name: 'No file selected', src: '/img/select-image.png' }
+			middlePhoto: { name: 'No file selected', src: '/img/select-image.png' },
+			tableWidth: 0
 		};
 	},
 	mounted: function mounted() {
+		var _this = this;
+
 		if (this.selectedPost) {
 			this.form.title = this.selectedPost.title;
 			this.form.content = this.selectedPost.content;
@@ -79315,6 +79329,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			if (this.selectedPost.right_photo) this.rightPhoto.src = 'storage/' + this.selectedPost.right_photo;
 			if (this.selectedPost.middle_photo) this.middlePhoto.src = 'storage/' + this.selectedPost.middle_photo;
 		}
+
+		Vue.nextTick(function () {
+			_this.tableWidth = _this.$refs.mainTable.clientWidth;
+		});
 	},
 
 
@@ -79323,11 +79341,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.$emit('back');
 		},
 		submit: function submit() {
-			var _this = this;
+			var _this2 = this;
 
 			this.form.user = this.user.id;
 			this.form.post(this.url).then(function (response) {
-				return _this.onSuccess(response);
+				return _this2.onSuccess(response);
 			});
 		},
 		onSuccess: function onSuccess(response) {
@@ -79385,11 +79403,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		date: function date() {
 			return this.selectedPost ? __WEBPACK_IMPORTED_MODULE_2_moment___default()(this.selectedPost.updated_at).format("Do MMMM YYYY") : __WEBPACK_IMPORTED_MODULE_2_moment___default()().format("Do MMMM YYYY");
 		},
+		thumbnailSingleWidth: function thumbnailSingleWidth() {
+			return this.tableWidth / 3 - 20;
+		},
 		thumbnailTableWidth: function thumbnailTableWidth() {
+			var singleWidth = this.tableWidth / 3;
 			var hasLeftPhoto = this.leftPhoto.src !== '/img/select-image.png' ? 1 : 0;
 			var hasMiddlePhoto = this.middlePhoto.src !== '/img/select-image.png' ? 1 : 0;
 			var hasRightPhoto = this.rightPhoto.src !== '/img/select-image.png' ? 1 : 0;
-			return (hasLeftPhoto + hasRightPhoto + hasMiddlePhoto) * 390;
+			return (hasLeftPhoto + hasRightPhoto + hasMiddlePhoto) * singleWidth;
 		},
 		titleLength: function titleLength() {
 			return this.form.title ? this.form.title.length : 0;
@@ -79467,8 +79489,9 @@ var render = function() {
               _c(
                 "table",
                 {
+                  ref: "mainTable",
                   staticStyle: {
-                    width: "1170px",
+                    width: "100%",
                     padding: "10px",
                     margin: "0 auto"
                   }
@@ -79551,7 +79574,7 @@ var render = function() {
                 "table",
                 {
                   staticStyle: {
-                    width: "1170px",
+                    width: "100%",
                     padding: "10px",
                     margin: "0 auto"
                   }
@@ -79577,7 +79600,7 @@ var render = function() {
                 "table",
                 {
                   staticStyle: {
-                    width: "1170px",
+                    width: "100%",
                     padding: "10px",
                     margin: "0 auto"
                   }
@@ -79765,7 +79788,11 @@ var render = function() {
                                     )
                                   : _c("div", {
                                       style:
-                                        "height:360px;width:360px;background-image:url(" +
+                                        "width:" +
+                                        _vm.thumbnailSingleWidth +
+                                        "px;height:" +
+                                        _vm.thumbnailSingleWidth +
+                                        "px;background-image:url(" +
                                         _vm.leftPhoto.src +
                                         ");background-size:cover;background-position:center;"
                                     })
@@ -79927,7 +79954,11 @@ var render = function() {
                                     )
                                   : _c("div", {
                                       style:
-                                        "height:360px;width:360px;background-image:url(" +
+                                        "width:" +
+                                        _vm.thumbnailSingleWidth +
+                                        "px;height:" +
+                                        _vm.thumbnailSingleWidth +
+                                        "px;background-image:url(" +
                                         _vm.middlePhoto.src +
                                         ");background-size:cover;background-position:center;"
                                     })
@@ -80090,7 +80121,11 @@ var render = function() {
                                     )
                                   : _c("div", {
                                       style:
-                                        "height:360px;width:360px;background-image:url(" +
+                                        "width:" +
+                                        _vm.thumbnailSingleWidth +
+                                        "px;height:" +
+                                        _vm.thumbnailSingleWidth +
+                                        "px;background-image:url(" +
                                         _vm.rightPhoto.src +
                                         ");background-size:cover;background-position:center;"
                                     })
@@ -80181,7 +80216,7 @@ var render = function() {
                 "table",
                 {
                   staticStyle: {
-                    width: "1170px",
+                    width: "100%",
                     padding: "10px",
                     margin: "0 auto"
                   }
@@ -81079,6 +81114,8 @@ if (false) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
 //
 //
 //
@@ -81101,6 +81138,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: ['userId', 'filterMonth', 'cancelable'],
@@ -81108,8 +81147,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	data: function data() {
 		return {
 			fields: [{ name: 'date', title: this.tableTitle('transaction.created_at'), sortField: 'transactions.date', callback: 'date' }, { name: 'type', title: this.tableTitle('transaction.type'), sortField: 'transactions.type', callback: 'commisionTypeLabel' }, { name: '__component:transaction-description', title: this.tableTitle('transaction.description'), sortField: 'transactions.description' }, { name: 'payout_status', title: this.tableTitle('transaction.status'), sortField: 'transactions.payout_status', callback: 'transactionPayoutStatusLabel' }, { name: '__component:table-price-switcher', title: this.tableTitle('transaction.amount'), sortField: 'transactions.amount' }],
-			searchables: ""
+			searchables: "",
+			filterMonthDefault: ""
 		};
+	},
+	created: function created() {
+		this.filterMonthDefault = this.filterMonth;
+
+		if (!this.filterMonth) {
+			this.filterMonthDefault = __WEBPACK_IMPORTED_MODULE_0_moment___default()().format("YYYY-MM-DD");
+		}
 	},
 
 
@@ -81161,10 +81208,11 @@ var render = function() {
               dateFilterable: true,
               dateFilterKey: "transactions.date",
               hasBack: _vm.cancelable,
-              filterMonth: _vm.filterMonth,
+              filterMonth: _vm.filterMonthDefault,
               canExportPDF: true,
               canExportExcel: true,
-              exportUrl: _vm.exportUrl
+              exportUrl: _vm.exportUrl,
+              defaultCurrentMonth: true
             },
             on: { back: _vm.back }
           })
@@ -85301,7 +85349,8 @@ var render = function() {
             ? _c("transaction-page", {
                 attrs: {
                   userId: _vm.selectedUserId,
-                  filterMonth: _vm.filterMonth
+                  filterMonth: _vm.filterMonth,
+                  cancelable: true
                 },
                 on: { back: _vm.back }
               })
@@ -91906,19 +91955,16 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("span", [
-      _vm._v(
-        _vm._s(
-          _vm._f("trans")("transaction." + _vm.rowData.description, {
-            name: _vm.rowData.target.name
-          })
-        )
-      )
-    ])
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("span")])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

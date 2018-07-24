@@ -17,7 +17,7 @@
 					<form @submit.prevent="submit" 
 						@keydown="form.errors.clear($event.target.name)" 
 						@input="form.errors.clear($event.target.name)">
-						<table style="width:1170px; padding: 10px;margin: 0 auto;">
+						<table style="width: 100%; padding: 10px;margin: 0 auto;" ref="mainTable">
 							<tr style="background: black">
 								<td colspan="2">
 					                <img src="/img/mail/Newleaf-Newsletter-Header.jpg" width="100%">
@@ -46,7 +46,7 @@
 								</td>
 							</tr>
 						</table>
-						<table style="width:1170px; padding: 10px;margin: 0 auto;">
+						<table style="width: 100%; padding: 10px;margin: 0 auto;">
 							<tr>
 								<td>
 									<b>{{ 'post.published_date' | trans }}: {{ date }}</b>
@@ -59,7 +59,7 @@
 					            </td>   
 					        </tr>
 					    </table> 
-						<table style="width:1170px; padding: 10px;margin: 0 auto;">
+						<table style="width: 100%; padding: 10px;margin: 0 auto;">
 							<tr>
 								<td>
 									<template v-if="isEditing">
@@ -125,7 +125,7 @@
 														</image-input>
 													</div>
 												</div>
-												<div :style="'height:360px;width:360px;background-image:url(' + leftPhoto.src + ');background-size:cover;background-position:center;'" v-else></div>
+												<div :style="'width:' + thumbnailSingleWidth + 'px;height:'+ thumbnailSingleWidth + 'px;background-image:url(' + leftPhoto.src + ');background-size:cover;background-position:center;'" v-else></div>
 												<!-- <img :src="leftPhoto.src" width="100%" v-else> -->
 											</td>
 										</tr>
@@ -184,7 +184,7 @@
 														</image-input>
 													</div>
 												</div>
-												<div :style="'height:360px;width:360px;background-image:url(' + middlePhoto.src + ');background-size:cover;background-position:center;'" v-else></div>
+												<div :style="'width:' + thumbnailSingleWidth + 'px;height:'+ thumbnailSingleWidth + 'px;background-image:url(' + middlePhoto.src + ');background-size:cover;background-position:center;'" v-else></div>
 												<!-- <img :src="middlePhoto.src" width="100%" v-else> -->
 											</td>
 										</tr>
@@ -242,7 +242,7 @@
 														</image-input>
 													</div>
 												</div>
-												<div :style="'height:360px;width:360px;background-image:url(' + rightPhoto.src + ');background-size:cover;background-position:center;'" v-else></div>
+												<div :style="'width:' + thumbnailSingleWidth + 'px;height:'+ thumbnailSingleWidth + 'px;background-image:url(' + rightPhoto.src + ');background-size:cover;background-position:center;'" v-else></div>
 												<!-- <img :src="rightPhoto.src" width="100%" v-else> -->
 											</td>
 										</tr>
@@ -281,7 +281,7 @@
 								</td>
 							</tr>
 						</table>
-						<table style="width:1170px; padding: 10px;margin: 0 auto;">
+						<table style="width: 100%; padding: 10px;margin: 0 auto;">
 							<tr>
 								<td>
 									<div style="padding: 50px">
@@ -356,7 +356,8 @@
 				coverPhoto: {name: 'No file selected', src: '/img/select-image.png'},
 				leftPhoto: {name: 'No file selected', src: '/img/select-image.png'},
 				rightPhoto: {name: 'No file selected', src: '/img/select-image.png'},
-				middlePhoto: {name: 'No file selected', src: '/img/select-image.png'}
+				middlePhoto: {name: 'No file selected', src: '/img/select-image.png'},
+				tableWidth: 0
 			};
 		},
 
@@ -386,6 +387,8 @@
 				if(this.selectedPost.middle_photo)
 					this.middlePhoto.src = 'storage/' + this.selectedPost.middle_photo;
 			}
+
+			Vue.nextTick( () => { this.tableWidth = this.$refs.mainTable.clientWidth; });
 		},
 
 		methods: {
@@ -468,11 +471,16 @@
 				return this.selectedPost ? moment(this.selectedPost.updated_at).format("Do MMMM YYYY") : moment().format("Do MMMM YYYY");
 			},
 
+			thumbnailSingleWidth() {
+				return this.tableWidth / 3 - 20;
+			},
+
 			thumbnailTableWidth() {
+				let singleWidth = this.tableWidth / 3;
 				let hasLeftPhoto = this.leftPhoto.src !== '/img/select-image.png' ? 1 : 0; 
 				let hasMiddlePhoto = this.middlePhoto.src !== '/img/select-image.png' ? 1 : 0;
 				let hasRightPhoto = this.rightPhoto.src !== '/img/select-image.png' ? 1 : 0; 
-				return ( hasLeftPhoto + hasRightPhoto + hasMiddlePhoto ) * 390;
+				return ( hasLeftPhoto + hasRightPhoto + hasMiddlePhoto ) * singleWidth;
 			},
 
 			titleLength() {

@@ -29,7 +29,7 @@
 			</div>
 		</transition>
 		<transition name="slide-fade" mode="out-in">
-			<transaction-page @back="back" v-if="isViewingDetails" :userId="selectedUserId" :filterMonth="filterMonth"></transaction-page>
+			<transaction-page @back="back" v-if="isViewingDetails" :userId="selectedUserId" :filterMonth="filterMonth" :cancelable="true"></transaction-page>
 		</transition>
 	</div>
 </template>

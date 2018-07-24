@@ -25,7 +25,7 @@
 		
 		<div class="card-body">
 			<loader v-if="loading"></loader>
-			<vuetable-filter-bar :searchables="searchables" :dateFilterable="dateFilterable" :monthFilterable="monthFilterable" :addNew="addNew" :defaultFilterMonth="filterMonth"></vuetable-filter-bar>
+			<vuetable-filter-bar :searchables="searchables" :dateFilterable="dateFilterable" :monthFilterable="monthFilterable" :addNew="addNew" :defaultFilterMonth="filterMonth" :defaultCurrentMonth="defaultCurrentMonth"></vuetable-filter-bar>
 			<div class="table-responsive">
 				<vuetable ref="vuetable" 
 						:api-url="url"
@@ -70,7 +70,7 @@
 	import Loader from './Loader';
 
 	export default {
-		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth', 'canExportPDF', 'canExportExcel', 'exportUrl'],
+		props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth', 'canExportPDF', 'canExportExcel', 'exportUrl', 'defaultCurrentMonth'],
 
 		components: { Vuetable, VuetablePagination, VuetablePaginationInfo, VuetableFilterBar, Loader },
 
@@ -144,7 +144,7 @@
 					this.params.month = filters.month;
 					this.params.monthFilterKey =this.monthFilterKey;
 				}
-
+				console.log("complete event");
 				Vue.nextTick( () => this.$refs.vuetable.refresh())
 			},
 
@@ -155,6 +155,8 @@
 			onFilterReset() {
 				this.params = {}
 				Vue.nextTick( () => this.$refs.vuetable.refresh())
+
+				console.log("Filter reset");
 			},
 
 			onLoaded() {

@@ -50159,7 +50159,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth', 'canExportPDF', 'canExportExcel', 'exportUrl'],
+	props: ['user', 'fields', 'url', 'searchables', 'detail', 'empty', 'dateFilterable', 'dateFilterKey', 'title', 'addNew', 'monthFilterable', 'monthFilterKey', 'hasBack', 'filterMonth', 'canExportPDF', 'canExportExcel', 'exportUrl', 'defaultCurrentMonth'],
 
 	components: { Vuetable: __WEBPACK_IMPORTED_MODULE_0_vuetable_2_src_components_Vuetable___default.a, VuetablePagination: __WEBPACK_IMPORTED_MODULE_1__VuetablepaginationBulma___default.a, VuetablePaginationInfo: __WEBPACK_IMPORTED_MODULE_2_vuetable_2_src_components_VuetablePaginationInfo___default.a, VuetableFilterBar: __WEBPACK_IMPORTED_MODULE_3__VuetableFilterBar___default.a, Loader: __WEBPACK_IMPORTED_MODULE_5__Loader___default.a },
 
@@ -50235,7 +50235,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				this.params.month = filters.month;
 				this.params.monthFilterKey = this.monthFilterKey;
 			}
-
+			console.log("complete event");
 			Vue.nextTick(function () {
 				return _this2.$refs.vuetable.refresh();
 			});
@@ -50250,6 +50250,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			Vue.nextTick(function () {
 				return _this3.$refs.vuetable.refresh();
 			});
+
+			console.log("Filter reset");
 		},
 		onLoaded: function onLoaded() {
 			this.loading = false;
@@ -54586,7 +54588,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['dateFilterable', 'addNew', 'searchables', 'monthFilterable', 'defaultFilterMonth'],
+    props: ['dateFilterable', 'addNew', 'searchables', 'monthFilterable', 'defaultFilterMonth', 'defaultCurrentMonth'],
 
     data: function data() {
         return {
@@ -54600,10 +54602,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var _this = this;
 
         this.filterMonth = this.defaultFilterMonth ? this.defaultFilterMonth : __WEBPACK_IMPORTED_MODULE_0_moment___default()().format("YYYY-MM-DD");
-        this.filterDateStart = this.defaultFilterMonth ? __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.defaultFilterMonth).startOf('month').format("YYYY-MM-DD") : '';
-        this.filterDateEnd = this.defaultFilterMonth ? __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.defaultFilterMonth).endOf('month').format("YYYY-MM-DD") : '';
 
-        Vue.nextTick(function () {
+        if (this.defaultCurrentMonth) {
+            this.filterDateStart = __WEBPACK_IMPORTED_MODULE_0_moment___default()().startOf('month').format("YYYY-MM-DD");
+            this.filterDateEnd = __WEBPACK_IMPORTED_MODULE_0_moment___default()().endOf('month').format("YYYY-MM-DD");
+        }
+
+        if (this.defaultFilterMonth) {
+            this.filterDateStart = __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.defaultFilterMonth).startOf('month').format("YYYY-MM-DD");
+            this.filterDateEnd = __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.defaultFilterMonth).endOf('month').format("YYYY-MM-DD");
+        }
+
+        window.events.$once("table-loaded", function (data) {
             return _this.doFilter();
         });
     },
@@ -54963,7 +54973,8 @@ var render = function() {
             dateFilterable: _vm.dateFilterable,
             monthFilterable: _vm.monthFilterable,
             addNew: _vm.addNew,
-            defaultFilterMonth: _vm.filterMonth
+            defaultFilterMonth: _vm.filterMonth,
+            defaultCurrentMonth: _vm.defaultCurrentMonth
           }
         }),
         _vm._v(" "),
