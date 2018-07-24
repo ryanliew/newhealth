@@ -46,6 +46,8 @@ Route::group(['prefix' => 'exports'], function() {
 	Route::get('/purchases', 'ExportController@purchases');
 	Route::get('/payouts', 'ExportController@payouts');
 	Route::get('/receipt/{purchase}', 'ExportController@receipt');
+	Route::get("/payouts/default", 'ExportController@payouts_default');
+	Route::get("/transactions/default", 'ExportController@transactions_default');
 });
 
 Route::get('testpdf', function() {

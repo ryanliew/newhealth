@@ -63,13 +63,13 @@
 
 			.company-details {
 				float: left;
-				width: 75%;
+				width: 65%;
 				padding: 0 15px;
 			}
 
 			.extra-details {
 				float: left;
-				width: 20%;
+				width: 35%;
 				padding: 0 15px;
 			}
 
@@ -166,55 +166,56 @@
 		</style>
 		@yield('style')
 		
-		<div class="container">
-			<div class="header">
-				<div class="row">
-					<div class="header-title">
-						@yield('title')
+		@if(!isset($showHeader) || $showHeader)
+			<div class="container">
+				<div class="header">
+					<div class="row">
+						<div class="header-title">
+							@yield('title')
+						</div>
+						<div class="header-image">
+							<img src="{{ url('/img/mail/email-logo.png') }}" width="200px" />
+						</div>
 					</div>
-					<div class="header-image">
-						<img src="{{ url('/img/mail/email-logo.png') }}" width="200px" />
+					<div class="clearfix" style="height: 15px;"></div>
+					<div class="row">
+						<div class="company-details">
+							Newleaf Plantation Berhad <span style="font-size:10px">(1251569-U)</span><br>
+			                Suite E-7-1, Block E, Plaza Mont Kiara<br>
+			                No 2 Jalan Kiara<br>
+			                50480 Kuala Lumpur, Malaysia<br>
+			                <br>
+			                <table class="phone">
+			                	<tbody>
+			                		<tr>
+			                			<td>
+			                				Phone:
+			                			</td>
+			                			<td>
+			                				+603-62016336
+			                			</td>
+			                		</tr>
+			                		<tr>
+			                			<td>
+			                				Fax:
+			                			</td>
+			                			<td>
+			                				+603-62017337
+			                			</td>
+			                		</tr>
+			                	</tbody>
+			                </table>
+			                @yield('to')
+						</div>
+						<div class="extra-details">
+							@yield('extra')
+						</div>
 					</div>
+					<div class="clearfix"></div>
 				</div>
-				<div class="clearfix" style="height: 15px;"></div>
-				<div class="row">
-					<div class="company-details">
-						Newleaf Plantation Berhad <span style="font-size:10px">(1251569-U)</span><br>
-		                Suite E-7-1, Block E, Plaza Mont Kiara<br>
-		                No 2 Jalan Kiara<br>
-		                50480 Kuala Lumpur, Malaysia<br>
-		                <br>
-		                <table class="phone">
-		                	<tbody>
-		                		<tr>
-		                			<td>
-		                				Phone:
-		                			</td>
-		                			<td>
-		                				+603-62016336
-		                			</td>
-		                		</tr>
-		                		<tr>
-		                			<td>
-		                				Fax:
-		                			</td>
-		                			<td>
-		                				+603-62017337
-		                			</td>
-		                		</tr>
-		                	</tbody>
-		                </table>
-		                @yield('to')
-					</div>
-					<div class="extra-details">
-						@yield('extra')
-					</div>
-				</div>
-				<div class="clearfix"></div>
 			</div>
-		</div>
-		<br>
-
+			<br>
+		@endif
 		<div class="content">
 
 			@yield('content')

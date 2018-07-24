@@ -22,6 +22,8 @@ return [
     'news' => '最新消息',
     'trees' => "种植管理",
     'materials' => "销售辅助",
-    'exit' => '离开'
+    'exit' => '离开',
+    'commission_report' => "佣金报告",
+    'payout_report' => "支出报告"
 
 ];

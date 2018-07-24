@@ -7,6 +7,7 @@ use App\ExcelExports\PurchaseExports;
 use App\ExcelExports\TransactionExports;
 use App\ExcelExports\UserExports;
 use App\Purchase;
+use App\Transaction;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -272,5 +273,45 @@ class ExportController extends Controller
         $pdf = App::make('dompdf.wrapper');
         $pdf->loadView('pdf.receipt', ['purchase' => $purchase, 'user' => $purchase->user]);
         return $pdf->download($title . '.pdf');
+    }
+
+    public function payouts_default()
+    {
+        $transactions = Transaction::latest()->get();
+
+        $startDate = $transactions->min('date');
+        $endDate = $transactions->max('date');
+
+        $currentDate = $startDate;
+
+        $result = collect();
+        for($currentDate = $startDate->startOfMonth(); $currentDate->lte($endDate); $currentDate->addMonth())
+        {
+            $transactions = DB::table('users')
+                                ->leftJoin('transactions', 'users.id', '=', 'transactions.user_id')
+                                ->whereRaw('MONTH(date) = ? AND YEAR(date) = ?', [$currentDate->month, $currentDate->year])
+                                ->select(DB::raw('sum(transactions.amount) as amount, user_id, name, bank_name, account_no, bank_address, bank_swift, payout_status, is_std'))
+                                ->groupBy('users.id', 'transactions.payout_status', 'is_std')
+                                ->orderByDesc('amount')
+                                ->get();
+
+            $result->push([$currentDate->format("F Y") => $transactions]);
+        }
+
+        $pdf = App::make('dompdf.wrapper');
+        // dd($result);
+        $pdf->loadView('pdf.grouped_payouts', ['results' => $result, 'count' => 0]);
+        return $pdf->download('newleaf_payouts.pdf');
+    }
+
+    public function transactions_default()
+    {
+        $users = User::with('transactions')->orderBy('name', 'asc')->get();
+
+
+        $pdf = App::make('dompdf.wrapper');
+        // dd($result);
+        $pdf->loadView('pdf.grouped_transactions', ['users' => $users, 'showHeader' => false]);
+        return $pdf->download('newleaf_commissions.pdf');
     }
 }
