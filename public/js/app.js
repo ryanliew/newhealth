@@ -69157,7 +69157,7 @@ return jQuery;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(320);
-module.exports = __webpack_require__(423);
+module.exports = __webpack_require__(426);
 
 
 /***/ }),
@@ -69197,7 +69197,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_MarketingMaterialPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__pages_MarketingMaterialPage_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_TreeManagementPage_vue__ = __webpack_require__(388);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_TreeManagementPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__pages_TreeManagementPage_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_ReportsPage_vue__ = __webpack_require__(436);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_ReportsPage_vue__ = __webpack_require__(391);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_ReportsPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__pages_ReportsPage_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__vue_translations_js__ = __webpack_require__(182);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__vue_translations_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17__vue_translations_js__);
@@ -69221,7 +69221,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__webpack_require__(391);
+__webpack_require__(394);
 
 Vue.use(__WEBPACK_IMPORTED_MODULE_0_vue_router__["a" /* default */]);
 Vue.use(__WEBPACK_IMPORTED_MODULE_1_vuejs_noty___default.a);
@@ -69309,22 +69309,22 @@ Vue.component('textarea-input', __webpack_require__(302));
 Vue.component('checkbox-input', __webpack_require__(307));
 Vue.component('selector-input', __webpack_require__(183));
 Vue.component('image-input', __webpack_require__(313));
-Vue.component('radio-group-input', __webpack_require__(393));
+Vue.component('radio-group-input', __webpack_require__(396));
 
 // Actions components
-Vue.component('PurchasesActions', __webpack_require__(396));
-Vue.component('UsersActions', __webpack_require__(399));
-Vue.component('PackagesActions', __webpack_require__(402));
-Vue.component('PayoutsActions', __webpack_require__(405));
-Vue.component('PostsActions', __webpack_require__(408));
+Vue.component('PurchasesActions', __webpack_require__(399));
+Vue.component('UsersActions', __webpack_require__(402));
+Vue.component('PackagesActions', __webpack_require__(405));
+Vue.component('PayoutsActions', __webpack_require__(408));
+Vue.component('PostsActions', __webpack_require__(411));
 
 // Project components
-Vue.component('side-nav', __webpack_require__(411));
+Vue.component('side-nav', __webpack_require__(414));
 
 // Custom table column
-Vue.component('TablePriceSwitcher', __webpack_require__(414));
-Vue.component('TransactionDescription', __webpack_require__(417));
-Vue.component('PostTitleSwitcher', __webpack_require__(420));
+Vue.component('TablePriceSwitcher', __webpack_require__(417));
+Vue.component('TransactionDescription', __webpack_require__(420));
+Vue.component('PostTitleSwitcher', __webpack_require__(423));
 
 window.app = new Vue({
 	router: router,
@@ -85977,6 +85977,520 @@ if (false) {
 /* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(392)
+/* template */
+var __vue_template__ = __webpack_require__(393)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\pages\\ReportsPage.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-23f70b47", Component.options)
+  } else {
+    hotAPI.reload("data-v-23f70b47", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 392 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+	props: [''],
+	data: function data() {
+		return {
+			dates: [],
+			commission_dates: [],
+			users: [],
+			selectedUser: '',
+			user_id: '',
+			user: window.user.id
+		};
+	},
+	mounted: function mounted() {
+		this.getUsers();
+		this.setReportDates();
+	},
+
+
+	methods: {
+		setReportDates: function setReportDates() {
+			var currentDate = __WEBPACK_IMPORTED_MODULE_0_moment___default()("2018-05-01");
+
+			while (!currentDate.isSame(__WEBPACK_IMPORTED_MODULE_0_moment___default()().add(1, 'months'), 'month')) {
+
+				this.dates.push({ start: __WEBPACK_IMPORTED_MODULE_0_moment___default()(currentDate), end: __WEBPACK_IMPORTED_MODULE_0_moment___default()(currentDate.endOf('month')) });
+
+				currentDate.add(1, 'day');
+			};
+
+			_.reverse(this.dates);
+		},
+		getUsers: function getUsers() {
+			var _this = this;
+
+			axios.get('/api/admin/users').then(function (response) {
+				return _this.setUsers(response.data.data);
+			});
+		},
+		setUsers: function setUsers(data) {
+			data = _.filter(data, function (user) {
+				return user.transaction_start;
+			});
+
+			this.users = data.map(function (user) {
+				var obj = {};
+				obj['value'] = user.id;
+				obj['label'] = user.name;
+				obj['start_month'] = user.transaction_start;
+				obj['end_month'] = user.transaction_end;
+
+				return obj;
+			});
+		}
+	},
+
+	watch: {
+		selectedUser: function selectedUser(newVal, oldVal) {
+			this.user_id = newVal.value;
+
+			this.commission_dates = [];
+
+			var currentDate = __WEBPACK_IMPORTED_MODULE_0_moment___default()(newVal.start_month);
+
+			while (!currentDate.isSame(__WEBPACK_IMPORTED_MODULE_0_moment___default()(newVal.end_month).add(1, 'month'), 'month')) {
+
+				this.commission_dates.push({ start: __WEBPACK_IMPORTED_MODULE_0_moment___default()(currentDate), end: __WEBPACK_IMPORTED_MODULE_0_moment___default()(currentDate.endOf('month')) });
+
+				currentDate.add(1, 'day');
+			};
+
+			_.reverse(this.commission_dates);
+		}
+	}
+});
+
+/***/ }),
+/* 393 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _c("div", { staticClass: "row align-items-center" }, [
+              _c("div", { staticClass: "col" }, [
+                _vm._v(
+                  "\n\t\t\t\t\t\t\t" +
+                    _vm._s(_vm._f("trans")("post.commission_report")) +
+                    "\n\t\t\t\t\t\t"
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "card-body" },
+            [
+              _c("selector-input", {
+                attrs: {
+                  potentialData: _vm.users,
+                  defaultData: _vm.selectedUser,
+                  placeholder: "Select a user",
+                  required: true,
+                  label: "User",
+                  name: "user",
+                  editable: true,
+                  focus: false,
+                  hideLabel: false
+                },
+                model: {
+                  value: _vm.selectedUser,
+                  callback: function($$v) {
+                    _vm.selectedUser = $$v
+                  },
+                  expression: "selectedUser"
+                }
+              }),
+              _vm._v(" "),
+              _vm.selectedUser
+                ? _c("div", { staticClass: "table-responsive mt-2" }, [
+                    _c("table", { staticClass: "table" }, [
+                      _vm._m(0),
+                      _vm._v(" "),
+                      _c(
+                        "tbody",
+                        _vm._l(_vm.commission_dates, function(report_date) {
+                          return _c("tr", [
+                            _c("td", [
+                              _vm._v(
+                                _vm._s(report_date.start.format("MMM YYYY"))
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("td", [
+                              _c(
+                                "a",
+                                {
+                                  staticClass: "btn btn-danger",
+                                  attrs: {
+                                    target: "_blank",
+                                    href:
+                                      "/exports/transactions?user=" +
+                                      _vm.user_id +
+                                      "&type=pdf&start=" +
+                                      report_date.start.format("YYYY-MM-DD") +
+                                      "&end=" +
+                                      report_date.end.format("YYYY-MM-DD")
+                                  }
+                                },
+                                [
+                                  _c("span", {
+                                    staticClass: "fa fa-2x fa-file-pdf-o pr-2"
+                                  }),
+                                  _vm._v(" Download PDF\n\t\t\t\t\t\t\t\t\t\t")
+                                ]
+                              )
+                            ])
+                          ])
+                        })
+                      )
+                    ])
+                  ])
+                : _vm._e()
+            ],
+            1
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _c("div", { staticClass: "row align-items-center" }, [
+              _c("div", { staticClass: "col" }, [
+                _vm._v(
+                  "\n\t\t\t\t\t\t\t" +
+                    _vm._s(_vm._f("trans")("post.payout_report")) +
+                    "\n\t\t\t\t\t\t"
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "table-responsive" }, [
+              _c("table", { staticClass: "table" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.dates, function(report_date) {
+                    return _c("tr", [
+                      _c("td", [
+                        _vm._v(_vm._s(report_date.start.format("MMM YYYY")))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-danger",
+                            attrs: {
+                              target: "_blank",
+                              href:
+                                "/exports/payouts?type=pdf&month=" +
+                                report_date.start.format("YYYY-MM-DD")
+                            }
+                          },
+                          [
+                            _c("span", {
+                              staticClass: "fa fa-2x fa-file-pdf-o pr-2"
+                            }),
+                            _vm._v(" Download PDF\n\t\t\t\t\t\t\t\t\t\t")
+                          ]
+                        )
+                      ])
+                    ])
+                  })
+                )
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _c("div", { staticClass: "row align-items-center" }, [
+              _c("div", { staticClass: "col" }, [
+                _vm._v(
+                  "\n\t\t\t\t\t\t\t" +
+                    _vm._s(_vm._f("trans")("post.sales_report")) +
+                    "\n\t\t\t\t\t\t"
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "table-responsive" }, [
+              _c("table", { staticClass: "table" }, [
+                _vm._m(2),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.dates, function(report_date) {
+                    return _c("tr", [
+                      _c("td", [
+                        _vm._v(_vm._s(report_date.start.format("MMM YYYY")))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-danger",
+                            attrs: {
+                              target: "_blank",
+                              href:
+                                "/exports/purchases?type=pdf&user=" +
+                                _vm.user +
+                                "dateFilterKey=purchases.created_at&start=" +
+                                report_date.start.format("YYYY-MM-DD") +
+                                "&end=" +
+                                report_date.end.format("YYYY-MM-DD")
+                            }
+                          },
+                          [
+                            _c("span", {
+                              staticClass: "fa fa-2x fa-file-pdf-o pr-2"
+                            }),
+                            _vm._v(" Download PDF\n\t\t\t\t\t\t\t\t\t\t")
+                          ]
+                        )
+                      ])
+                    ])
+                  })
+                )
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Date")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Action")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Date")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Action")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Date")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Action")])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-23f70b47", module.exports)
+  }
+}
+
+/***/ }),
+/* 394 */
+/***/ (function(module, exports, __webpack_require__) {
+
 
 window._ = __webpack_require__(190);
 window.Popper = __webpack_require__(317).default;
@@ -85990,7 +86504,7 @@ window.Popper = __webpack_require__(317).default;
 try {
   window.$ = window.jQuery = __webpack_require__(318);
 
-  __webpack_require__(392);
+  __webpack_require__(395);
 } catch (e) {}
 
 /**
@@ -86044,7 +86558,7 @@ window.flash = function (message) {
 };
 
 /***/ }),
-/* 392 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -89977,15 +90491,15 @@ window.flash = function (message) {
 
 
 /***/ }),
-/* 393 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(394)
+var __vue_script__ = __webpack_require__(397)
 /* template */
-var __vue_template__ = __webpack_require__(395)
+var __vue_template__ = __webpack_require__(398)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -90024,7 +90538,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 394 */
+/* 397 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90062,7 +90576,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 395 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -90132,15 +90646,15 @@ if (false) {
 }
 
 /***/ }),
-/* 396 */
+/* 399 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(397)
+var __vue_script__ = __webpack_require__(400)
 /* template */
-var __vue_template__ = __webpack_require__(398)
+var __vue_template__ = __webpack_require__(401)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -90179,7 +90693,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 397 */
+/* 400 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90279,7 +90793,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 398 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -90429,15 +90943,15 @@ if (false) {
 }
 
 /***/ }),
-/* 399 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(400)
+var __vue_script__ = __webpack_require__(403)
 /* template */
-var __vue_template__ = __webpack_require__(401)
+var __vue_template__ = __webpack_require__(404)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -90476,7 +90990,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 400 */
+/* 403 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90634,7 +91148,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 401 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -90848,15 +91362,15 @@ if (false) {
 }
 
 /***/ }),
-/* 402 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(403)
+var __vue_script__ = __webpack_require__(406)
 /* template */
-var __vue_template__ = __webpack_require__(404)
+var __vue_template__ = __webpack_require__(407)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -90895,7 +91409,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 403 */
+/* 406 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -90942,7 +91456,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 404 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -90994,15 +91508,15 @@ if (false) {
 }
 
 /***/ }),
-/* 405 */
+/* 408 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(406)
+var __vue_script__ = __webpack_require__(409)
 /* template */
-var __vue_template__ = __webpack_require__(407)
+var __vue_template__ = __webpack_require__(410)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -91041,7 +91555,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 406 */
+/* 409 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91119,7 +91633,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 407 */
+/* 410 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -91269,15 +91783,15 @@ if (false) {
 }
 
 /***/ }),
-/* 408 */
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(409)
+var __vue_script__ = __webpack_require__(412)
 /* template */
-var __vue_template__ = __webpack_require__(410)
+var __vue_template__ = __webpack_require__(413)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -91316,7 +91830,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 409 */
+/* 412 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91431,7 +91945,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 410 */
+/* 413 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -91598,15 +92112,15 @@ if (false) {
 }
 
 /***/ }),
-/* 411 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(412)
+var __vue_script__ = __webpack_require__(415)
 /* template */
-var __vue_template__ = __webpack_require__(413)
+var __vue_template__ = __webpack_require__(416)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -91645,7 +92159,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 412 */
+/* 415 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91713,7 +92227,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 413 */
+/* 416 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -91780,15 +92294,15 @@ if (false) {
 }
 
 /***/ }),
-/* 414 */
+/* 417 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(415)
+var __vue_script__ = __webpack_require__(418)
 /* template */
-var __vue_template__ = __webpack_require__(416)
+var __vue_template__ = __webpack_require__(419)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -91827,7 +92341,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 415 */
+/* 418 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91865,7 +92379,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 416 */
+/* 419 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -91911,15 +92425,15 @@ if (false) {
 }
 
 /***/ }),
-/* 417 */
+/* 420 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(418)
+var __vue_script__ = __webpack_require__(421)
 /* template */
-var __vue_template__ = __webpack_require__(419)
+var __vue_template__ = __webpack_require__(422)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -91958,7 +92472,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 418 */
+/* 421 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -91987,7 +92501,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 419 */
+/* 422 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -92014,15 +92528,15 @@ if (false) {
 }
 
 /***/ }),
-/* 420 */
+/* 423 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(421)
+var __vue_script__ = __webpack_require__(424)
 /* template */
-var __vue_template__ = __webpack_require__(422)
+var __vue_template__ = __webpack_require__(425)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -92061,7 +92575,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 421 */
+/* 424 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92101,7 +92615,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 422 */
+/* 425 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -92131,536 +92645,10 @@ if (false) {
 }
 
 /***/ }),
-/* 423 */
+/* 426 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 424 */,
-/* 425 */,
-/* 426 */,
-/* 427 */,
-/* 428 */,
-/* 429 */,
-/* 430 */,
-/* 431 */,
-/* 432 */,
-/* 433 */,
-/* 434 */,
-/* 435 */,
-/* 436 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(437)
-/* template */
-var __vue_template__ = __webpack_require__(438)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\pages\\ReportsPage.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-23f70b47", Component.options)
-  } else {
-    hotAPI.reload("data-v-23f70b47", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 437 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_moment__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-	props: [''],
-	data: function data() {
-		return {
-			dates: [],
-			commission_dates: [],
-			users: [],
-			selectedUser: '',
-			user_id: '',
-			user: window.user.id
-		};
-	},
-	mounted: function mounted() {
-		this.getUsers();
-		this.setReportDates();
-	},
-
-
-	methods: {
-		setReportDates: function setReportDates() {
-			var currentDate = __WEBPACK_IMPORTED_MODULE_0_moment___default()("2018-05-01");
-
-			while (!currentDate.isSame(__WEBPACK_IMPORTED_MODULE_0_moment___default()(), 'month')) {
-
-				this.dates.push({ start: __WEBPACK_IMPORTED_MODULE_0_moment___default()(currentDate), end: __WEBPACK_IMPORTED_MODULE_0_moment___default()(currentDate.endOf('month')) });
-
-				currentDate.add(1, 'day');
-			};
-
-			_.reverse(this.dates);
-		},
-		getUsers: function getUsers() {
-			var _this = this;
-
-			axios.get('/api/admin/users').then(function (response) {
-				return _this.setUsers(response.data.data);
-			});
-		},
-		setUsers: function setUsers(data) {
-			data = _.filter(data, function (user) {
-				return user.transaction_start;
-			});
-
-			this.users = data.map(function (user) {
-				var obj = {};
-				obj['value'] = user.id;
-				obj['label'] = user.name;
-				obj['start_month'] = user.transaction_start;
-				obj['end_month'] = user.transaction_end;
-
-				return obj;
-			});
-		}
-	},
-
-	watch: {
-		selectedUser: function selectedUser(newVal, oldVal) {
-			this.user_id = newVal.value;
-
-			this.commission_dates = [];
-
-			var currentDate = __WEBPACK_IMPORTED_MODULE_0_moment___default()(newVal.start_month);
-
-			while (!currentDate.isSame(__WEBPACK_IMPORTED_MODULE_0_moment___default()(newVal.end_month).add(1, 'month'), 'month')) {
-
-				this.commission_dates.push({ start: __WEBPACK_IMPORTED_MODULE_0_moment___default()(currentDate), end: __WEBPACK_IMPORTED_MODULE_0_moment___default()(currentDate.endOf('month')) });
-
-				currentDate.add(1, 'day');
-			};
-
-			_.reverse(this.commission_dates);
-		}
-	}
-});
-
-/***/ }),
-/* 438 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("div", { staticClass: "row align-items-center" }, [
-              _c("div", { staticClass: "col" }, [
-                _vm._v(
-                  "\n\t\t\t\t\t\t\t" +
-                    _vm._s(_vm._f("trans")("post.commission_report")) +
-                    "\n\t\t\t\t\t\t"
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "card-body" },
-            [
-              _c("selector-input", {
-                attrs: {
-                  potentialData: _vm.users,
-                  defaultData: _vm.selectedUser,
-                  placeholder: "Select a user",
-                  required: true,
-                  label: "User",
-                  name: "user",
-                  editable: true,
-                  focus: false,
-                  hideLabel: false
-                },
-                model: {
-                  value: _vm.selectedUser,
-                  callback: function($$v) {
-                    _vm.selectedUser = $$v
-                  },
-                  expression: "selectedUser"
-                }
-              }),
-              _vm._v(" "),
-              _vm.selectedUser
-                ? _c("div", { staticClass: "table-responsive mt-2" }, [
-                    _c("table", { staticClass: "table" }, [
-                      _vm._m(0),
-                      _vm._v(" "),
-                      _c(
-                        "tbody",
-                        _vm._l(_vm.commission_dates, function(report_date) {
-                          return _c("tr", [
-                            _c("td", [
-                              _vm._v(
-                                _vm._s(report_date.start.format("MMM YYYY"))
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("td", [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "btn btn-danger",
-                                  attrs: {
-                                    target: "_blank",
-                                    href:
-                                      "/exports/transactions?user=" +
-                                      _vm.user_id +
-                                      "&type=pdf&start=" +
-                                      report_date.start.format("YYYY-MM-DD") +
-                                      "&end=" +
-                                      report_date.end.format("YYYY-MM-DD")
-                                  }
-                                },
-                                [
-                                  _c("span", {
-                                    staticClass: "fa fa-2x fa-file-pdf-o pr-2"
-                                  }),
-                                  _vm._v(" Download PDF\n\t\t\t\t\t\t\t\t\t\t")
-                                ]
-                              )
-                            ])
-                          ])
-                        })
-                      )
-                    ])
-                  ])
-                : _vm._e()
-            ],
-            1
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("div", { staticClass: "row align-items-center" }, [
-              _c("div", { staticClass: "col" }, [
-                _vm._v(
-                  "\n\t\t\t\t\t\t\t" +
-                    _vm._s(_vm._f("trans")("post.payout_report")) +
-                    "\n\t\t\t\t\t\t"
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "table-responsive" }, [
-              _c("table", { staticClass: "table" }, [
-                _vm._m(1),
-                _vm._v(" "),
-                _c(
-                  "tbody",
-                  _vm._l(_vm.dates, function(report_date) {
-                    return _c("tr", [
-                      _c("td", [
-                        _vm._v(_vm._s(report_date.start.format("MMM YYYY")))
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "btn btn-danger",
-                            attrs: {
-                              target: "_blank",
-                              href:
-                                "/exports/payouts?type=pdf&month=" +
-                                report_date.start.format("YYYY-MM-DD")
-                            }
-                          },
-                          [
-                            _c("span", {
-                              staticClass: "fa fa-2x fa-file-pdf-o pr-2"
-                            }),
-                            _vm._v(" Download PDF\n\t\t\t\t\t\t\t\t\t\t")
-                          ]
-                        )
-                      ])
-                    ])
-                  })
-                )
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col" }, [
-        _c("div", { staticClass: "card" }, [
-          _c("div", { staticClass: "card-header" }, [
-            _c("div", { staticClass: "row align-items-center" }, [
-              _c("div", { staticClass: "col" }, [
-                _vm._v(
-                  "\n\t\t\t\t\t\t\t" +
-                    _vm._s(_vm._f("trans")("post.sales_report")) +
-                    "\n\t\t\t\t\t\t"
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "table-responsive" }, [
-              _c("table", { staticClass: "table" }, [
-                _vm._m(2),
-                _vm._v(" "),
-                _c(
-                  "tbody",
-                  _vm._l(_vm.dates, function(report_date) {
-                    return _c("tr", [
-                      _c("td", [
-                        _vm._v(_vm._s(report_date.start.format("MMM YYYY")))
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "btn btn-danger",
-                            attrs: {
-                              target: "_blank",
-                              href:
-                                "/exports/purchases?type=pdf&user=" +
-                                _vm.user +
-                                "dateFilterKey=purchases.created_at&start=" +
-                                report_date.start.format("YYYY-MM-DD") +
-                                "&end=" +
-                                report_date.end.format("YYYY-MM-DD")
-                            }
-                          },
-                          [
-                            _c("span", {
-                              staticClass: "fa fa-2x fa-file-pdf-o pr-2"
-                            }),
-                            _vm._v(" Download PDF\n\t\t\t\t\t\t\t\t\t\t")
-                          ]
-                        )
-                      ])
-                    ])
-                  })
-                )
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [_vm._v("Date")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Action")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [_vm._v("Date")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Action")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [_vm._v("Date")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Action")])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-23f70b47", module.exports)
-  }
-}
 
 /***/ })
 /******/ ]);
