@@ -91735,7 +91735,7 @@ var render = function() {
           }),
           _vm._v(" "),
           _vm._l(_vm.menu, function(item, index) {
-            return item.link
+            return item.link && _vm.adminViewOnly(item)
               ? _c("li", { key: index, class: item.color }, [
                   _c("a", { attrs: { href: item.route } }, [
                     _c("i", { staticClass: "font-icon", class: item.icon }),
