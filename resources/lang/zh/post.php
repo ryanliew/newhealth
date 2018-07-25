@@ -28,5 +28,8 @@ return [
     'notify_admin_success' => '成功发送给所有管理员',
     'newleaf_bulletin' => '新叶通告',
     'latest_news' => '为您带来新叶最新消息与更新',
-    'published_date' => '发布日期'
+    'published_date' => '发布日期',
+    'commission_report' => '佣金报告',
+    'payout_report' => '支出报告',
+    'sales_report' => '销售报告'
 ];

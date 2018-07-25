@@ -24,5 +24,6 @@ return [
     'trees' => "My trees",
     'exit' => "Exit",
     'commission_report' => "Commission reports",
-    'payout_report' => "Payout reports"
+    'payout_report' => "Payout reports",
+    'reports' => "Reports"
 ];

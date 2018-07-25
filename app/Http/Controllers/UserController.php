@@ -339,9 +339,10 @@ class UserController extends Controller
     {
         Log::info("Deleted user " . $user->name . " by " . auth()->user()->name);
 
-        foreach($user->purchases as $purchase) {
-            $purchase->packages()->detach();
-        }
+        // Removed this as we will be using soft delete
+        // foreach($user->purchases as $purchase) {
+        //     $purchase->packages()->detach();
+        // }
 
         $user->transactions()->delete();
         $user->purchases()->delete();

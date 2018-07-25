@@ -5,6 +5,7 @@ namespace App;
 use App\Country;
 use App\Notifications\ResetPasswordNotification;
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\App;
@@ -13,7 +14,7 @@ use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, Notifiable, NodeTrait;
+    use HasApiTokens, Notifiable, NodeTrait, SoftDeletes;
 
     /**
      * The attributes that are mass assignable.
@@ -23,10 +24,12 @@ class User extends Authenticatable
     protected $guarded = [];
 
 
-    protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std', 'unpaid_commission', 'unpaid_commission_std'];
+    protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std', 'unpaid_commission', 'unpaid_commission_std', 'transaction_start', 'transaction_end'];
 
+    protected $dates = ['deleted_at', 'created_at', 'updated_at'];
 
     protected $with = ['package', 'addresses', 'contacts'];
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -253,6 +256,16 @@ class User extends Authenticatable
     public function getUnpaidCommissionStdAttribute()
     {
         return $this->transactions()->where("is_std", true)->where("payout_status", false)->sum("amount");
+    }
+
+    public function getTransactionStartAttribute()
+    {
+        return $this->transactions()->min("date");
+    }
+
+    public function getTransactionEndAttribute()
+    {
+        return $this->transactions()->max("date");
     }
 
     // Reset password
