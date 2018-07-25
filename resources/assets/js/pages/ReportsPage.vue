@@ -139,7 +139,7 @@
 			setReportDates() {
 				let currentDate = moment("2018-05-01");
 
-				while( !currentDate.isSame(moment(), 'month')){
+				while( !currentDate.isSame(moment().add(1, 'months'), 'month')){
 
 					this.dates.push({start: moment(currentDate), end: moment(currentDate.endOf('month'))});
 
