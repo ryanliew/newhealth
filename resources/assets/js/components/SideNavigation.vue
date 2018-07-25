@@ -9,7 +9,7 @@
 		                <span class="lbl">{{ 'nav.' + item.title | trans }}</span>
 		            </a>
 		        </router-link>
-		        <li v-for="(item, index) in menu" :key="index" v-if="item.link" :class="item.color">
+		        <li v-for="(item, index) in menu" :key="index" v-if="item.link && adminViewOnly(item)" :class="item.color">
 		        	<a :href="item.route">
 		        		<i class="font-icon" :class="item.icon"></i>
 		        		<span class="lbl">{{ 'nav.' + item.title | trans }}</span>
