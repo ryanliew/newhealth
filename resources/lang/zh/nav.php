@@ -24,6 +24,7 @@ return [
     'materials' => "销售辅助",
     'exit' => '离开',
     'commission_report' => "佣金报告",
-    'payout_report' => "支出报告"
+    'payout_report' => "支出报告",
+    'reports' => "报告"
 
 ];

@@ -37,8 +37,7 @@
 					{color:'blue' , icon:' fa fa-users' , title: 'users', route: 'users', opened: false, admin: true},
 					{color:'blue' , icon:' fa fa-gift' , title: 'packages', route: 'packages', opened: false, admin: true},
 					{color:'blue' , icon:' fa fa-bank' , title: 'payouts', route: 'payouts', opened: false, admin: true},
-					{color:'blue', icon:' fa fa-download', title: 'commission_report', route: '/exports/transactions/default', opened: false, admin: true, link: true},
-					{color:'blue', icon:' fa fa-download', title: 'payout_report', route: '/exports/payouts/default', opened: false, admin: true, link: true}
+					{color:'blue', icon:' fa fa-pie-chart', title: 'reports', route: 'reports', opened: false, admin: true}
 				],
 				user: ''
 			};

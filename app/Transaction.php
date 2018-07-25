@@ -4,13 +4,15 @@ namespace App;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Transaction extends Model
 {
+	use SoftDeletes;
 
 	protected $guarded = [];
 
-	protected $dates = ['date'];
+	protected $dates = ['date', 'deleted_at'];
 
 	public function user()
 	{

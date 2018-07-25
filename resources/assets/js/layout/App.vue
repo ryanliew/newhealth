@@ -24,6 +24,7 @@
 		                    <div class="dropdown user-menu">
 		                        <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		                            <img src="img/avatar-2-64.png" alt="">
+		                            <span class="pl-1 pr-1">{{ user.name }}</span>
 		                        </button>
 		                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
 		                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>{{ 'nav.profile' | trans }}</a>
@@ -60,11 +61,16 @@
 		props: [''],
 		data() {
 			return {
-				isLoading: false
+				isLoading: false,
+				user: window.user
 			};
 		},
 
 		components: { LanguageSwitcher },
+
+		mounted() {
+			window.events.$on('authenticate', data => { this.user = data; });
+		},
 
 		methods: {
 			logout() {

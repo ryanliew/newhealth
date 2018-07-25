@@ -15,6 +15,7 @@ import PayoutReportPage from './pages/PayoutReportPage.vue';
 import PostPage from './pages/PostPage.vue';
 import MarketingMaterialPage from './pages/MarketingMaterialPage.vue';
 import TreeManagementPage from './pages/TreeManagementPage.vue';
+import ReportsPage from './pages/ReportsPage.vue';
 import translations from './vue-translations.js';
 
 
@@ -85,7 +86,8 @@ const routes = [
 	{ path: '/payouts', component: PayoutReportPage },
 	{ path: '/news', component: PostPage },
 	{ path: '/materials', component: MarketingMaterialPage },
-	{ path: '/trees', component: TreeManagementPage }
+	{ path: '/trees', component: TreeManagementPage },
+	{ path: '/reports', component: ReportsPage }
 ];
 
 const router = new VueRouter({ routes, linkActiveClass: 'opened' });
@@ -96,9 +98,9 @@ router.beforeEach((to, from, next) => {
 		axios.get('/api/profile')
 			.then(response => { 
 				user = response.data; 
+				window.events.$emit('authenticate', user);
 				if(user.country_id == 48){ 
 					lang.setLocale('zh'); 
-					console.log(user.country_id);
 					window.events.$emit('defaultzh'); 
 				} 
 				next(); 

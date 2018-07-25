@@ -28,5 +28,8 @@ return [
     'notify_admins_success' => 'News has been sent to all admins!',
     'newleaf_bulletin' => 'Newleaf Bulletin',
     'latest_news' => 'the latest news and updates from newleaf plantation berhad',
-    'published_date' => 'Published date'
+    'published_date' => 'Published date',
+    'commission_report' => 'Commission report',
+    'payout_report' => 'Payout report',
+    'sales_report' => 'Sales report'
 ];
