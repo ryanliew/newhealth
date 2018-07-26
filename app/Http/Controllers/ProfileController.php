@@ -49,7 +49,8 @@ class ProfileController extends Controller
             'beneficiary_contact' => 'required',
             'beneficiary_address' => 'required|max:255',
             'beneficiary_identification' => 'required',
-            'terms' => 'accepted'
+            'terms' => 'accepted',
+            'id_type' => 'required'
     	]);
 
     	if(request()->referrer_code && request()->referrer_code !== "")
@@ -64,7 +65,7 @@ class ProfileController extends Controller
             'name' => request()->name,
             'country_id' => request()->country_id,
             'identification' => request()->identification,
-            'id_type' => request()->id_type,
+            'id_type' => request()->has('id_type') ? request()->id_type : 'nric',
             'nationality' => request()->nationality,
             'gender' => request()->gender,
             'company_name' => request()->company_name,

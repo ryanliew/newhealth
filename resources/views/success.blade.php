@@ -101,6 +101,11 @@
                                                 <strong>{{ $errors->first('identification') }}</strong>
                                             </span>
                                         @endif
+                                        @if ($errors->has('id_type'))
+                                            <span class="invalid-feedback">
+                                                <strong>{{ __('auth.id_type_invalid') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" name="id_type" type="radio" id="type_nric" value="nric">
