@@ -107,5 +107,6 @@ return [
     'send_reset_link' => '确定重设密码',
 
     'terms_and_conditions' => '条款及细则',
-    'agree' => '我确认并承认我已经阅读并同意遵守本购买表格中的'
+    'agree' => '我确认并承认我已经阅读并同意遵守本购买表格中的',
+    'id_type_invalid' => "请选择正确的ID种类"
 ];

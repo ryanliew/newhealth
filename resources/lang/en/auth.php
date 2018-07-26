@@ -108,5 +108,6 @@ return [
     'send_reset_link' => 'Send me the reset link',
 
     'terms_and_conditions' => 'Terms and conditions',
-    'agree' => 'By checking this box and submitting the registration form, I agree to all of the '
+    'agree' => 'By checking this box and submitting the registration form, I agree to all of the ',
+    'id_type_invalid' => "Please select a valid ID type"
 ];

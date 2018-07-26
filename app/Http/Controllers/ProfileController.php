@@ -49,7 +49,8 @@ class ProfileController extends Controller
             'beneficiary_contact' => 'required',
             'beneficiary_address' => 'required|max:255',
             'beneficiary_identification' => 'required',
-            'terms' => 'accepted'
+            'terms' => 'accepted',
+            'id_type' => 'required'
     	]);
 
     	if(request()->referrer_code && request()->referrer_code !== "")
