@@ -29,7 +29,7 @@
 			</div>
 		</transition>
 		<transition name="slide-fade" mode="out-in">
-			<transaction-page @back="back" v-if="isViewingDetails" :userId="selectedUserId" :filterMonth="filterMonth" :cancelable="true"></transaction-page>
+			<transaction-page @back="back" v-if="isViewingDetails" :userId="selectedUserId" :userName="selectedUserName" :filterMonth="filterMonth" :cancelable="true"></transaction-page>
 		</transition>
 	</div>
 </template>
@@ -66,6 +66,7 @@
 				],
 				searchables: "",
 				selectedUser: "",
+				selectedUserName: "",
 				month: moment(),
 				filterMonth: '',
 				isViewingDetails: false,
@@ -105,6 +106,7 @@
 			view(data) {
 				this.filterMonth = this.$refs.transactions.getMonth();
 				this.selectedUserId = data.user_id;
+				this.selectedUserName = data.name;
 				this.isViewingDetails = true;
 			},
 

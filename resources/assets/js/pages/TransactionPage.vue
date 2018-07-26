@@ -3,7 +3,7 @@
 		<transition name="slide-fade" mode="out-in">
 			<table-view ref="transactions"
 						:fields="fields"
-						:title="$options.filters.trans('transaction.transactions')"
+						:title="title"
 						:url="url"
 						:searchables="searchables"
 						:dateFilterable="true"
@@ -24,7 +24,7 @@
 <script>
 	import moment from 'moment';
 	export default {
-		props: ['userId', 'filterMonth', 'cancelable'],
+		props: ['userId', 'filterMonth', 'cancelable', 'userName'],
 
 		data() {
 			return {
@@ -71,6 +71,15 @@
 				let id = this.userId ? this.userId : window.user.id;
 
 				return "/exports/transactions?user=" + id;
+			},
+
+			title() {
+				let text = this.$options.filters.trans('transaction.transactions');
+
+				if(this.userName)
+					text += " - " + this.userName;
+
+				return text; 
 			}
 		}
 	}

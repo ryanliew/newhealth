@@ -81158,7 +81158,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['userId', 'filterMonth', 'cancelable'],
+	props: ['userId', 'filterMonth', 'cancelable', 'userName'],
 
 	data: function data() {
 		return {
@@ -81195,6 +81195,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			var id = this.userId ? this.userId : window.user.id;
 
 			return "/exports/transactions?user=" + id;
+		},
+		title: function title() {
+			var text = this.$options.filters.trans('transaction.transactions');
+
+			if (this.userName) text += " - " + this.userName;
+
+			return text;
 		}
 	}
 });
@@ -81218,7 +81225,7 @@ var render = function() {
             ref: "transactions",
             attrs: {
               fields: _vm.fields,
-              title: _vm.$options.filters.trans("transaction.transactions"),
+              title: _vm.title,
               url: _vm.url,
               searchables: _vm.searchables,
               dateFilterable: true,
@@ -85207,6 +85214,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			std_fields: [{ name: 'name', title: this.tableTitle("auth.name"), sortField: 'name' }, { name: 'bank_name', title: this.tableTitle("auth.bank_name"), sortField: 'bank_name' }, { name: 'bank_swift', title: this.tableTitle('auth.bank_swift'), sortField: 'bank_swift' }, { name: 'bank-address', title: this.tableTitle('auth.bank_address'), sortField: 'bank-address' }, { name: 'account_no', title: this.tableTitle('auth.account_no'), sortField: 'account_no' }, { name: 'amount_std', title: this.tableTitle("transaction.amount_std"), sortField: 'amount_std' }, { name: '__component:payouts-actions', title: this.tableTitle('table.actions') }],
 			searchables: "",
 			selectedUser: "",
+			selectedUserName: "",
 			month: __WEBPACK_IMPORTED_MODULE_0_moment___default()(),
 			filterMonth: '',
 			isViewingDetails: false,
@@ -85252,6 +85260,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		view: function view(data) {
 			this.filterMonth = this.$refs.transactions.getMonth();
 			this.selectedUserId = data.user_id;
+			this.selectedUserName = data.name;
 			this.isViewingDetails = true;
 		},
 		pay: function pay(data) {
@@ -85365,6 +85374,7 @@ var render = function() {
             ? _c("transaction-page", {
                 attrs: {
                   userId: _vm.selectedUserId,
+                  userName: _vm.selectedUserName,
                   filterMonth: _vm.filterMonth,
                   cancelable: true
                 },
@@ -92508,16 +92518,19 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("span", [
+      _vm._v(
+        _vm._s(
+          _vm._f("trans")("transaction." + _vm.rowData.description, {
+            name: _vm.rowData.target.name
+          })
+        )
+      )
+    ])
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("span")])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
