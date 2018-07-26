@@ -1,0 +1,16 @@
+Changelog (v1.51):
+1. Added grower name in commission page after going in from payouts page
+
+Changelog (v1.5) 7/25:
+1. Added user name beside the top dropdown
+2. Removed the previous commission reports and payout reports download button from Admin menu
+3. Added a new Reports page which includes Commission, Payout and Sales report
+4. Added Soft Delete (Archiving) feature for Users and Purchases, deleting them will not actually clear the data.
+
+Changelog:
+1. Fixed a visual bug that causes the news to overflow the card section
+2. Set the default filter to be current month for commissions page
+3. Added commission reports download button for Admin in the menu - this will generate a PDF that list ALL the commissions since the system went live, grouped by individual grower
+4. Added payout reports download button for Admin in the menu - this will generate a PDF with all the payouts since the system went live, grouped by month
+
+
