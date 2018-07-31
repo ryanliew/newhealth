@@ -121,8 +121,8 @@ class Form {
      * .
      * @param {string} url
      */
-    post(url) {
-        return this.submit('post', url);
+    post(url, clear = true) {
+        return this.submit('post', url, clear);
     }
 
 
@@ -162,7 +162,7 @@ class Form {
      * @param {string} requestType
      * @param {string} url
      */
-    submit(requestType, url) {
+    submit(requestType, url, clear = true) {
         if(!this.submitting)
         {
             this.submitting = true;
@@ -171,7 +171,7 @@ class Form {
             return new Promise((resolve, reject) => {
                 axios[requestType](url, this.data())
                     .then(response => {
-                        this.onSuccess(response.data);
+                        this.onSuccess(response.data, clear);
 
                         resolve(response.data);
                     })
@@ -197,10 +197,12 @@ class Form {
      *
      * @param {object} data
      */
-    onSuccess(data) {
+    onSuccess(data, clear = true) {
         //flash(data.message);
-        
-        this.reset();
+        if(clear)
+            this.reset();
+
+        this.submitting = false;
     }
 
 

@@ -26,6 +26,8 @@ Route::group(['middleware' => 'auth:api'], function() {
 	
 	Route::group(['prefix' => 'admin'], function() {
 		Route::get('/users/pending', 'Admin\UserController@indexPending');
+		Route::get("/users/parents", 'Admin\UserController@getParents');
+		Route::post("/users/{user}/setting", "Admin\UserController@settings");
 		Route::get('/users', 'Admin\UserController@index');
 		Route::get('/tree', 'Admin\UserController@getTree');
 		Route::get('/packages', 'Admin\PackageController@index');

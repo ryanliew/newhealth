@@ -261,3 +261,12 @@ right connector from last child*/
   max-height: 300px;
   width: auto;
 }
+
+.v-select .dropdown-toggle .clear {
+  height: auto;
+  font-size: 20px !important;
+}
+
+.unclearable .v-select .dropdown-toggle .clear {
+  height: 0;
+}

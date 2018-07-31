@@ -241,6 +241,8 @@
 						</div>
 					</div>
 					<user-documents :selectedUser="user" ref="documents"></user-documents>
+
+					<user-level :selectedUser="user" ref="levels" v-if="currentUser.is_admin" @back="back"></user-level>
 					<div class="row" v-if="user.company_name">
 						<div class="col-sm">
 							<div class="card">
@@ -379,6 +381,7 @@
 					</div>
 				</template>
 				
+				<button class="btn btn-primary" @click="back" v-if="cancelable"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>
 			</div>
 			<user :selectedUser="user" @back="editComplete" v-if="isEditing"></user>
 		</transition>
@@ -386,12 +389,15 @@
 		<dashboard :viewingUser="user" v-if="isViewingDashboard"></dashboard>
 		<geno-page :viewingUser="user" v-if="isViewingGenoTree"></geno-page>
 		<transaction-page :userId="user.id" v-if="isViewingTransactions" :cancelable="false"></transaction-page>
+
+
 	</div>
 </template>
 
 <script>
 	import ReferralLink from "../components/ReferralLink.vue";
 	import UserDocuments from "../components/UserDocuments";
+	import UserLevel from "../components/UserLevel";
 	import User from "../components/User.vue";
 	import Dashboard from "./DashboardStripped.vue";
 	import TransactionPage from "./TransactionPage.vue";
@@ -400,7 +406,7 @@
 	export default {
 		props: ['cancelable', 'selectedUser'],
 
-		components: { ReferralLink, User, UserDocuments, Dashboard, GenoPage, TransactionPage },
+		components: { ReferralLink, User, UserDocuments, UserLevel, Dashboard, GenoPage, TransactionPage },
 
 		data() {
 			return {

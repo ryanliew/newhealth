@@ -62,5 +62,9 @@ return [
     "unlocked" => "User has been unlocked",
 
     "locked_message" => "Your account has been locked. Please contact support@newleaf.com.my for more information",
-    "deleted" => "User has been deleted"
+    "deleted" => "User has been deleted",
+    "referrer" => "Referrer",
+    "settings" => "Settings",
+    "is_admin" => "Is Admin",
+    "setting_success" => "Settings updated successfully"
 ];
