@@ -100,7 +100,7 @@
 									<tr v-for="report_date in dates">
 										<td>{{ report_date.start.format("MMM YYYY")}}</td>
 										<td>
-											<a class="btn btn-danger" target="_blank" :href="'/exports/purchases?type=pdf&user=' + user + 'dateFilterKey=purchases.created_at&start=' + report_date.start.format('YYYY-MM-DD') + '&end=' + report_date.end.format('YYYY-MM-DD')">
+											<a class="btn btn-danger" target="_blank" :href="'/exports/purchases?type=pdf&user=' + user + '&dateFilterKey=purchases.created_at&start=' + report_date.start.format('YYYY-MM-DD') + '&end=' + report_date.end.format('YYYY-MM-DD')">
 												<span class="fa fa-2x fa-file-pdf-o pr-2"></span> Download PDF
 											</a>
 										</td>

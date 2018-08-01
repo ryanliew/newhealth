@@ -86425,7 +86425,7 @@ var render = function() {
                               href:
                                 "/exports/purchases?type=pdf&user=" +
                                 _vm.user +
-                                "dateFilterKey=purchases.created_at&start=" +
+                                "&dateFilterKey=purchases.created_at&start=" +
                                 report_date.start.format("YYYY-MM-DD") +
                                 "&end=" +
                                 report_date.end.format("YYYY-MM-DD")
