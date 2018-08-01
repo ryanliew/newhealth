@@ -30,7 +30,7 @@
 								<td cellspacing="0" cellpadding="0">{{ $payout->bank_address }}</td>
 								<td cellspacing="0" cellpadding="0">{{ $payout->account_no }}</td>
 								<td cellspacing="0" cellpadding="0">
-									<div class="amount text-right">RM{{ number_format($payout->amount, 2, ".", ",") }}</div>
+									<div class="amount text-right">{{ number_format($payout->amount, 2, ".", ",") }}</div>
 								</td>
 							</tr>
 						@endif
@@ -38,8 +38,7 @@
 				<tr>
 					<td colspan="5" class="text-right with-bg"><b class="pr-50">Total (RM): </b></td>
 					<td>
-						<div class="currency"><b>RM</b></div>
-						<div class="amount text-right"><b>{{ number_format($group->sum(function($payout){ return $payout->is_std ? 0 : $payout->amount; }), 2, ".", ",") }}</b></div>
+						<b>{{ number_format($group->sum(function($payout){ return $payout->is_std ? 0 : $payout->amount; }), 2, ".", ",") }}</b>
 					</td>
 				</tr>
 				@endforeach
@@ -68,15 +67,14 @@
 								<td cellspacing="0" cellpadding="0">{{ $payout->bank_swift }}</td>
 								<td cellspacing="0" cellpadding="0">{{ $payout->bank_address }}</td>
 								<td cellspacing="0" cellpadding="0">{{ $payout->account_no }}</td>
-								<td cellspacing="0" cellpadding="0"><div class="amount text-right">USD{{ number_format($payout->amount, 2, ".", ",") }}</div></td>
+								<td cellspacing="0" cellpadding="0"><div class="amount text-right">{{ number_format($payout->amount, 2, ".", ",") }}</div></td>
 							</tr>
 						@endif
 					@endforeach
 					<tr>
 						<td colspan="5" class="text-right with-bg"><b class="pr-50">Total (USD): </b></td>
 						<td>
-							<div class="currency"><b>USD</b></div>
-							<div class="amount text-right"><b>{{ number_format($group->sum(function($payout){ return !$payout->is_std ? 0 : $payout->amount; }), 2, ".", ",") }}</b></div>
+							<b>{{ number_format($group->sum(function($payout){ return !$payout->is_std ? 0 : $payout->amount; }), 2, ".", ",") }}</b>
 						</td>
 					</tr>
 				@endforeach

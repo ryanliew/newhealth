@@ -86304,7 +86304,7 @@ var render = function() {
                                   attrs: {
                                     target: "_blank",
                                     href:
-                                      "/exports/transactions?user=" +
+                                      "/exports/transactions?dateFilterKey=transactions.date&user=" +
                                       _vm.user_id +
                                       "&type=pdf&start=" +
                                       report_date.start.format("YYYY-MM-DD") +
