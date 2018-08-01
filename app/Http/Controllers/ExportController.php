@@ -243,19 +243,22 @@ class ExportController extends Controller
 
         if(request()->type == 'excel')
         {   
-            $collection = collect([["Name", "Bank name", "Bank SORT/SWIFT code", "Bank address", "Account No.", "Amount"]]);
+            $collection = collect([["Name", "Bank name", "Bank SORT/SWIFT code", "Bank address", "Account No.", "Amount (RM)", "Amount (USD)"]]);
 
             foreach($payouts as $payout)
             {
-                $currency = $payout->is_std ? "USD" : "RM";
-                $amount =  $currency . number_format($payout->amount, 2, ".", ",");
+                // $currency = $payout->is_std ? "USD" : "RM";
+                // $amount =  $currency . number_format($payout->amount, 2, ".", ",");
+                $amount = $payout->is_std ? "0.00" : $payout->amount;
+                $amount_std =  $payout->is_std ? $payout->amount : "0.00";
                 $collection->push([
                                     $payout->name,
                                     $payout->bank_name,
                                     $payout->bank_swift,
                                     $payout->bank_address,
                                     $payout->account_no,
-                                    $amount
+                                    $amount,
+                                    $amount_std
                                 ]);
             }
 

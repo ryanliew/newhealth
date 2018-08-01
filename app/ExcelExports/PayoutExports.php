@@ -31,7 +31,9 @@ class PayoutExports implements FromCollection, Responsable, ShouldAutoSize, With
     public function columnFormats(): array
     {
         return [
-            'E' => "0"
+            'E' => "0",
+            'F' => "0.00",
+            'G' => "0.00"
         ];
     }
 }
