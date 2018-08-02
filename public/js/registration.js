@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 427);
+/******/ 	return __webpack_require__(__webpack_require__.s = 430);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -5343,7 +5343,7 @@ module.exports = __webpack_require__(8) ? function (object, key, value) {
 
 var anObject = __webpack_require__(13);
 var IE8_DOM_DEFINE = __webpack_require__(169);
-var toPrimitive = __webpack_require__(25);
+var toPrimitive = __webpack_require__(26);
 var dP = Object.defineProperty;
 
 exports.f = __webpack_require__(8) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
@@ -5375,7 +5375,7 @@ module.exports = !__webpack_require__(14)(function () {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
 var IObject = __webpack_require__(244);
-var defined = __webpack_require__(22);
+var defined = __webpack_require__(23);
 module.exports = function (it) {
   return IObject(defined(it));
 };
@@ -5385,7 +5385,7 @@ module.exports = function (it) {
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var store = __webpack_require__(29)('wks');
+var store = __webpack_require__(30)('wks');
 var uid = __webpack_require__(16);
 var Symbol = __webpack_require__(4).Symbol;
 var USE_SYMBOL = typeof Symbol == 'function';
@@ -5484,7 +5484,8 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 17 */
+/* 17 */,
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5585,10 +5586,10 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19)))
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -5778,7 +5779,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 /*
@@ -5860,7 +5861,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -6088,7 +6089,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 // 7.1.4 ToInteger
@@ -6100,7 +6101,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 // 7.2.1 RequireObjectCoercible(argument)
@@ -6111,14 +6112,14 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = true;
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 var core = module.exports = { version: '2.5.5' };
@@ -6126,7 +6127,7 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
@@ -6144,19 +6145,19 @@ module.exports = function (it, S) {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports) {
 
 module.exports = {};
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
 var $keys = __webpack_require__(173);
-var enumBugKeys = __webpack_require__(30);
+var enumBugKeys = __webpack_require__(31);
 
 module.exports = Object.keys || function keys(O) {
   return $keys(O, enumBugKeys);
@@ -6164,10 +6165,10 @@ module.exports = Object.keys || function keys(O) {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(29)('keys');
+var shared = __webpack_require__(30)('keys');
 var uid = __webpack_require__(16);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
@@ -6175,7 +6176,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(4);
@@ -6187,7 +6188,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports) {
 
 // IE 8- don't enum bug keys
@@ -6197,7 +6198,7 @@ module.exports = (
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var def = __webpack_require__(7).f;
@@ -6210,20 +6211,20 @@ module.exports = function (it, tag, stat) {
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports.f = __webpack_require__(10);
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(4);
-var core = __webpack_require__(24);
-var LIBRARY = __webpack_require__(23);
-var wksExt = __webpack_require__(32);
+var core = __webpack_require__(25);
+var LIBRARY = __webpack_require__(24);
+var wksExt = __webpack_require__(33);
 var defineProperty = __webpack_require__(7).f;
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
@@ -6232,14 +6233,14 @@ module.exports = function (name) {
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 exports.f = {}.propertyIsEnumerable;
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6337,10 +6338,9 @@ utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method) {
 
 module.exports = defaults;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19)))
 
 /***/ }),
-/* 36 */,
 /* 37 */
 /***/ (function(module, exports) {
 
@@ -18538,13 +18538,13 @@ module.exports = Component.exports
 
 "use strict";
 
-var LIBRARY = __webpack_require__(23);
+var LIBRARY = __webpack_require__(24);
 var $export = __webpack_require__(168);
 var redefine = __webpack_require__(171);
 var hide = __webpack_require__(6);
-var Iterators = __webpack_require__(26);
+var Iterators = __webpack_require__(27);
 var $iterCreate = __webpack_require__(242);
-var setToStringTag = __webpack_require__(31);
+var setToStringTag = __webpack_require__(32);
 var getPrototypeOf = __webpack_require__(249);
 var ITERATOR = __webpack_require__(10)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
@@ -18613,7 +18613,7 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(4);
-var core = __webpack_require__(24);
+var core = __webpack_require__(25);
 var ctx = __webpack_require__(240);
 var hide = __webpack_require__(6);
 var has = __webpack_require__(5);
@@ -18712,8 +18712,8 @@ module.exports = __webpack_require__(6);
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(13);
 var dPs = __webpack_require__(243);
-var enumBugKeys = __webpack_require__(30);
-var IE_PROTO = __webpack_require__(28)('IE_PROTO');
+var enumBugKeys = __webpack_require__(31);
+var IE_PROTO = __webpack_require__(29)('IE_PROTO');
 var Empty = function () { /* empty */ };
 var PROTOTYPE = 'prototype';
 
@@ -18759,7 +18759,7 @@ module.exports = Object.create || function create(O, Properties) {
 var has = __webpack_require__(5);
 var toIObject = __webpack_require__(9);
 var arrayIndexOf = __webpack_require__(245)(false);
-var IE_PROTO = __webpack_require__(28)('IE_PROTO');
+var IE_PROTO = __webpack_require__(29)('IE_PROTO');
 
 module.exports = function (object, names) {
   var O = toIObject(object);
@@ -18799,7 +18799,7 @@ exports.f = Object.getOwnPropertySymbols;
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
 var $keys = __webpack_require__(173);
-var hiddenKeys = __webpack_require__(30).concat('length', 'prototype');
+var hiddenKeys = __webpack_require__(31).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return $keys(O, hiddenKeys);
@@ -19074,7 +19074,7 @@ module.exports = Cancel;
 /* 182 */
 /***/ (function(module, exports) {
 
-module.exports = { "en.auth": { "account_no": "Account No.", "account_type": "Account type", "add_personnel": "Add personnel", "address": "Address", "address1": "Address Line 1", "address2": "Address Line 2", "address_line": "Address Line", "agree": "By checking this box and submitting the registration form, I agree to all of the ", "already_have_account": "Already have an account?", "bank_address": "Bank address", "bank_info": "Bank information", "bank_name": "Bank name", "bank_swift": "Bank SORT\/SWIFT code", "beneficiary_address": "Nominee Address", "beneficiary_contact": "Nominee Contact No.", "beneficiary_identification": "Nominee Passport\/NRIC", "beneficiary_info": "Nominee information", "beneficiary_name": "Nominee name", "cancel": "Cancel", "company_address": "Company address", "company_business_registration": "Business registration No.", "company_incorporation_date": "Date of incorporation", "company_incorporation_place": "Incorporation place", "company_info": "Company information", "company_name": "Company\/Entity name", "company_regulatory_name": "Regulatory body", "company_type": "Type of business entity", "contact_personnels": "Contact personnel", "country": "Country", "email": "Email Address", "en_space": " ", "enter_email_and_password_to_reset": "Enter your email and new password", "enter_email_to_reset": "enter your email to reset your password", "facebook_login": "Login with Facebook", "facebook_signup": "Register with Facebook", "failed": "These credentials do not match our records.", "forgot_password": "Forgot your password", "full_name": "Name (as per NRIC\/Passport)", "gender": "Gender", "gender_female": "Female", "gender_male": "Male", "gender_null": "N\\A", "general_info": "General information", "google_login": "Login with Google", "google_signup": "Register with Google", "grower": " Grower", "hi": "Hi", "identification": "Passport\/NRIC", "last_step": "One last step.", "login": "Login", "name": "Name", "name_placeholder": "per Passport\/NRIC", "nationality": "Nationality", "new_to_site": "New to our site?", "password": "Password", "personal_info": "Personal information", "personnel_designation": "Designation", "phone": "Contact No.", "postcode": "Postcode", "process_registration": "Your registration is being processed.", "referral_id": "Your referral ID is :code", "referral_info": "Referral information", "referrer": "Referrer ID", "referrer_fill": "Fill in the referrer ID", "referrer_name": "Referrer name: :name", "referrer_not_found": "Referrer not found", "register": "Sign up", "register_message": "as Newleaf grower and get involved in the multi-billion dollar industry today", "register_today": "", "registering_company": "Corporate Application (For corporate application only)", "registration_complete": "Registration complete, you may now close this window", "remember": "Remember me", "remove_personnel": "Remove personnel", "repeat": "Repeat ", "reset_password": "Reset password", "select_package": "Select purchase", "selected_package": "Selected purchase", "send_reset_link": "Send me the reset link", "submit": "Submit", "success": "Please fill in your details below for us to process your registration.", "success_country": "Please also let us know your country as that is required for us to generate your referral code", "success_email": "We will also need your email address so that we can send you important notifications in the future", "success_referral": "If you have a referrer, please let us know by filling in his\/her ID in the form below", "terms_and_conditions": "Terms and conditions", "thank_you": "Thank you.", "throttle": "Too many login attempts. Please try again in :seconds seconds.", "tree": "Tree|Trees", "wechat_signup": "Register with WeChat", "welcome_back": "welcome back" }, "en.company": { "company": "Company", "partnership": "Partnership", "sole": "Sole proprietership", "trust": "Trust" }, "en.confirmation": { "blast_newsletter_grower": "This will blast the news to all growers. Are you sure?", "cancel": "Cancel", "change_legal_status": "This will change the legal status for the grower. Are you sure?", "confirm": "Confirm", "confirmation": "Confirm action", "delete_purchase": "Purchase will be deleted and cannot be undone. Are you sure?", "delete_user": "User will be deleted and cannot be undone. Are you sure?", "reject_payment": "Payment will be rejected and grower will be notified. Are you sure?", "reject_user": "This will reject the identity verification documents and grower will be notified. Are you sure?", "remind_user_identification": "Grower will be notified. Are you sure?", "verify_payment": "This will verify the payment, distribute commission and adjust related growers rank. Are you sure?", "verify_user": "This will verify the identity verification documents. Are you sure?" }, "en.dashboard": { "accrued_commission": "Accrued commission", "commission_earned": "Accumulated commission", "current_grower_level": "Current grower level", "date": "Date", "group_sale": "Group sale", "grower_level": "Grower level", "latest_news": "Latest news", "my_account_status": "My account status", "my_downlines": "My affiliates", "next_grower_level": "Next grower level", "trees_sold_global": "Global trees sold" }, "en.form": { "submit": "Submit" }, "en.input": { "choose_file": "Click to choose file...", "female": "Female", "file_selected": "Selected file :name", "male": "Male", "nric": "NRIC", "passport": "Passport", "switch_file_mode": "You can toggle between camera\/file mode by pressing at the blue button (only for mobile phone)", "take_from_camera": "Click to open camera..." }, "en.nav": { "admin_purchases": "Purchases", "commission_report": "Commission reports", "dashboard": "Dashboard", "exit": "Exit", "logout": "Logout", "materials": "Materials", "news": "News", "organization": "Organization", "packages": "Packages", "payout_report": "Payout reports", "payouts": "Payouts", "profile": "Profile", "purchases": "Purchases", "reports": "Reports", "settings": "Settings", "transactions": "Commissions", "trees": "My trees", "users": "Users" }, "en.package": { "actions": "Actions", "create_success": "Package created", "make_new_package": "Add new package", "package_details": "Package details", "packages": "Packages", "price": "Price (MYR)", "price_promotion": "Promotion price (MYR)", "price_std": "Price (USD)", "price_std_promotion": "Promotion price (USD)", "tree_count": "No. of trees", "update_success": "Package updated" }, "en.pagination": { "info": "Displaying {from} to {to} of {total} items", "next": "Next &raquo;", "previous": "&laquo; Previous" }, "en.passwords": { "password": "Passwords must be at least six characters and match the confirmation.", "reset": "Your password has been reset!", "sent": "We have e-mailed your password reset link!", "token": "This password reset token is invalid.", "user": "We can't find a user with that e-mail address." }, "en.payment": { "amount": "Amount payable", "bank_account_no": "Account No.", "bank_address": "Bank Address", "bank_details": "Bank Details", "bank_swift": "SWIFT Code", "beneficiary_address": "Beneficiary Address", "beneficiary_bank": "Beneficiary Bank", "beneficiary_name": "Beneficiary Name", "invalid_payment_slip": "Payment slip is required", "make_payment": "Make payment", "paid_on": "Paid on", "payment": "Payment", "payment_details": "Payment details", "payment_slip": "Payment Slip", "payment_slip_exceed_size": "Payment slip must not exceed 8MB", "reject": "Reject", "reject_note": "Reject reason", "reject_success": "Payment rejected successfully", "submit_payment": "Submit payment", "success": "Payment has been recorded successfully", "verify": "Verify", "verify_success": "Payment verified successfully" }, "en.post": { "add_new_post": "Create news", "advisor_incentive_program": "Advisor Incentive Program", "commission_report": "Commission report", "content": "Content", "create_success": "News created", "created_at": "Created at", "download": "Download", "edit_post": "Edit news", "last_update": "Last updated", "latest_news": "the latest news and updates from newleaf plantation berhad", "marketing_material": "Marketing materials", "newleaf_bulletin": "Newleaf Bulletin", "newleaf_flyer": "Newleaf Flyer", "newleaf_purchase_form": "Newleaf Purchase Form", "notify_admins_success": "News has been sent to all admins!", "notify_success": "News has been sent to all growers!", "payout_report": "Payout report", "posts": "News", "published_date": "Published date", "sales_report": "Sales report", "title": "Title", "update_success": "News updated", "yield_projection": "Yield Projection" }, "en.purchase": { "base_price": "Recommended Retail Price (RRP) per Tree: RM 8,000", "cancel": "Cancel update", "checkout": "Checkout", "complete": "Complete", "default_user": "Leave empty to buy for yourself", "deleted": "Purchase deleted", "download_receipt": "Download receipt", "made_by": "Made by", "make_new_purchase": "Make new purchase", "past_purchases": "Purchase history", "pending": "Pending payment", "pending_purchases": "Pending purchases", "pending_verification": "Pending verification", "purchase_date": "Purchase date", "purchase_details": "Purchase details", "purchases": "Purchases", "receipt_description": "Deposit for (:number) tree purchase", "rejected": "Rejected", "select_package": "Select from the packages below", "selected_packages": "Selected packages", "status": "Status", "success": "Purchase order created successfully", "total": "Total", "total_payable": "Total payable", "update": "Update", "updated": "Purchase updated", "user": "Buyer" }, "en.table": { "actions": "Actions", "back": "Back", "export": "Export", "export_excel": "Export as Excel", "export_pdf": "Export as PDF", "filter_by_date": "Filter by date", "filter_by_month": "Filter by month", "reset": "Reset", "search": "Search" }, "en.transaction": { "amount": "Amount", "amount_myr": "Amount (MYR)", "amount_std": "Amount (USD)", "created_at": "Date", "description": "Description", "one_time_commision": "Referral commission", "paid": "Paid", "payouts": "Payouts", "pending": "Pending", "status": "Payout status", "status_updated": "Payout completed", "std_payouts": "Payouts (USD)", "transactions": "Commissions", "tree_purchase": "Tree purchase by :name", "type": "Type" }, "en.tree": { "self": "Me", "tree": "Organization chart" }, "en.user": { "bank_statement": "Bank Statement", "cancel_change_password": "Cancel change password", "cancel_update": "Cancel update", "change_password": "Change password", "complete": "Complete", "copied-link": "Your referral link has been copied to the clipboard", "copy-referral": "Copy referral link", "deleted": "User has been deleted", "documents_rejected": "Documents rejected", "documents_success": "Documents updated", "documents_verified": "Documents verified", "edit_profile": "Edit profile", "execution_ready": "Execution ready", "identity": "Purchaser NRIC (for Malaysian) or Passport (for non-Malaysian)", "instruction_issued": "Instruction issued", "instruction_issued_to_lawyer": "Instruction issued to lawyer", "joined_at": "Joined at", "kyc_documents": "Identity Verification Documents", "legal_updated": "User legal status updated successfully", "level": "Member level", "level_1": "Advisor", "level_2": "Senior Advisor", "level_3": "Executive Advisor", "level_4": "Chief Advisor", "level_instruction": "Refer :target direct growers. :left to go.", "level_instruction_2": "Group sales of :target subscriptions. :left to go.", "lock_down_back": "for any discrepancy", "lock_down_front": "Please email", "locked": "User has been locked", "locked_message": "Your account has been locked. Please contact support@newleaf.com.my for more information", "nominee_identity": "Nominee NRIC (for Malaysian) or Passport (for non-Malaysian)", "pending": "Pending", "pending_verification": "Pending verification", "profile_update_success": "Profile updated", "referral_code": "Newleaf ID", "reject": "Reject", "rejected": "Verification failed", "reminder_sent": "Reminder sent", "residence_proof": "Proof of Residence", "sales_agreement_executed": "Sales agreement executed", "sales_agreement_ready_for_execution": "Sales agreement ready for execution", "status": "Status", "tree_count": "No. of trees", "unlocked": "User has been unlocked", "update_document": "Update document", "users": "Users", "users_pending": "Pending users", "verified": "Verified", "verify": "Verify" }, "en.validation": { "accepted": "The :attribute must be accepted.", "active_url": "The :attribute is not a valid URL.", "after": "The :attribute must be a date after :date.", "after_or_equal": "The :attribute must be a date after or equal to :date.", "alpha": "The :attribute may only contain letters.", "alpha_dash": "The :attribute may only contain letters, numbers, and dashes.", "alpha_num": "The :attribute may only contain letters and numbers.", "array": "The :attribute must be an array.", "attributes": { "password": "Password" }, "before": "The :attribute must be a date before :date.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": "The :attribute confirmation does not match.", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "The :attribute must be a valid email address.", "exists": "The selected :attribute is invalid.", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "This must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "This field is required.", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." }, "zh.auth": { "account_no": "\u6237\u53E3\u53F7\u7801", "account_type": "\u6237\u53E3\u7C7B\u578B", "add_personnel": "\u589E\u52A0", "address": "\u5730\u5740", "address1": "\u5730\u5740 1", "address2": "\u5730\u5740 2", "agree": "\u6211\u786E\u8BA4\u5E76\u627F\u8BA4\u6211\u5DF2\u7ECF\u9605\u8BFB\u5E76\u540C\u610F\u9075\u5B88\u672C\u8D2D\u4E70\u8868\u683C\u4E2D\u7684", "already_have_account": "\u5DF2\u7ECF\u6709\u5E10\u53F7\uFF1F", "bank_address": "\u94F6\u884C\u5730\u5740", "bank_info": "\u94F6\u884C\u8D44\u6599", "bank_name": "\u94F6\u884C\u540D\u79F0", "bank_swift": "\u94F6\u884C SORT/SWIFT \u4EE3\u7801", "beneficiary_address": "\u63D0\u540D\u4EBA\u4F4F\u5740", "beneficiary_contact": "\u63D0\u540D\u4EBA\u7535\u8BDD\u53F7\u7801", "beneficiary_identification": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "beneficiary_info": "\u63D0\u540D\u4EBA\u8D44\u6599", "beneficiary_name": "\u63D0\u540D\u4EBA\u540D\u79F0", "cancel": "\u53D6\u6D88", "company_address": "\u516C\u53F8\u5730\u5740", "company_business_registration": "\u5546\u4E1A\u6CE8\u518C\u53F7\u7801", "company_incorporation_date": "\u5546\u4E1A\u6CE8\u518C\u65E5\u671F", "company_incorporation_place": "\u6CE8\u518C\u5730\u70B9", "company_info": "\u516C\u53F8\u8D44\u6599", "company_name": "\u516C\u53F8\u540D\u79F0", "company_regulatory_name": "\u76D1\u7BA1\u5355\u4F4D\u540D\u79F0", "company_type": "\u5546\u4E1A\u7C7B\u578B", "contact_personnels": "\u516C\u53F8\u8054\u7EDC\u4EBA", "country": "\u56FD\u5BB6", "email": "\u7535\u90AE", "en_space": "", "enter_email_and_password_to_reset": "\u8BF7\u8F93\u5165\u7535\u90AE\u548C\u65B0\u5BC6\u7801", "enter_email_to_reset": "\u8BF7\u8F93\u5165\u60A8\u7684\u7535\u90AE", "facebook_login": "\u8138\u4E66\u767B\u5165", "facebook_signup": "\u4F7F\u7528\u8138\u4E66\u6CE8\u518C", "failed": "\u7535\u90AE/\u5BC6\u7801\u9519\u8BEF", "forgot_password": "\u5FD8\u8BB0\u5BC6\u7801", "full_name": "\u5168\u540D", "gender": "\u6027\u522B", "gender_female": "\u5973", "gender_male": "\u7537", "general_info": "\u4E00\u822C\u8D44\u6599", "google_login": "\u8C37\u6B4C\u767B\u5165", "google_signup": "\u4F7F\u7528\u8C37\u6B4C\u6CE8\u518C", "grower": "\u79CD\u690D\u8005", "hi": "\u4F60\u597D", "identification": "\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "last_step": "\u6700\u540E\u4E00\u6B65", "login": "\u767B\u5165", "name": "\u540D\u5B57", "name_placeholder": "\u586B\u5199\u5B9E\u540D", "nationality": "\u56FD\u7C4D", "new_to_site": "\u8FD8\u672A\u6CE8\u518C\uFF1F", "password": "\u5BC6\u7801", "personal_info": "\u4E2A\u4EBA\u8D44\u6599", "personnel_designation": "\u804C\u4F4D", "phone": "\u7535\u8BDD\u53F7\u7801", "postcode": "\u90AE\u653F\u7F16\u7801", "process_registration": "\u6211\u4EEC\u6B63\u5728\u5904\u7406\u60A8\u7684\u6CE8\u518C\u3002", "referral_id": "\u60A8\u7684ID\u662F :code", "referral_info": "\u63A8\u8350\u8005\u8D44\u6599", "referrer": "\u4ECB\u7ECD\u8005ID", "referrer_fill": "\u8BF7\u8F93\u5165\u63A8\u8350\u8005ID", "referrer_name": "\u63A8\u8350\u8005\u540D\u79F0: :name", "referrer_not_found": "ID\u9519\u8BEF", "register": "\u52A0\u76DF", "register_message": "\u65B0\u53F6\u69B4\u83B2\u79CD\u690D\u8BA1\u5212\uFF01", "register_today": "\u69B4\u83B2\u79CD\u690D\u65B0\u5546\u673A, \u643A\u624B\u65B0\u53F6\u521B\u767E\u4EBF, \u9A6C\u4E0A", "registering_company": "\u673A\u6784\u7533\u8BF7", "registration_complete": "\u5B8C\u6210\uFF0C\u60A8\u5DF2\u53EF\u4EE5\u5173\u95ED\u6B64\u9875\u9762", "remember": "\u4FDD\u6301\u767B\u5165", "remove_personnel": "\u53BB\u9664", "repeat": "\u786E\u5B9A", "reset_password": "\u91CD\u8BBE\u5BC6\u7801", "select_package": "\u9009\u62E9\u914D\u5957", "selected_package": "\u914D\u5957", "send_reset_link": "\u786E\u5B9A\u91CD\u8BBE\u5BC6\u7801", "submit": "\u63D0\u4EA4", "success": "\u6CE8\u518C\u6210\u529F", "success_country": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u6240\u5728\u56FD\u5BB6\uFF0C\u8FD9\u5C06\u5E2E\u52A9\u6211\u4EEC\u5236\u5B9A\u60A8\u7684ID", "success_email": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u7535\u90AE\u4EE5\u4F5C\u4E3A\u65E5\u540E\u7684\u901A\u8BAF\u7BA1\u9053", "success_referral": "\u82E5\u60A8\u6709\u63A8\u8350\u8005\uFF0C\u8BF7\u544A\u8BC9\u6211\u4EEC\u4ED6\u7684ID", "terms_and_conditions": "\u6761\u6B3E\u53CA\u7EC6\u5219", "thank_you": "\u8C22\u8C22", "throttle": "\u767B\u5165\u8FC7\u4E8E\u9891\u7E41\uFF0C\u8BF7\u5728 :seconds \u79D2\u540E\u518D\u8BD5", "tree": "\u68F5\u6811|\u68F5\u6811", "wechat_signup": "\u4F7F\u7528\u5FAE\u4FE1\u6CE8\u518C", "welcome_back": "\u6B22\u8FCE\u56DE\u6765" }, "zh.company": { "company": "\u516C\u53F8", "partnership": "\u5408\u4F19", "sole": "\u72EC\u8D44\u7ECF\u8425\u8005", "trust": "\u4FE1\u6258\u4E1A\u52A1" }, "zh.confirmation": { "blast_newsletter_grower": "\u786E\u5B9A\u53D1\u9001\u6D88\u606F\u7ED9\u6240\u6709\u79CD\u690D\u7740?", "cancel": "\u53D6\u6D88", "confirm": "\u786E\u5B9A", "confirmation": "\u884C\u52A8\u786E\u8BA4", "reject_payment": "\u786E\u5B9A\u9A73\u56DE\u4ED8\u6B3E?", "reject_user": "\u786E\u5B9A\u9A73\u56DE\u79CD\u690D\u8005?", "remind_user_identification": "\u786E\u5B9A\u63D0\u9192\u79CD\u690D\u8005?", "verify_payment": "\u786E\u5B9A\u8BA4\u8BC1\u4ED8\u6B3E?", "verify_user": "\u786E\u5B9A\u8BA4\u8BC1\u79CD\u690D\u8005?" }, "zh.dashboard": { "accrued_commission": "\u5E94\u8BA1\u5956\u91D1", "commission_earned": "\u7D2F\u8BA1\u5956\u91D1", "current_grower_level": "\u5F53\u524D\u8058\u9636", "date": "\u65E5\u671F", "group_sale": "\u7EC4\u7EC7\u4E1A\u7EE9", "grower_level": "\u8058\u9636", "latest_news": "\u6700\u65B0\u6D88\u606F", "my_account_status": "\u6211\u7684\u8D26\u53F7", "my_downlines": "\u6211\u7684\u4E0B\u7EBF", "next_grower_level": "\u4E0B\u4E2A\u8058\u9636", "trees_sold_global": "\u603B\u4E1A\u7EE9" }, "zh.form": { "submit": "\u63D0\u4EA4" }, "zh.input": { "choose_file": "\u6309\u6B64\u9009\u62E9\u6587\u4EF6...", "female": "\u5973", "file_selected": "\u6210\u529F\u9009\u62E9:name", "male": "\u7537", "nric": "\u8EAB\u4EFD\u8BC1", "passport": "\u62A4\u7167", "switch_file_mode": "\u6309\u84DD\u8272\u6309\u94AE\u53EF\u5207\u6362\u6587\u4EF6\u9009\u62E9/\u7167\u76F8\u673A\u6A21\u5F0F(\u4EC5\u4F9B\u667A\u80FD\u7535\u8BDD\u4F7F\u7528)", "take_from_camera": "\u6309\u6B64\u6253\u5F00\u7167\u76F8\u673A..." }, "zh.nav": { "admin_purchases": "\u6240\u6709\u8BA2\u5355", "commission_report": "\u4F63\u91D1\u62A5\u544A", "dashboard": "\u6982\u8981", "exit": "\u79BB\u5F00", "logout": "\u767B\u51FA", "materials": "\u9500\u552E\u8F85\u52A9", "news": "\u6700\u65B0\u6D88\u606F", "organization": "\u7EC4\u7EC7", "packages": "\u914D\u5957", "payout_report": "\u652F\u51FA\u62A5\u544A", "payouts": "\u652F\u51FA", "profile": "\u6211\u7684\u8D44\u6599", "purchases": "\u8BA2\u5355", "reports": "\u62A5\u544A", "settings": "\u8BBE\u5B9A", "transactions": "\u4F63\u91D1", "trees": "\u79CD\u690D\u7BA1\u7406", "users": "\u7528\u6237" }, "zh.package": { "create_success": "\u5DF2\u589E\u52A0\u914D\u5957", "make_new_package": "\u589E\u52A0\u914D\u5957", "package_details": "\u914D\u5957\u8BE6\u60C5", "packages": "\u914D\u5957", "price": "\u4EF7\u683C (\u9A6C\u5E01)", "price_promotion": "\u4F18\u60E0\u4EF7\u683C (\u9A6C\u5E01)", "price_std": "\u4EF7\u683C (\u7F8E\u91D1)", "price_std_promotion": "\u4F18\u60E0\u4EF7\u683C (\u7F8E\u91D1)", "tree_count": "\u79CD\u690D\u6570\u91CF", "update_success": "\u5DF2\u66F4\u65B0\u914D\u5957\u8BE6\u60C5" }, "zh.pagination": { "info": "\u5171{total}\u4E2A\u6570\u636E\uFF0C\u6B63\u5728\u663E\u793A{from}\u5230{to}" }, "zh.passwords": { "password": "\u5BC6\u7801\u5FC5\u987B\u6709\u6700\u5C116\u4E2A\u5B57\u6BCD", "reset": "\u6210\u529F\u5BC6\u7801\u91CD\u8BBE", "sent": "\u6211\u4EEC\u5DF2\u53D1\u9001\u5BC6\u7801\u91CD\u8BBE\u8FDE\u63A5\u5230\u60A8\u7684\u70B9\u90AE", "token": "\u60A8\u7684\u8BF7\u6C42\u5DF2\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u8BF7\u6C42", "user": "\u6B64\u7535\u90AE\u5730\u5740\u4E0D\u5728\u6211\u4EEC\u7684\u6570\u636E\u5E93\u91CC" }, "zh.payment": { "amount": "\u652F\u4ED8\u6570\u989D", "bank_account_no": "\u6536\u6B3E\u8D26\u53F7", "bank_address": "\u6536\u6B3E\u94F6\u884C\u5730\u5740", "bank_details": "\u6C47\u6B3E\u8BE6\u60C5", "bank_swift": "\u94F6\u884C\u56FD\u9645\u4EE3\u7801", "beneficiary_address": "\u6536\u6B3E\u8D26\u6237\u5730\u5740", "beneficiary_bank": "\u6536\u6B3E\u94F6\u884C", "beneficiary_name": "\u6536\u6B3E\u8D26\u6237\u540D\u79F0", "invalid_payment_slip": "\u8BF7\u9009\u62E9\u4ED8\u6B3E\u5355", "make_payment": "\u652F\u4ED8\u6B3E\u9879", "paid_on": "\u4ED8\u6B3E\u65E5\u671F", "payment": "\u4ED8\u6B3E", "payment_details": "\u4ED8\u6B3E\u8BE6\u60C5", "payment_slip": "\u4ED8\u6B3E\u5355", "payment_slip_exceed_size": "\u4ED8\u6B3E\u5355\u6587\u4EF6\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "reject": "\u9A73\u56DE", "reject_note": "\u5907\u6CE8", "reject_success": "\u6210\u529F\u9A73\u56DE\u4ED8\u6B3E", "submit_payment": "\u63D0\u4EA4\u4ED8\u6B3E\u5355", "success": "\u4ED8\u6B3E\u5355\u5DF2\u88AB\u63A5\u7EB3", "verify": "\u786E\u8BA4\u4ED8\u6B3E", "verify_success": "\u6210\u529F\u786E\u8BA4\u4ED8\u6B3E" }, "zh.post": { "add_new_post": "\u521B\u5EFA\u65B0\u6D88\u606F", "advisor_incentive_program": "\u987E\u95EE\u5956\u52B1\u8BA1\u5212", "commission_report": "\u4F63\u91D1\u62A5\u544A", "content": "\u5185\u5BB9", "created_at": "\u53D1\u5E03\u4E8E", "download": "\u4E0B\u8F7D", "edit_post": "\u66F4\u65B0\u6D88\u606F", "last_update": "\u66F4\u65B0\u4E8E", "latest_news": "\u4E3A\u60A8\u5E26\u6765\u65B0\u53F6\u6700\u65B0\u6D88\u606F\u4E0E\u66F4\u65B0", "marketing_material": "\u65B0\u53F6\u8425\u9500", "newleaf_bulletin": "\u65B0\u53F6\u901A\u544A", "newleaf_flyer": "\u65B0\u53F6\u4F20\u5355", "newleaf_purchase_form": "\u65B0\u53F6\u8D2D\u4E70\u8868\u683C", "notify_admin_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u7BA1\u7406\u5458", "notify_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u79CD\u690D\u8005", "payout_report": "\u652F\u51FA\u62A5\u544A", "post_created": "\u521B\u5EFA\u6210\u529F", "posts": "\u6700\u65B0\u6D88\u606F", "published_date": "\u53D1\u5E03\u65E5\u671F", "sales_report": "\u9500\u552E\u62A5\u544A", "title": "\u6807\u9898", "update_success": "\u66F4\u65B0\u6210\u529F", "yield_projection": "\u4EA7\u91CF\u9884\u6D4B" }, "zh.purchase": { "base_price": "\u5355\u68F5\u6811\u96F6\u552E\u4EF7\uFF1A\u7F8E\u91D1 2,500", "cancel": "\u53D6\u6D88\u66F4\u6539", "checkout": "\u4ED8\u6B3E", "complete": "\u5B8C\u6210", "default_user": "\u81EA\u8EAB\u8D2D\u4E70\u8BF7\u7559\u7A7A", "deleted": "\u8BA2\u5355\u5DF2\u88AB\u5220\u9664", "made_by": "\u5BA2\u6237", "make_new_purchase": "\u8D2D\u4E70\u79CD\u690D\u914D\u5957", "past_purchases": "\u8FC7\u5F80\u8BA2\u5355\u8BB0\u5F55", "pending": "\u672A\u4ED8\u6B3E", "pending_verification": "\u5BA1\u6838\u4E2D", "purchase_date": "\u8D2D\u4E70\u65E5\u671F", "purchase_details": "\u8BA2\u5355\u8BE6\u60C5", "purchases": "\u8BA2\u5355\u8BB0\u5F55", "rejected": "\u9700\u8981\u66F4\u65B0", "select_package": "\u9009\u62E9\u4EE5\u4E0B\u914D\u5957", "selected_packages": "\u5DF2\u9009\u62E9\u914D\u5957", "status": "\u72B6\u6001", "success": "\u8BA2\u5355\u5DF2\u88AB\u63A5\u7EB3", "total": "\u603B\u4EF7\u683C", "total_payable": "\u603B\u4EF7\u683C", "update": "\u66F4\u6539", "updated": "\u66F4\u65B0\u6210\u529F", "user": "\u4E70\u5BB6" }, "zh.table": { "actions": "\u64CD\u4F5C", "back": "\u8FD4\u56DE", "export": "\u6587\u4EF6\u8F93\u51FA", "export_excel": "Excel\u8F93\u51FA", "export_pdf": "PDF\u8F93\u51FA", "filter_by_date": "\u65E5\u671F\u7B5B\u9009", "filter_by_month": "\u6708\u4EFD\u7B5B\u9009", "reset": "\u91CD\u8BBE", "search": "\u67E5\u627E" }, "zh.transaction": { "amount": "\u91D1\u989D", "amount_myr": "\u91D1\u989D (\u9A6C\u5E01)", "amount_std": "\u91D1\u989D (\u7F8E\u91D1)", "created_at": "\u65E5\u671F", "description": "\u9879\u76EE", "one_time_commision": "\u4E00\u6B21\u6027\u4F63\u91D1", "paid": "\u5DF2\u652F\u4ED8", "payouts": "\u652F\u51FA", "pending": "\u672A\u652F\u4ED8", "status": "\u652F\u4ED8\u72B6\u6001", "status_updated": "\u652F\u4ED8\u5B8C\u6210", "std_payouts": "\u652F\u51FA (\u7F8E\u91D1)", "transactions": "\u4F63\u91D1", "tree_purchase": ":name \u7684\u79CD\u690D\u9879\u76EE", "type": "\u79CD\u7C7B" }, "zh.tree": { "self": "\u6211", "tree": "\u7EC4\u7EC7\u56FE" }, "zh.user": { "bank_statement": "\u94F6\u884C\u6D41\u6C34\u8D26\u5355", "cancel_change_password": "\u53D6\u6D88\u66F4\u6362\u5BC6\u7801", "cancel_update": "\u53D6\u6D88\u66F4\u65B0", "change_password": "\u66F4\u6362\u5BC6\u7801", "copied-link": "\u6210\u529F\u590D\u5236\u4ECB\u7ECD\u8FDE\u63A5", "copy-referral": "\u590D\u5236\u8FDE\u63A5", "documents_rejected": "\u6587\u4EF6\u5BA1\u6838\u5931\u8D25", "documents_success": "\u66F4\u65B0\u6210\u529F", "documents_verified": "\u6587\u4EF6\u5BA1\u6838\u6210\u529F", "edit_profile": "\u66F4\u65B0\u8D44\u6599", "identity": "\u8D2D\u4E70\u8005\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "instruction_issued_to_lawyer": "\u5F8B\u5E08\u5904\u7406\u4E2D", "joined_at": "\u52A0\u76DF\u65E5\u671F", "kyc_documents": "\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "legal_updated": "\u79CD\u690D\u8005\u6CD5\u5F8B\u7A0B\u5E8F\u66F4\u65B0\u6210\u529F", "level": "\u7EA7\u522B", "level_1": "\u987E\u95EE", "level_2": "\u9AD8\u7EA7\u987E\u95EE", "level_3": "\u6267\u884C\u987E\u95EE", "level_4": "\u9996\u5E2D\u987E\u95EE", "level_instruction": "\u76F4\u63A8 :target \u4F4D\u79CD\u690D\u8005. \u8FD8\u9700 :left \u4F4D", "level_instruction_2": "\u7EC4\u7EC7\u4E1A\u7EE9\u8FBE :target \u68F5\u6811. \u8FD8\u9700 :left \u68F5", "lock_down": "\u82E5\u6709\u51FA\u5165\uFF0C\u8BF7\u7535\u90AE\u81F3", "lock_down_back": "\u901A\u77E5\u6211\u4EEC", "locked": "\u7528\u6237\u5DF2\u88AB\u5C01\u9501", "locked_message": "\u60A8\u7684\u8D26\u53F7\u5DF2\u88AB\u7BA1\u7406\u5458\u5C01\u9501, \u8BF7\u7535\u90AE\u81F3support@newleaf.com.my\u4E86\u89E3\u8BE6\u60C5", "nominee_identity": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "pending": "\u672A\u5BA1\u6838", "pending_verification": "\u5BA1\u6838\u4E2D", "profile_update_success": "\u8D44\u6599\u5DF2\u66F4\u65B0", "referral_code": "\u65B0\u53F6ID", "reject": "\u9A73\u56DE", "rejected": "\u5BA1\u6838\u5931\u8D25", "reminder_sent": "\u5DF2\u53D1\u9001\u63D0\u793A", "residence_proof": "\u4F4F\u5740\u8BC1\u660E\u6587\u4EF6", "sales_agreement_executed": "\u9500\u552E\u534F\u8BAE\u5B8C\u6210", "sales_agreement_ready_for_execution": "\u7B49\u5F85\u7B7E\u7F72\u9500\u552E\u534F\u8BAE", "status": "\u72B6\u6001", "tree_count": "\u79CD\u690D\u6570\u91CF", "unlocked": "\u7528\u6237\u5DF2\u88AB\u89E3\u9501", "update_document": "\u66F4\u65B0\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "users": "\u7528\u6237", "users_pending": "\u9700\u5173\u6CE8\u7528\u6237", "verified": "\u5DF2\u901A\u8FC7\u5BA1\u6838", "verify": "\u8BA4\u8BC1" }, "zh.validation": { "accepted": "\u9700\u8981\u88AB\u63A5\u53D7", "active_url": "\u94FE\u63A5\u9519\u8BEF.", "after": "\u5FC5\u987B\u5728:date\u4E4B\u540E.", "after_or_equal": "\u5FC5\u987B\u662F\u548C:date\u4E00\u6837\u6216\u4E4B\u540E\u7684\u65E5\u671F.", "alpha": "\u53EA\u80FD\u6709\u5B57\u6BCD", "alpha_dash": "\u53EA\u80FD\u6709\u5B57\u6BCD\uFF0C\u53F7\u7801\uFF0C\u4EE5\u53CA\u201C-\u201D\u53F7", "alpha_num": "\u53EA\u80FD\u6709\u5B57\u6BCD\u4EE5\u53CA\u53F7\u7801", "attributes": { "password": "\u5BC6\u7801" }, "before": "\u5FC5\u987B\u5728:date\u4E4B\u524D.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": ":attribute\u4E0D\u76F8\u540C", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "\u8FD9\u5FC5\u987B\u662F\u4E00\u4E2A\u7535\u90AE\u5730\u5740", "exists": "\u9009\u9879\u9519\u8BEF", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "\u53EA\u80FD\u586B\u5199\u6570\u5B57", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "\u9700\u8981\u88AB\u586B\u5199", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." } };
+module.exports = { "en.auth": { "account_no": "Account No.", "account_type": "Account type", "add_personnel": "Add personnel", "address": "Address", "address1": "Address Line 1", "address2": "Address Line 2", "address_line": "Address Line", "agree": "By checking this box and submitting the registration form, I agree to all of the ", "already_have_account": "Already have an account?", "bank_address": "Bank address", "bank_info": "Bank information", "bank_name": "Bank name", "bank_swift": "Bank SORT\/SWIFT code", "beneficiary_address": "Nominee Address", "beneficiary_contact": "Nominee Contact No.", "beneficiary_identification": "Nominee Passport\/NRIC", "beneficiary_info": "Nominee information", "beneficiary_name": "Nominee name", "cancel": "Cancel", "company_address": "Company address", "company_business_registration": "Business registration No.", "company_incorporation_date": "Date of incorporation", "company_incorporation_place": "Incorporation place", "company_info": "Company information", "company_name": "Company\/Entity name", "company_regulatory_name": "Regulatory body", "company_type": "Type of business entity", "contact_personnels": "Contact personnel", "country": "Country", "email": "Email Address", "en_space": " ", "enter_email_and_password_to_reset": "Enter your email and new password", "enter_email_to_reset": "enter your email to reset your password", "facebook_login": "Login with Facebook", "facebook_signup": "Register with Facebook", "failed": "These credentials do not match our records.", "forgot_password": "Forgot your password", "full_name": "Name (as per NRIC\/Passport)", "gender": "Gender", "gender_female": "Female", "gender_male": "Male", "gender_null": "N\\A", "general_info": "General information", "google_login": "Login with Google", "google_signup": "Register with Google", "grower": " Grower", "hi": "Hi", "id_type_invalid": "Please select a valid ID type", "identification": "Passport\/NRIC", "last_step": "One last step.", "login": "Login", "name": "Name", "name_placeholder": "per Passport\/NRIC", "nationality": "Nationality", "new_to_site": "New to our site?", "password": "Password", "personal_info": "Personal information", "personnel_designation": "Designation", "phone": "Contact No.", "postcode": "Postcode", "process_registration": "Your registration is being processed.", "referral_id": "Your referral ID is :code", "referral_info": "Referral information", "referrer": "Referrer ID", "referrer_fill": "Fill in the referrer ID", "referrer_name": "Referrer name: :name", "referrer_not_found": "Referrer not found", "register": "Sign up", "register_message": "as Newleaf grower and get involved in the multi-billion dollar industry today", "register_today": "", "registering_company": "Corporate Application (For corporate application only)", "registration_complete": "Registration complete, you may now close this window", "remember": "Remember me", "remove_personnel": "Remove personnel", "repeat": "Repeat ", "reset_password": "Reset password", "select_package": "Select purchase", "selected_package": "Selected purchase", "send_reset_link": "Send me the reset link", "submit": "Submit", "success": "Please fill in your details below for us to process your registration.", "success_country": "Please also let us know your country as that is required for us to generate your referral code", "success_email": "We will also need your email address so that we can send you important notifications in the future", "success_referral": "If you have a referrer, please let us know by filling in his\/her ID in the form below", "terms_and_conditions": "Terms and conditions", "thank_you": "Thank you.", "throttle": "Too many login attempts. Please try again in :seconds seconds.", "tree": "Tree|Trees", "wechat_signup": "Register with WeChat", "welcome_back": "welcome back" }, "en.company": { "company": "Company", "partnership": "Partnership", "sole": "Sole proprietership", "trust": "Trust" }, "en.confirmation": { "blast_newsletter_grower": "This will blast the news to all growers. Are you sure?", "cancel": "Cancel", "change_legal_status": "This will change the legal status for the grower. Are you sure?", "confirm": "Confirm", "confirmation": "Confirm action", "delete_purchase": "Purchase will be deleted and cannot be undone. Are you sure?", "delete_user": "User will be deleted and cannot be undone. Are you sure?", "reject_payment": "Payment will be rejected and grower will be notified. Are you sure?", "reject_user": "This will reject the identity verification documents and grower will be notified. Are you sure?", "remind_user_identification": "Grower will be notified. Are you sure?", "verify_payment": "This will verify the payment, distribute commission and adjust related growers rank. Are you sure?", "verify_user": "This will verify the identity verification documents. Are you sure?" }, "en.dashboard": { "accrued_commission": "Accrued commission", "commission_earned": "Accumulated commission", "current_grower_level": "Current grower level", "date": "Date", "group_sale": "Group sale", "grower_level": "Grower level", "latest_news": "Latest news", "my_account_status": "My account status", "my_downlines": "My affiliates", "next_grower_level": "Next grower level", "trees_sold_global": "Global trees sold" }, "en.form": { "submit": "Submit" }, "en.input": { "choose_file": "Click to choose file...", "female": "Female", "file_selected": "Selected file :name", "male": "Male", "nric": "NRIC", "passport": "Passport", "switch_file_mode": "You can toggle between camera\/file mode by pressing at the blue button (only for mobile phone)", "take_from_camera": "Click to open camera..." }, "en.nav": { "admin_purchases": "Purchases", "commission_report": "Commission reports", "dashboard": "Dashboard", "exit": "Exit", "logout": "Logout", "materials": "Materials", "news": "News", "organization": "Organization", "packages": "Packages", "payout_report": "Payout reports", "payouts": "Payouts", "profile": "Profile", "purchases": "Purchases", "reports": "Reports", "settings": "Settings", "transactions": "Commissions", "trees": "My trees", "users": "Users" }, "en.package": { "actions": "Actions", "create_success": "Package created", "make_new_package": "Add new package", "package_details": "Package details", "packages": "Packages", "price": "Price (MYR)", "price_promotion": "Promotion price (MYR)", "price_std": "Price (USD)", "price_std_promotion": "Promotion price (USD)", "tree_count": "No. of trees", "update_success": "Package updated" }, "en.pagination": { "info": "Displaying {from} to {to} of {total} items", "next": "Next &raquo;", "previous": "&laquo; Previous" }, "en.passwords": { "password": "Passwords must be at least six characters and match the confirmation.", "reset": "Your password has been reset!", "sent": "We have e-mailed your password reset link!", "token": "This password reset token is invalid.", "user": "We can't find a user with that e-mail address." }, "en.payment": { "amount": "Amount payable", "bank_account_no": "Account No.", "bank_address": "Bank Address", "bank_details": "Bank Details", "bank_swift": "SWIFT Code", "beneficiary_address": "Beneficiary Address", "beneficiary_bank": "Beneficiary Bank", "beneficiary_name": "Beneficiary Name", "invalid_payment_slip": "Payment slip is required", "make_payment": "Make payment", "paid_on": "Paid on", "payment": "Payment", "payment_details": "Payment details", "payment_slip": "Payment Slip", "payment_slip_exceed_size": "Payment slip must not exceed 8MB", "reject": "Reject", "reject_note": "Reject reason", "reject_success": "Payment rejected successfully", "submit_payment": "Submit payment", "success": "Payment has been recorded successfully", "verify": "Verify", "verify_success": "Payment verified successfully" }, "en.post": { "add_new_post": "Create news", "advisor_incentive_program": "Advisor Incentive Program", "commission_report": "Commission report", "content": "Content", "create_success": "News created", "created_at": "Created at", "download": "Download", "edit_post": "Edit news", "last_update": "Last updated", "latest_news": "the latest news and updates from newleaf plantation berhad", "marketing_material": "Marketing materials", "newleaf_bulletin": "Newleaf Bulletin", "newleaf_flyer": "Newleaf Flyer", "newleaf_purchase_form": "Newleaf Purchase Form", "notify_admins_success": "News has been sent to all admins!", "notify_success": "News has been sent to all growers!", "payout_report": "Payout report", "posts": "News", "published_date": "Published date", "sales_report": "Sales report", "title": "Title", "update_success": "News updated", "yield_projection": "Yield Projection" }, "en.purchase": { "base_price": "Recommended Retail Price (RRP) per Tree: RM 8,000", "cancel": "Cancel update", "checkout": "Checkout", "complete": "Complete", "default_user": "Leave empty to buy for yourself", "deleted": "Purchase deleted", "download_receipt": "Download receipt", "made_by": "Made by", "make_new_purchase": "Make new purchase", "past_purchases": "Purchase history", "pending": "Pending payment", "pending_purchases": "Pending purchases", "pending_verification": "Pending verification", "purchase_date": "Purchase date", "purchase_details": "Purchase details", "purchases": "Purchases", "receipt_description": "Deposit for (:number) tree purchase", "rejected": "Rejected", "select_package": "Select from the packages below", "selected_packages": "Selected packages", "status": "Status", "success": "Purchase order created successfully", "total": "Total", "total_payable": "Total payable", "update": "Update", "updated": "Purchase updated", "user": "Buyer" }, "en.table": { "actions": "Actions", "back": "Back", "export": "Export", "export_excel": "Export as Excel", "export_pdf": "Export as PDF", "filter_by_date": "Filter by date", "filter_by_month": "Filter by month", "reset": "Reset", "search": "Search" }, "en.transaction": { "amount": "Amount", "amount_myr": "Amount (MYR)", "amount_std": "Amount (USD)", "created_at": "Date", "description": "Description", "one_time_commision": "Referral commission", "paid": "Paid", "payouts": "Payouts", "pending": "Pending", "status": "Payout status", "status_updated": "Payout completed", "std_payouts": "Payouts (USD)", "transactions": "Commissions", "tree_purchase": "Tree purchase by :name", "type": "Type" }, "en.tree": { "self": "Me", "tree": "Organization chart" }, "en.user": { "bank_statement": "Bank Statement", "cancel_change_password": "Cancel change password", "cancel_update": "Cancel update", "change_password": "Change password", "complete": "Complete", "copied-link": "Your referral link has been copied to the clipboard", "copy-referral": "Copy referral link", "deleted": "User has been deleted", "documents_rejected": "Documents rejected", "documents_success": "Documents updated", "documents_verified": "Documents verified", "edit_profile": "Edit profile", "execution_ready": "Execution ready", "identity": "Purchaser NRIC (for Malaysian) or Passport (for non-Malaysian)", "instruction_issued": "Instruction issued", "instruction_issued_to_lawyer": "Instruction issued to lawyer", "is_admin": "Is Admin", "joined_at": "Joined at", "kyc_documents": "Identity Verification Documents", "legal_updated": "User legal status updated successfully", "level": "Member level", "level_1": "Advisor", "level_2": "Senior Advisor", "level_3": "Executive Advisor", "level_4": "Chief Advisor", "level_instruction": "Refer :target direct growers. :left to go.", "level_instruction_2": "Group sales of :target subscriptions. :left to go.", "lock_down_back": "for any discrepancy", "lock_down_front": "Please email", "locked": "User has been locked", "locked_message": "Your account has been locked. Please contact support@newleaf.com.my for more information", "nominee_identity": "Nominee NRIC (for Malaysian) or Passport (for non-Malaysian)", "pending": "Pending", "pending_verification": "Pending verification", "profile_update_success": "Profile updated", "referral_code": "Newleaf ID", "referrer": "Referrer", "reject": "Reject", "rejected": "Verification failed", "reminder_sent": "Reminder sent", "residence_proof": "Proof of Residence", "sales_agreement_executed": "Sales agreement executed", "sales_agreement_ready_for_execution": "Sales agreement ready for execution", "setting_success": "Settings updated successfully", "settings": "Settings", "status": "Status", "tree_count": "No. of trees", "unlocked": "User has been unlocked", "update_document": "Update document", "users": "Users", "users_pending": "Pending users", "verified": "Verified", "verify": "Verify" }, "en.validation": { "accepted": "The :attribute must be accepted.", "active_url": "The :attribute is not a valid URL.", "after": "The :attribute must be a date after :date.", "after_or_equal": "The :attribute must be a date after or equal to :date.", "alpha": "The :attribute may only contain letters.", "alpha_dash": "The :attribute may only contain letters, numbers, and dashes.", "alpha_num": "The :attribute may only contain letters and numbers.", "array": "The :attribute must be an array.", "attributes": { "password": "Password" }, "before": "The :attribute must be a date before :date.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": "The :attribute confirmation does not match.", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "The :attribute must be a valid email address.", "exists": "The selected :attribute is invalid.", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "This must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "This field is required.", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." }, "zh.auth": { "account_no": "\u6237\u53E3\u53F7\u7801", "account_type": "\u6237\u53E3\u7C7B\u578B", "add_personnel": "\u589E\u52A0", "address": "\u5730\u5740", "address1": "\u5730\u5740 1", "address2": "\u5730\u5740 2", "agree": "\u6211\u786E\u8BA4\u5E76\u627F\u8BA4\u6211\u5DF2\u7ECF\u9605\u8BFB\u5E76\u540C\u610F\u9075\u5B88\u672C\u8D2D\u4E70\u8868\u683C\u4E2D\u7684", "already_have_account": "\u5DF2\u7ECF\u6709\u5E10\u53F7\uFF1F", "bank_address": "\u94F6\u884C\u5730\u5740", "bank_info": "\u94F6\u884C\u8D44\u6599", "bank_name": "\u94F6\u884C\u540D\u79F0", "bank_swift": "\u94F6\u884C SORT/SWIFT \u4EE3\u7801", "beneficiary_address": "\u63D0\u540D\u4EBA\u4F4F\u5740", "beneficiary_contact": "\u63D0\u540D\u4EBA\u7535\u8BDD\u53F7\u7801", "beneficiary_identification": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "beneficiary_info": "\u63D0\u540D\u4EBA\u8D44\u6599", "beneficiary_name": "\u63D0\u540D\u4EBA\u540D\u79F0", "cancel": "\u53D6\u6D88", "company_address": "\u516C\u53F8\u5730\u5740", "company_business_registration": "\u5546\u4E1A\u6CE8\u518C\u53F7\u7801", "company_incorporation_date": "\u5546\u4E1A\u6CE8\u518C\u65E5\u671F", "company_incorporation_place": "\u6CE8\u518C\u5730\u70B9", "company_info": "\u516C\u53F8\u8D44\u6599", "company_name": "\u516C\u53F8\u540D\u79F0", "company_regulatory_name": "\u76D1\u7BA1\u5355\u4F4D\u540D\u79F0", "company_type": "\u5546\u4E1A\u7C7B\u578B", "contact_personnels": "\u516C\u53F8\u8054\u7EDC\u4EBA", "country": "\u56FD\u5BB6", "email": "\u7535\u90AE", "en_space": "", "enter_email_and_password_to_reset": "\u8BF7\u8F93\u5165\u7535\u90AE\u548C\u65B0\u5BC6\u7801", "enter_email_to_reset": "\u8BF7\u8F93\u5165\u60A8\u7684\u7535\u90AE", "facebook_login": "\u8138\u4E66\u767B\u5165", "facebook_signup": "\u4F7F\u7528\u8138\u4E66\u6CE8\u518C", "failed": "\u7535\u90AE/\u5BC6\u7801\u9519\u8BEF", "forgot_password": "\u5FD8\u8BB0\u5BC6\u7801", "full_name": "\u5168\u540D", "gender": "\u6027\u522B", "gender_female": "\u5973", "gender_male": "\u7537", "general_info": "\u4E00\u822C\u8D44\u6599", "google_login": "\u8C37\u6B4C\u767B\u5165", "google_signup": "\u4F7F\u7528\u8C37\u6B4C\u6CE8\u518C", "grower": "\u79CD\u690D\u8005", "hi": "\u4F60\u597D", "id_type_invalid": "\u8BF7\u9009\u62E9\u6B63\u786E\u7684ID\u79CD\u7C7B", "identification": "\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "last_step": "\u6700\u540E\u4E00\u6B65", "login": "\u767B\u5165", "name": "\u540D\u5B57", "name_placeholder": "\u586B\u5199\u5B9E\u540D", "nationality": "\u56FD\u7C4D", "new_to_site": "\u8FD8\u672A\u6CE8\u518C\uFF1F", "password": "\u5BC6\u7801", "personal_info": "\u4E2A\u4EBA\u8D44\u6599", "personnel_designation": "\u804C\u4F4D", "phone": "\u7535\u8BDD\u53F7\u7801", "postcode": "\u90AE\u653F\u7F16\u7801", "process_registration": "\u6211\u4EEC\u6B63\u5728\u5904\u7406\u60A8\u7684\u6CE8\u518C\u3002", "referral_id": "\u60A8\u7684ID\u662F :code", "referral_info": "\u63A8\u8350\u8005\u8D44\u6599", "referrer": "\u4ECB\u7ECD\u8005ID", "referrer_fill": "\u8BF7\u8F93\u5165\u63A8\u8350\u8005ID", "referrer_name": "\u63A8\u8350\u8005\u540D\u79F0: :name", "referrer_not_found": "ID\u9519\u8BEF", "register": "\u52A0\u76DF", "register_message": "\u65B0\u53F6\u69B4\u83B2\u79CD\u690D\u8BA1\u5212\uFF01", "register_today": "\u69B4\u83B2\u79CD\u690D\u65B0\u5546\u673A, \u643A\u624B\u65B0\u53F6\u521B\u767E\u4EBF, \u9A6C\u4E0A", "registering_company": "\u673A\u6784\u7533\u8BF7", "registration_complete": "\u5B8C\u6210\uFF0C\u60A8\u5DF2\u53EF\u4EE5\u5173\u95ED\u6B64\u9875\u9762", "remember": "\u4FDD\u6301\u767B\u5165", "remove_personnel": "\u53BB\u9664", "repeat": "\u786E\u5B9A", "reset_password": "\u91CD\u8BBE\u5BC6\u7801", "select_package": "\u9009\u62E9\u914D\u5957", "selected_package": "\u914D\u5957", "send_reset_link": "\u786E\u5B9A\u91CD\u8BBE\u5BC6\u7801", "submit": "\u63D0\u4EA4", "success": "\u6CE8\u518C\u6210\u529F", "success_country": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u6240\u5728\u56FD\u5BB6\uFF0C\u8FD9\u5C06\u5E2E\u52A9\u6211\u4EEC\u5236\u5B9A\u60A8\u7684ID", "success_email": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u7535\u90AE\u4EE5\u4F5C\u4E3A\u65E5\u540E\u7684\u901A\u8BAF\u7BA1\u9053", "success_referral": "\u82E5\u60A8\u6709\u63A8\u8350\u8005\uFF0C\u8BF7\u544A\u8BC9\u6211\u4EEC\u4ED6\u7684ID", "terms_and_conditions": "\u6761\u6B3E\u53CA\u7EC6\u5219", "thank_you": "\u8C22\u8C22", "throttle": "\u767B\u5165\u8FC7\u4E8E\u9891\u7E41\uFF0C\u8BF7\u5728 :seconds \u79D2\u540E\u518D\u8BD5", "tree": "\u68F5\u6811|\u68F5\u6811", "wechat_signup": "\u4F7F\u7528\u5FAE\u4FE1\u6CE8\u518C", "welcome_back": "\u6B22\u8FCE\u56DE\u6765" }, "zh.company": { "company": "\u516C\u53F8", "partnership": "\u5408\u4F19", "sole": "\u72EC\u8D44\u7ECF\u8425\u8005", "trust": "\u4FE1\u6258\u4E1A\u52A1" }, "zh.confirmation": { "blast_newsletter_grower": "\u786E\u5B9A\u53D1\u9001\u6D88\u606F\u7ED9\u6240\u6709\u79CD\u690D\u7740?", "cancel": "\u53D6\u6D88", "confirm": "\u786E\u5B9A", "confirmation": "\u884C\u52A8\u786E\u8BA4", "reject_payment": "\u786E\u5B9A\u9A73\u56DE\u4ED8\u6B3E?", "reject_user": "\u786E\u5B9A\u9A73\u56DE\u79CD\u690D\u8005?", "remind_user_identification": "\u786E\u5B9A\u63D0\u9192\u79CD\u690D\u8005?", "verify_payment": "\u786E\u5B9A\u8BA4\u8BC1\u4ED8\u6B3E?", "verify_user": "\u786E\u5B9A\u8BA4\u8BC1\u79CD\u690D\u8005?" }, "zh.dashboard": { "accrued_commission": "\u5E94\u8BA1\u5956\u91D1", "commission_earned": "\u7D2F\u8BA1\u5956\u91D1", "current_grower_level": "\u5F53\u524D\u8058\u9636", "date": "\u65E5\u671F", "group_sale": "\u7EC4\u7EC7\u4E1A\u7EE9", "grower_level": "\u8058\u9636", "latest_news": "\u6700\u65B0\u6D88\u606F", "my_account_status": "\u6211\u7684\u8D26\u53F7", "my_downlines": "\u6211\u7684\u4E0B\u7EBF", "next_grower_level": "\u4E0B\u4E2A\u8058\u9636", "trees_sold_global": "\u603B\u4E1A\u7EE9" }, "zh.form": { "submit": "\u63D0\u4EA4" }, "zh.input": { "choose_file": "\u6309\u6B64\u9009\u62E9\u6587\u4EF6...", "female": "\u5973", "file_selected": "\u6210\u529F\u9009\u62E9:name", "male": "\u7537", "nric": "\u8EAB\u4EFD\u8BC1", "passport": "\u62A4\u7167", "switch_file_mode": "\u6309\u84DD\u8272\u6309\u94AE\u53EF\u5207\u6362\u6587\u4EF6\u9009\u62E9/\u7167\u76F8\u673A\u6A21\u5F0F(\u4EC5\u4F9B\u667A\u80FD\u7535\u8BDD\u4F7F\u7528)", "take_from_camera": "\u6309\u6B64\u6253\u5F00\u7167\u76F8\u673A..." }, "zh.nav": { "admin_purchases": "\u6240\u6709\u8BA2\u5355", "commission_report": "\u4F63\u91D1\u62A5\u544A", "dashboard": "\u6982\u8981", "exit": "\u79BB\u5F00", "logout": "\u767B\u51FA", "materials": "\u9500\u552E\u8F85\u52A9", "news": "\u6700\u65B0\u6D88\u606F", "organization": "\u7EC4\u7EC7", "packages": "\u914D\u5957", "payout_report": "\u652F\u51FA\u62A5\u544A", "payouts": "\u652F\u51FA", "profile": "\u6211\u7684\u8D44\u6599", "purchases": "\u8BA2\u5355", "reports": "\u62A5\u544A", "settings": "\u8BBE\u5B9A", "transactions": "\u4F63\u91D1", "trees": "\u79CD\u690D\u7BA1\u7406", "users": "\u7528\u6237" }, "zh.package": { "create_success": "\u5DF2\u589E\u52A0\u914D\u5957", "make_new_package": "\u589E\u52A0\u914D\u5957", "package_details": "\u914D\u5957\u8BE6\u60C5", "packages": "\u914D\u5957", "price": "\u4EF7\u683C (\u9A6C\u5E01)", "price_promotion": "\u4F18\u60E0\u4EF7\u683C (\u9A6C\u5E01)", "price_std": "\u4EF7\u683C (\u7F8E\u91D1)", "price_std_promotion": "\u4F18\u60E0\u4EF7\u683C (\u7F8E\u91D1)", "tree_count": "\u79CD\u690D\u6570\u91CF", "update_success": "\u5DF2\u66F4\u65B0\u914D\u5957\u8BE6\u60C5" }, "zh.pagination": { "info": "\u5171{total}\u4E2A\u6570\u636E\uFF0C\u6B63\u5728\u663E\u793A{from}\u5230{to}" }, "zh.passwords": { "password": "\u5BC6\u7801\u5FC5\u987B\u6709\u6700\u5C116\u4E2A\u5B57\u6BCD", "reset": "\u6210\u529F\u5BC6\u7801\u91CD\u8BBE", "sent": "\u6211\u4EEC\u5DF2\u53D1\u9001\u5BC6\u7801\u91CD\u8BBE\u8FDE\u63A5\u5230\u60A8\u7684\u70B9\u90AE", "token": "\u60A8\u7684\u8BF7\u6C42\u5DF2\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u8BF7\u6C42", "user": "\u6B64\u7535\u90AE\u5730\u5740\u4E0D\u5728\u6211\u4EEC\u7684\u6570\u636E\u5E93\u91CC" }, "zh.payment": { "amount": "\u652F\u4ED8\u6570\u989D", "bank_account_no": "\u6536\u6B3E\u8D26\u53F7", "bank_address": "\u6536\u6B3E\u94F6\u884C\u5730\u5740", "bank_details": "\u6C47\u6B3E\u8BE6\u60C5", "bank_swift": "\u94F6\u884C\u56FD\u9645\u4EE3\u7801", "beneficiary_address": "\u6536\u6B3E\u8D26\u6237\u5730\u5740", "beneficiary_bank": "\u6536\u6B3E\u94F6\u884C", "beneficiary_name": "\u6536\u6B3E\u8D26\u6237\u540D\u79F0", "invalid_payment_slip": "\u8BF7\u9009\u62E9\u4ED8\u6B3E\u5355", "make_payment": "\u652F\u4ED8\u6B3E\u9879", "paid_on": "\u4ED8\u6B3E\u65E5\u671F", "payment": "\u4ED8\u6B3E", "payment_details": "\u4ED8\u6B3E\u8BE6\u60C5", "payment_slip": "\u4ED8\u6B3E\u5355", "payment_slip_exceed_size": "\u4ED8\u6B3E\u5355\u6587\u4EF6\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "reject": "\u9A73\u56DE", "reject_note": "\u5907\u6CE8", "reject_success": "\u6210\u529F\u9A73\u56DE\u4ED8\u6B3E", "submit_payment": "\u63D0\u4EA4\u4ED8\u6B3E\u5355", "success": "\u4ED8\u6B3E\u5355\u5DF2\u88AB\u63A5\u7EB3", "verify": "\u786E\u8BA4\u4ED8\u6B3E", "verify_success": "\u6210\u529F\u786E\u8BA4\u4ED8\u6B3E" }, "zh.post": { "add_new_post": "\u521B\u5EFA\u65B0\u6D88\u606F", "advisor_incentive_program": "\u987E\u95EE\u5956\u52B1\u8BA1\u5212", "commission_report": "\u4F63\u91D1\u62A5\u544A", "content": "\u5185\u5BB9", "created_at": "\u53D1\u5E03\u4E8E", "download": "\u4E0B\u8F7D", "edit_post": "\u66F4\u65B0\u6D88\u606F", "last_update": "\u66F4\u65B0\u4E8E", "latest_news": "\u4E3A\u60A8\u5E26\u6765\u65B0\u53F6\u6700\u65B0\u6D88\u606F\u4E0E\u66F4\u65B0", "marketing_material": "\u65B0\u53F6\u8425\u9500", "newleaf_bulletin": "\u65B0\u53F6\u901A\u544A", "newleaf_flyer": "\u65B0\u53F6\u4F20\u5355", "newleaf_purchase_form": "\u65B0\u53F6\u8D2D\u4E70\u8868\u683C", "notify_admin_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u7BA1\u7406\u5458", "notify_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u79CD\u690D\u8005", "payout_report": "\u652F\u51FA\u62A5\u544A", "post_created": "\u521B\u5EFA\u6210\u529F", "posts": "\u6700\u65B0\u6D88\u606F", "published_date": "\u53D1\u5E03\u65E5\u671F", "sales_report": "\u9500\u552E\u62A5\u544A", "title": "\u6807\u9898", "update_success": "\u66F4\u65B0\u6210\u529F", "yield_projection": "\u4EA7\u91CF\u9884\u6D4B" }, "zh.purchase": { "base_price": "\u5355\u68F5\u6811\u96F6\u552E\u4EF7\uFF1A\u7F8E\u91D1 2,500", "cancel": "\u53D6\u6D88\u66F4\u6539", "checkout": "\u4ED8\u6B3E", "complete": "\u5B8C\u6210", "default_user": "\u81EA\u8EAB\u8D2D\u4E70\u8BF7\u7559\u7A7A", "deleted": "\u8BA2\u5355\u5DF2\u88AB\u5220\u9664", "made_by": "\u5BA2\u6237", "make_new_purchase": "\u8D2D\u4E70\u79CD\u690D\u914D\u5957", "past_purchases": "\u8FC7\u5F80\u8BA2\u5355\u8BB0\u5F55", "pending": "\u672A\u4ED8\u6B3E", "pending_verification": "\u5BA1\u6838\u4E2D", "purchase_date": "\u8D2D\u4E70\u65E5\u671F", "purchase_details": "\u8BA2\u5355\u8BE6\u60C5", "purchases": "\u8BA2\u5355\u8BB0\u5F55", "rejected": "\u9700\u8981\u66F4\u65B0", "select_package": "\u9009\u62E9\u4EE5\u4E0B\u914D\u5957", "selected_packages": "\u5DF2\u9009\u62E9\u914D\u5957", "status": "\u72B6\u6001", "success": "\u8BA2\u5355\u5DF2\u88AB\u63A5\u7EB3", "total": "\u603B\u4EF7\u683C", "total_payable": "\u603B\u4EF7\u683C", "update": "\u66F4\u6539", "updated": "\u66F4\u65B0\u6210\u529F", "user": "\u4E70\u5BB6" }, "zh.table": { "actions": "\u64CD\u4F5C", "back": "\u8FD4\u56DE", "export": "\u6587\u4EF6\u8F93\u51FA", "export_excel": "Excel\u8F93\u51FA", "export_pdf": "PDF\u8F93\u51FA", "filter_by_date": "\u65E5\u671F\u7B5B\u9009", "filter_by_month": "\u6708\u4EFD\u7B5B\u9009", "reset": "\u91CD\u8BBE", "search": "\u67E5\u627E" }, "zh.transaction": { "amount": "\u91D1\u989D", "amount_myr": "\u91D1\u989D (\u9A6C\u5E01)", "amount_std": "\u91D1\u989D (\u7F8E\u91D1)", "created_at": "\u65E5\u671F", "description": "\u9879\u76EE", "one_time_commision": "\u4E00\u6B21\u6027\u4F63\u91D1", "paid": "\u5DF2\u652F\u4ED8", "payouts": "\u652F\u51FA", "pending": "\u672A\u652F\u4ED8", "status": "\u652F\u4ED8\u72B6\u6001", "status_updated": "\u652F\u4ED8\u5B8C\u6210", "std_payouts": "\u652F\u51FA (\u7F8E\u91D1)", "transactions": "\u4F63\u91D1", "tree_purchase": ":name \u7684\u79CD\u690D\u9879\u76EE", "type": "\u79CD\u7C7B" }, "zh.tree": { "self": "\u6211", "tree": "\u7EC4\u7EC7\u56FE" }, "zh.user": { "bank_statement": "\u94F6\u884C\u6D41\u6C34\u8D26\u5355", "cancel_change_password": "\u53D6\u6D88\u66F4\u6362\u5BC6\u7801", "cancel_update": "\u53D6\u6D88\u66F4\u65B0", "change_password": "\u66F4\u6362\u5BC6\u7801", "copied-link": "\u6210\u529F\u590D\u5236\u4ECB\u7ECD\u8FDE\u63A5", "copy-referral": "\u590D\u5236\u8FDE\u63A5", "documents_rejected": "\u6587\u4EF6\u5BA1\u6838\u5931\u8D25", "documents_success": "\u66F4\u65B0\u6210\u529F", "documents_verified": "\u6587\u4EF6\u5BA1\u6838\u6210\u529F", "edit_profile": "\u66F4\u65B0\u8D44\u6599", "identity": "\u8D2D\u4E70\u8005\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "instruction_issued_to_lawyer": "\u5F8B\u5E08\u5904\u7406\u4E2D", "is_admin": "\u662F\u7BA1\u7406\u5458", "joined_at": "\u52A0\u76DF\u65E5\u671F", "kyc_documents": "\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "legal_updated": "\u79CD\u690D\u8005\u6CD5\u5F8B\u7A0B\u5E8F\u66F4\u65B0\u6210\u529F", "level": "\u7EA7\u522B", "level_1": "\u987E\u95EE", "level_2": "\u9AD8\u7EA7\u987E\u95EE", "level_3": "\u6267\u884C\u987E\u95EE", "level_4": "\u9996\u5E2D\u987E\u95EE", "level_instruction": "\u76F4\u63A8 :target \u4F4D\u79CD\u690D\u8005. \u8FD8\u9700 :left \u4F4D", "level_instruction_2": "\u7EC4\u7EC7\u4E1A\u7EE9\u8FBE :target \u68F5\u6811. \u8FD8\u9700 :left \u68F5", "lock_down": "\u82E5\u6709\u51FA\u5165\uFF0C\u8BF7\u7535\u90AE\u81F3", "lock_down_back": "\u901A\u77E5\u6211\u4EEC", "locked": "\u7528\u6237\u5DF2\u88AB\u5C01\u9501", "locked_message": "\u60A8\u7684\u8D26\u53F7\u5DF2\u88AB\u7BA1\u7406\u5458\u5C01\u9501, \u8BF7\u7535\u90AE\u81F3support@newleaf.com.my\u4E86\u89E3\u8BE6\u60C5", "nominee_identity": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "pending": "\u672A\u5BA1\u6838", "pending_verification": "\u5BA1\u6838\u4E2D", "profile_update_success": "\u8D44\u6599\u5DF2\u66F4\u65B0", "referral_code": "\u65B0\u53F6ID", "referrer": "\u63A8\u8350\u8005", "reject": "\u9A73\u56DE", "rejected": "\u5BA1\u6838\u5931\u8D25", "reminder_sent": "\u5DF2\u53D1\u9001\u63D0\u793A", "residence_proof": "\u4F4F\u5740\u8BC1\u660E\u6587\u4EF6", "sales_agreement_executed": "\u9500\u552E\u534F\u8BAE\u5B8C\u6210", "sales_agreement_ready_for_execution": "\u7B49\u5F85\u7B7E\u7F72\u9500\u552E\u534F\u8BAE", "setting_success": "\u6210\u529F\u66F4\u6539\u8BBE\u5B9A", "settings": "\u8BBE\u5B9A", "status": "\u72B6\u6001", "tree_count": "\u79CD\u690D\u6570\u91CF", "unlocked": "\u7528\u6237\u5DF2\u88AB\u89E3\u9501", "update_document": "\u66F4\u65B0\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "users": "\u7528\u6237", "users_pending": "\u9700\u5173\u6CE8\u7528\u6237", "verified": "\u5DF2\u901A\u8FC7\u5BA1\u6838", "verify": "\u8BA4\u8BC1" }, "zh.validation": { "accepted": "\u9700\u8981\u88AB\u63A5\u53D7", "active_url": "\u94FE\u63A5\u9519\u8BEF.", "after": "\u5FC5\u987B\u5728:date\u4E4B\u540E.", "after_or_equal": "\u5FC5\u987B\u662F\u548C:date\u4E00\u6837\u6216\u4E4B\u540E\u7684\u65E5\u671F.", "alpha": "\u53EA\u80FD\u6709\u5B57\u6BCD", "alpha_dash": "\u53EA\u80FD\u6709\u5B57\u6BCD\uFF0C\u53F7\u7801\uFF0C\u4EE5\u53CA\u201C-\u201D\u53F7", "alpha_num": "\u53EA\u80FD\u6709\u5B57\u6BCD\u4EE5\u53CA\u53F7\u7801", "attributes": { "password": "\u5BC6\u7801" }, "before": "\u5FC5\u987B\u5728:date\u4E4B\u524D.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": ":attribute\u4E0D\u76F8\u540C", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "\u8FD9\u5FC5\u987B\u662F\u4E00\u4E2A\u7535\u90AE\u5730\u5740", "exists": "\u9009\u9879\u9519\u8BEF", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "\u53EA\u80FD\u586B\u5199\u6570\u5B57", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "\u9700\u8981\u88AB\u586B\u5199", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." } };
 
 /***/ }),
 /* 183 */
@@ -36525,7 +36525,7 @@ module.exports = __webpack_require__(192);
 var utils = __webpack_require__(2);
 var bind = __webpack_require__(161);
 var Axios = __webpack_require__(194);
-var defaults = __webpack_require__(17);
+var defaults = __webpack_require__(18);
 
 /**
  * Create an instance of Axios
@@ -36608,7 +36608,7 @@ function isSlowBuffer (obj) {
 "use strict";
 
 
-var defaults = __webpack_require__(17);
+var defaults = __webpack_require__(18);
 var utils = __webpack_require__(2);
 var InterceptorManager = __webpack_require__(203);
 var dispatchRequest = __webpack_require__(204);
@@ -37147,7 +37147,7 @@ module.exports = InterceptorManager;
 var utils = __webpack_require__(2);
 var transformData = __webpack_require__(205);
 var isCancel = __webpack_require__(164);
-var defaults = __webpack_require__(17);
+var defaults = __webpack_require__(18);
 var isAbsoluteURL = __webpack_require__(206);
 var combineURLs = __webpack_require__(207);
 
@@ -48624,7 +48624,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12), __webpack_require__(18)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12), __webpack_require__(19)))
 
 /***/ }),
 /* 213 */
@@ -49726,7 +49726,7 @@ var content = __webpack_require__(222);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(20)("60bee5e3", content, false, {});
+var update = __webpack_require__(21)("60bee5e3", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -49745,7 +49745,7 @@ if(false) {
 /* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(19)(false);
+exports = module.exports = __webpack_require__(20)(false);
 // imports
 
 
@@ -50380,7 +50380,7 @@ var content = __webpack_require__(233);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(20)("4ca94fae", content, false, {});
+var update = __webpack_require__(21)("4ca94fae", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -50399,7 +50399,7 @@ if(false) {
 /* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(19)(false);
+exports = module.exports = __webpack_require__(20)(false);
 // imports
 
 
@@ -51397,7 +51397,7 @@ module.exports = { "default": __webpack_require__(237), __esModule: true };
 
 __webpack_require__(238);
 __webpack_require__(251);
-module.exports = __webpack_require__(32).f('iterator');
+module.exports = __webpack_require__(33).f('iterator');
 
 
 /***/ }),
@@ -51428,8 +51428,8 @@ __webpack_require__(167)(String, 'String', function (iterated) {
 /* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(21);
-var defined = __webpack_require__(22);
+var toInteger = __webpack_require__(22);
+var defined = __webpack_require__(23);
 // true  -> String#at
 // false -> String#codePointAt
 module.exports = function (TO_STRING) {
@@ -51491,7 +51491,7 @@ module.exports = function (it) {
 
 var create = __webpack_require__(172);
 var descriptor = __webpack_require__(15);
-var setToStringTag = __webpack_require__(31);
+var setToStringTag = __webpack_require__(32);
 var IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
@@ -51509,7 +51509,7 @@ module.exports = function (Constructor, NAME, next) {
 
 var dP = __webpack_require__(7);
 var anObject = __webpack_require__(13);
-var getKeys = __webpack_require__(27);
+var getKeys = __webpack_require__(28);
 
 module.exports = __webpack_require__(8) ? Object.defineProperties : function defineProperties(O, Properties) {
   anObject(O);
@@ -51568,7 +51568,7 @@ module.exports = function (IS_INCLUDES) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
-var toInteger = __webpack_require__(21);
+var toInteger = __webpack_require__(22);
 var min = Math.min;
 module.exports = function (it) {
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
@@ -51579,7 +51579,7 @@ module.exports = function (it) {
 /* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(21);
+var toInteger = __webpack_require__(22);
 var max = Math.max;
 var min = Math.min;
 module.exports = function (index, length) {
@@ -51603,7 +51603,7 @@ module.exports = document && document.documentElement;
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 var has = __webpack_require__(5);
 var toObject = __webpack_require__(250);
-var IE_PROTO = __webpack_require__(28)('IE_PROTO');
+var IE_PROTO = __webpack_require__(29)('IE_PROTO');
 var ObjectProto = Object.prototype;
 
 module.exports = Object.getPrototypeOf || function (O) {
@@ -51620,7 +51620,7 @@ module.exports = Object.getPrototypeOf || function (O) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
-var defined = __webpack_require__(22);
+var defined = __webpack_require__(23);
 module.exports = function (it) {
   return Object(defined(it));
 };
@@ -51633,7 +51633,7 @@ module.exports = function (it) {
 __webpack_require__(252);
 var global = __webpack_require__(4);
 var hide = __webpack_require__(6);
-var Iterators = __webpack_require__(26);
+var Iterators = __webpack_require__(27);
 var TO_STRING_TAG = __webpack_require__(10)('toStringTag');
 
 var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
@@ -51659,7 +51659,7 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 var addToUnscopables = __webpack_require__(253);
 var step = __webpack_require__(254);
-var Iterators = __webpack_require__(26);
+var Iterators = __webpack_require__(27);
 var toIObject = __webpack_require__(9);
 
 // 22.1.3.4 Array.prototype.entries()
@@ -51722,7 +51722,7 @@ __webpack_require__(257);
 __webpack_require__(263);
 __webpack_require__(264);
 __webpack_require__(265);
-module.exports = __webpack_require__(24).Symbol;
+module.exports = __webpack_require__(25).Symbol;
 
 
 /***/ }),
@@ -51739,24 +51739,24 @@ var $export = __webpack_require__(168);
 var redefine = __webpack_require__(171);
 var META = __webpack_require__(258).KEY;
 var $fails = __webpack_require__(14);
-var shared = __webpack_require__(29);
-var setToStringTag = __webpack_require__(31);
+var shared = __webpack_require__(30);
+var setToStringTag = __webpack_require__(32);
 var uid = __webpack_require__(16);
 var wks = __webpack_require__(10);
-var wksExt = __webpack_require__(32);
-var wksDefine = __webpack_require__(33);
+var wksExt = __webpack_require__(33);
+var wksDefine = __webpack_require__(34);
 var enumKeys = __webpack_require__(259);
 var isArray = __webpack_require__(260);
 var anObject = __webpack_require__(13);
 var isObject = __webpack_require__(11);
 var toIObject = __webpack_require__(9);
-var toPrimitive = __webpack_require__(25);
+var toPrimitive = __webpack_require__(26);
 var createDesc = __webpack_require__(15);
 var _create = __webpack_require__(172);
 var gOPNExt = __webpack_require__(261);
 var $GOPD = __webpack_require__(262);
 var $DP = __webpack_require__(7);
-var $keys = __webpack_require__(27);
+var $keys = __webpack_require__(28);
 var gOPD = $GOPD.f;
 var dP = $DP.f;
 var gOPN = gOPNExt.f;
@@ -51880,10 +51880,10 @@ if (!USE_NATIVE) {
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
   __webpack_require__(176).f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__(34).f = $propertyIsEnumerable;
+  __webpack_require__(35).f = $propertyIsEnumerable;
   __webpack_require__(175).f = $getOwnPropertySymbols;
 
-  if (DESCRIPTORS && !__webpack_require__(23)) {
+  if (DESCRIPTORS && !__webpack_require__(24)) {
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
   }
 
@@ -52030,9 +52030,9 @@ var meta = module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(27);
+var getKeys = __webpack_require__(28);
 var gOPS = __webpack_require__(175);
-var pIE = __webpack_require__(34);
+var pIE = __webpack_require__(35);
 module.exports = function (it) {
   var result = getKeys(it);
   var getSymbols = gOPS.f;
@@ -52086,10 +52086,10 @@ module.exports.f = function getOwnPropertyNames(it) {
 /* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pIE = __webpack_require__(34);
+var pIE = __webpack_require__(35);
 var createDesc = __webpack_require__(15);
 var toIObject = __webpack_require__(9);
-var toPrimitive = __webpack_require__(25);
+var toPrimitive = __webpack_require__(26);
 var has = __webpack_require__(5);
 var IE8_DOM_DEFINE = __webpack_require__(169);
 var gOPD = Object.getOwnPropertyDescriptor;
@@ -52114,14 +52114,14 @@ exports.f = __webpack_require__(8) ? gOPD : function getOwnPropertyDescriptor(O,
 /* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(33)('asyncIterator');
+__webpack_require__(34)('asyncIterator');
 
 
 /***/ }),
 /* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(33)('observable');
+__webpack_require__(34)('observable');
 
 
 /***/ }),
@@ -52140,7 +52140,7 @@ module.exports = __webpack_require__(267);
 var utils = __webpack_require__(3);
 var bind = __webpack_require__(177);
 var Axios = __webpack_require__(268);
-var defaults = __webpack_require__(35);
+var defaults = __webpack_require__(36);
 
 /**
  * Create an instance of Axios
@@ -52196,7 +52196,7 @@ module.exports.default = axios;
 "use strict";
 
 
-var defaults = __webpack_require__(35);
+var defaults = __webpack_require__(36);
 var utils = __webpack_require__(3);
 var InterceptorManager = __webpack_require__(277);
 var dispatchRequest = __webpack_require__(278);
@@ -52724,7 +52724,7 @@ module.exports = InterceptorManager;
 var utils = __webpack_require__(3);
 var transformData = __webpack_require__(279);
 var isCancel = __webpack_require__(180);
-var defaults = __webpack_require__(35);
+var defaults = __webpack_require__(36);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -55300,7 +55300,7 @@ var content = __webpack_require__(304);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(20)("439312c3", content, false, {});
+var update = __webpack_require__(21)("439312c3", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -55319,7 +55319,7 @@ if(false) {
 /* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(19)(false);
+exports = module.exports = __webpack_require__(20)(false);
 // imports
 
 
@@ -55620,7 +55620,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: { potentialData: Array, label: String, defaultData: Object, error: String, name: String, placeholder: String, required: { default: false }, multiple: { default: false }, unclearable: { default: false }, hideLabel: { default: false }, editable: { default: true } },
+	props: { potentialData: Array, label: String, defaultData: { default: '' }, error: String, name: String, placeholder: String, required: { default: false }, multiple: { default: false }, unclearable: { default: false }, hideLabel: { default: false }, editable: { default: true } },
 
 	components: { vSelect: __WEBPACK_IMPORTED_MODULE_0_vue_select___default.a },
 
@@ -56067,14 +56067,17 @@ if (false) {
 /* 424 */,
 /* 425 */,
 /* 426 */,
-/* 427 */
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(428);
+module.exports = __webpack_require__(431);
 
 
 /***/ }),
-/* 428 */
+/* 431 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56142,23 +56145,23 @@ Vue.component('checkbox-input', __webpack_require__(307));
 Vue.component('selector-input', __webpack_require__(183));
 Vue.component('image-input', __webpack_require__(313));
 
-Vue.component('company-registration', __webpack_require__(429));
-Vue.component('referrer', __webpack_require__(432));
+Vue.component('company-registration', __webpack_require__(432));
+Vue.component('referrer', __webpack_require__(435));
 
 var app = new Vue({
   el: '#app'
 });
 
 /***/ }),
-/* 429 */
+/* 432 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(430)
+var __vue_script__ = __webpack_require__(433)
 /* template */
-var __vue_template__ = __webpack_require__(431)
+var __vue_template__ = __webpack_require__(434)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -56197,7 +56200,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 430 */
+/* 433 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56378,7 +56381,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 431 */
+/* 434 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -57020,15 +57023,15 @@ if (false) {
 }
 
 /***/ }),
-/* 432 */
+/* 435 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(433)
+var __vue_script__ = __webpack_require__(436)
 /* template */
-var __vue_template__ = __webpack_require__(434)
+var __vue_template__ = __webpack_require__(437)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -57067,7 +57070,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 433 */
+/* 436 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -57120,7 +57123,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 434 */
+/* 437 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {

@@ -58,6 +58,10 @@ return [
     "unlocked" => "用户已被解锁",
 
 
-    "locked_message" => "您的账号已被管理员封锁, 请电邮至support@newleaf.com.my了解详情"
+    "locked_message" => "您的账号已被管理员封锁, 请电邮至support@newleaf.com.my了解详情",
+    "referrer" => "推荐者",
+    "settings" => "设定",
+    "is_admin" => "是管理员",
+    "setting_success" => "成功更改设定"
 
 ];
