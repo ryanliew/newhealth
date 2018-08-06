@@ -61,7 +61,7 @@ class Purchase extends Model
     }
 
     public function pay_and_roll_commission_upwards($user, $paid_percentage = 0.0)
-    {
+    {   
         if(!is_null($user->parent_id)) {
             $parent = $user->parent;
 
