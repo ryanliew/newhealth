@@ -27,7 +27,11 @@
 		                            <span class="pl-1 pr-1">{{ user.name }}</span>
 		                        </button>
 		                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
-		                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>{{ 'nav.profile' | trans }}</a>
+		                        	<router-link to="profile" class="dropdown-item">
+										<span class="font-icon glyphicon glyphicon-user"></span>
+							            {{ 'nav.profile' | trans }}
+							        </router-link><!-- 
+		                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>{{ 'nav.profile' | trans }}</a> -->
 		                            <!-- <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>{{ 'nav.settings' | trans }}</a> -->
 		                            <div class="dropdown-divider"></div>
 		                            <a @click="logout" class="dropdown-item"><span class="font-icon glyphicon glyphicon-log-out"></span>{{ 'nav.logout' | trans }}</a>
