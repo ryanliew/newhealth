@@ -86184,9 +86184,7 @@ var render = function() {
                 _c("div", { staticClass: "table-responsive" }, [
                   _c("table", { staticClass: "table" }, [
                     _c("tr", [
-                      _c("td", [
-                        _vm._v(_vm._s(_vm._f("trans")("post.newleaf_flyer")))
-                      ]),
+                      _c("td", [_vm._v("Newleaf Flyer 新叶宣传单")]),
                       _vm._v(" "),
                       _c("td", [
                         _c(
