@@ -15,7 +15,7 @@
 							<div class="table-responsive">
 								<table class="table">
 									<tr>
-										<td>{{ 'post.newleaf_flyer' | trans  }}</td>
+										<td>Newleaf Flyer 新叶宣传单</td>
 										<td><a class="button" target="_blank" href="/materials/Newleaf Flyer.pdf" download>{{ 'post.download' | trans }}</a></td>
 									</tr>
 									<tr>
