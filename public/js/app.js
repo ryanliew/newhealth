@@ -86131,6 +86131,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: []
@@ -86190,11 +86206,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("tr", [
                       _c("td", [
-                        _vm._v(
-                          _vm._s(
-                            _vm._f("trans")("post.advisor_incentive_program")
-                          )
-                        )
+                        _vm._v("Newleaf Corporate Brochure 新叶集团企业宣传册")
                       ]),
                       _vm._v(" "),
                       _c("td", [
@@ -86204,7 +86216,8 @@ var render = function() {
                             staticClass: "button",
                             attrs: {
                               target: "_blank",
-                              href: "/materials/Advisor Incentive Program2.pdf",
+                              href:
+                                "/materials/Newleaf Corporate Brochure 新叶集团企业宣传册.pdf",
                               download: ""
                             }
                           },
@@ -86214,11 +86227,7 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("tr", [
-                      _c("td", [
-                        _vm._v(
-                          _vm._s(_vm._f("trans")("post.newleaf_purchase_form"))
-                        )
-                      ]),
+                      _c("td", [_vm._v("Purchasing Procedure 购买流程")]),
                       _vm._v(" "),
                       _c("td", [
                         _c(
@@ -86227,7 +86236,8 @@ var render = function() {
                             staticClass: "button",
                             attrs: {
                               target: "_blank",
-                              href: "/materials/Newleaf Purchase Form.pdf",
+                              href:
+                                "/materials/Purchasing Procedure 购买流程.pdf",
                               download: ""
                             }
                           },
@@ -86237,9 +86247,7 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("tr", [
-                      _c("td", [
-                        _vm._v(_vm._s(_vm._f("trans")("post.yield_projection")))
-                      ]),
+                      _c("td", [_vm._v("Purchase Form 购买表格")]),
                       _vm._v(" "),
                       _c("td", [
                         _c(
@@ -86248,7 +86256,84 @@ var render = function() {
                             staticClass: "button",
                             attrs: {
                               target: "_blank",
-                              href: "/materials/YIELD PROJECTION.pdf",
+                              href: "/materials/Purchase Form 购买表格.pdf",
+                              download: ""
+                            }
+                          },
+                          [_vm._v(_vm._s(_vm._f("trans")("post.download")))]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("Yield Projection 种植收益预计")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "button",
+                            attrs: {
+                              target: "_blank",
+                              href:
+                                "/materials/Yield Projection 种植收益预计.jpg",
+                              download: ""
+                            }
+                          },
+                          [_vm._v(_vm._s(_vm._f("trans")("post.download")))]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("终生免费榴莲宣传单")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "button",
+                            attrs: {
+                              target: "_blank",
+                              href: "/materials/终生免费榴莲宣传单.jpg",
+                              download: ""
+                            }
+                          },
+                          [_vm._v(_vm._s(_vm._f("trans")("post.download")))]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("User manual")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "button",
+                            attrs: {
+                              target: "_blank",
+                              href: "/materials/User manual.pdf",
+                              download: ""
+                            }
+                          },
+                          [_vm._v(_vm._s(_vm._f("trans")("post.download")))]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("用户指南")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "button",
+                            attrs: {
+                              target: "_blank",
+                              href: "/materials/用户指南.pdf",
                               download: ""
                             }
                           },
