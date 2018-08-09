@@ -40,7 +40,7 @@
 									</tr>
 									<tr>
 										<td>User manual</td>
-										<td><a class="button" target="_blank" href="/materials/User manual.pdf" download>{{ 'post.download' | trans }}</a></td>
+										<td><a class="button" target="_blank" href="/materials/User Manual.pdf" download>{{ 'post.download' | trans }}</a></td>
 									</tr>
 									<tr>
 										<td>用户指南</td>

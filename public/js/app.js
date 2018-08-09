@@ -86314,7 +86314,7 @@ var render = function() {
                             staticClass: "button",
                             attrs: {
                               target: "_blank",
-                              href: "/materials/User manual.pdf",
+                              href: "/materials/User Manual.pdf",
                               download: ""
                             }
                           },
