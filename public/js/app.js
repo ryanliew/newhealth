@@ -74300,7 +74300,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center" }, [
-      _vm._v("NEWLEAF PLANTTION BERHAD"),
+      _vm._v("NEWLEAF PLANTATION BERHAD"),
       _c("br"),
       _c("span", { staticStyle: { "font-size": "14" } }, [
         _vm._v("(1251569-U)")

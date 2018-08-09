@@ -68,7 +68,7 @@
 						<span class="label-small">{{ "payment.bank_details" | trans }}</span>
 						<div class="payment-details-grid">
 							<div>{{ "payment.beneficiary_name" | trans }}</div>
-							<div class="text-center">NEWLEAF PLANTTION BERHAD<br><span style="font-size:14;">(1251569-U)</span></div>
+							<div class="text-center">NEWLEAF PLANTATION BERHAD<br><span style="font-size:14;">(1251569-U)</span></div>
 							<div>{{ "payment.beneficiary_bank" | trans }}</div>
 							<div class="text-center">MALAYAN BANKING BERHAD</div>
 
