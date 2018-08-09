@@ -19,16 +19,32 @@
 										<td><a class="button" target="_blank" href="/materials/Newleaf Flyer.pdf" download>{{ 'post.download' | trans }}</a></td>
 									</tr>
 									<tr>
-										<td>{{ 'post.advisor_incentive_program' | trans  }}</td>
-										<td><a class="button" target="_blank" href="/materials/Advisor Incentive Program2.pdf" download>{{ 'post.download' | trans }}</a></td>
+										<td>Newleaf Corporate Brochure 新叶集团企业宣传册</td>
+										<td><a class="button" target="_blank" href="/materials/Newleaf Corporate Brochure 新叶集团企业宣传册.pdf" download>{{ 'post.download' | trans }}</a></td>
 									</tr>
 									<tr>
-										<td>{{ 'post.newleaf_purchase_form' | trans  }}</td>
-										<td><a class="button" target="_blank" href="/materials/Newleaf Purchase Form.pdf" download>{{ 'post.download' | trans }}</a></td>
+										<td>Purchasing Procedure 购买流程</td>
+										<td><a class="button" target="_blank" href="/materials/Purchasing Procedure 购买流程.pdf" download>{{ 'post.download' | trans }}</a></td>
 									</tr>
 									<tr>
-										<td>{{ 'post.yield_projection' | trans  }}</td>
-										<td><a class="button" target="_blank" href="/materials/YIELD PROJECTION.pdf" download>{{ 'post.download' | trans }}</a></td>
+										<td>Purchase Form 购买表格</td>
+										<td><a class="button" target="_blank" href="/materials/Purchase Form 购买表格.pdf" download>{{ 'post.download' | trans }}</a></td>
+									</tr>
+									<tr>
+										<td>Yield Projection 种植收益预计</td>
+										<td><a class="button" target="_blank" href="/materials/Yield Projection 种植收益预计.jpg" download>{{ 'post.download' | trans }}</a></td>
+									</tr>
+									<tr>
+										<td>终生免费榴莲宣传单</td>
+										<td><a class="button" target="_blank" href="/materials/终生免费榴莲宣传单.jpg" download>{{ 'post.download' | trans }}</a></td>
+									</tr>
+									<tr>
+										<td>User manual</td>
+										<td><a class="button" target="_blank" href="/materials/User manual.pdf" download>{{ 'post.download' | trans }}</a></td>
+									</tr>
+									<tr>
+										<td>用户指南</td>
+										<td><a class="button" target="_blank" href="/materials/用户指南.pdf" download>{{ 'post.download' | trans }}</a></td>
 									</tr>
 								</table>
 							</div>
