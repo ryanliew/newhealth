@@ -16,7 +16,7 @@
 								<table class="table">
 									<tr>
 										<td>Newleaf Flyer 新叶宣传单</td>
-										<td><a class="button" target="_blank" href="/materials/Newleaf Flyer.pdf" download>{{ 'post.download' | trans }}</a></td>
+										<td><a class="button" target="_blank" href="/materials/Newleaf Flyer 新叶宣传单.pdf" download>{{ 'post.download' | trans }}</a></td>
 									</tr>
 									<tr>
 										<td>Newleaf Corporate Brochure 新叶集团企业宣传册</td>
