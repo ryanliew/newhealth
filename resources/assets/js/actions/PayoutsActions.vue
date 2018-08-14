@@ -55,6 +55,7 @@ export default {
 
     mounted() {
         this.user = window.user;
+        this.$events.on('loading-complete', data => this.setLoadingComplete(data));
     },
 
     updated() {
@@ -68,6 +69,10 @@ export default {
 
         pay() {
             this.itemAction('pay', this.rowData, this.rowIndex);
+        },
+
+        setLoadingComplete(data) {
+            this.isConfirming = false
         }
     }
   }

@@ -138,7 +138,7 @@
 				else
 					this.$refs.transactions.refreshTable();
 
-
+				this.$events.fire('loading-complete');
 				this.$events.on('pay', data => this.pay(data));	
 			},
 
