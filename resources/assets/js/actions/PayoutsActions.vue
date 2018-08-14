@@ -30,6 +30,20 @@
             @confirmed="pay"
             @canceled="isConfirming = false"
             v-if="isConfirming">
+
+            <div class="mt-3">
+                <text-input v-model="remark" 
+                    :defaultValue="remark"
+                    :required="false"
+                    type="text"
+                    label="Remark"
+                    name="remark"
+                    :editable="true"
+                    :focus="true"
+                    :hideLabel="false">
+                </text-input>
+            </div>
+
         </confirmation>
     </div>
 </template>
@@ -49,7 +63,9 @@ export default {
     data() {
         return {
             user: '',
-            isConfirming: false
+            isConfirming: false,
+            remark: '',
+            loading: false
         };
     },
 
@@ -68,11 +84,13 @@ export default {
         },
 
         pay() {
-            this.itemAction('pay', this.rowData, this.rowIndex);
+            this.loading = true;
+            this.itemAction('pay', {payout: this.rowData, remark: this.remark}, this.rowIndex);
         },
 
         setLoadingComplete(data) {
-            this.isConfirming = false
+            this.isConfirming = false;
+            this.loading = false;
         }
     }
   }

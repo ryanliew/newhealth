@@ -73,7 +73,8 @@
 				payForm: new Form({
 					user_id: "",
 					month: moment().format('YYYY-MM-DD'),
-					is_std: 0
+					is_std: 0,
+					remark: ''
 				}),
 				exportUrl: "/exports/payouts?"
 			};
@@ -112,11 +113,12 @@
 
 			pay(data) {
 				this.$events.off('pay');
-				this.payForm.is_std = data.is_std;
-				this.payForm.user_id = data.user_id;
+				this.payForm.is_std = data.payout.is_std;
+				this.payForm.user_id = data.payout.user_id;
 
-				this.is_std = data.is_std;
+				this.is_std = data.payout.is_std;
 				this.payForm.month = this.$refs.transactions.getMonth();
+				this.payForm.remark = data.remark;
 
 				this.payForm.post('/api/admin/transaction/paid')
 					.then(response => this.onSuccess(response));

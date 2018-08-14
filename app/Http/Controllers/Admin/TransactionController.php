@@ -61,7 +61,8 @@ class TransactionController extends Controller
                                     ->whereMonth('date', $month)
                                     ->whereYear('date', $year)
                                     ->update([
-                                        "payout_status" => Transaction::STATUS_PAID()
+                                        "payout_status" => Transaction::STATUS_PAID(),
+                                        "remark" => request()->remark
                                     ]);
 
         return json_encode(['message' => 'transaction.status_updated']);

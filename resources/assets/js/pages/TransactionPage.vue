@@ -33,7 +33,8 @@
 					{ name: 'type', title: this.tableTitle('transaction.type'), sortField: 'transactions.type', callback: 'commisionTypeLabel'},
 					{ name: '__component:transaction-description', title: this.tableTitle('transaction.description'), sortField: 'transactions.description'},
 					{ name: 'payout_status', title: this.tableTitle('transaction.status'), sortField: 'transactions.payout_status', callback: 'transactionPayoutStatusLabel'},
-					{ name: '__component:table-price-switcher', title: this.tableTitle('transaction.amount'), sortField: 'transactions.amount' }
+					{ name: '__component:table-price-switcher', title: this.tableTitle('transaction.amount'), sortField: 'transactions.amount' },
+					{ name: 'remark', title: this.tableTitle('transaction.remark'), sortField: 'transactions.remark' }
 				],
 				searchables: "",
 				filterMonthDefault: ""
