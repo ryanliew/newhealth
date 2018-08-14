@@ -24,5 +24,6 @@ return [
     "status" => "Payout status",
     "status_updated" => "Payout completed",
     'pending' => "Pending",
-    "paid" => "Paid"
+    "paid" => "Paid",
+    "remark" => "Remark"
 ];

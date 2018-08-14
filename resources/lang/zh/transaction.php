@@ -25,5 +25,6 @@ return [
     "status" => "支付状态",
     "status_updated" => "支付完成",
     'pending' => "未支付",
-    "paid" => "已支付"
+    "paid" => "已支付",
+    "remark" => "备注"
 ];
