@@ -19,6 +19,7 @@ return [
     'remind_user_identification' => "Grower will be notified. Are you sure?",
     "change_legal_status" => "This will change the legal status for the grower. Are you sure?",
     "delete_user" => "User will be deleted and cannot be undone. Are you sure?",
-    "delete_purchase" => "Purchase will be deleted and cannot be undone. Are you sure?"
+    "delete_purchase" => "Purchase will be deleted and cannot be undone. Are you sure?",
+    "confirm_change_to_paid" => "Payouts will be marked as paid. Are you sure?"
     
 ];
