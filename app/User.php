@@ -86,11 +86,14 @@ class User extends Authenticatable
 
     public function setCountryIdAttribute($value)
     {
+        $shouldRegenerate = $this->country_id != $value;
+
         $this->attributes['country_id'] = $value;
         
-        $country = Country::find($value);
-
-        $this->attributes['referral_code'] = $this->generateReferralCode($country);
+        if($shouldRegenerate) {
+            $country = Country::find($value);
+            $this->attributes['referral_code'] = $this->generateReferralCode($country);
+        }
     }
 
     public function getDefaultLocaleAttribute()
