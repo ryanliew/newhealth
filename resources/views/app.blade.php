@@ -12,7 +12,7 @@
         <link href="/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
         <link href="/img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
         <link href="/img/favicon.png" rel="icon" type="image/png">
-        <title>Newleaf</title>
+        <title>Newleaf 新叶集团</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">

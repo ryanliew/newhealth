@@ -12,7 +12,7 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
+    'title' => '新叶集团 - 加盟',
     'failed' => '电邮/密码错误',
     'throttle' => '登入过于频繁，请在 :seconds 秒后再试',
     'login' => '登入',
