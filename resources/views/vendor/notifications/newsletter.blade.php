@@ -73,72 +73,47 @@
         <tr>
             <td style="width:{{ (1170 - $post->thumbnail_table_width) / 2 }}px;"></td>
             <td>
-                <table style="width: {{ $post->thumbnail_table_width }}px;text-align:justify">
-                    <tr style="vertical-align: middle;">
+                <table style="width: {{ $post->thumbnail_table_width }}px;text-align:center">
+                    <tr style="vertical-align: top;">
                         @if($post->left_photo)
-                        <td >
-                            <table>
-                                <tr>
-                                    <td>
-                                        <img src="{{ url('storage/' . $post->left_photo) }}" width="100%" style="width:100%">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i>
-                                            @if($locale == 'zh')
-                                                {{ $post->left_caption_zh }}
-                                            @else
-                                                {{ $post->left_caption }}
-                                            @endif
-                                        </i>
-                                    </td>
-                                </tr>
-                            </table>
+                        <td>
+                            
+                            <img src="{{ url('storage/' . $post->left_photo) }}" width="360px" style="width:360px">
+                        
+                            <i>
+                                @if($locale == 'zh')
+                                    {{ $post->left_caption_zh }}
+                                @else
+                                    {{ $post->left_caption }}
+                                @endif
+                            </i>
                         </td>
                         @endif
                         @if($post->middle_photo)
                         <td>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <img src="{{ url('storage/' . $post->middle_photo) }}" width="100%" style="width:100%">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i>
-                                            @if($locale == 'zh')
-                                                {{ $post->middle_caption_zh }}
-                                            @else
-                                                {{ $post->middle_caption }}
-                                            @endif
-                                        </i>
-                                    </td>
-                                </tr>
-                            </table>
+                            <img src="{{ url('storage/' . $post->middle_photo) }}" width="360px" style="width:360px">
+
+                            <i>
+                                @if($locale == 'zh')
+                                    {{ $post->middle_caption_zh }}
+                                @else
+                                    {{ $post->middle_caption }}
+                                @endif
+                            </i>
                         </td>
                         @endif
                         @if($post->right_photo)
-                        <td >
-                            <table>
-                                <tr>
-                                    <td>
-                                        <img src="{{ url('storage/' . $post->right_photo) }}" width="100%" style="width:100%">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i>
-                                            @if($locale == 'zh')
-                                                {{ $post->right_caption_zh }}
-                                            @else
-                                                {{ $post->right_caption }}
-                                            @endif
-                                        </i>
-                                    </td>
-                                </tr>
-                            </table>
+                        <td>
+                            
+                            <img src="{{ url('storage/' . $post->right_photo) }}" width="360px" style="width:360px">
+                        
+                            <i>
+                                @if($locale == 'zh')
+                                    {{ $post->right_caption_zh }}
+                                @else
+                                    {{ $post->right_caption }}
+                                @endif
+                            </i>
                         </td>
                         @endif           
                     </tr>
