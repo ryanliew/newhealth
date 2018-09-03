@@ -151,8 +151,8 @@
 			},
 
 			getUsers() {
-				axios.get('/api/admin/users')
-					.then(response => this.setUsers(response.data.data));
+				axios.get('/api/admin/users?all=1')
+					.then(response => this.setUsers(response.data));
 			},
 
 			setUsers(data) {
