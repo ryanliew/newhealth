@@ -422,7 +422,12 @@
 		},
 
 		mounted() {
+
 			this.user = this.selectedUser ? this.selectedUser : window.user;
+			if(this.selectedUser)
+			{
+				this.getUser();
+			}
 			this.$refs.documents.setKycDocs();
 			this.getContacts();
 

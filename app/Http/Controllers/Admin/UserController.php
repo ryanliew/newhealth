@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function index()
     {
-    	return Controller::VueTableListResult(User::with('contacts'));
+    	return Controller::VueTableListResult(User::with('contacts'), !request()->has('all'), ['transaction_start', 'transaction_end']);
     }
 
     public function indexPending()

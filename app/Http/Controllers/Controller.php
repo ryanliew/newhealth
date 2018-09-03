@@ -15,7 +15,7 @@ class Controller extends BaseController
      * This method will accept a query and return the a list collection compatible with TableView component
      * @param Any LaravelBuilder Type $query
      */
-    public static function VueTableListResult($query, $shouldPaginate = true)
+    public static function VueTableListResult($query, $shouldPaginate = true, $append = [])
     {
         $result = $query;
     	if(!empty(request()->sort))
@@ -56,6 +56,9 @@ class Controller extends BaseController
 
         if($shouldPaginate)
     	   return $result->paginate(50);
+
+        if(sizeof($append) > 0 )
+            return $result->get()->each->append($append);
 
         return $result->get();
     } 

@@ -73474,8 +73474,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		getUsers: function getUsers() {
 			var _this3 = this;
 
-			axios.get('/api/admin/users').then(function (response) {
-				return _this3.setUsers(response.data.data);
+			axios.get('/api/admin/users?all=1').then(function (response) {
+				return _this3.setUsers(response.data);
 			});
 		},
 		setUsers: function setUsers(data) {
@@ -75312,7 +75312,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		};
 	},
 	mounted: function mounted() {
+
 		this.user = this.selectedUser ? this.selectedUser : window.user;
+		if (this.selectedUser) {
+			this.getUser();
+		}
 		this.$refs.documents.setKycDocs();
 		this.getContacts();
 
@@ -86674,8 +86678,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		getUsers: function getUsers() {
 			var _this = this;
 
-			axios.get('/api/admin/users').then(function (response) {
-				return _this.setUsers(response.data.data);
+			axios.get('/api/admin/users?all=1').then(function (response) {
+				return _this.setUsers(response.data);
 			});
 		},
 		setUsers: function setUsers(data) {
