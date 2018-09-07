@@ -82278,9 +82278,11 @@ var render = function() {
                                     }
                                   }),
                                   _vm._v(" "),
-                                  _c("referral-link", {
-                                    attrs: { code: _vm.user.referral_code }
-                                  }),
+                                  _vm.userNotGrower
+                                    ? _c("referral-link", {
+                                        attrs: { code: _vm.user.referral_code }
+                                      })
+                                    : _vm._e(),
                                   _vm._v(" "),
                                   _c("text-input", {
                                     attrs: {

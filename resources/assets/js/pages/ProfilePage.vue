@@ -47,7 +47,7 @@
 										:hideLabel="false">
 									</text-input>
 
-									<referral-link :code="user.referral_code"></referral-link>
+									<referral-link :code="user.referral_code" v-if="userNotGrower"></referral-link>
 									
 									<text-input v-model="user.name" 
 											:defaultValue="user.name"
