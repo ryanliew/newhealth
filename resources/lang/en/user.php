@@ -66,5 +66,10 @@ return [
     "referrer" => "Referrer",
     "settings" => "Settings",
     "is_admin" => "Is Admin",
-    "setting_success" => "Settings updated successfully"
+    "is_advisor" => "Is Advisor",
+    "setting_success" => "Settings updated successfully",
+
+    "advisor_application_received" => "We have received your application. Our administrators will go through your submission and get back to you soon.",
+    "content_is_for_advisor" => "This content is only for advisor",
+    "apply_as_advisor" => "Apply as advisor"
 ];

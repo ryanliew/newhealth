@@ -16,6 +16,15 @@
 // Css for toast notification
 @import '~vuejs-noty/dist/vuejs-noty.css';
 
+.terms {
+  max-height: 70vh;
+  overflow: scroll
+}
+
+.terms ol li {
+  margin-left: 25px;
+  padding-left: 5px;
+}
 // Table View CSS
 .table-header {
 	background: white;

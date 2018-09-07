@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Address;
+use App\Notifications\ApplyForAdvisorNotification;
 use App\Notifications\IdentityVerificationDocumentsRejectedNotification;
 use App\Notifications\KYCUpdatedNotification;
 use App\Notifications\RemindUploadDocumentNotification;
@@ -353,5 +354,16 @@ class UserController extends Controller
         $user->delete();
 
         return json_encode(['message' => "user.deleted"]);
+    }
+
+    public function apply_advisor()
+    {
+        request()->validate([
+            'terms_acceptance' => 'accepted'
+        ]);
+
+        Notification::send(auth()->user(), new ApplyForAdvisorNotification(auth()->user()));
+
+        return json_encode(['message' => "user.advisor_application_received"]);
     }
 }

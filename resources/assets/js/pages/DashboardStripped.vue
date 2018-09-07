@@ -2,7 +2,7 @@
 	<div>
 		<transition name="slide-fade" mode="out-in">
 			<div v-if="!isViewing && !isPurchasing && !isViewingPost">
-				<div class="row">
+				<div class="row" v-if="userNotGrower">
 		             <div class="col-sm" v-if="user.is_admin">
 		                <article class="statistic-box green">
 		                    <div>
@@ -44,7 +44,7 @@
 		        			<header class="box-typical-header panel-heading">
 		        				<h3 class="panel-title">{{ 'dashboard.my_downlines' | trans }} <span class="badge badge-primary">{{ user.descendants_count }}</span></h3>
 		        			</header>
-		        			<div class="box-typical-body panel-body">
+		        			<div class="box-typical-body panel-body" v-if="userNotGrower">
 			        			<div class="box-normal-content">
 			        				<text-input v-model="user.referral_code" 
 										:defaultValue="user.referral_code"
@@ -75,6 +75,12 @@
 										<td>{{ descendant.tree_count }}</td>
 									</tr>
 								</table>
+		        			</div>
+		        			<div class="box-typical-body panel-body" v-else>
+			        			<div class="box-normal-content d-flex flex-column align-items-center justify-content-center text-center" style="height:100%;">
+			        				<h3>{{ "user.content_is_for_advisor" | trans }}</h3>
+			        				<button type="button" class="btn btn-primary btn-lg" @click="isApplying = true">{{ "user.apply_as_advisor" | trans }}</button>
+			        			</div>
 		        			</div>
 		        		</section>
 
@@ -141,7 +147,7 @@
 			        					</li>
 			        				</ul>
 			        			</div>
-			        			<div class="next-step text-center">
+			        			<div class="next-step text-center" v-if="userNotGrower">
 			        				<b>{{ 'dashboard.next_grower_level' | trans }}</b>
 			        				<h2><span class="label label-primary mb-3">{{ 'user.level_' + (user.user_level + 1) | trans  }}</span></h2>
 
@@ -375,6 +381,10 @@
 
 			groupSaleRemaining() {
 				return this.user.group_sale_needed - this.user.group_sale;
+			},
+
+			userNotGrower() {
+				return this.user.is_admin || this.user.is_advisor;
 			}
 		}
 	}

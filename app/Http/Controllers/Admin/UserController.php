@@ -36,7 +36,8 @@ class UserController extends Controller
     {
         $user->update([
             'user_level' => request()->user_level,
-            'is_admin' => request()->has('is_admin')
+            'is_admin' => request()->has('is_admin'),
+            'is_advisor' => request()->has('is_advisor')
         ]);
 
         if(request()->has('parent_id') && $user->parent_id !== request()->parent_id)
