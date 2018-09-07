@@ -24,5 +24,5 @@ return [
     'term_13' => 'This Purchase Form embodies terms and conditions as agreed upon between the parties as to the subject matter of this Purchase Form and supersedes all previous agreements (if any) between the parties with respect to the subject matter hereof, whether written or oral and no amendment or variation hereof shall be effective unless made by the parties in writing and signed by both parties.',
     'term_14' => 'Time wherever mentioned herein shall be of the essence.',
     'term_15' => 'This Purchase Form shall be governed by and construed in accordance with Malaysian law and the parties hereby submit to the exclusive jurisdiction of the courts of Malaysia.',
-    'term_16' => 'This Purchase Form has been translated into Mandarin. If there is any inconsistency or discrepancies between the English version and the Mandarin version, the English version shall prevail.'
+    'term_16' => 'This Purchase Form has been translated into Mandarin. If there is any inconsistency or discrepancies between the English version and the Mandarin version, the English version shall prevail.',
 ];

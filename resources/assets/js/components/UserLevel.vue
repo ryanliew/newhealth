@@ -45,7 +45,10 @@
 				<input class="form-check-input" type="checkbox" id="is-admin" v-model="form.is_admin">
 				<label class="form-check-label" for="is-admin">{{ 'user.is_admin' | trans }}</label>
 			</div>
-
+			<div class="form-check mt-4">
+				<input class="form-check-input" type="checkbox" id="is-admin" v-model="form.is_advisor">
+				<label class="form-check-label" for="is-admin">{{ 'user.is_advisor' | trans }}</label>
+			</div>
 			<button class="btn btn-primary mt-3" :disabled="form.submitting" v-html="submitButtonContent" @click="submit"></button>
 		</div>
 	</div>
@@ -65,6 +68,7 @@
 					parent_id: '',
 					user_level: '',
 					is_admin: '',
+					is_advisor: ''
 				}),
 				user: window.user,
 				users: [],
@@ -104,6 +108,7 @@
 				this.form.is_admin = this.selectedUser.is_admin;
 				this.form.parent_id = this.selectedUser.parent_id;
 				this.form.user_level = this.selectedUser.user_level;
+				this.form.is_advisor = this.selectedUser.is_advisor;
 
 				this.selectedLevel = _.filter(this.levels, function(level){ return this.form.user_level == level.value; }.bind(this))[0];
 

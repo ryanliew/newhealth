@@ -471,6 +471,7 @@
 				this.isViewingGenoTree = false;
 				this.isViewingDashboard = false;
 				Vue.nextTick(() => this.$refs.documents.setKycDocs());
+				Vue.nextTick(() => this.$refs.levels.getParents());
 			},
 
 			getContacts() {

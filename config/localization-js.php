@@ -13,6 +13,7 @@ return [
      */
     'messages' => [
         'auth',
+        'advisor',
         'confirmation',
         'dashboard',
         'pagination',

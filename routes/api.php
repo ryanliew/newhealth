@@ -80,6 +80,8 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::get('/', 'PostController@index');
 	});
 
+	Route::post("/apply/advisor", "UserController@apply_advisor");
+
 });
 
 Route::middleware('auth:api')->get('/profile', 'ProfileController@index');

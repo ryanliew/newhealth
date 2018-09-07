@@ -62,6 +62,11 @@ return [
     "referrer" => "推荐者",
     "settings" => "设定",
     "is_admin" => "是管理员",
-    "setting_success" => "成功更改设定"
+    "is_advisor" => "是顾问成员",
+    "setting_success" => "成功更改设定",
+
+    "advisor_application_received" => "我们已收到您的申请，我们的管理员将尽快给您答复",
+    "content_is_for_advisor" => "此内容只开放于顾问成员",
+    "apply_as_advisor" => "成为顾问"
 
 ];

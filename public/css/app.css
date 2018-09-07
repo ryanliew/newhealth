@@ -11070,6 +11070,16 @@ a.text-dark:focus {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.terms {
+  max-height: 70vh;
+  overflow: scroll;
+}
+
+.terms ol li {
+  margin-left: 25px;
+  padding-left: 5px;
+}
+
 .table-header {
   background: white;
   color: #333;
