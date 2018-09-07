@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<transition name="slide-fade" mode="out-in">
-			<div v-if="!isEditing">
+			<div v-if="!isEditing && !isApplying">
 				<div class="row mb-3">
 					<div class="col-sm">
 						<button class="btn btn-primary" @click="isEditing = true" v-if="!isViewingDashboard && !isViewingGenoTree && !isViewingTransactions">{{ 'user.edit_profile' | trans }}</button>
@@ -47,7 +47,7 @@
 										:hideLabel="false">
 									</text-input>
 
-									<referral-link :code="user.referral_code"></referral-link>
+									<referral-link :code="user.referral_code" v-if="userNotGrower"></referral-link>
 									
 									<text-input v-model="user.name" 
 											:defaultValue="user.name"
@@ -242,6 +242,7 @@
 					</div>
 					<user-documents :selectedUser="user" ref="documents"></user-documents>
 
+					<button class="btn btn-primary mb-3 " @click="isApplying = true" v-if="!userNotGrower">{{ "user.apply_as_advisor" | trans }}</button>
 					<user-level :selectedUser="user" ref="levels" v-if="currentUser.is_admin" @back="back"></user-level>
 					<div class="row" v-if="user.company_name">
 						<div class="col-sm">
@@ -391,6 +392,10 @@
 		<transaction-page :userId="user.id" v-if="isViewingTransactions" :cancelable="false"></transaction-page>
 
 
+	    <transition name="slide-fade" mode="out-in">
+	    	 <advisor-application :user="user" v-if="isApplying" @back="isApplying = false"></advisor-application>
+	    </transition>
+
 	</div>
 </template>
 
@@ -403,10 +408,12 @@
 	import TransactionPage from "./TransactionPage.vue";
 	import GenoPage from "./GenoPage.vue";
 
+	import AdvisorApplication from "./AdvisorApplication.vue";
+
 	export default {
 		props: ['cancelable', 'selectedUser'],
 
-		components: { ReferralLink, User, UserDocuments, UserLevel, Dashboard, GenoPage, TransactionPage },
+		components: { ReferralLink, User, UserDocuments, UserLevel, Dashboard, GenoPage, TransactionPage, AdvisorApplication },
 
 		data() {
 			return {
@@ -417,7 +424,8 @@
 				isUploading: false,
 				isViewingTransactions: false,
 				isViewingDashboard: false,
-				isViewingGenoTree: false
+				isViewingGenoTree: false,
+				isApplying: false
 			};
 		},
 
@@ -532,6 +540,10 @@
 				}
 
 				return '';
+			},
+
+			userNotGrower() {
+				return this.user.is_admin || this.user.is_advisor;
 			}
 		}	
 	}

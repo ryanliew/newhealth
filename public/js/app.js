@@ -72689,10 +72689,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue__ = __webpack_require__(187);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AdvisorApplication_vue__ = __webpack_require__(442);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__AdvisorApplication_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__AdvisorApplication_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Post_vue__ = __webpack_require__(188);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Post_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_Post_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Post_vue__ = __webpack_require__(188);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Post_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_Post_vue__);
 //
 //
 //
@@ -72920,17 +72918,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 
@@ -72940,7 +72927,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: ['viewingUser'],
 
-	components: { ReferralLink: __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default.a, Purchase: __WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue___default.a, ProfilePage: __WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue___default.a, Post: __WEBPACK_IMPORTED_MODULE_4__components_Post_vue___default.a, AdvisorApplication: __WEBPACK_IMPORTED_MODULE_3__AdvisorApplication_vue___default.a },
+	components: { ReferralLink: __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default.a, Purchase: __WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue___default.a, ProfilePage: __WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue___default.a, Post: __WEBPACK_IMPORTED_MODULE_3__components_Post_vue___default.a },
 
 	data: function data() {
 		return {
@@ -72964,8 +72951,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			isLegalLoading: false,
 			selectedLegalStatus: { label: "Instruction issued to lawyer", value: "instruction_issued" },
 			isChangingStatus: false,
-			legalStatus: [{ label: "Instruction issued to lawyer", value: "instruction_issued" }, { label: "Sales agreement ready for execution", value: "execution_ready" }, { label: "Sales agreement executed", value: "complete" }],
-			isApplying: false
+			legalStatus: [{ label: "Instruction issued to lawyer", value: "instruction_issued" }, { label: "Sales agreement ready for execution", value: "execution_ready" }, { label: "Sales agreement executed", value: "complete" }]
 
 		};
 	},
@@ -74908,6 +74894,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__TransactionPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__TransactionPage_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__GenoPage_vue__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__GenoPage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__GenoPage_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__AdvisorApplication_vue__ = __webpack_require__(442);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__AdvisorApplication_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__AdvisorApplication_vue__);
 //
 //
 //
@@ -75304,6 +75292,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+
+
 
 
 
@@ -75316,7 +75311,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: ['cancelable', 'selectedUser'],
 
-	components: { ReferralLink: __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default.a, User: __WEBPACK_IMPORTED_MODULE_3__components_User_vue___default.a, UserDocuments: __WEBPACK_IMPORTED_MODULE_1__components_UserDocuments___default.a, UserLevel: __WEBPACK_IMPORTED_MODULE_2__components_UserLevel___default.a, Dashboard: __WEBPACK_IMPORTED_MODULE_4__DashboardStripped_vue___default.a, GenoPage: __WEBPACK_IMPORTED_MODULE_6__GenoPage_vue___default.a, TransactionPage: __WEBPACK_IMPORTED_MODULE_5__TransactionPage_vue___default.a },
+	components: { ReferralLink: __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default.a, User: __WEBPACK_IMPORTED_MODULE_3__components_User_vue___default.a, UserDocuments: __WEBPACK_IMPORTED_MODULE_1__components_UserDocuments___default.a, UserLevel: __WEBPACK_IMPORTED_MODULE_2__components_UserLevel___default.a, Dashboard: __WEBPACK_IMPORTED_MODULE_4__DashboardStripped_vue___default.a, GenoPage: __WEBPACK_IMPORTED_MODULE_6__GenoPage_vue___default.a, TransactionPage: __WEBPACK_IMPORTED_MODULE_5__TransactionPage_vue___default.a, AdvisorApplication: __WEBPACK_IMPORTED_MODULE_7__AdvisorApplication_vue___default.a },
 
 	data: function data() {
 		return {
@@ -75327,7 +75322,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			isUploading: false,
 			isViewingTransactions: false,
 			isViewingDashboard: false,
-			isViewingGenoTree: false
+			isViewingGenoTree: false,
+			isApplying: false
 		};
 	},
 	mounted: function mounted() {
@@ -75436,6 +75432,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			}
 
 			return '';
+		},
+		userNotGrower: function userNotGrower() {
+			return this.user.is_admin || this.user.is_advisor;
 		}
 	}
 });
@@ -80979,216 +80978,235 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-6 dashboard-column" }, [
-                    _c(
-                      "section",
-                      {
-                        staticClass:
-                          "box-typical box-typical-dashboard panel panel-default scrollable"
-                      },
-                      [
-                        _c(
-                          "header",
-                          { staticClass: "box-typical-header panel-heading" },
+                    _vm.userNotGrower
+                      ? _c(
+                          "section",
+                          {
+                            staticClass:
+                              "box-typical box-typical-dashboard panel panel-default scrollable"
+                          },
                           [
-                            _c("h3", { staticClass: "panel-title" }, [
-                              _vm._v(
-                                _vm._s(
-                                  _vm._f("trans")("dashboard.my_downlines")
-                                ) + " "
-                              ),
-                              _c(
-                                "span",
-                                { staticClass: "badge badge-primary" },
-                                [_vm._v(_vm._s(_vm.user.descendants_count))]
-                              )
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _vm.userNotGrower
-                          ? _c(
-                              "div",
-                              { staticClass: "box-typical-body panel-body" },
+                            _c(
+                              "header",
+                              {
+                                staticClass: "box-typical-header panel-heading"
+                              },
                               [
-                                _c(
+                                _c("h3", { staticClass: "panel-title" }, [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm._f("trans")("dashboard.my_downlines")
+                                    ) + " "
+                                  ),
+                                  _c(
+                                    "span",
+                                    { staticClass: "badge badge-primary" },
+                                    [_vm._v(_vm._s(_vm.user.descendants_count))]
+                                  )
+                                ])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm.userNotGrower
+                              ? _c(
                                   "div",
-                                  { staticClass: "box-normal-content" },
+                                  {
+                                    staticClass: "box-typical-body panel-body"
+                                  },
                                   [
-                                    _c("text-input", {
-                                      attrs: {
-                                        defaultValue: _vm.user.referral_code,
-                                        required: false,
-                                        type: "text",
-                                        label: _vm.$options.filters.trans(
-                                          "user.referral_code"
-                                        ),
-                                        name: "referrer",
-                                        editable: false,
-                                        focus: false,
-                                        hideLabel: false
-                                      },
-                                      model: {
-                                        value: _vm.user.referral_code,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.user,
-                                            "referral_code",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "user.referral_code"
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("referral-link", {
-                                      attrs: { code: _vm.user.referral_code }
-                                    })
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "table",
-                                  { staticClass: "tbl-typical" },
-                                  [
-                                    _c("tr", [
-                                      _c("th", [
-                                        _c("div", [
-                                          _vm._v(
-                                            _vm._s(_vm._f("trans")("auth.name"))
-                                          )
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("th", [
-                                        _c("div", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm._f("trans")(
-                                                "dashboard.grower_level"
+                                    _c(
+                                      "div",
+                                      { staticClass: "box-normal-content" },
+                                      [
+                                        _c("text-input", {
+                                          attrs: {
+                                            defaultValue:
+                                              _vm.user.referral_code,
+                                            required: false,
+                                            type: "text",
+                                            label: _vm.$options.filters.trans(
+                                              "user.referral_code"
+                                            ),
+                                            name: "referrer",
+                                            editable: false,
+                                            focus: false,
+                                            hideLabel: false
+                                          },
+                                          model: {
+                                            value: _vm.user.referral_code,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.user,
+                                                "referral_code",
+                                                $$v
                                               )
-                                            )
-                                          )
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("th", [
-                                        _c("div", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm._f("trans")("user.status")
-                                            )
-                                          )
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("th", [
-                                        _c("div", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm._f("trans")("user.tree_count")
-                                            )
-                                          )
-                                        ])
-                                      ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _vm._l(_vm.descendants, function(
-                                      descendant
-                                    ) {
-                                      return _c("tr", [
-                                        _c("td", [
-                                          _vm._v(_vm._s(descendant.name))
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "span",
-                                            {
-                                              staticClass: "label label-success"
                                             },
-                                            [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm._f("trans")(
-                                                    "user.level_" +
-                                                      descendant.user_level
-                                                  )
-                                                )
-                                              )
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", {
-                                          domProps: {
-                                            innerHTML: _vm._s(
-                                              _vm.$options.filters.formatUserStatus(
-                                                descendant.id_status
-                                              )
-                                            )
+                                            expression: "user.referral_code"
                                           }
                                         }),
                                         _vm._v(" "),
-                                        _c("td", [
-                                          _vm._v(_vm._s(descendant.tree_count))
-                                        ])
-                                      ])
-                                    })
-                                  ],
-                                  2
-                                )
-                              ]
-                            )
-                          : _c(
-                              "div",
-                              { staticClass: "box-typical-body panel-body" },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "box-normal-content d-flex flex-column align-items-center justify-content-center text-center",
-                                    staticStyle: { height: "100%" }
-                                  },
-                                  [
-                                    _c("h3", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("trans")(
-                                            "user.content_is_for_advisor"
-                                          )
-                                        )
-                                      )
-                                    ]),
+                                        _c("referral-link", {
+                                          attrs: {
+                                            code: _vm.user.referral_code
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
                                     _vm._v(" "),
                                     _c(
-                                      "button",
+                                      "table",
+                                      { staticClass: "tbl-typical" },
+                                      [
+                                        _c("tr", [
+                                          _c("th", [
+                                            _c("div", [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm._f("trans")("auth.name")
+                                                )
+                                              )
+                                            ])
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("th", [
+                                            _c("div", [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm._f("trans")(
+                                                    "dashboard.grower_level"
+                                                  )
+                                                )
+                                              )
+                                            ])
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("th", [
+                                            _c("div", [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm._f("trans")("user.status")
+                                                )
+                                              )
+                                            ])
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("th", [
+                                            _c("div", [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm._f("trans")(
+                                                    "user.tree_count"
+                                                  )
+                                                )
+                                              )
+                                            ])
+                                          ])
+                                        ]),
+                                        _vm._v(" "),
+                                        _vm._l(_vm.descendants, function(
+                                          descendant
+                                        ) {
+                                          return _c("tr", [
+                                            _c("td", [
+                                              _vm._v(_vm._s(descendant.name))
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("td", [
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass:
+                                                    "label label-success"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm._f("trans")(
+                                                        "user.level_" +
+                                                          descendant.user_level
+                                                      )
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("td", {
+                                              domProps: {
+                                                innerHTML: _vm._s(
+                                                  _vm.$options.filters.formatUserStatus(
+                                                    descendant.id_status
+                                                  )
+                                                )
+                                              }
+                                            }),
+                                            _vm._v(" "),
+                                            _c("td", [
+                                              _vm._v(
+                                                _vm._s(descendant.tree_count)
+                                              )
+                                            ])
+                                          ])
+                                        })
+                                      ],
+                                      2
+                                    )
+                                  ]
+                                )
+                              : _c(
+                                  "div",
+                                  {
+                                    staticClass: "box-typical-body panel-body"
+                                  },
+                                  [
+                                    _c(
+                                      "div",
                                       {
-                                        staticClass: "btn btn-primary btn-lg",
-                                        attrs: { type: "button" },
-                                        on: {
-                                          click: function($event) {
-                                            _vm.isApplying = true
-                                          }
-                                        }
+                                        staticClass:
+                                          "box-normal-content d-flex flex-column align-items-center justify-content-center text-center",
+                                        staticStyle: { height: "100%" }
                                       },
                                       [
-                                        _vm._v(
-                                          _vm._s(
-                                            _vm._f("trans")(
-                                              "user.apply_as_advisor"
+                                        _c("h3", [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm._f("trans")(
+                                                "user.content_is_for_advisor"
+                                              )
                                             )
                                           )
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass:
+                                              "btn btn-primary btn-lg",
+                                            attrs: { type: "button" },
+                                            on: {
+                                              click: function($event) {
+                                                _vm.isApplying = true
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              _vm._s(
+                                                _vm._f("trans")(
+                                                  "user.apply_as_advisor"
+                                                )
+                                              )
+                                            )
+                                          ]
                                         )
                                       ]
                                     )
                                   ]
                                 )
-                              ]
-                            )
-                      ]
-                    ),
+                          ]
+                        )
+                      : _vm._e(),
                     _vm._v(" "),
                     _c(
                       "section",
@@ -82088,7 +82106,7 @@ var render = function() {
         "transition",
         { attrs: { name: "slide-fade", mode: "out-in" } },
         [
-          !_vm.isEditing
+          !_vm.isEditing && !_vm.isApplying
             ? _c(
                 "div",
                 [
@@ -82260,9 +82278,11 @@ var render = function() {
                                     }
                                   }),
                                   _vm._v(" "),
-                                  _c("referral-link", {
-                                    attrs: { code: _vm.user.referral_code }
-                                  }),
+                                  _vm.userNotGrower
+                                    ? _c("referral-link", {
+                                        attrs: { code: _vm.user.referral_code }
+                                      })
+                                    : _vm._e(),
                                   _vm._v(" "),
                                   _c("text-input", {
                                     attrs: {
@@ -82677,6 +82697,27 @@ var render = function() {
                           ref: "documents",
                           attrs: { selectedUser: _vm.user }
                         }),
+                        _vm._v(" "),
+                        !_vm.userNotGrower
+                          ? _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-primary mb-3 ",
+                                on: {
+                                  click: function($event) {
+                                    _vm.isApplying = true
+                                  }
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(
+                                    _vm._f("trans")("user.apply_as_advisor")
+                                  )
+                                )
+                              ]
+                            )
+                          : _vm._e(),
                         _vm._v(" "),
                         _vm.currentUser.is_admin
                           ? _c("user-level", {
@@ -83126,7 +83167,25 @@ var render = function() {
         ? _c("transaction-page", {
             attrs: { userId: _vm.user.id, cancelable: false }
           })
-        : _vm._e()
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "transition",
+        { attrs: { name: "slide-fade", mode: "out-in" } },
+        [
+          _vm.isApplying
+            ? _c("advisor-application", {
+                attrs: { user: _vm.user },
+                on: {
+                  back: function($event) {
+                    _vm.isApplying = false
+                  }
+                }
+              })
+            : _vm._e()
+        ],
+        1
+      )
     ],
     1
   )
@@ -83319,216 +83378,186 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-6 dashboard-column" }, [
-                    _c(
-                      "section",
-                      {
-                        staticClass:
-                          "box-typical box-typical-dashboard panel panel-default scrollable"
-                      },
-                      [
-                        _c(
-                          "header",
-                          { staticClass: "box-typical-header panel-heading" },
+                    _vm.userNotGrower
+                      ? _c(
+                          "section",
+                          {
+                            staticClass:
+                              "box-typical box-typical-dashboard panel panel-default scrollable"
+                          },
                           [
-                            _c("h3", { staticClass: "panel-title" }, [
-                              _vm._v(
-                                _vm._s(
-                                  _vm._f("trans")("dashboard.my_downlines")
-                                ) + " "
-                              ),
-                              _c(
-                                "span",
-                                { staticClass: "badge badge-primary" },
-                                [_vm._v(_vm._s(_vm.user.descendants_count))]
-                              )
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _vm.userNotGrower
-                          ? _c(
-                              "div",
-                              { staticClass: "box-typical-body panel-body" },
+                            _c(
+                              "header",
+                              {
+                                staticClass: "box-typical-header panel-heading"
+                              },
                               [
-                                _c(
+                                _c("h3", { staticClass: "panel-title" }, [
+                                  _vm._v(
+                                    _vm._s(
+                                      _vm._f("trans")("dashboard.my_downlines")
+                                    ) + " "
+                                  ),
+                                  _c(
+                                    "span",
+                                    { staticClass: "badge badge-primary" },
+                                    [_vm._v(_vm._s(_vm.user.descendants_count))]
+                                  )
+                                ])
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm.userNotGrower
+                              ? _c(
                                   "div",
-                                  { staticClass: "box-normal-content" },
+                                  {
+                                    staticClass: "box-typical-body panel-body"
+                                  },
                                   [
-                                    _c("text-input", {
-                                      attrs: {
-                                        defaultValue: _vm.user.referral_code,
-                                        required: false,
-                                        type: "text",
-                                        label: _vm.$options.filters.trans(
-                                          "user.referral_code"
-                                        ),
-                                        name: "referrer",
-                                        editable: false,
-                                        focus: false,
-                                        hideLabel: false
-                                      },
-                                      model: {
-                                        value: _vm.user.referral_code,
-                                        callback: function($$v) {
-                                          _vm.$set(
-                                            _vm.user,
-                                            "referral_code",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "user.referral_code"
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("referral-link", {
-                                      attrs: { code: _vm.user.referral_code }
-                                    })
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "table",
-                                  { staticClass: "tbl-typical" },
-                                  [
-                                    _c("tr", [
-                                      _c("th", [
-                                        _c("div", [
-                                          _vm._v(
-                                            _vm._s(_vm._f("trans")("auth.name"))
-                                          )
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("th", [
-                                        _c("div", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm._f("trans")(
-                                                "dashboard.grower_level"
+                                    _c(
+                                      "div",
+                                      { staticClass: "box-normal-content" },
+                                      [
+                                        _c("text-input", {
+                                          attrs: {
+                                            defaultValue:
+                                              _vm.user.referral_code,
+                                            required: false,
+                                            type: "text",
+                                            label: _vm.$options.filters.trans(
+                                              "user.referral_code"
+                                            ),
+                                            name: "referrer",
+                                            editable: false,
+                                            focus: false,
+                                            hideLabel: false
+                                          },
+                                          model: {
+                                            value: _vm.user.referral_code,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.user,
+                                                "referral_code",
+                                                $$v
                                               )
-                                            )
-                                          )
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("th", [
-                                        _c("div", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm._f("trans")("user.status")
-                                            )
-                                          )
-                                        ])
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("th", [
-                                        _c("div", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm._f("trans")("user.tree_count")
-                                            )
-                                          )
-                                        ])
-                                      ])
-                                    ]),
-                                    _vm._v(" "),
-                                    _vm._l(_vm.descendants, function(
-                                      descendant
-                                    ) {
-                                      return _c("tr", [
-                                        _c("td", [
-                                          _vm._v(_vm._s(descendant.name))
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _c(
-                                            "span",
-                                            {
-                                              staticClass: "label label-success"
                                             },
-                                            [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm._f("trans")(
-                                                    "user.level_" +
-                                                      descendant.user_level
-                                                  )
-                                                )
-                                              )
-                                            ]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", {
-                                          domProps: {
-                                            innerHTML: _vm._s(
-                                              _vm.$options.filters.formatUserStatus(
-                                                descendant.id_status
-                                              )
-                                            )
+                                            expression: "user.referral_code"
                                           }
                                         }),
                                         _vm._v(" "),
-                                        _c("td", [
-                                          _vm._v(_vm._s(descendant.tree_count))
-                                        ])
-                                      ])
-                                    })
-                                  ],
-                                  2
-                                )
-                              ]
-                            )
-                          : _c(
-                              "div",
-                              { staticClass: "box-typical-body panel-body" },
-                              [
-                                _c(
-                                  "div",
-                                  {
-                                    staticClass:
-                                      "box-normal-content d-flex flex-column align-items-center justify-content-center text-center",
-                                    staticStyle: { height: "100%" }
-                                  },
-                                  [
-                                    _c("h3", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("trans")(
-                                            "user.content_is_for_advisor"
-                                          )
-                                        )
-                                      )
-                                    ]),
+                                        _c("referral-link", {
+                                          attrs: {
+                                            code: _vm.user.referral_code
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
                                     _vm._v(" "),
                                     _c(
-                                      "button",
-                                      {
-                                        staticClass: "btn btn-primary btn-lg",
-                                        attrs: { type: "button" },
-                                        on: {
-                                          click: function($event) {
-                                            _vm.isApplying = true
-                                          }
-                                        }
-                                      },
+                                      "table",
+                                      { staticClass: "tbl-typical" },
                                       [
-                                        _vm._v(
-                                          _vm._s(
-                                            _vm._f("trans")(
-                                              "user.apply_as_advisor"
-                                            )
-                                          )
-                                        )
-                                      ]
+                                        _c("tr", [
+                                          _c("th", [
+                                            _c("div", [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm._f("trans")("auth.name")
+                                                )
+                                              )
+                                            ])
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("th", [
+                                            _c("div", [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm._f("trans")(
+                                                    "dashboard.grower_level"
+                                                  )
+                                                )
+                                              )
+                                            ])
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("th", [
+                                            _c("div", [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm._f("trans")("user.status")
+                                                )
+                                              )
+                                            ])
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("th", [
+                                            _c("div", [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm._f("trans")(
+                                                    "user.tree_count"
+                                                  )
+                                                )
+                                              )
+                                            ])
+                                          ])
+                                        ]),
+                                        _vm._v(" "),
+                                        _vm._l(_vm.descendants, function(
+                                          descendant
+                                        ) {
+                                          return _c("tr", [
+                                            _c("td", [
+                                              _vm._v(_vm._s(descendant.name))
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("td", [
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass:
+                                                    "label label-success"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      _vm._f("trans")(
+                                                        "user.level_" +
+                                                          descendant.user_level
+                                                      )
+                                                    )
+                                                  )
+                                                ]
+                                              )
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("td", {
+                                              domProps: {
+                                                innerHTML: _vm._s(
+                                                  _vm.$options.filters.formatUserStatus(
+                                                    descendant.id_status
+                                                  )
+                                                )
+                                              }
+                                            }),
+                                            _vm._v(" "),
+                                            _c("td", [
+                                              _vm._v(
+                                                _vm._s(descendant.tree_count)
+                                              )
+                                            ])
+                                          ])
+                                        })
+                                      ],
+                                      2
                                     )
                                   ]
                                 )
-                              ]
-                            )
-                      ]
-                    ),
+                              : _vm._e()
+                          ]
+                        )
+                      : _vm._e(),
                     _vm._v(" "),
                     _c(
                       "section",
@@ -84046,20 +84075,6 @@ var render = function() {
           _vm.isViewingPost
             ? _c("post", {
                 attrs: { selectedPost: _vm.selectedPost, isEditing: false },
-                on: { back: _vm.back }
-              })
-            : _vm._e()
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "transition",
-        { attrs: { name: "slide-fade", mode: "out-in" } },
-        [
-          _vm.isApplying
-            ? _c("advisor-application", {
-                attrs: { user: _vm.user },
                 on: { back: _vm.back }
               })
             : _vm._e()

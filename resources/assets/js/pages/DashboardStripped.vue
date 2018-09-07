@@ -40,7 +40,7 @@
 		        </div>
 		        <div class="row">
 		        	<div class="col-md-6 dashboard-column">
-		        		<section class="box-typical box-typical-dashboard panel panel-default scrollable">
+		        		<section class="box-typical box-typical-dashboard panel panel-default scrollable" v-if="userNotGrower">
 		        			<header class="box-typical-header panel-heading">
 		        				<h3 class="panel-title">{{ 'dashboard.my_downlines' | trans }} <span class="badge badge-primary">{{ user.descendants_count }}</span></h3>
 		        			</header>
