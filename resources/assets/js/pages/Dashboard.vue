@@ -49,7 +49,7 @@
 		        </div>
 		        <div class="row">
 		        	<div class="col-md-6 dashboard-column">
-		        		<section class="box-typical box-typical-dashboard panel panel-default scrollable">
+		        		<section class="box-typical box-typical-dashboard panel panel-default scrollable" v-if="userNotGrower">
 		        			<header class="box-typical-header panel-heading">
 		        				<h3 class="panel-title">{{ 'dashboard.my_downlines' | trans }} <span class="badge badge-primary">{{ user.descendants_count }}</span></h3>
 		        			</header>
@@ -84,12 +84,6 @@
 										<td>{{ descendant.tree_count }}</td>
 									</tr>
 								</table>
-		        			</div>
-		        			<div class="box-typical-body panel-body" v-else>
-			        			<div class="box-normal-content d-flex flex-column align-items-center justify-content-center text-center" style="height:100%;">
-			        				<h3>{{ "user.content_is_for_advisor" | trans }}</h3>
-			        				<button type="button" class="btn btn-primary btn-lg" @click="isApplying = true">{{ "user.apply_as_advisor" | trans }}</button>
-			        			</div>
 		        			</div>
 		        		</section>
 
@@ -228,10 +222,6 @@
 	    <transition name="slide-fade" mode="out-in">
 	    	 <post :selectedPost="selectedPost" :isEditing="false" v-if="isViewingPost" @back="back"></post>
 	    </transition>
-
-	    <transition name="slide-fade" mode="out-in">
-	    	 <advisor-application :user="user" v-if="isApplying" @back="back"></advisor-application>
-	    </transition>
 	</div>
 </template>
 
@@ -239,13 +229,12 @@
 	import ReferralLink from "../components/ReferralLink.vue";
 	import Purchase from "../components/Purchase.vue";
 	import ProfilePage from "./ProfilePage.vue";
-	import AdvisorApplication from "./AdvisorApplication.vue";
 	import Post from "../components/Post.vue";
 
 	export default {
 		props: ['viewingUser'],
 
-		components: { ReferralLink, Purchase, ProfilePage, Post, AdvisorApplication },
+		components: { ReferralLink, Purchase, ProfilePage, Post },
 
 		data() {
 			return {
@@ -283,7 +272,6 @@
 					{label: "Sales agreement ready for execution", value: "execution_ready"},
 					{label: "Sales agreement executed", value: "complete"},
 				],
-				isApplying: false
 
 			};
 		},
