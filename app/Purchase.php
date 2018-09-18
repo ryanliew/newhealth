@@ -8,6 +8,7 @@ use App\Transaction;
 use App\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\App;
 
 class Purchase extends Model
 {
@@ -41,6 +42,7 @@ class Purchase extends Model
 
     public function verify()
     {
+        //dd(storage_path( '\receipts\\' . $this->id . '.pdf'));
     	$this->update(['status' => 'complete', 'is_verified' => true]);
 
         $tree_count = $this->user->tree_count;
@@ -54,6 +56,10 @@ class Purchase extends Model
             $user->adjust_level();
         }
         
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadView('pdf.receipt', ['purchase' => $this, 'user' => $this->user]);
+        $pdf->save('storage/receipts/' . $this->id . '.pdf');
+
         // Notify user to download receipt
         $this->user->notify(new PurchaseCompleteNotification($this));
 

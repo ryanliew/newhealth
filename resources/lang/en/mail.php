@@ -43,7 +43,7 @@ return [
     'document_required_message' => "We noticed that your personal information is incomplete. Kindly update all required information and submit required identity verification documents at grower's portal for account verification",
 
     'purchase_verified' => "Purchase completed",
-    "purchase_verified_message" => "Your purchase has been verified, click the button below to download your receipt. Alternatively, you can also download this receipt at grower's portal purchase page",
+    "purchase_verified_message" => "Your purchase has been verified, click the button below or the attached PDF file to download your receipt. Alternatively, you can also download this receipt at grower's portal purchase page",
     "download_receipt" => "Download receipt",
 
     "documents_updated" => "Identity Verification Documents updated",
