@@ -33,6 +33,10 @@ class PurchaseCompleteMail extends Mailable
     public function build()
     {
         App::setLocale($this->locale);
-        return $this->view('vendor.notifications.purchase-verified');
+        return $this->view('vendor.notifications.purchase-verified')
+                    ->attach('storage/receipts/' . $this->purchase->id . '.pdf', [
+                        'as'=> 'receipt.pdf',
+                        'mime' => 'application/pdf',
+                    ]);
     }
 }
