@@ -81,6 +81,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'country_id' => $data['country'],
+            'is_advisor' => false
         ]);
 
         $user->saveAsRoot();
