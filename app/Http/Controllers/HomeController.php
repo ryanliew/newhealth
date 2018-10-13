@@ -31,7 +31,12 @@ class HomeController extends Controller
             Auth::logout();
             return redirect("/login")->with('message', "user.locked_message");
         }
-        
+
+        if(auth()->user()->user_status == 'pending')
+        {
+            Auth::logout();
+            return redirect("/login")->with('message', "user.waiting_approval");
+        }        
         
         if(is_null(auth()->user()->identification ))
             return redirect()->route('register.success');

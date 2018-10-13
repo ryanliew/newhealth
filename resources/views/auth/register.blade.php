@@ -92,9 +92,9 @@
                             <span aria-hidden="true">&times;</span>
                         </button>-->
                         
-                        {{-- <a href="{{ url('/social/wechat/login') }}" class="btn btn-wechat btn-block"><i class="fa fa-wechat"></i> {{ __('auth.wechat-signup') }}</a> --}}
-                        {{-- <a href="{{ url('/social/facebook/login') }}{{ request()->has('referrer') ? '?referrer=' . request()->referrer : '' }}" class="btn btn-facebook btn-block"><i class="fa fa-facebook-square"></i> {{ __('auth.facebook_signup') }}</a>
-                        <a href="{{ url('/social/google/login')}}{{ request()->has('referrer') ? '?referrer=' . request()->referrer : '' }}" class="btn btn-google btn-block"><i class="fa fa-google"></i> {{ __('auth.google_signup') }}</a> --}}
+                        {{-- <a href="{{ url('/social/wechat/login') }}" class="btn btn-wechat btn-block"><i class="fa fa-wechat"></i> {{ __('auth.wechat_signup') }}</a> --}}
+                        <a href="{{ url('/social/facebook/login') }}{{ request()->has('referrer') ? '?referrer=' . request()->referrer : '' }}" class="btn btn-facebook btn-block"><i class="fa fa-facebook-square"></i> {{ __('auth.facebook_signup') }}</a>
+                        <a href="{{ url('/social/google/login')}}{{ request()->has('referrer') ? '?referrer=' . request()->referrer : '' }}" class="btn btn-google btn-block"><i class="fa fa-google"></i> {{ __('auth.google_signup') }}</a>
                     </form>
                 </div>
             </div>

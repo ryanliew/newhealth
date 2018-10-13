@@ -35,6 +35,7 @@ return [
     'documents_success' => 'Documents updated',
     'verify' => "Verify",
     'reject' => 'Reject',
+    'approve' => 'Approve',
     'status' => "Status",
     'pending_verification' => 'Pending verification',
     'pending' => 'Pending',
@@ -60,6 +61,11 @@ return [
 
     "locked" => 'User has been locked',
     "unlocked" => "User has been unlocked",
+
+    "has_approved" => 'User has been approved',
+    "has_rejected" => 'User has been rejected',
+
+    "waiting_approval" => 'Your accounnt is waiting for approval',
 
     "locked_message" => "Your account has been locked. Please contact support@newleaf.com.my for more information",
     "deleted" => "User has been deleted",

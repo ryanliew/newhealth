@@ -58,10 +58,16 @@ Vue.filter('formatUserStatus', function(value){
 		case 'rejected':
 			color = 'badge-danger';
 			break;
+		case 'reject':
+			color = 'badge-danger';
+			break;
 		case 'verified':
 			color = 'badge-info';
 			break;
 		case 'complete':
+			color = 'badge-success';
+			break;
+		case 'approve':
 			color = 'badge-success';
 			break;
 	}

@@ -193,7 +193,7 @@
 										:hideLabel="false">
 									</text-input>
 
-									<text-input v-model="user.beneficiary_name" 
+									<!-- <text-input v-model="user.beneficiary_name" 
 										:defaultValue="user.beneficiary_name"
 										:required="true"
 										type="text"
@@ -235,7 +235,7 @@
 										:editable="false"
 										:focus="false"
 										:hideLabel="false">
-									</text-input>
+									</text-input> -->
 								</div>
 							</div>
 						</div>

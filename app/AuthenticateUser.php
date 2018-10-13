@@ -17,6 +17,7 @@ class AuthenticateUser {
 
 	public function execute($service, $hasCode, $listener)
 	{
+
 		if( ! $hasCode) return $this->getAuthorizationFirst($service);
 
 		$user = $this->users->findByUsernameOrCreate($this->getSocialUser($service), $service);
@@ -27,7 +28,6 @@ class AuthenticateUser {
 
 			return $listener->userHasLoggedIn($user, request()->referrerId);
 		}
-
 		return $listener->invalidUserInformation();
 	}
 

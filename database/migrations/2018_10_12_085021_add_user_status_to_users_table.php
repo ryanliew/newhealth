@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddLockToUsers extends Migration
+class AddUserStatusToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddLockToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean("is_locked")->default(true);
+            $table->string("user_status")->default('pending');
         });
     }
 
@@ -26,7 +26,7 @@ class AddLockToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn("is_locked");
+             $table->dropColumn("user_status");
         });
     }
 }

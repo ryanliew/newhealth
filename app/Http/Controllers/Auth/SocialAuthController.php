@@ -25,7 +25,6 @@ class SocialAuthController extends Controller
     	if(!is_null($user->identification)) {
     		return redirect()->route('home');
         }
-        
     	return redirect()->route('register.success')->with('referrer', session('referrerId'));
     }
 }

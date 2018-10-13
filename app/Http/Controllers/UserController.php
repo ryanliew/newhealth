@@ -336,6 +336,28 @@ class UserController extends Controller
         return json_encode(['message' => $message]);
     }
 
+    public function approve(User $user)
+    {
+        $user->user_status = 'approve';
+
+        $user->save();
+
+        $message = 'user.has_approved';
+
+        return json_encode(['message' => $message]);
+    }
+
+    public function reject(User $user)
+    {
+        $user->user_status = 'reject';
+
+        $user->save();
+
+        $message = 'user.has_rejected';
+
+        return json_encode(['message' => $message]);
+    }
+
     public function delete(User $user)
     {
         Log::info("Deleted user " . $user->name . " by " . auth()->user()->name);

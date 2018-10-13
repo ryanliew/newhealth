@@ -67,7 +67,7 @@
                             @endif
 
                             @csrf
-                            <h4>{{ __('auth.general_info') }}</h4>
+                            {{-- <h4>{{ __('auth.general_info') }}</h4>
                             @if(!auth()->user()->parent_id)
                                 <div class="form-group">
                                     <referrer referrer="{{ session('referrer') }}" app_locale="{{ App::isLocale('zh') ? 'zh' : 'en' }}"></referrer> 
@@ -77,8 +77,8 @@
                                         </span>
                                     @endif
                                 </div>
-                            @endif
-                            <hr>
+                            @endif 
+                            <hr> --}}
                             <h4>{{ __('auth.personal_info') }}</h4>
                             <div class="row">
                                 <div class="col-sm">
@@ -229,10 +229,10 @@
 
                             
                             <hr>
-                            <h4>{{ __('auth.company_info') }}</h4>
-                            <company-registration :countries="{{ json_encode($countries) }}" user_country="{{ auth()->user()->country_id }}" app_locale="{{ App::isLocale('zh') ? 'zh' : 'en' }}"></company-registration>
+                            {{-- <h4>{{ __('auth.company_info') }}</h4>
+                            <company-registration :countries="{{ json_encode($countries) }}" user_country="{{ auth()->user()->country_id }}" app_locale="{{ App::isLocale('zh') ? 'zh' : 'en' }}"></company-registration> 
 
-                            <hr>
+                            <hr>--}}
                             <h4>{{ __('auth.bank_info') }}</h4>
                             <div class="row">
                                 <div class="col-sm">
@@ -296,7 +296,7 @@
                                 </div>
                             </div>
                             <hr>
-                            <h4>{{ __('auth.beneficiary_info') }}</h4>
+                            {{-- <h4>{{ __('auth.beneficiary_info') }}</h4>
                             <div class="row">
                                 <div class="col-sm">
                                     <div class="form-group">
@@ -344,7 +344,7 @@
                                         @endif
                                     </div> 
                                 </div>
-                            </div>
+                            </div> --}}
 
                             <div class="form-check mt-2 mb-3">
                                 <input class="form-check-input" type="checkbox" id="agree" name="terms" required>

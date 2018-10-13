@@ -56,10 +56,10 @@
 					{ name: 'email', title: this.tableTitle('auth.email'), sortField: 'email'},
 					{ name: 'nationality', title: this.tableTitle('auth.nationality'), sortField: 'nationality'},
 					{ name: 'referral_code', title: this.tableTitle('user.referral_code'), sortField: 'referral_code'},
-					{ name: 'id_status', title: this.tableTitle('user.status'), sortField: 'id_status', callback: 'userStatusLabel'},
+					{ name: 'user_status', title: this.tableTitle('user.status'), sortField: 'user_status', callback: 'userStatusLabel'},
 					{ name: '__component:users-actions', title: this.tableTitle('table.actions')}
 				],
-				searchables: "name,email,nationality,id_status",
+				searchables: "name,email,nationality,user_status",
 				isViewing: false,
 				selectedUser: '',
 				url: '/api/admin/users',
@@ -138,9 +138,25 @@
 			},
 
 			lock(user) {
+				console.log("lock action");
 				this.turnOffEvents();
 				this.$events.fire('loading-lock', user.id);
 				axios.post('/api/user/' + user.id + '/lock')
+					.then(response => this.onStepSuccess(response));
+			},
+
+			approve(user) {
+				this.turnOffEvents();
+				this.$events.fire('loading-approve', user.id);
+				axios.post('/api/user/' + user.id + '/approve')
+					.then(response => this.onStepSuccess(response));
+			},
+
+			reject(user) {
+				console.log("reject action");
+				this.turnOffEvents();
+				this.$events.fire('loading-reject', user.id);
+				axios.post('/api/user/' + user.id + '/reject')
 					.then(response => this.onStepSuccess(response));
 			},
 
@@ -179,6 +195,8 @@
 				this.$events.on('legal', data => this.legal(data));
 
 				this.$events.on('lock', data => this.lock(data));
+				this.$events.on('approve', data => this.approve(data));
+				this.$events.on('reject', data => this.reject(data));
 				this.$events.on('delete', data => this.delete(data));
 			},
 
@@ -188,6 +206,8 @@
 				this.$events.off('legal');
 
 				this.$events.off('lock');
+				this.$events.off('approve');
+				this.$events.off('reject');
 				this.$events.off('delete');
 			}
 		},

@@ -16,14 +16,24 @@
                     <i class="fa fa-book"></i>
                 </span>
             </button>
-            <button v-if="user.is_admin && (rowData.id_status == 'pending' || rowData.id_status == 'rejected')" type="button" class="btn btn-info btn-lg" data-toggle="tooltip" data-placement="bottom" title="Send verification reminder" @click="isConfirming = true">
+            <!-- <button v-if="user.is_admin && (rowData.id_status == 'pending' || rowData.id_status == 'rejected')" type="button" class="btn btn-info btn-lg" data-toggle="tooltip" data-placement="bottom" title="Send verification reminder" @click="isConfirming = true">
                 <span class="icon" v-html="sendButtonContent">
                     <i class="fa fa-send-o"></i>
                 </span>
+            </button> -->
+            <button v-if="user.is_admin && (rowData.user_status == 'pending')" type="button" class="btn btn-success" :disabled="approve_loading" data-toggle="tooltip" data-placement="bottom" title="Approve user" @click="itemAction('approve', rowData, rowIndex)">
+                <span class="icon" v-html="approveButtonContent">
+                    <i class="fa fa-check"></i>
+                </span>
             </button>
-            <button type="button" class="btn btn-danger" @click="isDeleteConfirming = true" :disabled="delete_loading" data-toggle="tooltip" data-placement="bottom" title="Delete user">
-                <span class="icon" v-html="deleteButtonContent">
+            <button v-if="user.is_admin && (rowData.user_status == 'pending')" type="button" class="btn btn-danger" :disabled="reject_loading" data-toggle="tooltip" data-placement="bottom" title="Reject user" @click="itemAction('reject', rowData, rowIndex)">
+                <span class="icon" v-html="rejectButtonContent">
                     <i class="fa fa-times"></i>
+                </span>
+            </button>
+            <button type="button" class="btn btn-secondary" @click="isDeleteConfirming = true" :disabled="delete_loading" data-toggle="tooltip" data-placement="bottom" title="Delete user">
+                <span class="icon" v-html="deleteButtonContent">
+                    <i class="fa fa-trash-o"></i>
                 </span>
             </button>
         </div>
@@ -67,6 +77,8 @@ export default {
             isDeleting: false,
             isDeleteConfirming: false,
             lock_loading: false,
+            approve_loading: false,
+            reject_loading: false,
             delete_loading: false,
         };
     },
@@ -75,6 +87,8 @@ export default {
         this.user = window.user;
         this.$events.on('loading', data => this.setLoading(data));
         this.$events.on('loading-lock', data => this.setLoadingLock(data));
+        this.$events.on('loading-approve', data => this.setApproveLock(data));
+        this.$events.on('loading-reject', data => this.setRejecctLock(data));
         this.$events.on('loading-delete', data => this.setLoadingDelete(data));
         this.$events.on('loading-complete', data => this.setLoadingComplete(data));
     },
@@ -82,6 +96,8 @@ export default {
     beforeDestroy() {
         this.$events.off('loading');
         this.$events.off('loading-lock');
+        this.$events.off('loading-approve');
+        this.$events.off('loading-reject');
         this.$events.off('loading-delete');
         this.$events.off('loading-complete');
     },
@@ -92,6 +108,7 @@ export default {
 
     methods: {
         itemAction(action, data, index){
+            console.log("action: " + action + " data: " + data);
             this.$events.fire(action, data);            
         },
 
@@ -103,6 +120,14 @@ export default {
             this.lock_loading = data == this.rowData.id;
         },
 
+        setApproveLock(data) {
+            this.approve_loading = data == this.rowData.id;
+        },
+
+        setRejecctLock(data) {
+            this.reject_loading = data == this.rowData.id;
+        },
+
         setLoadingDelete(data) {
             this.delete_loading = data == this.rowData.id;
         },
@@ -110,6 +135,8 @@ export default {
         setLoadingComplete(data) {
             this.loading = false;
             this.lock_loading = false;
+            this.approve_loading = false;
+            this.reject_loading = false;
             this.delete_loading = false;
             this.isReminding = false;
             this.isDeleting = false;
@@ -143,9 +170,16 @@ export default {
             return this.lock_loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : initial;
         },
 
-        deleteButtonContent() {
+        approveButtonContent() {
+            return this.approve_loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : '<i class="fa fa-check"></i>';
+        }, 
 
-            return this.delete_loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : "<i class='fa fa-times'></i>";
+        rejectButtonContent() {
+            return this.reject_loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : "<i class='fa fa-times'></i>";
+        },
+
+        deleteButtonContent() {
+            return this.delete_loading ? "<i class='fa fa-circle-o-notch fa-spin'></i>" : "<i class='fa fa-trash-o'></i>";
         }
     }
   }

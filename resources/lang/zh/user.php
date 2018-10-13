@@ -36,6 +36,7 @@ return [
     'documents_success' => '更新成功',
     'verify' => "认证",
     'reject' => '驳回',
+    'approved' => '批准',
     'pending_verification' => '审核中',
     'pending' => '未审核',
     'verified' => '已通过审核',
@@ -57,6 +58,10 @@ return [
     "locked" => '用户已被封锁',
     "unlocked" => "用户已被解锁",
 
+    "has_approved" => '用户已被批准',
+    "has_rejected" => '用户已被驳回',
+    
+    "waiting_approval" => '您的账号等待批准当中',
 
     "locked_message" => "您的账号已被管理员封锁, 请电邮至support@newleaf.com.my了解详情",
     "referrer" => "推荐者",
