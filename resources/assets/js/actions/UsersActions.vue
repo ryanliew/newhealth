@@ -6,12 +6,12 @@
                     <i class="fa fa-eye"></i>
                 </span>
             </button>
-            <button type="button" class="btn btn-warning" @click="itemAction('lock', rowData, rowIndex)"  :disabled="lock_loading" data-toggle="tooltip" data-placement="bottom" title="Lock/Unlock user">
+            <button v-if="rowData.user_status != 'pending'" type="button" class="btn btn-warning" @click="itemAction('lock', rowData, rowIndex)"  :disabled="lock_loading" data-toggle="tooltip" data-placement="bottom" title="Lock/Unlock user">
                 <span class="icon" v-html="lockButtonContent">
                     <i class="fa fa-lock"></i>
                 </span>
             </button>
-            <button type="button" class="btn btn-info" @click="itemAction('legal', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Change legal status" v-if="!(rowData.id_status == 'pending' || rowData.id_status == 'pending_verification' || rowData.id_status == 'rejected') && rowData.has_verified_sale">
+            <button type="button" class="btn btn-info" @click="itemAction('legal', rowData, rowIndex)" data-toggle="tooltip" data-placement="bottom" title="Change legal status" v-if="!(rowData.user_status == 'pending' || rowData.user_status == 'pending_verification' || rowData.id_status == 'rejected') && rowData.has_verified_sale">
                 <span class="icon">
                     <i class="fa fa-book"></i>
                 </span>
@@ -21,17 +21,17 @@
                     <i class="fa fa-send-o"></i>
                 </span>
             </button> -->
-            <button v-if="user.is_admin && (rowData.user_status == 'pending')" type="button" class="btn btn-success" :disabled="approve_loading" data-toggle="tooltip" data-placement="bottom" title="Approve user" @click="itemAction('approve', rowData, rowIndex)">
+            <button v-if="user.is_admin && (rowData.user_status == 'pending')" type="button" class="btn btn-success" :disabled="approve_loading" data-toggle="tooltip" data-placement="bottom" title="Approve user" @click="itemAction('approveUser', rowData, rowIndex)">
                 <span class="icon" v-html="approveButtonContent">
                     <i class="fa fa-check"></i>
                 </span>
             </button>
-            <button v-if="user.is_admin && (rowData.user_status == 'pending')" type="button" class="btn btn-danger" :disabled="reject_loading" data-toggle="tooltip" data-placement="bottom" title="Reject user" @click="itemAction('reject', rowData, rowIndex)">
+            <button v-if="user.is_admin && (rowData.user_status == 'pending')" type="button" class="btn btn-danger" :disabled="reject_loading" data-toggle="tooltip" data-placement="bottom" title="Reject user" @click="itemAction('rejectUser', rowData, rowIndex)">
                 <span class="icon" v-html="rejectButtonContent">
                     <i class="fa fa-times"></i>
                 </span>
             </button>
-            <button type="button" class="btn btn-secondary" @click="isDeleteConfirming = true" :disabled="delete_loading" data-toggle="tooltip" data-placement="bottom" title="Delete user">
+            <button v-if="rowData.user_status != 'pending'" type="button" class="btn btn-secondary" @click="isDeleteConfirming = true" :disabled="delete_loading" data-toggle="tooltip" data-placement="bottom" title="Delete user">
                 <span class="icon" v-html="deleteButtonContent">
                     <i class="fa fa-trash-o"></i>
                 </span>
@@ -108,7 +108,6 @@ export default {
 
     methods: {
         itemAction(action, data, index){
-            console.log("action: " + action + " data: " + data);
             this.$events.fire(action, data);            
         },
 

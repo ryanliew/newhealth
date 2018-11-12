@@ -77,7 +77,7 @@ export default {
         },
 
         proceedDelete() {
-            this.itemAction('delete', this.rowData, this.rowIndex);
+            this.itemAction('deletePurchase', this.rowData, this.rowIndex);
         },
 
         setLoading(data) {

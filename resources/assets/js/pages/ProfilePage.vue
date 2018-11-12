@@ -46,8 +46,6 @@
 										:focus="false"
 										:hideLabel="false">
 									</text-input>
-
-									<referral-link :code="user.referral_code" v-if="userNotGrower"></referral-link>
 									
 									<text-input v-model="user.name" 
 											:defaultValue="user.name"
@@ -193,7 +191,7 @@
 										:hideLabel="false">
 									</text-input>
 
-									<!-- <text-input v-model="user.beneficiary_name" 
+									<text-input v-model="user.beneficiary_name" 
 										:defaultValue="user.beneficiary_name"
 										:required="true"
 										type="text"
@@ -235,12 +233,12 @@
 										:editable="false"
 										:focus="false"
 										:hideLabel="false">
-									</text-input> -->
+									</text-input>
 								</div>
 							</div>
 						</div>
 					</div>
-					<user-documents :selectedUser="user" ref="documents"></user-documents>
+					<!-- <user-documents :selectedUser="user" ref="documents"></user-documents> -->
 
 					<button class="btn btn-primary mb-3 " @click="isApplying = true" v-if="!userNotGrower">{{ "user.apply_as_advisor" | trans }}</button>
 					<user-level :selectedUser="user" ref="levels" v-if="currentUser.is_admin" @back="back"></user-level>
@@ -436,7 +434,7 @@
 			{
 				this.getUser();
 			}
-			this.$refs.documents.setKycDocs();
+			// this.$refs.documents.setKycDocs();
 			this.getContacts();
 
 			if(this.getParameterByName('document'))
@@ -478,7 +476,7 @@
 				this.isViewingTransactions = false;
 				this.isViewingGenoTree = false;
 				this.isViewingDashboard = false;
-				Vue.nextTick(() => this.$refs.documents.setKycDocs());
+				// Vue.nextTick(() => this.$refs.documents.setKycDocs());
 				Vue.nextTick(() => this.$refs.levels.getParents());
 			},
 
@@ -500,14 +498,14 @@
 				this.getUser();
 			},
 
-			getUser() {
-				axios.get('/api/user/' + this.user.id )
-					.then(response => this.setUser(response));
-			},
+			// getUser() {
+			// 	axios.get('/api/user/' + this.user.id )
+			// 		.then(response => this.setUser(response));
+			// },
 
-			setUser(response) {
-				this.user = response.data;
-			},
+			// setUser(response) {
+			// 	this.user = response.data;
+			// },
 
 			back() {
 				this.$emit('back');

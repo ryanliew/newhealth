@@ -28,7 +28,7 @@ class User extends Authenticatable
 
     protected $dates = ['deleted_at', 'created_at', 'updated_at'];
 
-    protected $with = ['package', 'addresses', 'contacts'];
+    // protected $with = ['package', 'addresses', 'contacts'];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -54,6 +54,16 @@ class User extends Authenticatable
         return $this->belongsTo('App\Package');
     }
 
+    public function ewallet()
+    {
+        return $this->hasOne('App\Ewallet');
+    }
+
+    public function redemptions()
+    {
+        return $this->hasMany('App\Redemption');
+    }
+
     public function purchases()
     {
         return $this->hasMany('App\Purchase');
@@ -72,6 +82,11 @@ class User extends Authenticatable
     public function transactions()
     {
         return $this->hasMany('App\Transaction');
+    }
+
+    public function accounts()
+    {
+        return $this->hasMany('App\Account');
     }
 
     public function getPersonalAddressAttribute()

@@ -21,7 +21,7 @@ class Transaction extends Model
 
 	public function target()
 	{
-		return $this->belongsTo('App\User', 'target_id');
+		return $this->belongsTo('App\Account', 'target_id');
 	}
 
 	public function purchase()
@@ -56,14 +56,29 @@ class Transaction extends Model
 	 	return $transaction;
 	} 
 
-	public static function TYPE_COMMISION()
+	public static function ONE_TIME_COMMISSION()
 	{
 		return 'one_time_commision';
 	}
 
-	public static function DESCRIPTION_TREE_PURCHASE()
+	public static function E_WALLET_COMMISSION()
 	{
-		return 'tree_purchase';
+		return 'e_wallet_commision';
+	}
+
+	public static function E_WALLET_LEADERSHIP_BONUS()
+	{
+		return 'e_wallet_leadership_bonus';
+	}
+
+	public static function LEADERSHIP_BONUS()
+	{
+		return 'leadership_bonus';
+	}
+
+	public static function DESCRIPTION_MACHINE_PURCHASE()
+	{
+		return 'machine_purchase';
 	}
 
 	public static function STATUS_PAID()

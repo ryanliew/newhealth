@@ -6,7 +6,7 @@
 					{{ 'user.copy-referral' | trans }}
 				</button>
 			</div>
-			<input class="form-control" type="text" id="copy" :value="url">
+			<input class="form-control" type="text" :id="'copy-' + code" :value="url">
 		</div>
 	</div>
 </template>
@@ -16,13 +16,14 @@
 		props: ['code'],
 		data() {
 			return {
-
+		
 			};
 		},
 
 		methods: {
 			copyLink() {
-				let input = document.getElementById("copy");
+				console.log("code: " + this.code);
+				let input = document.getElementById("copy-"+this.code);
 				input.select();
 				document.execCommand("Copy");
 

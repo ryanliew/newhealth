@@ -78,11 +78,9 @@
 
         methods: {
             doFilter () {
-                console.log("dofilter in vuefilterbar");
                 this.$events.fire('filter-set', { month: this.filterMonth, text: this.filterText, start: this.filterDateStart, end: this.filterDateEnd });
             },
             resetFilter () {
-                console.log("resetFilter in vuefilterbar");
                 this.filterText = '';
                 this.filterDateStart = '';
                 this.filterDateEnd = '';

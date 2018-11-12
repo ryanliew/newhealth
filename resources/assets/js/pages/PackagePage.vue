@@ -27,11 +27,14 @@
 		data() {
 			return {
 				fields: [
-					{ name: 'tree_count', title: this.tableTitle('package.tree_count'), sortField: 'tree_count', callback: 'treecount'},					
+					{ name: 'package_photo_path', title: this.tableTitle('package.package_picture'), callback: 'image'},					
+					{ name: 'name', title: this.tableTitle('package.package_name'), sortField: 'name'},					
+					// { name: 'tree_count', title: this.tableTitle('package.tree_count'), sortField: 'tree_count', callback: 'treecount'},					
 					{ name: 'price', title: this.tableTitle('package.price'), sortField: 'price', callback: 'currency'},
-					{ name: 'price_std', title: this.tableTitle('package.price_std'), sortField: 'price_std', callback: 'currency_std'},
-					{ name: 'price_promotion', title: this.tableTitle('package.price_promotion'), sortField: 'price_promotion', callback: 'currency'},
-					{ name: 'price_std_promotion', title: this.tableTitle('package.price_std_promotion'), sortField: 'price_std_promotion', callback: 'currency_std'},
+					{ name: 'description', title: this.tableTitle('package.package_description'), sortField: 'description'},
+					// { name: 'price_std', title: this.tableTitle('package.price_std'), sortField: 'price_std', callback: 'currency_std'},
+					// { name: 'price_promotion', title: this.tableTitle('package.price_promotion'), sortField: 'price_promotion', callback: 'currency'},
+					// { name: 'price_std_promotion', title: this.tableTitle('package.price_std_promotion'), sortField: 'price_std_promotion', callback: 'currency_std'},
 					{ name: '__component:packages-actions', title: this.tableTitle('table.actions')}
 				],
 				isEditing: false,

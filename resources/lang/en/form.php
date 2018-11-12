@@ -9,6 +9,7 @@ return [
     |
     */
 
-    'submit' => 'Submit'
+    'submit' => 'Submit',
+    'redeem' => 'Redeem',
 
 ];

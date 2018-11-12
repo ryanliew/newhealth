@@ -25,18 +25,26 @@ return [
     'total' => 'Total',
     'purchase_details' => 'Purchase details',
     "deleted" => "Purchase deleted",
+    "saving" => "Save up to",
+    'packages' => 'Packages',
+    'diamond' => 'Diamond',
+    'platinum' => 'Platinum',
+    'silver' => 'Silver',
+    'original_price' => 'Original Price',
+    'cash_back' => 'Cash Back',
 
     'success' => 'Purchase order created successfully',
 
     'base_price' => 'Recommended Retail Price (RRP) per Tree: RM 8,000',
     'user' => 'Buyer',
+    'buy_with_account' => 'Buy with account',
     'default_user' => 'Leave empty to buy for yourself',
     'update' => 'Update',
     'cancel' => 'Cancel update',
     'updated' => 'Purchase updated',
     'rejected' => 'Rejected',
 
-    'receipt_description' => 'Deposit for (:number) tree purchase',
+    'receipt_description' => 'Deposit for :name purchase',
     'download_receipt' => "Download receipt"
     
 ];

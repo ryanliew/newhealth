@@ -23,6 +23,7 @@
 
 <script>
 	import Purchase from "../components/Purchase.vue";
+	
 	export default {
 		props: [''],
 
@@ -37,7 +38,7 @@
 					{ name: 'status', title: this.tableTitle('purchase.status'), sortField: 'purchases.status', callback: 'purchaseStatusLabel'},
 					{ name: '__component:purchases-actions', title: this.tableTitle('table.actions')}
 				],
-				searchables: "purchases.status,users.name",
+				searchables: "purchases.id,purchases.status,users.name",
 				isPurchasing: false,
 				selectedPurchase: '',
 				cancelable: true
@@ -57,8 +58,10 @@
 			}
 
 			if(this.getParameterByName('id')) {
+				this.$events.fire('filter-set', { month: '', text: this.getParameterByName('id'), start: '', end: '' });
 				window.events.$on('table-loaded', function(){
-					let data = _.filter(this.$refs.purchases.$refs.vuetable.tableData, function(purchase) { return purchase.id == this.getParameterByName('id'); }.bind(this));
+					let data = _.filter(this.$refs.purchases.$refs.vuetable.tableData, function(purchase) { 
+						return purchase.id == this.getParameterByName('id'); }.bind(this));
 					if(data.length > 0)
 						this.view(data[0]);
 				}.bind(this));
@@ -103,7 +106,7 @@
 			},
 
 			receipt(purchase){
-				this.turnOffEvents();
+				// this.turnOffEvents();
 				window.location.href = "/exports/receipt/" + purchase.id;
 			},
 
@@ -124,13 +127,13 @@
 			turnOnEvents() {
 				this.$events.on('view', data => this.view(data));
 				this.$events.on('receipt', data => this.receipt(data));
-				this.$events.on('delete', data => this.postDelete(data));
+				this.$events.on('deletePurchase', data => this.postDelete(data));
 			},
 
 			turnOffEvents() {
 				this.$events.off('view');
 				this.$events.off('receipt');
-				this.$events.off('delete');
+				this.$events.off('deletePurchase');
 			}
 		},
 

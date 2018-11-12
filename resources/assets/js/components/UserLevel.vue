@@ -11,7 +11,7 @@
 			</div>
 		</div>
 		<div class="card-block">
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col">
 					<selector-input :potentialData="users"
 						v-model="selectedParent" 
@@ -40,7 +40,7 @@
 						:unclearable="true">
 					</selector-input>	
 				</div>
-			</div>
+			</div> -->
 			<div class="form-check mt-4">
 				<input class="form-check-input" type="checkbox" id="is-admin" v-model="form.is_admin">
 				<label class="form-check-label" for="is-admin">{{ 'user.is_admin' | trans }}</label>

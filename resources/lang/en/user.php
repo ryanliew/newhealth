@@ -77,5 +77,11 @@ return [
 
     "advisor_application_received" => "We have received your application. Our administrators will go through your submission and get back to you soon.",
     "content_is_for_advisor" => "This content is only for advisor",
-    "apply_as_advisor" => "Apply as advisor"
+    "apply_as_advisor" => "Apply as advisor",
+
+    "account_level_0" => "Customer",
+    "account_level_1" => "Silver",
+    "account_level_2" => "Platinum",
+    "account_level_3" => "Diamond",
+
 ];

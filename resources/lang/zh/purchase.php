@@ -24,6 +24,14 @@ return [
     'total' => '总价格',
     'purchase_details' => '订单详情',
     'deleted' => '订单已被删除',
+    "saving" => '节省高达',
+    'packages' => '配套',
+    'diamond' => '钻石',
+    'platinum' => '白金',
+    'silver' => '白银',
+    'buy_with_account' => '用账号买',
+    'original_price' => '原价',
+    'cash_back' => '回扣',
 
     'success' => '订单已被接纳',
 

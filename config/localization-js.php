@@ -30,7 +30,9 @@ return [
         'package',
         'form',
         'transaction',
-        'post'
+        'post',
+        'resell',
+        'redemption',
     ],
 
     /*

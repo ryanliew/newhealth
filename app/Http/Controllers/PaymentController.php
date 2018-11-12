@@ -6,6 +6,8 @@ use App\Notifications\PaymentUpdatedNotification;
 use App\Payment;
 use App\Purchase;
 use App\User;
+use App\Account;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification;
@@ -68,7 +70,6 @@ class PaymentController extends Controller
         if(!$payment->is_verified)
         {
             $payment->update(['is_verified' => true]);
-
             $payment->purchase->verify();
         }
         

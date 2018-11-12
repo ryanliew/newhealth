@@ -14,7 +14,7 @@ class AddLockToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean("is_locked")->default(true);
+            $table->boolean("is_locked")->default(false);
         });
     }
 

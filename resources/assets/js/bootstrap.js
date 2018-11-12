@@ -55,7 +55,8 @@ if (token) {
 //     encrypted: true
 // });
 window.Vue = require('vue');
-
+Vue.config.devtools = true;
+Vue.config.performance = true;
 window.events = new Vue();
 
 window.flash = function(message, level = 'success'){

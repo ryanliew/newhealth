@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Address;
 use App\Notifications\RegisterSuccess;
 use App\User;
+use App\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -53,13 +54,20 @@ class ProfileController extends Controller
             'id_type' => 'required'
     	]);
 
+        $account = Account::create([
+            'user_id' => auth()->user()->id,
+            'referral_code' => auth()->user()->country_id,
+            ]);
+
+        $referrer;
+
     	if(request()->referrer_code && request()->referrer_code !== "")
     	{
-    		$referrer = User::where('referral_code', request()->referrer_code)->first();
-    		auth()->user()->appendToNode($referrer)->save();
-    	}
+            $referrer = Account::where('referral_code', request()->referrer_code)->first();  
+    	} 
 
-
+        $referrer ? $account->appendToNode($referrer)->save() : $account->saveAsRoot();
+            
     	auth()->user()->update([
             'email' => request()->email,
             'name' => request()->name,

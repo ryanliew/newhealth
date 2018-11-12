@@ -88,10 +88,11 @@ return [
     'process_registration' => 'Your registration is being processed.',
     'referral_info' => 'Referral information',
     'general_info'  => 'General information',
-    'referrer_name' => 'Referrer name: :name',
+    'referrer_name' => ':name',
     'referrer_fill' => 'Fill in the referrer ID',
     'referrer_not_found' => 'Referrer not found',
     'beneficiary_info' => 'Nominee information',
+    'ancestor_not_found' => 'Ancestor not found',
 
     'select_package' => 'Select purchase',
     'selected_package' => 'Selected purchase',

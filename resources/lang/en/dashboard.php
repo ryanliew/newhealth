@@ -18,6 +18,18 @@ return [
     'my_account_status' => 'My account status',
     'date' => "Date",
     "latest_news" => "Latest news",
-    "accrued_commission" => "Accrued commission"
+    "accrued_commission" => "Accrued commission",
+    "e_wallet_amount" => "E-wallet amount",
+    "account_level" => "Account level",
+    "my_accounts" => "My accounts",
+    "buy_machine" => "Buy :count machine or 1 silver account to :level",
+    "buy_silver" => "Buy :count silver account to :level",
+    "buy_platinum" => "Buy :count platinum account to :level",
+    "account_max" => "This account has highest qualification",
+    "step_to_qualification" => "Step to next qualification",
+    "progress_to_next_level" => "Progress to next level",
+    "account" => "account",
+    "accounts" => "Accounts",
+    "pending_redemptions" => "Pending Redemptions",
     
 ];

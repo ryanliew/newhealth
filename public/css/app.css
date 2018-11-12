@@ -11336,7 +11336,7 @@ right connector from last child*/
   margin-bottom: 15px;
 }
 
-.payment-details-grid div:not(.text-center) {
+.payment-details-grid div:not(.text-center):not(.form-group):not(.text-left) {
   font-weight: bold;
   background: #ccc;
 }

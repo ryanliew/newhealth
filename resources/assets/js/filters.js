@@ -45,6 +45,27 @@ Vue.filter('formatPurchaseStatus', function(value){
 	return '<span class="badge ' + color + '">' + text + '</span>';
 });
 
+Vue.filter('formatRedemptionStatus', function(value){
+	let color = 'badge-success';
+	let text = 	lang.get('redemption.' + value);
+	switch(value) {
+		case 'pending':
+			color = 'badge-warning';
+			break;
+		case 'pending_verification':
+			color = 'badge-info';
+			break;
+		case 'rejected':
+			color = 'badge-danger';
+			break;
+		case 'complete':
+			color = 'badge-success';
+			break;
+	}
+
+	return '<span class="badge ' + color + '">' + text + '</span>';
+});
+
 Vue.filter('formatUserStatus', function(value){
 	let color = 'badge-info';
 	let text = 	lang.get('user.' + value);

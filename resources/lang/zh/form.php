@@ -9,6 +9,7 @@ return [
     |
     */
 
-    'submit' => '提交'
+    'submit' => '提交',
+    'redeem' => '赎买',
 
 ];

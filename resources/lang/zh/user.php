@@ -72,6 +72,11 @@ return [
 
     "advisor_application_received" => "我们已收到您的申请，我们的管理员将尽快给您答复",
     "content_is_for_advisor" => "此内容只开放于顾问成员",
-    "apply_as_advisor" => "成为顾问"
+    "apply_as_advisor" => "成为顾问",
+
+    "account_level_0" => "普通",
+    "account_level_1" => "白银",
+    "account_level_2" => "白金",
+    "account_level_3" => "钻石",
 
 ];

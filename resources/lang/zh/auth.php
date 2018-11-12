@@ -86,10 +86,11 @@ return [
     'process_registration' => '我们正在处理您的注册。',
     'referral_info' => '推荐者资料',
     'general_info'  => '一般资料',
-    'referrer_name' => '推荐者名称: :name',
+    'referrer_name' => ':name',
     'referrer_fill' => '请输入推荐者ID',
     'referrer_not_found' => 'ID错误',
     'beneficiary_info' => '提名人资料',
+    'ancestor_not_found' => '祖上错误',
 
     'select_package' => '选择配套',
     'selected_package' => '配套',

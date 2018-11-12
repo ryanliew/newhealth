@@ -54,6 +54,11 @@ return [
 
     "payments_updated" => "Payment slip uploaded",
     "payments_updated_message" => ":name has uploaded his payment slip. Press the button below to check it out",
-    "view_payment" => "View payment"
+    "view_payment" => "View payment",
+
+    "redemption_request" => "Redemption request",
+    'view_redemption' => "View redemption",
+    "redemption_created_message" => ":name has created a redemption request. Press the button below to check it out"
+
     
 ];

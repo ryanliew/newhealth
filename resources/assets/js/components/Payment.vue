@@ -119,7 +119,7 @@
 					<form @submit.prevent="confirmReject" 
 						@keydown="form.errors.clear($event.target.name)" 
 						@input="form.errors.clear($event.target.name)"
-						v-if="user.is_admin && payment && !payment.is_verified && purchase.status !== 'rejected'"">
+						v-if="user.is_admin && payment && !payment.is_verified && purchase.status !== 'rejected'">
 							<button type="submit" class="btn btn-danger" :disabled="rejectForm.submitting" v-html="submitRejectButtonContent"></button>
 					</form>
 				</div>

@@ -16,14 +16,26 @@ import PostPage from './pages/PostPage.vue';
 import MarketingMaterialPage from './pages/MarketingMaterialPage.vue';
 import TreeManagementPage from './pages/TreeManagementPage.vue';
 import ReportsPage from './pages/ReportsPage.vue';
+import ResellAccountPage from './pages/ResellAccountPage.vue';
+import RedemptionItemPage from './pages/RedemptionItemPage.vue';
+import RedemptionPage from './pages/RedemptionPage.vue';
+import OrganizationPage from './pages/OrganizationPage.vue';
 import translations from './vue-translations.js';
 
+import { MdButton, MdContent, MdTabs, MdRadio, MdField } from 'vue-material/dist/components'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
 
 require('./bootstrap');
 
 Vue.use(VueRouter);
 Vue.use(VueNoty);
 Vue.use(VueEvents);
+Vue.use(MdButton);
+Vue.use(MdContent);
+Vue.use(MdTabs);
+Vue.use(MdRadio);
+Vue.use(MdField);
 /**
  * Initialize translation functions
  * @type {[type]}
@@ -80,14 +92,17 @@ const routes = [
 	{ path: '/profile', component: ProfilePage },
 	{ path: '/purchases', component: PurchasePage },
 	{ path: '/users', component: UserPage },
-	{ path: '/organization', component: GenoPage },
+	{ path: '/organization', component: OrganizationPage },
 	{ path: '/packages', component: PackagePage },
 	{ path: '/transactions', component: TransactionPage },
 	{ path: '/payouts', component: PayoutReportPage },
 	{ path: '/news', component: PostPage },
 	{ path: '/materials', component: MarketingMaterialPage },
 	{ path: '/trees', component: TreeManagementPage },
-	{ path: '/reports', component: ReportsPage }
+	{ path: '/reports', component: ReportsPage },
+	{ path: '/resell', component: ResellAccountPage },
+	{ path: '/items', component: RedemptionItemPage },
+	{ path: '/redemptions', component: RedemptionPage }
 ];
 
 const router = new VueRouter({ routes, linkActiveClass: 'opened' });
@@ -132,6 +147,7 @@ Vue.component('UsersActions', require('./actions/UsersActions.vue'));
 Vue.component('PackagesActions', require('./actions/PackagesActions.vue'));
 Vue.component('PayoutsActions', require('./actions/PayoutsActions.vue'));
 Vue.component('PostsActions', require('./actions/PostsActions.vue'));
+Vue.component('RedemptionActions', require('./actions/RedemptionActions.vue'));
 
 // Project components
 Vue.component('side-nav', require('./components/SideNavigation.vue'));

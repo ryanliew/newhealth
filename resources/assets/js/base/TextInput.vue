@@ -33,6 +33,7 @@
 			{
 				this.$refs.input.focus();
 			}
+
 		},
 
 		methods: {

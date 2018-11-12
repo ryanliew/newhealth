@@ -33,7 +33,7 @@
 			@foreach($transactions as $key => $transaction)
 			<tr>
 				<td cellspacing="0" cellpadding="0">{{ $transaction->date->format("j/n/Y") }}</td>
-				<td cellspacing="0" cellpadding="0">{{ __('transaction.' . $transaction->description, ['name' => $transaction->target->name]) }}</td>
+				<td cellspacing="0" cellpadding="0">{{ __('transaction.' . $transaction->description, ['name' => $transaction->target->referral_code]) }}</td>
 				<td cellspacing="0" cellpadding="0">
 					<div class="currency">{{ $transaction->is_std ? 'USD' : 'RM'}}</div>
 					<div class="amount text-right">{{ number_format($transaction->amount, 2, ".", ",") }}</div>

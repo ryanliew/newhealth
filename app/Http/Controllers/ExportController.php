@@ -271,7 +271,7 @@ class ExportController extends Controller
         
         $title = 'receipt';
 
-        // return view('pdf.transactions', ['transactions' => $transactions, 'date' => $date, 'user' => $user]);
+        // return view('pdf.receipt', ['purchase' => $purchase, 'user' => $purchase->user]);
 
         $pdf = App::make('dompdf.wrapper');
         $pdf->loadView('pdf.receipt', ['purchase' => $purchase, 'user' => $purchase->user]);

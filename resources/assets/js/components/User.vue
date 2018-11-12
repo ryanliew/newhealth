@@ -193,14 +193,14 @@
 									</radio-group-input>
 								</div>
 							</div>
-							<hr>
+							<!-- <hr>
 							<h4>{{ 'auth.company_info' | trans }}</h4>
 							<div class="form-check">
 								<input class="form-check-input" type="checkbox" id="company-registration" v-model="isCompanyRegistration">
 								<label class="form-check-label" for="company-registration">{{ 'auth.registering_company' | trans }}</label>
-							</div>
+							</div> -->
 
-							<div v-if="isCompanyRegistration">
+							<!-- <div v-if="isCompanyRegistration">
 								<text-input v-model="form.company_name" 
 										:defaultValue="form.company_name"
 										:required="true"
@@ -427,7 +427,7 @@
 										</tbody>
 									</table>
 								</div>
-							</div>
+							</div> -->
 							<hr>
 	    					<h4>{{ 'auth.bank_info' | trans }}</h4>
 	    					<div class="row">
@@ -497,7 +497,7 @@
 									</text-input>
 								</div>
 							</div>
-							<hr>
+							<!-- <hr>
 	    					<h4>{{ 'auth.beneficiary_info' | trans }}</h4>
 	    					<div class="row">
 	    						<div class="col-sm">
@@ -554,7 +554,7 @@
 										:error="form.errors.get('beneficiary_contact')">
 									</text-input>
 								</div>
-							</div>
+							</div> -->
 						</template>
 						<button type="submit" class="btn btn-success" :disabled="form.submitting" v-html="submitButtonContent"></button>
 						<button class="btn btn-primary" @click="back"><i class="fa fa-arrow-left"></i> {{ 'table.back' | trans }}</button>

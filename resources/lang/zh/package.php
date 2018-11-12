@@ -9,7 +9,7 @@ return [
     */
 
     'packages' => '配套',
-    'tree_count' => '种植数量',
+    'machine_count' => '机器数量',
     'price' => '价格 (马币)',
     'price_std' => '价格 (美金)',
     'price_promotion' => '优惠价格 (马币)',
@@ -17,6 +17,14 @@ return [
     'package_details' => '配套详情',
     'make_new_package' => '增加配套',
     'update_success' => '已更新配套详情',
-    'create_success' => '已增加配套'
+    'create_success' => '已增加配套',
+    'can_redeem' => '可赎买',
+    'can_upgrade' => '可升级',
+    'package_name' => '配套名称',
+    'package_description' => '描述配套',
+    'package_picture' => '配套照片',
+    'invalid_package_picture' => '请选择配套照片',
+    'package_picture_exceed_size' => '配套照片大小不能超过8MB',
+
     
 ];

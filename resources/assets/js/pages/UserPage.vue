@@ -145,15 +145,14 @@
 					.then(response => this.onStepSuccess(response));
 			},
 
-			approve(user) {
+			approveUser(user) {
 				this.turnOffEvents();
 				this.$events.fire('loading-approve', user.id);
 				axios.post('/api/user/' + user.id + '/approve')
 					.then(response => this.onStepSuccess(response));
 			},
 
-			reject(user) {
-				console.log("reject action");
+			rejectUser(user) {
 				this.turnOffEvents();
 				this.$events.fire('loading-reject', user.id);
 				axios.post('/api/user/' + user.id + '/reject')
@@ -195,8 +194,8 @@
 				this.$events.on('legal', data => this.legal(data));
 
 				this.$events.on('lock', data => this.lock(data));
-				this.$events.on('approve', data => this.approve(data));
-				this.$events.on('reject', data => this.reject(data));
+				this.$events.on('approveUser', data => this.approveUser(data));
+				this.$events.on('rejectUser', data => this.rejectUser(data));
 				this.$events.on('delete', data => this.delete(data));
 			},
 
@@ -206,8 +205,8 @@
 				this.$events.off('legal');
 
 				this.$events.off('lock');
-				this.$events.off('approve');
-				this.$events.off('reject');
+				this.$events.off('approveUser');
+				this.$events.off('rejectUser');
 				this.$events.off('delete');
 			}
 		},

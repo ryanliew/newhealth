@@ -8,6 +8,7 @@ use App\Notifications\IdentityVerificationDocumentsRejectedNotification;
 use App\Notifications\KYCUpdatedNotification;
 use App\Notifications\RemindUploadDocumentNotification;
 use App\User;
+use App\Account;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
@@ -61,7 +62,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return $user->append(['address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std', 'unpaid_commission', 'unpaid_commission_std', 'transaction_start', 'transaction_end']); 
+        return $user->append(['addresses', 'contact_number', 'address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std', 'unpaid_commission', 'unpaid_commission_std', 'transaction_start', 'transaction_end']); 
     }
 
     /**
@@ -94,23 +95,23 @@ class UserController extends Controller
             'phone' => 'required',
             'password' => 'sometimes|required|confirmed',
             'identification' => 'required',
-            'company_name' => 'sometimes|required',
-            'company_business_registration' => 'sometimes|required',
-            'company_type' => 'sometimes|required',
-            'company_incorporation_place' => 'sometimes|required',
-            'company_incorporation_date' => 'sometimes|required',
-            'company_address_line_1' => 'sometimes|required',
-            'company_postcode' => 'sometimes|required',
-            'company_phone' => 'sometimes|required',
-            'company_email' => 'sometimes|required',
+            // 'company_name' => 'sometimes|required',
+            // 'company_business_registration' => 'sometimes|required',
+            // 'company_type' => 'sometimes|required',
+            // 'company_incorporation_place' => 'sometimes|required',
+            // 'company_incorporation_date' => 'sometimes|required',
+            // 'company_address_line_1' => 'sometimes|required',
+            // 'company_postcode' => 'sometimes|required',
+            // 'company_phone' => 'sometimes|required',
+            // 'company_email' => 'sometimes|required',
             'bank_name' => 'required',
             'bank_address' => 'required',
             'account_type' => 'required',
             'account_no' => 'required',
-            'beneficiary_name' => 'required',
-            'beneficiary_contact' => 'required',
-            'beneficiary_address' => 'required|max:255',
-            'beneficiary_identification' => 'required'
+            // 'beneficiary_name' => 'required',
+            // 'beneficiary_contact' => 'required',
+            // 'beneficiary_address' => 'required|max:255',
+            // 'beneficiary_identification' => 'required'
         ]);
 
         $status = $user->id_status !== "pending" ? "pending_verification" : $user->id_status;
@@ -122,22 +123,22 @@ class UserController extends Controller
             'identification' => request()->identification,
             'nationality' => request()->nationality,
             'gender' => request()->gender,
-            'company_name' => request()->company_name,
-            'company_business_registration' => request()->company_business_registration,
-            'company_incorporation_place' => request()->company_incorporation_place,
-            'company_incorporation_date' => request()->company_incorporation_date,
-            'company_regulatory_name' => request()->company_regulatory_name,
-            'company_type' => request()->company_type,
-            'company_email' => request()->company_email,
+            // 'company_name' => request()->company_name,
+            // 'company_business_registration' => request()->company_business_registration,
+            // 'company_incorporation_place' => request()->company_incorporation_place,
+            // 'company_incorporation_date' => request()->company_incorporation_date,
+            // 'company_regulatory_name' => request()->company_regulatory_name,
+            // 'company_type' => request()->company_type,
+            // 'company_email' => request()->company_email,
             'bank_name' => request()->bank_name,
             'bank_swift' => request()->bank_swift,
             'bank_address' => request()->bank_address,
             'account_type' => request()->account_type,
             'account_no' => request()->account_no,
-            'beneficiary_name' => request()->beneficiary_name,
-            'beneficiary_identification' => request()->beneficiary_identification,
-            'beneficiary_address' => request()->beneficiary_address,
-            'beneficiary_contact' => request()->beneficiary_contact,
+            // 'beneficiary_name' => request()->beneficiary_name,
+            // 'beneficiary_identification' => request()->beneficiary_identification,
+            // 'beneficiary_address' => request()->beneficiary_address,
+            // 'beneficiary_contact' => request()->beneficiary_contact,
             'id_status' => $status
         ]);
 
@@ -341,6 +342,11 @@ class UserController extends Controller
         $user->user_status = 'approve';
 
         $user->save();
+
+        foreach($user->accounts as $account){
+            $account->is_verified = true;
+            $account->save();
+        }
 
         $message = 'user.has_approved';
 

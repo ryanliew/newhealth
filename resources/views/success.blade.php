@@ -67,7 +67,7 @@
                             @endif
 
                             @csrf
-                            {{-- <h4>{{ __('auth.general_info') }}</h4>
+                            <h4>{{ __('auth.general_info') }}</h4>
                             @if(!auth()->user()->parent_id)
                                 <div class="form-group">
                                     <referrer referrer="{{ session('referrer') }}" app_locale="{{ App::isLocale('zh') ? 'zh' : 'en' }}"></referrer> 
@@ -78,7 +78,7 @@
                                     @endif
                                 </div>
                             @endif 
-                            <hr> --}}
+                            <hr>
                             <h4>{{ __('auth.personal_info') }}</h4>
                             <div class="row">
                                 <div class="col-sm">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Country;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Account;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -81,7 +82,6 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'country_id' => $data['country'],
-            'is_locked' => true,
             'is_advisor' => false
         ]);
 

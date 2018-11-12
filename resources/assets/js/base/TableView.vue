@@ -131,8 +131,6 @@
 					'filter' : filters.text,
 					'searchables' : this.searchables
 				}
-				console.log("searchables: " + filters.text);
-				console.dir(this.searchables);
 
 				if(filters.start && filters.end)
 				{
@@ -173,8 +171,11 @@
 			},
 
 			userStatusLabel(value) {
-				console.log("value:: " + value);
 				return this.$options.filters.formatUserStatus(value);
+			},
+
+			redemptionStatusLabel(value) {
+				return this.$options.filters.formatRedemptionStatus(value);
 			},
 			
 			purchaseStatusLabel(value) {

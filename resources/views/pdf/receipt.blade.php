@@ -27,9 +27,9 @@
 		<tbody>
 			@foreach($purchase->packages as $package)
 				<tr>
-					<td style="padding-top:10px;padding-bottom: 200px;">{{ __('purchase.receipt_description', ['number' => $package->tree_count])}}</td>
-					<td class="text-center" style="padding-top:10px;padding-bottom: 200px;">{{ $package->pivot->amount }}</td>
-					<td class="text-center" style="padding-top:10px;padding-bottom: 200px;">{{ $package->pivot->total_price }}</td>
+					<td style="padding-top:10px;">{{ __('purchase.receipt_description', ['name' => $package->name]) }}</td>
+					<td class="text-center" style="padding-top:10px;">{{ $package->pivot->amount }}</td>
+					<td class="text-center" style="padding-top:10px;">{{ number_format($package->pivot->total_price, 2, ".", ",") }}</td>
 				</tr>
 			@endforeach
 		</tbody>
