@@ -87013,7 +87013,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				can_redeem: false,
 				machine_count: '',
 				price: '',
-				price_promotion: 0
+				price_promotion: ''
 				// price_std: '',
 				// price_std_promotion: ''	
 			}),
@@ -87034,7 +87034,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.form.errors.clear('package_picture');
 		},
 		setForm: function setForm() {
-			console.log("hehe: " + this.selectedPackage.can_redeem);
 			this.form.name = this.selectedPackage.name;
 			this.form.package_name = this.selectedPackage.name;
 			this.form.package_description = this.selectedPackage.description;
