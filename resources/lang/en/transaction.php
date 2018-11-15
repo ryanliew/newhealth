@@ -29,4 +29,6 @@ return [
     "purchase_account" => "Purchase account by :name",
     "machine_purchase" => "Package purchase",
     "e_wallet_commision" => "E-wallet commission",
+    "e_wallet_leadership_bonus" => "E-wallet leadership bonus",
+    "leadership_bonus" => "Leadership bonus",
 ];

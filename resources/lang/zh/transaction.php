@@ -28,5 +28,6 @@ return [
     "paid" => "已支付",
     "remark" => "备注",
     "e_wallet_commision" => "钱包佣金",
-
+    "e_wallet_leadership_bonus" => "领导奖金钱包",
+    "leadership_bonus" => "领导奖金",
 ];

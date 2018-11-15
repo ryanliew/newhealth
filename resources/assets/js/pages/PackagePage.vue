@@ -27,7 +27,7 @@
 		data() {
 			return {
 				fields: [
-					{ name: 'package_photo_path', title: this.tableTitle('package.package_picture'), callback: 'image'},					
+					{ name: 'package_photo_path', title: this.tableTitle('package.package_picture'), callback: 'packageImage'},					
 					{ name: 'name', title: this.tableTitle('package.package_name'), sortField: 'name'},					
 					// { name: 'tree_count', title: this.tableTitle('package.tree_count'), sortField: 'tree_count', callback: 'treecount'},					
 					{ name: 'price', title: this.tableTitle('package.price'), sortField: 'price', callback: 'currency'},

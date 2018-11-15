@@ -30,7 +30,7 @@
 		data() {
 			return {
 				fields: [
-					{ name: 'package_photo_path', title: this.tableTitle('redemption.item'), callback: 'image'},	
+					{ name: 'package_photo_path', title: this.tableTitle('redemption.item'), callback: 'packageImage'},	
 					{ name: 'name', title: this.tableTitle('redemption.name'), sortField: 'name'},
 					{ name: 'price', title: this.tableTitle('redemption.price'), sortField: 'price'},
 					{ name: 'description', title: this.tableTitle('redemption.description'), sortField: 'description'},

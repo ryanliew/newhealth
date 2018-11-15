@@ -194,6 +194,10 @@
 				return '<figure class="image is-48x48"><img src="'+ value +'"></figure>';
 			},
 
+			packageImage(value) {
+				return '<figure class="image is-48x48" style="width:48px; height:48px;"><img src="/storage/'+ value +'"></figure>';
+			},
+
 			date(value){
 				return this.$options.filters.date(value);
 			},

@@ -19141,7 +19141,7 @@ module.exports = Cancel;
 /* 183 */
 /***/ (function(module, exports) {
 
-module.exports = { "en.advisor": { "advisor_term_1": "This Advisor Agreement is entered into between NEWLEAF PLANTATION BERHAD (1251569-U) having its principal place of business located at Suite E-7-1, Plaza Mont Kiara 2 Jalan Kiara, 50480 Kuala Lumpur, Malaysia (the \u201CCompany\u201D) and ADVISOR, both of whom agree to be bound by this Agreement.", "advisor_term_10": "In the event that the Advisor receives commission payments for orders that are subsequently refunded, charged back, or the Company otherwise fails to realize the income from such a sale, the Advisor shall offset any future commissions paid by the amount by which the commissions actually paid would be reduced if the sales associated with income the Company failed to realize were never completed.", "advisor_term_11": "Payments shall be made to the Advisor on or before 15th of each month for the calendar month prior to the date such payment is made.", "advisor_term_12": "CONFIDENTIALITY. The Advisor shall not disclose to any third party any details regarding the Company\u2019s business, including, without limitation any information regarding any of the Company\u2019s customer information, business plans, or price points (the \u201CConfidential Information\u201D), (ii) make copies of any Confidential Information or any content based on the concepts contained within the Confidential Information for personal use or for distribution unless requested to do so by the Company, or (iii) use Confidential Information other than solely for the benefit of the Company.", "advisor_term_13": "Immediately upon termination of the relationship between the Company and the Advisor, the Advisor shall return to the Company any documents pertaining to the Company\u2019s business or any of its trade secrets which are in the Advisor\u2019s possession.", "advisor_term_14": "TERM AND TERMINATION. This Agreement shall commence upon the date of execution and continue until either Party terminates this Agreement in writing.", "advisor_term_15": "Upon such termination, the Advisor shall cease marketing and offering for sale the Products and shall continue to abide by the obligation refrain from sharing with any third party any of the Company\u2019s confidential information.", "advisor_term_16": "INDEMNIFICATION. The Advisor agrees to indemnify, defend, and protect the Company from and against all lawsuits and costs of every kind pertaining to any violation of the law, this Agreement, or the rights of any third party by the Advisor while acting pursuant to this Agreement. Such costs include but are not limited to reasonable legal fees.", "advisor_term_17": "NO MODIFICATION UNLESS IN WRITING. No modification of this Agreement shall be valid unless in writing and agreed upon by both Parties.", "advisor_term_18": "APPLICABLE LAW. This Agreement and the interpretation of its terms shall be governed by and construed in accordance with the laws of Malaysia and the Parties irrevocably submit to the exclusive jurisdiction of the Malaysian courts.", "advisor_term_2": "WHEREAS, the Company offers customers Durian Share-farming Programme.", "advisor_term_3": "WHEREAS, the Company and the Advisor desire to enter into an agreement whereby the Advisor will market and sell the Product according to the terms and conditions herein.", "advisor_term_4": "NOW, THEREFORE, in consideration of the mutual covenants and promises made by the parties hereto, the Company and the Advisor (individually, each a \u201CParty\u201D and collectively, the \u201CParties\u201D) covenant and agree as follows:", "advisor_term_4a": "ASSIGNMENT OF RIGHT. With certain limitations stated herein, the Company hereby authorizes the Advisor the right to market and offer for sale the Products according to the terms and limitations stated in this Agency Agreement.", "advisor_term_4b": "The Advisor shall only market and offer for sale the products within the Territory, as defined in this Agreement.", "advisor_term_4c": "The Company reserves the right to add to or subtract from the list of Products authorized with notice to the Advisor.", "advisor_term_4d": "TERRITORY. The Advisor shall be authorized to market the Product internationally (the \u201CTerritory\u201D).", "advisor_term_4e": "Nothing in this Agreement grants the Advisor the exclusive right to market the Products within the Territory.", "advisor_term_5": "TRADEMARK RIGHTS. The Advisor agrees and acknowledges the following with regard to the Company\u2019s trademark:", "advisor_term_5a": "The Company is the sole and exclusive owner to all right, title and interest in \u201CNewleaf Durian Share-farming Programme\u201D or to any other trademarks associated with the Company (the \u201CCompany Trademarks\u201D) which the Advisor may utilize in performing the services herein.", "advisor_term_5b": "The Company hereby grants to the Advisor for the duration of this Agreement and subject to the limitations stated within this Agreement a non-exclusive, non-transferable, revocable right to use the Company Trademarks as necessary to market and offer for sale the Products within the Territory.", "advisor_term_6": "ADVISOR RESPONSIBILITIES. In marketing and offering the Products for sale in the Territory, the Advisor shall:", "advisor_term_6a": "Act with diligence, devoting reasonable time and effort to fulfill the duties described herein;", "advisor_term_6b": "Maintain reasonable technical and practical knowledge with regard to the Products;", "advisor_term_6c": "Utilize promotional materials provided to the Advisor by the Company for the purpose of marketing and selling the Products;", "advisor_term_6d": "If requested by the Company, attend and participate in trade shows and conventions related to the Products;", "advisor_term_6e": "Promptly respond to all communications by customers and the Company regarding the Products;", "advisor_term_6f": "Reasonably assist the Company with regard to any and all collection matters as requested by the Company; and", "advisor_term_6g": "Prepare and maintain any reports and documentation, as requested by the Company.", "advisor_term_7": "COMMISSION. The Company shall pay to the Advisor commission based on all Net Product Sales from the Advisor\u2019s efforts. \u201CNet Product Sales\u201D shall be defined as the amount of sales revenue from any sales made by the Advisor less any chargebacks, returns, or defaults by customers.", "advisor_term_7a": "The purchase of at least 1 tree is required to qualify as Advisor.", "advisor_term_7b": "Advisor is entitled to 8% commission for the sales of tree, herein referred as \u201CReferral Commission\u201D.", "advisor_term_7c": "Senior Advisor is entitled to 10% referral commission. Advisor is required to refer THREE (3) direct growers in order to entitle for Senior Advisor ranking. Senior Advisor will benefit from differential 2% commission on sales of tree from any Advisor within personal organization.", "advisor_term_7d": "Executive Advisor is entitled to 15% referral commission. Senior Advisor is required to refer TEN (10) direct growers and accumulate ONE HUNDRED (100) group tree sales in order to entitle for Executive Advisor ranking. Executive Advisor will benefit from differential 7% commission on sales of tree from any Advisors and 2% from any Senior Advisors within personal organization. ", "advisor_term_7e": "Chief Advisor is entitled to 20% referral commission. Executive Advisor is required to refer TWENTY (20) direct growers and accumulate TWO HUNDRED (200) group tree sales in order to entitle for Chief Advisor ranking. Chief Advisor will benefit from differential 12% commission on sales of tree from any Advisors, 10% from any Senior Advisors, and 5% from any Executive Advisor within own organization.", "advisor_term_7f": "Referral commission is a one-off commission and calculated based on grower tree purchase price after any rebates and\/or discounts.", "advisor_term_7g": "Payments shall be made to the Advisor on or before 15th of each month for the calendar month prior to the date such payment is made.", "advisor_term_8": "The Company shall pay to the Advisor commission based on Yield proceeds of the fruits of the trees received by clients from the Advisor\u2019s efforts. \u201CYield\u201D shall be defined as the amount of sales proceeds of the fruits of the trees less all the necessary costs and expenses, less thirty per centum (30%).", "advisor_term_8a": "Advisor is eligible for 3% of the yield received by direct referred grower, herein referred to as \u201CYield Matching Commission\u201D.", "advisor_term_8b": "After successful referral of TWO (2) direct growers, advisor is eligible for 3% yield matching commission for yield received by grower referred by direct advisor.", "advisor_term_8c": "After successful referral of THREE (3) direct growers, advisor is eligible for 2% yield matching commission for yield received by grower referred by 2nd level advisor.", "advisor_term_8d": "After successful referral of FOUR (4) direct growers, advisor is eligible for 2% yield matching commission for yield received by grower referred by 3nd level advisor.", "advisor_term_8e": "Yield matching commission payments shall be made to the Advisor annually prior to the date such financial report has been announced.", "advisor_term_9": "Should the Parties terminate this Agreement for any reason, the Company shall pay the Advisor only for sales of the Products made prior to the termination date." }, "en.auth": { "account_no": "Account No.", "account_type": "Account type", "add_personnel": "Add personnel", "address": "Address", "address1": "Address Line 1", "address2": "Address Line 2", "address_line": "Address Line", "agree": "By checking this box and submitting the registration form, I agree to all of the ", "already_have_account": "Already have an account?", "ancestor_not_found": "Ancestor not found", "bank_address": "Bank address", "bank_info": "Bank information", "bank_name": "Bank name", "bank_swift": "Bank SORT\/SWIFT code", "beneficiary_address": "Nominee Address", "beneficiary_contact": "Nominee Contact No.", "beneficiary_identification": "Nominee Passport\/NRIC", "beneficiary_info": "Nominee information", "beneficiary_name": "Nominee name", "cancel": "Cancel", "company_address": "Company address", "company_business_registration": "Business registration No.", "company_incorporation_date": "Date of incorporation", "company_incorporation_place": "Incorporation place", "company_info": "Company information", "company_name": "Company\/Entity name", "company_regulatory_name": "Regulatory body", "company_type": "Type of business entity", "contact_personnels": "Contact personnel", "country": "Country", "email": "Email Address", "en_space": " ", "enter_email_and_password_to_reset": "Enter your email and new password", "enter_email_to_reset": "enter your email to reset your password", "facebook_login": "Login with Facebook", "facebook_signup": "Register with Facebook", "failed": "These credentials do not match our records.", "forgot_password": "Forgot your password", "full_name": "Name (as per NRIC\/Passport)", "gender": "Gender", "gender_female": "Female", "gender_male": "Male", "gender_null": "N\\A", "general_info": "General information", "google_login": "Login with Google", "google_signup": "Register with Google", "grower": " Grower", "hi": "Hi", "id_type_invalid": "Please select a valid ID type", "identification": "Passport\/NRIC", "last_step": "One last step.", "login": "Login", "name": "Name", "name_placeholder": "per Passport\/NRIC", "nationality": "Nationality", "new_to_site": "New to our site?", "password": "Password", "personal_info": "Personal information", "personnel_designation": "Designation", "phone": "Contact No.", "postcode": "Postcode", "process_registration": "Your registration is being processed.", "referral_id": "Your referral ID is :code", "referral_info": "Referral information", "referrer": "Referrer ID", "referrer_fill": "Fill in the referrer ID", "referrer_name": ":name", "referrer_not_found": "Referrer not found", "register": "Sign up", "register_message": "as Newheath grower and get involved in the multi-billion dollar industry today", "register_today": "", "registering_company": "Corporate Application (For corporate application only)", "registration_complete": "Registration complete, you may now close this window", "remember": "Remember me", "remove_personnel": "Remove personnel", "repeat": "Repeat ", "reset_password": "Reset password", "select_package": "Select purchase", "selected_package": "Selected purchase", "send_reset_link": "Send me the reset link", "submit": "Submit", "success": "Please fill in your details below for us to process your registration.", "success_country": "Please also let us know your country as that is required for us to generate your referral code", "success_email": "We will also need your email address so that we can send you important notifications in the future", "success_referral": "If you have a referrer, please let us know by filling in his\/her ID in the form below", "terms_and_conditions": "Terms and conditions", "thank_you": "Thank you.", "throttle": "Too many login attempts. Please try again in :seconds seconds.", "title": "Newheath - Join Us", "tree": "Tree|Trees", "wechat_signup": "Register with WeChat", "welcome_back": "welcome back" }, "en.company": { "company": "Company", "partnership": "Partnership", "sole": "Sole proprietership", "trust": "Trust" }, "en.confirmation": { "blast_newsletter_grower": "This will blast the news to all growers. Are you sure?", "cancel": "Cancel", "change_legal_status": "This will change the legal status for the grower. Are you sure?", "confirm": "Confirm", "confirm_change_to_paid": "Payouts will be marked as paid. Are you sure?", "confirmation": "Confirm action", "delete_purchase": "Purchase will be deleted and cannot be undone. Are you sure?", "delete_user": "User will be deleted and cannot be undone. Are you sure?", "reject_payment": "Payment will be rejected and grower will be notified. Are you sure?", "reject_redemption": "Redemption will be rejected and grower will be notified. Are you sure?", "reject_user": "This will reject the identity verification documents and grower will be notified. Are you sure?", "remind_user_identification": "Grower will be notified. Are you sure?", "verify_payment": "This will verify the payment, distribute commission and adjust related growers rank. Are you sure?", "verify_resell": "This will verify the resell account, distribute commission and adjust related growers rank. Are you sure?", "verify_user": "This will verify the identity verification documents. Are you sure?" }, "en.dashboard": { "account": "Account", "account_level": "Account level", "account_max": "This account has highest qualification", "accounts": "Accounts", "accrued_commission": "Accrued commission", "buy_machine": "Buy :count machine or 1 silver account to :level", "buy_platinum": "Buy :count platinum account to :level", "buy_silver": "Buy :count silver account to :level", "commission_earned": "Accumulated commission", "current_grower_level": "Current grower level", "date": "Date", "e_wallet_amount": "E-wallet amount", "group_sale": "Group sale", "grower_level": "Grower level", "latest_news": "Latest news", "my_account_status": "My account status", "my_accounts": "My accounts", "my_downlines": "My affiliates", "next_grower_level": "Next grower level", "pending_redemptions": "Pending Redemptions", "progress_to_next_level": "Progress to next level", "quantity": "Quantity", "step_to_qualification": "Step to next qualification", "trees_sold_global": "Global trees sold" }, "en.form": { "redeem": "Redeem", "submit": "Submit" }, "en.input": { "choose_file": "Click to choose file...", "female": "Female", "file_selected": "Selected file :name", "male": "Male", "nric": "NRIC", "passport": "Passport", "switch_file_mode": "You can toggle between camera\/file mode by pressing at the blue button (only for mobile phone)", "take_from_camera": "Click to open camera..." }, "en.nav": { "admin_purchases": "Purchases", "commission_report": "Commission reports", "dashboard": "Dashboard", "exit": "Exit", "logout": "Logout", "materials": "Materials", "news": "News", "organization": "Organization", "packages": "Packages", "payout_report": "Payout reports", "payouts": "Payouts", "profile": "Profile", "purchases": "Purchases", "redeem_item": "Redeem items", "redemptions": "Redemptions", "reports": "Reports", "sell_account": "Sell account", "settings": "Settings", "transactions": "Commissions", "trees": "My trees", "users": "Users" }, "en.package": { "actions": "Actions", "can_redeem": "Can Redeem", "can_upgrade": "Can Upgrade", "create_success": "Package created", "invalid_package_picture": "Package picture is required", "machine_count": "No. of machines", "make_new_package": "Add new package", "package_description": "Package description", "package_details": "Package details", "package_name": "Package name", "package_picture": "Package picture", "package_picture_exceed_size": "Package picture must not exceed 8MB", "packages": "Packages", "price": "Price (MYR)", "price_promotion": "Promotion price (MYR)", "price_std": "Price (USD)", "price_std_promotion": "Promotion price (USD)", "update_success": "Package updated" }, "en.pagination": { "info": "Displaying {from} to {to} of {total} items", "next": "Next &raquo;", "previous": "&laquo; Previous" }, "en.passwords": { "password": "Passwords must be at least six characters and match the confirmation.", "reset": "Your password has been reset!", "sent": "We have e-mailed your password reset link!", "token": "This password reset token is invalid.", "user": "We can't find a user with that e-mail address." }, "en.payment": { "amount": "Amount payable", "bank_account_no": "Account No.", "bank_address": "Bank Address", "bank_details": "Bank Details", "bank_swift": "SWIFT Code", "beneficiary_address": "Beneficiary Address", "beneficiary_bank": "Beneficiary Bank", "beneficiary_name": "Beneficiary Name", "invalid_payment_slip": "Payment slip is required", "make_payment": "Make payment", "paid_on": "Paid on", "payment": "Payment", "payment_details": "Payment details", "payment_slip": "Payment Slip", "payment_slip_exceed_size": "Payment slip must not exceed 8MB", "reject": "Reject", "reject_note": "Reject reason", "reject_success": "Payment rejected successfully", "submit_payment": "Submit payment", "success": "Payment has been recorded successfully", "verify": "Verify", "verify_success": "Payment verified successfully" }, "en.post": { "add_new_post": "Create news", "advisor_incentive_program": "Advisor Incentive Program", "commission_report": "Commission report", "content": "Content", "create_success": "News created", "created_at": "Created at", "download": "Download", "edit_post": "Edit news", "last_update": "Last updated", "latest_news": "the latest news and updates from newleaf plantation berhad", "marketing_material": "Marketing materials", "newleaf_bulletin": "Newleaf Bulletin", "newleaf_flyer": "Newleaf Flyer", "newleaf_purchase_form": "Newleaf Purchase Form", "notify_admins_success": "News has been sent to all admins!", "notify_success": "News has been sent to all growers!", "payout_report": "Payout report", "posts": "News", "published_date": "Published date", "sales_report": "Sales report", "title": "Title", "update_success": "News updated", "yield_projection": "Yield Projection" }, "en.purchase": { "Diamond": "Diamond", "Platinum": "Platinum", "Platinum_1": "Platinum 1", "Platinum_2": "Platinum 2", "Platinum_3": "Platinum 3", "Silver": "Silver", "Silver_1": "Silver 1", "Silver_2": "Silver 2", "Silver_3": "Silver 3", "Silver_4": "Silver 4", "Silver_5": "Silver 5", "Silver_6": "Silver 6", "Silver_7": "Silver 7", "Silver_8": "Silver 8", "Silver_9": "Silver 9", "base_price": "Recommended Retail Price (RRP) per Tree: RM 8,000", "buy_with_account": "Buy with account", "cancel": "Cancel update", "cash_back": "Cash Back", "checkout": "Checkout", "complete": "Complete", "customer": "Customer", "default_user": "Leave empty to buy for yourself", "deleted": "Purchase deleted", "diamond": "Diamond", "download_receipt": "Download receipt", "made_by": "Made by", "make_new_purchase": "Make new purchase", "original_price": "Original Price", "packages": "Packages", "past_purchases": "Purchase history", "pending": "Pending payment", "pending_purchases": "Pending purchases", "pending_verification": "Pending verification", "platinum": "Platinum", "purchase_date": "Purchase date", "purchase_details": "Purchase details", "purchases": "Purchases", "receipt_description": "Deposit for :name purchase", "rejected": "Rejected", "saving": "Save up to", "select_package": "Select from the packages below", "selected_packages": "Selected packages", "silver": "Silver", "status": "Status", "success": "Purchase order created successfully", "total": "Total", "total_payable": "Total payable", "update": "Update", "updated": "Purchase updated", "user": "Buyer" }, "en.redemption": { "approve": "Approve", "approved": "Approved", "cancel": "Cancel", "canceled": "Cancel", "description": "Description", "item": "Item", "item_description": "Item Description", "item_details": "Item details", "item_name": "Item Name", "made_by": "Made by", "name": "Name", "pending": "Pending", "point_to_redeem": "Point to redeem", "price": "Price", "quantity": "Quantity", "redeem_item": "Redeem items", "redemption": "Redemptions", "redemption_approve": "Redemption is approved", "redemption_cancel": "Redemption is canceled", "redemption_date": "Date", "redemption_detail": "Detail", "redemption_reject": "Redemption is rejected", "redemption_user": "Redemption user", "reject": "Reject", "success": "Redemption created successfully", "user": "User", "wallet": "E-wallet" }, "en.resell": { "account_to_sell": "Select account to sell", "no_user_found": "No user found for the Newhealth ID", "sell_account": "Sell account", "sell_to_user": "Sell to user", "user_referral_code": "Enter user Newhealth ID", "verify_success": "Resell account verified successfully" }, "en.table": { "actions": "Actions", "back": "Back", "export": "Export", "export_excel": "Export as Excel", "export_pdf": "Export as PDF", "filter_by_date": "Filter by date", "filter_by_month": "Filter by month", "reset": "Reset", "search": "Search" }, "en.transaction": { "amount": "Amount", "amount_myr": "Amount (MYR)", "amount_std": "Amount (USD)", "created_at": "Date", "description": "Description", "e_wallet_commision": "E-wallet commission", "machine_purchase": "Package purchase", "one_time_commision": "Referral commission", "paid": "Paid", "payouts": "Payouts", "pending": "Pending", "purchase_account": "Purchase account by :name", "remark": "Remark", "status": "Payout status", "status_updated": "Payout completed", "std_payouts": "Payouts (USD)", "transactions": "Commissions", "tree_purchase": "Tree purchase by :name", "type": "Type" }, "en.tree": { "self": "Me", "tree": "Organization chart" }, "en.user": { "account_level_0": "Customer", "account_level_1": "Silver", "account_level_2": "Platinum", "account_level_3": "Diamond", "advisor_application_received": "We have received your application. Our administrators will go through your submission and get back to you soon.", "apply_as_advisor": "Apply as advisor", "approve": "Approve", "bank_statement": "Bank Statement", "cancel_change_password": "Cancel change password", "cancel_update": "Cancel update", "change_password": "Change password", "complete": "Complete", "content_is_for_advisor": "This content is only for advisor", "copied-link": "Your referral link has been copied to the clipboard", "copy-referral": "Copy referral link", "deleted": "User has been deleted", "documents_rejected": "Documents rejected", "documents_success": "Documents updated", "documents_verified": "Documents verified", "edit_profile": "Edit profile", "execution_ready": "Execution ready", "has_approved": "User has been approved", "has_rejected": "User has been rejected", "identity": "Purchaser NRIC (for Malaysian) or Passport (for non-Malaysian)", "instruction_issued": "Instruction issued", "instruction_issued_to_lawyer": "Instruction issued to lawyer", "is_admin": "Is Admin", "is_advisor": "Is Advisor", "joined_at": "Joined at", "kyc_documents": "Identity Verification Documents", "legal_updated": "User legal status updated successfully", "level": "Member level", "level_1": "Advisor", "level_2": "Senior Advisor", "level_3": "Executive Advisor", "level_4": "Chief Advisor", "level_instruction": "Refer :target direct growers. :left to go.", "level_instruction_2": "Group sales of :target subscriptions. :left to go.", "lock_down_back": "for any discrepancy", "lock_down_front": "Please email", "locked": "User has been locked", "locked_message": "Your account has been locked. Please contact support@newleaf.com.my for more information", "nominee_identity": "Nominee NRIC (for Malaysian) or Passport (for non-Malaysian)", "pending": "Pending", "pending_verification": "Pending verification", "profile_update_success": "Profile updated", "referral_code": "Newhealth ID", "referrer": "Referrer", "reject": "Reject", "rejected": "Verification failed", "reminder_sent": "Reminder sent", "residence_proof": "Proof of Residence", "sales_agreement_executed": "Sales agreement executed", "sales_agreement_ready_for_execution": "Sales agreement ready for execution", "setting_success": "Settings updated successfully", "settings": "Settings", "status": "Status", "tree_count": "No. of trees", "unlocked": "User has been unlocked", "update_document": "Update document", "users": "Users", "users_pending": "Pending users", "verified": "Verified", "verify": "Verify", "waiting_approval": "Your accounnt is waiting for approval" }, "en.validation": { "accepted": "The :attribute must be accepted.", "active_url": "The :attribute is not a valid URL.", "after": "The :attribute must be a date after :date.", "after_or_equal": "The :attribute must be a date after or equal to :date.", "alpha": "The :attribute may only contain letters.", "alpha_dash": "The :attribute may only contain letters, numbers, and dashes.", "alpha_num": "The :attribute may only contain letters and numbers.", "array": "The :attribute must be an array.", "attributes": { "password": "Password" }, "before": "The :attribute must be a date before :date.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": "The :attribute confirmation does not match.", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "The :attribute must be a valid email address.", "exists": "The selected :attribute is invalid.", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "This must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "This field is required.", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." }, "zh.auth": { "account_no": "\u6237\u53E3\u53F7\u7801", "account_type": "\u6237\u53E3\u7C7B\u578B", "add_personnel": "\u589E\u52A0", "address": "\u5730\u5740", "address1": "\u5730\u5740 1", "address2": "\u5730\u5740 2", "agree": "\u6211\u786E\u8BA4\u5E76\u627F\u8BA4\u6211\u5DF2\u7ECF\u9605\u8BFB\u5E76\u540C\u610F\u9075\u5B88\u672C\u8D2D\u4E70\u8868\u683C\u4E2D\u7684", "already_have_account": "\u5DF2\u7ECF\u6709\u5E10\u53F7\uFF1F", "ancestor_not_found": "\u7956\u4E0A\u9519\u8BEF", "bank_address": "\u94F6\u884C\u5730\u5740", "bank_info": "\u94F6\u884C\u8D44\u6599", "bank_name": "\u94F6\u884C\u540D\u79F0", "bank_swift": "\u94F6\u884C SORT/SWIFT \u4EE3\u7801", "beneficiary_address": "\u63D0\u540D\u4EBA\u4F4F\u5740", "beneficiary_contact": "\u63D0\u540D\u4EBA\u7535\u8BDD\u53F7\u7801", "beneficiary_identification": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "beneficiary_info": "\u63D0\u540D\u4EBA\u8D44\u6599", "beneficiary_name": "\u63D0\u540D\u4EBA\u540D\u79F0", "cancel": "\u53D6\u6D88", "company_address": "\u516C\u53F8\u5730\u5740", "company_business_registration": "\u5546\u4E1A\u6CE8\u518C\u53F7\u7801", "company_incorporation_date": "\u5546\u4E1A\u6CE8\u518C\u65E5\u671F", "company_incorporation_place": "\u6CE8\u518C\u5730\u70B9", "company_info": "\u516C\u53F8\u8D44\u6599", "company_name": "\u516C\u53F8\u540D\u79F0", "company_regulatory_name": "\u76D1\u7BA1\u5355\u4F4D\u540D\u79F0", "company_type": "\u5546\u4E1A\u7C7B\u578B", "contact_personnels": "\u516C\u53F8\u8054\u7EDC\u4EBA", "country": "\u56FD\u5BB6", "email": "\u7535\u90AE", "en_space": "", "enter_email_and_password_to_reset": "\u8BF7\u8F93\u5165\u7535\u90AE\u548C\u65B0\u5BC6\u7801", "enter_email_to_reset": "\u8BF7\u8F93\u5165\u60A8\u7684\u7535\u90AE", "facebook_login": "\u8138\u4E66\u767B\u5165", "facebook_signup": "\u4F7F\u7528\u8138\u4E66\u6CE8\u518C", "failed": "\u7535\u90AE/\u5BC6\u7801\u9519\u8BEF", "forgot_password": "\u5FD8\u8BB0\u5BC6\u7801", "full_name": "\u5168\u540D", "gender": "\u6027\u522B", "gender_female": "\u5973", "gender_male": "\u7537", "general_info": "\u4E00\u822C\u8D44\u6599", "google_login": "\u8C37\u6B4C\u767B\u5165", "google_signup": "\u4F7F\u7528\u8C37\u6B4C\u6CE8\u518C", "grower": "\u79CD\u690D\u8005", "hi": "\u4F60\u597D", "id_type_invalid": "\u8BF7\u9009\u62E9\u6B63\u786E\u7684ID\u79CD\u7C7B", "identification": "\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "last_step": "\u6700\u540E\u4E00\u6B65", "login": "\u767B\u5165", "name": "\u540D\u5B57", "name_placeholder": "\u586B\u5199\u5B9E\u540D", "nationality": "\u56FD\u7C4D", "new_to_site": "\u8FD8\u672A\u6CE8\u518C\uFF1F", "password": "\u5BC6\u7801", "personal_info": "\u4E2A\u4EBA\u8D44\u6599", "personnel_designation": "\u804C\u4F4D", "phone": "\u7535\u8BDD\u53F7\u7801", "postcode": "\u90AE\u653F\u7F16\u7801", "process_registration": "\u6211\u4EEC\u6B63\u5728\u5904\u7406\u60A8\u7684\u6CE8\u518C\u3002", "referral_id": "\u60A8\u7684ID\u662F :code", "referral_info": "\u63A8\u8350\u8005\u8D44\u6599", "referrer": "\u4ECB\u7ECD\u8005ID", "referrer_fill": "\u8BF7\u8F93\u5165\u63A8\u8350\u8005ID", "referrer_name": ":name", "referrer_not_found": "ID\u9519\u8BEF", "register": "\u52A0\u76DF", "register_message": "\u65B0\u5EB7\u8BA1\u5212\uFF01", "register_today": "\u65B0\u5EB7\u65B0\u5546\u673A, \u643A\u624B\u65B0\u53F6\u521B\u767E\u4EBF, \u9A6C\u4E0A", "registering_company": "\u673A\u6784\u7533\u8BF7", "registration_complete": "\u5B8C\u6210\uFF0C\u60A8\u5DF2\u53EF\u4EE5\u5173\u95ED\u6B64\u9875\u9762", "remember": "\u4FDD\u6301\u767B\u5165", "remove_personnel": "\u53BB\u9664", "repeat": "\u786E\u5B9A", "reset_password": "\u91CD\u8BBE\u5BC6\u7801", "select_package": "\u9009\u62E9\u914D\u5957", "selected_package": "\u914D\u5957", "send_reset_link": "\u786E\u5B9A\u91CD\u8BBE\u5BC6\u7801", "submit": "\u63D0\u4EA4", "success": "\u6CE8\u518C\u6210\u529F", "success_country": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u6240\u5728\u56FD\u5BB6\uFF0C\u8FD9\u5C06\u5E2E\u52A9\u6211\u4EEC\u5236\u5B9A\u60A8\u7684ID", "success_email": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u7535\u90AE\u4EE5\u4F5C\u4E3A\u65E5\u540E\u7684\u901A\u8BAF\u7BA1\u9053", "success_referral": "\u82E5\u60A8\u6709\u63A8\u8350\u8005\uFF0C\u8BF7\u544A\u8BC9\u6211\u4EEC\u4ED6\u7684ID", "terms_and_conditions": "\u6761\u6B3E\u53CA\u7EC6\u5219", "thank_you": "\u8C22\u8C22", "throttle": "\u767B\u5165\u8FC7\u4E8E\u9891\u7E41\uFF0C\u8BF7\u5728 :seconds \u79D2\u540E\u518D\u8BD5", "title": "\u65B0\u5EB7\u96C6\u56E2 - \u52A0\u76DF", "tree": "\u68F5\u6811|\u68F5\u6811", "wechat_signup": "\u4F7F\u7528\u5FAE\u4FE1\u6CE8\u518C", "welcome_back": "\u6B22\u8FCE\u56DE\u6765" }, "zh.company": { "company": "\u516C\u53F8", "partnership": "\u5408\u4F19", "sole": "\u72EC\u8D44\u7ECF\u8425\u8005", "trust": "\u4FE1\u6258\u4E1A\u52A1" }, "zh.confirmation": { "blast_newsletter_grower": "\u786E\u5B9A\u53D1\u9001\u6D88\u606F\u7ED9\u6240\u6709\u79CD\u690D\u7740?", "cancel": "\u53D6\u6D88", "change_legal_status": "\u786E\u5B9A\u66F4\u65B0\u72B6\u6001?", "confirm": "\u786E\u5B9A", "confirm_change_to_paid": "\u786E\u5B9A\u6807\u699C\u4E3A\u5DF2\u4ED8\u6B3E?", "confirmation": "\u884C\u52A8\u786E\u8BA4", "delete_purchase": "\u786E\u5B9A\u79FB\u9664\u8D2D\u4E70\u8BB0\u5F55?", "delete_user": "\u786E\u5B9A\u79FB\u9664\u79CD\u690D\u8005?", "reject_payment": "\u786E\u5B9A\u9A73\u56DE\u4ED8\u6B3E?", "reject_redemption": "\u786E\u5B9A\u9A73\u56DE\u8D4E\u4E70?", "reject_user": "\u786E\u5B9A\u9A73\u56DE\u79CD\u690D\u8005?", "remind_user_identification": "\u786E\u5B9A\u63D0\u9192\u79CD\u690D\u8005?", "verify_payment": "\u786E\u5B9A\u8BA4\u8BC1\u4ED8\u6B3E?", "verify_resell": "\u786E\u5B9A\u8BA4\u8BC1\u552E\u5356\u5E10\u6237?", "verify_user": "\u786E\u5B9A\u8BA4\u8BC1\u79CD\u690D\u8005?" }, "zh.dashboard": { "account": "\u5E10\u53F7", "account_level": "\u8D26\u53F7\u8058\u9636", "account_max": "\u8FD9\u5E10\u53F7\u5DF2\u662F\u6700\u9AD8\u5E10\u53F7", "accounts": "\u5E10\u53F7", "accrued_commission": "\u5E94\u8BA1\u5956\u91D1", "buy_machine": "\u4E70 :count \u914D\u5957\u6216 1 \u767D\u94F6\u5E10\u53F7\u5230 :level", "buy_platinum": "\u4E70 :count \u767D\u91D1\u5E10\u53F7\u5230 :level", "buy_silver": "\u4E70 :count \u767D\u94F6\u5E10\u53F7\u5230 :level", "commission_earned": "\u7D2F\u8BA1\u5956\u91D1", "current_grower_level": "\u5F53\u524D\u8058\u9636", "date": "\u65E5\u671F", "e_wallet_amount": "\u7535\u5B50\u94B1\u5305\u5171\u8BA1", "group_sale": "\u7EC4\u7EC7\u4E1A\u7EE9", "grower_level": "\u8058\u9636", "latest_news": "\u6700\u65B0\u6D88\u606F", "my_account_status": "\u6211\u7684\u8D26\u53F7", "my_accounts": "\u6211\u7684\u8D26\u53F7", "my_downlines": "\u6211\u7684\u4E0B\u7EBF", "next_grower_level": "\u4E0B\u4E2A\u8058\u9636", "pending_redemptions": "\u5BA1\u6838\u8D4E\u4E70", "progress_to_next_level": "\u5347\u7EA7\u5E10\u53F7", "quantity": "\u6570\u91CF", "step_to_qualification": "\u5347\u7EA7\u5E10\u53F7\u7684\u6B65\u9AA4", "trees_sold_global": "\u603B\u4E1A\u7EE9" }, "zh.form": { "redeem": "\u8D4E\u4E70", "submit": "\u63D0\u4EA4" }, "zh.input": { "choose_file": "\u6309\u6B64\u9009\u62E9\u6587\u4EF6...", "female": "\u5973", "file_selected": "\u6210\u529F\u9009\u62E9:name", "male": "\u7537", "nric": "\u8EAB\u4EFD\u8BC1", "passport": "\u62A4\u7167", "switch_file_mode": "\u6309\u84DD\u8272\u6309\u94AE\u53EF\u5207\u6362\u6587\u4EF6\u9009\u62E9/\u7167\u76F8\u673A\u6A21\u5F0F(\u4EC5\u4F9B\u667A\u80FD\u7535\u8BDD\u4F7F\u7528)", "take_from_camera": "\u6309\u6B64\u6253\u5F00\u7167\u76F8\u673A..." }, "zh.nav": { "admin_purchases": "\u6240\u6709\u8BA2\u5355", "commission_report": "\u4F63\u91D1\u62A5\u544A", "dashboard": "\u6982\u8981", "exit": "\u79BB\u5F00", "logout": "\u767B\u51FA", "materials": "\u9500\u552E\u8F85\u52A9", "news": "\u6700\u65B0\u6D88\u606F", "organization": "\u7EC4\u7EC7", "packages": "\u914D\u5957", "payout_report": "\u652F\u51FA\u62A5\u544A", "payouts": "\u652F\u51FA", "profile": "\u6211\u7684\u8D44\u6599", "purchases": "\u8BA2\u5355", "redeem_item": "\u8D4E\u4E70\u7269\u54C1", "redemptions": "\u8D4E\u4E70", "reports": "\u62A5\u544A", "sell_account": "\u51FA\u552E\u8D26\u53F7", "settings": "\u8BBE\u5B9A", "transactions": "\u4F63\u91D1", "trees": "\u79CD\u690D\u7BA1\u7406", "users": "\u7528\u6237" }, "zh.package": { "can_redeem": "\u53EF\u8D4E\u4E70", "can_upgrade": "\u53EF\u5347\u7EA7", "create_success": "\u5DF2\u589E\u52A0\u914D\u5957", "invalid_package_picture": "\u8BF7\u9009\u62E9\u914D\u5957\u7167\u7247", "machine_count": "\u673A\u5668\u6570\u91CF", "make_new_package": "\u589E\u52A0\u914D\u5957", "package_description": "\u63CF\u8FF0\u914D\u5957", "package_details": "\u914D\u5957\u8BE6\u60C5", "package_name": "\u914D\u5957\u540D\u79F0", "package_picture": "\u914D\u5957\u7167\u7247", "package_picture_exceed_size": "\u914D\u5957\u7167\u7247\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "packages": "\u914D\u5957", "price": "\u4EF7\u683C (\u9A6C\u5E01)", "price_promotion": "\u4F18\u60E0\u4EF7\u683C (\u9A6C\u5E01)", "price_std": "\u4EF7\u683C (\u7F8E\u91D1)", "price_std_promotion": "\u4F18\u60E0\u4EF7\u683C (\u7F8E\u91D1)", "update_success": "\u5DF2\u66F4\u65B0\u914D\u5957\u8BE6\u60C5" }, "zh.pagination": { "info": "\u5171{total}\u4E2A\u6570\u636E\uFF0C\u6B63\u5728\u663E\u793A{from}\u5230{to}" }, "zh.passwords": { "password": "\u5BC6\u7801\u5FC5\u987B\u6709\u6700\u5C116\u4E2A\u5B57\u6BCD", "reset": "\u6210\u529F\u5BC6\u7801\u91CD\u8BBE", "sent": "\u6211\u4EEC\u5DF2\u53D1\u9001\u5BC6\u7801\u91CD\u8BBE\u8FDE\u63A5\u5230\u60A8\u7684\u70B9\u90AE", "token": "\u60A8\u7684\u8BF7\u6C42\u5DF2\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u8BF7\u6C42", "user": "\u6B64\u7535\u90AE\u5730\u5740\u4E0D\u5728\u6211\u4EEC\u7684\u6570\u636E\u5E93\u91CC" }, "zh.payment": { "amount": "\u652F\u4ED8\u6570\u989D", "bank_account_no": "\u6536\u6B3E\u8D26\u53F7", "bank_address": "\u6536\u6B3E\u94F6\u884C\u5730\u5740", "bank_details": "\u6C47\u6B3E\u8BE6\u60C5", "bank_swift": "\u94F6\u884C\u56FD\u9645\u4EE3\u7801", "beneficiary_address": "\u6536\u6B3E\u8D26\u6237\u5730\u5740", "beneficiary_bank": "\u6536\u6B3E\u94F6\u884C", "beneficiary_name": "\u6536\u6B3E\u8D26\u6237\u540D\u79F0", "invalid_payment_slip": "\u8BF7\u9009\u62E9\u4ED8\u6B3E\u5355", "make_payment": "\u652F\u4ED8\u6B3E\u9879", "paid_on": "\u4ED8\u6B3E\u65E5\u671F", "payment": "\u4ED8\u6B3E", "payment_details": "\u4ED8\u6B3E\u8BE6\u60C5", "payment_slip": "\u4ED8\u6B3E\u5355", "payment_slip_exceed_size": "\u4ED8\u6B3E\u5355\u6587\u4EF6\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "reject": "\u9A73\u56DE", "reject_note": "\u5907\u6CE8", "reject_success": "\u6210\u529F\u9A73\u56DE\u4ED8\u6B3E", "submit_payment": "\u63D0\u4EA4\u4ED8\u6B3E\u5355", "success": "\u4ED8\u6B3E\u5355\u5DF2\u88AB\u63A5\u7EB3", "verify": "\u786E\u8BA4\u4ED8\u6B3E", "verify_success": "\u6210\u529F\u786E\u8BA4\u4ED8\u6B3E" }, "zh.post": { "add_new_post": "\u521B\u5EFA\u65B0\u6D88\u606F", "advisor_incentive_program": "\u987E\u95EE\u5956\u52B1\u8BA1\u5212", "commission_report": "\u4F63\u91D1\u62A5\u544A", "content": "\u5185\u5BB9", "created_at": "\u53D1\u5E03\u4E8E", "download": "\u4E0B\u8F7D", "edit_post": "\u66F4\u65B0\u6D88\u606F", "last_update": "\u66F4\u65B0\u4E8E", "latest_news": "\u4E3A\u60A8\u5E26\u6765\u65B0\u53F6\u6700\u65B0\u6D88\u606F\u4E0E\u66F4\u65B0", "marketing_material": "\u65B0\u53F6\u8425\u9500", "newleaf_bulletin": "\u65B0\u53F6\u901A\u544A", "newleaf_flyer": "\u65B0\u53F6\u4F20\u5355", "newleaf_purchase_form": "\u65B0\u53F6\u8D2D\u4E70\u8868\u683C", "notify_admin_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u7BA1\u7406\u5458", "notify_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u79CD\u690D\u8005", "payout_report": "\u652F\u51FA\u62A5\u544A", "post_created": "\u521B\u5EFA\u6210\u529F", "posts": "\u6700\u65B0\u6D88\u606F", "published_date": "\u53D1\u5E03\u65E5\u671F", "sales_report": "\u9500\u552E\u62A5\u544A", "title": "\u6807\u9898", "update_success": "\u66F4\u65B0\u6210\u529F", "yield_projection": "\u4EA7\u91CF\u9884\u6D4B" }, "zh.purchase": { "Diamond": "\u94BB\u77F3", "Platinum": "\u767D\u91D1", "Platinum_1": "\u767D\u91D1 1", "Platinum_2": "\u767D\u91D1 2", "Platinum_3": "\u767D\u91D1 3", "Silver": "\u767D\u94F6", "Silver_1": "\u767D\u94F6 1", "Silver_2": "\u767D\u94F6 2", "Silver_3": "\u767D\u94F6 3", "Silver_4": "\u767D\u94F6 4", "Silver_5": "\u767D\u94F6 5", "Silver_6": "\u767D\u94F6 6", "Silver_7": "\u767D\u94F6 7", "Silver_8": "\u767D\u94F6 8", "Silver_9": "\u767D\u94F6 9", "base_price": "\u5355\u68F5\u6811\u96F6\u552E\u4EF7\uFF1A\u7F8E\u91D1 2,500", "buy_with_account": "\u7528\u8D26\u53F7\u4E70", "cancel": "\u53D6\u6D88\u66F4\u6539", "cash_back": "\u56DE\u6263", "checkout": "\u4ED8\u6B3E", "complete": "\u5B8C\u6210", "customer": "\u666E\u901A", "default_user": "\u81EA\u8EAB\u8D2D\u4E70\u8BF7\u7559\u7A7A", "deleted": "\u8BA2\u5355\u5DF2\u88AB\u5220\u9664", "diamond": "\u94BB\u77F3", "made_by": "\u5BA2\u6237", "make_new_purchase": "\u8D2D\u4E70\u79CD\u690D\u914D\u5957", "original_price": "\u539F\u4EF7", "packages": "\u914D\u5957", "past_purchases": "\u8FC7\u5F80\u8BA2\u5355\u8BB0\u5F55", "pending": "\u672A\u4ED8\u6B3E", "pending_purchases": "\u5BA1\u6838\u8BA2\u5355", "pending_verification": "\u5BA1\u6838\u4E2D", "platinum": "\u767D\u91D1", "purchase_date": "\u8D2D\u4E70\u65E5\u671F", "purchase_details": "\u8BA2\u5355\u8BE6\u60C5", "purchases": "\u8BA2\u5355\u8BB0\u5F55", "rejected": "\u9700\u8981\u66F4\u65B0", "saving": "\u8282\u7701\u9AD8\u8FBE", "select_package": "\u9009\u62E9\u4EE5\u4E0B\u914D\u5957", "selected_packages": "\u5DF2\u9009\u62E9\u914D\u5957", "silver": "\u767D\u94F6", "status": "\u72B6\u6001", "success": "\u8BA2\u5355\u5DF2\u88AB\u63A5\u7EB3", "total": "\u603B\u4EF7\u683C", "total_payable": "\u603B\u4EF7\u683C", "update": "\u66F4\u6539", "updated": "\u66F4\u65B0\u6210\u529F", "user": "\u4E70\u5BB6" }, "zh.redemption": { "approve": "\u6279\u51C6", "approved": "\u6279\u51C6", "cancel": "\u53D6\u6D88", "canceled": "\u53D6\u6D88", "description": "\u63CF\u8FF0", "item": "\u7269\u54C1", "item_description": "\u7269\u54C1\u63CF\u8FF0", "item_details": "\u7269\u54C1\u8BE6\u60C5", "item_name": "\u7269\u54C1\u540D\u79F0", "made_by": "\u5BA2\u6237", "name": "\u540D\u79F0", "pending": "\u5B88\u5019", "point_to_redeem": "\u8D4E\u56DE\u5206", "price": "\u4EF7\u683C", "quantity": "\u6570\u91CF", "redeem_item": "\u8D4E\u4E70\u7269\u54C1", "redemption": "\u8D4E\u4E70", "redemption_approve": "\u8D4E\u4E70\u5DF2\u6279\u51C6", "redemption_cancel": "\u8D4E\u4E70\u5DF2\u53D6\u6D88", "redemption_date": "\u8D4E\u4E70\u65E5\u671F", "redemption_detail": "\u8BE6\u60C5", "redemption_reject": "\u8D4E\u4E70\u5DF2\u9A73\u56DE", "redemption_user": "\u8D4E\u4E70\u8D26\u53F7", "reject": "\u9A73\u56DE", "success": "\u8D4E\u4E70\u5DF2\u88AB\u63A5\u7EB3", "user": "\u7528\u6237", "wallet": "\u94B1\u5305" }, "zh.resell": { "account_to_sell": "\u9009\u62E9\u552E\u5356\u5E10\u6237", "no_user_found": "\u7528\u6237\u4E0D\u8981\u5B58\u5728", "sell_account": "\u552E\u5356\u5E10\u6237", "sell_to_user": "\u552E\u5356\u7ED9\u7528\u6237", "user_referral_code": "\u8F93\u5165\u7528\u6237\u8FDE\u63A5ID", "verify_success": "\u6210\u529F\u786E\u8BA4\u552E\u5356\u5E10\u6237" }, "zh.table": { "actions": "\u64CD\u4F5C", "back": "\u8FD4\u56DE", "export": "\u6587\u4EF6\u8F93\u51FA", "export_excel": "Excel\u8F93\u51FA", "export_pdf": "PDF\u8F93\u51FA", "filter_by_date": "\u65E5\u671F\u7B5B\u9009", "filter_by_month": "\u6708\u4EFD\u7B5B\u9009", "reset": "\u91CD\u8BBE", "search": "\u67E5\u627E" }, "zh.transaction": { "amount": "\u91D1\u989D", "amount_myr": "\u91D1\u989D (\u9A6C\u5E01)", "amount_std": "\u91D1\u989D (\u7F8E\u91D1)", "created_at": "\u65E5\u671F", "description": "\u9879\u76EE", "e_wallet_commision": "\u94B1\u5305\u4F63\u91D1", "one_time_commision": "\u4E00\u6B21\u6027\u4F63\u91D1", "paid": "\u5DF2\u652F\u4ED8", "payouts": "\u652F\u51FA", "pending": "\u672A\u652F\u4ED8", "remark": "\u5907\u6CE8", "status": "\u652F\u4ED8\u72B6\u6001", "status_updated": "\u652F\u4ED8\u5B8C\u6210", "std_payouts": "\u652F\u51FA (\u7F8E\u91D1)", "transactions": "\u4F63\u91D1", "tree_purchase": ":name \u7684\u79CD\u690D\u9879\u76EE", "type": "\u79CD\u7C7B" }, "zh.tree": { "self": "\u6211", "tree": "\u7EC4\u7EC7\u56FE" }, "zh.user": { "account_level_0": "\u666E\u901A", "account_level_1": "\u767D\u94F6", "account_level_2": "\u767D\u91D1", "account_level_3": "\u94BB\u77F3", "advisor_application_received": "\u6211\u4EEC\u5DF2\u6536\u5230\u60A8\u7684\u7533\u8BF7\uFF0C\u6211\u4EEC\u7684\u7BA1\u7406\u5458\u5C06\u5C3D\u5FEB\u7ED9\u60A8\u7B54\u590D", "apply_as_advisor": "\u6210\u4E3A\u987E\u95EE", "approved": "\u6279\u51C6", "bank_statement": "\u94F6\u884C\u6D41\u6C34\u8D26\u5355", "cancel_change_password": "\u53D6\u6D88\u66F4\u6362\u5BC6\u7801", "cancel_update": "\u53D6\u6D88\u66F4\u65B0", "change_password": "\u66F4\u6362\u5BC6\u7801", "content_is_for_advisor": "\u6B64\u5185\u5BB9\u53EA\u5F00\u653E\u4E8E\u987E\u95EE\u6210\u5458", "copied-link": "\u6210\u529F\u590D\u5236\u4ECB\u7ECD\u8FDE\u63A5", "copy-referral": "\u590D\u5236\u8FDE\u63A5", "documents_rejected": "\u6587\u4EF6\u5BA1\u6838\u5931\u8D25", "documents_success": "\u66F4\u65B0\u6210\u529F", "documents_verified": "\u6587\u4EF6\u5BA1\u6838\u6210\u529F", "edit_profile": "\u66F4\u65B0\u8D44\u6599", "has_approved": "\u7528\u6237\u5DF2\u88AB\u6279\u51C6", "has_rejected": "\u7528\u6237\u5DF2\u88AB\u9A73\u56DE", "identity": "\u8D2D\u4E70\u8005\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "instruction_issued_to_lawyer": "\u5F8B\u5E08\u5904\u7406\u4E2D", "is_admin": "\u662F\u7BA1\u7406\u5458", "is_advisor": "\u662F\u987E\u95EE\u6210\u5458", "joined_at": "\u52A0\u76DF\u65E5\u671F", "kyc_documents": "\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "legal_updated": "\u79CD\u690D\u8005\u6CD5\u5F8B\u7A0B\u5E8F\u66F4\u65B0\u6210\u529F", "level": "\u7EA7\u522B", "level_1": "\u987E\u95EE", "level_2": "\u9AD8\u7EA7\u987E\u95EE", "level_3": "\u6267\u884C\u987E\u95EE", "level_4": "\u9996\u5E2D\u987E\u95EE", "level_instruction": "\u76F4\u63A8 :target \u4F4D\u79CD\u690D\u8005. \u8FD8\u9700 :left \u4F4D", "level_instruction_2": "\u7EC4\u7EC7\u4E1A\u7EE9\u8FBE :target \u68F5\u6811. \u8FD8\u9700 :left \u68F5", "lock_down": "\u82E5\u6709\u51FA\u5165\uFF0C\u8BF7\u7535\u90AE\u81F3", "lock_down_back": "\u901A\u77E5\u6211\u4EEC", "locked": "\u7528\u6237\u5DF2\u88AB\u5C01\u9501", "locked_message": "\u60A8\u7684\u8D26\u53F7\u5DF2\u88AB\u7BA1\u7406\u5458\u5C01\u9501, \u8BF7\u7535\u90AE\u81F3support@newleaf.com.my\u4E86\u89E3\u8BE6\u60C5", "nominee_identity": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "pending": "\u672A\u5BA1\u6838", "pending_verification": "\u5BA1\u6838\u4E2D", "profile_update_success": "\u8D44\u6599\u5DF2\u66F4\u65B0", "referral_code": "\u65B0\u5EB7ID", "referrer": "\u63A8\u8350\u8005", "reject": "\u9A73\u56DE", "rejected": "\u5BA1\u6838\u5931\u8D25", "reminder_sent": "\u5DF2\u53D1\u9001\u63D0\u793A", "residence_proof": "\u4F4F\u5740\u8BC1\u660E\u6587\u4EF6", "sales_agreement_executed": "\u9500\u552E\u534F\u8BAE\u5B8C\u6210", "sales_agreement_ready_for_execution": "\u7B49\u5F85\u7B7E\u7F72\u9500\u552E\u534F\u8BAE", "setting_success": "\u6210\u529F\u66F4\u6539\u8BBE\u5B9A", "settings": "\u8BBE\u5B9A", "status": "\u72B6\u6001", "tree_count": "\u79CD\u690D\u6570\u91CF", "unlocked": "\u7528\u6237\u5DF2\u88AB\u89E3\u9501", "update_document": "\u66F4\u65B0\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "users": "\u7528\u6237", "users_pending": "\u9700\u5173\u6CE8\u7528\u6237", "verified": "\u5DF2\u901A\u8FC7\u5BA1\u6838", "verify": "\u8BA4\u8BC1", "waiting_approval": "\u60A8\u7684\u8D26\u53F7\u7B49\u5F85\u6279\u51C6\u5F53\u4E2D" }, "zh.validation": { "accepted": "\u9700\u8981\u88AB\u63A5\u53D7", "active_url": "\u94FE\u63A5\u9519\u8BEF.", "after": "\u5FC5\u987B\u5728:date\u4E4B\u540E.", "after_or_equal": "\u5FC5\u987B\u662F\u548C:date\u4E00\u6837\u6216\u4E4B\u540E\u7684\u65E5\u671F.", "alpha": "\u53EA\u80FD\u6709\u5B57\u6BCD", "alpha_dash": "\u53EA\u80FD\u6709\u5B57\u6BCD\uFF0C\u53F7\u7801\uFF0C\u4EE5\u53CA\u201C-\u201D\u53F7", "alpha_num": "\u53EA\u80FD\u6709\u5B57\u6BCD\u4EE5\u53CA\u53F7\u7801", "attributes": { "password": "\u5BC6\u7801" }, "before": "\u5FC5\u987B\u5728:date\u4E4B\u524D.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": ":attribute\u4E0D\u76F8\u540C", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "\u8FD9\u5FC5\u987B\u662F\u4E00\u4E2A\u7535\u90AE\u5730\u5740", "exists": "\u9009\u9879\u9519\u8BEF", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "\u53EA\u80FD\u586B\u5199\u6570\u5B57", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "\u9700\u8981\u88AB\u586B\u5199", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." } };
+module.exports = { "en.advisor": { "advisor_term_1": "This Advisor Agreement is entered into between NEWLEAF PLANTATION BERHAD (1251569-U) having its principal place of business located at Suite E-7-1, Plaza Mont Kiara 2 Jalan Kiara, 50480 Kuala Lumpur, Malaysia (the \u201CCompany\u201D) and ADVISOR, both of whom agree to be bound by this Agreement.", "advisor_term_10": "In the event that the Advisor receives commission payments for orders that are subsequently refunded, charged back, or the Company otherwise fails to realize the income from such a sale, the Advisor shall offset any future commissions paid by the amount by which the commissions actually paid would be reduced if the sales associated with income the Company failed to realize were never completed.", "advisor_term_11": "Payments shall be made to the Advisor on or before 15th of each month for the calendar month prior to the date such payment is made.", "advisor_term_12": "CONFIDENTIALITY. The Advisor shall not disclose to any third party any details regarding the Company\u2019s business, including, without limitation any information regarding any of the Company\u2019s customer information, business plans, or price points (the \u201CConfidential Information\u201D), (ii) make copies of any Confidential Information or any content based on the concepts contained within the Confidential Information for personal use or for distribution unless requested to do so by the Company, or (iii) use Confidential Information other than solely for the benefit of the Company.", "advisor_term_13": "Immediately upon termination of the relationship between the Company and the Advisor, the Advisor shall return to the Company any documents pertaining to the Company\u2019s business or any of its trade secrets which are in the Advisor\u2019s possession.", "advisor_term_14": "TERM AND TERMINATION. This Agreement shall commence upon the date of execution and continue until either Party terminates this Agreement in writing.", "advisor_term_15": "Upon such termination, the Advisor shall cease marketing and offering for sale the Products and shall continue to abide by the obligation refrain from sharing with any third party any of the Company\u2019s confidential information.", "advisor_term_16": "INDEMNIFICATION. The Advisor agrees to indemnify, defend, and protect the Company from and against all lawsuits and costs of every kind pertaining to any violation of the law, this Agreement, or the rights of any third party by the Advisor while acting pursuant to this Agreement. Such costs include but are not limited to reasonable legal fees.", "advisor_term_17": "NO MODIFICATION UNLESS IN WRITING. No modification of this Agreement shall be valid unless in writing and agreed upon by both Parties.", "advisor_term_18": "APPLICABLE LAW. This Agreement and the interpretation of its terms shall be governed by and construed in accordance with the laws of Malaysia and the Parties irrevocably submit to the exclusive jurisdiction of the Malaysian courts.", "advisor_term_2": "WHEREAS, the Company offers customers Durian Share-farming Programme.", "advisor_term_3": "WHEREAS, the Company and the Advisor desire to enter into an agreement whereby the Advisor will market and sell the Product according to the terms and conditions herein.", "advisor_term_4": "NOW, THEREFORE, in consideration of the mutual covenants and promises made by the parties hereto, the Company and the Advisor (individually, each a \u201CParty\u201D and collectively, the \u201CParties\u201D) covenant and agree as follows:", "advisor_term_4a": "ASSIGNMENT OF RIGHT. With certain limitations stated herein, the Company hereby authorizes the Advisor the right to market and offer for sale the Products according to the terms and limitations stated in this Agency Agreement.", "advisor_term_4b": "The Advisor shall only market and offer for sale the products within the Territory, as defined in this Agreement.", "advisor_term_4c": "The Company reserves the right to add to or subtract from the list of Products authorized with notice to the Advisor.", "advisor_term_4d": "TERRITORY. The Advisor shall be authorized to market the Product internationally (the \u201CTerritory\u201D).", "advisor_term_4e": "Nothing in this Agreement grants the Advisor the exclusive right to market the Products within the Territory.", "advisor_term_5": "TRADEMARK RIGHTS. The Advisor agrees and acknowledges the following with regard to the Company\u2019s trademark:", "advisor_term_5a": "The Company is the sole and exclusive owner to all right, title and interest in \u201CNewleaf Durian Share-farming Programme\u201D or to any other trademarks associated with the Company (the \u201CCompany Trademarks\u201D) which the Advisor may utilize in performing the services herein.", "advisor_term_5b": "The Company hereby grants to the Advisor for the duration of this Agreement and subject to the limitations stated within this Agreement a non-exclusive, non-transferable, revocable right to use the Company Trademarks as necessary to market and offer for sale the Products within the Territory.", "advisor_term_6": "ADVISOR RESPONSIBILITIES. In marketing and offering the Products for sale in the Territory, the Advisor shall:", "advisor_term_6a": "Act with diligence, devoting reasonable time and effort to fulfill the duties described herein;", "advisor_term_6b": "Maintain reasonable technical and practical knowledge with regard to the Products;", "advisor_term_6c": "Utilize promotional materials provided to the Advisor by the Company for the purpose of marketing and selling the Products;", "advisor_term_6d": "If requested by the Company, attend and participate in trade shows and conventions related to the Products;", "advisor_term_6e": "Promptly respond to all communications by customers and the Company regarding the Products;", "advisor_term_6f": "Reasonably assist the Company with regard to any and all collection matters as requested by the Company; and", "advisor_term_6g": "Prepare and maintain any reports and documentation, as requested by the Company.", "advisor_term_7": "COMMISSION. The Company shall pay to the Advisor commission based on all Net Product Sales from the Advisor\u2019s efforts. \u201CNet Product Sales\u201D shall be defined as the amount of sales revenue from any sales made by the Advisor less any chargebacks, returns, or defaults by customers.", "advisor_term_7a": "The purchase of at least 1 tree is required to qualify as Advisor.", "advisor_term_7b": "Advisor is entitled to 8% commission for the sales of tree, herein referred as \u201CReferral Commission\u201D.", "advisor_term_7c": "Senior Advisor is entitled to 10% referral commission. Advisor is required to refer THREE (3) direct growers in order to entitle for Senior Advisor ranking. Senior Advisor will benefit from differential 2% commission on sales of tree from any Advisor within personal organization.", "advisor_term_7d": "Executive Advisor is entitled to 15% referral commission. Senior Advisor is required to refer TEN (10) direct growers and accumulate ONE HUNDRED (100) group tree sales in order to entitle for Executive Advisor ranking. Executive Advisor will benefit from differential 7% commission on sales of tree from any Advisors and 2% from any Senior Advisors within personal organization. ", "advisor_term_7e": "Chief Advisor is entitled to 20% referral commission. Executive Advisor is required to refer TWENTY (20) direct growers and accumulate TWO HUNDRED (200) group tree sales in order to entitle for Chief Advisor ranking. Chief Advisor will benefit from differential 12% commission on sales of tree from any Advisors, 10% from any Senior Advisors, and 5% from any Executive Advisor within own organization.", "advisor_term_7f": "Referral commission is a one-off commission and calculated based on grower tree purchase price after any rebates and\/or discounts.", "advisor_term_7g": "Payments shall be made to the Advisor on or before 15th of each month for the calendar month prior to the date such payment is made.", "advisor_term_8": "The Company shall pay to the Advisor commission based on Yield proceeds of the fruits of the trees received by clients from the Advisor\u2019s efforts. \u201CYield\u201D shall be defined as the amount of sales proceeds of the fruits of the trees less all the necessary costs and expenses, less thirty per centum (30%).", "advisor_term_8a": "Advisor is eligible for 3% of the yield received by direct referred grower, herein referred to as \u201CYield Matching Commission\u201D.", "advisor_term_8b": "After successful referral of TWO (2) direct growers, advisor is eligible for 3% yield matching commission for yield received by grower referred by direct advisor.", "advisor_term_8c": "After successful referral of THREE (3) direct growers, advisor is eligible for 2% yield matching commission for yield received by grower referred by 2nd level advisor.", "advisor_term_8d": "After successful referral of FOUR (4) direct growers, advisor is eligible for 2% yield matching commission for yield received by grower referred by 3nd level advisor.", "advisor_term_8e": "Yield matching commission payments shall be made to the Advisor annually prior to the date such financial report has been announced.", "advisor_term_9": "Should the Parties terminate this Agreement for any reason, the Company shall pay the Advisor only for sales of the Products made prior to the termination date." }, "en.auth": { "account_no": "Account No.", "account_type": "Account type", "add_personnel": "Add personnel", "address": "Address", "address1": "Address Line 1", "address2": "Address Line 2", "address_line": "Address Line", "agree": "By checking this box and submitting the registration form, I agree to all of the ", "already_have_account": "Already have an account?", "ancestor_not_found": "Ancestor not found", "bank_address": "Bank address", "bank_info": "Bank information", "bank_name": "Bank name", "bank_swift": "Bank SORT\/SWIFT code", "beneficiary_address": "Nominee Address", "beneficiary_contact": "Nominee Contact No.", "beneficiary_identification": "Nominee Passport\/NRIC", "beneficiary_info": "Nominee information", "beneficiary_name": "Nominee name", "cancel": "Cancel", "company_address": "Company address", "company_business_registration": "Business registration No.", "company_incorporation_date": "Date of incorporation", "company_incorporation_place": "Incorporation place", "company_info": "Company information", "company_name": "Company\/Entity name", "company_regulatory_name": "Regulatory body", "company_type": "Type of business entity", "contact_personnels": "Contact personnel", "country": "Country", "email": "Email Address", "en_space": " ", "enter_email_and_password_to_reset": "Enter your email and new password", "enter_email_to_reset": "enter your email to reset your password", "facebook_login": "Login with Facebook", "facebook_signup": "Register with Facebook", "failed": "These credentials do not match our records.", "forgot_password": "Forgot your password", "full_name": "Name (as per NRIC\/Passport)", "gender": "Gender", "gender_female": "Female", "gender_male": "Male", "gender_null": "N\\A", "general_info": "General information", "google_login": "Login with Google", "google_signup": "Register with Google", "grower": " Grower", "hi": "Hi", "id_type_invalid": "Please select a valid ID type", "identification": "Passport\/NRIC", "last_step": "One last step.", "login": "Login", "name": "Name", "name_placeholder": "per Passport\/NRIC", "nationality": "Nationality", "new_to_site": "New to our site?", "password": "Password", "personal_info": "Personal information", "personnel_designation": "Designation", "phone": "Contact No.", "postcode": "Postcode", "process_registration": "Your registration is being processed.", "referral_id": "Your referral ID is :code", "referral_info": "Referral information", "referrer": "Referrer ID", "referrer_fill": "Fill in the referrer ID", "referrer_name": ":name", "referrer_not_found": "Referrer not found", "register": "Sign up", "register_message": "as Newheath grower and get involved in the multi-billion dollar industry today", "register_today": "", "registering_company": "Corporate Application (For corporate application only)", "registration_complete": "Registration complete, you may now close this window", "remember": "Remember me", "remove_personnel": "Remove personnel", "repeat": "Repeat ", "reset_password": "Reset password", "select_package": "Select purchase", "selected_package": "Selected purchase", "send_reset_link": "Send me the reset link", "submit": "Submit", "success": "Please fill in your details below for us to process your registration.", "success_country": "Please also let us know your country as that is required for us to generate your referral code", "success_email": "We will also need your email address so that we can send you important notifications in the future", "success_referral": "If you have a referrer, please let us know by filling in his\/her ID in the form below", "terms_and_conditions": "Terms and conditions", "thank_you": "Thank you.", "throttle": "Too many login attempts. Please try again in :seconds seconds.", "title": "Newheath - Join Us", "tree": "Tree|Trees", "wechat_signup": "Register with WeChat", "welcome_back": "welcome back" }, "en.company": { "company": "Company", "partnership": "Partnership", "sole": "Sole proprietership", "trust": "Trust" }, "en.confirmation": { "blast_newsletter_grower": "This will blast the news to all growers. Are you sure?", "cancel": "Cancel", "change_legal_status": "This will change the legal status for the grower. Are you sure?", "confirm": "Confirm", "confirm_change_to_paid": "Payouts will be marked as paid. Are you sure?", "confirmation": "Confirm action", "delete_purchase": "Purchase will be deleted and cannot be undone. Are you sure?", "delete_user": "User will be deleted and cannot be undone. Are you sure?", "reject_payment": "Payment will be rejected and grower will be notified. Are you sure?", "reject_redemption": "Redemption will be rejected and grower will be notified. Are you sure?", "reject_user": "This will reject the identity verification documents and grower will be notified. Are you sure?", "remind_user_identification": "Grower will be notified. Are you sure?", "verify_payment": "This will verify the payment, distribute commission and adjust related growers rank. Are you sure?", "verify_resell": "This will verify the resell account, distribute commission and adjust related growers rank. Are you sure?", "verify_user": "This will verify the identity verification documents. Are you sure?" }, "en.dashboard": { "account": "Account", "account_level": "Account level", "account_max": "This account has highest qualification", "accounts": "Accounts", "accrued_commission": "Accrued commission", "buy_machine": "Buy :count machine or 1 silver account to :level", "buy_platinum": "Buy :count platinum account to :level", "buy_silver": "Buy :count silver account to :level", "commission_earned": "Accumulated commission", "current_grower_level": "Current grower level", "date": "Date", "e_wallet_amount": "E-wallet amount", "group_sale": "Group sale", "grower_level": "Grower level", "latest_news": "Latest news", "my_account_status": "My account status", "my_accounts": "My accounts", "my_downlines": "My affiliates", "next_grower_level": "Next grower level", "pending_redemptions": "Pending Redemptions", "progress_to_next_level": "Progress to next level", "quantity": "Quantity", "step_to_qualification": "Step to next qualification", "trees_sold_global": "Global trees sold" }, "en.form": { "redeem": "Redeem", "submit": "Submit" }, "en.input": { "choose_file": "Click to choose file...", "female": "Female", "file_selected": "Selected file :name", "male": "Male", "nric": "NRIC", "passport": "Passport", "switch_file_mode": "You can toggle between camera\/file mode by pressing at the blue button (only for mobile phone)", "take_from_camera": "Click to open camera..." }, "en.nav": { "admin_purchases": "Purchases", "commission_report": "Commission reports", "dashboard": "Dashboard", "exit": "Exit", "logout": "Logout", "materials": "Materials", "news": "News", "organization": "Organization", "packages": "Packages", "payout_report": "Payout reports", "payouts": "Payouts", "profile": "Profile", "purchases": "Purchases", "redeem_item": "Redeem items", "redemptions": "Redemptions", "reports": "Reports", "sell_account": "Sell account", "settings": "Settings", "transactions": "Commissions", "trees": "My trees", "users": "Users" }, "en.package": { "actions": "Actions", "can_redeem": "Can Redeem", "can_upgrade": "Can Upgrade", "create_success": "Package created", "invalid_package_picture": "Package picture is required", "machine_count": "No. of machines", "make_new_package": "Add new package", "package_description": "Package description", "package_details": "Package details", "package_name": "Package name", "package_picture": "Package picture", "package_picture_exceed_size": "Package picture must not exceed 8MB", "packages": "Packages", "price": "Price (MYR)", "price_promotion": "Promotion price (MYR)", "price_std": "Price (USD)", "price_std_promotion": "Promotion price (USD)", "update_success": "Package updated" }, "en.pagination": { "info": "Displaying {from} to {to} of {total} items", "next": "Next &raquo;", "previous": "&laquo; Previous" }, "en.passwords": { "password": "Passwords must be at least six characters and match the confirmation.", "reset": "Your password has been reset!", "sent": "We have e-mailed your password reset link!", "token": "This password reset token is invalid.", "user": "We can't find a user with that e-mail address." }, "en.payment": { "amount": "Amount payable", "bank_account_no": "Account No.", "bank_address": "Bank Address", "bank_details": "Bank Details", "bank_swift": "SWIFT Code", "beneficiary_address": "Beneficiary Address", "beneficiary_bank": "Beneficiary Bank", "beneficiary_name": "Beneficiary Name", "invalid_payment_slip": "Payment slip is required", "make_payment": "Make payment", "paid_on": "Paid on", "payment": "Payment", "payment_details": "Payment details", "payment_slip": "Payment Slip", "payment_slip_exceed_size": "Payment slip must not exceed 8MB", "reject": "Reject", "reject_note": "Reject reason", "reject_success": "Payment rejected successfully", "submit_payment": "Submit payment", "success": "Payment has been recorded successfully", "verify": "Verify", "verify_success": "Payment verified successfully" }, "en.post": { "add_new_post": "Create news", "advisor_incentive_program": "Advisor Incentive Program", "commission_report": "Commission report", "content": "Content", "create_success": "News created", "created_at": "Created at", "download": "Download", "edit_post": "Edit news", "last_update": "Last updated", "latest_news": "the latest news and updates from newleaf plantation berhad", "marketing_material": "Marketing materials", "newleaf_bulletin": "Newleaf Bulletin", "newleaf_flyer": "Newleaf Flyer", "newleaf_purchase_form": "Newleaf Purchase Form", "notify_admins_success": "News has been sent to all admins!", "notify_success": "News has been sent to all growers!", "payout_report": "Payout report", "posts": "News", "published_date": "Published date", "sales_report": "Sales report", "title": "Title", "update_success": "News updated", "yield_projection": "Yield Projection" }, "en.purchase": { "Diamond": "Diamond", "Platinum": "Platinum", "Platinum_1": "Platinum 1", "Platinum_2": "Platinum 2", "Platinum_3": "Platinum 3", "Silver": "Silver", "Silver_1": "Silver 1", "Silver_2": "Silver 2", "Silver_3": "Silver 3", "Silver_4": "Silver 4", "Silver_5": "Silver 5", "Silver_6": "Silver 6", "Silver_7": "Silver 7", "Silver_8": "Silver 8", "Silver_9": "Silver 9", "base_price": "Recommended Retail Price (RRP) per Tree: RM 8,000", "buy_with_account": "Buy with account", "cancel": "Cancel update", "cash_back": "Cash Back", "checkout": "Checkout", "complete": "Complete", "customer": "Customer", "default_user": "Leave empty to buy for yourself", "deleted": "Purchase deleted", "diamond": "Diamond", "download_receipt": "Download receipt", "made_by": "Made by", "make_new_purchase": "Make new purchase", "original_price": "Original Price", "packages": "Packages", "past_purchases": "Purchase history", "pending": "Pending payment", "pending_purchases": "Pending purchases", "pending_verification": "Pending verification", "platinum": "Platinum", "purchase_date": "Purchase date", "purchase_details": "Purchase details", "purchases": "Purchases", "receipt_description": "Deposit for :name purchase", "rejected": "Rejected", "saving": "Save up to", "select_package": "Select from the packages below", "selected_packages": "Selected packages", "silver": "Silver", "status": "Status", "success": "Purchase order created successfully", "total": "Total", "total_payable": "Total payable", "update": "Update", "updated": "Purchase updated", "user": "Buyer" }, "en.redemption": { "approve": "Approve", "approved": "Approved", "cancel": "Cancel", "canceled": "Cancel", "description": "Description", "item": "Item", "item_description": "Item Description", "item_details": "Item details", "item_name": "Item Name", "made_by": "Made by", "name": "Name", "pending": "Pending", "point_to_redeem": "Point to redeem", "price": "Price", "quantity": "Quantity", "redeem_item": "Redeem items", "redemption": "Redemptions", "redemption_approve": "Redemption is approved", "redemption_cancel": "Redemption is canceled", "redemption_date": "Date", "redemption_detail": "Detail", "redemption_reject": "Redemption is rejected", "redemption_user": "Redemption user", "reject": "Reject", "success": "Redemption created successfully", "user": "User", "wallet": "E-wallet" }, "en.resell": { "account_to_sell": "Select account to sell", "no_user_found": "No user found for the Newhealth ID", "sell_account": "Sell account", "sell_to_user": "Sell to user", "user_referral_code": "Enter user Newhealth ID", "verify_success": "Resell account verified successfully" }, "en.table": { "actions": "Actions", "back": "Back", "export": "Export", "export_excel": "Export as Excel", "export_pdf": "Export as PDF", "filter_by_date": "Filter by date", "filter_by_month": "Filter by month", "reset": "Reset", "search": "Search" }, "en.transaction": { "amount": "Amount", "amount_myr": "Amount (MYR)", "amount_std": "Amount (USD)", "created_at": "Date", "description": "Description", "e_wallet_commision": "E-wallet commission", "e_wallet_leadership_bonus": "E-wallet leadership bonus", "leadership_bonus": "Leadership bonus", "machine_purchase": "Package purchase", "one_time_commision": "Referral commission", "paid": "Paid", "payouts": "Payouts", "pending": "Pending", "purchase_account": "Purchase account by :name", "remark": "Remark", "status": "Payout status", "status_updated": "Payout completed", "std_payouts": "Payouts (USD)", "transactions": "Commissions", "tree_purchase": "Tree purchase by :name", "type": "Type" }, "en.tree": { "self": "Me", "tree": "Organization chart" }, "en.user": { "account_level_0": "Customer", "account_level_1": "Silver", "account_level_2": "Platinum", "account_level_3": "Diamond", "advisor_application_received": "We have received your application. Our administrators will go through your submission and get back to you soon.", "apply_as_advisor": "Apply as advisor", "approve": "Approve", "bank_statement": "Bank Statement", "cancel_change_password": "Cancel change password", "cancel_update": "Cancel update", "change_password": "Change password", "complete": "Complete", "content_is_for_advisor": "This content is only for advisor", "copied-link": "Your referral link has been copied to the clipboard", "copy-referral": "Copy referral link", "deleted": "User has been deleted", "documents_rejected": "Documents rejected", "documents_success": "Documents updated", "documents_verified": "Documents verified", "edit_profile": "Edit profile", "execution_ready": "Execution ready", "has_approved": "User has been approved", "has_rejected": "User has been rejected", "identity": "Purchaser NRIC (for Malaysian) or Passport (for non-Malaysian)", "instruction_issued": "Instruction issued", "instruction_issued_to_lawyer": "Instruction issued to lawyer", "is_admin": "Is Admin", "is_advisor": "Is Advisor", "joined_at": "Joined at", "kyc_documents": "Identity Verification Documents", "legal_updated": "User legal status updated successfully", "level": "Member level", "level_1": "Advisor", "level_2": "Senior Advisor", "level_3": "Executive Advisor", "level_4": "Chief Advisor", "level_instruction": "Refer :target direct growers. :left to go.", "level_instruction_2": "Group sales of :target subscriptions. :left to go.", "lock_down_back": "for any discrepancy", "lock_down_front": "Please email", "locked": "User has been locked", "locked_message": "Your account has been locked. Please contact support@newleaf.com.my for more information", "nominee_identity": "Nominee NRIC (for Malaysian) or Passport (for non-Malaysian)", "pending": "Pending", "pending_verification": "Pending verification", "profile_update_success": "Profile updated", "referral_code": "Newhealth ID", "referrer": "Referrer", "reject": "Reject", "rejected": "Verification failed", "reminder_sent": "Reminder sent", "residence_proof": "Proof of Residence", "sales_agreement_executed": "Sales agreement executed", "sales_agreement_ready_for_execution": "Sales agreement ready for execution", "setting_success": "Settings updated successfully", "settings": "Settings", "status": "Status", "tree_count": "No. of trees", "unlocked": "User has been unlocked", "update_document": "Update document", "users": "Users", "users_pending": "Pending users", "verified": "Verified", "verify": "Verify", "waiting_approval": "Your accounnt is waiting for approval" }, "en.validation": { "accepted": "The :attribute must be accepted.", "active_url": "The :attribute is not a valid URL.", "after": "The :attribute must be a date after :date.", "after_or_equal": "The :attribute must be a date after or equal to :date.", "alpha": "The :attribute may only contain letters.", "alpha_dash": "The :attribute may only contain letters, numbers, and dashes.", "alpha_num": "The :attribute may only contain letters and numbers.", "array": "The :attribute must be an array.", "attributes": { "password": "Password" }, "before": "The :attribute must be a date before :date.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": "The :attribute confirmation does not match.", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "The :attribute must be a valid email address.", "exists": "The selected :attribute is invalid.", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "This must be a number.", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "This field is required.", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." }, "zh.auth": { "account_no": "\u6237\u53E3\u53F7\u7801", "account_type": "\u6237\u53E3\u7C7B\u578B", "add_personnel": "\u589E\u52A0", "address": "\u5730\u5740", "address1": "\u5730\u5740 1", "address2": "\u5730\u5740 2", "agree": "\u6211\u786E\u8BA4\u5E76\u627F\u8BA4\u6211\u5DF2\u7ECF\u9605\u8BFB\u5E76\u540C\u610F\u9075\u5B88\u672C\u8D2D\u4E70\u8868\u683C\u4E2D\u7684", "already_have_account": "\u5DF2\u7ECF\u6709\u5E10\u53F7\uFF1F", "ancestor_not_found": "\u7956\u4E0A\u9519\u8BEF", "bank_address": "\u94F6\u884C\u5730\u5740", "bank_info": "\u94F6\u884C\u8D44\u6599", "bank_name": "\u94F6\u884C\u540D\u79F0", "bank_swift": "\u94F6\u884C SORT/SWIFT \u4EE3\u7801", "beneficiary_address": "\u63D0\u540D\u4EBA\u4F4F\u5740", "beneficiary_contact": "\u63D0\u540D\u4EBA\u7535\u8BDD\u53F7\u7801", "beneficiary_identification": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "beneficiary_info": "\u63D0\u540D\u4EBA\u8D44\u6599", "beneficiary_name": "\u63D0\u540D\u4EBA\u540D\u79F0", "cancel": "\u53D6\u6D88", "company_address": "\u516C\u53F8\u5730\u5740", "company_business_registration": "\u5546\u4E1A\u6CE8\u518C\u53F7\u7801", "company_incorporation_date": "\u5546\u4E1A\u6CE8\u518C\u65E5\u671F", "company_incorporation_place": "\u6CE8\u518C\u5730\u70B9", "company_info": "\u516C\u53F8\u8D44\u6599", "company_name": "\u516C\u53F8\u540D\u79F0", "company_regulatory_name": "\u76D1\u7BA1\u5355\u4F4D\u540D\u79F0", "company_type": "\u5546\u4E1A\u7C7B\u578B", "contact_personnels": "\u516C\u53F8\u8054\u7EDC\u4EBA", "country": "\u56FD\u5BB6", "email": "\u7535\u90AE", "en_space": "", "enter_email_and_password_to_reset": "\u8BF7\u8F93\u5165\u7535\u90AE\u548C\u65B0\u5BC6\u7801", "enter_email_to_reset": "\u8BF7\u8F93\u5165\u60A8\u7684\u7535\u90AE", "facebook_login": "\u8138\u4E66\u767B\u5165", "facebook_signup": "\u4F7F\u7528\u8138\u4E66\u6CE8\u518C", "failed": "\u7535\u90AE/\u5BC6\u7801\u9519\u8BEF", "forgot_password": "\u5FD8\u8BB0\u5BC6\u7801", "full_name": "\u5168\u540D", "gender": "\u6027\u522B", "gender_female": "\u5973", "gender_male": "\u7537", "general_info": "\u4E00\u822C\u8D44\u6599", "google_login": "\u8C37\u6B4C\u767B\u5165", "google_signup": "\u4F7F\u7528\u8C37\u6B4C\u6CE8\u518C", "grower": "\u79CD\u690D\u8005", "hi": "\u4F60\u597D", "id_type_invalid": "\u8BF7\u9009\u62E9\u6B63\u786E\u7684ID\u79CD\u7C7B", "identification": "\u8EAB\u4EFD\u8BC1/\u62A4\u7167\u53F7\u7801", "last_step": "\u6700\u540E\u4E00\u6B65", "login": "\u767B\u5165", "name": "\u540D\u5B57", "name_placeholder": "\u586B\u5199\u5B9E\u540D", "nationality": "\u56FD\u7C4D", "new_to_site": "\u8FD8\u672A\u6CE8\u518C\uFF1F", "password": "\u5BC6\u7801", "personal_info": "\u4E2A\u4EBA\u8D44\u6599", "personnel_designation": "\u804C\u4F4D", "phone": "\u7535\u8BDD\u53F7\u7801", "postcode": "\u90AE\u653F\u7F16\u7801", "process_registration": "\u6211\u4EEC\u6B63\u5728\u5904\u7406\u60A8\u7684\u6CE8\u518C\u3002", "referral_id": "\u60A8\u7684ID\u662F :code", "referral_info": "\u63A8\u8350\u8005\u8D44\u6599", "referrer": "\u4ECB\u7ECD\u8005ID", "referrer_fill": "\u8BF7\u8F93\u5165\u63A8\u8350\u8005ID", "referrer_name": ":name", "referrer_not_found": "ID\u9519\u8BEF", "register": "\u52A0\u76DF", "register_message": "\u65B0\u5EB7\u8BA1\u5212\uFF01", "register_today": "\u65B0\u5EB7\u65B0\u5546\u673A, \u643A\u624B\u65B0\u53F6\u521B\u767E\u4EBF, \u9A6C\u4E0A", "registering_company": "\u673A\u6784\u7533\u8BF7", "registration_complete": "\u5B8C\u6210\uFF0C\u60A8\u5DF2\u53EF\u4EE5\u5173\u95ED\u6B64\u9875\u9762", "remember": "\u4FDD\u6301\u767B\u5165", "remove_personnel": "\u53BB\u9664", "repeat": "\u786E\u5B9A", "reset_password": "\u91CD\u8BBE\u5BC6\u7801", "select_package": "\u9009\u62E9\u914D\u5957", "selected_package": "\u914D\u5957", "send_reset_link": "\u786E\u5B9A\u91CD\u8BBE\u5BC6\u7801", "submit": "\u63D0\u4EA4", "success": "\u6CE8\u518C\u6210\u529F", "success_country": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u6240\u5728\u56FD\u5BB6\uFF0C\u8FD9\u5C06\u5E2E\u52A9\u6211\u4EEC\u5236\u5B9A\u60A8\u7684ID", "success_email": "\u6211\u4EEC\u4E5F\u9700\u8981\u60A8\u7684\u7535\u90AE\u4EE5\u4F5C\u4E3A\u65E5\u540E\u7684\u901A\u8BAF\u7BA1\u9053", "success_referral": "\u82E5\u60A8\u6709\u63A8\u8350\u8005\uFF0C\u8BF7\u544A\u8BC9\u6211\u4EEC\u4ED6\u7684ID", "terms_and_conditions": "\u6761\u6B3E\u53CA\u7EC6\u5219", "thank_you": "\u8C22\u8C22", "throttle": "\u767B\u5165\u8FC7\u4E8E\u9891\u7E41\uFF0C\u8BF7\u5728 :seconds \u79D2\u540E\u518D\u8BD5", "title": "\u65B0\u5EB7\u96C6\u56E2 - \u52A0\u76DF", "tree": "\u68F5\u6811|\u68F5\u6811", "wechat_signup": "\u4F7F\u7528\u5FAE\u4FE1\u6CE8\u518C", "welcome_back": "\u6B22\u8FCE\u56DE\u6765" }, "zh.company": { "company": "\u516C\u53F8", "partnership": "\u5408\u4F19", "sole": "\u72EC\u8D44\u7ECF\u8425\u8005", "trust": "\u4FE1\u6258\u4E1A\u52A1" }, "zh.confirmation": { "blast_newsletter_grower": "\u786E\u5B9A\u53D1\u9001\u6D88\u606F\u7ED9\u6240\u6709\u79CD\u690D\u7740?", "cancel": "\u53D6\u6D88", "change_legal_status": "\u786E\u5B9A\u66F4\u65B0\u72B6\u6001?", "confirm": "\u786E\u5B9A", "confirm_change_to_paid": "\u786E\u5B9A\u6807\u699C\u4E3A\u5DF2\u4ED8\u6B3E?", "confirmation": "\u884C\u52A8\u786E\u8BA4", "delete_purchase": "\u786E\u5B9A\u79FB\u9664\u8D2D\u4E70\u8BB0\u5F55?", "delete_user": "\u786E\u5B9A\u79FB\u9664\u79CD\u690D\u8005?", "reject_payment": "\u786E\u5B9A\u9A73\u56DE\u4ED8\u6B3E?", "reject_redemption": "\u786E\u5B9A\u9A73\u56DE\u8D4E\u4E70?", "reject_user": "\u786E\u5B9A\u9A73\u56DE\u79CD\u690D\u8005?", "remind_user_identification": "\u786E\u5B9A\u63D0\u9192\u79CD\u690D\u8005?", "verify_payment": "\u786E\u5B9A\u8BA4\u8BC1\u4ED8\u6B3E?", "verify_resell": "\u786E\u5B9A\u8BA4\u8BC1\u552E\u5356\u5E10\u6237?", "verify_user": "\u786E\u5B9A\u8BA4\u8BC1\u79CD\u690D\u8005?" }, "zh.dashboard": { "account": "\u5E10\u53F7", "account_level": "\u8D26\u53F7\u8058\u9636", "account_max": "\u8FD9\u5E10\u53F7\u5DF2\u662F\u6700\u9AD8\u5E10\u53F7", "accounts": "\u5E10\u53F7", "accrued_commission": "\u5E94\u8BA1\u5956\u91D1", "buy_machine": "\u4E70 :count \u914D\u5957\u6216 1 \u767D\u94F6\u5E10\u53F7\u5230 :level", "buy_platinum": "\u4E70 :count \u767D\u91D1\u5E10\u53F7\u5230 :level", "buy_silver": "\u4E70 :count \u767D\u94F6\u5E10\u53F7\u5230 :level", "commission_earned": "\u7D2F\u8BA1\u5956\u91D1", "current_grower_level": "\u5F53\u524D\u8058\u9636", "date": "\u65E5\u671F", "e_wallet_amount": "\u7535\u5B50\u94B1\u5305\u5171\u8BA1", "group_sale": "\u7EC4\u7EC7\u4E1A\u7EE9", "grower_level": "\u8058\u9636", "latest_news": "\u6700\u65B0\u6D88\u606F", "my_account_status": "\u6211\u7684\u8D26\u53F7", "my_accounts": "\u6211\u7684\u8D26\u53F7", "my_downlines": "\u6211\u7684\u4E0B\u7EBF", "next_grower_level": "\u4E0B\u4E2A\u8058\u9636", "pending_redemptions": "\u5BA1\u6838\u8D4E\u4E70", "progress_to_next_level": "\u5347\u7EA7\u5E10\u53F7", "quantity": "\u6570\u91CF", "step_to_qualification": "\u5347\u7EA7\u5E10\u53F7\u7684\u6B65\u9AA4", "trees_sold_global": "\u603B\u4E1A\u7EE9" }, "zh.form": { "redeem": "\u8D4E\u4E70", "submit": "\u63D0\u4EA4" }, "zh.input": { "choose_file": "\u6309\u6B64\u9009\u62E9\u6587\u4EF6...", "female": "\u5973", "file_selected": "\u6210\u529F\u9009\u62E9:name", "male": "\u7537", "nric": "\u8EAB\u4EFD\u8BC1", "passport": "\u62A4\u7167", "switch_file_mode": "\u6309\u84DD\u8272\u6309\u94AE\u53EF\u5207\u6362\u6587\u4EF6\u9009\u62E9/\u7167\u76F8\u673A\u6A21\u5F0F(\u4EC5\u4F9B\u667A\u80FD\u7535\u8BDD\u4F7F\u7528)", "take_from_camera": "\u6309\u6B64\u6253\u5F00\u7167\u76F8\u673A..." }, "zh.nav": { "admin_purchases": "\u6240\u6709\u8BA2\u5355", "commission_report": "\u4F63\u91D1\u62A5\u544A", "dashboard": "\u6982\u8981", "exit": "\u79BB\u5F00", "logout": "\u767B\u51FA", "materials": "\u9500\u552E\u8F85\u52A9", "news": "\u6700\u65B0\u6D88\u606F", "organization": "\u7EC4\u7EC7", "packages": "\u914D\u5957", "payout_report": "\u652F\u51FA\u62A5\u544A", "payouts": "\u652F\u51FA", "profile": "\u6211\u7684\u8D44\u6599", "purchases": "\u8BA2\u5355", "redeem_item": "\u8D4E\u4E70\u7269\u54C1", "redemptions": "\u8D4E\u4E70", "reports": "\u62A5\u544A", "sell_account": "\u51FA\u552E\u8D26\u53F7", "settings": "\u8BBE\u5B9A", "transactions": "\u4F63\u91D1", "trees": "\u79CD\u690D\u7BA1\u7406", "users": "\u7528\u6237" }, "zh.package": { "can_redeem": "\u53EF\u8D4E\u4E70", "can_upgrade": "\u53EF\u5347\u7EA7", "create_success": "\u5DF2\u589E\u52A0\u914D\u5957", "invalid_package_picture": "\u8BF7\u9009\u62E9\u914D\u5957\u7167\u7247", "machine_count": "\u673A\u5668\u6570\u91CF", "make_new_package": "\u589E\u52A0\u914D\u5957", "package_description": "\u63CF\u8FF0\u914D\u5957", "package_details": "\u914D\u5957\u8BE6\u60C5", "package_name": "\u914D\u5957\u540D\u79F0", "package_picture": "\u914D\u5957\u7167\u7247", "package_picture_exceed_size": "\u914D\u5957\u7167\u7247\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "packages": "\u914D\u5957", "price": "\u4EF7\u683C (\u9A6C\u5E01)", "price_promotion": "\u4F18\u60E0\u4EF7\u683C (\u9A6C\u5E01)", "price_std": "\u4EF7\u683C (\u7F8E\u91D1)", "price_std_promotion": "\u4F18\u60E0\u4EF7\u683C (\u7F8E\u91D1)", "update_success": "\u5DF2\u66F4\u65B0\u914D\u5957\u8BE6\u60C5" }, "zh.pagination": { "info": "\u5171{total}\u4E2A\u6570\u636E\uFF0C\u6B63\u5728\u663E\u793A{from}\u5230{to}" }, "zh.passwords": { "password": "\u5BC6\u7801\u5FC5\u987B\u6709\u6700\u5C116\u4E2A\u5B57\u6BCD", "reset": "\u6210\u529F\u5BC6\u7801\u91CD\u8BBE", "sent": "\u6211\u4EEC\u5DF2\u53D1\u9001\u5BC6\u7801\u91CD\u8BBE\u8FDE\u63A5\u5230\u60A8\u7684\u70B9\u90AE", "token": "\u60A8\u7684\u8BF7\u6C42\u5DF2\u8FC7\u671F\uFF0C\u8BF7\u91CD\u65B0\u8BF7\u6C42", "user": "\u6B64\u7535\u90AE\u5730\u5740\u4E0D\u5728\u6211\u4EEC\u7684\u6570\u636E\u5E93\u91CC" }, "zh.payment": { "amount": "\u652F\u4ED8\u6570\u989D", "bank_account_no": "\u6536\u6B3E\u8D26\u53F7", "bank_address": "\u6536\u6B3E\u94F6\u884C\u5730\u5740", "bank_details": "\u6C47\u6B3E\u8BE6\u60C5", "bank_swift": "\u94F6\u884C\u56FD\u9645\u4EE3\u7801", "beneficiary_address": "\u6536\u6B3E\u8D26\u6237\u5730\u5740", "beneficiary_bank": "\u6536\u6B3E\u94F6\u884C", "beneficiary_name": "\u6536\u6B3E\u8D26\u6237\u540D\u79F0", "invalid_payment_slip": "\u8BF7\u9009\u62E9\u4ED8\u6B3E\u5355", "make_payment": "\u652F\u4ED8\u6B3E\u9879", "paid_on": "\u4ED8\u6B3E\u65E5\u671F", "payment": "\u4ED8\u6B3E", "payment_details": "\u4ED8\u6B3E\u8BE6\u60C5", "payment_slip": "\u4ED8\u6B3E\u5355", "payment_slip_exceed_size": "\u4ED8\u6B3E\u5355\u6587\u4EF6\u5927\u5C0F\u4E0D\u80FD\u8D85\u8FC78MB", "reject": "\u9A73\u56DE", "reject_note": "\u5907\u6CE8", "reject_success": "\u6210\u529F\u9A73\u56DE\u4ED8\u6B3E", "submit_payment": "\u63D0\u4EA4\u4ED8\u6B3E\u5355", "success": "\u4ED8\u6B3E\u5355\u5DF2\u88AB\u63A5\u7EB3", "verify": "\u786E\u8BA4\u4ED8\u6B3E", "verify_success": "\u6210\u529F\u786E\u8BA4\u4ED8\u6B3E" }, "zh.post": { "add_new_post": "\u521B\u5EFA\u65B0\u6D88\u606F", "advisor_incentive_program": "\u987E\u95EE\u5956\u52B1\u8BA1\u5212", "commission_report": "\u4F63\u91D1\u62A5\u544A", "content": "\u5185\u5BB9", "created_at": "\u53D1\u5E03\u4E8E", "download": "\u4E0B\u8F7D", "edit_post": "\u66F4\u65B0\u6D88\u606F", "last_update": "\u66F4\u65B0\u4E8E", "latest_news": "\u4E3A\u60A8\u5E26\u6765\u65B0\u53F6\u6700\u65B0\u6D88\u606F\u4E0E\u66F4\u65B0", "marketing_material": "\u65B0\u53F6\u8425\u9500", "newleaf_bulletin": "\u65B0\u53F6\u901A\u544A", "newleaf_flyer": "\u65B0\u53F6\u4F20\u5355", "newleaf_purchase_form": "\u65B0\u53F6\u8D2D\u4E70\u8868\u683C", "notify_admin_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u7BA1\u7406\u5458", "notify_success": "\u6210\u529F\u53D1\u9001\u7ED9\u6240\u6709\u79CD\u690D\u8005", "payout_report": "\u652F\u51FA\u62A5\u544A", "post_created": "\u521B\u5EFA\u6210\u529F", "posts": "\u6700\u65B0\u6D88\u606F", "published_date": "\u53D1\u5E03\u65E5\u671F", "sales_report": "\u9500\u552E\u62A5\u544A", "title": "\u6807\u9898", "update_success": "\u66F4\u65B0\u6210\u529F", "yield_projection": "\u4EA7\u91CF\u9884\u6D4B" }, "zh.purchase": { "Diamond": "\u94BB\u77F3", "Platinum": "\u767D\u91D1", "Platinum_1": "\u767D\u91D1 1", "Platinum_2": "\u767D\u91D1 2", "Platinum_3": "\u767D\u91D1 3", "Silver": "\u767D\u94F6", "Silver_1": "\u767D\u94F6 1", "Silver_2": "\u767D\u94F6 2", "Silver_3": "\u767D\u94F6 3", "Silver_4": "\u767D\u94F6 4", "Silver_5": "\u767D\u94F6 5", "Silver_6": "\u767D\u94F6 6", "Silver_7": "\u767D\u94F6 7", "Silver_8": "\u767D\u94F6 8", "Silver_9": "\u767D\u94F6 9", "base_price": "\u5355\u68F5\u6811\u96F6\u552E\u4EF7\uFF1A\u7F8E\u91D1 2,500", "buy_with_account": "\u7528\u8D26\u53F7\u4E70", "cancel": "\u53D6\u6D88\u66F4\u6539", "cash_back": "\u56DE\u6263", "checkout": "\u4ED8\u6B3E", "complete": "\u5B8C\u6210", "customer": "\u666E\u901A", "default_user": "\u81EA\u8EAB\u8D2D\u4E70\u8BF7\u7559\u7A7A", "deleted": "\u8BA2\u5355\u5DF2\u88AB\u5220\u9664", "diamond": "\u94BB\u77F3", "made_by": "\u5BA2\u6237", "make_new_purchase": "\u8D2D\u4E70\u79CD\u690D\u914D\u5957", "original_price": "\u539F\u4EF7", "packages": "\u914D\u5957", "past_purchases": "\u8FC7\u5F80\u8BA2\u5355\u8BB0\u5F55", "pending": "\u672A\u4ED8\u6B3E", "pending_purchases": "\u5BA1\u6838\u8BA2\u5355", "pending_verification": "\u5BA1\u6838\u4E2D", "platinum": "\u767D\u91D1", "purchase_date": "\u8D2D\u4E70\u65E5\u671F", "purchase_details": "\u8BA2\u5355\u8BE6\u60C5", "purchases": "\u8BA2\u5355\u8BB0\u5F55", "rejected": "\u9700\u8981\u66F4\u65B0", "saving": "\u8282\u7701\u9AD8\u8FBE", "select_package": "\u9009\u62E9\u4EE5\u4E0B\u914D\u5957", "selected_packages": "\u5DF2\u9009\u62E9\u914D\u5957", "silver": "\u767D\u94F6", "status": "\u72B6\u6001", "success": "\u8BA2\u5355\u5DF2\u88AB\u63A5\u7EB3", "total": "\u603B\u4EF7\u683C", "total_payable": "\u603B\u4EF7\u683C", "update": "\u66F4\u6539", "updated": "\u66F4\u65B0\u6210\u529F", "user": "\u4E70\u5BB6" }, "zh.redemption": { "approve": "\u6279\u51C6", "approved": "\u6279\u51C6", "cancel": "\u53D6\u6D88", "canceled": "\u53D6\u6D88", "description": "\u63CF\u8FF0", "item": "\u7269\u54C1", "item_description": "\u7269\u54C1\u63CF\u8FF0", "item_details": "\u7269\u54C1\u8BE6\u60C5", "item_name": "\u7269\u54C1\u540D\u79F0", "made_by": "\u5BA2\u6237", "name": "\u540D\u79F0", "pending": "\u5B88\u5019", "point_to_redeem": "\u8D4E\u56DE\u5206", "price": "\u4EF7\u683C", "quantity": "\u6570\u91CF", "redeem_item": "\u8D4E\u4E70\u7269\u54C1", "redemption": "\u8D4E\u4E70", "redemption_approve": "\u8D4E\u4E70\u5DF2\u6279\u51C6", "redemption_cancel": "\u8D4E\u4E70\u5DF2\u53D6\u6D88", "redemption_date": "\u8D4E\u4E70\u65E5\u671F", "redemption_detail": "\u8BE6\u60C5", "redemption_reject": "\u8D4E\u4E70\u5DF2\u9A73\u56DE", "redemption_user": "\u8D4E\u4E70\u8D26\u53F7", "reject": "\u9A73\u56DE", "success": "\u8D4E\u4E70\u5DF2\u88AB\u63A5\u7EB3", "user": "\u7528\u6237", "wallet": "\u94B1\u5305" }, "zh.resell": { "account_to_sell": "\u9009\u62E9\u552E\u5356\u5E10\u6237", "no_user_found": "\u7528\u6237\u4E0D\u8981\u5B58\u5728", "sell_account": "\u552E\u5356\u5E10\u6237", "sell_to_user": "\u552E\u5356\u7ED9\u7528\u6237", "user_referral_code": "\u8F93\u5165\u7528\u6237\u8FDE\u63A5ID", "verify_success": "\u6210\u529F\u786E\u8BA4\u552E\u5356\u5E10\u6237" }, "zh.table": { "actions": "\u64CD\u4F5C", "back": "\u8FD4\u56DE", "export": "\u6587\u4EF6\u8F93\u51FA", "export_excel": "Excel\u8F93\u51FA", "export_pdf": "PDF\u8F93\u51FA", "filter_by_date": "\u65E5\u671F\u7B5B\u9009", "filter_by_month": "\u6708\u4EFD\u7B5B\u9009", "reset": "\u91CD\u8BBE", "search": "\u67E5\u627E" }, "zh.transaction": { "amount": "\u91D1\u989D", "amount_myr": "\u91D1\u989D (\u9A6C\u5E01)", "amount_std": "\u91D1\u989D (\u7F8E\u91D1)", "created_at": "\u65E5\u671F", "description": "\u9879\u76EE", "e_wallet_commision": "\u94B1\u5305\u4F63\u91D1", "e_wallet_leadership_bonus": "\u9886\u5BFC\u5956\u91D1\u94B1\u5305", "leadership_bonus": "\u9886\u5BFC\u5956\u91D1", "one_time_commision": "\u4E00\u6B21\u6027\u4F63\u91D1", "paid": "\u5DF2\u652F\u4ED8", "payouts": "\u652F\u51FA", "pending": "\u672A\u652F\u4ED8", "remark": "\u5907\u6CE8", "status": "\u652F\u4ED8\u72B6\u6001", "status_updated": "\u652F\u4ED8\u5B8C\u6210", "std_payouts": "\u652F\u51FA (\u7F8E\u91D1)", "transactions": "\u4F63\u91D1", "tree_purchase": ":name \u7684\u79CD\u690D\u9879\u76EE", "type": "\u79CD\u7C7B" }, "zh.tree": { "self": "\u6211", "tree": "\u7EC4\u7EC7\u56FE" }, "zh.user": { "account_level_0": "\u666E\u901A", "account_level_1": "\u767D\u94F6", "account_level_2": "\u767D\u91D1", "account_level_3": "\u94BB\u77F3", "advisor_application_received": "\u6211\u4EEC\u5DF2\u6536\u5230\u60A8\u7684\u7533\u8BF7\uFF0C\u6211\u4EEC\u7684\u7BA1\u7406\u5458\u5C06\u5C3D\u5FEB\u7ED9\u60A8\u7B54\u590D", "apply_as_advisor": "\u6210\u4E3A\u987E\u95EE", "approved": "\u6279\u51C6", "bank_statement": "\u94F6\u884C\u6D41\u6C34\u8D26\u5355", "cancel_change_password": "\u53D6\u6D88\u66F4\u6362\u5BC6\u7801", "cancel_update": "\u53D6\u6D88\u66F4\u65B0", "change_password": "\u66F4\u6362\u5BC6\u7801", "content_is_for_advisor": "\u6B64\u5185\u5BB9\u53EA\u5F00\u653E\u4E8E\u987E\u95EE\u6210\u5458", "copied-link": "\u6210\u529F\u590D\u5236\u4ECB\u7ECD\u8FDE\u63A5", "copy-referral": "\u590D\u5236\u8FDE\u63A5", "documents_rejected": "\u6587\u4EF6\u5BA1\u6838\u5931\u8D25", "documents_success": "\u66F4\u65B0\u6210\u529F", "documents_verified": "\u6587\u4EF6\u5BA1\u6838\u6210\u529F", "edit_profile": "\u66F4\u65B0\u8D44\u6599", "has_approved": "\u7528\u6237\u5DF2\u88AB\u6279\u51C6", "has_rejected": "\u7528\u6237\u5DF2\u88AB\u9A73\u56DE", "identity": "\u8D2D\u4E70\u8005\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "instruction_issued_to_lawyer": "\u5F8B\u5E08\u5904\u7406\u4E2D", "is_admin": "\u662F\u7BA1\u7406\u5458", "is_advisor": "\u662F\u987E\u95EE\u6210\u5458", "joined_at": "\u52A0\u76DF\u65E5\u671F", "kyc_documents": "\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "legal_updated": "\u79CD\u690D\u8005\u6CD5\u5F8B\u7A0B\u5E8F\u66F4\u65B0\u6210\u529F", "level": "\u7EA7\u522B", "level_1": "\u987E\u95EE", "level_2": "\u9AD8\u7EA7\u987E\u95EE", "level_3": "\u6267\u884C\u987E\u95EE", "level_4": "\u9996\u5E2D\u987E\u95EE", "level_instruction": "\u76F4\u63A8 :target \u4F4D\u79CD\u690D\u8005. \u8FD8\u9700 :left \u4F4D", "level_instruction_2": "\u7EC4\u7EC7\u4E1A\u7EE9\u8FBE :target \u68F5\u6811. \u8FD8\u9700 :left \u68F5", "lock_down": "\u82E5\u6709\u51FA\u5165\uFF0C\u8BF7\u7535\u90AE\u81F3", "lock_down_back": "\u901A\u77E5\u6211\u4EEC", "locked": "\u7528\u6237\u5DF2\u88AB\u5C01\u9501", "locked_message": "\u60A8\u7684\u8D26\u53F7\u5DF2\u88AB\u7BA1\u7406\u5458\u5C01\u9501, \u8BF7\u7535\u90AE\u81F3support@newleaf.com.my\u4E86\u89E3\u8BE6\u60C5", "nominee_identity": "\u63D0\u540D\u4EBA\u8EAB\u4EFD\u8BC1\u4EF6\u526F\u672C\uFF08\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09\u6216\u62A4\u7167\uFF08\u975E\u9A6C\u6765\u897F\u4E9A\u516C\u6C11\uFF09", "pending": "\u672A\u5BA1\u6838", "pending_verification": "\u5BA1\u6838\u4E2D", "profile_update_success": "\u8D44\u6599\u5DF2\u66F4\u65B0", "referral_code": "\u65B0\u5EB7ID", "referrer": "\u63A8\u8350\u8005", "reject": "\u9A73\u56DE", "rejected": "\u5BA1\u6838\u5931\u8D25", "reminder_sent": "\u5DF2\u53D1\u9001\u63D0\u793A", "residence_proof": "\u4F4F\u5740\u8BC1\u660E\u6587\u4EF6", "sales_agreement_executed": "\u9500\u552E\u534F\u8BAE\u5B8C\u6210", "sales_agreement_ready_for_execution": "\u7B49\u5F85\u7B7E\u7F72\u9500\u552E\u534F\u8BAE", "setting_success": "\u6210\u529F\u66F4\u6539\u8BBE\u5B9A", "settings": "\u8BBE\u5B9A", "status": "\u72B6\u6001", "tree_count": "\u79CD\u690D\u6570\u91CF", "unlocked": "\u7528\u6237\u5DF2\u88AB\u89E3\u9501", "update_document": "\u66F4\u65B0\u5B9E\u540D\u8BA4\u8BC1\u6587\u4EF6", "users": "\u7528\u6237", "users_pending": "\u9700\u5173\u6CE8\u7528\u6237", "verified": "\u5DF2\u901A\u8FC7\u5BA1\u6838", "verify": "\u8BA4\u8BC1", "waiting_approval": "\u60A8\u7684\u8D26\u53F7\u7B49\u5F85\u6279\u51C6\u5F53\u4E2D" }, "zh.validation": { "accepted": "\u9700\u8981\u88AB\u63A5\u53D7", "active_url": "\u94FE\u63A5\u9519\u8BEF.", "after": "\u5FC5\u987B\u5728:date\u4E4B\u540E.", "after_or_equal": "\u5FC5\u987B\u662F\u548C:date\u4E00\u6837\u6216\u4E4B\u540E\u7684\u65E5\u671F.", "alpha": "\u53EA\u80FD\u6709\u5B57\u6BCD", "alpha_dash": "\u53EA\u80FD\u6709\u5B57\u6BCD\uFF0C\u53F7\u7801\uFF0C\u4EE5\u53CA\u201C-\u201D\u53F7", "alpha_num": "\u53EA\u80FD\u6709\u5B57\u6BCD\u4EE5\u53CA\u53F7\u7801", "attributes": { "password": "\u5BC6\u7801" }, "before": "\u5FC5\u987B\u5728:date\u4E4B\u524D.", "before_or_equal": "The :attribute must be a date before or equal to :date.", "between": { "array": "The :attribute must have between :min and :max items.", "file": "The :attribute must be between :min and :max kilobytes.", "numeric": "The :attribute must be between :min and :max.", "string": "The :attribute must be between :min and :max characters." }, "boolean": "The :attribute field must be true or false.", "confirmed": ":attribute\u4E0D\u76F8\u540C", "custom": { "attribute-name": { "rule-name": "custom-message" } }, "date": "The :attribute is not a valid date.", "date_format": "The :attribute does not match the format :format.", "different": "The :attribute and :other must be different.", "digits": "The :attribute must be :digits digits.", "digits_between": "The :attribute must be between :min and :max digits.", "dimensions": "The :attribute has invalid image dimensions.", "distinct": "The :attribute field has a duplicate value.", "email": "\u8FD9\u5FC5\u987B\u662F\u4E00\u4E2A\u7535\u90AE\u5730\u5740", "exists": "\u9009\u9879\u9519\u8BEF", "file": "The :attribute must be a file.", "filled": "The :attribute field must have a value.", "image": "The :attribute must be an image.", "in": "The selected :attribute is invalid.", "in_array": "The :attribute field does not exist in :other.", "integer": "The :attribute must be an integer.", "ip": "The :attribute must be a valid IP address.", "ipv4": "The :attribute must be a valid IPv4 address.", "ipv6": "The :attribute must be a valid IPv6 address.", "json": "The :attribute must be a valid JSON string.", "max": { "array": "The :attribute may not have more than :max items.", "file": "The :attribute may not be greater than :max kilobytes.", "numeric": "The :attribute may not be greater than :max.", "string": "The :attribute may not be greater than :max characters." }, "mimes": "The :attribute must be a file of type: :values.", "mimetypes": "The :attribute must be a file of type: :values.", "min": { "array": "The :attribute must have at least :min items.", "file": "The :attribute must be at least :min kilobytes.", "numeric": "The :attribute must be at least :min.", "string": "The :attribute must be at least :min characters." }, "not_in": "The selected :attribute is invalid.", "not_regex": "The :attribute format is invalid.", "numeric": "\u53EA\u80FD\u586B\u5199\u6570\u5B57", "present": "The :attribute field must be present.", "regex": "The :attribute format is invalid.", "required": "\u9700\u8981\u88AB\u586B\u5199", "required_if": "The :attribute field is required when :other is :value.", "required_unless": "The :attribute field is required unless :other is in :values.", "required_with": "The :attribute field is required when :values is present.", "required_with_all": "The :attribute field is required when :values is present.", "required_without": "The :attribute field is required when :values is not present.", "required_without_all": "The :attribute field is required when none of :values are present.", "same": "The :attribute and :other must match.", "size": { "array": "The :attribute must contain :size items.", "file": "The :attribute must be :size kilobytes.", "numeric": "The :attribute must be :size.", "string": "The :attribute must be :size characters." }, "string": "The :attribute must be a string.", "timezone": "The :attribute must be a valid zone.", "unique": "The :attribute has already been taken.", "uploaded": "The :attribute failed to upload.", "url": "The :attribute format is invalid." } };
 
 /***/ }),
 /* 184 */
@@ -50651,6 +50651,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		image: function image(value) {
 			return '<figure class="image is-48x48"><img src="' + value + '"></figure>';
 		},
+		packageImage: function packageImage(value) {
+			return '<figure class="image is-48x48" style="width:48px; height:48px;"><img src="/storage/' + value + '"></figure>';
+		},
 		date: function date(value) {
 			return this.$options.filters.date(value);
 		},
@@ -75453,6 +75456,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	},
 	mounted: function mounted() {
 		this.user = this.viewingUser ? this.viewingUser : window.user;
+		this.viewingUser ? this.getTree() : null;
+	},
+
+
+	methods: {
+		getTree: function getTree() {
+			var _this = this;
+
+			axios.get(this.url).then(function (response) {
+				return _this.setTree(response);
+			});
+		},
+		setTree: function setTree(response) {
+			this.tree = response.data;
+			this.loading = false;
+		}
+	},
+
+	computed: {
+		url: function url() {
+			if (this.viewingUser) return "/api/user/" + this.user.id + "/tree";
+		}
 	}
 });
 
@@ -80357,8 +80382,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue__ = __webpack_require__(187);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Post_vue__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Post_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_Post_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue__ = __webpack_require__(189);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Redemption_vue__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Redemption_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_Redemption_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Post_vue__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Post_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_Post_vue__);
 //
 //
 //
@@ -80563,6 +80592,60 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 
 
@@ -80571,24 +80654,39 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
 	props: ['viewingUser'],
 
-	components: { ReferralLink: __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default.a, Purchase: __WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue___default.a, Post: __WEBPACK_IMPORTED_MODULE_2__components_Post_vue___default.a },
+	components: { ReferralLink: __WEBPACK_IMPORTED_MODULE_0__components_ReferralLink_vue___default.a, Purchase: __WEBPACK_IMPORTED_MODULE_1__components_Purchase_vue___default.a, ProfilePage: __WEBPACK_IMPORTED_MODULE_2__ProfilePage_vue___default.a, Post: __WEBPACK_IMPORTED_MODULE_4__components_Post_vue___default.a, Redemption: __WEBPACK_IMPORTED_MODULE_3__components_Redemption_vue___default.a },
 
 	data: function data() {
 		return {
 			trees_sold: 0,
+			e_wallet: 0,
 			user: window.user,
 			descendants: [],
+			accounts: [],
+			qualification_accounts: [],
 			purchaseFields: [{ name: 'user_name', title: this.tableTitle('purchase.made_by'), sortField: 'users.name' }, { name: 'created_at', title: this.tableTitle('purchase.purchase_date'), sortField: 'purchases.created_at', callback: 'date' }, { name: '__component:table-price-switcher', title: this.tableTitle('purchase.total_payable'), sortField: 'purchases.total_price' }, { name: '__component:purchases-actions', title: this.tableTitle('table.actions') }],
-			userFields: [{ name: 'name', title: this.tableTitle('auth.name'), sortField: 'name' }, { name: 'id_status', title: this.tableTitle('user.status'), sortField: 'id_status', callback: 'userStatusLabel' }, { name: '__component:users-actions', title: this.tableTitle('table.actions') }],
+			redemptionFields: [{ name: 'name', title: this.tableTitle('redemption.made_by'), sortField: 'name' }, { name: 'created_at', title: this.tableTitle('redemption.redemption_date'), sortField: 'created_at', callback: 'date' }, { name: 'package.name', title: this.tableTitle('redemption.name') }, { name: 'package_quantity', title: this.tableTitle('dashboard.quantity') }, { name: 'total', title: this.tableTitle('redemption.price'), sortField: 'total' }, { name: '__component:redemption-actions', title: this.tableTitle('table.actions') }],
+			userFields: [{ name: 'name', title: this.tableTitle('auth.name'), sortField: 'name' }, { name: 'user_status', title: this.tableTitle('user.status'), sortField: 'id_status', callback: 'userStatusLabel' }, { name: '__component:users-actions', title: this.tableTitle('table.actions') }],
 			isPurchasing: false,
 			isViewing: false,
+			isViewingRedemption: false,
 			isViewingPost: false,
 			selectedPurchase: '',
 			selectedUser: '',
+			selectedRedemption: '',
 			selectedPost: '',
+			redemptionUrl: "/api/admin/redemptions/pending",
 			purchaseUrl: "/api/admin/purchases/pending",
 			userUrl: "/api/admin/users/pending",
-			posts: []
+			posts: [],
+			statusForm: new Form({
+				status: ''
+			}),
+			isLegalLoading: false,
+			selectedLegalStatus: { label: "Instruction issued to lawyer", value: "instruction_issued" },
+			isChangingStatus: false,
+			legalStatus: [{ label: "Instruction issued to lawyer", value: "instruction_issued" }, { label: "Sales agreement ready for execution", value: "execution_ready" }, { label: "Sales agreement executed", value: "complete" }]
+
 		};
 	},
 	mounted: function mounted() {
@@ -80596,43 +80694,130 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 		this.user = this.viewingUser ? this.viewingUser : window.user;
 		this.getDashboardData();
+		this.getCommission();
+		this.getUnpaidCommission();
 		this.$events.on('view', function (data) {
 			return _this.viewPurchase(data);
 		});
-
+		this.$events.on('viewRedemption', function (data) {
+			return _this.viewRedemption(data);
+		});
 		this.$events.on('viewUser', function (data) {
 			return _this.viewUser(data);
 		});
 		this.$events.on('remind', function (data) {
 			return _this.remind(data);
 		});
-		this.$events.on('previous', function (data) {
-			return _this.previous(data);
+		this.$events.on('legal', function (data) {
+			return _this.legal(data);
 		});
 		this.$events.on('next', function (data) {
 			return _this.next(data);
 		});
+		this.$events.on('approveRedemption', function (data) {
+			return _this.postApprove(data);
+		});
+		this.$events.on('approveUser', function (data) {
+			return _this.approveUser(data);
+		});
+		this.$events.on('rejectUser', function (data) {
+			return _this.rejectUser(data);
+		});
+		this.$events.on('deletePurchase', function (data) {
+			return _this.postDeletePurchase(data);
+		});
 	},
 	beforeDestroy: function beforeDestroy() {
 		this.$events.off('view');
-
+		this.$events.off('viewRedemption');
 		this.$events.off('viewUser');
 		this.$events.off('remind');
-		this.$events.off('previous');
+		this.$events.off('legal');
 		this.$events.off('next');
+		this.$events.off('approveRedemption');
+		this.$events.off('approveUser');
+		this.$events.off('rejectUser');
+		this.$events.off('deletePurchase');
 	},
 
 
 	methods: {
-		getDashboardData: function getDashboardData() {
+		countQualificationBasicRequirement: function countQualificationBasicRequirement(account) {
+			var basicRequirement = 3;
+			return basicRequirement - account.number_of_children;
+		},
+		qualificationLabel: function qualificationLabel(account) {
+			var label = '';
+			switch (account.account_level) {
+				case 0:
+					label = "buy_machine";
+					break;
+				case 1:
+					label = "buy_silver";
+					break;
+				case 2:
+					label = "buy_platinum";
+					break;
+				case 3:
+					label = "account_max";
+					break;
+			}
+
+			return label;
+		},
+		getCommission: function getCommission() {
 			var _this2 = this;
 
+			axios.get('/api/user/' + this.user.id + "/commission").then(function (response) {
+				return _this2.setCommission(response);
+			});
+		},
+		setCommission: function setCommission(response) {
+			Vue.set(this.user, 'commission_received', response.data);
+		},
+		getUnpaidCommission: function getUnpaidCommission() {
+			var _this3 = this;
+
+			axios.get('/api/user/' + this.user.id + "/unpaid/commission").then(function (response) {
+				return _this3.setUnpaidCommission(response);
+			});
+		},
+		setUnpaidCommission: function setUnpaidCommission(response) {
+			Vue.set(this.user, 'unpaid_commission', response.data);
+		},
+		levelLabel: function levelLabel(account, nextLevelLabel) {
+			var account_level = 0;
+			var label = '';
+			nextLevelLabel ? account_level = account.account_level + 1 : account_level = account.account_level;
+			switch (account_level) {
+				case 0:
+					label = "customer";
+					break;
+				case 1:
+					label = "silver";
+					break;
+				case 2:
+					label = "platinum";
+					break;
+				case 3:
+					label = "diamond";
+					break;
+			}
+
+			return this.$options.filters.trans('purchase.' + label);
+		},
+		getDashboardData: function getDashboardData() {
+			var _this4 = this;
+
 			axios.get("/api/dashboard/" + this.user.id).then(function (response) {
-				return _this2.setDashboardData(response.data);
+				return _this4.setDashboardData(response.data);
 			});
 		},
 		setDashboardData: function setDashboardData(data) {
+			this.e_wallet = data.e_wallet;
 			this.trees_sold = data.trees_sold;
+			this.accounts = data.accounts;
+			this.qualification_accounts = data.qualification;
 			this.descendants = data.descendants;
 			this.posts = data.posts;
 		},
@@ -80660,6 +80845,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			this.selectedUser = data;
 			this.isViewing = true;
 		},
+		viewRedemption: function viewRedemption(data) {
+			this.selectedRedemption = data;
+			this.isViewingRedemption = true;
+		},
 		viewPost: function viewPost(data) {
 			this.selectedPost = data;
 			this.isViewingPost = true;
@@ -80667,35 +80856,80 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		back: function back() {
 			this.isViewing = false;
 			this.isPurchasing = false;
+			this.isViewingRedemption = false;
 			this.isViewingPost = false;
+			this.isApplying = false;
 		},
 		remind: function remind(user) {
-			var _this3 = this;
+			var _this5 = this;
 
 			this.$events.fire('loading', user.id);
 			axios.post('/api/user/' + user.id + '/kyc/remind').then(function (response) {
-				return _this3.onSuccess(response);
+				return _this5.onSuccess(response);
 			});
 		},
-		previous: function previous(user) {
-			var _this4 = this;
-
-			this.$events.fire('loading-prev', user.id);
-			axios.post('/api/user/' + user.id + '/legal/previous').then(function (response) {
-				return _this4.onStepSuccess(response);
+		legal: function legal(user) {
+			this.selectedUser = user;
+			var selectedLegalStatus = _.filter(this.legalStatus, function (status) {
+				return user.id_status == status.value;
 			});
+			if (selectedLegalStatus.length > 0) this.selectedLegalStatus = selectedLegalStatus[0];
+			this.isChangingStatus = true;
 		},
-		next: function next(user) {
-			var _this5 = this;
+		submitLegal: function submitLegal() {
+			var _this6 = this;
 
-			this.$events.fire('loading-next', user.id);
-			axios.post('/api/user/' + user.id + '/legal/next').then(function (response) {
-				return _this5.onStepSuccess(response);
+			this.isLegalLoading = true;
+			this.statusForm.status = this.selectedLegalStatus.value;
+			this.statusForm.post("/api/user/" + this.selectedUser.id + "/legal").then(function (response) {
+				return _this6.onStepSuccess(response);
 			});
 		},
 		onStepSuccess: function onStepSuccess(response) {
 			this.onSuccess(response);
+			this.isChangingStatus = false;
+			this.isLegalLoading = false;
 			this.$refs.users.refreshTable();
+		},
+		onRedemptionSuccess: function onRedemptionSuccess(response) {
+			this.onSuccess(response);
+			this.isChangingStatus = false;
+			this.isLegalLoading = false;
+			this.$refs.redemptions.refreshTable();
+		},
+		onDeleteSuccess: function onDeleteSuccess(response) {
+			this.onSuccess(response);
+			this.isChangingStatus = false;
+			this.isLegalLoading = false;
+			this.$refs.purchases.refreshTable();
+		},
+		approveUser: function approveUser(user) {
+			var _this7 = this;
+
+			axios.post('/api/user/' + user.id + '/approve').then(function (response) {
+				return _this7.onStepSuccess(response);
+			});
+		},
+		rejectUser: function rejectUser(user) {
+			var _this8 = this;
+
+			axios.post('/api/user/' + user.id + '/reject').then(function (response) {
+				return _this8.onStepSuccess(response);
+			});
+		},
+		postApprove: function postApprove(redemption) {
+			var _this9 = this;
+
+			axios.post('/api/redemption/approve/' + redemption.id).then(function (response) {
+				return _this9.onRedemptionSuccess(response);
+			});
+		},
+		postDeletePurchase: function postDeletePurchase(purchase) {
+			var _this10 = this;
+
+			axios.post("/api/purchase/delete/" + purchase.id).then(function (response) {
+				return _this10.onDeleteSuccess(response);
+			});
 		},
 		onSuccess: function onSuccess(response) {
 			flash(this.$options.filters.trans(response.data.message));
@@ -80739,7 +80973,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return this.user.group_sale_needed - this.user.group_sale;
 		},
 		userNotGrower: function userNotGrower() {
-			return this.user.is_admin || this.user.is_advisor;
+			return this.user.is_admin || this.user.is_grower;
+		},
+		totalAccount: function totalAccount() {
+			return this.accounts.length;
 		}
 	}
 });
@@ -82181,358 +82418,124 @@ var render = function() {
         "transition",
         { attrs: { name: "slide-fade", mode: "out-in" } },
         [
-          !_vm.isViewing && !_vm.isPurchasing && !_vm.isViewingPost
+          !_vm.isViewing &&
+          !_vm.isPurchasing &&
+          !_vm.isViewingPost &&
+          !_vm.isApplying &&
+          !_vm.isViewingRedemption
             ? _c("div", [
-                _vm.userNotGrower
-                  ? _c("div", { staticClass: "row" }, [
-                      _vm.user.is_admin
-                        ? _c("div", { staticClass: "col-sm" }, [
-                            _c(
-                              "article",
-                              { staticClass: "statistic-box green" },
-                              [
-                                _c("div", [
-                                  _c("div", { staticClass: "number" }, [
-                                    _vm._v(_vm._s(_vm.trees_sold))
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "caption" }, [
-                                    _c("div", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("trans")(
-                                            "dashboard.trees_sold_global"
-                                          )
-                                        )
-                                      )
-                                    ])
-                                  ])
-                                ])
-                              ]
-                            )
-                          ])
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-sm" }, [
-                        _c("article", { staticClass: "statistic-box yellow" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm" }, [
+                    _c("article", { staticClass: "statistic-box yellow" }, [
+                      _c("div", [
+                        _c("div", { staticClass: "number" }, [
+                          _vm._v(_vm._s(_vm.e_wallet.amount))
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "caption" }, [
                           _c("div", [
-                            _c("div", { staticClass: "number" }, [
-                              _vm._v(_vm._s(_vm.user.group_sale))
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "caption" }, [
-                              _c("div", [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm._f("trans")("dashboard.group_sale")
-                                  )
-                                )
-                              ])
-                            ])
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-sm" }, [
-                        _c("article", { staticClass: "statistic-box red" }, [
-                          _c("div", [
-                            _c("div", { staticClass: "number" }, [
-                              _vm._v(
-                                _vm._s(
-                                  _vm._f("trans")(
-                                    "user.level_" + _vm.user.user_level
-                                  )
-                                )
+                            _vm._v(
+                              _vm._s(
+                                _vm._f("trans")("dashboard.e_wallet_amount")
                               )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "caption" }, [
-                              _c("div", [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm._f("trans")(
-                                      "dashboard.current_grower_level"
-                                    )
-                                  )
-                                )
-                              ])
-                            ])
-                          ])
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "col-sm" }, [
-                        _c("article", { staticClass: "statistic-box purple" }, [
-                          _c("div", [
-                            _vm.user.is_std
-                              ? _c("div", { staticClass: "number" }, [
-                                  _vm._v(
-                                    _vm._s(
-                                      _vm._f("currency_std")(
-                                        _vm.user.commission_received_std
-                                      )
-                                    )
-                                  )
-                                ])
-                              : _c("div", { staticClass: "number" }, [
-                                  _vm._v(
-                                    _vm._s(
-                                      _vm._f("currency")(
-                                        _vm.user.commission_received
-                                      )
-                                    )
-                                  )
-                                ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "caption" }, [
-                              _c("div", [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm._f("trans")(
-                                      "dashboard.commission_earned"
-                                    )
-                                  )
-                                )
-                              ])
-                            ])
+                            )
                           ])
                         ])
                       ])
                     ])
-                  : _vm._e(),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm" }, [
+                    _c("article", { staticClass: "statistic-box red" }, [
+                      _c("div", [
+                        _c("div", { staticClass: "number" }, [
+                          _vm._v(_vm._s(_vm.totalAccount))
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "caption" }, [
+                          _c("div", [
+                            _vm._v(
+                              _vm._s(_vm._f("trans")("dashboard.accounts"))
+                            )
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm" }, [
+                    _c("article", { staticClass: "statistic-box purple" }, [
+                      _c("div", [
+                        _vm.user.is_std
+                          ? _c("div", { staticClass: "number" }, [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("currency_std")(
+                                    _vm.user.commission_received_std
+                                  )
+                                )
+                              )
+                            ])
+                          : _c("div", { staticClass: "number" }, [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("currency")(
+                                    _vm.user.commission_received
+                                  )
+                                )
+                              )
+                            ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "caption" }, [
+                          _c("div", [
+                            _vm._v(
+                              _vm._s(
+                                _vm._f("trans")("dashboard.commission_earned")
+                              )
+                            )
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm" }, [
+                    _c("article", { staticClass: "statistic-box green" }, [
+                      _c("div", [
+                        _vm.user.is_std
+                          ? _c("div", { staticClass: "number" }, [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("currency_std")(
+                                    _vm.user.unpaid_commission_std
+                                  )
+                                )
+                              )
+                            ])
+                          : _c("div", { staticClass: "number" }, [
+                              _vm._v(
+                                _vm._s(
+                                  _vm._f("currency")(_vm.user.unpaid_commission)
+                                )
+                              )
+                            ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "caption" }, [
+                          _c("div", [
+                            _vm._v(
+                              _vm._s(
+                                _vm._f("trans")("dashboard.accrued_commission")
+                              )
+                            )
+                          ])
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "row" }, [
                   _c("div", { staticClass: "col-md-6 dashboard-column" }, [
-                    _vm.userNotGrower
-                      ? _c(
-                          "section",
-                          {
-                            staticClass:
-                              "box-typical box-typical-dashboard panel panel-default scrollable"
-                          },
-                          [
-                            _c(
-                              "header",
-                              {
-                                staticClass: "box-typical-header panel-heading"
-                              },
-                              [
-                                _c("h3", { staticClass: "panel-title" }, [
-                                  _vm._v(
-                                    _vm._s(
-                                      _vm._f("trans")("dashboard.my_downlines")
-                                    ) + " "
-                                  ),
-                                  _c(
-                                    "span",
-                                    { staticClass: "badge badge-primary" },
-                                    [_vm._v(_vm._s(_vm.user.descendants_count))]
-                                  )
-                                ])
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _vm.userNotGrower
-                              ? _c(
-                                  "div",
-                                  {
-                                    staticClass: "box-typical-body panel-body"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      { staticClass: "box-normal-content" },
-                                      [
-                                        _c("text-input", {
-                                          attrs: {
-                                            defaultValue:
-                                              _vm.user.referral_code,
-                                            required: false,
-                                            type: "text",
-                                            label: _vm.$options.filters.trans(
-                                              "user.referral_code"
-                                            ),
-                                            name: "referrer",
-                                            editable: false,
-                                            focus: false,
-                                            hideLabel: false
-                                          },
-                                          model: {
-                                            value: _vm.user.referral_code,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.user,
-                                                "referral_code",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "user.referral_code"
-                                          }
-                                        }),
-                                        _vm._v(" "),
-                                        _c("referral-link", {
-                                          attrs: {
-                                            code: _vm.user.referral_code
-                                          }
-                                        })
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "table",
-                                      { staticClass: "tbl-typical" },
-                                      [
-                                        _c("tr", [
-                                          _c("th", [
-                                            _c("div", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm._f("trans")("auth.name")
-                                                )
-                                              )
-                                            ])
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("th", [
-                                            _c("div", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm._f("trans")(
-                                                    "dashboard.grower_level"
-                                                  )
-                                                )
-                                              )
-                                            ])
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("th", [
-                                            _c("div", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm._f("trans")("user.status")
-                                                )
-                                              )
-                                            ])
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("th", [
-                                            _c("div", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm._f("trans")(
-                                                    "user.tree_count"
-                                                  )
-                                                )
-                                              )
-                                            ])
-                                          ])
-                                        ]),
-                                        _vm._v(" "),
-                                        _vm._l(_vm.descendants, function(
-                                          descendant
-                                        ) {
-                                          return _c("tr", [
-                                            _c("td", [
-                                              _vm._v(_vm._s(descendant.name))
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _c(
-                                                "span",
-                                                {
-                                                  staticClass:
-                                                    "label label-success"
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    _vm._s(
-                                                      _vm._f("trans")(
-                                                        "user.level_" +
-                                                          descendant.user_level
-                                                      )
-                                                    )
-                                                  )
-                                                ]
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", {
-                                              domProps: {
-                                                innerHTML: _vm._s(
-                                                  _vm.$options.filters.formatUserStatus(
-                                                    descendant.id_status
-                                                  )
-                                                )
-                                              }
-                                            }),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(descendant.tree_count)
-                                              )
-                                            ])
-                                          ])
-                                        })
-                                      ],
-                                      2
-                                    )
-                                  ]
-                                )
-                              : _c(
-                                  "div",
-                                  {
-                                    staticClass: "box-typical-body panel-body"
-                                  },
-                                  [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "box-normal-content d-flex flex-column align-items-center justify-content-center text-center",
-                                        staticStyle: { height: "100%" }
-                                      },
-                                      [
-                                        _c("h3", [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm._f("trans")(
-                                                "user.content_is_for_advisor"
-                                              )
-                                            )
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "button",
-                                          {
-                                            staticClass:
-                                              "btn btn-primary btn-lg",
-                                            attrs: { type: "button" },
-                                            on: {
-                                              click: function($event) {
-                                                _vm.isApplying = true
-                                              }
-                                            }
-                                          },
-                                          [
-                                            _vm._v(
-                                              _vm._s(
-                                                _vm._f("trans")(
-                                                  "user.apply_as_advisor"
-                                                )
-                                              )
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    )
-                                  ]
-                                )
-                          ]
-                        )
-                      : _vm._e(),
-                    _vm._v(" "),
                     _c(
                       "section",
                       {
@@ -82546,7 +82549,9 @@ var render = function() {
                           [
                             _c("h3", { staticClass: "panel-title" }, [
                               _vm._v(
-                                _vm._s(_vm._f("trans")("dashboard.latest_news"))
+                                _vm._s(
+                                  _vm._f("trans")("dashboard.my_accounts")
+                                ) + " "
                               )
                             ])
                           ]
@@ -82557,6 +82562,35 @@ var render = function() {
                           { staticClass: "box-typical-body panel-body" },
                           [
                             _c(
+                              "div",
+                              { staticClass: "box-normal-content" },
+                              [
+                                _c("text-input", {
+                                  attrs: {
+                                    defaultValue: _vm.user.referral_code,
+                                    required: false,
+                                    type: "text",
+                                    label: _vm.$options.filters.trans(
+                                      "user.referral_code"
+                                    ),
+                                    name: "referrer",
+                                    editable: false,
+                                    focus: false,
+                                    hideLabel: false
+                                  },
+                                  model: {
+                                    value: _vm.user.referral_code,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.user, "referral_code", $$v)
+                                    },
+                                    expression: "user.referral_code"
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
                               "table",
                               { staticClass: "tbl-typical" },
                               [
@@ -82564,7 +82598,9 @@ var render = function() {
                                   _c("th", [
                                     _c("div", [
                                       _vm._v(
-                                        _vm._s(_vm._f("trans")("post.title"))
+                                        _vm._s(
+                                          _vm._f("trans")("dashboard.account")
+                                        )
                                       )
                                     ])
                                   ]),
@@ -82573,34 +82609,49 @@ var render = function() {
                                     _c("div", [
                                       _vm._v(
                                         _vm._s(
-                                          _vm._f("trans")("dashboard.date")
+                                          _vm._f("trans")(
+                                            "dashboard.account_level"
+                                          )
                                         )
                                       )
                                     ])
-                                  ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("th")
                                 ]),
                                 _vm._v(" "),
-                                _vm._l(_vm.posts, function(post) {
+                                _vm._l(_vm.accounts, function(account) {
                                   return _c("tr", [
                                     _c("td", [
-                                      _c(
-                                        "a",
-                                        {
-                                          on: {
-                                            click: function($event) {
-                                              _vm.viewPost(post)
-                                            }
-                                          }
-                                        },
-                                        [_vm._v(_vm._s(_vm.postTitle(post)))]
-                                      )
+                                      _vm._v(_vm._s(account.referral_code))
                                     ]),
                                     _vm._v(" "),
                                     _c("td", [
-                                      _vm._v(
-                                        _vm._s(_vm._f("date")(post.created_at))
+                                      _c(
+                                        "span",
+                                        { staticClass: "label label-success" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm._f("trans")(
+                                                "user.account_level_" +
+                                                  account.account_level
+                                              )
+                                            )
+                                          )
+                                        ]
                                       )
-                                    ])
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "td",
+                                      [
+                                        _c("referral-link", {
+                                          attrs: { code: account.referral_code }
+                                        })
+                                      ],
+                                      1
+                                    )
                                   ])
                                 })
                               ],
@@ -82653,6 +82704,50 @@ var render = function() {
                           ],
                           1
                         )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.user.is_admin
+                      ? _c(
+                          "section",
+                          {
+                            staticClass:
+                              "box-typical box-typical-dashboard panel panel-default scrollable"
+                          },
+                          [
+                            _c(
+                              "transition",
+                              { attrs: { name: "slide-fade", mode: "out-in" } },
+                              [
+                                _c("table-view", {
+                                  directives: [
+                                    {
+                                      name: "show",
+                                      rawName: "v-show",
+                                      value: !_vm.isViewingRedemption,
+                                      expression: "!isViewingRedemption"
+                                    }
+                                  ],
+                                  ref: "redemptions",
+                                  attrs: {
+                                    fields: _vm.redemptionFields,
+                                    title: _vm.$options.filters.trans(
+                                      "dashboard.pending_redemptions"
+                                    ),
+                                    url: _vm.redemptionUrl,
+                                    empty:
+                                      "No purchases that are pending verification"
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c("transition", {
+                              attrs: { name: "slide-fade", mode: "out-in" }
+                            })
+                          ],
+                          1
+                        )
                       : _vm._e()
                   ]),
                   _vm._v(" "),
@@ -82671,8 +82766,10 @@ var render = function() {
                             _c("h3", { staticClass: "panel-title" }, [
                               _vm._v(
                                 _vm._s(
-                                  _vm._f("trans")("dashboard.my_account_status")
-                                )
+                                  _vm._f("trans")(
+                                    "dashboard.progress_to_next_level"
+                                  )
+                                ) + " "
                               )
                             ])
                           ]
@@ -82680,112 +82777,65 @@ var render = function() {
                         _vm._v(" "),
                         _c(
                           "div",
-                          { staticClass: "panel-body box-normal-content" },
+                          { staticClass: "box-typical-body panel-body" },
                           [
-                            _c("div", { staticClass: "steps-icon-progress" }, [
-                              _c("ul", [
-                                _c("li", { class: _vm.getStepClass(1) }, [
-                                  _c("div", {
-                                    staticClass: "icon",
-                                    domProps: {
-                                      innerHTML: _vm._s(_vm.getStepIcon(1))
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "caption" }, [
-                                    _vm._v(
-                                      _vm._s(_vm._f("trans")("user.verified"))
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("li", { class: _vm.getStepClass(2) }, [
-                                  _c("div", {
-                                    staticClass: "icon",
-                                    domProps: {
-                                      innerHTML: _vm._s(_vm.getStepIcon(2))
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "caption" }, [
-                                    _vm._v(
-                                      _vm._s(
-                                        _vm._f("trans")(
-                                          "user.instruction_issued_to_lawyer"
+                            _c(
+                              "table",
+                              { staticClass: "tbl-typical" },
+                              [
+                                _c("tr", [
+                                  _c("th", [
+                                    _c("div", [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("trans")("dashboard.account")
                                         )
                                       )
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("li", { class: _vm.getStepClass(3) }, [
-                                  _c("div", {
-                                    staticClass: "icon",
-                                    domProps: {
-                                      innerHTML: _vm._s(_vm.getStepIcon(3))
-                                    }
-                                  }),
+                                    ])
+                                  ]),
                                   _vm._v(" "),
-                                  _c("div", { staticClass: "caption" }, [
-                                    _vm._v(
-                                      _vm._s(
-                                        _vm._f("trans")(
-                                          "user.sales_agreement_ready_for_execution"
-                                        )
-                                      )
-                                    )
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("li", { class: _vm.getStepClass(4) }, [
-                                  _c("div", {
-                                    staticClass: "icon",
-                                    domProps: {
-                                      innerHTML: _vm._s(_vm.getStepIcon(4))
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "caption" }, [
-                                    _vm._v(
-                                      _vm._s(
-                                        _vm._f("trans")(
-                                          "user.sales_agreement_executed"
-                                        )
-                                      )
-                                    )
-                                  ])
-                                ])
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _vm.userNotGrower
-                              ? _c(
-                                  "div",
-                                  { staticClass: "next-step text-center" },
-                                  [
-                                    _c("b", [
+                                  _c("th", [
+                                    _c("div", [
                                       _vm._v(
                                         _vm._s(
                                           _vm._f("trans")(
-                                            "dashboard.next_grower_level"
+                                            "dashboard.account_level"
                                           )
                                         )
                                       )
-                                    ]),
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("th", [
+                                    _c("div", [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("trans")(
+                                            "dashboard.step_to_qualification"
+                                          )
+                                        )
+                                      )
+                                    ])
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _vm._l(_vm.qualification_accounts, function(
+                                  qualification_account,
+                                  index
+                                ) {
+                                  return _c("tr", [
+                                    _c("td", [_vm._v(_vm._s(index))]),
                                     _vm._v(" "),
-                                    _c("h2", [
+                                    _c("td", [
                                       _c(
                                         "span",
-                                        {
-                                          staticClass:
-                                            "label label-primary mb-3"
-                                        },
+                                        { staticClass: "label label-success" },
                                         [
                                           _vm._v(
                                             _vm._s(
                                               _vm._f("trans")(
-                                                "user.level_" +
-                                                  (_vm.user.user_level + 1)
+                                                "user.account_level_" +
+                                                  qualification_account.account_level
                                               )
                                             )
                                           )
@@ -82793,139 +82843,36 @@ var render = function() {
                                       )
                                     ]),
                                     _vm._v(" "),
-                                    _c("span", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("trans")(
-                                            "user.level_instruction",
-                                            {
-                                              target:
-                                                _vm.user.direct_referrer_needed,
-                                              left: _vm.directReferrerRemaining
-                                            }
-                                          )
-                                        )
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass: "progress-with-amount mb-3"
-                                      },
-                                      [
-                                        _c("div", { staticClass: "progress" }, [
-                                          _c("div", {
-                                            staticClass:
-                                              "progress-bar progress-bar-striped progress-bar-animated",
-                                            style:
-                                              "width:" +
-                                              _vm.directReferrerPercentage +
-                                              "%;",
-                                            attrs: {
-                                              role: "progressbar",
-                                              "aria-valuenow":
-                                                _vm.user
-                                                  .direct_descendants_count,
-                                              "aria-valuemin": "0",
-                                              "aria-valuemax":
-                                                _vm.user.direct_referrer_needed
-                                            }
-                                          })
-                                        ]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "div",
-                                          {
-                                            staticClass:
-                                              "progress-with-amount-number"
-                                          },
-                                          [
-                                            _vm._v(
-                                              _vm._s(
-                                                _vm.directReferrerPercentage.toFixed(
-                                                  0
-                                                )
-                                              ) + "%"
-                                            )
-                                          ]
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _vm.user.user_level > 1
-                                      ? [
-                                          _c("span", [
-                                            _vm._v(
-                                              _vm._s(
-                                                _vm._f("trans")(
-                                                  "user.level_instruction_2",
-                                                  {
-                                                    target:
-                                                      _vm.user
-                                                        .group_sale_needed,
-                                                    left: _vm.groupSaleRemaining
-                                                  }
-                                                )
-                                              )
-                                            )
-                                          ]),
-                                          _vm._v(" "),
-                                          _c(
-                                            "div",
-                                            {
-                                              staticClass:
-                                                "progress-with-amount"
-                                            },
-                                            [
-                                              _c(
-                                                "div",
-                                                { staticClass: "progress" },
-                                                [
-                                                  _c("div", {
-                                                    staticClass:
-                                                      "progress-bar progress-bar-striped progress-bar-animated",
-                                                    style:
-                                                      "width:" +
-                                                      _vm.groupSalePercentage +
-                                                      "%;",
-                                                    attrs: {
-                                                      role: "progressbar",
-                                                      "aria-valuenow":
-                                                        _vm.user.group_sale,
-                                                      "aria-valuemin": "0",
-                                                      "aria-valuemax":
-                                                        _vm.user
-                                                          .group_sale_needed
-                                                    }
-                                                  })
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
+                                    _c("td", [
+                                      _c("span", [
+                                        _vm._v(
+                                          "\n\t\t\t\t\t\t\t\t\t\t\t" +
+                                            _vm._s(
+                                              _vm._f("trans")(
+                                                "dashboard." +
+                                                  _vm.qualificationLabel(
+                                                    qualification_account
+                                                  ),
                                                 {
-                                                  staticClass:
-                                                    "progress-with-amount-number"
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    _vm._s(
-                                                      _vm.groupSalePercentage.toFixed(
-                                                        0
-                                                      )
-                                                    ) + "%"
+                                                  level: _vm.levelLabel(
+                                                    qualification_account,
+                                                    true
+                                                  ),
+                                                  count: _vm.countQualificationBasicRequirement(
+                                                    qualification_account
                                                   )
-                                                ]
+                                                }
                                               )
-                                            ]
-                                          )
-                                        ]
-                                      : _vm._e()
-                                  ],
-                                  2
-                                )
-                              : _vm._e()
+                                            ) +
+                                            "\n\t\t\t\t\t\t\t\t\t\t"
+                                        )
+                                      ])
+                                    ])
+                                  ])
+                                })
+                              ],
+                              2
+                            )
                           ]
                         )
                       ]
@@ -82964,7 +82911,55 @@ var render = function() {
                                 })
                               ],
                               1
-                            )
+                            ),
+                            _vm._v(" "),
+                            _vm.isChangingStatus
+                              ? _c(
+                                  "confirmation",
+                                  {
+                                    attrs: {
+                                      message:
+                                        "confirmation.change_legal_status",
+                                      loading: _vm.isLegalLoading
+                                    },
+                                    on: {
+                                      confirmed: _vm.submitLegal,
+                                      canceled: function($event) {
+                                        _vm.isChangingStatus = false
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "div",
+                                      { staticClass: "mt-2" },
+                                      [
+                                        _c("selector-input", {
+                                          attrs: {
+                                            potentialData: _vm.legalStatus,
+                                            defaultData:
+                                              _vm.selectedLegalStatus,
+                                            label: "Status",
+                                            required: true,
+                                            unclearable: true,
+                                            error: _vm.statusForm.errors.get(
+                                              "status"
+                                            )
+                                          },
+                                          model: {
+                                            value: _vm.selectedLegalStatus,
+                                            callback: function($$v) {
+                                              _vm.selectedLegalStatus = $$v
+                                            },
+                                            expression: "selectedLegalStatus"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    )
+                                  ]
+                                )
+                              : _vm._e()
                           ],
                           1
                         )
@@ -82979,6 +82974,24 @@ var render = function() {
                 attrs: {
                   cancelable: true,
                   selectedPurchase: _vm.selectedPurchase
+                },
+                on: { back: _vm.back }
+              })
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.isViewing
+            ? _c("ProfilePage", {
+                attrs: { cancelable: true, selectedUser: _vm.selectedUser },
+                on: { back: _vm.back }
+              })
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.isViewingRedemption
+            ? _c("redemption", {
+                attrs: {
+                  cancelable: true,
+                  selectedItem: _vm.selectedRedemption,
+                  isRedeemItem: false
                 },
                 on: { back: _vm.back }
               })
@@ -86761,7 +86774,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 	data: function data() {
 		return {
-			fields: [{ name: 'package_photo_path', title: this.tableTitle('package.package_picture'), callback: 'image' }, { name: 'name', title: this.tableTitle('package.package_name'), sortField: 'name' },
+			fields: [{ name: 'package_photo_path', title: this.tableTitle('package.package_picture'), callback: 'packageImage' }, { name: 'name', title: this.tableTitle('package.package_name'), sortField: 'name' },
 			// { name: 'tree_count', title: this.tableTitle('package.tree_count'), sortField: 'tree_count', callback: 'treecount'},					
 			{ name: 'price', title: this.tableTitle('package.price'), sortField: 'price', callback: 'currency' }, { name: 'description', title: this.tableTitle('package.package_description'), sortField: 'description' },
 			// { name: 'price_std', title: this.tableTitle('package.price_std'), sortField: 'price_std', callback: 'currency_std'},
@@ -89736,7 +89749,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 	data: function data() {
 		return {
-			fields: [{ name: 'package_photo_path', title: this.tableTitle('redemption.item'), callback: 'image' }, { name: 'name', title: this.tableTitle('redemption.name'), sortField: 'name' }, { name: 'price', title: this.tableTitle('redemption.price'), sortField: 'price' }, { name: 'description', title: this.tableTitle('redemption.description'), sortField: 'description' }, { name: '__component:redemption-actions', title: this.tableTitle('table.actions') }],
+			fields: [{ name: 'package_photo_path', title: this.tableTitle('redemption.item'), callback: 'packageImage' }, { name: 'name', title: this.tableTitle('redemption.name'), sortField: 'name' }, { name: 'price', title: this.tableTitle('redemption.price'), sortField: 'price' }, { name: 'description', title: this.tableTitle('redemption.description'), sortField: 'description' }, { name: '__component:redemption-actions', title: this.tableTitle('table.actions') }],
 			searchables: "purchases.status,users.name",
 			isPurchasing: false,
 			selectedItem: '',
@@ -90009,7 +90022,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 	data: function data() {
 		return {
-			fields: [{ name: 'package.package_photo_path', title: this.tableTitle('redemption.item'), callback: 'image' }, { name: 'name', title: this.tableTitle('redemption.made_by'), sortField: 'name' }, { name: 'package.name', title: this.tableTitle('redemption.name') }, { name: 'total', title: this.tableTitle('redemption.price'), sortField: 'total' }, { name: 'status', title: this.tableTitle('redemption.description'), sortField: 'description', callback: 'redemptionStatusLabel' }, { name: 'created_at', title: this.tableTitle('redemption.redemption_date'), sortField: 'created_at', callback: 'date' }, { name: '__component:redemption-actions', title: this.tableTitle('table.actions') }],
+			fields: [{ name: 'package.package_photo_path', title: this.tableTitle('redemption.item'), callback: 'packageImage' }, { name: 'name', title: this.tableTitle('redemption.made_by'), sortField: 'name' }, { name: 'package.name', title: this.tableTitle('redemption.name') }, { name: 'total', title: this.tableTitle('redemption.price'), sortField: 'total' }, { name: 'status', title: this.tableTitle('redemption.description'), sortField: 'description', callback: 'redemptionStatusLabel' }, { name: 'created_at', title: this.tableTitle('redemption.redemption_date'), sortField: 'created_at', callback: 'date' }, { name: '__component:redemption-actions', title: this.tableTitle('table.actions') }],
 			searchables: "redemptions.status,users.name",
 			isPurchasing: false,
 			selectedItem: '',

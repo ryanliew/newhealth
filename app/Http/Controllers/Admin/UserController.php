@@ -22,6 +22,14 @@ class UserController extends Controller
         return $user->address;
     }
 
+    public function getCommission(User $user) {
+        return $user->transactions()->where("is_std", false)->sum("amount");
+    }
+
+    public function getUnpaidCommission(User $user) {
+        return $user->transactions()->where("is_std", false)->where("payout_status", false)->sum("amount");
+    }
+
     public function getTree()
     {
     	return User::all()->toTree();
