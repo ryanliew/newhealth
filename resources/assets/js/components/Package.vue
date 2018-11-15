@@ -131,7 +131,7 @@
 					can_redeem: false,
 					machine_count: '',
 					price: '',
-					price_promotion: '',
+					price_promotion: 0,
 					// price_std: '',
 					// price_std_promotion: ''	
 				}),

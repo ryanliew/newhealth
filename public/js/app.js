@@ -87013,7 +87013,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				can_redeem: false,
 				machine_count: '',
 				price: '',
-				price_promotion: ''
+				price_promotion: 0
 				// price_std: '',
 				// price_std_promotion: ''	
 			}),
