@@ -118,6 +118,9 @@ router.beforeEach((to, from, next) => {
 					lang.setLocale('zh'); 
 					window.events.$emit('defaultzh'); 
 				} 
+				if(!user.has_purchase) {
+					router.push({path: 'purchases', query: { new: 1 }})
+				}
 				next(); 
 			});
 			//.catch(error => { intended = to.fullPath; window.location.href="/register"; });

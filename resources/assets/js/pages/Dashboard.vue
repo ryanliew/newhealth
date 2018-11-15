@@ -140,7 +140,11 @@
 									<tr v-for="(qualification_account, index) in qualification_accounts">
 										<td>{{ index }}</td>
 										<td><span class="label label-success">{{ 'user.account_level_' + qualification_account.account_level | trans }}</span></td>
-										<td><span>{{ 'dashboard.' + qualificationLabel(qualification_account) | trans({'level': levelLabel(qualification_account, true), 'count': countQualificationBasicRequirement(qualification_account)})}}</span></td>
+										<td>
+											<span>
+												{{ 'dashboard.' + qualificationLabel(qualification_account) | trans({'level': levelLabel(qualification_account, true), 'count': countQualificationBasicRequirement(qualification_account)})}}
+											</span>
+										</td>
 									</tr>
 								</table>
 		        			</div>
@@ -280,6 +284,7 @@
 					{ name: 'name', title: this.tableTitle('redemption.made_by'), sortField: 'name'},
 					{ name: 'created_at', title: this.tableTitle('redemption.redemption_date'), sortField: 'created_at', callback: 'date' },
 					{ name: 'package.name', title: this.tableTitle('redemption.name') },
+					{ name: 'package_quantity', title: this.tableTitle('dashboard.quantity') },
 					{ name: 'total', title: this.tableTitle('redemption.price'), sortField: 'total'},
 					{ name: '__component:redemption-actions', title: this.tableTitle('table.actions')}
 				],
@@ -388,7 +393,7 @@
 						break;
 				}
 
-				return label;
+				return this.$options.filters.trans('purchase.'+label);
 			},
 
 			getDashboardData() {

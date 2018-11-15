@@ -60,9 +60,9 @@
 								<div>{{ "purchase.total" | trans }}</div>
 								<div class="text-left"><b>{{ isRedeemItem ? totalPrice : item.total }}</b></div>
 							</div>
-							<button v-if="item && isRedeemItem" @click="submitForm" class="btn btn-primary btn-lg" :disabled="totalPrice == 0" v-html="redeemButtonContent"></button>
-							<button v-if="user.is_admin" @click="submitApprove" class="btn btn-success" :disabled="isNotPending"><i class="fa fa-check"></i> {{ 'redemption.approve' | trans }}</button>
-							<button v-if="user.is_admin" @click="isConfirmingReject = true" class="btn btn-danger" :disabled="isNotPending"><i class="fa fa-times"></i> {{ 'redemption.reject' | trans }}</button>
+							<button v-if="item && isRedeemItem" @click="submitForm" class="btn btn-primary btn-lg" :disabled="totalPrice == 0 || !isWalletAmountAdequate" v-html="redeemButtonContent"></button>
+							<button v-if="user.is_admin && !isRedeemItem" @click="submitApprove" class="btn btn-success" :disabled="isNotPending"><i class="fa fa-check"></i> {{ 'redemption.approve' | trans }}</button>
+							<button v-if="user.is_admin && !isRedeemItem" @click="isConfirmingReject = true" class="btn btn-danger" :disabled="isNotPending"><i class="fa fa-times"></i> {{ 'redemption.reject' | trans }}</button>
 							<button v-if="!isRedeemItem && !isNotPending && !user.is_admin" @click="submitCancel" class="btn btn-danger" :disabled="isNotPending"><i class="fa fa-times"></i> {{ 'redemption.cancel' | trans }}</button>
 							<div>
 								<span v-if="!isWalletAmountAdequate" style="color:red; font-size:10px;">Wallet does not have enough amount.</span>
@@ -327,7 +327,7 @@
 			},
 
 			itemPicture() {
-				return this.user.is_admin ? this.item.package.package_photo_path : this.item.package_photo_path;
+				return this.user.is_admin && !this.isRedeemItem ? this.item.package.package_photo_path : this.item.package_photo_path;
 			},
 
 			instruction() {

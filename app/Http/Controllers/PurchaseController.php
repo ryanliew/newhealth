@@ -121,7 +121,7 @@ class PurchaseController extends Controller
         $parent_account = Account::where('referral_code', $purchase->referral_code)->where('account_level', '!=', 0)->first();
         $first_account = Account::where('user_id', $purchase->user_id)->where('account_level', 0)->first();
         $accountCollections = collect();
-        $machine_count = 1;
+        $machine_count = 0;
 
         // create selected highest account
         if($first_account){
@@ -222,6 +222,14 @@ class PurchaseController extends Controller
             $purchase->accounts()->attach($packages);    
         }
 
+        if($purchase->payment)
+            $purchase->payment->delete();
+
+        $purchase->update([
+                'status' => 'pending',
+                'payment_id' => null,
+            ]);
+
         return json_encode(['message' => 'purchase.updated', 'purchase' => Purchase::with('packages')->find($purchase->id)]);
     }
 
@@ -285,6 +293,9 @@ class PurchaseController extends Controller
             return $package['total_price_std'];
         });
 
+        if($purchase->payment)
+            $purchase->payment->delete();
+
         $purchase->update([
             'total_price' => $total_price,
             'total_price_std' => $total_price_std,
@@ -293,6 +304,8 @@ class PurchaseController extends Controller
             'referral_code' => null,
             'is_account' => false,
             'account_id' => request()->account_id,
+            'status' => 'pending',
+            'payment_id' => null,
         ]);
 
         $purchase->packages()->sync($packages);

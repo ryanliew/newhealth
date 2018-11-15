@@ -27,8 +27,10 @@ return [
     "buy_platinum" => "买 :count 白金帐号到 :level",
     "account_max" => "这帐号已是最高帐号",
     "step_to_qualification" => "升级帐号的步骤",
+    "quantity" => "数量",
     "progress_to_next_level" => "升级帐号",
     "account" => "帐号",
     "accounts" => "帐号",
+    "pending_redemptions" => "审核赎买",
     
 ];

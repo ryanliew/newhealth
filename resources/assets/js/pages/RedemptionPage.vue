@@ -7,10 +7,10 @@
 						:url="url"
 						:searchables="searchables"
 						v-show="!isPurchasing"
-						:dateFilterable="true"
+						:dateFilterable="false"
 						dateFilterKey="redemptions.created_at"
-						:canExportPDF="true"
-						:canExportExcel="true"
+						:canExportPDF="false"
+						:canExportExcel="false"
 						:exportUrl="exportUrl">
 			</table-view>
 		</transition>

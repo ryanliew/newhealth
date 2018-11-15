@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App;
 use App\Country;
 use App\Package;
 use App\Post;
@@ -22,7 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //dd(auth()->user()->identification);
         if(!auth()->user())
         {
             return redirect("/");
@@ -43,6 +43,9 @@ class HomeController extends Controller
         if(is_null(auth()->user()->identification ))
             return redirect()->route('register.success');
 
+        // dd(auth()->user()->accounts->first()->machine_count);
+        // if(auth()->user()->accounts->first()->machine_count == 0)
+        //     return redirect('home#/purchases?new=1&lang=' . App::getLocale());
         // return redirect()->route('register.complete');
         return view('app');
     }

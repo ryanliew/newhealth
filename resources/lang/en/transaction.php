@@ -26,6 +26,7 @@ return [
     'pending' => "Pending",
     "paid" => "Paid",
     "remark" => "Remark",
-    "purchase_account" => "Purchase account",
+    "purchase_account" => "Purchase account by :name",
     "machine_purchase" => "Package purchase",
+    "e_wallet_commision" => "E-wallet commission",
 ];

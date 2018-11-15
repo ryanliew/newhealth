@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Account;
 use App\User;
+use App\Transaction;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class AccountController extends Controller
 {
@@ -89,6 +91,15 @@ class AccountController extends Controller
         $user = User::where('referral_code', request()->referral_code)->first();
         $account = Account::find(request()->account_id);
 
+        $transaction = new Transaction;
+        $transaction->user_id = $user->id;
+        $transaction->amount = '0.00';
+        $transaction->type = 'sell_account';
+        $transaction->description = 'Account sell by ' . $account->user->name;
+        $transaction->target_id = $account->id;
+        $transaction->date = Carbon::now();
+        $transaction->save();
+
         $account->update(['user_id' => $user->id]);
 
         return json_encode(['message' => 'resell.verify_success', 'account' => $account]);
@@ -96,10 +107,13 @@ class AccountController extends Controller
 
     public function getAuthAccounts($user_id = null)
     {
-        if($user_id == null)
+        // dd("here");
+        if($user_id == null){
             $authAccounts = Account::all();
-        else
-            $authAccounts = Account::where('user_id', $user_id)->get();
+        }
+        else{
+            $authAccounts = Account::where('user_id', $user_id)->where('is_verified', true)->get();
+        }
         
         return $authAccounts ? $authAccounts : 'auth.ancestor_not_found';
     }

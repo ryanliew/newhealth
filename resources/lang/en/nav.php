@@ -25,5 +25,8 @@ return [
     'exit' => "Exit",
     'commission_report' => "Commission reports",
     'payout_report' => "Payout reports",
-    'reports' => "Reports"
+    'redemptions' => 'Redemptions',
+    'redeem_item' => 'Redeem items',
+    'reports' => "Reports",
+    'sell_account' => "Sell account",
 ];

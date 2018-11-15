@@ -13,7 +13,7 @@ class ProfileController extends Controller
 {
     public function index(Request $request)
     {
-    	return json_encode($request->user()->append(['address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std', 'unpaid_commission', 'unpaid_commission_std', 'transaction_start', 'transaction_end']));
+    	return json_encode($request->user()->load('addresses')->append(['address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std', 'unpaid_commission', 'unpaid_commission_std', 'transaction_start', 'transaction_end', 'has_purchase']));
     }
 
     public function show()
@@ -59,7 +59,7 @@ class ProfileController extends Controller
             'referral_code' => auth()->user()->country_id,
             ]);
 
-        $referrer;
+        $referrer = null;
 
     	if(request()->referrer_code && request()->referrer_code !== "")
     	{

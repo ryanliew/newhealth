@@ -27,7 +27,7 @@
 								</div>
 								<div class="card-block">
 									<text-input
-										:defaultValue="$options.filters.formatUserStatus(user.id_status)"
+										:defaultValue="$options.filters.formatUserStatus(user.user_status)"
 										:required="false"
 										type="text"
 										:label="$options.filters.trans('user.status')"
@@ -191,7 +191,7 @@
 										:hideLabel="false">
 									</text-input>
 
-									<text-input v-model="user.beneficiary_name" 
+									<!-- <text-input v-model="user.beneficiary_name" 
 										:defaultValue="user.beneficiary_name"
 										:required="true"
 										type="text"
@@ -233,7 +233,7 @@
 										:editable="false"
 										:focus="false"
 										:hideLabel="false">
-									</text-input>
+									</text-input> -->
 								</div>
 							</div>
 						</div>
@@ -498,14 +498,21 @@
 				this.getUser();
 			},
 
-			// getUser() {
-			// 	axios.get('/api/user/' + this.user.id )
-			// 		.then(response => this.setUser(response));
-			// },
+			getUser() {
+				// axios.get('/api/user/' + this.user.id )
+				// 	.then(response => this.setUser(response));
 
-			// setUser(response) {
-			// 	this.user = response.data;
-			// },
+				axios.get('/api/user/' + this.user.id + "/address")
+					.then(response => this.setAddress(response));
+			},
+
+			setAddress(response) {
+				Vue.set(this.user, 'address', response.data);
+			},
+
+			setUser(response) {
+				this.user = response.data;
+			},
 
 			back() {
 				this.$emit('back');

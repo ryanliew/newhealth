@@ -3,7 +3,7 @@
 		<div class="col-12 m-auto">
 			<div class="tree-responsive m-auto p-2">
 				<div class="tree">
-					<GenoRow :users='tree'>
+					<GenoRow :users='tree' :isPurchase='isPurchase'>
 					</GenoRow>
 				</div>
 			</div>
@@ -17,7 +17,7 @@
 	export default {
 		name: "geno-page",
 
-		props: ['viewingUser', 'tree', 'loading'],
+		props: ['viewingUser', 'tree', 'loading', 'isPurchase'],
 
 		components: { GenoRow },
 
@@ -28,7 +28,6 @@
 		},
 
 		mounted() {
-			console.log("tree: " + this.tree);
 			this.user = this.viewingUser ? this.viewingUser : window.user;
 		},
 	}

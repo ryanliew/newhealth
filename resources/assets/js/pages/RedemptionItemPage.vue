@@ -3,15 +3,13 @@
 		<transition name="slide-fade" mode="out-in">
 			<table-view ref="purchases"
 						:fields="fields"
-						:title="$options.filters.trans('redemption.redemption')"
+						:title="$options.filters.trans('redemption.redeem_item')"
 						:url="url"
-						:searchables="searchables"
 						v-show="!isPurchasing"
-						:dateFilterable="true"
+						:dateFilterable="false"
 						dateFilterKey="purchases.created_at"
-						addNew="purchase.make_new_purchase"
-						:canExportPDF="true"
-						:canExportExcel="true"
+						:canExportPDF="false"
+						:canExportExcel="false"
 						:exportUrl="exportUrl">
 			</table-view>
 		</transition>
@@ -123,13 +121,13 @@
 			},
 
 			turnOnEvents() {
-				this.$events.on('view', data => this.view(data));
+				this.$events.on('viewRedemption', data => this.view(data));
 				this.$events.on('receipt', data => this.receipt(data));
 				this.$events.on('delete', data => this.postDelete(data));
 			},
 
 			turnOffEvents() {
-				this.$events.off('view');
+				this.$events.off('viewRedemption');
 				this.$events.off('receipt');
 				this.$events.off('delete');
 			}

@@ -9,6 +9,7 @@ use App\Notifications\KYCUpdatedNotification;
 use App\Notifications\RemindUploadDocumentNotification;
 use App\User;
 use App\Account;
+use App\Ewallet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Log;
@@ -342,6 +343,10 @@ class UserController extends Controller
         $user->user_status = 'approve';
 
         $user->save();
+
+        $ewallet = Ewallet::create([
+            'user_id' => $user->id
+        ]);
 
         foreach($user->accounts as $account){
             $account->is_verified = true;

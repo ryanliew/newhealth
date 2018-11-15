@@ -12,7 +12,7 @@ return [
    	'copied-link'  => 'Your referral link has been copied to the clipboard',
    	'joined_at' => 'Joined at',
    	'users' => 'Users',
-   	'referral_code' => 'Newleaf ID',
+   	'referral_code' => 'Newhealth ID',
     'tree_count' => 'No. of trees',
     'level' => 'Member level',
     'level_1' => 'Advisor',

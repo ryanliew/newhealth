@@ -39,13 +39,14 @@
             </div>
         </div>
     </div><!--.site-header-shown-->
-    <div class="page-center login-bg" style="height: 630px;">
+    <!-- <div class="page-center login-bg" style="height: 630px;"> -->
+    <div class="page-center" style="height: 630px;">
         <div class="page-center-in">
             <div class="container-fluid">
-                <div class="col-md-5"></div>
-                <div class="col-md-7">
+                <!-- <div class="col-md-5"></div> -->
+                <div class="col-md-12">
                     <form class="sign-box" method="POST" action="{{ route('login') }}">
-                        <div><img class="img-fluid" src="/img/logo.png"></div>
+                        <!-- <div><img class="img-fluid" src="/img/logo.png"></div> -->
                         <header class="sign-title" style="padding:30px 0; font-size:22px">{{ __('auth.hi') }}<b>{{ __('auth.grower') }}</b>, {{ __('auth.welcome_back') }}!</header>
 
                         @if(session('message'))

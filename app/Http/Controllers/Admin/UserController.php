@@ -18,6 +18,10 @@ class UserController extends Controller
     	return Controller::VueTableListResult(User::with('contacts')->where('user_status', 'pending'));
     }
 
+    public function getAddress(User $user) {
+        return $user->address;
+    }
+
     public function getTree()
     {
     	return User::all()->toTree();

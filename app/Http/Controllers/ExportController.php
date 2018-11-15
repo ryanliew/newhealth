@@ -46,7 +46,7 @@ class ExportController extends Controller
 
         	foreach($transactions as $key => $transaction)
         	{
-        		$description = __('transaction.' . $transaction->description, ['name' => $transaction->target->name]);
+        		$description = __('transaction.' . $transaction->description, ['name' => $transaction->target->referral_code]);
 
         		$collection->push(["No" => $key + 1,
         							"Date" => $transaction->date,

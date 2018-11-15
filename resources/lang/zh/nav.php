@@ -24,7 +24,10 @@ return [
     'materials' => "销售辅助",
     'exit' => '离开',
     'commission_report' => "佣金报告",
+    'redeem_item' => '赎买物品',
+    'redemptions' => '赎买',
     'payout_report' => "支出报告",
-    'reports' => "报告"
+    'reports' => "报告",
+    'sell_account' => "出售账号",
 
 ];

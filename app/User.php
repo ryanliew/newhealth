@@ -26,6 +26,8 @@ class User extends Authenticatable
 
     // protected $appends = ['address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std', 'unpaid_commission', 'unpaid_commission_std', 'transaction_start', 'transaction_end'];
 
+    // protected $appends = ['address'];
+
     protected $dates = ['deleted_at', 'created_at', 'updated_at'];
 
     // protected $with = ['package', 'addresses', 'contacts'];
@@ -284,6 +286,14 @@ class User extends Authenticatable
     public function getTransactionEndAttribute()
     {
         return $this->transactions()->max("date");
+    }
+
+    public function getHasPurchaseAttribute() 
+    {
+        if($this->purchases()->first())
+            return true;
+        else
+            return false;
     }
 
     // Reset password

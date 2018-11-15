@@ -17,6 +17,7 @@ return [
     'my_downlines' => 'My affiliates',
     'my_account_status' => 'My account status',
     'date' => "Date",
+
     "latest_news" => "Latest news",
     "accrued_commission" => "Accrued commission",
     "e_wallet_amount" => "E-wallet amount",
@@ -28,7 +29,8 @@ return [
     "account_max" => "This account has highest qualification",
     "step_to_qualification" => "Step to next qualification",
     "progress_to_next_level" => "Progress to next level",
-    "account" => "account",
+    "account" => "Account",
+    "quantity" => "Quantity",
     "accounts" => "Accounts",
     "pending_redemptions" => "Pending Redemptions",
     

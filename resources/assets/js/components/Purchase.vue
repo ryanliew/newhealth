@@ -31,13 +31,12 @@
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="3">{{ 'purchase.diamond' | trans }}</md-radio>
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="2">{{ 'purchase.platinum' | trans }}</md-radio>
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="1">{{ 'purchase.silver' | trans }}</md-radio>
-									<geno-page :tree="tree" v-if="showTree"></geno-page>
+									<geno-page :tree="tree" :isPurchase="true" v-if="showTree"></geno-page>
 								</md-tab>
 							</div>
 						
 							<md-tab id="packages" :md-label="$options.filters.trans('purchase.packages')" class="table-responsive">
 							      	<h5 class="card-title mb-3">{{ instruction | trans }}</h5>
-									<h6>{{ 'purchase.base_price' | trans }}</h6>
 										<table class="table table-edit">
 											<tbody v-if="isEditing && form.packages.length > 0">
 												<tr v-for="(package, index) in packages">
@@ -200,7 +199,7 @@
 						        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="3">{{ 'purchase.diamond' | trans }}</md-radio>
 						        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="2">{{ 'purchase.platinum' | trans }}</md-radio>
 						        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="1">{{ 'purchase.silver' | trans }}</md-radio>
-								<geno-page :tree="tree" v-if="showTree"></geno-page>
+								<geno-page :tree="tree" :isPurchase="true" v-if="showTree"></geno-page>
 						</div>
 				    </div>    
 				    <div v-if="(purchase && !purchase.is_account && !isEditing)">
@@ -355,18 +354,16 @@
 								<div>{{ "auth.referrer" | trans }}</div>
 								<div class="text-center">{{ referrerInput }}</div>
 								<div>{{ "auth.account_type" | trans }}</div>
-								<div class="text-center">{{ accountSelected }}</div>
+								<div class="text-center">{{ 'purchase.' + accountSelected | trans }}</div>
 
-								<div>{{ "purchase.original_price" | trans }}</div>
-								<div class="text-center">{{ machineQuantity }} machines X RM{{ unitPrice }} = <b>RM{{ totalAccountPrice }}</b></div>
 								<div>{{ "purchase.cash_back" | trans }}</div>
 								<div class="text-center"><b>RM{{ discount }}</b> <span style="color:red;">{{ 'purchase.saving' | trans }} {{ accountCommission }}%</span></div>
 								<div>{{ "purchase.total" | trans }}</div>
-								<div class="text-center"><b>RM{{ originalPrice }}</b></div>
+								<div class="text-center"><b>RM{{ totalAccountPrice }}</b></div>
 							</div>
 							<div v-for="accountList in accountLists">
 								<selector-input v-model="accountList.selectedPackage" :defaultData="accountList.selectedPackage" 
-											:label="accountList.label" 
+											:label="$options.filters.trans('purchase.'+accountList.label)" 
 											:required="true"
 											:name="accountList.id"
 											:potentialData="potentialPackages"
@@ -434,7 +431,7 @@
 				radio: "3",
 				loading: true,
 				showTree: true,
-				accountLists : [ {label: 'Diamond', id:'diamond', selectedPackage: null, level: 3}, {label: 'Platinum 1', id:'platinum-1', selectedPackage: null, level: 2}, {label: 'Platinum 2', id:'platinum-2', selectedPackage: null, level: 2}, {label: 'Platinum 3', id:'platinum-3', selectedPackage: null, level: 2}, {label: 'Silver 1', id:'silver-1', selectedPackage: null, level: 1}, {label: 'Silver 2', id:'silver-2', selectedPackage: null, level: 1}, {label: 'Silver 3', id:'silver-3', selectedPackage: null, level: 1}, {label: 'Silver 4', id:'silver-4', selectedPackage: null, level: 1}, {label: 'Silver 5', id:'silver-5', selectedPackage: null, level: 1}, {label: 'Silver 6', id:'silver-6', selectedPackage: null, level: 1}, {label: 'Silver 7', id:'silver-7', selectedPackage: null, level: 1}, {label: 'Silver 8', id:'silver-8', selectedPackage: null, level: 1}, {label: 'Silver 9', id:'silver-9', selectedPackage: null, level: 1} ],
+				accountLists : [ {label: 'Diamond', id:'diamond', selectedPackage: null, level: 3}, {label: 'Platinum_1', id:'platinum-1', selectedPackage: null, level: 2}, {label: 'Platinum_2', id:'platinum-2', selectedPackage: null, level: 2}, {label: 'Platinum_3', id:'platinum-3', selectedPackage: null, level: 2}, {label: 'Silver_1', id:'silver-1', selectedPackage: null, level: 1}, {label: 'Silver_2', id:'silver-2', selectedPackage: null, level: 1}, {label: 'Silver_3', id:'silver-3', selectedPackage: null, level: 1}, {label: 'Silver 4', id:'silver-4', selectedPackage: null, level: 1}, {label: 'Silver_5', id:'silver-5', selectedPackage: null, level: 1}, {label: 'Silver_6', id:'silver-6', selectedPackage: null, level: 1}, {label: 'Silver_7', id:'silver-7', selectedPackage: null, level: 1}, {label: 'Silver_8', id:'silver-8', selectedPackage: null, level: 1}, {label: 'Silver_9', id:'silver-9', selectedPackage: null, level: 1} ],
 				tree: [],
 				referrerInput: '',
 				onHelperText: false,
@@ -528,7 +525,7 @@
 						this.machineQuantity = 3;
 						this.accountCommission = 20;
 						this.accountForm.account_level = 1;
-						this.accountSelected = this.$options.filters.trans('purchase.silver');
+						this.accountSelected = 'silver';
 						this.accountLists= [ {label: 'Silver', id:'silver', selectedPackage: null, level: 1} ];
 						treeArray = [{name: 'Silver', children: []}];
 						break;
@@ -536,13 +533,13 @@
 						this.machineQuantity = 9;
 						this.accountCommission = 35;
 						this.accountForm.account_level = 2;
-						this.accountSelected = this.$options.filters.trans('purchase.platinum');
-						this.accountLists= [ {label: 'Platinum', id:'platinum', selectedPackage: null, level: 2}, {label: 'Silver 1', id:'silver-1', selectedPackage: null, level: 1}, {label: 'Silver 2', id:'silver-2', selectedPackage: null, level: 1}, {label: 'Silver 3', id:'silver-3', selectedPackage: null, level: 1} ];
+						this.accountSelected = 'platinum';
+						this.accountLists= [ {label: 'Platinum', id:'platinum', selectedPackage: null, level: 2}, {label: 'Silver_1', id:'silver-1', selectedPackage: null, level: 1}, {label: 'Silver_2', id:'silver-2', selectedPackage: null, level: 1}, {label: 'Silver_3', id:'silver-3', selectedPackage: null, level: 1} ];
 						treeArray = [
 										{name: 'Platinum', children: [
-											{name: 'Silver 1', children: []},
-											{name: 'Silver 2', children: []},
-											{name: 'Silver 3', children: []},
+											{name: 'Silver_1', children: []},
+											{name: 'Silver_2', children: []},
+											{name: 'Silver_3', children: []},
 										]}
 									];
 				 		break;
@@ -550,24 +547,24 @@
 				 		this.machineQuantity = 27;
 						this.accountCommission = 45;
 						this.accountForm.account_level = 3;
-						this.accountSelected = this.$options.filters.trans('purchase.diamond');
-						this.accountLists = [ {label: 'Diamond', id:'diamond', selectedPackage: null, level: 3}, {label: 'Platinum 1', id:'platinum-1', selectedPackage: null, level: 2}, {label: 'Platinum 2', id:'platinum-2', selectedPackage: null, level: 2}, {label: 'Platinum 3', id:'platinum-3', selectedPackage: null, level: 2}, {label: 'Silver 1', id:'silver-1', selectedPackage: null, level: 1}, {label: 'Silver 2', id:'silver-2', selectedPackage: null, level: 1}, {label: 'Silver 3', id:'silver-3', selectedPackage: null, level: 1}, {label: 'Silver 4', id:'silver-4', selectedPackage: null, level: 1}, {label: 'Silver 5', id:'silver-5', selectedPackage: null, level: 1}, {label: 'Silver 6', id:'silver-6', selectedPackage: null, level: 1}, {label: 'Silver 7', id:'silver-7', selectedPackage: null, level: 1}, {label: 'Silver 8', id:'silver-8', selectedPackage: null, level: 1}, {label: 'Silver 9', id:'silver-9', selectedPackage: null, level: 1} ];
+						this.accountSelected = 'diamond';
+						this.accountLists = [ {label: 'Diamond', id:'diamond', selectedPackage: null, level: 3}, {label: 'Platinum_1', id:'platinum-1', selectedPackage: null, level: 2}, {label: 'Platinum_2', id:'platinum-2', selectedPackage: null, level: 2}, {label: 'Platinum_3', id:'platinum-3', selectedPackage: null, level: 2}, {label: 'Silver_1', id:'silver-1', selectedPackage: null, level: 1}, {label: 'Silver_2', id:'silver-2', selectedPackage: null, level: 1}, {label: 'Silver_3', id:'silver-3', selectedPackage: null, level: 1}, {label: 'Silver_4', id:'silver-4', selectedPackage: null, level: 1}, {label: 'Silver_5', id:'silver-5', selectedPackage: null, level: 1}, {label: 'Silver_6', id:'silver-6', selectedPackage: null, level: 1}, {label: 'Silver_7', id:'silver-7', selectedPackage: null, level: 1}, {label: 'Silver_8', id:'silver-8', selectedPackage: null, level: 1}, {label: 'Silver_9', id:'silver-9', selectedPackage: null, level: 1} ];
 				 		treeArray = [{name: 'Diamond', 
 									children: [
-											{name: 'Platinum 1', children: [
-												{name: 'Silver 1', children: []},
-												{name: 'Silver 2', children: []},
-												{name: 'Silver 3', children: []},
+											{name: 'Platinum_1', children: [
+												{name: 'Silver_1', children: []},
+												{name: 'Silver_2', children: []},
+												{name: 'Silver_3', children: []},
 											]}, 
-											{name: 'Platinum 2', children: [
-												{name: 'Silver 4', children: []},
-												{name: 'Silver 5', children: []},
-												{name: 'Silver 6', children: []},
+											{name: 'Platinum_2', children: [
+												{name: 'Silver_4', children: []},
+												{name: 'Silver_5', children: []},
+												{name: 'Silver_6', children: []},
 											]},
-											{name: 'Platinum 3', children: [
-												{name: 'Silver 7', children: []},
-												{name: 'Silver 8', children: []},
-												{name: 'Silver 9', children: []},
+											{name: 'Platinum_3', children: [
+												{name: 'Silver_7', children: []},
+												{name: 'Silver_8', children: []},
+												{name: 'Silver_9', children: []},
 											]},
 										]
 									}];
@@ -588,13 +585,14 @@
 				// 	console.log("else");
 				// 	this.tree = treeArray;
 				// }
-				if(this.referrerInput == null || this.referrerInput == ""){
+				// if(this.referrerInput == null || this.referrerInput == ""){
 					this.tree = treeArray;
-				} else {
-					var parentTree = [{name: this.referrerInput}];
-					parentTree[0]['children'] = treeArray;
-					this.tree = parentTree;
-				}
+				// } 
+				// else {
+				// 	var parentTree = [{name: this.referrerInput}];
+				// 	parentTree[0]['children'] = treeArray;
+				// 	this.tree = parentTree;
+				// }
 			},
 
 			setLoadingTimer(){
@@ -682,6 +680,7 @@
 			},
 
 			setUsers(data) {
+				console.log(data);
 				this.setSelectedUser(data);
 				this.potentialUsers = data.map(user => {
 					let obj = {};

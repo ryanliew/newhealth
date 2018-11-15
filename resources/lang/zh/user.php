@@ -12,7 +12,7 @@ return [
    	'copied-link'  => '成功复制介绍连接',
    	'joined_at' => '加盟日期',
    	'users' => '用户',
-   	'referral_code' => '新叶ID',
+   	'referral_code' => '新康ID',
     'tree_count' => '种植数量',
     'level' => '级别',
     'level_1' => '顾问',

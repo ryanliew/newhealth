@@ -26,5 +26,7 @@ return [
     "status_updated" => "支付完成",
     'pending' => "未支付",
     "paid" => "已支付",
-    "remark" => "备注"
+    "remark" => "备注",
+    "e_wallet_commision" => "钱包佣金",
+
 ];

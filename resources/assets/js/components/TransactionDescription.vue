@@ -1,6 +1,6 @@
 <template>
     <div>
-        <span>{{ 'transaction.' + rowData.description | trans({ name: rowData.target.name}) }}</span>
+        <span>{{ 'transaction.' + rowData.description | trans({ name: rowData.target.referral_code}) }}</span>
     </div>
 </template>
 

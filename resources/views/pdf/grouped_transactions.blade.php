@@ -83,7 +83,7 @@
 					@foreach($user->transactions as $key => $transaction)
 					<tr>
 						<td cellspacing="0" cellpadding="0">{{ $transaction->date->format("j/n/Y") }}</td>
-						<td cellspacing="0" cellpadding="0">@if(!is_null($transaction->target)) {{ __('transaction.' . $transaction->description, ['name' => $transaction->target->name]) }} @endif</td>
+						<td cellspacing="0" cellpadding="0">@if(!is_null($transaction->target)) {{ __('transaction.' . $transaction->description, ['name' => $transaction->target->referral_code]) }} @endif</td>
 						<td cellspacing="0" cellpadding="0">
 							<div class="currency">{{ $transaction->is_std ? 'USD' : 'RM'}}</div>
 							<div class="amount text-right">{{ number_format($transaction->amount, 2, ".", ",") }}</div>

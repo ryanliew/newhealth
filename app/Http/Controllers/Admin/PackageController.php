@@ -45,7 +45,8 @@ class PackageController extends Controller
                                     'can_upgrade' => request()->can_upgrade == 'true' ? true : false,
                                     'can_redeem' => request()->can_redeem == 'true' ? true : false,
                                     'package_photo_path' => request()->file('package_picture')->store('packages', 'public'),
-                                    'machine_count' => request()->machine_count ? request()->machine_count : 0
+                                    'machine_count' => request()->machine_count ? request()->machine_count : 0,
+                                    'price_promotion' => request()->price_promotion,
                                     ]);
 
 		// Package::create(request()->all());
@@ -87,7 +88,8 @@ class PackageController extends Controller
                             'can_upgrade' => request()->can_upgrade ? true : false,
                             'can_redeem' => request()->can_redeem ? true : false,
                             'package_photo_path' => $photo_path,
-                            'machine_count' => request()->machine_count ? request()->machine_count : 0
+                            'machine_count' => request()->machine_count ? request()->machine_count : 0,
+                            'price_promotion' => request()->price_promotion,
                             ]);
 
     	return $this->message("package.update_success");

@@ -41,14 +41,15 @@
         </div>
     </div><!--.site-header-shown-->
 
-    <div class="page-center login-bg">
+    <!-- <div class="page-center login-bg"> -->
+    <div class="page-center">
         <div class="page-center-in">
             <div class="container-fluid">
-                <div class="col-md-5"></div>
-                <div class="col-md-7">
+                <!-- <div class="col-md-2"></div> -->
+                <div class="col-md-12">
                     <form class="sign-box" action="{{ route('register') }}" method="POST">
                         @csrf
-                        <div><img class="img-fluid" src="/img/logo.png"></div>
+                        <!-- <div><img class="img-fluid" src="/img/logo.png"></div> -->
                         <header class="sign-title" style="font-size:18px; padding:30px 0;">{{ __('auth.register_today') }}<b>{{ __('auth.register') }}</b>{{ __('auth.en_space') }}{{ __('auth.register_message') }}</header>
                         <div class="form-group">
                             <input type="text" name="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('auth.full_name') }}" value="{{ old('name') }}" required autofocus/>

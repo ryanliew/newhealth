@@ -10,6 +10,7 @@ return [
 
     'redemption' => '赎买',
     'description' => '描述',
+    'wallet' => '钱包',
     'price' => '价格',
     'name' => '名称',
     'item' => '物品',
@@ -25,9 +26,13 @@ return [
     'redemption_date' => '赎买日期',
     'approve' => '批准',
     'reject' => '驳回',
+    'approved' => '批准',
+    'pending' => '守候',
+    'canceled' => '取消',
     'redemption_approve' => '赎买已批准',
     'redemption_reject' => '赎买已驳回',
     'redemption_cancel' => '赎买已取消',
+    'redeem_item' => '赎买物品',
     'user' => '用户',
     'redemption_detail' => '详情',
 ];

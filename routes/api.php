@@ -77,6 +77,7 @@ Route::group(['middleware' => 'auth:api'], function() {
 		Route::post('/approve', "UserController@approve");
 		Route::post('/reject', "UserController@reject");
 		Route::post('/delete', "UserController@delete");
+		Route::get("/address", "Admin\UserController@getAddress");
 		Route::get('/', 'UserController@show');
 	});
 
