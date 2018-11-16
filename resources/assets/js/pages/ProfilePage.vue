@@ -433,6 +433,7 @@
 			if(this.selectedUser)
 			{
 				this.getUser();
+				this.getAddress();
 			}
 			// this.$refs.documents.setKycDocs();
 			this.getContacts();
@@ -499,6 +500,14 @@
 			},
 
 			getUser() {
+				axios.get('/api/user/' + this.user.id )
+					.then(response => this.setUser(response));
+
+				// axios.get('/api/user/' + this.user.id + "/address")
+				// 	.then(response => this.setAddress(response));
+			},
+
+			getAddress() {
 				// axios.get('/api/user/' + this.user.id )
 				// 	.then(response => this.setUser(response));
 

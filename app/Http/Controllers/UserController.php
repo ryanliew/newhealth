@@ -63,7 +63,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return $user->append(['addresses', 'contact_number', 'address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std', 'unpaid_commission', 'unpaid_commission_std', 'transaction_start', 'transaction_end']); 
+        return $user->load('addresses')->append(['contact_number', 'address', 'company_address', 'default_locale', 'is_std', 'group_sale', 'has_verified_sale', 'commission_received', 'group_sale_needed', 'direct_descendants_count', 'direct_referrer_needed', 'descendants_count', 'commission_received_std', 'unpaid_commission', 'unpaid_commission_std', 'transaction_start', 'transaction_end']); 
     }
 
     /**
