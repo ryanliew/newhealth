@@ -132,6 +132,6 @@ class AccountController extends Controller
         }
 
 
-        return Account::with('user')->whereIn('id', $accountDetails->flatten()->pluck('id'))->get()->toTree();
+        return Account::with('user')->whereIn('id', $accountDetails->flatten()->unique()->pluck('id'))->get()->toTree();
     }
 }
