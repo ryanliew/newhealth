@@ -8,7 +8,7 @@
 				<span v-else>
 					{{ user.name }} 
 				</span>
-				<span class="badge badge-primary" v-if="getClass(user) == 'self'">{{ 'tree.self' |trans }}</span><br>
+				<!-- <span class="badge badge-primary" v-if="getClass(user) == 'self'">{{ 'tree.self' |trans }}</span><br> -->
 				{{ user.referral_code }}
 				<br v-if="user.tree_count">
 				<span v-if="user.tree_count" class="badge badge-success">{{ user.tree_count }} {{ 'auth.tree' | trans_choice(user.tree_count) }}</span>
@@ -34,7 +34,7 @@
 
 		methods: {
 			getClass(user) {
-				if(user.id == window.user.id) {
+				if(user.user_id == window.user.id) {
 					return 'self';
 				}
 

@@ -327,7 +327,8 @@
 			},
 
 			itemPicture() {
-				return this.user.is_admin && !this.isRedeemItem ? this.item.package.package_photo_path : this.item.package_photo_path;
+				let path;
+				return !this.isRedeemItem ? this.item.package.package_photo_path : this.item.package_photo_path;
 			},
 
 			instruction() {

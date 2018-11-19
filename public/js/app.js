@@ -75569,7 +75569,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 	methods: {
 		getClass: function getClass(user) {
-			if (user.id == window.user.id) {
+			if (user.user_id == window.user.id) {
 				return 'self';
 			}
 
@@ -75606,12 +75606,6 @@ var render = function() {
                   _vm._v("\n\t\t\t\t" + _vm._s(user.name) + " \n\t\t\t")
                 ]),
             _vm._v(" "),
-            _vm.getClass(user) == "self"
-              ? _c("span", { staticClass: "badge badge-primary" }, [
-                  _vm._v(_vm._s(_vm._f("trans")("tree.self")))
-                ])
-              : _vm._e(),
-            _c("br"),
             _vm._v("\n\t\t\t" + _vm._s(user.referral_code) + "\n\t\t\t"),
             user.tree_count ? _c("br") : _vm._e(),
             _vm._v(" "),
@@ -81339,7 +81333,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			return title;
 		},
 		itemPicture: function itemPicture() {
-			return this.user.is_admin && !this.isRedeemItem ? this.item.package.package_photo_path : this.item.package_photo_path;
+			var path = void 0;
+			return !this.isRedeemItem ? this.item.package.package_photo_path : this.item.package_photo_path;
 		},
 		instruction: function instruction() {
 			var instruction = this.item && !this.isEditing ? 'purchase.selected_packages' : 'purchase.select_package';
