@@ -122,10 +122,15 @@ class AccountController extends Controller
         
         $accounts = $user->accounts->where('parent_id', null);
         $accountDetails = collect();
+
+        if($accounts->count() == 0)
+            $accounts = $user->accounts;
+
         foreach($accounts as $key => $account)
         {
             $accountDetails->push(Account::descendantsAndSelf($account->id));
         }
+
 
         return Account::with('user')->whereIn('id', $accountDetails->flatten()->pluck('id'))->get()->toTree();
     }
