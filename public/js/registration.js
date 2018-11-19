@@ -49380,6 +49380,9 @@ Vue.filter('formatRedemptionStatus', function (value) {
 		case 'rejected':
 			color = 'badge-danger';
 			break;
+		case 'canceled':
+			color = 'badge-danger';
+			break;
 		case 'complete':
 			color = 'badge-success';
 			break;
