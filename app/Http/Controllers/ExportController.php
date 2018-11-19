@@ -225,6 +225,9 @@ class ExportController extends Controller
         $query = DB::table('users')
                     ->leftJoin('transactions', 'users.id', '=', 'transactions.user_id')
                     ->whereRaw('MONTH(date) = ? AND YEAR(date) = ?', [$date->month, $date->year])
+                    ->where('transactions.type', '!=' , 'e_wallet_commision')
+                    ->where('transactions.type', '!=', 'e_wallet_leadership_commision')
+                    ->where('transactions.type', '!=', 'sell_account')
                     ->select(DB::raw('sum(transactions.amount) as amount, user_id, name, bank_name, account_no, bank_address, bank_swift, payout_status, is_std'))
                     ->groupBy('users.id', 'transactions.payout_status', 'is_std')
                     ->orderByDesc('amount');
