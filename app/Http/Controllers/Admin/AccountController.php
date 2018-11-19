@@ -86,6 +86,6 @@ class AccountController extends Controller
 
     public function getTree()
     {   
-        return Account::with('user')->all()->toTree();
+        return Account::with('user')->get()->toTree();
     }
 }
