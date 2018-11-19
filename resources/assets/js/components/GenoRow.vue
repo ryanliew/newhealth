@@ -12,8 +12,8 @@
 				{{ user.referral_code }}
 				<br v-if="user.tree_count">
 				<span v-if="user.tree_count" class="badge badge-success">{{ user.tree_count }} {{ 'auth.tree' | trans_choice(user.tree_count) }}</span>
-				<br v-if="user.user_level">
-				<span v-if="user.user_level" class="badge badge-info">{{ 'user.level_' + user.user_level | trans }}</span>
+				<br v-if="user.account_level">
+				<span v-if="user.account_level" class="badge badge-info">{{ 'tree.level_' + user.account_level | trans }}</span>
 
 			</a>
 			<geno-row v-if="user.children.length > 0" :users="user.children" :isPurchase="isPurchase">

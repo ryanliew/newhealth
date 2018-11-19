@@ -9,5 +9,9 @@ return [
     */
 
     'tree' => 'Organization chart',
-    'self' => "Me"
+    'self' => "Me",
+    'level_0' => 'Customer',
+    'level_1' => 'Silver',
+    'level_2' => 'Platinum',
+    'level_3' => 'Diamond',
 ];
