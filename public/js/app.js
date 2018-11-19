@@ -75561,6 +75561,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	name: "geno-row",
@@ -75597,6 +75599,10 @@ var render = function() {
         { class: _vm.getClass(user) },
         [
           _c("a", [
+            user.user ? _c("span", [_vm._v(_vm._s(user.user.name))]) : _vm._e(),
+            _vm._v(" "),
+            user.user ? _c("br") : _vm._e(),
+            _vm._v(" "),
             _vm.isPurchase
               ? _c("span", [
                   _vm._v(
@@ -90297,8 +90303,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -90362,12 +90366,7 @@ var render = function() {
       [
         _vm.loading ? _c("loader") : _vm._e(),
         _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "row" },
-          [_c("geno-page", { attrs: { tree: _vm.tree } })],
-          1
-        )
+        _c("geno-page", { attrs: { tree: _vm.tree } })
       ],
       1
     )

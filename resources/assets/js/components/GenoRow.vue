@@ -2,6 +2,8 @@
 	<ul>
 		<li :class="getClass(user)" v-for="user in users">
 			<a>
+				<span v-if="user.user">{{ user.user.name }}</span>
+				<br v-if="user.user">
 				<span v-if="isPurchase">
 					{{ 'purchase.' + user.name |trans }} 
 				</span>

@@ -56,7 +56,7 @@ class ProfileController extends Controller
 
         $account = Account::create([
             'user_id' => auth()->user()->id,
-            'referral_code' => auth()->user()->country_id,
+            'referral_code' => request()->country_id,
             ]);
 
         $referrer = null;
@@ -91,7 +91,8 @@ class ProfileController extends Controller
             'beneficiary_name' => request()->beneficiary_name,
             'beneficiary_identification' => request()->beneficiary_identification,
             'beneficiary_address' => request()->beneficiary_address,
-            'beneficiary_contact' => request()->beneficiary_contact
+            'beneficiary_contact' => request()->beneficiary_contact,
+            'referral_code' => request()->country_id,
         ]);
 
         if(request()->has('password'))

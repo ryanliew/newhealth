@@ -5,9 +5,7 @@
 		</div>
 		<div class="card-body">
 			<loader v-if="loading"></loader>
-			<div class="row">
-				<geno-page :tree="tree"></geno-page>
-			</div>
+			<geno-page :tree="tree"></geno-page>
 		</div>
 	</div>
 </template>

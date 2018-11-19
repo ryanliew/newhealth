@@ -107,7 +107,6 @@ class AccountController extends Controller
 
     public function getAuthAccounts($user_id = null)
     {
-        // dd("here");
         if($user_id == null){
             $authAccounts = Account::all();
         }
@@ -120,6 +119,14 @@ class AccountController extends Controller
 
     public function getTree(User $user)
     {   
-        return $user->accounts->toTree();
+        
+        $accounts = $user->accounts->where('parent_id', null);
+        $accountDetails = collect();
+        foreach($accounts as $key => $account)
+        {
+            $accountDetails->push(Account::descendantsAndSelf($account->id));
+        }
+
+        return Account::with('user')->whereIn('id', $accountDetails->flatten()->pluck('id'))->get()->toTree();
     }
 }
