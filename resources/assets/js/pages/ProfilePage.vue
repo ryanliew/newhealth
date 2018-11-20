@@ -240,7 +240,7 @@
 					</div>
 					<!-- <user-documents :selectedUser="user" ref="documents"></user-documents> -->
 
-					<button class="btn btn-primary mb-3 " @click="isApplying = true" v-if="!userNotGrower">{{ "user.apply_as_advisor" | trans }}</button>
+					<!-- <button class="btn btn-primary mb-3 " @click="isApplying = true" v-if="!userNotGrower">{{ "user.apply_as_advisor" | trans }}</button> -->
 					<user-level :selectedUser="user" ref="levels" v-if="currentUser.is_admin" @back="back"></user-level>
 					<div class="row" v-if="user.company_name">
 						<div class="col-sm">

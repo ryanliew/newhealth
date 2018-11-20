@@ -78787,55 +78787,6 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "form-check mt-4" }, [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.form.is_advisor,
-              expression: "form.is_advisor"
-            }
-          ],
-          staticClass: "form-check-input",
-          attrs: { type: "checkbox", id: "is-admin" },
-          domProps: {
-            checked: Array.isArray(_vm.form.is_advisor)
-              ? _vm._i(_vm.form.is_advisor, null) > -1
-              : _vm.form.is_advisor
-          },
-          on: {
-            change: function($event) {
-              var $$a = _vm.form.is_advisor,
-                $$el = $event.target,
-                $$c = $$el.checked ? true : false
-              if (Array.isArray($$a)) {
-                var $$v = null,
-                  $$i = _vm._i($$a, $$v)
-                if ($$el.checked) {
-                  $$i < 0 && _vm.$set(_vm.form, "is_advisor", $$a.concat([$$v]))
-                } else {
-                  $$i > -1 &&
-                    _vm.$set(
-                      _vm.form,
-                      "is_advisor",
-                      $$a.slice(0, $$i).concat($$a.slice($$i + 1))
-                    )
-                }
-              } else {
-                _vm.$set(_vm.form, "is_advisor", $$c)
-              }
-            }
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "label",
-          { staticClass: "form-check-label", attrs: { for: "is-admin" } },
-          [_vm._v(_vm._s(_vm._f("trans")("user.is_advisor")))]
-        )
-      ]),
-      _vm._v(" "),
       _c("button", {
         staticClass: "btn btn-primary mt-3",
         attrs: { disabled: _vm.form.submitting },
@@ -84828,27 +84779,6 @@ var render = function() {
                             ])
                           ])
                         ]),
-                        _vm._v(" "),
-                        !_vm.userNotGrower
-                          ? _c(
-                              "button",
-                              {
-                                staticClass: "btn btn-primary mb-3 ",
-                                on: {
-                                  click: function($event) {
-                                    _vm.isApplying = true
-                                  }
-                                }
-                              },
-                              [
-                                _vm._v(
-                                  _vm._s(
-                                    _vm._f("trans")("user.apply_as_advisor")
-                                  )
-                                )
-                              ]
-                            )
-                          : _vm._e(),
                         _vm._v(" "),
                         _vm.currentUser.is_admin
                           ? _c("user-level", {

@@ -45,10 +45,10 @@
 				<input class="form-check-input" type="checkbox" id="is-admin" v-model="form.is_admin">
 				<label class="form-check-label" for="is-admin">{{ 'user.is_admin' | trans }}</label>
 			</div>
-			<div class="form-check mt-4">
+			<!-- <div class="form-check mt-4">
 				<input class="form-check-input" type="checkbox" id="is-admin" v-model="form.is_advisor">
 				<label class="form-check-label" for="is-admin">{{ 'user.is_advisor' | trans }}</label>
-			</div>
+			</div> -->
 			<button class="btn btn-primary mt-3" :disabled="form.submitting" v-html="submitButtonContent" @click="submit"></button>
 		</div>
 	</div>

@@ -127,7 +127,7 @@ class PurchaseController extends Controller
         if($first_account){
             $first_account->update([
                         'account_level' => $purchase->account_level,
-                        'parent_id' => $parent_account ? $parent_account->id : null,
+                        'parent_id' => $parent_account ? $parent_account->id : $first_account->parent_id,
                         'machine_count' => $machine_count
                     ]);
         }
