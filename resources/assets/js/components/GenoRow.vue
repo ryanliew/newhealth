@@ -1,7 +1,7 @@
 <template>
 	<ul>
 		<li :class="getClass(user)" v-for="user in users">
-			<a>
+			<a style="min-width: 100px;" @click="clicked(user)">
 				<span v-if="user.user">{{ user.user.name }}</span>
 				<br v-if="user.user">
 				<span v-if="isPurchase">
@@ -12,13 +12,13 @@
 				</span>
 				<!-- <span class="badge badge-primary" v-if="getClass(user) == 'self'">{{ 'tree.self' |trans }}</span><br> -->
 				{{ user.referral_code }}
-				<br v-if="user.tree_count">
-				<span v-if="user.tree_count" class="badge badge-success">{{ user.tree_count }} {{ 'auth.tree' | trans_choice(user.tree_count) }}</span>
+				<br v-if="user.selectedPackage">
+				<span v-if="user.selectedPackage" class="badge badge-success">{{ user.selectedPackage }}</span>
 				<br v-if="user.account_level">
 				<span v-if="user.account_level" class="badge badge-info">{{ 'tree.level_' + user.account_level | trans }}</span>
 
 			</a>
-			<geno-row v-if="user.children.length > 0" :users="user.children" :isPurchase="isPurchase">
+			<geno-row v-if="user.children.length > 0" :users="user.children" :isPurchase="isPurchase" @clicked="clicked">
 			</geno-row>
 		</li>
 	</ul>
@@ -41,6 +41,10 @@
 				}
 
 				return '';
+			},
+
+			clicked(user) {
+				this.$emit('clicked', {name: user.name});
 			}
 		}	
 	}

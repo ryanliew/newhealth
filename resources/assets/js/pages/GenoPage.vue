@@ -3,7 +3,7 @@
 		<div class="col-12 m-auto">
 			<div class="tree-responsive m-auto p-2">
 				<div class="tree">
-					<GenoRow :users='tree' :isPurchase='isPurchase'>
+					<GenoRow :users='tree' :isPurchase='isPurchase' @clicked="clicked">
 					</GenoRow>
 				</div>
 			</div>
@@ -41,6 +41,11 @@
 			setTree(response) {
 				this.tree = response.data;
 				this.loading = false;
+			},
+
+			clicked(e) {
+				// console.log('page clicked');
+				this.$emit("clicked", {name: e.name});
 			}
 		},
 

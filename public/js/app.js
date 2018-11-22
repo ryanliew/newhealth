@@ -74277,6 +74277,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -74310,6 +74311,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				total_price: 0,
 				packages: []
 			}),
+			treeArray: [],
 			submitText: 'purchase.checkout',
 			user: window.user,
 			selectedPackages: '',
@@ -74331,7 +74333,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			accountCommission: '',
 			accountSelected: '',
 			unitPrice: 8000,
-			defaultTab: 'account'
+			defaultTab: 'account',
+			index: 0,
+			triggeredAccount: '',
+			triggerAccountList: []
 		};
 	},
 	mounted: function mounted() {
@@ -74356,7 +74361,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	methods: {
 		cancelUpdate: function cancelUpdate() {
 			this.isEditing = false;
-			if (this.purchase.is_account) this.showTree = true;
+			if (this.purchase.is_account) {
+				this.accountChange();
+				this.showTree = true;
+			}
 		},
 		setReferrerInput: function setReferrerInput() {
 			var _this2 = this;
@@ -74376,10 +74384,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		setDefaultReferralCode: function setDefaultReferralCode(response) {
 			response.data != 'auth.ancestor_not_found' ? this.referrerInput = response.data : null;
-			this.accountForm.referral_code = response.data;
+			response.data != 'auth.ancestor_not_found' ? this.accountForm.referral_code = response.data : null;
 		},
 		tabChange: function tabChange(id) {
-			id == 'account' ? this.showTree = true : this.showTree = false;
+			if (id == 'account') {
+				this.showTree = true;
+				this.triggeredAccount = '';
+				this.accountChange();
+			} else {
+				this.showTree = false;
+			}
 		},
 		checkReferrer: function checkReferrer() {
 			var _this3 = this;
@@ -74404,12 +74418,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		resetHelperTextAndTree: function resetHelperTextAndTree() {
 			this.onHelperText = false;
 			this.form.referral_code = this.referrerInput;
+			this.accountForm.referral_code = this.referrerInput;
 			this.accountChange();
 		},
 		accountChange: function accountChange() {
 			if (this.purchase && !this.isEditing && this.purchase.is_account) this.radio = this.purchase.account_level.toString();
 
-			var treeArray;
 			switch (this.radio) {
 				case "1":
 					this.machineQuantity = 3;
@@ -74417,7 +74431,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 					this.accountForm.account_level = 1;
 					this.accountSelected = 'silver';
 					this.accountLists = [{ label: 'Silver', id: 'silver', selectedPackage: null, level: 1 }];
-					treeArray = [{ name: 'Silver', children: [] }];
+					this.treeArray = [{ name: 'Silver', selectedPackage: null, children: [] }];
 					break;
 				case "2":
 					this.machineQuantity = 9;
@@ -74425,7 +74439,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 					this.accountForm.account_level = 2;
 					this.accountSelected = 'platinum';
 					this.accountLists = [{ label: 'Platinum', id: 'platinum', selectedPackage: null, level: 2 }, { label: 'Silver_1', id: 'silver-1', selectedPackage: null, level: 1 }, { label: 'Silver_2', id: 'silver-2', selectedPackage: null, level: 1 }, { label: 'Silver_3', id: 'silver-3', selectedPackage: null, level: 1 }];
-					treeArray = [{ name: 'Platinum', children: [{ name: 'Silver_1', children: [] }, { name: 'Silver_2', children: [] }, { name: 'Silver_3', children: [] }] }];
+					this.treeArray = [{ name: 'Platinum', selectedPackage: null, children: [{ name: 'Silver_1', selectedPackage: null, children: [] }, { name: 'Silver_2', selectedPackage: null, children: [] }, { name: 'Silver_3', selectedPackage: null, children: [] }] }];
 					break;
 				case "3":
 					this.machineQuantity = 27;
@@ -74433,34 +74447,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 					this.accountForm.account_level = 3;
 					this.accountSelected = 'diamond';
 					this.accountLists = [{ label: 'Diamond', id: 'diamond', selectedPackage: null, level: 3 }, { label: 'Platinum_1', id: 'platinum-1', selectedPackage: null, level: 2 }, { label: 'Platinum_2', id: 'platinum-2', selectedPackage: null, level: 2 }, { label: 'Platinum_3', id: 'platinum-3', selectedPackage: null, level: 2 }, { label: 'Silver_1', id: 'silver-1', selectedPackage: null, level: 1 }, { label: 'Silver_2', id: 'silver-2', selectedPackage: null, level: 1 }, { label: 'Silver_3', id: 'silver-3', selectedPackage: null, level: 1 }, { label: 'Silver_4', id: 'silver-4', selectedPackage: null, level: 1 }, { label: 'Silver_5', id: 'silver-5', selectedPackage: null, level: 1 }, { label: 'Silver_6', id: 'silver-6', selectedPackage: null, level: 1 }, { label: 'Silver_7', id: 'silver-7', selectedPackage: null, level: 1 }, { label: 'Silver_8', id: 'silver-8', selectedPackage: null, level: 1 }, { label: 'Silver_9', id: 'silver-9', selectedPackage: null, level: 1 }];
-					treeArray = [{ name: 'Diamond',
-						children: [{ name: 'Platinum_1', children: [{ name: 'Silver_1', children: [] }, { name: 'Silver_2', children: [] }, { name: 'Silver_3', children: [] }] }, { name: 'Platinum_2', children: [{ name: 'Silver_4', children: [] }, { name: 'Silver_5', children: [] }, { name: 'Silver_6', children: [] }] }, { name: 'Platinum_3', children: [{ name: 'Silver_7', children: [] }, { name: 'Silver_8', children: [] }, { name: 'Silver_9', children: [] }] }]
+					this.treeArray = [{ name: 'Diamond', selectedPackage: null,
+						children: [{ name: 'Platinum_1', selectedPackage: null, children: [{ name: 'Silver_1', selectedPackage: null, children: [] }, { name: 'Silver_2', selectedPackage: null, children: [] }, { name: 'Silver_3', selectedPackage: null, children: [] }] }, { name: 'Platinum_2', selectedPackage: null, children: [{ name: 'Silver_4', selectedPackage: null, children: [] }, { name: 'Silver_5', selectedPackage: null, children: [] }, { name: 'Silver_6', selectedPackage: null, children: [] }] }, { name: 'Platinum_3', selectedPackage: null, children: [{ name: 'Silver_7', selectedPackage: null, children: [] }, { name: 'Silver_8', selectedPackage: null, children: [] }, { name: 'Silver_9', selectedPackage: null, children: [] }] }]
 					}];
+
 					break;
 				default:
-					treeArray;
+					this.treeArray;
 			}
-
-			// if((this.onHelperText == false && this.referrerInput != null) || (this.onHelperText == false && this.referrerInput != "")){
-			// 	console.log("here");
-			// 	var parentTree = [{name: 'Silver'}];
-			// 	parentTree[0]['children'] = treeArray;
-			// 	this.tree = parentTree;
-			// } else if((this.onHelperText == true && this.referrerInput != null) || (this.onHelperText == true && this.referrerInput != "") || (this.onHelperText == false && this.referrerInput == null) || (this.onHelperText == false && this.referrerInput == "")) {
-			// 	console.log("there");
-			// 	this.tree = treeArray;
-			// } else {
-			// 	console.log("else");
-			// 	this.tree = treeArray;
-			// }
-			// if(this.referrerInput == null || this.referrerInput == ""){
-			this.tree = treeArray;
-			// } 
-			// else {
-			// 	var parentTree = [{name: this.referrerInput}];
-			// 	parentTree[0]['children'] = treeArray;
-			// 	this.tree = parentTree;
-			// }
+			this.potentialPackages ? this.setSelectedAccountPackage() : null;
+			this.tree = this.treeArray;
 		},
 		setLoadingTimer: function setLoadingTimer() {
 			this.loading = false;
@@ -74512,7 +74508,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			});
 		},
 		setAccountPackages: function setAccountPackages(data) {
-			this.setSelectedAccountPackage();
 			this.potentialPackages = data.map(function (pack) {
 				var price = pack.price_promotion ? pack.price_promotion : pack.price;
 				var obj = {};
@@ -74522,23 +74517,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 				return obj;
 			});
+			this.setSelectedAccountPackage();
 		},
 		setSelectedAccountPackage: function setSelectedAccountPackage() {
-			console.log("setSelectedAccountPackage");
-			if (this.purchase) {
+			if (this.purchase && !this.isEditing) {
 				for (var i = 0; i < this.purchase.packages.length; i++) {
-					var obj = {};
-					obj['value'] = this.purchase.packages[i].id;
-					obj['label'] = this.purchase.packages[i].name;
-					obj['price'] = this.purchase.packages[i].price;
-
-					this.accountLists[i].selectedPackage = obj;
+					this.changePackage(this.accountLists[i].label, this.treeArray, i);
 				}
-				// this.purchase.packages.forEach(function(value, i){
-				// 	console.log("looping: " + i);
-
-				// 	console.log(this.accountLists[i]);
-				// });
+			} else {
+				for (var i = 0; i < this.accountLists.length; i++) {
+					this.changePackage(this.accountLists[i].label, this.treeArray);
+				}
 			}
 		},
 		getUsers: function getUsers() {
@@ -74550,7 +74539,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			});
 		},
 		setUsers: function setUsers(data) {
-			console.log(data);
 			this.setSelectedUser(data);
 			this.potentialUsers = data.map(function (user) {
 				var obj = {};
@@ -74581,8 +74569,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		submitAccountForm: function submitAccountForm() {
 			var _this9 = this;
 
-			console.log("submitAccountForm");
-
 			this.accountForm.total_price = this.totalAccountPrice;
 			this.accountForm.packages = this.accountLists.map(function (account) {
 				var obj = {};
@@ -74602,15 +74588,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		submitForm: function submitForm() {
 			var _this10 = this;
 
-			console.log("submitForm");
-
 			var url = this.purchase ? '/api/purchase/' + this.purchase.id + '/update' : '/api/purchases';
 			this.form.post(url).then(function (response) {
 				return _this10.onSuccess(response);
 			});
 		},
 		onSuccess: function onSuccess(response) {
-			console.log("onSuccess");
 			this.purchase = response.purchase;
 			this.isEditing = false;
 			this.form.purchase_date = __WEBPACK_IMPORTED_MODULE_3_moment___default()(response.purchase.created_at).format("YYYY-MM-DD");
@@ -74638,6 +74621,43 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		back: function back() {
 			this.$emit('back');
+		},
+		changePackage: function changePackage(e, items, packageIndex) {
+			var i = 0;
+
+			for (; i < items.length; i++) {
+				if (items[i].name === e) {
+					if (this.index == this.potentialPackages.length - 1 || this.triggeredAccount != e) {
+						// if(this.index == this.potentialPackages.length-1){
+						this.triggeredAccount = e;
+						this.index = 0;
+					} else {
+						this.index++;
+					}
+					this.setPackageIntoGeno(items[i], this.index, e, packageIndex);
+				} else if (_.isArray(items[i].children)) {
+					this.changePackage(e, items[i].children, packageIndex);
+				}
+			}
+		},
+		setPackageIntoGeno: function setPackageIntoGeno(item, index, e, packageIndex) {
+			var obj = {};
+			if (this.purchase && !this.isEditing) {
+				item.selectedPackage = this.purchase.packages[packageIndex].name;
+
+				obj['value'] = this.purchase.packages[packageIndex].id;
+				obj['label'] = this.purchase.packages[packageIndex].name;
+				obj['price'] = this.purchase.packages[packageIndex].price;
+			} else {
+				item.selectedPackage = this.potentialPackages[index]['label'];
+
+				obj['value'] = this.potentialPackages[index].value;
+				obj['label'] = this.potentialPackages[index].label;
+				obj['price'] = this.potentialPackages[index].price;
+			}
+			this.accountLists.forEach(function (accountList) {
+				if (accountList.label == e) accountList.selectedPackage = obj;
+			});
 		},
 		update: function update() {
 			this.getPackages();
@@ -75474,6 +75494,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		setTree: function setTree(response) {
 			this.tree = response.data;
 			this.loading = false;
+		},
+		clicked: function clicked(e) {
+			// console.log('page clicked');
+			this.$emit("clicked", { name: e.name });
 		}
 	},
 
@@ -75579,6 +75603,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			}
 
 			return '';
+		},
+		clicked: function clicked(user) {
+			this.$emit('clicked', { name: user.name });
 		}
 	}
 });
@@ -75598,52 +75625,62 @@ var render = function() {
         "li",
         { class: _vm.getClass(user) },
         [
-          _c("a", [
-            user.user ? _c("span", [_vm._v(_vm._s(user.user.name))]) : _vm._e(),
-            _vm._v(" "),
-            user.user ? _c("br") : _vm._e(),
-            _vm._v(" "),
-            _vm.isPurchase
-              ? _c("span", [
-                  _vm._v(
-                    "\n\t\t\t\t" +
-                      _vm._s(_vm._f("trans")("purchase." + user.name)) +
-                      " \n\t\t\t"
-                  )
-                ])
-              : _c("span", [
-                  _vm._v("\n\t\t\t\t" + _vm._s(user.name) + " \n\t\t\t")
-                ]),
-            _vm._v(" "),
-            _vm._v("\n\t\t\t" + _vm._s(user.referral_code) + "\n\t\t\t"),
-            user.tree_count ? _c("br") : _vm._e(),
-            _vm._v(" "),
-            user.tree_count
-              ? _c("span", { staticClass: "badge badge-success" }, [
-                  _vm._v(
-                    _vm._s(user.tree_count) +
-                      " " +
+          _c(
+            "a",
+            {
+              staticStyle: { "min-width": "100px" },
+              on: {
+                click: function($event) {
+                  _vm.clicked(user)
+                }
+              }
+            },
+            [
+              user.user
+                ? _c("span", [_vm._v(_vm._s(user.user.name))])
+                : _vm._e(),
+              _vm._v(" "),
+              user.user ? _c("br") : _vm._e(),
+              _vm._v(" "),
+              _vm.isPurchase
+                ? _c("span", [
+                    _vm._v(
+                      "\n\t\t\t\t" +
+                        _vm._s(_vm._f("trans")("purchase." + user.name)) +
+                        " \n\t\t\t"
+                    )
+                  ])
+                : _c("span", [
+                    _vm._v("\n\t\t\t\t" + _vm._s(user.name) + " \n\t\t\t")
+                  ]),
+              _vm._v(" "),
+              _vm._v("\n\t\t\t" + _vm._s(user.referral_code) + "\n\t\t\t"),
+              user.selectedPackage ? _c("br") : _vm._e(),
+              _vm._v(" "),
+              user.selectedPackage
+                ? _c("span", { staticClass: "badge badge-success" }, [
+                    _vm._v(_vm._s(user.selectedPackage))
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              user.account_level ? _c("br") : _vm._e(),
+              _vm._v(" "),
+              user.account_level
+                ? _c("span", { staticClass: "badge badge-info" }, [
+                    _vm._v(
                       _vm._s(
-                        _vm._f("trans_choice")("auth.tree", user.tree_count)
+                        _vm._f("trans")("tree.level_" + user.account_level)
                       )
-                  )
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            user.account_level ? _c("br") : _vm._e(),
-            _vm._v(" "),
-            user.account_level
-              ? _c("span", { staticClass: "badge badge-info" }, [
-                  _vm._v(
-                    _vm._s(_vm._f("trans")("tree.level_" + user.account_level))
-                  )
-                ])
-              : _vm._e()
-          ]),
+                    )
+                  ])
+                : _vm._e()
+            ]
+          ),
           _vm._v(" "),
           user.children.length > 0
             ? _c("geno-row", {
-                attrs: { users: user.children, isPurchase: _vm.isPurchase }
+                attrs: { users: user.children, isPurchase: _vm.isPurchase },
+                on: { clicked: _vm.clicked }
               })
             : _vm._e()
         ],
@@ -75678,7 +75715,8 @@ var render = function() {
           { staticClass: "tree" },
           [
             _c("GenoRow", {
-              attrs: { users: _vm.tree, isPurchase: _vm.isPurchase }
+              attrs: { users: _vm.tree, isPurchase: _vm.isPurchase },
+              on: { clicked: _vm.clicked }
             })
           ],
           1
@@ -75840,6 +75878,17 @@ var render = function() {
                                 ),
                                 _vm._v(" "),
                                 _c(
+                                  "span",
+                                  { staticStyle: { "font-size": "12px" } },
+                                  [
+                                    _c("b", [_vm._v("Instruction: ")]),
+                                    _vm._v(
+                                      "Click on the account level to select package to purchase for each account."
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
                                   "md-radio",
                                   {
                                     staticClass: "md-primary",
@@ -75911,6 +75960,14 @@ var render = function() {
                                       attrs: {
                                         tree: _vm.tree,
                                         isPurchase: true
+                                      },
+                                      on: {
+                                        clicked: function($event) {
+                                          _vm.changePackage(
+                                            $event.name,
+                                            _vm.treeArray
+                                          )
+                                        }
                                       }
                                     })
                                   : _vm._e()
@@ -76993,135 +77050,92 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
               _c("div", { staticClass: "row" }, [
-                _c(
-                  "div",
-                  { staticClass: "col" },
-                  [
-                    _c("div", { staticClass: "payment-details-grid" }, [
-                      _c("div", [
-                        _vm._v(_vm._s(_vm._f("trans")("auth.referrer")))
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "text-center" }, [
-                        _vm._v(_vm._s(_vm.referrerInput))
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _vm._v(_vm._s(_vm._f("trans")("auth.account_type")))
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "text-center" }, [
-                        _vm._v(
-                          _vm._s(
-                            _vm._f("trans")("purchase." + _vm.accountSelected)
-                          )
+                _c("div", { staticClass: "col" }, [
+                  _c("div", { staticClass: "payment-details-grid" }, [
+                    _c("div", [
+                      _vm._v(_vm._s(_vm._f("trans")("auth.referrer")))
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "text-center" }, [
+                      _vm._v(_vm._s(_vm.referrerInput))
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _vm._v(_vm._s(_vm._f("trans")("auth.account_type")))
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "text-center" }, [
+                      _vm._v(
+                        _vm._s(
+                          _vm._f("trans")("purchase." + _vm.accountSelected)
                         )
-                      ]),
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _vm._v(_vm._s(_vm._f("trans")("purchase.cash_back")))
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "text-center" }, [
+                      _c("b", [_vm._v("RM" + _vm._s(_vm.discount))]),
                       _vm._v(" "),
-                      _c("div", [
-                        _vm._v(_vm._s(_vm._f("trans")("purchase.cash_back")))
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "text-center" }, [
-                        _c("b", [_vm._v("RM" + _vm._s(_vm.discount))]),
-                        _vm._v(" "),
-                        _c("span", { staticStyle: { color: "red" } }, [
-                          _vm._v(
-                            _vm._s(_vm._f("trans")("purchase.saving")) +
-                              " " +
-                              _vm._s(_vm.accountCommission) +
-                              "%"
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", [
-                        _vm._v(_vm._s(_vm._f("trans")("purchase.total")))
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "text-center" }, [
-                        _c("b", [_vm._v("RM" + _vm._s(_vm.totalAccountPrice))])
+                      _c("span", { staticStyle: { color: "red" } }, [
+                        _vm._v(
+                          _vm._s(_vm._f("trans")("purchase.saving")) +
+                            " " +
+                            _vm._s(_vm.accountCommission) +
+                            "%"
+                        )
                       ])
                     ]),
                     _vm._v(" "),
-                    _vm._l(_vm.accountLists, function(accountList) {
-                      return _c(
-                        "div",
-                        [
-                          _vm.potentialPackages
-                            ? _c("selector-input", {
-                                attrs: {
-                                  defaultData: accountList.selectedPackage,
-                                  label: _vm.$options.filters.trans(
-                                    "purchase." + accountList.label
-                                  ),
-                                  required: true,
-                                  name: accountList.id,
-                                  potentialData: _vm.potentialPackages,
-                                  editable: true,
-                                  placeholder: _vm.$options.filters.trans(
-                                    "purchase.select_package"
-                                  ),
-                                  error: _vm.form.errors.get("account_id")
-                                },
-                                model: {
-                                  value: accountList.selectedPackage,
-                                  callback: function($$v) {
-                                    _vm.$set(
-                                      accountList,
-                                      "selectedPackage",
-                                      $$v
-                                    )
-                                  },
-                                  expression: "accountList.selectedPackage"
-                                }
-                              })
-                            : _vm._e()
-                        ],
-                        1
-                      )
-                    }),
+                    _c("div", [
+                      _vm._v(_vm._s(_vm._f("trans")("purchase.total")))
+                    ]),
                     _vm._v(" "),
-                    !_vm.purchase
-                      ? _c("button", {
-                          staticClass: "btn btn-primary btn-lg",
+                    _c("div", { staticClass: "text-center" }, [
+                      _c("b", [_vm._v("RM" + _vm._s(_vm.totalAccountPrice))])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  !_vm.purchase
+                    ? _c("button", {
+                        staticClass: "btn btn-primary btn-lg",
+                        attrs: {
+                          disabled:
+                            _vm.accountForm.submitting ||
+                            _vm.onHelperText ||
+                            _vm.isAccountFormButtonDisabled
+                        },
+                        domProps: {
+                          innerHTML: _vm._s(_vm.submitButtonContent)
+                        },
+                        on: { click: _vm.submitAccountForm }
+                      })
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.purchase && _vm.isEditing
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-success",
                           attrs: {
                             disabled:
                               _vm.accountForm.submitting ||
                               _vm.onHelperText ||
                               _vm.isAccountFormButtonDisabled
                           },
-                          domProps: {
-                            innerHTML: _vm._s(_vm.submitButtonContent)
-                          },
                           on: { click: _vm.submitAccountForm }
-                        })
-                      : _vm._e(),
-                    _vm._v(" "),
-                    _vm.purchase && _vm.isEditing
-                      ? _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-success",
-                            attrs: {
-                              disabled:
-                                _vm.accountForm.submitting ||
-                                _vm.onHelperText ||
-                                _vm.isAccountFormButtonDisabled
-                            },
-                            on: { click: _vm.submitAccountForm }
-                          },
-                          [
-                            _c("i", { staticClass: "fa fa-check" }),
-                            _vm._v(
-                              " " + _vm._s(_vm._f("trans")("purchase.update"))
-                            )
-                          ]
-                        )
-                      : _vm._e()
-                  ],
-                  2
-                )
+                        },
+                        [
+                          _c("i", { staticClass: "fa fa-check" }),
+                          _vm._v(
+                            " " + _vm._s(_vm._f("trans")("purchase.update"))
+                          )
+                        ]
+                      )
+                    : _vm._e()
+                ])
               ])
             ])
           ])
