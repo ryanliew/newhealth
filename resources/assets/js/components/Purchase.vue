@@ -849,7 +849,7 @@
 
 			mainContainerClass() {
 				if((!this.purchase && this.showTree) || (this.purchase && this.showTree)){
-					return "col-sm-9";
+					return "col-sm-8";
 				} else {
 					return "col-sm";
 				}
