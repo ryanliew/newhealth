@@ -29,10 +29,11 @@
 								      	<span v-if="onHelperText" style="color: red;" class="md-helper-text">Invalid referral code</span>
 							    	</md-field>
 							    	<span style="font-size: 12px;"><b>Instruction: </b>Click on the account level to select package to purchase for each account.</span>
+							    	<br>
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="3">{{ 'purchase.diamond' | trans }}</md-radio>
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="2">{{ 'purchase.platinum' | trans }}</md-radio>
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="1">{{ 'purchase.silver' | trans }}</md-radio>
-									<geno-page :tree="tree" :isPurchase="true" v-if="showTree" @clicked="changePackage($event.name, treeArray)"></geno-page>
+									<geno-page :tree="tree" :isPurchase="true" v-if="showTree" @clicked="changePackage($event.data)"></geno-page>
 								</md-tab>
 							</div>
 						
@@ -539,20 +540,20 @@
 						this.accountCommission = 20;
 						this.accountForm.account_level = 1;
 						this.accountSelected = 'silver';
-						this.accountLists= [ {label: 'Silver', id:'silver', selectedPackage: null, level: 1} ];
-						this.treeArray = [{name: 'Silver', selectedPackage: null, children: []}];
+						this.accountLists= [ {name: 'Silver', id:'silver', selectedPackage: null, package_index: -1, level: 1} ];
+						this.treeArray = [{name: 'Silver', selectedPackage: null, package_index: -1, children: []}];
 						break;
 					case "2":
 						this.machineQuantity = 9;
 						this.accountCommission = 35;
 						this.accountForm.account_level = 2;
 						this.accountSelected = 'platinum';
-						this.accountLists= [ {label: 'Platinum', id:'platinum', selectedPackage: null, level: 2}, {label: 'Silver_1', id:'silver-1', selectedPackage: null, level: 1}, {label: 'Silver_2', id:'silver-2', selectedPackage: null, level: 1}, {label: 'Silver_3', id:'silver-3', selectedPackage: null, level: 1} ];
+						this.accountLists= [ {name: 'Platinum', id:'platinum', selectedPackage: null, level: 2}, {name: 'Silver_1', id:'silver-1', selectedPackage: null, level: 1}, {name: 'Silver_2', id:'silver-2', selectedPackage: null, level: 1}, {name: 'Silver_3', id:'silver-3', selectedPackage: null, level: 1} ];
 						this.treeArray = [
-										{name: 'Platinum', selectedPackage: null, children: [
-											{name: 'Silver_1', selectedPackage: null, children: []},
-											{name: 'Silver_2', selectedPackage: null, children: []},
-											{name: 'Silver_3', selectedPackage: null, children: []},
+										{name: 'Platinum', selectedPackage: null, package_index: -1, children: [
+											{name: 'Silver_1', selectedPackage: null, package_index: -1, children: []},
+											{name: 'Silver_2', selectedPackage: null, package_index: -1, children: []},
+											{name: 'Silver_3', selectedPackage: null, package_index: -1, children: []},
 										]}
 									];
 				 		break;
@@ -561,23 +562,23 @@
 						this.accountCommission = 45;
 						this.accountForm.account_level = 3;
 						this.accountSelected = 'diamond';
-						this.accountLists = [ {label: 'Diamond', id:'diamond', selectedPackage: null, level: 3}, {label: 'Platinum_1', id:'platinum-1', selectedPackage: null, level: 2}, {label: 'Platinum_2', id:'platinum-2', selectedPackage: null, level: 2}, {label: 'Platinum_3', id:'platinum-3', selectedPackage: null, level: 2}, {label: 'Silver_1', id:'silver-1', selectedPackage: null, level: 1}, {label: 'Silver_2', id:'silver-2', selectedPackage: null, level: 1}, {label: 'Silver_3', id:'silver-3', selectedPackage: null, level: 1}, {label: 'Silver_4', id:'silver-4', selectedPackage: null, level: 1}, {label: 'Silver_5', id:'silver-5', selectedPackage: null, level: 1}, {label: 'Silver_6', id:'silver-6', selectedPackage: null, level: 1}, {label: 'Silver_7', id:'silver-7', selectedPackage: null, level: 1}, {label: 'Silver_8', id:'silver-8', selectedPackage: null, level: 1}, {label: 'Silver_9', id:'silver-9', selectedPackage: null, level: 1} ];
-				 		this.treeArray = [{name: 'Diamond', selectedPackage: null, 
+						this.accountLists = [ {name: 'Diamond', id:'diamond', selectedPackage: null, level: 3}, {name: 'Platinum_1', id:'platinum-1', selectedPackage: null, level: 2}, {name: 'Platinum_2', id:'platinum-2', selectedPackage: null, level: 2}, {name: 'Platinum_3', id:'platinum-3', selectedPackage: null, level: 2}, {name: 'Silver_1', id:'silver-1', selectedPackage: null, level: 1}, {name: 'Silver_2', id:'silver-2', selectedPackage: null, level: 1}, {name: 'Silver_3', id:'silver-3', selectedPackage: null, level: 1}, {name: 'Silver_4', id:'silver-4', selectedPackage: null, level: 1}, {name: 'Silver_5', id:'silver-5', selectedPackage: null, level: 1}, {name: 'Silver_6', id:'silver-6', selectedPackage: null, level: 1}, {name: 'Silver_7', id:'silver-7', selectedPackage: null, level: 1}, {name: 'Silver_8', id:'silver-8', selectedPackage: null, level: 1}, {name: 'Silver_9', id:'silver-9', selectedPackage: null, level: 1} ];
+				 		this.treeArray = [{name: 'Diamond', selectedPackage: null, package_index: -1, 
 									children: [
-											{name: 'Platinum_1', selectedPackage: null, children: [
-												{name: 'Silver_1', selectedPackage: null, children: []},
-												{name: 'Silver_2', selectedPackage: null, children: []},
-												{name: 'Silver_3', selectedPackage: null, children: []},
+											{name: 'Platinum_1', selectedPackage: null, package_index: -1, children: [
+												{name: 'Silver_1', selectedPackage: null, package_index: -1, children: []},
+												{name: 'Silver_2', selectedPackage: null, package_index: -1, children: []},
+												{name: 'Silver_3', selectedPackage: null, package_index: -1, children: []},
 											]}, 
-											{name: 'Platinum_2', selectedPackage: null, children: [
-												{name: 'Silver_4', selectedPackage: null, children: []},
-												{name: 'Silver_5', selectedPackage: null, children: []},
-												{name: 'Silver_6', selectedPackage: null, children: []},
+											{name: 'Platinum_2', selectedPackage: null, package_index: -1, children: [
+												{name: 'Silver_4', selectedPackage: null, package_index: -1, children: []},
+												{name: 'Silver_5', selectedPackage: null, package_index: -1, children: []},
+												{name: 'Silver_6', selectedPackage: null, package_index: -1, children: []},
 											]},
-											{name: 'Platinum_3', selectedPackage: null, children: [
-												{name: 'Silver_7', selectedPackage: null, children: []},
-												{name: 'Silver_8', selectedPackage: null, children: []},
-												{name: 'Silver_9', selectedPackage: null, children: []},
+											{name: 'Platinum_3', selectedPackage: null, package_index: -1, children: [
+												{name: 'Silver_7', selectedPackage: null, package_index: -1, children: []},
+												{name: 'Silver_8', selectedPackage: null, package_index: -1, children: []},
+												{name: 'Silver_9', selectedPackage: null, package_index: -1, children: []},
 											]},
 										]
 									}];
@@ -654,11 +655,11 @@
 			setSelectedAccountPackage() {
 				if(this.purchase && !this.isEditing) {
 					for( var i = 0; i < this.purchase.packages.length; i ++){
-						this.changePackage(this.accountLists[i].label, this.treeArray, i);
+						this.changePackage(this.accountLists[i], this.treeArray, i);
 					}
 				} else {
 					for( var i = 0; i < this.accountLists.length; i ++){
-						this.changePackage(this.accountLists[i].label, this.treeArray);
+						this.changePackage(this.accountLists[i], this.treeArray);
 					}
 				}
 				
@@ -724,6 +725,10 @@
 
 			onSuccess(response) {
 				this.purchase = response.purchase;
+				if(this.isEditing) {
+					this.accountForm.account_level = this.radio;
+					this.accountForm.user_id = this.user.id;
+				}
 				this.isEditing = false;
 				this.form.purchase_date = moment(response.purchase.created_at).format("YYYY-MM-DD");
 				this.accountForm.purchase_date = moment(response.purchase.created_at).format("YYYY-MM-DD");
@@ -751,22 +756,31 @@
 				this.$emit('back');
 			},
 
-			changePackage(e, items, packageIndex) {
+			changePackage(e, items = this.treeArray, packageIndex) {
 				var i = 0;
-				
+				// console.log("Showing data data");
+				let account = e.data ? e.data : e;
+				// console.log(account);
 			  	for (; i < items.length; i++) {
-				    if (items[i].name === e) {
-				    	if(this.index == this.potentialPackages.length-1 || this.triggeredAccount != e){
-				    	// if(this.index == this.potentialPackages.length-1){
-				    		this.triggeredAccount = e;
-				    		this.index = 0;
-				    	}
-				    	else{
-				    		this.index++;
-				    	}
-			      		this.setPackageIntoGeno(items[i], this.index, e, packageIndex);
+			  		let name = items[i].name ? items[i].name : items[i].label;
+			  		// console.log(account.name);
+			  		// console.log(name);
+				    if (name === account.name) {
+
+				    	items[i].package_index = items[i].package_index == this.potentialPackages.length-1 ? 0 : items[i].package_index + 1;
+				    	// if(this.triggeredAccount != e){
+				    	// // if(this.index == this.potentialPackages.length-1){
+				    	// 	this.triggeredAccount = e;
+				    	// 	this.index = firstRun ? 0 : 1;
+				    	// } else if(this.index == this.potentialPackages.length-1) {
+				    	// 	this.index = 0;
+				    	// }
+				    	// else{
+				    	// 	this.index++;
+				    	// }
+			      		this.setPackageIntoGeno(items[i], items[i].package_index, account.name, packageIndex);
 				    } else if (_.isArray(items[i].children)) {
-			      		this.changePackage(e, items[i].children, packageIndex);
+			      		this.changePackage(account, items[i].children, packageIndex);
 				    }
 			  	}
 			},
@@ -774,11 +788,11 @@
 			setPackageIntoGeno(item, index, e, packageIndex){
 				let obj = {};
 				if(this.purchase && !this.isEditing) {
-					item.selectedPackage = this.purchase.packages[packageIndex].name;
+					item.selectedPackage = this.sortedPackages[packageIndex].name;
 					
-					obj['value'] = this.purchase.packages[packageIndex].id;
-					obj['label'] = this.purchase.packages[packageIndex].name;
-					obj['price'] = this.purchase.packages[packageIndex].price;
+					obj['value'] =  this.sortedPackages[packageIndex].id;
+					obj['label'] =  this.sortedPackages[packageIndex].name;
+					obj['price'] =  this.sortedPackages[packageIndex].price;
 				} else {
 					item.selectedPackage = this.potentialPackages[index]['label'];
 
@@ -787,7 +801,7 @@
 					obj['price'] = this.potentialPackages[index].price;
 				}
 				this.accountLists.forEach((accountList) => {
-					if(accountList.label == e)
+					if(accountList.name == e)
 						accountList.selectedPackage = obj;
 				})
 			},
@@ -835,7 +849,7 @@
 
 			mainContainerClass() {
 				if((!this.purchase && this.showTree) || (this.purchase && this.showTree)){
-					return "col-sm-6";
+					return "col-sm-9";
 				} else {
 					return "col-sm";
 				}
@@ -880,6 +894,12 @@
 				}
 				return this.purchase.payment ? false : true;
 			},
+
+			sortedPackages() {
+				return _.sortBy(this.purchase.packages, function(purchase){
+					return purchase.pivot.account_id;
+				});
+			}
 		}	
 	}
 </script>

@@ -11223,11 +11223,11 @@ right connector from last child*/
   height: 20px;
 }
 
-.tree li a {
+.tree li button {
   border: 1px solid #ccc;
   padding: 5px 10px;
   text-decoration: none;
-  color: white;
+  color: #343434;
   font-family: arial, verdana, tahoma;
   font-size: 1rem;
   display: inline-block;
@@ -11243,8 +11243,8 @@ right connector from last child*/
 
 /*We will apply the hover effect the the lineage of the element also*/
 
-.tree li a:hover,
-.tree li a:hover + ul li a {
+.tree li button:hover,
+.tree li button:hover + ul li a {
   background: #c8e4f8;
   color: #000;
   border: 1px solid #94a0b4;
@@ -11252,10 +11252,10 @@ right connector from last child*/
 
 /*Connector styles on hover*/
 
-.tree li a:hover + ul li::after,
-.tree li a:hover + ul li::before,
-.tree li a:hover + ul::before,
-.tree li a:hover + ul ul::before {
+.tree li button:hover + ul li::after,
+.tree li button:hover + ul li::before,
+.tree li button:hover + ul::before,
+.tree li button:hover + ul ul::before {
   border-color: #94a0b4;
 }
 

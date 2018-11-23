@@ -1,7 +1,7 @@
 <template>
 	<ul>
 		<li :class="getClass(user)" v-for="user in users">
-			<a style="min-width: 100px;" @click="clicked(user)">
+			<button style="min-width: 100px;" @click.prevent="clicked(user)">
 				<span v-if="user.user">{{ user.user.name }}</span>
 				<br v-if="user.user">
 				<span v-if="isPurchase">
@@ -17,7 +17,7 @@
 				<br v-if="user.account_level">
 				<span v-if="user.account_level" class="badge badge-info">{{ 'tree.level_' + user.account_level | trans }}</span>
 
-			</a>
+			</button>
 			<geno-row v-if="user.children.length > 0" :users="user.children" :isPurchase="isPurchase" @clicked="clicked">
 			</geno-row>
 		</li>
@@ -44,7 +44,7 @@
 			},
 
 			clicked(user) {
-				this.$emit('clicked', {name: user.name});
+				this.$emit('clicked', {data: user});
 			}
 		}	
 	}

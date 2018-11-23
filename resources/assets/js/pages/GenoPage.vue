@@ -45,7 +45,7 @@
 
 			clicked(e) {
 				// console.log('page clicked');
-				this.$emit("clicked", {name: e.name});
+				this.$emit("clicked", {data: e.data});
 			}
 		},
 
