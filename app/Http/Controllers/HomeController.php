@@ -112,6 +112,7 @@ class HomeController extends Controller
                 $number_of_children = Account::where('parent_id', $account->id)->where('account_level', $account->account_level)->count();
 
             $qualification_accounts->put('account_level', $account->account_level);
+            $qualification_accounts->put('account_referral_code', $account->referral_code);
             $qualification_accounts->put('number_of_children', $number_of_children);
             $account_array[$account->referral_code] = $qualification_accounts;   
         }

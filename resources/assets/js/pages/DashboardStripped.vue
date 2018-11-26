@@ -63,13 +63,19 @@
 									<tr>
 										<th><div>{{ 'dashboard.account' | trans }}</div></th>
 										<th><div>{{ 'dashboard.account_level' | trans }}</div></th>
+										<th><div>{{ 'dashboard.step_to_qualification' | trans }}</div></th>
 										<th></th>
 									</tr>
 
-									<tr v-for="account in accounts">
-										<td>{{ account.referral_code }}</td>
-										<td><span class="label label-success">{{ 'user.account_level_' + account.account_level | trans }}</span></td>
-										<td><referral-link :code="account.referral_code"></referral-link></td>
+									<tr v-for="(qualification_account, index) in qualification_accounts">
+										<td>{{ index }}</td>
+										<td><span class="label label-success">{{ 'user.account_level_' + qualification_account.account_level | trans }}</span></td>
+										<td>
+											<span>
+												{{ 'dashboard.' + qualificationLabel(qualification_account) | trans({'level': levelLabel(qualification_account, true), 'count': countQualificationBasicRequirement(qualification_account)})}}
+											</span>
+										</td>
+										<td><referral-link :code="qualification_account.account_referral_code"></referral-link></td>
 									</tr>
 								</table>
 		        			</div>
@@ -125,30 +131,6 @@
 		        		</section>
 		        	</div>
 		        	<div class="col-md-6 dashboard-column">
-		        		<section class="box-typical box-typical-dashboard panel panel-default scrollable">
-		        			<header class="box-typical-header panel-heading">
-		        				<h3 class="panel-title">{{ 'dashboard.progress_to_next_level' | trans }} </h3>
-		        			</header>
-		        			<div class="box-typical-body panel-body" >
-								<table class="tbl-typical">
-									<tr>
-										<th><div>{{ 'dashboard.account' | trans }}</div></th>
-										<th><div>{{ 'dashboard.account_level' | trans }}</div></th>
-										<th><div>{{ 'dashboard.step_to_qualification' | trans }}</div></th>
-									</tr>
-
-									<tr v-for="(qualification_account, index) in qualification_accounts">
-										<td>{{ index }}</td>
-										<td><span class="label label-success">{{ 'user.account_level_' + qualification_account.account_level | trans }}</span></td>
-										<td>
-											<span>
-												{{ 'dashboard.' + qualificationLabel(qualification_account) | trans({'level': levelLabel(qualification_account, true), 'count': countQualificationBasicRequirement(qualification_account)})}}
-											</span>
-										</td>
-									</tr>
-								</table>
-		        			</div>
-		        		</section>
 		        		<!-- <section class="box-typical box-typical-dashboard panel panel-default scrollable">
 		        			<header class="box-typical-header panel-heading">
 		        				<h3 class="panel-title">{{ 'dashboard.my_account_status' | trans }}</h3>

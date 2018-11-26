@@ -22,7 +22,6 @@
 
 		methods: {
 			copyLink() {
-				console.log("code: " + this.code);
 				let input = document.getElementById("copy-"+this.code);
 				input.select();
 				document.execCommand("Copy");

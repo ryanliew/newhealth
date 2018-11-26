@@ -73392,84 +73392,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -73814,7 +73736,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 	methods: {
 		copyLink: function copyLink() {
-			console.log("code: " + this.code);
 			var input = document.getElementById("copy-" + this.code);
 			input.select();
 			document.execCommand("Copy");
@@ -74714,7 +74635,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		mainContainerClass: function mainContainerClass() {
 			if (!this.purchase && this.showTree || this.purchase && this.showTree) {
-				return "col-sm-9";
+				return "col-sm-8";
 			} else {
 				return "col-sm";
 			}
@@ -80628,24 +80549,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -83324,14 +83227,27 @@ var render = function() {
                                     ])
                                   ]),
                                   _vm._v(" "),
+                                  _c("th", [
+                                    _c("div", [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("trans")(
+                                            "dashboard.step_to_qualification"
+                                          )
+                                        )
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
                                   _c("th")
                                 ]),
                                 _vm._v(" "),
-                                _vm._l(_vm.accounts, function(account) {
+                                _vm._l(_vm.qualification_accounts, function(
+                                  qualification_account,
+                                  index
+                                ) {
                                   return _c("tr", [
-                                    _c("td", [
-                                      _vm._v(_vm._s(account.referral_code))
-                                    ]),
+                                    _c("td", [_vm._v(_vm._s(index))]),
                                     _vm._v(" "),
                                     _c("td", [
                                       _c(
@@ -83342,7 +83258,7 @@ var render = function() {
                                             _vm._s(
                                               _vm._f("trans")(
                                                 "user.account_level_" +
-                                                  account.account_level
+                                                  qualification_account.account_level
                                               )
                                             )
                                           )
@@ -83350,11 +83266,40 @@ var render = function() {
                                       )
                                     ]),
                                     _vm._v(" "),
+                                    _c("td", [
+                                      _c("span", [
+                                        _vm._v(
+                                          "\n\t\t\t\t\t\t\t\t\t\t\t" +
+                                            _vm._s(
+                                              _vm._f("trans")(
+                                                "dashboard." +
+                                                  _vm.qualificationLabel(
+                                                    qualification_account
+                                                  ),
+                                                {
+                                                  level: _vm.levelLabel(
+                                                    qualification_account,
+                                                    true
+                                                  ),
+                                                  count: _vm.countQualificationBasicRequirement(
+                                                    qualification_account
+                                                  )
+                                                }
+                                              )
+                                            ) +
+                                            "\n\t\t\t\t\t\t\t\t\t\t"
+                                        )
+                                      ])
+                                    ]),
+                                    _vm._v(" "),
                                     _c(
                                       "td",
                                       [
                                         _c("referral-link", {
-                                          attrs: { code: account.referral_code }
+                                          attrs: {
+                                            code:
+                                              qualification_account.account_referral_code
+                                          }
                                         })
                                       ],
                                       1
@@ -83459,132 +83404,6 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-6 dashboard-column" }, [
-                    _c(
-                      "section",
-                      {
-                        staticClass:
-                          "box-typical box-typical-dashboard panel panel-default scrollable"
-                      },
-                      [
-                        _c(
-                          "header",
-                          { staticClass: "box-typical-header panel-heading" },
-                          [
-                            _c("h3", { staticClass: "panel-title" }, [
-                              _vm._v(
-                                _vm._s(
-                                  _vm._f("trans")(
-                                    "dashboard.progress_to_next_level"
-                                  )
-                                ) + " "
-                              )
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "box-typical-body panel-body" },
-                          [
-                            _c(
-                              "table",
-                              { staticClass: "tbl-typical" },
-                              [
-                                _c("tr", [
-                                  _c("th", [
-                                    _c("div", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("trans")("dashboard.account")
-                                        )
-                                      )
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("th", [
-                                    _c("div", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("trans")(
-                                            "dashboard.account_level"
-                                          )
-                                        )
-                                      )
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("th", [
-                                    _c("div", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("trans")(
-                                            "dashboard.step_to_qualification"
-                                          )
-                                        )
-                                      )
-                                    ])
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _vm._l(_vm.qualification_accounts, function(
-                                  qualification_account,
-                                  index
-                                ) {
-                                  return _c("tr", [
-                                    _c("td", [_vm._v(_vm._s(index))]),
-                                    _vm._v(" "),
-                                    _c("td", [
-                                      _c(
-                                        "span",
-                                        { staticClass: "label label-success" },
-                                        [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm._f("trans")(
-                                                "user.account_level_" +
-                                                  qualification_account.account_level
-                                              )
-                                            )
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("td", [
-                                      _c("span", [
-                                        _vm._v(
-                                          "\n\t\t\t\t\t\t\t\t\t\t\t" +
-                                            _vm._s(
-                                              _vm._f("trans")(
-                                                "dashboard." +
-                                                  _vm.qualificationLabel(
-                                                    qualification_account
-                                                  ),
-                                                {
-                                                  level: _vm.levelLabel(
-                                                    qualification_account,
-                                                    true
-                                                  ),
-                                                  count: _vm.countQualificationBasicRequirement(
-                                                    qualification_account
-                                                  )
-                                                }
-                                              )
-                                            ) +
-                                            "\n\t\t\t\t\t\t\t\t\t\t"
-                                        )
-                                      ])
-                                    ])
-                                  ])
-                                })
-                              ],
-                              2
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
                     _vm.user.is_admin
                       ? _c(
                           "section",
@@ -85512,14 +85331,27 @@ var render = function() {
                                     ])
                                   ]),
                                   _vm._v(" "),
+                                  _c("th", [
+                                    _c("div", [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm._f("trans")(
+                                            "dashboard.step_to_qualification"
+                                          )
+                                        )
+                                      )
+                                    ])
+                                  ]),
+                                  _vm._v(" "),
                                   _c("th")
                                 ]),
                                 _vm._v(" "),
-                                _vm._l(_vm.accounts, function(account) {
+                                _vm._l(_vm.qualification_accounts, function(
+                                  qualification_account,
+                                  index
+                                ) {
                                   return _c("tr", [
-                                    _c("td", [
-                                      _vm._v(_vm._s(account.referral_code))
-                                    ]),
+                                    _c("td", [_vm._v(_vm._s(index))]),
                                     _vm._v(" "),
                                     _c("td", [
                                       _c(
@@ -85530,7 +85362,7 @@ var render = function() {
                                             _vm._s(
                                               _vm._f("trans")(
                                                 "user.account_level_" +
-                                                  account.account_level
+                                                  qualification_account.account_level
                                               )
                                             )
                                           )
@@ -85538,11 +85370,40 @@ var render = function() {
                                       )
                                     ]),
                                     _vm._v(" "),
+                                    _c("td", [
+                                      _c("span", [
+                                        _vm._v(
+                                          "\n\t\t\t\t\t\t\t\t\t\t\t" +
+                                            _vm._s(
+                                              _vm._f("trans")(
+                                                "dashboard." +
+                                                  _vm.qualificationLabel(
+                                                    qualification_account
+                                                  ),
+                                                {
+                                                  level: _vm.levelLabel(
+                                                    qualification_account,
+                                                    true
+                                                  ),
+                                                  count: _vm.countQualificationBasicRequirement(
+                                                    qualification_account
+                                                  )
+                                                }
+                                              )
+                                            ) +
+                                            "\n\t\t\t\t\t\t\t\t\t\t"
+                                        )
+                                      ])
+                                    ]),
+                                    _vm._v(" "),
                                     _c(
                                       "td",
                                       [
                                         _c("referral-link", {
-                                          attrs: { code: account.referral_code }
+                                          attrs: {
+                                            code:
+                                              qualification_account.account_referral_code
+                                          }
                                         })
                                       ],
                                       1
@@ -85647,132 +85508,6 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-6 dashboard-column" }, [
-                    _c(
-                      "section",
-                      {
-                        staticClass:
-                          "box-typical box-typical-dashboard panel panel-default scrollable"
-                      },
-                      [
-                        _c(
-                          "header",
-                          { staticClass: "box-typical-header panel-heading" },
-                          [
-                            _c("h3", { staticClass: "panel-title" }, [
-                              _vm._v(
-                                _vm._s(
-                                  _vm._f("trans")(
-                                    "dashboard.progress_to_next_level"
-                                  )
-                                ) + " "
-                              )
-                            ])
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "box-typical-body panel-body" },
-                          [
-                            _c(
-                              "table",
-                              { staticClass: "tbl-typical" },
-                              [
-                                _c("tr", [
-                                  _c("th", [
-                                    _c("div", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("trans")("dashboard.account")
-                                        )
-                                      )
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("th", [
-                                    _c("div", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("trans")(
-                                            "dashboard.account_level"
-                                          )
-                                        )
-                                      )
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("th", [
-                                    _c("div", [
-                                      _vm._v(
-                                        _vm._s(
-                                          _vm._f("trans")(
-                                            "dashboard.step_to_qualification"
-                                          )
-                                        )
-                                      )
-                                    ])
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _vm._l(_vm.qualification_accounts, function(
-                                  qualification_account,
-                                  index
-                                ) {
-                                  return _c("tr", [
-                                    _c("td", [_vm._v(_vm._s(index))]),
-                                    _vm._v(" "),
-                                    _c("td", [
-                                      _c(
-                                        "span",
-                                        { staticClass: "label label-success" },
-                                        [
-                                          _vm._v(
-                                            _vm._s(
-                                              _vm._f("trans")(
-                                                "user.account_level_" +
-                                                  qualification_account.account_level
-                                              )
-                                            )
-                                          )
-                                        ]
-                                      )
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("td", [
-                                      _c("span", [
-                                        _vm._v(
-                                          "\n\t\t\t\t\t\t\t\t\t\t\t" +
-                                            _vm._s(
-                                              _vm._f("trans")(
-                                                "dashboard." +
-                                                  _vm.qualificationLabel(
-                                                    qualification_account
-                                                  ),
-                                                {
-                                                  level: _vm.levelLabel(
-                                                    qualification_account,
-                                                    true
-                                                  ),
-                                                  count: _vm.countQualificationBasicRequirement(
-                                                    qualification_account
-                                                  )
-                                                }
-                                              )
-                                            ) +
-                                            "\n\t\t\t\t\t\t\t\t\t\t"
-                                        )
-                                      ])
-                                    ])
-                                  ])
-                                })
-                              ],
-                              2
-                            )
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
                     _vm.user.is_admin
                       ? _c(
                           "section",

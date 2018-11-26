@@ -63,13 +63,19 @@
 									<tr>
 										<th><div>{{ 'dashboard.account' | trans }}</div></th>
 										<th><div>{{ 'dashboard.account_level' | trans }}</div></th>
+										<th><div>{{ 'dashboard.step_to_qualification' | trans }}</div></th>
 										<th></th>
 									</tr>
 
-									<tr v-for="account in accounts">
-										<td>{{ account.referral_code }}</td>
-										<td><span class="label label-success">{{ 'user.account_level_' + account.account_level | trans }}</span></td>
-										<td><referral-link :code="account.referral_code"></referral-link></td>
+									<tr v-for="(qualification_account, index) in qualification_accounts">
+										<td>{{ index }}</td>
+										<td><span class="label label-success">{{ 'user.account_level_' + qualification_account.account_level | trans }}</span></td>
+										<td>
+											<span>
+												{{ 'dashboard.' + qualificationLabel(qualification_account) | trans({'level': levelLabel(qualification_account, true), 'count': countQualificationBasicRequirement(qualification_account)})}}
+											</span>
+										</td>
+										<td><referral-link :code="qualification_account.account_referral_code"></referral-link></td>
 									</tr>
 								</table>
 		        			</div>
@@ -125,90 +131,6 @@
 		        		</section>
 		        	</div>
 		        	<div class="col-md-6 dashboard-column">
-		        		<section class="box-typical box-typical-dashboard panel panel-default scrollable">
-		        			<header class="box-typical-header panel-heading">
-		        				<h3 class="panel-title">{{ 'dashboard.progress_to_next_level' | trans }} </h3>
-		        			</header>
-		        			<div class="box-typical-body panel-body" >
-								<table class="tbl-typical">
-									<tr>
-										<th><div>{{ 'dashboard.account' | trans }}</div></th>
-										<th><div>{{ 'dashboard.account_level' | trans }}</div></th>
-										<th><div>{{ 'dashboard.step_to_qualification' | trans }}</div></th>
-									</tr>
-
-									<tr v-for="(qualification_account, index) in qualification_accounts">
-										<td>{{ index }}</td>
-										<td><span class="label label-success">{{ 'user.account_level_' + qualification_account.account_level | trans }}</span></td>
-										<td>
-											<span>
-												{{ 'dashboard.' + qualificationLabel(qualification_account) | trans({'level': levelLabel(qualification_account, true), 'count': countQualificationBasicRequirement(qualification_account)})}}
-											</span>
-										</td>
-									</tr>
-								</table>
-		        			</div>
-		        		</section>
-		        		<!-- <section class="box-typical box-typical-dashboard panel panel-default scrollable">
-		        			<header class="box-typical-header panel-heading">
-		        				<h3 class="panel-title">{{ 'dashboard.my_account_status' | trans }}</h3>
-		        			</header>
-		        			<div class="panel-body box-normal-content">
-			        			<div class="steps-icon-progress">
-			        				<ul>
-			        					<li :class="getStepClass(1)">
-			        						<div class="icon" v-html="getStepIcon(1)">
-			        						</div>
-			        						<div class="caption">{{ 'user.verified' | trans }}</div>
-			        					</li>
-			        					<li :class="getStepClass(2)">
-			        						<div class="icon" v-html="getStepIcon(2)">
-			        						</div>
-			        						<div class="caption">{{ 'user.instruction_issued_to_lawyer' | trans }}</div>
-			        					</li>
-			        					<li :class="getStepClass(3)">
-			        						<div class="icon" v-html="getStepIcon(3)">
-			        						</div>
-			        						<div class="caption">{{ 'user.sales_agreement_ready_for_execution' | trans }}</div>
-			        					</li>
-			        					<li :class="getStepClass(4)">
-			        						<div class="icon" v-html="getStepIcon(4)">
-			        						</div>
-			        						<div class="caption">{{ 'user.sales_agreement_executed' | trans }}</div>
-			        					</li>
-			        				</ul>
-			        			</div>
-			        			<div class="next-step text-center" v-if="userNotGrower">
-			        				<b>{{ 'dashboard.next_grower_level' | trans }}</b>
-			        				<h2><span class="label label-primary mb-3">{{ 'user.level_' + (user.user_level + 1) | trans  }}</span></h2> -->
-
-			        				<!-- Number of direct referrer target -->
-			        				<!-- <span>{{ 'user.level_instruction' | trans({ target: user.direct_referrer_needed, left: directReferrerRemaining }) }}</span>
-			        				<div class="progress-with-amount mb-3">
-			        					<div class="progress">
-			        						<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" :style="'width:'+ directReferrerPercentage  + '%;'" :aria-valuenow="user.direct_descendants_count" aria-valuemin="0" :aria-valuemax="user.direct_referrer_needed">
-			        							
-			        						</div>
-			        					</div>
-			        					<div class="progress-with-amount-number">{{ directReferrerPercentage.toFixed(0) }}%</div>
-			        				</div>
-
-			        				<template v-if="user.user_level > 1"> -->
-			        					<!-- Group sale target -->
-			        					<!-- <span>{{ 'user.level_instruction_2' | trans({ target: user.group_sale_needed, left: groupSaleRemaining }) }}</span>
-				        				<div class="progress-with-amount">
-				        					<div class="progress">
-				        						<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" :style="'width:'+ groupSalePercentage + '%;'" :aria-valuenow="user.group_sale" aria-valuemin="0" :aria-valuemax="user.group_sale_needed">
-				        							
-				        						</div>
-				        					</div>
-				        					<div class="progress-with-amount-number">{{ groupSalePercentage.toFixed(0) }}%</div>
-				        				</div>
-			        				</template>
-			        			</div>
-		        			</div>
-		        		</section> -->
-
 		        		<section class="box-typical box-typical-dashboard panel panel-default scrollable" v-if="user.is_admin">
 							<transition name="slide-fade" mode="out-in">
 								<table-view ref="users"
