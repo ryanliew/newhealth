@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'Newheath - Join Us',
+    'title' => 'Newhealth - Join Us',
     'failed' => 'These credentials do not match our records.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
     'login' => 'Login',
@@ -98,11 +98,11 @@ return [
     'selected_package' => 'Selected purchase',
     'tree' => 'Tree|Trees',
     'hi' => 'Hi',
-    'grower' => ' Grower',
+    'grower' => ' Agent',
     'welcome_back' => 'welcome back',
     'register_today' => '',
     'en_space' => ' ',
-    'register_message' => 'as Newheath grower and get involved in the multi-billion dollar industry today',
+    'register_message' => 'as Newhealth agent and get involved in the multi-billion dollar industry today',
     'cancel' => 'Cancel',
 
     'enter_email_to_reset' => 'enter your email to reset your password',

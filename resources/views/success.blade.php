@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Newleaf - {{ __('auth.register') }}</title>
+    <title>Newhealth - {{ __('auth.register') }}</title>
 
     <link href="/img/fav180x180.png" rel="apple-touch-icon" type="image/png" sizes="180x180">
     <link href="/img/fav32x32.png" rel="apple-touch-icon" type="image/png" sizes="32x32">
