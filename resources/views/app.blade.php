@@ -7,11 +7,10 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
             
-        <link href="/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
-        <link href="/img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
-        <link href="/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
-        <link href="/img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
-        <link href="/img/favicon.png" rel="icon" type="image/png">
+        <link href="/img/fav180x180.png" rel="apple-touch-icon" type="image/png" sizes="180x180">
+        <link href="/img/fav32x32.png" rel="apple-touch-icon" type="image/png" sizes="32x32">
+        <link href="/img/fav16x16.png" rel="apple-touch-icon" type="image/png" sizes="16x16">
+        <link href="/img/fav.png" rel="icon" type="image/png">
         <title>Newleaf 新叶集团</title>
 
         <!-- Fonts -->

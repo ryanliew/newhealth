@@ -6,11 +6,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Newleaf - {{ __('auth.register') }}</title>
 
-    <link href="/img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
-    <link href="/img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
-    <link href="/img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
-    <link href="/img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
-    <link href="/img/favicon.png" rel="icon" type="image/png">
+    <link href="/img/fav180x180.png" rel="apple-touch-icon" type="image/png" sizes="180x180">
+    <link href="/img/fav32x32.png" rel="apple-touch-icon" type="image/png" sizes="32x32">
+    <link href="/img/fav16x16.png" rel="apple-touch-icon" type="image/png" sizes="16x16">
+    <link href="/img/fav.png" rel="icon" type="image/png">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -48,7 +48,7 @@
                     <div class="col-sm bg-white p-4">
                 
                         <div class="d-flex justify-content-center mb-3">
-                            <img class="img-fluid" style="width:258px;height:72px;" src="/img/logo.png">
+                            <img class="img-fluid" style="height:72px;" src="/img/newhealth-logo.png">
                         </div>
                         <form id="app" method="POST" action="{{ url('/register/success') }}">
                             <div class="alert alert-success" role="alert">

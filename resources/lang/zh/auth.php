@@ -12,7 +12,7 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-    'title' => '新康集团 - 加盟',
+    'title' => '新子午线 - 加盟',
     'failed' => '电邮/密码错误',
     'throttle' => '登入过于频繁，请在 :seconds 秒后再试',
     'login' => '登入',
@@ -99,8 +99,8 @@ return [
     'grower' => '种植者',
     'welcome_back' => '欢迎回来',
     'en_space' => '',
-    'register_message' => '新康计划！',
-    'register_today' => '新康新商机, 携手新叶创百亿, 马上',
+    'register_message' => '新子计划！',
+    'register_today' => '新子新商机, 携手新叶创百亿, 马上',
     'cancel' => '取消',
 
     'enter_email_to_reset' => '请输入您的电邮',
