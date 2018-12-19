@@ -10,7 +10,7 @@ class Package extends Model
 
   	public function purchases()
   	{
-  		return $this->belongsToMany('App\Purchase')->withPivot('amount', 'total_price', 'total_price_std', 'account_id')->withTimestamps();
+  		return $this->belongsToMany('App\Purchase')->withPivot('amount', 'total_price', 'total_selling_price', 'total_price_std', 'account_id')->withTimestamps();
   	}
 
   	public function redemption()

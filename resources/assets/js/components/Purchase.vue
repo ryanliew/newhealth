@@ -42,7 +42,7 @@
 										<table class="table table-edit">
 											<tbody v-if="isEditing && form.packages.length > 0">
 												<tr v-for="(package, index) in packages">
-													<td>{{ package.name }}</td>
+													<td>{{ package.name }} (PV:{{ package.price }})</td>
 													<td>x</td>
 													<td><text-input v-model="form.packages[index].amount" 
 															:defaultValue="form.packages[index].amount"
@@ -59,8 +59,8 @@
 														x
 													</td>
 													<td v-if="!is_std">
-														<text-input v-model="form.packages[index].price" 
-															:defaultValue="form.packages[index].price"
+														<text-input v-model="form.packages[index].selling_price" 
+															:defaultValue="form.packages[index].selling_price"
 															:required="false"
 															type="number"
 															label="label"
@@ -71,7 +71,7 @@
 															v-if="user.is_admin">
 														</text-input>	
 														<template v-else>
-															{{ form.packages[index].price | currency }}
+															{{ form.packages[index].selling_price }}
 														</template>
 													</td>
 													<td v-else>
@@ -105,7 +105,7 @@
 													<td></td>
 													<td></td>
 													<td></td>
-													<td><b>{{ 'purchase.total' | trans }}</b></td>
+													<td><b>{{ 'purchase.total' | trans }} (PV:{{totalPackagePointValue}})</b></td>
 													<td>=</td>
 													<td v-if="!is_std">{{ totalPrice | currency}}</td>
 													<td v-else>{{ totalPrice | currency_std}}</td>
@@ -121,7 +121,7 @@
 														x
 													</td>
 													<td v-if="!purchase.is_std">
-														{{ package.pivot.total_price / package.pivot.amount | currency }}	
+														{{ package.pivot.total_selling_price / package.pivot.amount | currency }}	
 													</td>
 													<td v-else>
 														{{ package.pivot.total_price_std / package.pivot.amount | currency_std }}	
@@ -130,7 +130,7 @@
 														=
 													</td>
 													<td v-if="!purchase.is_std">
-														{{ package.pivot.total_price | currency }}
+														{{ package.pivot.total_selling_price | currency }}
 													</td>
 													<td v-else>
 														{{ package.pivot.total_price_std  | currency_std }}
@@ -141,7 +141,7 @@
 													<td></td>
 													<td></td>
 													<td></td>
-													<td><b>{{ 'purchase.total' | trans }}</b></td>
+													<td><b>{{ 'purchase.total' | trans }} (PV: {{package.pivot.total_price}})</b></td>
 													<td>=</td>
 													<td v-if="!purchase.is_std">{{ totalPrice | currency}}</td>
 													<td v-else>{{ totalPrice | currency_std}}</td>
@@ -206,7 +206,6 @@
 				    </div>    
 				    <div v-if="(purchase && !purchase.is_account && !isEditing)">
 				      	<h5 class="card-title mb-3">{{ instruction | trans }}</h5>
-						<h6>{{ 'purchase.base_price' | trans }}</h6>
 							<table class="table table-edit">
 								<tbody v-if="isEditing && form.packages.length > 0">
 									<tr v-for="(package, index) in packages">
@@ -227,8 +226,8 @@
 											x
 										</td>
 										<td v-if="!is_std">
-											<text-input v-model="form.packages[index].price" 
-												:defaultValue="form.packages[index].price"
+											<text-input v-model="form.packages[index].selling_price" 
+												:defaultValue="form.packages[index].selling_price"
 												:required="false"
 												type="number"
 												label="label"
@@ -239,7 +238,7 @@
 												v-if="user.is_admin">
 											</text-input>	
 											<template v-else>
-												{{ form.packages[index].price | currency }}
+												{{ form.packages[index].selling_price | currency }}
 											</template>
 										</td>
 										<td v-else>
@@ -281,7 +280,7 @@
 								</tbody>
 								<tbody v-else>
 									<tr v-for="(package, index) in purchase.packages">
-										<td>{{ package.tree_count }} {{ 'auth.tree' | trans_choice({'value' : package.tree_count})  }}</td>
+										<td>{{ package.name }}</td>
 										<td>x</td>
 										<td>{{ package.pivot.amount }}
 										</td>
@@ -289,7 +288,7 @@
 											x
 										</td>
 										<td v-if="!purchase.is_std">
-											{{ package.pivot.total_price / package.pivot.amount | currency }}	
+											{{ package.pivot.total_selling_price / package.pivot.amount | currency }}	
 										</td>
 										<td v-else>
 											{{ package.pivot.total_price_std / package.pivot.amount | currency_std }}	
@@ -298,7 +297,7 @@
 											=
 										</td>
 										<td v-if="!purchase.is_std">
-											{{ package.pivot.total_price | currency }}
+											{{ package.pivot.total_selling_price | currency }}
 										</td>
 										<td v-else>
 											{{ package.pivot.total_price_std  | currency_std }}
@@ -309,7 +308,7 @@
 										<td></td>
 										<td></td>
 										<td></td>
-										<td><b>{{ 'purchase.total' | trans }}</b></td>
+										<td><b>{{ 'purchase.total' | trans }} (PV: {{totalPackagePointValue}})</b></td>
 										<td>=</td>
 										<td v-if="!purchase.is_std">{{ totalPrice | currency}}</td>
 										<td v-else>{{ totalPrice | currency_std}}</td>
@@ -360,8 +359,10 @@
 
 								<div>{{ "purchase.cash_back" | trans }}</div>
 								<div class="text-center"><b>RM{{ discount }}</b> <span style="color:red;">{{ 'purchase.saving' | trans }} {{ accountCommission }}%</span></div>
+								<div>{{ "purchase.point_value" | trans }}</div>
+								<div class="text-center"><b>RM{{ totalPointValue }}</b></div>
 								<div>{{ "purchase.total" | trans }}</div>
-								<div class="text-center"><b>RM{{ totalAccountPrice }}</b></div>
+								<div class="text-center"><b>RM{{ totalAccountSellingPrice }}</b></div>
 							</div>
 							<!-- <div v-for="accountList in accountLists">
 								<selector-input v-model="accountList.selectedPackage" :defaultData="accountList.selectedPackage" 
@@ -419,6 +420,7 @@
 					referral_code: '',
 					account_level: 3,
 					total_price: 0,
+					total_selling_price: 0,
 					packages: [],
 				}),
 				treeArray: [],
@@ -609,6 +611,7 @@
 					let amount = 0;
 					let price = pack.price_promotion ? pack.price_promotion : pack.price;
 					let price_std = pack.price_std_promotion ? pack.price_std_promotion : pack.price_std;
+					let selling_price = 0;
 
 					if(this.purchase) {
 						let p = _.findIndex(this.purchase.packages, function(p){
@@ -625,6 +628,8 @@
 					obj['id'] = pack.id;
 					obj['price'] = price;
 					obj['price_std'] = price_std;
+					obj['selling_price'] = pack.selling_price;
+					obj['total_selling_price'] = pack.total_selling_price;
 
 					return obj;
 				});
@@ -645,6 +650,7 @@
 					obj['value'] = pack.id;
 					obj['label'] = pack.name;
 					obj['price'] = price;
+					obj['selling_price'] = pack.selling_price;
 
 					return obj;
 				});
@@ -701,12 +707,14 @@
 			},
 
 			submitAccountForm() {
-				this.accountForm.total_price = this.totalAccountPrice;
+				this.accountForm.total_price = this.totalPointValue;
+				this.accountForm.total_selling_price = this.totalAccountSellingPrice;
 				this.accountForm.packages = this.accountLists.map(account => {
 					let obj = {};
 
 					obj['id'] = account.selectedPackage.value;
 					obj['price'] = account.selectedPackage.price;
+					obj['selling_price'] = account.selectedPackage.selling_price;
 					obj['level'] = account.level;
 
 					return obj;
@@ -737,6 +745,22 @@
 			},
 
 			getPackagePrice(amount = 0, pack, index) {
+				let price = pack.selling_price;
+
+				if(amount < 0) {
+					amount = 0;
+					this.form.packages[index].amount = 0;
+				}
+
+				if(this.is_std)
+				{
+					price = pack.price_std;
+				}
+
+				return amount * price;
+			},
+
+			getPackageSellingPrice(amount = 0, pack, index) {
 				let price = pack.price;
 
 				if(amount < 0) {
@@ -793,12 +817,14 @@
 					obj['value'] =  this.sortedPackages[packageIndex].id;
 					obj['label'] =  this.sortedPackages[packageIndex].name;
 					obj['price'] =  this.sortedPackages[packageIndex].price;
+					obj['selling_price'] =  this.sortedPackages[packageIndex].selling_price;
 				} else {
 					item.selectedPackage = this.potentialPackages[index]['label'];
 
 					obj['value'] = this.potentialPackages[index].value;
 					obj['label'] = this.potentialPackages[index].label;
 					obj['price'] = this.potentialPackages[index].price;
+					obj['selling_price'] = this.potentialPackages[index].selling_price;
 				}
 				this.accountLists.forEach((accountList) => {
 					if(accountList.name == e)
@@ -840,6 +866,7 @@
 			},
 
 			discount(){
+				return this.totalPointValue - (this.totalPointValue * this.accountCommission /100);
 				return this.totalAccountPrice * this.accountCommission / 100;
 			},
 
@@ -855,7 +882,13 @@
 				}
 			},
 
-			totalAccountPrice() {
+			totalAccountSellingPrice() {
+				return _.sumBy(this.accountLists, function(account){
+					return account.selectedPackage ? parseFloat(account.selectedPackage.selling_price) : 0;
+				})
+			},
+
+			totalPointValue() {
 				return _.sumBy(this.accountLists, function(account){
 					return account.selectedPackage ? parseFloat(account.selectedPackage.price) : 0;
 				})
@@ -863,11 +896,21 @@
 
 			totalPrice() {
 				if(this.purchase && !this.isEditing)
-					return this.purchase.is_std ? this.purchase.total_price_std : this.purchase.total_price;
+					return this.purchase.is_std ? this.purchase.total_price_std : this.purchase.total_selling_price;
 
 				return _.sumBy(this.form.packages, function(pack){
 					let amount = pack.amount ? pack.amount : 0;
 					return this.getPackagePrice(pack.amount, pack);
+				}.bind(this))
+			},
+
+			totalPackagePointValue() {
+				if(this.purchase && !this.isEditing)
+					return this.purchase.is_std ? this.purchase.total_price_std : this.purchase.total_price;
+
+				return _.sumBy(this.form.packages, function(pack){
+					let amount = pack.amount ? pack.amount : 0;
+					return this.getPackageSellingPrice(pack.amount, pack);
 				}.bind(this))
 			},
 

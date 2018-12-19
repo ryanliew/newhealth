@@ -31,6 +31,7 @@
 					{ name: 'name', title: this.tableTitle('package.package_name'), sortField: 'name'},					
 					// { name: 'tree_count', title: this.tableTitle('package.tree_count'), sortField: 'tree_count', callback: 'treecount'},					
 					{ name: 'price', title: this.tableTitle('package.price'), sortField: 'price', callback: 'currency'},
+					{ name: 'selling_price', title: this.tableTitle('package.selling_price'), sortField: 'selling_price', callback: 'currency'},
 					{ name: 'description', title: this.tableTitle('package.package_description'), sortField: 'description'},
 					// { name: 'price_std', title: this.tableTitle('package.price_std'), sortField: 'price_std', callback: 'currency_std'},
 					// { name: 'price_promotion', title: this.tableTitle('package.price_promotion'), sortField: 'price_promotion', callback: 'currency'},

@@ -10,6 +10,7 @@ return [
 
     'packages' => '配套',
     'machine_count' => '机器数量',
+    'selling_price' => '售价 (MYR)',
     'price' => '价格 (马币)',
     'price_std' => '价格 (美金)',
     'price_promotion' => '优惠价格 (马币)',

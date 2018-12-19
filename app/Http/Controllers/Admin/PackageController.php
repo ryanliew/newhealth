@@ -15,6 +15,7 @@ class PackageController extends Controller
             // 'tree_count.required' => 'validation.required',
             // 'tree_count.numeric' => 'validation.numeric',
             'price.required' => 'validation.required',
+            'selling_price.required' => 'validation.required',
             'package_description.required' => 'validation.required',
             'package_name.required' => 'validation.required',
             'price.numeric' => 'validation.numeric',
@@ -27,6 +28,7 @@ class PackageController extends Controller
 
         request()->validate([
             'price' => 'required|numeric',
+            'selling_price' => 'required|numeric',
             'package_name' => 'required',
             'package_description' => 'required',
             'package_picture' => ['required', 'file', 'max:8000']
@@ -41,6 +43,7 @@ class PackageController extends Controller
 
         $package = Package::create(['name' => request()->package_name,
                                     'price' => request()->price,
+                                    'selling_price' => request()->selling_price,
                                     'description' => request()->package_description,
                                     'can_upgrade' => request()->can_upgrade == 'true' ? true : false,
                                     'can_redeem' => request()->can_redeem == 'true' ? true : false,
@@ -58,6 +61,7 @@ class PackageController extends Controller
     {
         $message = [
             'price.required' => 'validation.required',
+            'selling_price.required' => 'validation.required',
             'package_description.required' => 'validation.required',
             'package_name.required' => 'validation.required',
             'price.numeric' => 'validation.numeric',
@@ -67,6 +71,7 @@ class PackageController extends Controller
 
         request()->validate([
             'price' => 'required|numeric',
+            'selling_price' => 'required|numeric',
             'package_name' => 'required',
             'package_description' => 'required',
             'package_picture' => ['max:8000']
@@ -84,6 +89,7 @@ class PackageController extends Controller
 
     	$package->update(['name' => request()->package_name,
                             'price' => request()->price,
+                            'selling_price' => request()->selling_price,
                             'description' => request()->package_description,
                             'can_upgrade' => request()->can_upgrade ? true : false,
                             'can_redeem' => request()->can_redeem ? true : false,

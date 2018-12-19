@@ -199,7 +199,7 @@
 				purchaseFields: [
 					{ name: 'user_name', title: this.tableTitle('purchase.made_by'), sortField: 'users.name'},
 					{ name: 'created_at', title: this.tableTitle('purchase.purchase_date'), sortField: 'purchases.created_at', callback: 'date' },
-					{ name: '__component:table-price-switcher', title: this.tableTitle('purchase.total_payable'), sortField: 'purchases.total_price' },
+					{ name: '__component:table-price-switcher', title: this.tableTitle('purchase.total_payable'), sortField: 'purchases.total_selling_price' },
 					{ name: '__component:purchases-actions', title: this.tableTitle('table.actions')}
 				],
 				redemptionFields: [

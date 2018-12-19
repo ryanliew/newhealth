@@ -10,10 +10,12 @@ return [
 
     'pending' => '未付款',
     'pending_verification' => '审核中',
+    'point_value' => '分数',
     'pending_purchases' => '审核订单',
     'complete' => '完成',
     'made_by' => '客户',
     'purchase_date' => '购买日期',
+    'selling_price' => '售价',
     'total_payable' => '总价格',
     'status' => '状态',
     'make_new_purchase' => '购买种植配套',

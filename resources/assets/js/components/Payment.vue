@@ -39,8 +39,8 @@
 					v-if="payment">
 				</text-input>
 
-				<text-input v-model="form.amount" 
-					:defaultValue="$options.filters.currency(form.amount)"
+				<text-input v-model="form.amount_selling" 
+					:defaultValue="$options.filters.currency(form.amount_selling)"
 					:required="false"
 					type="number"
 					:label="$options.filters.trans('payment.amount')"
@@ -171,6 +171,7 @@
 				payment: '',
 				form: new Form({
 					amount: 0,
+					amount_selling: 0,
 					amount_std: 0,
 					payment_slip_path: '',
 					user_id: window.user.id
@@ -196,6 +197,7 @@
 		mounted() {
 			this.payment = this.purchase.payment ? this.purchase.payment : '';
 			this.form.amount = this.purchase.total_price;
+			this.form.amount_selling = this.purchase.total_selling_price;
 			this.form.amount_std = this.purchase.total_price_std;
 		},
 

@@ -65,6 +65,21 @@
 								</text-input>
 							</div>
 						</div>
+						<div class="row">
+							<div class="col-sm">
+								<text-input v-model="form.selling_price" 
+									:defaultValue="form.selling_price"
+									:required="true"
+									type="number"
+									:label="$options.filters.trans('package.selling_price')"
+									name="selling_price"
+									:editable="true"
+									:focus="false"
+									:hideLabel="false"
+									:error="form.errors.get('selling_price')">
+								</text-input>
+							</div>
+						</div>
 						<textarea-input v-model="form.package_description" 
 							:defaultValue="form.package_description"
 							:required="true"
@@ -132,6 +147,7 @@
 					machine_count: '',
 					price: '',
 					price_promotion: '',
+					selling_price: '',
 					// price_std: '',
 					// price_std_promotion: ''	
 				}),
@@ -161,6 +177,7 @@
 				this.form.can_upgrade = this.selectedPackage.can_upgrade;
 				this.form.can_redeem = this.selectedPackage.can_redeem;
 				this.form.price = this.selectedPackage.price;
+				this.form.selling_price = this.selectedPackage.selling_price;
 				this.form.price_promotion = this.selectedPackage.price_promotion;
 				this.form.package_picture = this.selectedPackage.package_photo_path;
 

@@ -30,6 +30,7 @@ class PurchaseController extends Controller
                                                             'payment_id',
                                                             'purchases.created_at as created_at',
                                                             'purchases.total_price as total_price',
+                                                            'purchases.total_selling_price as total_selling_price',
                                                             'purchases.total_price_std as total_price_std',
                                                             'purchases.is_std as is_std',
                                                             'purchases.status as status',
@@ -55,6 +56,7 @@ class PurchaseController extends Controller
                 // $price_std = $db_package->price_std_promotion > 0 ? $db_package->price_std_promotion : $db_package->price_std;
                 $processed_packages[$package->id]['total_price'] = $package->price * $package->amount;
                 $processed_packages[$package->id]['total_price_std'] = $package->price_std * $package->amount;
+                $processed_packages[$package->id]['total_selling_price'] = $package->selling_price * $package->amount;
                 $processed_packages[$package->id]['amount'] = $package->amount;
             }
     	}
@@ -71,10 +73,15 @@ class PurchaseController extends Controller
             return $package['total_price_std'];
         });
 
+        $total_selling_price = $packages->sum(function($package){
+            return $package['total_selling_price'];
+        });
+
     	$purchase = Purchase::create([
     		'user_id' => request()->user_id,
     		'total_price' => $total_price,
             'total_price_std' => $total_price_std,
+            'total_selling_price' => $total_selling_price,
             'account_id' => request()->account_id,
             'is_std' => $user->is_std,
             'created_at' => request()->purchase_date
@@ -92,6 +99,7 @@ class PurchaseController extends Controller
         $purchase = Purchase::create([
             'user_id' => request()->user_id,
             'total_price' => request()->total_price,
+            'total_selling_price' => request()->total_selling_price,
             'total_price_std' => 0,
             'is_std' => 0,
             'created_at' => request()->purchase_date,
@@ -106,6 +114,7 @@ class PurchaseController extends Controller
         $processed_packages = [];
         foreach ($accounts as $key => $account) {
             $processed_packages[$account->id]['total_price'] = $packages[$key]->price;
+            $processed_packages[$account->id]['total_selling_price'] = $packages[$key]->selling_price;
             $processed_packages[$account->id]['package_id'] = $packages[$key]->id;
             $processed_packages[$account->id]['amount'] = 1;
         }
@@ -194,6 +203,7 @@ class PurchaseController extends Controller
 
         $purchase->update([
                 'total_price' => request()->total_price,
+                'total_selling_price' => request()->total_selling_price,
                 'created_at' => request()->purchase_date,
                 'account_level' => request()->account_level,
                 'referral_code' => request()->referral_code,
@@ -254,10 +264,12 @@ class PurchaseController extends Controller
 
     public function processPackage($packages, $accounts)
     {
+        // dd($packages);
         $processed_packages = [];
         foreach ($accounts as $key => $account) {
             $processed_packages[$account->id]['total_price'] = $packages[$key]->price;
             $processed_packages[$account->id]['package_id'] = $packages[$key]->id;
+            $processed_packages[$account->id]['total_selling_price'] = $packages[$key]->selling_price;
             $processed_packages[$account->id]['amount'] = 1;
         }
         return $processed_packages;
@@ -278,6 +290,7 @@ class PurchaseController extends Controller
                 // $price = $db_package->price_promotion > 0 ? $db_package->price_promotion : $db_package->price;
                 // $price_std = $db_package->price_std_promotion > 0 ? $db_package->price_std_promotion : $db_package->price_std;
                 $processed_packages[$package->id]['total_price'] = $package->price * $package->amount;
+                $processed_packages[$package->id]['total_selling_price'] = $package->selling_price * $package->amount;
                 $processed_packages[$package->id]['total_price_std'] = $package->price_std * $package->amount;
                 $processed_packages[$package->id]['amount'] = $package->amount;
             }
@@ -293,12 +306,17 @@ class PurchaseController extends Controller
             return $package['total_price_std'];
         });
 
+        $total_selling_price = $packages->sum(function($package){
+            return $package['total_selling_price'];
+        });
+
         if($purchase->payment)
             $purchase->payment->delete();
 
         $purchase->update([
             'total_price' => $total_price,
             'total_price_std' => $total_price_std,
+            'total_selling_price' => $total_selling_price,
             'created_at' => request()->purchase_date,
             'account_level' => null,
             'referral_code' => null,
