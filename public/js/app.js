@@ -77065,7 +77065,7 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "text-center" }, [
-                      _c("b", [_vm._v("RM" + _vm._s(_vm.discount))]),
+                      _c("b", [_vm._v("$" + _vm._s(_vm.discount))]),
                       _vm._v(" "),
                       _c("span", { staticStyle: { color: "red" } }, [
                         _vm._v(
@@ -77082,7 +77082,7 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "text-center" }, [
-                      _c("b", [_vm._v("RM" + _vm._s(_vm.totalPointValue))])
+                      _c("b", [_vm._v("$" + _vm._s(_vm.totalPointValue))])
                     ]),
                     _vm._v(" "),
                     _c("div", [
@@ -77091,7 +77091,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "text-center" }, [
                       _c("b", [
-                        _vm._v("RM" + _vm._s(_vm.totalAccountSellingPrice))
+                        _vm._v("$" + _vm._s(_vm.totalAccountSellingPrice))
                       ])
                     ])
                   ]),

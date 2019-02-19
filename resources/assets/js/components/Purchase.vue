@@ -358,11 +358,11 @@
 								<div class="text-center">{{ 'purchase.' + accountSelected | trans }}</div>
 
 								<div>{{ "purchase.cash_back" | trans }}</div>
-								<div class="text-center"><b>RM{{ discount }}</b> <span style="color:red;">{{ 'purchase.saving' | trans }} {{ accountCommission }}%</span></div>
+								<div class="text-center"><b>${{ discount }}</b> <span style="color:red;">{{ 'purchase.saving' | trans }} {{ accountCommission }}%</span></div>
 								<div>{{ "purchase.point_value" | trans }}</div>
-								<div class="text-center"><b>RM{{ totalPointValue }}</b></div>
+								<div class="text-center"><b>${{ totalPointValue }}</b></div>
 								<div>{{ "purchase.total" | trans }}</div>
-								<div class="text-center"><b>RM{{ totalAccountSellingPrice }}</b></div>
+								<div class="text-center"><b>${{ totalAccountSellingPrice }}</b></div>
 							</div>
 							<!-- <div v-for="accountList in accountLists">
 								<selector-input v-model="accountList.selectedPackage" :defaultData="accountList.selectedPackage" 
