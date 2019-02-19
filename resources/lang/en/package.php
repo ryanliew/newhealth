@@ -10,10 +10,10 @@ return [
 
     'packages' => 'Packages',
     'machine_count' => 'No. of machines',
-    'price' => 'Price (MYR)',
-    'selling_price' => 'Selling Price (MYR)',
+    'price' => 'Price (USD)',
+    'selling_price' => 'Selling Price (USD)',
     'price_std' => 'Price (USD)',
-    'price_promotion' => 'Promotion price (MYR)',
+    'price_promotion' => 'Promotion price (USD)',
     'price_std_promotion' => 'Promotion price (USD)',
     'actions' => 'Actions',
     'package_details' => 'Package details',
