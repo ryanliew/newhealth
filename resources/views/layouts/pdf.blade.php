@@ -180,10 +180,11 @@
 					<div class="clearfix" style="height: 15px;"></div>
 					<div class="row">
 						<div class="company-details">
-							Newleaf Plantation Berhad <span style="font-size:10px">(1251569-U)</span><br>
+							<!-- Newleaf Plantation Berhad <span style="font-size:10px">(1251569-U)</span><br>
 			                Suite E-7-1, Block E, Plaza Mont Kiara<br>
 			                No 2 Jalan Kiara<br>
-			                50480 Kuala Lumpur, Malaysia<br>
+			                50480 Kuala Lumpur, Malaysia<br> -->
+			                N/A
 			                <br>
 			                <table class="phone">
 			                	<tbody>
@@ -192,7 +193,7 @@
 			                				Phone:
 			                			</td>
 			                			<td>
-			                				+603-62016336
+			                				N/A
 			                			</td>
 			                		</tr>
 			                		<tr>
@@ -200,7 +201,7 @@
 			                				Fax:
 			                			</td>
 			                			<td>
-			                				+603-62017337
+			                				N/A
 			                			</td>
 			                		</tr>
 			                	</tbody>

@@ -75154,15 +75154,13 @@ var render = function() {
                     _vm._v(_vm._s(_vm._f("trans")("payment.beneficiary_name")))
                   ]),
                   _vm._v(" "),
-                  _vm._m(0),
+                  _c("div", { staticClass: "text-center" }, [_vm._v("N/A")]),
                   _vm._v(" "),
                   _c("div", [
                     _vm._v(_vm._s(_vm._f("trans")("payment.beneficiary_bank")))
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "text-center" }, [
-                    _vm._v("MALAYAN BANKING BERHAD")
-                  ]),
+                  _c("div", { staticClass: "text-center" }, [_vm._v("N/A")]),
                   _vm._v(" "),
                   _c("div", [
                     _vm._v(
@@ -75170,37 +75168,25 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "text-center" }, [
-                    _vm._v(
-                      "Suite E-07-01, Plaza Mont Kiara, No. 2 Jalan Kiara, 50480 Kuala Lumpur, Malaysia"
-                    )
-                  ]),
+                  _c("div", { staticClass: "text-center" }, [_vm._v("N/A")]),
                   _vm._v(" "),
                   _c("div", [
                     _vm._v(_vm._s(_vm._f("trans")("payment.bank_address")))
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "text-center" }, [
-                    _vm._v(
-                      "21 & 23, Jalan 23/70A, Desa Sri Hartamas, 50680 Kuala Lumpur"
-                    )
-                  ]),
+                  _c("div", { staticClass: "text-center" }, [_vm._v("N/A")]),
                   _vm._v(" "),
                   _c("div", [
                     _vm._v(_vm._s(_vm._f("trans")("payment.bank_account_no")))
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "text-center" }, [
-                    _vm._v("5647 2668 0297")
-                  ]),
+                  _c("div", { staticClass: "text-center" }, [_vm._v("N/A")]),
                   _vm._v(" "),
                   _c("div", [
                     _vm._v(_vm._s(_vm._f("trans")("payment.bank_swift")))
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "text-center" }, [
-                    _vm._v("MBBEMYKL")
-                  ])
+                  _c("div", { staticClass: "text-center" }, [_vm._v("N/A")])
                 ])
               ])
             ]),
@@ -75403,20 +75389,7 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "text-center" }, [
-      _vm._v("NEWLEAF PLANTATION BERHAD"),
-      _c("br"),
-      _c("span", { staticStyle: { "font-size": "14" } }, [
-        _vm._v("(1251569-U)")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
