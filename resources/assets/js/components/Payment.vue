@@ -68,19 +68,19 @@
 						<span class="label-small">{{ "payment.bank_details" | trans }}</span>
 						<div class="payment-details-grid">
 							<div>{{ "payment.beneficiary_name" | trans }}</div>
-							<div class="text-center">NEWLEAF PLANTATION BERHAD<br><span style="font-size:14;">(1251569-U)</span></div>
+							<div class="text-center">N/A</div>
 							<div>{{ "payment.beneficiary_bank" | trans }}</div>
-							<div class="text-center">MALAYAN BANKING BERHAD</div>
+							<div class="text-center">N/A</div>
 
 							<div>{{ "payment.beneficiary_address" | trans }}</div>
-							<div class="text-center">Suite E-07-01, Plaza Mont Kiara, No. 2 Jalan Kiara, 50480 Kuala Lumpur, Malaysia</div>
+							<div class="text-center">N/A</div>
 							<div>{{ "payment.bank_address" | trans }}</div>
-							<div class="text-center">21 & 23, Jalan 23/70A, Desa Sri Hartamas, 50680 Kuala Lumpur</div>
+							<div class="text-center">N/A</div>
 
 							<div>{{ "payment.bank_account_no" | trans }}</div>
-							<div class="text-center">5647 2668 0297</div>
+							<div class="text-center">N/A</div>
 							<div>{{ "payment.bank_swift" | trans }}</div>
-							<div class="text-center">MBBEMYKL</div>
+							<div class="text-center">N/A</div>
 						</div>
 					</div>
 				</div>
