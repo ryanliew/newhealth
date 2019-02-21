@@ -26,6 +26,7 @@ return [
     'package_picture' => '配套照片',
     'invalid_package_picture' => '请选择配套照片',
     'package_picture_exceed_size' => '配套照片大小不能超过8MB',
+    'packageEmpty' => '没有可选的配套',
 
     
 ];

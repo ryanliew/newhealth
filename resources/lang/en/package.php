@@ -27,5 +27,6 @@ return [
     'package_picture' => 'Package picture',
     'invalid_package_picture' => 'Package picture is required',
     'package_picture_exceed_size' => 'Package picture must not exceed 8MB',
+    'packageEmpty' => 'Packages are not available.',
     
 ];

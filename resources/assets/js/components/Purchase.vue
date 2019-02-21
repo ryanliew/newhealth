@@ -38,6 +38,7 @@
 							</div>
 						
 							<md-tab id="packages" :md-label="$options.filters.trans('purchase.packages')" class="table-responsive">
+							    <div v-if="packages.length > 0">  	
 							      	<h5 class="card-title mb-3">{{ instruction | trans }}</h5>
 										<table class="table table-edit">
 											<tbody v-if="isEditing && form.packages.length > 0">
@@ -193,6 +194,10 @@
 											<button class="btn btn-success" @click="submitForm" :disabled="totalPrice == 0 || !selectedUser"><i class="fa fa-check"></i> {{ 'purchase.update' | trans }}</button>
 										</div>
 									</div>
+								</div>
+								<div v-else>
+									<h4>{{ 'package.packageEmpty' | trans }}</h4>
+								</div>
 					        </md-tab>
 						</md-tabs>	
 				    </div>
