@@ -17,7 +17,9 @@ class PackageController extends Controller
             'price.required' => 'validation.required',
             'selling_price.required' => 'validation.required',
             'package_description.required' => 'validation.required',
+            'package_description_zh.required' => 'validation.required',
             'package_name.required' => 'validation.required',
+            'package_name_zh.required' => 'validation.required',
             'price.numeric' => 'validation.numeric',
             'package_picture.required' => 'package.invalid_package_picture',
             'package_picture.file' => 'package.invalid_package_picture',
@@ -30,7 +32,9 @@ class PackageController extends Controller
             'price' => 'required|numeric',
             'selling_price' => 'required|numeric',
             'package_name' => 'required',
+            'package_name_zh' => 'required',
             'package_description' => 'required',
+            'package_description_zh' => 'required',
             'package_picture' => ['required', 'file', 'max:8000']
             // 'price_std' => 'required|numeric',
             // 'tree_count' => 'required|numeric'
@@ -42,9 +46,11 @@ class PackageController extends Controller
 		$this->validatePackage();
 
         $package = Package::create(['name' => request()->package_name,
+                                    'name_zh' => request()->package_name_zh,
                                     'price' => request()->price,
                                     'selling_price' => request()->selling_price,
                                     'description' => request()->package_description,
+                                    'description_zh' => request()->package_description_zh,
                                     'can_upgrade' => request()->can_upgrade == 'true' ? true : false,
                                     'can_redeem' => request()->can_redeem == 'true' ? true : false,
                                     'package_photo_path' => request()->file('package_picture')->store('packages', 'public'),
@@ -62,7 +68,9 @@ class PackageController extends Controller
         $message = [
             'price.required' => 'validation.required',
             'selling_price.required' => 'validation.required',
+            'package_description_zh.required' => 'validation.required',
             'package_description.required' => 'validation.required',
+            'package_name_zh.required' => 'validation.required',
             'package_name.required' => 'validation.required',
             'price.numeric' => 'validation.numeric',
             'package_picture.file' => 'package.invalid_package_picture',
@@ -73,7 +81,9 @@ class PackageController extends Controller
             'price' => 'required|numeric',
             'selling_price' => 'required|numeric',
             'package_name' => 'required',
+            'package_name_zh' => 'required',
             'package_description' => 'required',
+            'package_description_zh' => 'required',
             'package_picture' => ['max:8000']
             // 'price_std' => 'required|numeric',
             // 'tree_count' => 'required|numeric'
@@ -88,9 +98,11 @@ class PackageController extends Controller
         }
 
     	$package->update(['name' => request()->package_name,
+                            'name_zh' => request()->package_name_zh,
                             'price' => request()->price,
                             'selling_price' => request()->selling_price,
                             'description' => request()->package_description,
+                            'description_zh' => request()->package_description_zh,
                             'can_upgrade' => request()->can_upgrade ? true : false,
                             'can_redeem' => request()->can_redeem ? true : false,
                             'package_photo_path' => $photo_path,

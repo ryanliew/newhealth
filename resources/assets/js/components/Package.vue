@@ -27,6 +27,17 @@
 							:hideLabel="false"
 							:error="form.errors.get('package_name')">
 						</text-input>
+						<text-input v-model="form.package_name_zh" 
+							:defaultValue="form.package_name_zh"
+							:required="true"
+							type="text"
+							:label="$options.filters.trans('package.package_name_zh')"
+							name="package_name_zh"
+							:editable="true"
+							:focus="true"
+							:hideLabel="false"
+							:error="form.errors.get('package_name_zh')">
+						</text-input>
 						<text-input v-model="form.machine_count" 
 							:defaultValue="form.machine_count"
 							:required="true"
@@ -93,6 +104,19 @@
 							cols="5"
 							:error="form.errors.get('package_description')">
 						</textarea-input>
+						<textarea-input v-model="form.package_description_zh" 
+							:defaultValue="form.package_description_zh"
+							:required="true"
+							type="text"
+							:label="$options.filters.trans('package.package_description_zh')"
+							name="package_description_zh"
+							:editable="true"
+							:focus="false"
+							:hideLabel="false"
+							rows="3"
+							cols="5"
+							:error="form.errors.get('package_description_zh')">
+						</textarea-input>
 						<div class="row">
 							<div class="col-sm">
 								<checkbox-input v-model="form.can_upgrade"
@@ -140,7 +164,9 @@
 				form: new Form({
 					name: 'new',
 					package_name: '',
+					package_name_zh: '',
 					package_description: '',
+					package_description_zh: '',
 					package_picture: '',
 					can_upgrade: false,
 					can_redeem: false,
@@ -172,7 +198,9 @@
 			setForm() {
 				this.form.name = this.selectedPackage.name;
 				this.form.package_name = this.selectedPackage.name;
+				this.form.package_name_zh = this.selectedPackage.name_zh;
 				this.form.package_description = this.selectedPackage.description;
+				this.form.package_description_zh = this.selectedPackage.description_zh;
 				this.form.machine_count = this.selectedPackage.machine_count;
 				this.form.can_upgrade = this.selectedPackage.can_upgrade;
 				this.form.can_redeem = this.selectedPackage.can_redeem;

@@ -34,7 +34,7 @@
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="2">{{ 'purchase.platinum' | trans }}</md-radio>
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="1">{{ 'purchase.silver' | trans }}</md-radio>
 									<geno-page :tree="tree" :isPurchase="true" v-if="showTree" @clicked="changePackage($event.data)"></geno-page>
-									<div class="row" style="justify-content: center; margin-top: 25px;">
+									<div v-if="lang.locale == 'en'" class="row" style="justify-content: center; margin-top: 25px;">
 										<table class="table table-edit" style="border: 1px solid #dee2e6;">
 											<tr>
 												<th style="border-right: 1px solid #dee2e6;">
@@ -50,6 +50,26 @@
 												</td>
 												<td>
 													{{package.description}}
+												</td>
+											</tr>
+										</table>
+									</div>
+									<div v-else class="row" style="justify-content: center; margin-top: 25px;">
+										<table class="table table-edit" style="border: 1px solid #dee2e6;">
+											<tr>
+												<th style="border-right: 1px solid #dee2e6;">
+													{{ 'package.packages' | trans }}
+												</th>
+												<th>
+													{{ 'package.package_description' | trans }}
+												</th>
+											</tr>
+											<tr v-for="package in potentialPackages">
+												<td style="border-right: 1px solid #dee2e6;">
+													{{package.label_zh}}
+												</td>
+												<td>
+													{{package.description_zh}}
 												</td>
 											</tr>
 										</table>
@@ -674,8 +694,10 @@
 					let obj = {};
 					obj['value'] = pack.id;
 					obj['label'] = pack.name;
+					obj['label_zh'] = pack.name_zh;
 					obj['price'] = price;
 					obj['description'] = pack.description;
+					obj['description_zh'] = pack.description_zh;
 					obj['selling_price'] = pack.selling_price;
 
 					return obj;
