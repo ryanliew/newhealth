@@ -34,7 +34,7 @@
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="2">{{ 'purchase.platinum' | trans }}</md-radio>
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="1">{{ 'purchase.silver' | trans }}</md-radio>
 									<geno-page :tree="tree" :isPurchase="true" v-if="showTree" @clicked="changePackage($event.data)"></geno-page>
-									<div v-if="lang.locale == 'en'" class="row" style="justify-content: center; margin-top: 25px;">
+									<div v-if="lang.locale == 'zh'" class="row" style="justify-content: center; margin-top: 25px;">
 										<table class="table table-edit" style="border: 1px solid #dee2e6;">
 											<tr>
 												<th style="border-right: 1px solid #dee2e6;">
@@ -46,10 +46,10 @@
 											</tr>
 											<tr v-for="package in potentialPackages">
 												<td style="border-right: 1px solid #dee2e6;">
-													{{package.label}}
+													{{package.label_zh}}
 												</td>
 												<td>
-													{{package.description}}
+													{{package.description_zh}}
 												</td>
 											</tr>
 										</table>
@@ -66,10 +66,10 @@
 											</tr>
 											<tr v-for="package in potentialPackages">
 												<td style="border-right: 1px solid #dee2e6;">
-													{{package.label_zh}}
+													{{package.label}}
 												</td>
 												<td>
-													{{package.description_zh}}
+													{{package.description}}
 												</td>
 											</tr>
 										</table>
@@ -498,6 +498,7 @@
 		},
 
 		mounted() {
+			console.log("lang: " + lang.locale);
 			this.form.user_id = this.user.id;
 			this.accountForm.user_id = this.user.id;
 			this.is_std = this.user.country_id == 48;

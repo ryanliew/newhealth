@@ -74308,6 +74308,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	mounted: function mounted() {
 		var _this = this;
 
+		console.log("lang: " + lang.locale);
 		this.form.user_id = this.user.id;
 		this.accountForm.user_id = this.user.id;
 		this.is_std = this.user.country_id == 48;
@@ -75978,7 +75979,7 @@ var render = function() {
                                     })
                                   : _vm._e(),
                                 _vm._v(" "),
-                                _vm.lang.locale == "en"
+                                _vm.lang.locale == "zh"
                                   ? _c(
                                       "div",
                                       {
@@ -76049,7 +76050,7 @@ var render = function() {
                                                       _vm._v(
                                                         "\n\t\t\t\t\t\t\t\t\t\t\t\t" +
                                                           _vm._s(
-                                                            package.label
+                                                            package.label_zh
                                                           ) +
                                                           "\n\t\t\t\t\t\t\t\t\t\t\t"
                                                       )
@@ -76060,7 +76061,7 @@ var render = function() {
                                                     _vm._v(
                                                       "\n\t\t\t\t\t\t\t\t\t\t\t\t" +
                                                         _vm._s(
-                                                          package.description
+                                                          package.description_zh
                                                         ) +
                                                         "\n\t\t\t\t\t\t\t\t\t\t\t"
                                                     )
@@ -76143,7 +76144,7 @@ var render = function() {
                                                       _vm._v(
                                                         "\n\t\t\t\t\t\t\t\t\t\t\t\t" +
                                                           _vm._s(
-                                                            package.label_zh
+                                                            package.label
                                                           ) +
                                                           "\n\t\t\t\t\t\t\t\t\t\t\t"
                                                       )
@@ -76154,7 +76155,7 @@ var render = function() {
                                                     _vm._v(
                                                       "\n\t\t\t\t\t\t\t\t\t\t\t\t" +
                                                         _vm._s(
-                                                          package.description_zh
+                                                          package.description
                                                         ) +
                                                         "\n\t\t\t\t\t\t\t\t\t\t\t"
                                                     )
