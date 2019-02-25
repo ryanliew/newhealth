@@ -75962,7 +75962,7 @@ var render = function() {
                                     staticClass: "row",
                                     staticStyle: {
                                       "justify-content": "center",
-                                      "margin-top": "15px"
+                                      "margin-top": "25px"
                                     }
                                   },
                                   [

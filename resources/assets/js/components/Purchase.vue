@@ -34,7 +34,7 @@
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="2">{{ 'purchase.platinum' | trans }}</md-radio>
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="1">{{ 'purchase.silver' | trans }}</md-radio>
 									<geno-page :tree="tree" :isPurchase="true" v-if="showTree" @clicked="changePackage($event.data)"></geno-page>
-									<div class="row" style="justify-content: center; margin-top: 15px;">
+									<div class="row" style="justify-content: center; margin-top: 25px;">
 										<table class="table table-edit" style="border: 1px solid #dee2e6;">
 											<tr>
 												<th style="border-right: 1px solid #dee2e6;">
