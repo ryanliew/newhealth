@@ -74203,6 +74203,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -74443,6 +74463,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 				obj['value'] = pack.id;
 				obj['label'] = pack.name;
 				obj['price'] = price;
+				obj['description'] = pack.description;
 				obj['selling_price'] = pack.selling_price;
 
 				return obj;
@@ -74659,7 +74680,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 		},
 		discount: function discount() {
 			return this.totalPointValue - this.totalPointValue * this.accountCommission / 100;
-			return this.totalAccountPrice * this.accountCommission / 100;
+			// return this.totalAccountPrice * this.accountCommission / 100;
 		},
 		originalPrice: function originalPrice() {
 			return this.machineQuantity * this.unitPrice;
@@ -75933,7 +75954,97 @@ var render = function() {
                                         }
                                       }
                                     })
-                                  : _vm._e()
+                                  : _vm._e(),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "row",
+                                    staticStyle: {
+                                      "justify-content": "center",
+                                      "margin-top": "15px"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "table",
+                                      {
+                                        staticClass: "table table-edit",
+                                        staticStyle: {
+                                          border: "1px solid #dee2e6"
+                                        }
+                                      },
+                                      [
+                                        _c("tr", [
+                                          _c(
+                                            "th",
+                                            {
+                                              staticStyle: {
+                                                "border-right":
+                                                  "1px solid #dee2e6"
+                                              }
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n\t\t\t\t\t\t\t\t\t\t\t\t" +
+                                                  _vm._s(
+                                                    _vm._f("trans")(
+                                                      "package.packages"
+                                                    )
+                                                  ) +
+                                                  "\n\t\t\t\t\t\t\t\t\t\t\t"
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("th", [
+                                            _vm._v(
+                                              "\n\t\t\t\t\t\t\t\t\t\t\t\t" +
+                                                _vm._s(
+                                                  _vm._f("trans")(
+                                                    "package.package_description"
+                                                  )
+                                                ) +
+                                                "\n\t\t\t\t\t\t\t\t\t\t\t"
+                                            )
+                                          ])
+                                        ]),
+                                        _vm._v(" "),
+                                        _vm._l(_vm.potentialPackages, function(
+                                          package
+                                        ) {
+                                          return _c("tr", [
+                                            _c(
+                                              "td",
+                                              {
+                                                staticStyle: {
+                                                  "border-right":
+                                                    "1px solid #dee2e6"
+                                                }
+                                              },
+                                              [
+                                                _vm._v(
+                                                  "\n\t\t\t\t\t\t\t\t\t\t\t\t" +
+                                                    _vm._s(package.label) +
+                                                    "\n\t\t\t\t\t\t\t\t\t\t\t"
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("td", [
+                                              _vm._v(
+                                                "\n\t\t\t\t\t\t\t\t\t\t\t\t" +
+                                                  _vm._s(package.description) +
+                                                  "\n\t\t\t\t\t\t\t\t\t\t\t"
+                                              )
+                                            ])
+                                          ])
+                                        })
+                                      ],
+                                      2
+                                    )
+                                  ]
+                                )
                               ],
                               1
                             )

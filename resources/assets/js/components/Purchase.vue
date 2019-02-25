@@ -34,6 +34,26 @@
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="2">{{ 'purchase.platinum' | trans }}</md-radio>
 							        <md-radio @change="accountChange" class="md-primary" v-model="radio" value="1">{{ 'purchase.silver' | trans }}</md-radio>
 									<geno-page :tree="tree" :isPurchase="true" v-if="showTree" @clicked="changePackage($event.data)"></geno-page>
+									<div class="row" style="justify-content: center; margin-top: 15px;">
+										<table class="table table-edit" style="border: 1px solid #dee2e6;">
+											<tr>
+												<th style="border-right: 1px solid #dee2e6;">
+													{{ 'package.packages' | trans }}
+												</th>
+												<th>
+													{{ 'package.package_description' | trans }}
+												</th>
+											</tr>
+											<tr v-for="package in potentialPackages">
+												<td style="border-right: 1px solid #dee2e6;">
+													{{package.label}}
+												</td>
+												<td>
+													{{package.description}}
+												</td>
+											</tr>
+										</table>
+									</div>
 								</md-tab>
 							</div>
 						
@@ -655,6 +675,7 @@
 					obj['value'] = pack.id;
 					obj['label'] = pack.name;
 					obj['price'] = price;
+					obj['description'] = pack.description;
 					obj['selling_price'] = pack.selling_price;
 
 					return obj;
@@ -872,7 +893,7 @@
 
 			discount(){
 				return this.totalPointValue - (this.totalPointValue * this.accountCommission /100);
-				return this.totalAccountPrice * this.accountCommission / 100;
+				// return this.totalAccountPrice * this.accountCommission / 100;
 			},
 
 			originalPrice() {
