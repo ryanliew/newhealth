@@ -74308,7 +74308,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 	mounted: function mounted() {
 		var _this = this;
 
-		console.log("lang: " + lang.locale);
 		this.form.user_id = this.user.id;
 		this.accountForm.user_id = this.user.id;
 		this.is_std = this.user.country_id == 48;
@@ -74397,25 +74396,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 					this.accountCommission = 20;
 					this.accountForm.account_level = 1;
 					this.accountSelected = 'silver';
-					this.accountLists = [{ name: 'Silver', id: 'silver', selectedPackage: null, package_index: -1, level: 1 }];
-					this.treeArray = [{ name: 'Silver', selectedPackage: null, package_index: -1, children: [] }];
+					this.accountLists = [{ name: 'Silver', id: 'silver', selectedPackage: null, selectedPackageZh: null, package_index: -1, level: 1 }];
+					this.treeArray = [{ name: 'Silver', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }];
 					break;
 				case "2":
 					this.machineQuantity = 9;
 					this.accountCommission = 35;
 					this.accountForm.account_level = 2;
 					this.accountSelected = 'platinum';
-					this.accountLists = [{ name: 'Platinum', id: 'platinum', selectedPackage: null, level: 2 }, { name: 'Silver_1', id: 'silver-1', selectedPackage: null, level: 1 }, { name: 'Silver_2', id: 'silver-2', selectedPackage: null, level: 1 }, { name: 'Silver_3', id: 'silver-3', selectedPackage: null, level: 1 }];
-					this.treeArray = [{ name: 'Platinum', selectedPackage: null, package_index: -1, children: [{ name: 'Silver_1', selectedPackage: null, package_index: -1, children: [] }, { name: 'Silver_2', selectedPackage: null, package_index: -1, children: [] }, { name: 'Silver_3', selectedPackage: null, package_index: -1, children: [] }] }];
+					this.accountLists = [{ name: 'Platinum', id: 'platinum', selectedPackage: null, selectedPackageZh: null, level: 2 }, { name: 'Silver_1', id: 'silver-1', selectedPackage: null, selectedPackageZh: null, level: 1 }, { name: 'Silver_2', id: 'silver-2', selectedPackage: null, selectedPackageZh: null, level: 1 }, { name: 'Silver_3', id: 'silver-3', selectedPackage: null, selectedPackageZh: null, level: 1 }];
+					this.treeArray = [{ name: 'Platinum', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [{ name: 'Silver_1', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }, { name: 'Silver_2', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }, { name: 'Silver_3', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }] }];
 					break;
 				case "3":
 					this.machineQuantity = 27;
 					this.accountCommission = 45;
 					this.accountForm.account_level = 3;
 					this.accountSelected = 'diamond';
-					this.accountLists = [{ name: 'Diamond', id: 'diamond', selectedPackage: null, level: 3 }, { name: 'Platinum_1', id: 'platinum-1', selectedPackage: null, level: 2 }, { name: 'Platinum_2', id: 'platinum-2', selectedPackage: null, level: 2 }, { name: 'Platinum_3', id: 'platinum-3', selectedPackage: null, level: 2 }, { name: 'Silver_1', id: 'silver-1', selectedPackage: null, level: 1 }, { name: 'Silver_2', id: 'silver-2', selectedPackage: null, level: 1 }, { name: 'Silver_3', id: 'silver-3', selectedPackage: null, level: 1 }, { name: 'Silver_4', id: 'silver-4', selectedPackage: null, level: 1 }, { name: 'Silver_5', id: 'silver-5', selectedPackage: null, level: 1 }, { name: 'Silver_6', id: 'silver-6', selectedPackage: null, level: 1 }, { name: 'Silver_7', id: 'silver-7', selectedPackage: null, level: 1 }, { name: 'Silver_8', id: 'silver-8', selectedPackage: null, level: 1 }, { name: 'Silver_9', id: 'silver-9', selectedPackage: null, level: 1 }];
-					this.treeArray = [{ name: 'Diamond', selectedPackage: null, package_index: -1,
-						children: [{ name: 'Platinum_1', selectedPackage: null, package_index: -1, children: [{ name: 'Silver_1', selectedPackage: null, package_index: -1, children: [] }, { name: 'Silver_2', selectedPackage: null, package_index: -1, children: [] }, { name: 'Silver_3', selectedPackage: null, package_index: -1, children: [] }] }, { name: 'Platinum_2', selectedPackage: null, package_index: -1, children: [{ name: 'Silver_4', selectedPackage: null, package_index: -1, children: [] }, { name: 'Silver_5', selectedPackage: null, package_index: -1, children: [] }, { name: 'Silver_6', selectedPackage: null, package_index: -1, children: [] }] }, { name: 'Platinum_3', selectedPackage: null, package_index: -1, children: [{ name: 'Silver_7', selectedPackage: null, package_index: -1, children: [] }, { name: 'Silver_8', selectedPackage: null, package_index: -1, children: [] }, { name: 'Silver_9', selectedPackage: null, package_index: -1, children: [] }] }]
+					this.accountLists = [{ name: 'Diamond', id: 'diamond', selectedPackage: null, selectedPackageZh: null, level: 3 }, { name: 'Platinum_1', id: 'platinum-1', selectedPackage: null, selectedPackageZh: null, level: 2 }, { name: 'Platinum_2', id: 'platinum-2', selectedPackage: null, selectedPackageZh: null, level: 2 }, { name: 'Platinum_3', id: 'platinum-3', selectedPackage: null, selectedPackageZh: null, level: 2 }, { name: 'Silver_1', id: 'silver-1', selectedPackage: null, selectedPackageZh: null, level: 1 }, { name: 'Silver_2', id: 'silver-2', selectedPackage: null, selectedPackageZh: null, level: 1 }, { name: 'Silver_3', id: 'silver-3', selectedPackage: null, selectedPackageZh: null, level: 1 }, { name: 'Silver_4', id: 'silver-4', selectedPackage: null, selectedPackageZh: null, level: 1 }, { name: 'Silver_5', id: 'silver-5', selectedPackage: null, selectedPackageZh: null, level: 1 }, { name: 'Silver_6', id: 'silver-6', selectedPackage: null, selectedPackageZh: null, level: 1 }, { name: 'Silver_7', id: 'silver-7', selectedPackage: null, selectedPackageZh: null, level: 1 }, { name: 'Silver_8', id: 'silver-8', selectedPackage: null, selectedPackageZh: null, level: 1 }, { name: 'Silver_9', id: 'silver-9', selectedPackage: null, selectedPackageZh: null, level: 1 }];
+					this.treeArray = [{ name: 'Diamond', selectedPackage: null, selectedPackageZh: null, package_index: -1,
+						children: [{ name: 'Platinum_1', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [{ name: 'Silver_1', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }, { name: 'Silver_2', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }, { name: 'Silver_3', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }] }, { name: 'Platinum_2', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [{ name: 'Silver_4', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }, { name: 'Silver_5', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }, { name: 'Silver_6', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }] }, { name: 'Platinum_3', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [{ name: 'Silver_7', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }, { name: 'Silver_8', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }, { name: 'Silver_9', selectedPackage: null, selectedPackageZh: null, package_index: -1, children: [] }] }]
 					}];
 
 					break;
@@ -74655,16 +74654,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			var obj = {};
 			if (this.purchase && !this.isEditing) {
 				item.selectedPackage = this.sortedPackages[packageIndex].name;
-
+				item.selectedPackageZh = this.sortedPackages[packageIndex].name_zh;
 				obj['value'] = this.sortedPackages[packageIndex].id;
 				obj['label'] = this.sortedPackages[packageIndex].name;
+				obj['label_zh'] = this.sortedPackages[packageIndex].name_zh;
 				obj['price'] = this.sortedPackages[packageIndex].price;
 				obj['selling_price'] = this.sortedPackages[packageIndex].selling_price;
 			} else {
 				item.selectedPackage = this.potentialPackages[index]['label'];
+				item.selectedPackageZh = this.potentialPackages[index]['label_zh'];
 
 				obj['value'] = this.potentialPackages[index].value;
 				obj['label'] = this.potentialPackages[index].label;
+				obj['label_zh'] = this.potentialPackages[index].label_zh;
 				obj['price'] = this.potentialPackages[index].price;
 				obj['selling_price'] = this.potentialPackages[index].selling_price;
 			}
@@ -75594,6 +75596,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
 	name: "geno-row",
@@ -75665,11 +75670,17 @@ var render = function() {
               _vm._v("\n\t\t\t" + _vm._s(user.referral_code) + "\n\t\t\t"),
               user.selectedPackage ? _c("br") : _vm._e(),
               _vm._v(" "),
-              user.selectedPackage
+              user.selectedPackage && _vm.lang.locale == "en"
                 ? _c("span", { staticClass: "badge badge-success" }, [
                     _vm._v(_vm._s(user.selectedPackage))
                   ])
-                : _vm._e(),
+                : user.selectedPackage && _vm.lang.locale == "zh"
+                  ? _c("span", { staticClass: "badge badge-success" }, [
+                      _vm._v(_vm._s(user.selectedPackageZh))
+                    ])
+                  : _c("span", { staticClass: "badge badge-success" }, [
+                      _vm._v(_vm._s(user.selectedPackage))
+                    ]),
               _vm._v(" "),
               user.account_level ? _c("br") : _vm._e(),
               _vm._v(" "),

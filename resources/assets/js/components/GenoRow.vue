@@ -13,7 +13,10 @@
 				<!-- <span class="badge badge-primary" v-if="getClass(user) == 'self'">{{ 'tree.self' |trans }}</span><br> -->
 				{{ user.referral_code }}
 				<br v-if="user.selectedPackage">
-				<span v-if="user.selectedPackage" class="badge badge-success">{{ user.selectedPackage }}</span>
+				<!-- <span v-if="user.selectedPackage" class="badge badge-success">{{ user.selectedPackage }}</span> -->
+				<span v-if="user.selectedPackage && lang.locale == 'en'" class="badge badge-success">{{ user.selectedPackage }}</span>
+				<span v-else-if="user.selectedPackage && lang.locale == 'zh'" class="badge badge-success">{{ user.selectedPackageZh }}</span>
+				<span v-else class="badge badge-success">{{ user.selectedPackage }}</span>
 				<br v-if="user.account_level">
 				<span v-if="user.account_level" class="badge badge-info">{{ 'tree.level_' + user.account_level | trans }}</span>
 
