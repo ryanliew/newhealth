@@ -3,7 +3,7 @@
 		<loader v-if="isLoading"></loader>
 		<header class="site-header">
 		    <div class="container-fluid">
-		        <a href="https://newhealth2u.com" class="site-logo">
+		        <a href="http://newhealth2u.com" class="site-logo">
 		            <img class="hidden-md-down" src="/img/fav180x180.png" alt="">
 		            <img class="hidden-lg-down" src="/img/fav180x180.png" alt="">
 		        </a>

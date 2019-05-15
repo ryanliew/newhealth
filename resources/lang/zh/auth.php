@@ -96,11 +96,11 @@ return [
     'selected_package' => '配套',
     'tree' => '棵树|棵树',
     'hi' => '你好',
-    'grower' => '种植者',
+    'grower' => '',
     'welcome_back' => '欢迎回来',
     'en_space' => '',
     'register_message' => '新子计划！',
-    'register_today' => '新子新商机, 携手新叶创百亿, 马上',
+    'register_today' => '新子新商机, 携手新子创百亿, 马上',
     'cancel' => '取消',
 
     'enter_email_to_reset' => '请输入您的电邮',
