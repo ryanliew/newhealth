@@ -27,7 +27,7 @@
         <div id="app"></div>
        
         <script src="./js/form.js?v=1.3"></script> 
-        <script src="./js/app.js?v=2.7"></script>
+        <script src="./js/app.js?v=2.8"></script>
         <script src="./js/lib/tether/tether.min.js"></script> 
         <script src="./js/plugins.js"></script>
         <script src="./js/start-ui.js"></script>
