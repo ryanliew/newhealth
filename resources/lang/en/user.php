@@ -67,7 +67,7 @@ return [
 
     "waiting_approval" => 'Your accounnt is waiting for approval',
 
-    "locked_message" => "Your account has been locked. Please contact support@newleaf.com.my for more information",
+    "locked_message" => "Your account has been locked. Please contact support for more information",
     "deleted" => "User has been deleted",
     "referrer" => "Referrer",
     "settings" => "Settings",

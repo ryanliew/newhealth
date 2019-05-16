@@ -1,14 +1,9 @@
 <body style="margin:0 auto;" >
-    <!-- header -->
-    <div style="width: 100%; height:auto;">
-        <img src="https://portal.newleaf.com.my/img/mail/background.jpg" width="100%" height="auto">
-    </div>
-    <!-- end header -->
-    
+   
     <!-- content -->
     <div style="width: 70%; margin:0 auto; font-family:Calibri">
         <div style="width:100%; height:auto">
-           <img height="auto" width="200" src="https://portal.newleaf.com.my/img/mail/logo.jpg">
+           <img height="auto" width="200" src="{{ url('/img/mail/logo.jpg') }}">
         </div>
 
         <div style=" font-size:24px;">
@@ -45,7 +40,7 @@
      
     <!-- footer -->
         
-        <div style="width:100%; padding:20px 0; ">
+        {{-- <div style="width:100%; padding:20px 0; ">
             <div style="width:80%; float:left; text-align: left; color:#0e5696">
                 <b> NEWLEAF PLANATION BERHAD <span style="font-size:12px">(1251569-U)</span></b><br>
             </div>
@@ -64,7 +59,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
     <!-- end content --> 
     

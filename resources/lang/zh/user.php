@@ -63,7 +63,7 @@ return [
     
     "waiting_approval" => '您的账号等待批准当中',
 
-    "locked_message" => "您的账号已被管理员封锁, 请电邮至support@newleaf.com.my了解详情",
+    "locked_message" => "您的账号已被管理员封锁, 请电邮至我们的客服了解详情",
     "referrer" => "推荐者",
     "settings" => "设定",
     "is_admin" => "是管理员",
