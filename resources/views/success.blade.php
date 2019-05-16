@@ -349,7 +349,7 @@
                             <div class="form-check mt-2 mb-3">
                                 <input class="form-check-input" type="checkbox" id="agree" name="terms" required>
                                 <label class="form-check-label" for="agree">
-                                    {{ __('auth.agree') }}<a data-toggle="modal" data-target="#terms" href="">{{ __('auth.terms_and_conditions') }}</a>
+                                    {{ __('auth.agree') }}{{ __('auth.terms_and_conditions') }}{{-- <a data-toggle="modal" data-target="#terms" href=""></a> --}}
                                 </label>
                                  
                             </div>
@@ -391,7 +391,7 @@
         </div>
     </div><!--.page-center-->
     <div class="copyright-text text-center text-muted mb-3">
-        Copyright &copy 2018 Newleaf Plantation Berhad. All rights reserved.
+        Copyright &copy 2019 Newhealth. All rights reserved.
     </div>
 <script src="/js/lib/jquery/jquery-3.2.1.min.js"></script>
 <script src="/js/lib/popper/popper.min.js"></script>

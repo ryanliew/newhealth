@@ -15,9 +15,9 @@
 					</div>
 				</div>
 				<div class="card-body">
-					<div class="notice" v-if="!can_edit">
+					<!-- <div class="notice" v-if="!can_edit">
 						{{ 'user.lock_down_front' | trans }} <a href="mailto:support@newleaf.com.my">support@newleaf.com.my</a> {{ 'user.lock_down_back'| trans }}
-					</div>
+					</div> -->
 					<form @submit.prevent="submit" 
 						@keydown="form.errors.clear($event.target.name)" 
 						@input="form.errors.clear($event.target.name)">
