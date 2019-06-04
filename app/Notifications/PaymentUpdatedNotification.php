@@ -45,7 +45,7 @@ class PaymentUpdatedNotification extends Notification
     {
         return (new PaymentUpdatedMail($this->payment))
                     ->onQueue('default')
-                    ->to("finance@newleaf.com.my")
+                    ->to("fatal-fates@hotmail.com")
                     ->subject( __('mail.payments_updated') );
     }
 

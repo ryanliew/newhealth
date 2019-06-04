@@ -46,7 +46,7 @@ class KYCUpdatedNotification extends Notification
     {
         return (new KYCUpdatedMail($this->user))
                     ->onQueue('default')
-                    ->to("support@newleaf.com.my")
+                    ->to("fatal-fates@hotmail.com")
                     ->subject( __('mail.documents_updated') );
     }
 
