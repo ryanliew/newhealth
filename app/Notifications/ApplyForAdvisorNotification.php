@@ -45,7 +45,7 @@ class ApplyForAdvisorNotification extends Notification
     {
         return (new ApplyForAdvisorMail($this->user))
                     ->onQueue('default')
-                    ->to("support@newleaf.com.my")
+                    ->to("fatal-fates@hotmail.com")
                     ->subject( __('mail.advisor_submission') );
     }
 
